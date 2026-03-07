@@ -53,7 +53,7 @@ nav {
     overflow: visible;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
   }
 .nav-links{display:flex;gap:4px;list-style:none;align-items:center;}
 .nav-links a{padding:8px 14px;font-size:.83rem;font-weight:500;color:var(--text-mid);text-decoration:none;border-radius:6px;transition:all .15s;}
@@ -220,6 +220,7 @@ footer a:hover{color:white;}
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
 <!-- CACHE-BUST-v8-nl/pcmn-complet-societe-et-asbl/index.html -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="cookieBanner">
@@ -307,7 +308,7 @@ footer a:hover{color:white;}
     <li><a href="https://lacavernedelacompta.be/nl/">🏠 Startpagina</a></li>
     <li class="dd-wrap" id="ddWrap">
       <button class="dd-btn" onclick="toggleDD(event)">🧰 Onze tools <span class="dd-chevron">▼</span></button>
-      <div class="dd-menu">
+      <div class="dd-menu" id="ddMenu">
         <a href="/nl/simulateur-immobilier/"><span class="dd-icon">🏠</span>Vastgoedsimulator</a>
         <a href="/nl/simulateur-credit/"><span class="dd-icon">💳</span>Kredietsimulator</a>
         <a href="/nl/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Herkwalificatie Huur<span class="dd-new">Nouveau</span></a>

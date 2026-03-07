@@ -268,7 +268,7 @@ nav {
     overflow: visible;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
   }
 
   .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
@@ -378,6 +378,7 @@ document.addEventListener("click",function(){var d=document.getElementById("ddWr
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
 <!-- CACHE-BUST-v8-nl/remboursement-frais/index.html -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="cookieBanner">
@@ -450,7 +451,7 @@ document.addEventListener("click",function(){var d=document.getElementById("ddWr
     <li><a href="https://lacavernedelacompta.be/nl/">🏠 Startpagina</a></li>
     <li class="dd-wrap" id="ddWrap">
       <button class="dd-btn" onclick="toggleDD(event)">🧰 Onze tools <span class="dd-chevron">▼</span></button>
-      <div class="dd-menu">
+      <div class="dd-menu" id="ddMenu">
         <a href="/nl/simulateur-immobilier/"><span class="dd-icon">🏠</span>Vastgoedsimulator</a>
         <a href="/nl/simulateur-credit/"><span class="dd-icon">💳</span>Kredietsimulator</a>
         <a href="/nl/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Herkwalificatie Huur<span class="dd-new">Nouveau</span></a>
@@ -1282,7 +1283,7 @@ function onBceInput(val) {
   if (digits.length === 10) lookupBce();
 }
 
-async function lookupBce() {
+async async function lookupBce() {
   var raw    = document.getElementById('c_bce').value.trim();
   var digits = raw.replace(/[^0-9]/g, '');
 

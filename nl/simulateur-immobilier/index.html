@@ -25,7 +25,7 @@
   <meta property="og:locale" content="nl_BE">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <!-- ════ GOOGLE ADSENSE — remplace ca-pub-XXXXXXXXXXXXXXXX par ton ID ════ -->
-<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+<!--  -->
 <style>
   :root {
     --navy: #0D1B2A;
@@ -87,7 +87,7 @@
     overflow: visible;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
   }
   .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
   .logo-icon-nav { width: 40px; height: 40px; background: linear-gradient(135deg, var(--teal), var(--navy)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
@@ -465,6 +465,7 @@
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
 <!-- CACHE-BUST-v8-nl/simulateur-immobilier/index.html -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -520,7 +521,7 @@
     <li><a href="https://lacavernedelacompta.be/nl/">🏠 Startpagina</a></li>
     <li class="dd-wrap" id="ddWrap">
       <button class="dd-btn" onclick="toggleDD(event)">🧰 Onze tools <span class="dd-chevron">▼</span></button>
-      <div class="dd-menu">
+      <div class="dd-menu" id="ddMenu">
         <a href="/nl/simulateur-immobilier/"><span class="dd-icon">🏠</span>Vastgoedsimulator</a>
         <a href="/nl/simulateur-credit/"><span class="dd-icon">💳</span>Kredietsimulator</a>
         <a href="/nl/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Herkwalificatie Huur<span class="dd-new">Nouveau</span></a>

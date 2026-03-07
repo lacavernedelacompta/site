@@ -59,7 +59,7 @@ nav {
     overflow: visible;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
   }
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
 .logo-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--teal),var(--navy));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;}
@@ -259,6 +259,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
 <!-- CACHE-BUST-v8-nl/simulateur-credit/index.html -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="cookieBanner">
@@ -340,7 +341,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
     <li><a href="https://lacavernedelacompta.be/nl/">🏠 Startpagina</a></li>
     <li class="dd-wrap" id="ddWrap">
       <button class="dd-btn" onclick="toggleDD(event)">🧰 Onze tools <span class="dd-chevron">▼</span></button>
-      <div class="dd-menu">
+      <div class="dd-menu" id="ddMenu">
         <a href="/nl/simulateur-immobilier/"><span class="dd-icon">🏠</span>Vastgoedsimulator</a>
         <a href="/nl/simulateur-credit/"><span class="dd-icon">💳</span>Kredietsimulator</a>
         <a href="/nl/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Herkwalificatie Huur<span class="dd-new">Nouveau</span></a>
