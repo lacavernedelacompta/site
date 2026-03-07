@@ -1,0 +1,2181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belgian Property Registration Duties Simulator 2026</title>
+  <meta name="description" content="Calculate registration duties for property in Belgium. 3% Wallonia, Brussels allowance, 2% Flanders. With mortgage and mortgage mandate. Updated 2026.">
+  <meta name="keywords" content="registration duties belgium 2025, real estate simulator belgium, house purchase costs belgium, 3% rate wallonia, brussels allowance, 2% flanders, mortgage belgium">
+  <meta name="author" content="La Caverne de la Compta">
+  <meta name="robots" content="index, follow">
+  <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-immobilier/">
+  <link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-immobilier/">
+  <link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-immobilier/">
+  <link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-immobilier/">
+  <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-immobilier/">
+  <link rel="canonical" href="https://lacavernedelacompta.be/en/simulateur-immobilier/">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Belgian Property Registration Duties Simulator 2026 — Wallonia, Brussels, Flanders">
+  <meta property="og:image" content="https://lacavernedelacompta.be/logo.png">
+
+  <meta property="og:description" content="Calculate registration duties for property in Belgium. 3% Wallonia, Brussels allowance, 2% Flanders. With mortgage and mortgage mandate. Updated 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lacavernedelacompta.be/simulateur-immobilier.html">
+  <meta property="og:site_name" content="La Caverne de la Compta">
+  <meta property="og:locale" content="en_BE">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- ════ GOOGLE ADSENSE — remplace ca-pub-XXXXXXXXXXXXXXXX par ton ID ════ -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+<style>
+  :root {
+    --navy: #0D1B2A;
+    --navy-mid: #1B2E44;
+    --navy-light: #243B55;
+    --teal: #1A7A8A;
+    --teal-light: #22A3B8;
+    --teal-pale: #E8F6F8;
+    --white: #FFFFFF;
+    --off-white: #F4F7FA;
+    --bg: #F4F7FA;
+    --surface: #FFFFFF;
+    --surface2: #F4F7FA;
+    --border: #DDE5EF;
+    --text: #1A2535;
+    --text-mid: #4A6279;
+    --muted: #8A9BB0;
+    --shadow: rgba(13,27,42,0.10);
+    --accent: var(--teal);
+    --green: #2E7D32;
+    --green-bg: #EBF7ED;
+    --red: #C62828;
+    --red-bg: #FDEAEA;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  /* ── TOPBAR ── */
+  .topbar {
+    background: var(--navy);
+    padding: 8px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .topbar-left { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+  .topbar-right { display: flex; gap: 20px; }
+  .topbar-right a { font-size: 0.75rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .topbar-right a:hover { color: var(--white); }
+
+  /* ── MAIN NAV ── */
+  .main-nav {
+    background: #ffffff;
+    border-bottom: 2px solid #22A3B8;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    box-shadow: 0 2px 12px rgba(13, 27, 42, 0.08);
+    overflow: visible;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .logo-icon-nav { width: 40px; height: 40px; background: linear-gradient(135deg, var(--teal), var(--navy)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+  .logo-text { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--navy); line-height: 1.2; }
+  .logo-sub { font-size: 0.65rem; font-weight: 500; color: var(--teal); letter-spacing: 0.15em; text-transform: uppercase; }
+  .nav-links{display:flex;gap:4px;list-style:none;align-items:center;}
+  .nav-links>li{list-style:none;}
+  .nav-links a{padding:8px 16px;font-size:0.85rem;font-weight:500;color:var(--text-mid);text-decoration:none;border-radius:6px;transition:all 0.2s;display:block;white-space:nowrap;}
+  .nav-links a:hover{background:var(--teal-pale);color:var(--teal);}
+  .nav-links a.active{background:var(--teal-pale);color:var(--teal);font-weight:600;}
+  .nav-cta{background:var(--teal)!important;color:var(--white)!important;font-weight:600!important;}
+  .nav-cta:hover{background:var(--teal-light)!important;color:var(--white)!important;}
+  /* Dropdown — le parent li DOIT avoir position:relative */
+  .dd-wrap{position:relative;}
+  .dd-btn{display:flex;align-items:center;gap:6px;padding:8px 16px;font-size:0.85rem;font-weight:500;color:var(--text-mid);background:none;border:none;cursor:pointer;border-radius:6px;font-family:'Inter',sans-serif;transition:all 0.2s;white-space:nowrap;}
+  .dd-btn:hover,.dd-wrap.dd-open .dd-btn{background:var(--teal-pale);color:var(--teal);}
+  .dd-chevron{font-size:0.55rem;transition:transform 0.2s;display:inline-block;margin-top:1px;}
+  .dd-wrap.dd-open .dd-chevron{transform:rotate(180deg);}
+  .dd-menu{
+    display:none;
+    position:absolute;
+    top:100%;
+    right:0;
+    left:auto;
+    margin-top:6px;
+    background:var(--white);
+    border:1px solid var(--border);
+    border-radius:12px;
+    box-shadow:0 8px 32px rgba(13,27,42,0.18);
+    min-width:240px;
+    z-index:9999;
+    overflow: visible;
+  }
+  .dd-wrap.dd-open .dd-menu{display:block;animation:ddFade 0.15s ease;}
+  @keyframes ddFade{from{opacity:0;transform:translateY(-4px);}to{opacity:1;transform:translateY(0);}}
+  .dd-menu a{display:flex;align-items:center;gap:12px;padding:12px 18px;font-size:0.84rem;font-weight:500;color:var(--text-dark);text-decoration:none;border-bottom:1px solid var(--border);transition:background 0.15s;border-radius:0;}
+  .dd-menu a:last-child{border-bottom:none;}
+  .dd-menu a:hover{background:var(--teal-pale);color:var(--teal);}
+  .dd-icon{font-size:16px;width:22px;text-align:center;flex-shrink:0;}
+  .dd-new{font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:2px 7px;border-radius:8px;background:#EBF7ED;color:#2E7D32;margin-left:auto;flex-shrink:0;}
+  
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1A5C6E 100%);
+    color: var(--white);
+    padding: 52px 40px 68px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  .hero-bread { font-size: 0.75rem; color: rgba(255,255,255,0.45); margin-bottom: 12px; }
+  .hero-bread a { color: var(--teal-light); text-decoration: none; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 20px; padding: 5px 14px; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-pale); margin-bottom: 18px; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 3.5vw, 2.7rem); font-weight: 900; line-height: 1.25; margin-bottom: 10px; }
+  .hero h1 span { color: var(--teal-light); }
+  .subtitle {
+    color: rgba(255,255,255,0.65);
+    font-size: 0.92rem;
+    font-weight: 300;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* ── STEPS NAV ── */
+  .steps-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    padding: 0 2rem;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+    box-shadow: 0 2px 8px rgba(13,27,42,0.05);
+  }
+  .step-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    background: none;
+    color: var(--muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s;
+    white-space: nowrap;
+    position: relative;
+  }
+  .step-tab::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0; right: 0;
+    height: 3px;
+    background: var(--teal);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    border-radius: 2px 2px 0 0;
+  }
+  .step-tab.active { color: var(--teal); }
+  .step-tab.active::after { transform: scaleX(1); }
+  .step-tab.done { color: var(--green); }
+  .step-num {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .step-tab.active .step-num { background: var(--teal); color: #fff; }
+  .step-tab.done .step-num { background: var(--green); color: #fff; }
+
+  /* MAIN LAYOUT */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 2rem;
+    align-items: start;
+  }
+  @media (max-width: 820px) {
+    .container { grid-template-columns: 1fr; }
+  }
+
+  /* PANELS */
+  .panel { display: none; flex-direction: column; gap: 1.5rem; }
+  .panel.active { display: flex; }
+
+  .card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.75rem;
+    box-shadow: 0 2px 10px rgba(13,27,42,0.07);
+  }
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .card-title span { font-size: 1.1rem; }
+
+  /* FORM ELEMENTS */
+  .form-grid { display: grid; gap: 1rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+
+  .field { display: flex; flex-direction: column; gap: 0.4rem; }
+  label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-mid);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+  .input-wrap { position: relative; display: flex; align-items: center; }
+  .input-wrap .prefix, .input-wrap .suffix { position: absolute; color: var(--muted); font-size: 0.9rem; font-weight: 500; }
+  .input-wrap .prefix { left: 0.9rem; }
+  .input-wrap .suffix { right: 0.9rem; }
+
+  input[type="number"], input[type="text"], select {
+    width: 100%;
+    background: var(--off-white);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    padding: 0.65rem 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    -moz-appearance: textfield;
+  }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
+  .input-wrap input { padding-left: 1.8rem; }
+  .input-wrap.suffix-wrap input { padding-right: 2.2rem; }
+  input:focus, select:focus {
+    border-color: var(--teal-light);
+    box-shadow: 0 0 0 3px rgba(26,122,138,0.12);
+    background: var(--white);
+  }
+
+  /* RADIO BUTTONS */
+  .radio-group { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .radio-btn {
+    padding: 0.45rem 0.9rem;
+    border: 1.5px solid var(--border);
+    border-radius: 7px;
+    background: var(--white);
+    color: var(--text-mid);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.83rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+  }
+  .radio-btn.active {
+    border-color: var(--teal);
+    background: var(--teal-pale);
+    color: var(--teal);
+    font-weight: 600;
+  }
+
+  /* TOGGLE */
+  .toggle-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .toggle-label { font-size: 0.9rem; color: var(--text); }
+  .toggle { position: relative; width: 44px; height: 24px; flex-shrink: 0; }
+  .toggle input { opacity: 0; width: 0; height: 0; }
+  .toggle-slider { position: absolute; cursor: pointer; inset: 0; background: var(--border); border-radius: 12px; transition: 0.3s; }
+  .toggle-slider::before { content: ''; position: absolute; width: 18px; height: 18px; left: 3px; top: 3px; background: white; border-radius: 50%; transition: 0.3s; }
+  .toggle input:checked + .toggle-slider { background: var(--teal); }
+  .toggle input:checked + .toggle-slider::before { transform: translateX(20px); }
+
+  /* RANGE SLIDER */
+  .range-row { display: flex; align-items: center; gap: 1rem; }
+  input[type="range"] {
+    flex: 1;
+    -webkit-appearance: none;
+    height: 4px;
+    background: var(--border);
+    border-radius: 4px;
+    outline: none;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--teal);
+    cursor: pointer;
+    border: 2px solid var(--white);
+    box-shadow: 0 1px 4px rgba(13,27,42,0.2);
+  }
+  .range-val {
+    min-width: 60px;
+    text-align: right;
+    font-weight: 600;
+    color: var(--teal);
+    font-size: 0.92rem;
+  }
+
+  /* BUTTONS */
+  .btn-row { display: flex; gap: 1rem; justify-content: flex-end; margin-top: 0.5rem; }
+  .btn {
+    padding: 0.7rem 1.8rem;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-primary { background: linear-gradient(135deg, var(--teal), #155F6A); color: #fff; }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(26,122,138,0.35); }
+  .btn-secondary { background: var(--off-white); color: var(--text-mid); border: 1.5px solid var(--border); }
+  .btn-secondary:hover { color: var(--text); border-color: var(--text-mid); }
+
+  /* SUMMARY SIDEBAR */
+  .sidebar { position: sticky; top: 80px; }
+  .summary-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(13,27,42,0.07); }
+  .summary-header { background: linear-gradient(135deg, var(--navy), var(--navy-mid)); color: var(--white); padding: 1.1rem 1.5rem; font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; }
+  .summary-body { padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+  .summary-row { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; gap: 0.5rem; }
+  .summary-row .s-label { color: var(--muted); flex: 1; }
+  .summary-row .s-val { font-weight: 600; text-align: right; color: var(--text); }
+  .summary-row.highlight .s-val { color: var(--teal); font-size: 1rem; }
+  .summary-row.total { border-top: 1px solid var(--border); margin-top: 0.25rem; padding-top: 0.75rem; font-size: 0.9rem; }
+  .summary-row.total .s-val { color: var(--navy); font-size: 1.05rem; font-weight: 700; }
+  .summary-divider { height: 1px; background: var(--border); margin: 0.15rem 0; }
+
+  /* RESULTS */
+  .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 500px) { .result-grid { grid-template-columns: 1fr; } }
+  .result-box { background: var(--off-white); border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem; text-align: center; }
+  .result-box .r-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); margin-bottom: 0.4rem; }
+  .result-box .r-val { font-size: 1.3rem; font-weight: 700; font-family: 'Playfair Display', serif; color: var(--navy); }
+  .result-box.gold { border-color: var(--teal); background: var(--teal-pale); }
+  .result-box.gold .r-val { color: var(--teal); }
+  .result-box.green { border-color: #A5D6A7; background: var(--green-bg); }
+  .result-box.green .r-val { color: var(--green); }
+  .result-box.accent { border-color: var(--teal-light); background: var(--teal-pale); }
+  .result-box.accent .r-val { color: var(--teal); }
+
+  .breakdown-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+  .breakdown-table th { text-align: left; padding: 0.55rem 0.75rem; color: var(--muted); font-weight: 600; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.06em; border-bottom: 1px solid var(--border); }
+  .breakdown-table td { padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--off-white); color: var(--text-mid); }
+  .breakdown-table tr:last-child td { border-bottom: none; }
+  .breakdown-table td:last-child { text-align: right; font-weight: 600; color: var(--text); }
+  .breakdown-table .subtotal td { color: var(--teal); font-weight: 700; background: var(--teal-pale); }
+
+  /* AMORTIZATION */
+  .amort-wrap { overflow-x: auto; }
+  .amort-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+  .amort-table th { padding: 0.5rem 0.6rem; color: var(--muted); text-align: right; border-bottom: 1px solid var(--border); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .amort-table th:first-child { text-align: left; }
+  .amort-table td { padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--off-white); text-align: right; color: var(--text-mid); }
+  .amort-table td:first-child { text-align: left; font-weight: 600; color: var(--navy); }
+  .amort-table tr:hover td { background: var(--off-white); }
+
+  /* INFO BOX */
+  .info-box { background: var(--teal-pale); border: 1px solid rgba(26,122,138,0.2); border-radius: 8px; padding: 0.85rem 1rem; font-size: 0.83rem; color: var(--text-mid); line-height: 1.55; }
+  .info-box strong { color: var(--teal); }
+
+  /* PROGRESS BAR */
+  .progress-bar-wrap { background: var(--border); border-radius: 4px; height: 6px; overflow: hidden; margin-top: 0.4rem; }
+  .progress-bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--teal), var(--teal-light)); transition: width 0.5s; }
+
+  /* BADGE */
+  .badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 5px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+  .badge-green { background: var(--green-bg); color: var(--green); }
+  .badge-gold { background: var(--teal-pale); color: var(--teal); }
+  .badge-red { background: var(--red-bg); color: var(--red); }
+
+  /* ── ADSENSE SLOT ── */
+  .ad-slot { text-align: center; padding: 12px; background: var(--off-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+  /* ── FOOTER ── */
+  footer { background: var(--navy); color: rgba(255,255,255,0.5); padding: 28px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 0.8rem; margin-top: 3rem; }
+  footer a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+  footer a:hover { color: var(--white); }
+  .footer-links { display: flex; gap: 20px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .main-nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hero { padding: 40px 20px 56px; }
+    .container { padding: 1.5rem 1rem; }
+    .topbar { display: none; }
+    footer { flex-direction: column; text-align: center; }
+  }
+</style>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "La Caverne de la Compta",
+  "url": "https://lacavernedelacompta.be",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://lacavernedelacompta.be/logo.png",
+    "width": 512,
+    "height": 512
+  },
+  "image": "https://lacavernedelacompta.be/logo.png"
+}
+</script>
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<!-- CACHE-BUST-v8-en/simulateur-immobilier/index.html -->
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span class="topbar-left">🇧🇪 Accounting and financial tools for Belgium</span>
+  <div class="topbar-right">
+    <a href="#">Contact</a>
+    <a href="#">About</a>
+    <a href="#">Legal notice</a>
+  </div>
+</div>
+
+<!-- MAIN NAV -->
+<nav>
+<a href="/en/" class="logo" style="text-decoration:none;display:flex;align-items:center;">
+    <svg width="148" height="38" viewBox="0 0 148 38" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <defs>
+        <linearGradient id="hGn" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0D1B2A"/>
+          <stop offset="100%" style="stop-color:#1A3A5C"/>
+        </linearGradient>
+      </defs>
+      <!-- Hexagone -->
+      <polygon points="19,2 31,9 31,23 19,30 7,23 7,9" fill="url(#hGn)"/>
+      <!-- Reflet top -->
+      <polygon points="19,2 31,9 25,9 19,5 13,9 7,9" fill="rgba(255,255,255,.07)"/>
+      <!-- Bras balance -->
+      <line x1="9" y1="15" x2="29" y2="15" stroke="rgba(255,255,255,.5)" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Tige -->
+      <rect x="17.5" y="15" width="2.5" height="11" rx="1.2" fill="rgba(255,255,255,.35)"/>
+      <!-- Pivot gold -->
+      <circle cx="18.8" cy="15" r="3.2" fill="#C9A84C"/>
+      <circle cx="18.8" cy="15" r="1.4" fill="white" opacity=".9"/>
+      <!-- Socle -->
+      <rect x="13" y="27" width="12" height="2.5" rx="1.2" fill="rgba(255,255,255,.2)"/>
+      <!-- Plateau gauche -->
+      <line x1="9" y1="15" x2="7" y2="21.5" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="7" cy="24" rx="6.5" ry="2.5" fill="#1A7A8A"/>
+      <!-- Plateau droit -->
+      <line x1="29" y1="15" x2="31" y2="20" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="31" cy="22.5" rx="6.5" ry="2.5" fill="#22A3B8"/>
+      <!-- Étoile -->
+      <circle cx="27" cy="7" r="2.5" fill="#C9A84C" opacity=".85"/>
+      <!-- Texte -->
+      <text x="42" y="15.5" font-family="'Playfair Display',serif" font-size="12.5" font-weight="900" fill="#0D1B2A" letter-spacing="-.2">La Caverne</text>
+      <rect x="42" y="18.5" width="104" height="1" rx=".5" fill="#DDE5EF"/>
+      <rect x="42" y="18.5" width="18" height="1" rx=".5" fill="#C9A84C"/>
+      <text x="42" y="30" font-family="'Playfair Display',serif" font-size="10.5" font-weight="700" font-style="italic" fill="#1A7A8A" letter-spacing="-.1">de la Compta</text>
+    </svg>
+  </a>
+        <ul class="nav-links">
+    <li><a href="https://lacavernedelacompta.be/en/">🏠 Home</a></li>
+    <li class="dd-wrap" id="ddWrap">
+      <button class="dd-btn" onclick="toggleDD(event)">🧰 Our tools <span class="dd-chevron">▼</span></button>
+      <div class="dd-menu">
+        <a href="/en/simulateur-immobilier/"><span class="dd-icon">🏠</span>Property Simulator</a>
+        <a href="/en/simulateur-credit/"><span class="dd-icon">💳</span>Loan Simulator</a>
+        <a href="/en/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Rent Reclassification<span class="dd-new">Nouveau</span></a>
+        <a href="/en/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Chart of Accounts PCMN</a>
+        <a href="/en/simulateur-interets-composes/"><span class="dd-icon">📈</span>Compound Interest</a>
+        <a href="/en/simulateur-retenue/"><span class="dd-icon">🧾</span>Invoice Withholding</a>
+        <a href="/en/quick-memento-fiscal/"><span class="dd-icon">📌</span>Quick Tax Memo</a>
+        <a href="/en/remboursement-frais/"><span class="dd-icon">🚗</span>Mileage Allowance</a>
+      </div>
+    </li>
+  </ul>
+  <!-- ══ SWITCHER LANGUE ══ -->
+  <div id="langSwitcher" style="display:flex;align-items:center;gap:2px;background:#F4F7FA;border:1px solid #DDE5EF;border-radius:8px;padding:3px;margin-left:16px;flex-shrink:0;">
+    <a href="https://lacavernedelacompta.be/fr/simulateur-immobilier/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇫🇷 FR</a>
+    <a href="https://lacavernedelacompta.be/nl/simulateur-immobilier/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇧🇪 NL</a>
+    <a href="https://lacavernedelacompta.be/en/simulateur-immobilier/" aria-current="page" style="display:inline-flex;align-items:center;gap:3px;font-weight:700;color:#fff;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;background:#1A7A8A;white-space:nowrap;">🇬🇧 EN</a>
+    <a href="https://lacavernedelacompta.be/de/simulateur-immobilier/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇩🇪 DE</a>
+  </div>
+  <!-- ══════════════════════ -->
+
+  
+</nav>
+<div style="text-align:right;font-size:0.72rem;color:var(--text-light);padding:6px 40px 0;font-style:italic;">
+    🕐 Updated: January 2026 — <a href="/en/mentions-legales/" style="color:var(--text-light)">Official sources</a>
+  </div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bread"><a href="/en/">Home</a> › Simulators › Property Purchase</div>
+  <div class="hero-badge">✦ Belgium — Registration Duties 2025</div>
+  <h1>Property Purchase <span>Simulator</span></h1>
+  <p class="subtitle">Notary fees · Registration duties · Mortgage loan</p>
+</section>
+
+<!-- ADSENSE SLOT (décommenter après validation) -->
+<!-- <div class="ad-slot">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div> -->
+
+<nav class="steps-nav">
+  <button class="step-tab active" onclick="goStep(1)"><span class="step-num">1</span> Property</button>
+  <button class="step-tab" onclick="goStep(2)"><span class="step-num">2</span> Fees &amp; Taxation</button>
+  <button class="step-tab" onclick="goStep(3)"><span class="step-num">3</span> Financing</button>
+  <button class="step-tab" onclick="goStep(4)"><span class="step-num">4</span> Summary &amp; Loan</button>
+</nav>
+
+<div class="container">
+  <div>
+    <!-- STEP 1 -->
+    <div class="panel active" id="panel1">
+      <div class="card">
+        <div class="card-title"><span>🏡</span> Property information</div>
+        <div class="form-grid">
+          <div class="field">
+            <label>Purchase price</label>
+            <div class="input-wrap">
+              <span class="prefix">€</span>
+              <input type="number" id="prix" value="300000" min="0" oninput="onPrixChange()">
+            </div>
+          </div>
+          <div class="field">
+            <label>Region</label>
+            <select id="region" onchange="state.region=this.value; updateFieldRenovPEB(); updateFieldVillesPrincipales(); updateHabitationPropreInfo(); calc()">
+              <option value="bruxelles">Brussels Capital</option>
+              <option value="wallonie" selected>Wallonia</option>
+              <option value="flandre">Flanders</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Property type</label>
+            <div class="radio-group" id="typeBien">
+              <div class="radio-btn active" data-val="habitation" onclick="setRadio('typeBien',this)">House / Apartment</div>
+              <div class="radio-btn" data-val="terrain" onclick="setRadio('typeBien',this)">Building plot</div>
+            </div>
+          </div>
+          <div class="field" id="fieldHabitationPropre" style="grid-column: 1 / -1">
+            <label id="labelHabitationPropre">Own and sole residence?</label>
+            <div class="radio-group" id="habitationPropre">
+              <div class="radio-btn active" data-val="oui" onclick="setRadio('habitationPropre',this)">Oui</div>
+              <div class="radio-btn" data-val="non" onclick="setRadio('habitationPropre',this)">Non</div>
+            </div>
+            <div id="infoHabitationPropre" class="info-box" style="margin-top:0.75rem;font-size:0.82rem"></div>
+          </div>
+          <div class="field" id="fieldRegimeFiscal" style="grid-column: 1 / -1">
+            <label>Registration duty or VAT on purchase?</label>
+            <div class="radio-group" id="regimeFiscal" style="flex-direction:column;gap:0.5rem">
+              <div class="radio-btn active" data-val="enregistrement" onclick="setRadio('regimeFiscal',this)" style="width:fit-content">Purchase with registration duties</div>
+              <div class="radio-btn" data-val="tva" onclick="setRadio('regimeFiscal',this)" style="width:fit-content">Purchase with VAT</div>
+              <div class="radio-btn" data-val="mixte" onclick="setRadio('regimeFiscal',this)" style="width:fit-content">Land purchase with registration duties + VAT on the property</div>
+            </div>
+          </div>
+          <div class="field" id="fieldRenovPEB" style="display:none; grid-column: 1 / -1">
+            <label>Energy performance improvement renovation (EPC) — Brussels only</label>
+            <select id="renovPEB" onchange="onRenovPEBChange()">
+              <option value="0">No / Not yet known</option>
+              <option value="2">Yes, improvement of 2 EPC classes (+€25,000 allowance)</option>
+              <option value="3">Yes, improvement of 3 EPC classes (+€50,000 allowance)</option>
+              <option value="4">Yes, improvement of 4 EPC classes (+€75,000 allowance)</option>
+              <option value="5">Yes, improvement of 5 EPC classes (+€100,000 allowance)</option>
+              <option value="6">Yes, improvement of 6 EPC classes (+€125,000 allowance)</option>
+            </select>
+          </div>
+          <div class="field" id="fieldVillesPrincipales" style="display:none; grid-column: 1 / -1">
+            <label>Municipality of the property — Flanders <span style="font-weight:400;font-size:0.82rem;color:var(--text-muted)">(determines the threshold for the modest home reduction)</span></label>
+            <select id="villesPrincipalesSelect" onchange="onVillesChange()">
+              <option value="non">— Other Flemish municipality (threshold: €220,000) —</option>
+              <optgroup label="Main cities (threshold: €240,000)">
+                <option value="oui">Alost</option>
+                <option value="oui">Anvers</option>
+                <option value="oui">Boom</option>
+                <option value="oui">Bruges</option>
+                <option value="oui">Genk</option>
+                <option value="oui">Gand</option>
+                <option value="oui">Hasselt</option>
+                <option value="oui">Kortrijk</option>
+                <option value="oui">Louvain</option>
+                <option value="oui">Malines</option>
+                <option value="oui">Ostende</option>
+                <option value="oui">Roeselare</option>
+                <option value="oui">Saint-Nicolas</option>
+                <option value="oui">Termonde</option>
+                <option value="oui">Turnhout</option>
+                <option value="oui">Vilvoorde</option>
+              </optgroup>
+              <optgroup label="Flemish periphery around Brussels — Vlaamse Rand (threshold: €240,000)">
+                <option value="oui">Affligem</option>
+                <option value="oui">Asse</option>
+                <option value="oui">Beersel</option>
+                <option value="oui">Bertem</option>
+                <option value="oui">Bever</option>
+                <option value="oui">Dilbeek</option>
+                <option value="oui">Drogenbos</option>
+                <option value="oui">Gammerages</option>
+                <option value="oui">Gooik</option>
+                <option value="oui">Grimbergen</option>
+                <option value="oui">Halle</option>
+                <option value="oui">Herne</option>
+                <option value="oui">Hoeilaart</option>
+                <option value="oui">Huldenberg</option>
+                <option value="oui">Kampenhout</option>
+                <option value="oui">Kapelle-op-den-Bos</option>
+                <option value="oui">Kortenberg</option>
+                <option value="oui">Kraainem</option>
+                <option value="oui">Lennik</option>
+                <option value="oui">Liedekerke</option>
+                <option value="oui">Linkebeek</option>
+                <option value="oui">Londerzeel</option>
+                <option value="oui">Machelen</option>
+                <option value="oui">Meise</option>
+                <option value="oui">Merchtem</option>
+                <option value="oui">Opwijk</option>
+                <option value="oui">Overijse</option>
+                <option value="oui">Pepingen</option>
+                <option value="oui">Rhode-Saint-Genèse</option>
+                <option value="oui">Roosdaal</option>
+                <option value="oui">Sint-Pieters-Leeuw</option>
+                <option value="oui">Steenokkerzeel</option>
+                <option value="oui">Ternat</option>
+                <option value="oui">Tervuren</option>
+                <option value="oui">Wemmel</option>
+                <option value="oui">Wezembeek-Oppem</option>
+                <option value="oui">Zaventem</option>
+                <option value="oui">Zemst</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="field" id="fieldPrixTerrain" style="display:none">
+            <label>Land price (€)</label>
+            <div class="input-wrap">
+              <span class="prefix">€</span>
+              <input type="number" id="prixTerrain" value="60000" oninput="onTerrainChange()">
+            </div>
+          </div>
+          <div class="field" id="fieldPrixConstruction" style="display:none">
+            <label>Property price (€) — VAT 21%</label>
+            <div class="input-wrap">
+              <span class="prefix">€</span>
+              <input type="number" id="prixConstruction" value="240000" oninput="onConstructionChange()">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="goStep(2)">Next →</button>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="panel" id="panel2">
+      <div class="card">
+        <div class="card-title"><span>📋</span> Registration duties and VAT</div>
+        <div id="droitsInfo" class="info-box" style="margin-bottom:1rem"></div>
+        <table class="breakdown-table">
+          <thead>
+            <tr><th>Component</th><th>Base</th><th>Rate</th><th>Amount</th></tr>
+          </thead>
+          <tbody id="droitsTable"></tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span>⚖️</span> Notary fees</div>
+        <div class="info-box" style="margin-bottom:1rem">
+          <strong>Official Belgian rate</strong> — Degressive scale set by Royal Decree of 16 December 1950 (indexed 2025).
+        </div>
+        <table class="breakdown-table">
+          <thead>
+            <tr><th>Item</th><th>Amount</th></tr>
+          </thead>
+          <tbody id="honorairesTable"></tbody>
+          <tbody id="autresTable"></tbody>
+        </table>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-secondary" onclick="goStep(1)">← Back</button>
+        <button class="btn btn-primary" onclick="goStep(3)">Next →</button>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="panel" id="panel3">
+      <div class="card">
+        <div class="card-title"><span>💰</span> Personal contribution</div>
+        <div class="form-grid">
+          <div class="field" style="grid-column: 1 / -1">
+            <label>Contribution percentage</label>
+            <div class="range-row">
+              <input type="range" id="apportPctSlider" min="0" max="100" value="10" step="1" oninput="updateApportSlider();calc()">
+              <span class="range-val" id="apportPctLabel">10%</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:0.78rem;color:var(--muted);margin-top:0.3rem">
+              <span>0%</span>
+              <span style="color:var(--gold-light)">Recommended minimum: 10%</span>
+              <span>100%</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>Personal contribution (€)</label>
+            <div class="result-box accent" style="margin-top:0.3rem;text-align:left;padding:0.9rem 1rem;">
+              <span id="apportMontant" style="font-size:1.2rem;font-weight:700;color:var(--gold-light);font-family:'Playfair Display',serif"></span>
+            </div>
+          </div>
+          <div class="field">
+            <label>Amount to borrow (calculated)</label>
+            <div class="result-box accent" style="margin-top:0.3rem;text-align:left;padding:0.9rem 1rem;">
+              <span id="montantCredit" style="font-size:1.2rem;font-weight:700;color:var(--accent);font-family:'Playfair Display',serif"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Option crédit 125% -->
+        <div style="margin-top:1rem;background:var(--teal-pale);border:1.5px solid rgba(26,122,138,.2);border-radius:10px;padding:14px 16px;">
+          <div style="display:flex;align-items:flex-start;gap:12px;">
+            <div style="padding-top:2px;flex-shrink:0;">
+              <input type="checkbox" id="credit125" onchange="calc()" style="width:17px;height:17px;accent-color:var(--teal);cursor:pointer;">
+            </div>
+            <div>
+              <label for="credit125" style="font-size:.88rem;font-weight:600;color:var(--navy);cursor:pointer;">
+                💡 Include fees in the loan <span style="background:var(--teal);color:#fff;font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:4px;letter-spacing:.04em;">CRÉDIT 125%</span>
+              </label>
+              <p style="font-size:.78rem;color:var(--text-mid);margin-top:5px;line-height:1.5;">Purchase deed fees and mortgage deed fees are <strong>included in the borrowed amount</strong> — your contribution only covers the purchase price. Some banks grant this up to 125% of the property value.</p>
+              <div id="credit125Detail" style="display:none;margin-top:10px;font-size:.78rem;color:var(--text-mid);border-top:1px dashed rgba(26,122,138,.25);padding-top:10px;line-height:1.8;">
+                <div style="display:flex;justify-content:space-between;"><span>Purchase price</span><span id="c125Prix" style="font-weight:600;">—</span></div>
+                <div style="display:flex;justify-content:space-between;"><span>+ Purchase deed fees</span><span id="c125FraisAchat" style="font-weight:600;color:var(--teal);">—</span></div>
+                <div id="c125RowHypo" style="display:flex;justify-content:space-between;"><span>+ Mortgage deed fees</span><span id="c125FraisHypo" style="font-weight:600;color:var(--teal);">—</span></div>
+                <div style="display:flex;justify-content:space-between;"><span>− Personal contribution</span><span id="c125Apport" style="font-weight:600;color:var(--red);">—</span></div>
+                <div style="display:flex;justify-content:space-between;font-weight:700;color:var(--navy);border-top:1px solid var(--border);margin-top:4px;padding-top:4px;font-size:.82rem;"><span>= Total borrowed amount</span><span id="c125Total">—</span></div>
+                <div style="display:flex;justify-content:space-between;margin-top:2px;font-size:.75rem;color:var(--text-mid)"><span>Loan-to-value ratio</span><span id="c125Ratio" style="font-weight:600;">—</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="apportWarning" style="margin-top:0.75rem;display:none" class="info-box"></div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span>🏦</span> Mortgage loan parameters</div>
+        <div class="form-grid">
+          <div class="field">
+            <label>Loan term</label>
+            <div class="range-row">
+              <input type="range" id="duree" min="5" max="30" value="20" step="5" oninput="updateRange('duree','dureeVal','ans');calc()">
+              <span class="range-val" id="dureeVal">20 yrs</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>Annual interest rate (%)</label>
+            <div class="range-row">
+              <input type="range" id="taux" min="1" max="8" value="3.5" step="0.1" oninput="updateRange('taux','tauxVal','%');calc()">
+              <span class="range-val" id="tauxVal">3.5%</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>Rate type</label>
+            <div class="radio-group" id="typeTaux">
+              <div class="radio-btn active" data-val="variable" onclick="setRadio('typeTaux',this)">Variable</div>
+              <div class="radio-btn" data-val="fixe" onclick="setRadio('typeTaux',this)">Fixed</div>
+            </div>
+          </div>
+          <div class="field" style="grid-column: 1 / -1">
+            <label>What type of guarantee do you want?</label>
+            <div class="radio-group" id="typeGarantie">
+              <div class="radio-btn active" data-val="hypotheque" onclick="setRadio('typeGarantie',this);updateGarantieVis();calc()">Classic mortgage</div>
+              <div class="radio-btn" data-val="mandat" onclick="setRadio('typeGarantie',this);updateGarantieVis();calc()">Mortgage mandate</div>
+              <div class="radio-btn" data-val="sans" onclick="setRadio('typeGarantie',this);updateGarantieVis();calc()">No guarantee / unknown</div>
+            </div>
+          </div>
+          <div id="fieldsHypo" style="grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem">
+
+            <!-- Question commune : habitation unique -->
+            <div class="field" style="grid-column: 1 / -1">
+              <label>Are you using this loan to finance the purchase of your sole residence?</label>
+              <div class="radio-group" id="creditHabitationUnique">
+                <div class="radio-btn active" data-val="oui" onclick="setRadio('creditHabitationUnique',this);calc()">Oui</div>
+                <div class="radio-btn" data-val="non" onclick="setRadio('creditHabitationUnique',this);calc()">Non</div>
+              </div>
+            </div>
+
+            <!-- Questions hypothèque classique -->
+            <div class="field" style="grid-column: 1 / -1" id="fieldPremierActe">
+              <label>Is the mortgage deed the first deed (without a purchase deed on the same day)?</label>
+              <div class="radio-group" id="premierActeHypo">
+                <div class="radio-btn" data-val="oui" onclick="setRadio('premierActeHypo',this);calc()">Yes — standalone deed</div>
+                <div class="radio-btn active" data-val="non" onclick="setRadio('premierActeHypo',this);calc()">No — linked to a purchase</div>
+              </div>
+            </div>
+
+            <!-- Questions mandat hypothécaire -->
+            <div class="field" id="fieldMandatLieAchat" style="display:none">
+              <label>Is the mortgage mandate linked to a purchase?</label>
+              <div class="radio-group" id="mandatLieAchat">
+                <div class="radio-btn active" data-val="oui" onclick="setRadio('mandatLieAchat',this);calc()">Oui</div>
+                <div class="radio-btn" data-val="non" onclick="setRadio('mandatLieAchat',this);calc()">No / I do not know</div>
+              </div>
+            </div>
+            <div class="field" id="fieldMandatDeuxiemeActe" style="display:none">
+              <label>Is the mortgage mandate the second financing deed?</label>
+              <div class="radio-group" id="mandatDeuxiemeActe">
+                <div class="radio-btn" data-val="oui" onclick="setRadio('mandatDeuxiemeActe',this);updateMandatHabitationVis();calc()">Oui</div>
+                <div class="radio-btn active" data-val="non" onclick="setRadio('mandatDeuxiemeActe',this);updateMandatHabitationVis();calc()">No / I do not know</div>
+              </div>
+            </div>
+            <div class="field" style="grid-column: 1 / -1" id="fieldMandatHabitationUnique" style="display:none">
+              <label>Are you using the mortgage mandate to finance your own and sole family residence?</label>
+              <div class="radio-group" id="mandatHabitationUnique">
+                <div class="radio-btn active" data-val="oui" onclick="setRadio('mandatHabitationUnique',this);calc()">Oui</div>
+                <div class="radio-btn" data-val="non" onclick="setRadio('mandatHabitationUnique',this);calc()">Non</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Frais acte for mortgage loan -->
+      <div class="card" id="cardFraisHypo" style="display:none">
+        <div class="card-title" id="titleFraisHypo"><span>📋</span> Mortgage deed fees</div>
+        <div class="info-box" style="margin-bottom:1rem">
+          <strong>Calculation per notaire.be</strong> — Royal Decree scale 16/12/1950 (updated 01/01/2023). The guaranteed amount is calculated on <strong>110% of the principal</strong> (principal + 10% accessories). Updated: 1 January 2026.
+        </div>
+        <table class="breakdown-table">
+          <thead><tr><th>Item</th><th>Base</th><th>Rate</th><th>Amount</th></tr></thead>
+          <tbody id="hypoTable"></tbody>
+        </table>
+        <div id="hypoInfo" style="margin-top:0.75rem"></div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-secondary" onclick="goStep(2)">← Back</button>
+        <button class="btn btn-primary" onclick="goStep(4)">View results →</button>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="panel" id="panel4">
+      <div class="card">
+        <div class="card-title"><span>🎯</span> Financial summary</div>
+        <div class="result-grid" id="synthGrid"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span>📅</span> Monthly repayment schedule</div>
+        <div id="mensualiteDetail"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span>📈</span> Amortisation table (annual)</div>
+        <div class="amort-wrap">
+          <table class="amort-table">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Capital repaid</th>
+                <th>Interest</th>
+                <th>Total paid</th>
+                <th>Remaining balance</th>
+              </tr>
+            </thead>
+            <tbody id="amortTable"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span>💳</span> Total cost of the transaction</div>
+        <table class="breakdown-table">
+          <thead><tr><th>Item</th><th>Amount</th></tr></thead>
+          <tbody id="coutTotalTable"></tbody>
+        </table>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-secondary" onclick="goStep(3)">← Back</button>
+        <button class="btn btn-primary" onclick="window.print()">🖨 Print</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="summary-card">
+      <div class="summary-header">📊 Summary</div>
+      <div class="summary-body">
+        <div class="summary-row highlight">
+          <span class="s-label">Purchase price</span>
+          <span class="s-val" id="s-prix">—</span>
+        </div>
+        <div class="summary-row total">
+          <span class="s-label" id="s-fondsPropresLabel">To finance with own funds</span>
+          <span class="s-val" id="s-fondsPropres">—</span>
+        </div>
+        <div class="summary-row" id="s-rowFraisAchat" style="padding-left:1rem">
+          <span class="s-label" style="display:flex;align-items:center;gap:0.4rem"><span style="font-size:0.5rem">●</span> Purchase deed fees</span>
+          <span class="s-val" id="s-totalFrais" style="font-size:0.88rem">—</span>
+        </div>
+        <div class="summary-row" id="s-rowFraisHypo" style="padding-left:1rem;display:none">
+          <span class="s-label" style="display:flex;align-items:center;gap:0.4rem"><span style="font-size:0.5rem">●</span> Deed fees <span id="s-labelTypeGarantie">mortgage</span></span>
+          <span class="s-val" id="s-fraisHypo" style="font-size:0.88rem">—</span>
+        </div>
+        <div class="summary-row" style="padding-left:1rem">
+          <span class="s-label" style="display:flex;align-items:center;gap:0.4rem"><span style="font-size:0.5rem">●</span> Personal contribution</span>
+          <span class="s-val" id="s-apport" style="font-size:0.88rem">—</span>
+        </div>
+        <div id="s-badge125" style="display:none;margin:4px 0 4px 1rem;background:var(--teal-pale);border:1px solid rgba(26,122,138,.25);border-radius:6px;padding:6px 10px;font-size:.74rem;color:var(--teal);line-height:1.4;"></div>
+        <div class="summary-divider"></div>
+        <div class="summary-row highlight">
+          <span class="s-label" id="s-empruntLabel">Borrowed amount</span>
+          <span class="s-val" id="s-emprunt">—</span>
+        </div>
+        <div class="summary-divider"></div>
+        <div class="summary-row highlight">
+          <span class="s-label">Monthly payment</span>
+          <span class="s-val" id="s-mensualite" style="color:var(--green)">—</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ========== STATE ==========
+let state = {
+  prix: 300000,
+  region: 'wallonie',
+  typeBien: 'habitation',
+  habitationPropre: 'oui',
+  premierAchat: 'oui',
+  regimeFiscal: 'enregistrement',
+  renovPEB: 0,
+  villesPrincipales: 'non',
+  prixTerrain: 60000,
+  prixConstruction: 240000,
+  prixTVA: 0,
+  apport: 30000,
+  duree: 20,
+  taux: 3.5,
+  typeTaux: 'variable',
+  creditHabitationUnique: 'oui',
+  premierActeHypo: 'non',
+  mandatLieAchat: 'oui',
+  mandatDeuxiemeActe: 'non',
+  mandatHabitationUnique: 'oui',
+  typeGarantie: 'hypotheque',  // 'hypotheque' | 'mandat' | 'sans'
+};
+
+let computed = {};
+
+// ========== HELPERS ==========
+const fmt = (n) => n == null ? '—' : new Intl.NumberFormat('fr-BE', {style:'currency', currency:'EUR', maximumFractionDigits:0}).format(Math.round(n));
+const fmtDec = (n, d=2) => new Intl.NumberFormat('fr-BE', {minimumFractionDigits:d, maximumFractionDigits:d}).format(n);
+
+function updateMandatHabitationVis() {
+  // La question habitation unique du mandat n'apparaît que si deuxième acte = Non
+  const show = state.typeGarantie === 'mandat' && state.mandatDeuxiemeActe === 'non';
+  document.getElementById('fieldMandatHabitationUnique').style.display = show ? '' : 'none';
+}
+
+function updateGarantieVis() {
+  const g = state.typeGarantie;
+  const isMandat = g === 'mandat';
+  const isHypo = g === 'hypotheque';
+  const isSans = g === 'sans';
+
+  document.getElementById('fieldsHypo').style.display = isSans ? 'none' : '';
+  document.getElementById('fieldsHypo').querySelector('[id="creditHabitationUnique"]').closest('.field').style.display = isHypo ? '' : 'none';
+  document.getElementById('fieldPremierActe').style.display = isHypo ? '' : 'none';
+  document.getElementById('fieldMandatLieAchat').style.display = isMandat ? '' : 'none';
+  document.getElementById('fieldMandatDeuxiemeActe').style.display = isMandat ? '' : 'none';
+  updateMandatHabitationVis();
+}
+
+function updateFieldVillesPrincipales() {
+  const show = state.region === 'flandre'
+    && state.typeBien !== 'terrain'
+    && state.habitationPropre === 'oui'
+    && state.regimeFiscal === 'enregistrement';
+  document.getElementById('fieldVillesPrincipales').style.display = show ? '' : 'none';
+}
+
+function onVillesChange() {
+  const sel = document.getElementById('villesPrincipalesSelect');
+  state.villesPrincipales = sel.value;
+  calc();
+}
+
+function onRenovPEBChange() {
+  state.renovPEB = parseInt(document.getElementById('renovPEB').value) || 0;
+  calc();
+}
+
+function updateFieldRenovPEB() {
+  const show = state.region === 'bruxelles'
+    && state.typeBien !== 'terrain'
+    && state.habitationPropre === 'oui'
+    && state.regimeFiscal === 'enregistrement';
+  document.getElementById('fieldRenovPEB').style.display = show ? '' : 'none';
+}
+
+function updateHabitationPropreInfo() {
+  const el = document.getElementById('infoHabitationPropre');
+  if (!el) return;
+  const isTerrain = state.typeBien === 'terrain';
+  const isWallonie = state.region === 'wallonie';
+
+  if (isTerrain) {
+    el.innerHTML = `
+      <strong>📋 Conditions to benefit from the reduced rate (3% in Wallonia):</strong><br><br>
+      <strong>Installation deadline:</strong> You must build your residence on this land and establish your primary residence there within <strong>5 years</strong> of the notarial deed.<br><br>
+      <strong>Residence duration:</strong> You must remain in this property for <strong>3 full years</strong> after moving in. Early departure will result in additional duties (difference between 12.5% and 3%).<br><br>
+      <strong>Sole residence:</strong> You must not already own the <strong>full ownership</strong> of a residential property. Permitted: bare land, commercial building, garage, barn, workshop…<br><br>
+      <strong>💡 Bare ownership / Usufruct / Undivided shares:</strong> A property held in <strong>bare ownership</strong>, <strong>usufruct</strong> or of which you only hold an <strong>undivided share</strong> (e.g. inheritance) does <u>not prevent</u> the reduced rate of 3%. Only full ownership of the whole property is blocking.<br><br>
+      <strong>⚠️ Foreign properties:</strong> Properties located <strong>abroad</strong> are <u>indeed taken into account</u> when assessing the sole residence condition in Wallonia. If you fully own a residence abroad, you cannot benefit from the 3% rate.<br><br>
+      <strong>💡 Couple purchase:</strong> If you buy together and <strong>one of you already owns a property</strong> but not the other, you are not entirely excluded from the reduced rate. In practice: the share bought by the one who owns nothing benefits from <strong>3%</strong>, and the share bought by the one who already owns is taxed at <strong>12.5%</strong>.<br>
+      <em>Example: you buy 50/50. One already owns a house, the other does not → 50% of the price is taxed at 3%, 50% at 12.5%.</em><br><br>
+      <div style="border-top:1px solid rgba(26,122,138,0.2);margin-top:6px;padding-top:8px;font-size:0.78rem;color:var(--text-light)">
+        📎 Official sources :
+        <a href="https://www.wallonie.be/fr/actualites/reduction-des-droits-denregistrement-de-succession-et-de-donation" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none">Wallonie.be</a> ·
+        <a href="https://www.wallonie.be/sites/default/files/2024-12/R%C3%A9forme_droits_enregistrement-FAQ.pdf" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none">Official FAQ (PDF)</a> ·
+        <a href="https://fin.belgium.be/fr/particuliers/habitation/acheter-vendre/droit-enregistrement" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none">SPF Finances</a>
+      </div>
+    `;
+  } else {
+    const isBruxelles = state.region === 'bruxelles';
+    const isFlandre = state.region === 'flandre';
+    if (isBruxelles) {
+      el.innerHTML = `
+        <strong>📋 Conditions to benefit from the Brussels allowance:</strong><br><br>
+        <strong>Primary residence:</strong> You must establish your primary residence in the property within <strong>3 years</strong> of the notarial deed (or <strong>5 years</strong> if EPC renovation of at least 2 energy classes).<br><br>
+        <strong>Residence maintenance:</strong> You must maintain your primary residence for an uninterrupted period of <strong>5 years</strong>. Early departure results in pro-rata recovery of the benefit.<br><br>
+        <strong>Full ownership required at purchase:</strong> You must acquire the property in <strong>full ownership</strong>. A purchase of bare ownership or usufruct only <u>does not entitle</u> to the allowance.<br><br>
+        <strong>Sole residence:</strong> You must not already own the <strong>full ownership</strong> of another property used for residential purposes, whether <strong>in Belgium or abroad</strong>, at the time of the preliminary agreement.<br><br>
+        <strong>💡 Bare ownership / Usufruct / Undivided share:</strong> If you only hold bare ownership, usufruct, or an <strong>undivided share</strong> (e.g. 50% inheritance) of another property — without being 100% full owner — this <u>does not prevent</u> the allowance. Only full ownership of the entire property is blocking.<br><br>
+        <strong>Price ceiling:</strong> The allowance only applies if the purchase price (including charges) does not exceed <strong>€600,000</strong>.<br><br>
+        <strong>💡 Do you already own a property?</strong> You can still benefit from the allowance if you sell it within <strong>2 years</strong> of the purchase deed (through restitution).<br><br>
+        <strong>💡 Couple purchase — strict rule:</strong> In Brussels, <strong>each buyer must individually meet all conditions</strong>. If one of them already owns a property in full, <u>only the other's share</u> benefits from the allowance.<br>
+        <em>Example: you buy 50/50. One already owns a house, the other does not → the €200,000 allowance applies only to the 50% share, i.e. on €100,000 (saving of €12,500 instead of €25,000).</em><br><br>
+        <div style="border-top:1px solid rgba(26,122,138,0.2);margin-top:6px;padding-top:8px;font-size:0.78rem;color:var(--text-light)">
+          📎 Official sources :
+          <a href="https://be.brussels/fr/impots-financement/impots-et-taxes/fiscalite-immobiliere/droits-denregistrement/abattement-sur-les-droits-de-vente" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none">Bruxelles Fiscalité — Abattement</a> ·
+          <a href="https://be.brussels/fr/impots-financement/impots-et-taxes/fiscalite-immobiliere/droits-denregistrement/faq-abattement-general" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none">FAQ Abattement général</a> ·
+          <a href="https://fin.belgium.be/fr/particuliers/habitation/acheter-vendre/droit-enregistrement" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none">SPF Finances</a>
+        </div>
+      `;
+    } else if (isFlandre) {
+      el.innerHTML = `
+        <strong>📋 Conditions to benefit from the 2% reduced rate in Flanders (since 01/01/2025):</strong><br><br>
+        <strong>Full ownership at purchase:</strong> You must acquire the <strong>entire property in full ownership</strong> (alone or with multiple buyers together). A purchase of bare ownership or usufruct only is excluded.<br><br>
+        <strong>Domiciliation:</strong> You must register at the property address within <strong>3 years</strong> of the notarial deed. <u>No minimum maintenance period</u> is required afterwards (unlike Brussels which requires 5 years).<br><br>
+        <strong>Sole residence:</strong> You must not own the <strong>full ownership</strong> of another residential property or building plot, whether <strong>in Belgium or abroad</strong>, at the date of the notarial deed. The condition is strictly verified by Vlabel (Flemish tax authority).<br><br>
+        <strong>💡 Bare ownership / Usufruct:</strong> Holding only bare ownership or usufruct of another property <u>does not prevent</u> the 2% rate. Only full ownership of the whole property is blocking.<br><br>
+        <strong>⚠️ Building plot :</strong> La possession d'un terrain à bâtir fait <u>également</u> obstacle au taux de 2%, même si ce terrain est situé à l'étranger. Vous seriez taxé à 12%.<br><br>
+        <strong>🏠 Modest home:</strong> If the purchase price does not exceed <strong>€220,000</strong> (or <strong>€240,000</strong> in main cities and the Vlaamse Rand), you benefit from an additional reduction of <strong>€1,867</strong> on your registration duties (subject to meeting the 2% rate conditions).<br><br>
+        <strong>💡 Do you already own a property?</strong> You can still benefit from the 2% rate if you commit to <strong>selling it within 2 years</strong> of the purchase deed.<br><br>
+        <strong>💡 Couple purchase:</strong> If you buy together and one meets the conditions but not the other, the 2% rate applies only to the share of the one who meets the conditions. <u>Important difference from Brussels</u> where both must meet the conditions.<br>
+        <em>Example: you buy 50/50. One already owns a house, the other does not → 50% of the price is taxed at 2%, 50% at 12%.</em><br><br>
+        <strong>ℹ️ Removed since 01/01/2025:</strong> The favourable 1% rate for major energy renovation and the renovation loan with interest subsidies have been abolished. Only the 2% rate (sole residence) remains as the main benefit.<br><br>
+        <div style="border-top:1px solid rgba(26,122,138,0.2);margin-top:6px;padding-top:8px;font-size:0.78rem;color:var(--text-light)">
+          📎 Official sources :
+          <a href="https://www.vlaanderen.be/verkooprecht" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none">Vlabel — Verkooprecht</a> ·
+          <a href="https://www.notaire.be/immobilier/acheter-et-vendre-un-bien-immobilier/les-frais-lies-lachat/droits-denregistrement-en-region-flamande" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none">Notaire.be — Flandre</a> ·
+          <a href="https://fin.belgium.be/fr/particuliers/habitation/acheter-vendre/droit-enregistrement" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none">SPF Finances</a>
+        </div>
+      `;
+    } else {
+      el.innerHTML = `
+        <strong>📋 Conditions to benefit from the reduced rate${isWallonie ? ' (3% in Wallonia)' : ''}:</strong><br><br>
+        <strong>Own residence:</strong> You must establish your primary residence there within <strong>3 years</strong> of the notarial deed (registration in the population register at the address of the new property).<br><br>
+        <strong>Residence duration:</strong> You must remain in this property for <strong>3 full years</strong> after moving in. Early departure will result in additional duties (difference between 12.5% and 3%).<br><br>
+        <strong>Sole residence:</strong> You must not already own the <strong>full ownership</strong> of a property used or intended for residential purposes. Permitted: bare land, commercial building, garage, barn, workshop…<br><br>
+        <strong>💡 Bare ownership / Usufruct / Undivided shares:</strong> A property held in <strong>bare ownership</strong>, <strong>usufruct</strong> or of which you only hold an <strong>undivided share</strong> (e.g. inheritance) does <u>not prevent</u> the reduced rate of 3%. Only full ownership of the whole property is blocking.<br><br>
+        <strong>⚠️ Foreign properties:</strong> Properties located <strong>abroad</strong> are <u>indeed taken into account</u> when assessing the sole residence condition in Wallonia. If you fully own a residence abroad, you cannot benefit from the 3% rate.<br><br>
+        <strong>💡 Do you already own a property?</strong> You can still benefit from the reduced rate if you commit to <strong>selling it within 3 years</strong> of the purchase deed. A check will be carried out at maturity.<br><br>
+        <strong>💡 Couple purchase:</strong> If you buy together and <strong>one of you already owns a property</strong> but not the other, you are not entirely excluded from the reduced rate. In practice: the share bought by the one who owns nothing benefits from <strong>3%</strong>, and the share bought by the one who already owns is taxed at <strong>12.5%</strong>.<br>
+        <em>Example: you buy 50/50. One already owns a house, the other does not → 50% of the price is taxed at 3%, 50% at 12.5%.</em><br><br>
+        <div style="border-top:1px solid rgba(26,122,138,0.2);margin-top:6px;padding-top:8px;font-size:0.78rem;color:var(--text-light)">
+          📎 Official sources :
+          <a href="https://www.wallonie.be/fr/actualites/reduction-des-droits-denregistrement-de-succession-et-de-donation" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none">Wallonie.be</a> ·
+          <a href="https://www.wallonie.be/sites/default/files/2024-12/R%C3%A9forme_droits_enregistrement-FAQ.pdf" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none">Official FAQ (PDF)</a> ·
+          <a href="https://fin.belgium.be/fr/particuliers/habitation/acheter-vendre/droit-enregistrement" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none">SPF Finances</a>
+        </div>
+      `;
+    }
+  }
+}
+
+function setRadio(group, el) {
+  document.querySelectorAll(`#${group} .radio-btn`).forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  state[group] = el.dataset.val;
+
+  if (group === 'typeBien') {
+    const isTerrain = state.typeBien === 'terrain';
+    const isFlandre = state.region === 'flandre';
+    document.getElementById('labelHabitationPropre').textContent = isTerrain
+      ? 'Avez-vous l\'intention de construire votre propre et unique habitation sur ce terrain et de l\'occuper dans un délai de 5 yrs ?'
+      : 'Own and sole residence?';
+    // En Flandre, terrain = toujours 12%, la question est inutile
+    document.getElementById('fieldHabitationPropre').style.display = (isTerrain && isFlandre) ? 'none' : '';
+    document.getElementById('fieldRegimeFiscal').style.display = isTerrain ? 'none' : '';
+    document.getElementById('fieldPrixTerrain').style.display = 'none';
+    document.getElementById('fieldPrixConstruction').style.display = 'none';
+    if (!isTerrain) {
+      const mixte = state.regimeFiscal === 'mixte';
+      document.getElementById('fieldPrixTerrain').style.display = mixte ? '' : 'none';
+      document.getElementById('fieldPrixConstruction').style.display = mixte ? '' : 'none';
+    }
+    updateHabitationPropreInfo();
+    updateFieldRenovPEB();
+    updateFieldVillesPrincipales();
+  }
+
+  if (group === 'region' || group === 'habitationPropre') {
+    updateHabitationPropreInfo();
+    updateFieldRenovPEB();
+    updateFieldVillesPrincipales();
+  }
+
+  if (group === 'regimeFiscal') {
+    updateFieldRenovPEB();
+    updateFieldVillesPrincipales();
+  }
+
+  if (group === 'regimeFiscal') {
+    const mixte = state.regimeFiscal === 'mixte';
+    document.getElementById('fieldPrixTerrain').style.display = mixte ? '' : 'none';
+    document.getElementById('fieldPrixConstruction').style.display = mixte ? '' : 'none';
+    if (mixte) {
+      // Initialise avec 20% terrain / 80% construction si pas encore défini
+      const prix = parseFloat(document.getElementById('prix').value) || 0;
+      const terrain = parseFloat(document.getElementById('prixTerrain').value) || 0;
+      const construction = parseFloat(document.getElementById('prixConstruction').value) || 0;
+      if (terrain + construction !== prix || (terrain === 0 && construction === 0)) {
+        const newTerrain = Math.round(prix * 0.20);
+        document.getElementById('prixTerrain').value = newTerrain;
+        document.getElementById('prixConstruction').value = prix - newTerrain;
+        state.prixTerrain = newTerrain;
+        state.prixConstruction = prix - newTerrain;
+      }
+    }
+  }
+  calc();
+}
+
+function onPrixChange() {
+  // Si on est en mode mixte, on garde le ratio terrain/construction existant
+  if (state.regimeFiscal === 'mixte') {
+    const newPrix = parseFloat(document.getElementById('prix').value) || 0;
+    const oldTotal = state.prixTerrain + state.prixConstruction;
+    if (oldTotal > 0) {
+      const ratioTerrain = state.prixTerrain / oldTotal;
+      const newTerrain = Math.round(newPrix * ratioTerrain);
+      const newConstruction = newPrix - newTerrain;
+      document.getElementById('prixTerrain').value = newTerrain;
+      document.getElementById('prixConstruction').value = newConstruction;
+      state.prixTerrain = newTerrain;
+      state.prixConstruction = newConstruction;
+    } else {
+      // Défaut : 20% terrain / 80% construction
+      const newPrix = parseFloat(document.getElementById('prix').value) || 0;
+      const newTerrain = Math.round(newPrix * 0.20);
+      document.getElementById('prixTerrain').value = newTerrain;
+      document.getElementById('prixConstruction').value = newPrix - newTerrain;
+      state.prixTerrain = newTerrain;
+      state.prixConstruction = newPrix - newTerrain;
+    }
+  }
+  calc();
+}
+
+function onTerrainChange() {
+  const prix = parseFloat(document.getElementById('prix').value) || 0;
+  const terrain = parseFloat(document.getElementById('prixTerrain').value) || 0;
+  const construction = Math.max(0, prix - terrain);
+  document.getElementById('prixConstruction').value = construction;
+  state.prixTerrain = terrain;
+  state.prixConstruction = construction;
+  calc();
+}
+
+function onConstructionChange() {
+  const prix = parseFloat(document.getElementById('prix').value) || 0;
+  const construction = parseFloat(document.getElementById('prixConstruction').value) || 0;
+  const terrain = Math.max(0, prix - construction);
+  document.getElementById('prixTerrain').value = terrain;
+  state.prixTerrain = terrain;
+  state.prixConstruction = construction;
+  calc();
+}
+
+function updateApportSlider() {
+  const { regimeFiscal, prixTerrain, prixConstruction } = state;
+  const prixBase = regimeFiscal === 'mixte'
+    ? (prixTerrain + prixConstruction)
+    : (parseFloat(document.getElementById('prix').value) || 0);
+  const pct = parseFloat(document.getElementById('apportPctSlider').value) || 0;
+  const montant = Math.round(prixBase * pct / 100);
+  document.getElementById('apportPctLabel').textContent = pct + '%';
+  document.getElementById('apportMontant').textContent = fmt(montant);
+  state.apport = montant;
+}
+
+function updateRange(id, valId, suffix) {
+  const v = document.getElementById(id).value;
+  document.getElementById(valId).textContent = v + ' ' + suffix;
+  state[id] = parseFloat(v);
+}
+
+function readInputs() {
+  state.prix = parseFloat(document.getElementById('prix').value) || 0;
+  state.region = document.getElementById('region').value;
+  state.regimeFiscal = document.querySelector('#regimeFiscal .radio-btn.active')?.dataset.val || 'enregistrement';
+  state.prixTerrain = parseFloat(document.getElementById('prixTerrain').value) || 0;
+  state.prixConstruction = parseFloat(document.getElementById('prixConstruction').value) || 0;
+  const pct = parseFloat(document.getElementById('apportPctSlider').value) || 0;
+  state.apport = Math.round(state.prix * pct / 100);
+  state.assurance = 0;
+  state.duree = parseInt(document.getElementById('duree').value);
+  state.taux = parseFloat(document.getElementById('taux').value);
+}
+
+// ========== DROITS D'ENREGISTREMENT ==========
+function calcDroits() {
+  const { prix, region, typeBien, habitationPropre, premierAchat, regimeFiscal, prixTerrain, prixConstruction, villesPrincipales } = state;
+  let rows = [];
+  let total = 0;
+  let info = '';
+
+  // ---- TVA pure ----
+  if (regimeFiscal === 'tva') {
+    const tva = prix * 0.21;
+    rows.push({ label: 'VAT 21% on the property', base: fmt(prix), taux: '21%', montant: tva });
+    total = tva;
+    info = '<strong>Purchase with VAT</strong>: applicable to new or equivalent properties. VAT 21% on purchase price.';
+    return { rows, total, info };
+  }
+
+  // ---- Mixte : terrain (droits enreg.) + construction (TVA) ----
+  if (regimeFiscal === 'mixte') {
+    // Taux terrain selon région et situation
+    let taux_t;
+    let infoTerrain;
+    if (region === 'flandre') {
+      taux_t = 0.12; infoTerrain = '12% (taux normal Flandre)';
+    } else if (region === 'bruxelles') {
+      taux_t = 0.125; infoTerrain = '12,5%';
+    } else {
+      // Wallonie
+      taux_t = habitationPropre === 'oui' ? 0.03 : 0.125;
+      infoTerrain = habitationPropre === 'oui' ? '3% (own and sole residence)' : '12.5% (standard rate)';
+    }
+
+    const droitsTerrain = prixTerrain * taux_t;
+    const tvaConstr = prixConstruction * 0.21;
+    rows.push({ label: `Land registration duties (${taux_t*100}%)`, base: fmt(prixTerrain), taux: (taux_t*100)+'%', montant: droitsTerrain });
+    rows.push({ label: 'VAT 21% on property', base: fmt(prixConstruction), taux: '21%', montant: tvaConstr });
+    total = droitsTerrain + tvaConstr;
+    info = `<strong>Mixed purchase</strong>: registration duties ${infoTerrain} on the land (${fmt(prixTerrain)}) + VAT 21% on construction (${fmt(prixConstruction)}).`;
+    return { rows, total, info };
+  }
+
+  // ---- Building plot ----
+  if (typeBien === 'terrain') {
+    let taux_t, infoTerrain;
+    if (region === 'wallonie') {
+      if (habitationPropre === 'oui') {
+        taux_t = 0.03;
+        infoTerrain = '3% (own and sole residence to be built within 5 years)';
+      } else {
+        taux_t = 0.125;
+        infoTerrain = '12.5% (standard rate)';
+      }
+      const montant = prix * taux_t;
+      rows.push({ label: `Land registration duties (${taux_t*100}%)`, base: fmt(prix), taux: (taux_t*100)+'%', montant });
+      total = montant;
+      info = `<strong>Building plot — Wallonia</strong>: ${infoTerrain}`;
+    } else if (region === 'bruxelles') {
+      // Bruxelles terrain: abattement 100.000€, plafond 300.000€
+      if (habitationPropre === 'oui' && prix <= 300000) {
+        const abatt = Math.min(prix, 100000);
+        const base = Math.max(0, prix - abatt);
+        const montantTerrain = base * 0.125;
+        rows.push({ label: 'Brussels building plot allowance', base: fmt(abatt), taux: '−', montant: -(abatt * 0.125) });
+        rows.push({ label: 'Land registration duties 12.5%', base: fmt(base), taux: '12,5%', montant: montantTerrain });
+        const droitsTerrainFinaux = Math.max(50, montantTerrain);
+        if (montantTerrain < 50) rows.push({ label: 'Minimum fixed duty', base: '−', taux: '−', montant: 50 - montantTerrain });
+        total = droitsTerrainFinaux;
+        infoTerrain = `Abattement de <strong>100.000€</strong> (économie de ${fmt(Math.min(prix,100000)*0.125)}).${montantTerrain < 50 ? ' Droit minimum fixe de 50€ appliqué.' : ''} Plafond : 300.000€.`;
+      } else {
+        const montant = prix * 0.125;
+        rows.push({ label: 'Land registration duties 12.5%', base: fmt(prix), taux: '12,5%', montant });
+        total = montant;
+        infoTerrain = prix > 300000 ? 'Prix > 300.000€ — aucun abattement applicable.' : 'Standard rate 12.5% (pas d\'abattement sans habitation propre).';
+      }
+      info = `<strong>Building plot — Bruxelles</strong> : ${infoTerrain}`;
+    } else {
+      // Flandre — terrain à bâtir : 12% toujours (pas de taux réduit pour terrain seul en Flandre)
+      const montant = prix * 0.12;
+      rows.push({ label: 'Land registration duties 12%', base: fmt(prix), taux: '12%', montant });
+      total = montant;
+      info = '<strong>Building plot — Flandre</strong> : Taux normal 12% (pas de taux réduit pour terrain seul).';
+    }
+  } else {
+    // Habitation
+    if (region === 'wallonie') {
+      let taux = 0.125;
+      let infoArr = [];
+
+      if (habitationPropre === 'oui') {
+        taux = 0.03;
+        infoArr.push('Taux réduit 3% (own and sole residence)');
+      } else {
+        infoArr.push('Standard rate 12.5%');
+      }
+
+      const montant = prix * taux;
+      rows.push({ label: `Registration duties (${taux*100}%)`, base: fmt(prix), taux: (taux*100)+'%', montant });
+      total = montant;
+      info = '<strong>Wallonia</strong>: ' + infoArr.join(' | ');
+
+    } else if (region === 'bruxelles') {
+      const taux = 0.125;
+
+      if (habitationPropre === 'oui') {
+        // Plafond : au-delà de 600.000€, pas d'abattement du tout
+        if (prix > 600000) {
+          const montant = prix * taux;
+          rows.push({ label: 'Registration duties 12.5%', base: fmt(prix), taux: '12,5%', montant });
+          total = montant;
+          info = '<strong>Brussels</strong>: Price > €600,000 — no allowance applicable.';
+        } else {
+          // Abattement général : 200.000€
+          const abattGeneralBrut = 200000;
+          // Abattement PEB complémentaire : 25.000€ par saut de classe (min 2 sauts)
+          const nbSautsPEB = state.renovPEB || 0;
+          const abattPEB = nbSautsPEB >= 2 ? nbSautsPEB * 25000 : 0;
+          // Abattement total plafonné au prix
+          const abattTotal = Math.min(prix, abattGeneralBrut + abattPEB);
+          const base = Math.max(0, prix - abattTotal);
+          const montant = base * taux;
+
+          rows.push({ label: 'Brussels general allowance', base: fmt(abattGeneralBrut), taux: '−', montant: -Math.min(prix, abattGeneralBrut) * taux });
+          if (abattPEB > 0) {
+            rows.push({ label: `EPC allowance (${nbSautsPEB} EPC class jumps × €25,000)`, base: fmt(abattPEB), taux: '−', montant: -Math.min(Math.max(0, prix - abattGeneralBrut), abattPEB) * taux });
+          }
+          rows.push({ label: 'Registration duties 12.5%', base: fmt(base), taux: '12,5%', montant });
+
+          // Droit minimum fixe : 50€
+          const droitsFinaux = Math.max(50, montant);
+          const droitMinimumApplique = montant < 50;
+          if (droitMinimumApplique) {
+            rows.push({ label: 'Minimum fixed duty', base: '−', taux: '−', montant: 50 - montant });
+          }
+          total = droitsFinaux;
+
+          let infoTxt = `<strong>Brussels</strong>: Allowance of <strong>${fmt(abattGeneralBrut)}</strong> on the taxable base`;
+          if (abattPEB > 0) infoTxt += ` + additional EPC allowance of <strong>${fmt(abattPEB)}</strong>`;
+          infoTxt += `. Économie : <strong>${fmt(Math.min(prix, abattTotal) * taux)}</strong> vs full rate.`;
+          if (droitMinimumApplique) infoTxt += ` Minimum fixed duty of <strong>€50</strong> applied.`;
+          if (nbSautsPEB >= 2) infoTxt += ` Domiciliation deadline extended to <strong>5 years</strong> (instead of 3) for EPC renovation.`;
+          info = infoTxt;
+        }
+      } else {
+        // Pas d'abattement
+        const montant = prix * taux;
+        rows.push({ label: 'Registration duties 12.5%', base: fmt(prix), taux: '12,5%', montant });
+        total = montant;
+        info = '<strong>Bruxelles</strong> : Standard rate 12.5% (pas d\'abattement sans own and sole residence).';
+      }
+
+    } else {
+      // Flandre — depuis 01/01/2025
+      // 2% : own and sole residence (aucune autre propriété en BE ou étranger), domiciliation dans 3 yrs
+      // 12% : tout le reste
+      if (habitationPropre === 'oui') {
+        const taux = 0.02;
+        const droitsBruts = prix * taux;
+        // Réduction habitation modeste : 1.867€ si prix ≤ seuil
+        const seuilModeste = state.villesPrincipales === 'oui' ? 240000 : 220000;
+        const reductionModeste = prix <= seuilModeste ? Math.min(1867, droitsBruts) : 0;
+        const droitsNets = droitsBruts - reductionModeste;
+
+        // Droit minimum fixe : 50€ (les droits ne peuvent jamais être nuls ou négatifs)
+        const droitsFinaux = Math.max(50, droitsNets);
+        const droitMinimumApplique = droitsNets < 50;
+
+        rows.push({ label: 'Registration duties 2%', base: fmt(prix), taux: '2%', montant: droitsBruts });
+        if (reductionModeste > 0) {
+          rows.push({ label: `Modest home reduction (price ≤ ${fmt(seuilModeste)})`, base: '−', taux: '−', montant: -reductionModeste });
+        }
+        if (droitMinimumApplique) {
+          rows.push({ label: 'Minimum fixed duty', base: '−', taux: '−', montant: 50 - droitsNets });
+        }
+        total = droitsFinaux;
+        let infoFl = '<strong>Flandre</strong> : Taux réduit <strong>2%</strong> (own and sole residence — depuis 01/01/2025).';
+        if (reductionModeste > 0) {
+          infoFl += ` Additional modest home reduction: <strong>−${fmt(reductionModeste)}</strong>. Net duties: <strong>${fmt(droitsFinaux)}</strong>`;
+          if (droitMinimumApplique) infoFl += ' (minimum fixed duty of €50 applied)';
+          infoFl += '.';
+        } else if (prix <= seuilModeste + 1000) {
+          infoFl += ` Price above modest threshold (${fmt(seuilModeste)}) — no additional reduction.`;
+        }
+        info = infoFl;
+      } else {
+        const taux = 0.12;
+        const montant = prix * taux;
+        rows.push({ label: 'Registration duties 12%', base: fmt(prix), taux: '12%', montant });
+        total = montant;
+        info = '<strong>Flanders</strong>: Standard rate 12% (2nd property, investment or conditions not met).';
+      }
+    }
+  }
+
+  return { rows, total, info };
+}
+
+// ========== HONORAIRES NOTAIRE — Scale Gbis (AR 16/12/1950 - vigueur 01/01/2023) ==========
+// Actes de vente immobilière : barème Gbis avec partie fixe 225 €
+// ========== HONORAIRES NOTAIRE ==========
+// Scale J (standard) ou Jbis (own and sole residence)
+// AR 16/12/1950, mis à jour au 01/01/2026
+// Partie fixe indexée: IPC base jan 2022 (118.31) -> sept 2025 (134.95)
+//   J:    250 * 134.95 / 118.31 = 285 €
+//   Jbis: 225 * 134.95 / 118.31 = 257 €
+function calcHonoraires(prix) {
+  // Scale Jbis uniquement pour habitation propre (pas pour terrain seul)
+  const estJbis = state.habitationPropre === 'oui' && state.typeBien !== 'terrain';
+
+  // Taux proportionnels (inchangés, non indexés)
+  const baremeJ = [
+    { max: 7500,     taux: 0.02500 },
+    { max: 17500,    taux: 0.02500 },
+    { max: 30000,    taux: 0.01750 },
+    { max: 45495,    taux: 0.01710 },
+    { max: 64095,    taux: 0.01140 },
+    { max: 250095,   taux: 0.00570 },
+    { max: 500000,   taux: 0.00200 },
+    { max: Infinity, taux: 0.00200 },
+  ];
+
+  const baremeJbis = [
+    { max: 7500,     taux: 0.02500 },
+    { max: 17500,    taux: 0.02500 },
+    { max: 30000,    taux: 0.02000 },
+    { max: 45495,    taux: 0.01500 },
+    { max: 64095,    taux: 0.00500 },
+    { max: 250095,   taux: 0.00485 },
+    { max: 500000,   taux: 0.00300 },
+    { max: Infinity, taux: 0.00200 },
+  ];
+
+  const tranches = estJbis ? baremeJbis : baremeJ;
+
+  // Partie fixe indexée au 01/01/2026
+  const partiFixed = estJbis ? 257 : 285;
+
+  let remaining = prix;
+  let prev = 0;
+  let propHT = 0;
+
+  for (const t of tranches) {
+    if (remaining <= 0) break;
+    const size = Math.min(remaining, t.max - prev);
+    propHT += size * t.taux;
+    prev = t.max;
+    remaining -= size;
+  }
+
+  propHT = Math.round(propHT * 100) / 100;
+
+  // Honoraires HT = partie proportionnelle + partie fixe indexée
+  const totalHT = Math.round((propHT + partiFixed) * 100) / 100;
+
+  // Base TVA = honoraires + frais admin (855) + débours (304) + droit écriture (100)
+  // Le droit pour les annexes (100€) est hors TVA
+  const baseTVA = totalHT + 855 + 304 + 100;
+  const tva = Math.round(baseTVA * 0.21 * 100) / 100;
+
+  const baremeNom = estJbis ? 'Jbis' : 'J';
+  return { propHT, partiFixed, totalHT, tva, baremeNom };
+}
+
+// ========== AUTRES FRAIS ==========
+function calcAutresFrais(prix, droitsTotal, honTotalHT) {
+  const tva = computed.hon ? computed.hon.tva : 0;
+  return [
+    { poste: "Fee for annexes", montant: 100 },
+    { poste: "Writing fee", montant: 100 },
+    { poste: 'Disbursements', montant: 304 },
+    { poste: 'Administrative fees', montant: 855 },
+    { poste: 'Mortgage transcription', montant: 285 },
+    { poste: 'VAT 21%', montant: tva },
+  ];
+}
+
+// ========== FRAIS ACTE CRÉDIT HYPOTHÉCAIRE ==========
+// Source : notaire.be calculateur (mis à jour 1 janvier 2026) + AR 16/12/1950
+// Valeurs vérifiées : 270.000€, hab. unique, premier acte → 6.724,29€ ✓
+function calcFraisHypotheque(capital) {
+  if (capital <= 0) return null;
+  if (state.typeGarantie === 'sans') return null;
+
+  const estMandat = state.typeGarantie === 'mandat';
+  const estGbis = state.creditHabitationUnique === 'oui'; // utilisé pour hypothèque classique
+
+  const premierActe = state.premierActeHypo === 'oui'; // utilisé pour hypothèque classique
+
+  // Scales communs (utilisés selon le cas)
+  const tranchesGbis = [
+    { max:  7500,    taux: 0.01368 },
+    { max: 17500,    taux: 0.01094 },
+    { max: 30000,    taux: 0.00730 },
+    { max: 45495,    taux: 0.00547 },
+    { max: 64090,    taux: 0.00365 },
+    { max: 250095,   taux: 0.00182 },
+    { max: 500000,   taux: 0.00036 },
+    { max: Infinity, taux: 0.00036 },
+  ];
+  // Scale G New 2026 — taux vérifiés notaire.be (180k→869,39€ / 270k→1038,37€)
+  const tranchesG = [
+    { max:  7500,    taux: 0.01805913 },
+    { max: 17500,    taux: 0.01444203 },
+    { max: 30000,    taux: 0.00963682 },
+    { max: 45495,    taux: 0.00722101 },
+    { max: 64090,    taux: 0.00481841 },
+    { max: 250095,   taux: 0.00230850 },
+    { max: 500000,   taux: 0.00036    },
+    { max: Infinity, taux: 0.00036    },
+  ];
+  const tranches = estGbis ? tranchesGbis : tranchesG; // pour hypothèque classique
+
+  if (estMandat) {
+    // ---- MANDAT HYPOTHÉCAIRE ----
+    // Source : notaire.be calculateur (6 cas vérifiés, 270k, 1 jan 2026)
+    //
+    // Droits fixes (pas de % sur montant garanti) :
+    //   Registration duties : 50€ forfait
+    //   Fee for annexes  : 100€ forfait
+    //   Writing fee        : 50€ forfait (≠ hypothèque où c'est 100€)
+    //
+    // Honoraires :
+    //   Si deuxièmeActe = Oui (peu importe lieAchat) → 200€ forfait fixe
+    //   Sinon → barème Gbis ou G New selon mandatHabitationUnique
+    //
+    // Frais admin + débours : dépendent de lieAchat ET deuxièmeActe
+    //   lieAchat=Oui OU deuxièmeActe=Oui → frais réduits (627€ / 50€)
+    //   lieAchat=Non ET deuxièmeActe=Non → premier acte (855€ / 304€)
+
+    const lieAchat = state.mandatLieAchat === 'oui';
+    const deuxiemeActe = state.mandatDeuxiemeActe === 'oui';
+    const habUnique = state.mandatHabitationUnique === 'oui';
+
+    // Honoraires
+    let honHT;
+    if (deuxiemeActe) {
+      honHT = 200; // forfait 2ème acte de financement
+    } else {
+      // Scale selon habitation unique
+      const useGbis = habUnique;
+      const tBarem = useGbis ? tranchesGbis : tranchesG;
+      let base = capital, prev = 0, prop = 0;
+      for (const t of tBarem) {
+        if (base <= 0) break;
+        const size = Math.min(base, t.max - prev);
+        prop += size * t.taux;
+        prev = t.max;
+        base -= size;
+      }
+      honHT = Math.round(prop * 100) / 100;
+    }
+
+    // Frais admin + débours
+    const fraisReduits = lieAchat || deuxiemeActe;
+    const fraisAdminHT = fraisReduits ? 627 : 855;
+    const debours = fraisReduits ? 50 : 304;
+
+    // Droits fixes mandat
+    const droitEnregMandat = 50;
+    const droitAnnexesMandat = 100;
+    const droitEcritureMandat = 50; // 50€ pour mandat (≠ 100€ pour hypothèque)
+
+    // TVA 21%
+    const baseTVA = honHT + fraisAdminHT + debours + droitEcritureMandat;
+    const tva = Math.round(baseTVA * 0.21 * 100) / 100;
+
+    const total = droitEnregMandat + droitAnnexesMandat + droitEcritureMandat + honHT + fraisAdminHT + debours + tva;
+
+    const barem = deuxiemeActe ? 'flat rate 2nd deed' : (habUnique ? 'Gbis' : 'G New');
+    const rows = [
+      { label: 'Registration duties', base: '—', taux: 'flat rate', montant: droitEnregMandat },
+      { label: 'Fee for annexes', base: '—', taux: 'flat rate', montant: droitAnnexesMandat },
+      { label: 'Writing fee', base: '—', taux: 'flat rate', montant: droitEcritureMandat },
+      { label: `Fees (${barem}) excl. VAT`, base: deuxiemeActe ? '—' : fmt(capital), taux: deuxiemeActe ? 'flat rate' : 'degressive', montant: honHT },
+      { label: `Administrative fees excl. VAT (${fraisReduits ? 'linked to purchase / 2nd deed' : 'first deed'})`, base: '—', taux: 'flat rate', montant: fraisAdminHT },
+      { label: 'Disbursements', base: '—', taux: 'flat rate', montant: debours },
+      { label: 'VAT 21%', base: fmt(baseTVA), taux: '21%', montant: tva },
+    ];
+
+    const info = `<div class="info-box">⚡ <strong>Mortgage mandate</strong> — Pas d'inscription au Bureau Sécurité Juridique. Registration duties forfaitaires (50€). Honoraires : <strong>${barem}</strong>. Calcul indicatif selon notaire.be (1 janvier 2026).</div>`;
+
+    return { rows, total, capital, accessoires: 0, montantGaranti: capital, honHT, tva, isMandat: true, info };
+
+  } else {
+    // ---- HYPOTHÈQUE CLASSIQUE ----
+    const accessoires = capital * 0.10;
+    const montantGaranti = capital + accessoires;
+    const droitEnreg = montantGaranti * 0.01;
+    const droitAnnexes = 100;
+    const droitHypo = montantGaranti * 0.003;
+    const retributionForfait = capital < 272727 ? 270 : 1157;
+
+    // Honoraires barème Gbis ou G New sur capital seul
+    let honBase = capital, honPrev = 0, honProp = 0;
+    for (const t of tranches) {
+      if (honBase <= 0) break;
+      const size = Math.min(honBase, t.max - honPrev);
+      honProp += size * t.taux;
+      honPrev = t.max;
+      honBase -= size;
+    }
+    const honHT = Math.round(honProp * 100) / 100;
+
+    const fraisAdminHT = premierActe ? 855 : 627;
+    const debours = premierActe ? 304 : 50;
+    const droitEcriture = 100;
+    const baseTVA = honHT + fraisAdminHT + debours + droitEcriture;
+    const tva = Math.round(baseTVA * 0.21 * 100) / 100;
+
+    const total = droitEnreg + droitAnnexes + droitHypo + retributionForfait + honHT + fraisAdminHT + debours + droitEcriture + tva;
+
+    const rows = [
+      { label: 'Registration duties', base: fmt(montantGaranti), taux: '1%', montant: droitEnreg },
+      { label: 'Fee for annexes', base: '—', taux: 'flat rate', montant: droitAnnexes },
+      { label: 'Mortgage fees — Mortgage duty', base: fmt(montantGaranti), taux: '0,30%', montant: droitHypo },
+      { label: 'Mortgage fees — Retribution', base: '—', taux: 'flat rate', montant: retributionForfait },
+      { label: `Fees (scale ${estGbis ? 'Gbis' : 'G New'}) excl. VAT`, base: fmt(capital), taux: 'degressive', montant: honHT },
+      { label: `Administrative fees excl. VAT (${premierActe ? 'first deed' : 'deed linked to purchase'})`, base: '—', taux: 'flat rate', montant: fraisAdminHT },
+      { label: 'Disbursements', base: '—', taux: 'flat rate', montant: debours },
+      { label: 'Writing fee', base: '—', taux: 'flat rate', montant: droitEcriture },
+      { label: 'VAT 21%', base: fmt(baseTVA), taux: '21%', montant: tva },
+    ];
+
+    const info = `<div class="info-box">Principal amount: <strong>${fmt(capital)}</strong> · Accessories (10%): <strong>${fmt(accessoires)}</strong> · Guaranteed amount: <strong>${fmt(montantGaranti)}</strong>. Scale <strong>${estGbis ? 'Gbis' : 'G New'}</strong> on principal only. Indicative calculation per notaire.be (updated 1 January 2026).</div>`;
+
+    return { rows, total, capital, accessoires, montantGaranti, honHT, tva, isMandat: false, info };
+  }
+}
+
+// ========== CRÉDIT ==========
+function calcCredit(principal, tauxAnnuel, dureeAns) {
+  const n = dureeAns * 12;
+  const r = tauxAnnuel / 100 / 12;
+  if (r === 0) {
+    const mensualite = principal / n;
+    return { mensualite, n, r, principal };
+  }
+  const mensualite = principal * (r * Math.pow(1+r, n)) / (Math.pow(1+r, n) - 1);
+  return { mensualite, n, r, principal };
+}
+
+function buildAmortissement(principal, r, n, mensualite) {
+  let solde = principal;
+  const yearlyData = [];
+  let yr = { capitalPaye: 0, interetsPayes: 0, total: 0, year: 1, soldeDebut: solde };
+
+  for (let i = 1; i <= n; i++) {
+    const interets = solde * r;
+    const capital = mensualite - interets;
+    solde -= capital;
+    yr.capitalPaye += capital;
+    yr.interetsPayes += interets;
+    yr.total += mensualite;
+
+    if (i % 12 === 0) {
+      yr.soldeFin = Math.max(0, solde);
+      yearlyData.push(yr);
+      yr = { capitalPaye: 0, interetsPayes: 0, total: 0, year: Math.floor(i/12)+1, soldeDebut: Math.max(0, solde) };
+    }
+  }
+  return yearlyData;
+}
+
+// ========== MAIN CALC ==========
+function calc() {
+  readInputs();
+
+  const { prix, apport, duree, taux, regimeFiscal, prixTerrain, prixConstruction } = state;
+  const credit125 = document.getElementById('credit125').checked;
+
+  // En mode mixte, le prix total pour les honoraires = terrain + construction
+  const prixHonoraires = regimeFiscal === 'mixte' ? prixTerrain + prixConstruction : prix;
+  // Purchase price affiché dans la synthèse
+  const prixAffiche = regimeFiscal === 'mixte' ? prixTerrain + prixConstruction : prix;
+
+  const droits = calcDroits();
+  computed = {}; // init pour que calcAutresFrais puisse accéder à computed.hon
+  const hon = calcHonoraires(prixHonoraires);
+  computed.hon = hon;
+  const autres = calcAutresFrais(prixAffiche, droits.total, hon.totalHT);
+  const autresTotal = autres.reduce((s, r) => s + r.montant, 0);
+
+  // totalFrais = droits + honoraires HT (incl. transcription) + autres (TVA + annexes + débours + admin + écriture)
+  const totalFrais = droits.total + hon.totalHT + autresTotal;
+  const totalAcquisition = prixAffiche + totalFrais;
+
+  // Crédit 125% : on calcule d'abord le montant de base pour avoir les frais hypo
+  const montantCreditBase = Math.max(0, prixAffiche - apport);
+  const fraisHypoBase = calcFraisHypotheque(montantCreditBase);
+  const fraisHypoBaseTotal = fraisHypoBase && montantCreditBase > 0 ? fraisHypoBase.total : 0;
+
+  // Montant crédit final selon option 125%
+  let montantCredit;
+  if (credit125) {
+    // Purchase deed fees + frais hypo intégrés dans le crédit
+    montantCredit = Math.max(0, prixAffiche + totalFrais + fraisHypoBaseTotal - apport);
+  } else {
+    montantCredit = montantCreditBase;
+  }
+
+  const credit = calcCredit(montantCredit, taux, duree);
+  const mensualiteTotale = credit.mensualite;
+  const totalRemb = credit.mensualite * credit.n;
+  const totalInterets = totalRemb - montantCredit;
+
+  // Frais acte for mortgage loan (recalculés sur le montant final emprunté)
+  const fraisHypo = calcFraisHypotheque(montantCredit);
+
+  computed = { droits, hon, autres, autresTotal, totalFrais, totalAcquisition, prixAffiche, montantCredit, montantCreditBase, credit, mensualiteTotale, totalRemb, totalInterets, fraisHypo, fraisHypoBaseTotal, credit125 };
+
+  updateSidebar();
+  updateStep2();
+  updateStep3();
+  updateStep4();
+}
+
+function updateSidebar() {
+  const { totalFrais, montantCredit, montantCreditBase, mensualiteTotale, prixAffiche, fraisHypo, fraisHypoBaseTotal, credit125 } = computed;
+  const fraisHypoTotal = fraisHypo && montantCredit > 0 ? fraisHypo.total : 0;
+
+  // En mode 125%, les frais sont dans le crédit, fonds propres = apport seul
+  const fondsPropres = credit125
+    ? state.apport
+    : totalFrais + fraisHypoBaseTotal + state.apport;
+
+  document.getElementById('s-prix').textContent = fmt(prixAffiche);
+  document.getElementById('s-fondsPropres').textContent = fmt(fondsPropres);
+  document.getElementById('s-fondsPropresLabel').textContent = credit125 ? 'Own funds (contribution only)' : 'To finance with own funds';
+
+  // Purchase deed fees : masqué en mode 125% (intégré au crédit)
+  const rowFraisAchat = document.getElementById('s-rowFraisAchat');
+  if (credit125) {
+    rowFraisAchat.style.display = 'none';
+  } else {
+    rowFraisAchat.style.display = '';
+    document.getElementById('s-totalFrais').textContent = fmt(totalFrais);
+  }
+
+  // Frais hypothécaire
+  const rowHypo = document.getElementById('s-rowFraisHypo');
+  if (!credit125 && fraisHypoTotal > 0) {
+    rowHypo.style.display = '';
+    document.getElementById('s-fraisHypo').textContent = fmt(fraisHypoTotal);
+    document.getElementById('s-labelTypeGarantie').textContent = fraisHypo.isMandat ? 'mandate' : 'mortgage';
+  } else {
+    rowHypo.style.display = 'none';
+  }
+
+  document.getElementById('s-apport').textContent = fmt(state.apport);
+  document.getElementById('s-emprunt').textContent = fmt(montantCredit);
+  document.getElementById('s-empruntLabel').textContent = credit125 ? 'Borrowed amount (frais inclus)' : 'Borrowed amount';
+  document.getElementById('s-mensualite').textContent = fmt(mensualiteTotale) + '/month';
+
+  // Badge 125% dans la sidebar
+  const badge125 = document.getElementById('s-badge125');
+  if (credit125) {
+    const ratio = prixAffiche > 0 ? (montantCredit / prixAffiche * 100).toFixedd(0) : 0;
+    badge125.style.display = '';
+    badge125.innerHTML = `⚡ Loan 125% — Borrowed ratio: <strong>${ratio}%</strong> of the property value`;
+  } else {
+    badge125.style.display = 'none';
+  }
+}
+
+function updateStep2() {
+  const { droits, hon, autres } = computed;
+
+  // Droits info
+  document.getElementById('droitsInfo').innerHTML = droits.info;
+
+  // Droits table
+  const dt = document.getElementById('droitsTable');
+  dt.innerHTML = droits.rows.map(r => `
+    <tr>
+      <td>${r.label}</td>
+      <td>${r.base}</td>
+      <td>${r.taux}</td>
+      <td>${fmt(r.montant)}</td>
+    </tr>
+  `).join('') + `<tr class="subtotal"><td colspan="3"><strong>Total registration duties</strong></td><td>${fmt(droits.total)}</td></tr>`;
+
+  // Honoraires table
+  const ht = document.getElementById('honorairesTable');
+  ht.innerHTML = `
+    <tr><td>Scale</td><td><strong>${hon.baremeNom}</strong> (${state.habitationPropre === 'oui' ? 'own and sole residence' : 'standard'})</td></tr>
+    <tr><td>Proportional part</td><td>${fmt(hon.propHT)}</td></tr>
+    <tr><td>Fixed part (indexed 01/01/2026)</td><td>${fmt(hon.partiFixed)}</td></tr>
+    <tr class="subtotal"><td><strong>Notary fees excl. VAT</strong></td><td>${fmt(hon.totalHT)}</td></tr>
+  `;
+
+  // Autres
+  const at = document.getElementById('autresTable');
+  at.innerHTML = autres.map(r => `<tr><td>${r.poste}</td><td>${fmt(r.montant)}</td></tr>`).join('') +
+    `<tr class="subtotal"><td><strong>Total other fees</strong></td><td>${fmt(computed.autresTotal)}</td></tr>`;
+}
+
+function updateStep3() {
+  const { prix, apport } = state;
+  const { montantCredit, montantCreditBase, fraisHypo, totalFrais, fraisHypoBaseTotal, credit125 } = computed;
+  const apportPct = prix > 0 ? Math.min(100, apport / prix * 100) : 0;
+
+  document.getElementById('apportPctLabel').textContent = fmtDec(apportPct, 0) + '%';
+  document.getElementById('apportMontant').textContent = fmt(apport);
+  document.getElementById('montantCredit').textContent = fmt(montantCredit);
+
+  // Détail 125%
+  const detail125 = document.getElementById('credit125Detail');
+  if (credit125) {
+    detail125.style.display = 'block';
+    document.getElementById('c125Prix').textContent = fmt(prix);
+    document.getElementById('c125FraisAchat').textContent = '+ ' + fmt(totalFrais);
+    document.getElementById('c125Apport').textContent = '− ' + fmt(apport);
+    document.getElementById('c125Total').textContent = fmt(montantCredit);
+    const ratio = prix > 0 ? (montantCredit / prix * 100).toFixedd(1) : 0;
+    document.getElementById('c125Ratio').textContent = ratio + '%';
+    const rowHypo125 = document.getElementById('c125RowHypo');
+    if (fraisHypoBaseTotal > 0) {
+      rowHypo125.style.display = 'flex';
+      document.getElementById('c125FraisHypo').textContent = '+ ' + fmt(fraisHypoBaseTotal);
+    } else {
+      rowHypo125.style.display = 'none';
+    }
+  } else {
+    detail125.style.display = 'none';
+  }
+
+  const warn = document.getElementById('apportWarning');
+  if (!credit125 && apport < prix * 0.10) {
+    warn.style.display = '';
+    warn.style.background = 'rgba(198,40,40,0.07)';
+    warn.style.borderColor = 'rgba(198,40,40,0.2)';
+    warn.style.color = '#C62828';
+    warn.innerHTML = `⚠️ Your contribution is below the recommended <strong style="color:#C62828">10%</strong> (${fmt(prix * 0.10)}). The bank may require a higher contribution or apply a higher rate.`;
+  } else if (montantCredit <= 0) {
+    warn.style.display = '';
+    warn.style.background = 'rgba(46,125,50,0.07)';
+    warn.style.borderColor = 'rgba(46,125,50,0.2)';
+    warn.style.color = '#2E7D32';
+    warn.innerHTML = `✅ Votre apport couvre l'intégralité du prix d'achat. No loan required !`;
+  } else {
+    warn.style.display = 'none';
+  }
+
+  // Bloc frais hypothécaires
+  const cardHypo = document.getElementById('cardFraisHypo');
+  if (fraisHypo && montantCredit > 0) {
+    cardHypo.style.display = '';
+    const isMandat = fraisHypo.isMandat;
+    const typeLabel = isMandat ? 'Mortgage mandate' : 'Classic mortgage';
+    const typeIcon = isMandat ? '📝' : '📋';
+    document.getElementById('titleFraisHypo').innerHTML = `<span>${typeIcon}</span> ${isMandat ? 'Mortgage mandate deed fees' : 'Mortgage loan deed fees'}`;
+    document.getElementById('hypoTable').innerHTML = fraisHypo.rows.map(r => `
+      <tr>
+        <td>${r.label}</td>
+        <td>${r.base}</td>
+        <td>${r.taux}</td>
+        <td style="font-weight:600">${fmt(r.montant)}</td>
+      </tr>
+    `).join('') + `<tr class="subtotal"><td colspan="3"><strong>Total deed fees ${isMandat ? 'for mortgage mandate' : 'for mortgage loan'}</strong></td><td>${fmt(fraisHypo.total)}</td></tr>`;
+    document.getElementById('hypoInfo').innerHTML = fraisHypo.info;
+  } else {
+    cardHypo.style.display = 'none';
+  }
+}
+
+function updateStep4() {
+  const { totalFrais, totalAcquisition, prixAffiche, montantCredit, credit, mensualiteTotale, totalRemb, totalInterets, fraisHypo, credit125 } = computed;
+
+  const fraisHypoTotal = fraisHypo && montantCredit > 0 ? fraisHypo.total : 0;
+  const totalAvecHypo = totalAcquisition + fraisHypoTotal;
+
+  document.getElementById('synthGrid').innerHTML = `
+    <div class="result-box gold"><div class="r-label">Purchase price</div><div class="r-val">${fmt(prixAffiche)}</div></div>
+    <div class="result-box"><div class="r-label">Purchase deed fees</div><div class="r-val" style="color:var(--red)">${fmt(totalFrais)}</div></div>
+    ${fraisHypoTotal > 0 ? `<div class="result-box"><div class="r-label">${fraisHypo.isMandat ? 'Mandate deed fees' : 'Mortgage deed fees'}</div><div class="r-val" style="color:var(--red)">${fmt(fraisHypoTotal)}</div></div>` : ''}
+    <div class="result-box"><div class="r-label">Total acquisition cost</div><div class="r-val">${fmt(totalAvecHypo)}</div></div>
+    <div class="result-box"><div class="r-label">Personal contribution</div><div class="r-val" style="color:var(--muted)">${fmt(state.apport)}</div></div>
+    <div class="result-box accent"><div class="r-label">Mortgage loan${credit125 ? ' <span style="background:#1A7A8A;color:#fff;font-size:.6rem;font-weight:700;padding:2px 6px;border-radius:8px;vertical-align:middle;">FRAIS INCLUS</span>' : ''}</div><div class="r-val">${fmt(montantCredit)}</div></div>
+    <div class="result-box green"><div class="r-label">Monthly payment</div><div class="r-val">${fmt(mensualiteTotale)}</div></div>
+  `;
+
+  // Monthly payment detail
+  document.getElementById('mensualiteDetail').innerHTML = `
+    <div class="result-grid" style="margin-bottom:1rem">
+      <div class="result-box"><div class="r-label">Monthly payment</div><div class="r-val" style="color:var(--accent)">${fmt(credit.mensualite)}</div></div>
+    </div>
+    <div class="info-box">
+      Term: <strong>${state.duree} yrs</strong> · Rate: <strong>${fmtDec(state.taux)}%</strong> · 
+      Total interest paid: <strong style="color:var(--red)">${fmt(totalInterets)}</strong>
+    </div>
+  `;
+
+  // Amortissement
+  if (montantCredit > 0) {
+    const amort = buildAmortissement(montantCredit, credit.r, credit.n, credit.mensualite);
+    document.getElementById('amortTable').innerHTML = amort.map(yr => `
+      <tr>
+        <td>Year ${yr.year}</td>
+        <td>${fmt(yr.capitalPaye)}</td>
+        <td>${fmt(yr.interetsPayes)}</td>
+        <td>${fmt(yr.total)}</td>
+        <td>${fmt(yr.soldeFin)}</td>
+      </tr>
+    `).join('');
+  } else {
+    document.getElementById('amortTable').innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--muted);padding:1.5rem">No loan required</td></tr>';
+  }
+
+  // Coût total
+  document.getElementById('coutTotalTable').innerHTML = `
+    <tr><td>Purchase price</td><td>${fmt(prixAffiche)}</td></tr>
+    <tr><td>Registration duties</td><td>${fmt(computed.droits.total)}</td></tr>
+    <tr><td>Notary fees purchase deed excl. VAT</td><td>${fmt(computed.hon.totalHT)}</td></tr>
+    <tr><td>Other purchase deed fees (VAT, mortgage, admin., disbursements...)</td><td>${fmt(computed.autresTotal)}</td></tr>
+    ${fraisHypoTotal > 0 ? `<tr><td>Mortgage deed fees (total incl. VAT)</td><td>${fmt(fraisHypoTotal)}</td></tr>` : ''}
+    <tr><td>Total loan interest (${state.duree} yrs)</td><td>${fmt(totalInterets)}</td></tr>
+    <tr class="subtotal"><td><strong>Total real cost of the transaction</strong></td><td>${fmt(totalAvecHypo + totalInterets)}</td></tr>
+  `;
+}
+
+// ========== NAVIGATION ==========
+let currentStep = 1;
+function goStep(n) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.step-tab').forEach((t, i) => {
+    t.classList.remove('active', 'done');
+    if (i + 1 < n) t.classList.add('done');
+    if (i + 1 === n) t.classList.add('active');
+  });
+  document.getElementById('panel' + n).classList.add('active');
+  currentStep = n;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ========== INIT ==========
+updateRange('duree', 'dureeVal', 'yrs');
+updateRange('taux', 'tauxVal', '%');
+updateApportSlider();
+updateHabitationPropreInfo();
+updateFieldRenovPEB();
+updateFieldVillesPrincipales();
+calc();
+</script>
+
+<!-- FOOTER -->
+<!-- ── DISCLAIMER ── -->
+<div style="background:#F4F7FA;border-top:1px solid #DDE5EF;padding:18px 40px;font-size:0.75rem;color:#8A9BB0;line-height:1.7;font-family:'Inter',sans-serif;">
+  <div style="max-width:1150px;margin:0 auto;">
+    <strong style="color:#4A6279;">⚠️ Disclaimer — For indicative purposes only:</strong>
+    The results obtained via the tools and simulators on this site have <strong style="color:#4A6279;">indicative value only</strong> and have no legal, tax or accounting value.
+    Calculations are based on the legal provisions in force at the date of their last update and are subject to change.
+    <strong style="color:#4A6279;">La Caverne de la Compta</strong> makes every effort to keep this data up to date but cannot guarantee its accuracy or completeness.
+    La Caverne de la Compta cannot be held liable for any direct or indirect damages resulting from the use of the information obtained.
+    The user is solely responsible for decisions made based on simulation results.
+    <strong style="color:#4A6279;">Consult an accountant, tax advisor or notary</strong> before making any decision. <strong style="color:#4A6279;">La Caverne de la Compta is not a licensed financial, tax or legal advisor</strong> and the information published does not in any way constitute personalised advice.
+    — <a href="mentions-legales.html#disclaimer" style="color:#1A7A8A;text-decoration:none;">Legal notice complètes</a>
+  </div>
+</div>
+<footer>
+  <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
+  <div class="footer-links">
+    <a href="/en/mentions-legales/">Legal notice</a>
+    <a href="/en/mentions-legales/#rgpd">RGPD</a>
+    <a href="/en/mentions-legales/#cookies">Cookies</a>
+    <a href="#">Contact</a>
+  </div>
+</footer>
+
+
+<!-- ── BANNIÈRE COOKIES APD-CONFORME ── -->
+<style>
+#cookieBanner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;
+    overflow: visible;background:#0D1B2A;border-top:3px solid #1A7A8A;padding:16px 30px 14px;box-shadow:0 -4px 24px rgba(0,0,0,0.35);font-family:'Inter',sans-serif;}
+#cookieBanner .cb-top{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+#cookieBanner .cb-text{font-size:0.82rem;color:rgba(255,255,255,0.75);line-height:1.6;flex:1;min-width:200px;margin:0;}
+#cookieBanner .cb-text a{color:#22A3B8;text-decoration:none;}
+#cookieBanner .cb-cats{display:flex;gap:20px;flex-wrap:wrap;margin:10px 0 12px 0;padding-left:2px;}
+#cookieBanner .cb-cat{display:flex;align-items:center;gap:8px;cursor:pointer;}
+#cookieBanner .cb-cat label{font-size:0.8rem;color:rgba(255,255,255,0.8);cursor:pointer;user-select:none;}
+#cookieBanner .cb-cat input[type=checkbox]{width:16px;height:16px;accent-color:#1A7A8A;cursor:pointer;}
+#cookieBanner .cb-cat.required label{color:rgba(255,255,255,0.45);}
+#cookieBanner .cb-btns{display:flex;gap:10px;flex-shrink:0;align-items:flex-start;}
+#cookieBanner .cb-btn{padding:9px 18px;border-radius:7px;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;border:none;transition:all 0.2s;}
+#cookieBanner .cb-btn-all{background:#1A7A8A;color:#fff;}
+#cookieBanner .cb-btn-all:hover{background:#22A3B8;}
+#cookieBanner .cb-btn-save{background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.25)!important;}
+#cookieBanner .cb-btn-save:hover{color:#fff;border-color:rgba(255,255,255,0.5)!important;}
+#cookieBanner .cb-btn-refuse{background:transparent;color:rgba(255,255,255,0.5);font-size:0.75rem;font-weight:500;padding:4px 0;text-decoration:underline;cursor:pointer;}
+#cookieBanner .cb-btn-refuse:hover{color:rgba(255,255,255,0.8);}
+</style>
+<div id="cookieBanner">
+  <div class="cb-top">
+    <p class="cb-text">
+      🍪 <strong style="color:#fff;">This website uses cookies.</strong>
+      Essential cookies ensure the website works properly. Others require your consent.
+      <a href="/en/mentions-legales/">Cookie Policy</a>
+    </p>
+    <div class="cb-btns">
+      <button class="cb-btn cb-btn-all" onclick="cbAcceptAll()">Accept all</button>
+      <button class="cb-btn cb-btn-save" onclick="cbSaveChoices()">Save my choices</button>
+    </div>
+  </div>
+  <div class="cb-cats">
+    <div class="cb-cat required">
+      <input type="checkbox" id="cb_necessary" checked disabled>
+      <label for="cb_necessary">✅ Essential <span style="font-size:0.7rem;opacity:0.6">(always active)</span></label>
+    </div>
+    <div class="cb-cat">
+      <input type="checkbox" id="cb_analytics">
+      <label for="cb_analytics">📊 Analytics <span style="font-size:0.7rem;opacity:0.6">(Google Analytics)</span></label>
+    </div>
+    <div class="cb-cat">
+      <input type="checkbox" id="cb_ads">
+      <label for="cb_ads">📢 Advertising <span style="font-size:0.7rem;opacity:0.6">(Google AdSense)</span></label>
+    </div>
+    <button class="cb-btn-refuse" onclick="cbRefuseAll()">Refuse all</button>
+  </div>
+</div>
+<script>
+(function(){
+  var GA_ID='G-WNHZDLVPEL';
+  function getCk(n){return(document.cookie.split(';').map(function(c){return c.trim();}).find(function(c){return c.startsWith(n+'=');})+'=').split('=')[1]||null;}
+  function setCk(n,v){document.cookie=n+'='+v+';max-age=31536000;path=/;SameSite=Lax';}
+  function hideBanner(){document.getElementById('cookieBanner').style.display='none';}
+
+  function loadGA(){
+    if(window._gaLoaded)return;window._gaLoaded=true;
+    var s=document.createElement('script');s.async=true;
+    s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag=gtag;
+    gtag('js',new Date());gtag('config',GA_ID,{anonymize_ip:true});
+  }
+
+  // AdSense chargé via la balise head standard — on bloque via consent_mode
+  function updateConsentMode(analytics,ads){
+    if(window.gtag){
+      window.gtag('consent','update',{
+        analytics_storage: analytics?'granted':'denied',
+        ad_storage: ads?'granted':'denied',
+        ad_user_data: ads?'granted':'denied',
+        ad_personalization: ads?'granted':'denied'
+      });
+    }
+  }
+
+  window.cbAcceptAll=function(){
+    setCk('cb_analytics','1');setCk('cb_ads','1');
+    document.getElementById('cb_analytics').checked=true;
+    document.getElementById('cb_ads').checked=true;
+    loadGA();updateConsentMode(true,true);hideBanner();
+  };
+  window.cbRefuseAll=function(){
+    setCk('cb_analytics','0');setCk('cb_ads','0');
+    updateConsentMode(false,false);hideBanner();
+  };
+  window.cbSaveChoices=function(){
+    var a=document.getElementById('cb_analytics').checked;
+    var d=document.getElementById('cb_ads').checked;
+    setCk('cb_analytics',a?'1':'0');setCk('cb_ads',d?'1':'0');
+    if(a)loadGA();
+    updateConsentMode(a,d);hideBanner();
+  };
+
+  // Init au chargement
+  var ca=getCk('cb_analytics'),cd=getCk('cb_ads');
+  if(ca===null){
+    // Pas encore de choix → afficher bannière
+    document.getElementById('cookieBanner').style.display='block';
+  } else {
+    // Choix déjà enregistré → appliquer
+    document.getElementById('cb_analytics').checked=(ca==='1');
+    document.getElementById('cb_ads').checked=(cd==='1');
+    if(ca==='1')loadGA();
+    updateConsentMode(ca==='1',cd==='1');
+  }
+})();
+</script>
+
+
+<script>
+function toggleDD(e){
+  e.stopPropagation();
+  document.getElementById('ddWrap').classList.toggle('dd-open');
+}
+document.addEventListener('click',function(e){
+  var w=document.getElementById('ddWrap');
+  if(w && !w.contains(e.target)) w.classList.remove('dd-open');
+});
+</script>
+</body>
+</html>

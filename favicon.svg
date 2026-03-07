@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D1B2A"/>
+      <stop offset="100%" style="stop-color:#1A3A4A"/>
+    </linearGradient>
+  </defs>
+  <!-- Fond carré arrondi -->
+  <rect width="512" height="512" rx="80" fill="url(#bg)"/>
+  <!-- Hexagone centré -->
+  <polygon points="256,80 340,128 340,224 256,272 172,224 172,128" fill="none" stroke="#C9A84C" stroke-width="14"/>
+  <!-- Balance bras -->
+  <line x1="172" y1="176" x2="340" y2="176" stroke="rgba(255,255,255,0.7)" stroke-width="12" stroke-linecap="round"/>
+  <!-- Plateau gauche -->
+  <line x1="205" y1="176" x2="205" y2="210" stroke="rgba(255,255,255,0.5)" stroke-width="8" stroke-linecap="round"/>
+  <ellipse cx="205" cy="218" rx="28" ry="10" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="8"/>
+  <!-- Plateau droit -->
+  <line x1="307" y1="176" x2="307" y2="210" stroke="rgba(255,255,255,0.5)" stroke-width="8" stroke-linecap="round"/>
+  <ellipse cx="307" cy="218" rx="28" ry="10" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="8"/>
+  <!-- Pied balance -->
+  <line x1="256" y1="176" x2="256" y2="252" stroke="rgba(255,255,255,0.4)" stroke-width="8" stroke-linecap="round"/>
+  <!-- CC texte -->
+  <text x="256" y="360" text-anchor="middle" font-family="Georgia,serif" font-size="72" font-weight="bold" fill="#C9A84C" letter-spacing="8">CC</text>
+  <!-- Sous-texte -->
+  <text x="256" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" fill="rgba(255,255,255,0.5)" letter-spacing="3">COMPTA</text>
+</svg>

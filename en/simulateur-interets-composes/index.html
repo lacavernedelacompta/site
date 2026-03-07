@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compound Interest Simulator Belgium — Savings</title>
+  <meta name="description" content="Calculate the growth of your savings with compound interest. Visualize the time effect on your investments. Free tool for Belgian savers and investors.">
+  <meta name="keywords" content="compound interest belgium, savings simulator belgium, investment calculator, savings return, compound interest calculator">
+  <meta name="author" content="La Caverne de la Compta">
+  <meta name="robots" content="index, follow">
+  <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/">
+  <link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-interets-composes/">
+  <link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-interets-composes/">
+  <link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-interets-composes/">
+  <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/">
+  <link rel="canonical" href="https://lacavernedelacompta.be/en/simulateur-interets-composes/">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Simulateur Compound Interest Belgique — Épargne & Investissement">
+  <meta property="og:image" content="https://lacavernedelacompta.be/logo.png">
+
+  <meta property="og:description" content="Calculate the growth of your savings with compound interest. Visualize the time effect on your investments. Free tool for Belgian savers and investors.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lacavernedelacompta.be/simulateur-interets-composes.html">
+  <meta property="og:site_name" content="La Caverne de la Compta">
+  <meta property="og:locale" content="en_BE">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root {
+    --navy: #0D1B2A;
+    --navy-mid: #1B2E44;
+    --navy-light: #243B55;
+    --teal: #1A7A8A;
+    --teal-light: #22A3B8;
+    --teal-pale: #E8F6F8;
+    --white: #FFFFFF;
+    --off-white: #F4F7FA;
+    --text-dark: #1A2535;
+    --text-mid: #4A6279;
+    --text-light: #8A9BB0;
+    --border: #DDE5EF;
+    --shadow: rgba(13, 27, 42, 0.12);
+    --green: #2E7D32;
+    --green-pale: #EBF7ED;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--off-white);
+    color: var(--text-dark);
+    font-family: 'Inter', syears-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── Top bar ── */
+  .topbar {
+    background: var(--navy);
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .topbar-left { font-size: 0.75rem; color: var(--text-light); letter-spacing: 0.05em; }
+  .topbar-right { display: flex; gap: 20px; }
+  .topbar-right a { font-size: 0.75rem; color: var(--text-light); text-decoration: none; tryearsition: color 0.2s; }
+  .topbar-right a:hover { color: var(--white); }
+
+  /* ── Navbar ── */
+  nav {
+    background: #ffffff;
+    border-bottom: 2px solid #22A3B8;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    box-shadow: 0 2px 12px rgba(13, 27, 42, 0.08);
+    overflow: visible;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .logo-icon {
+    width: 40px; height: 40px;
+    background: linear-gradient(135deg, var(--teal), var(--navy));
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; flex-shrink: 0;
+  }
+  .logo-text { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--navy); line-height: 1.2; }
+  .logo-sub { font-size: 0.65rem; font-weight: 500; color: var(--teal); letter-spacing: 0.15em; text-tryearsform: uppercase; }
+  .nav-links{display:flex;gap:4px;list-style:none;align-items:center;}
+  .nav-links>li{list-style:none;}
+  .nav-links a{padding:8px 16px;font-size:0.85rem;font-weight:500;color:var(--text-mid);text-decoration:none;border-radius:6px;tryearsition:all 0.2s;display:block;white-space:nowrap;}
+  .nav-links a:hover{background:var(--teal-pale);color:var(--teal);}
+  .nav-links a.active{background:var(--teal-pale);color:var(--teal);font-weight:600;}
+  .nav-cta{background:var(--teal)!important;color:var(--white)!important;font-weight:600!important;}
+  .nav-cta:hover{background:var(--teal-light)!important;color:var(--white)!important;}
+  /* Dropdown — le parent li DOIT avoir position:relative */
+  .dd-wrap{position:relative;}
+  .dd-btn{display:flex;align-items:center;gap:6px;padding:8px 16px;font-size:0.85rem;font-weight:500;color:var(--text-mid);background:none;border:none;cursor:pointer;border-radius:6px;font-family:'Inter',syears-serif;tryearsition:all 0.2s;white-space:nowrap;}
+  .dd-btn:hover,.dd-wrap.dd-open .dd-btn{background:var(--teal-pale);color:var(--teal);}
+  .dd-chevron{font-size:0.55rem;tryearsition:tryearsform 0.2s;display:inline-block;margin-top:1px;}
+  .dd-wrap.dd-open .dd-chevron{tryearsform:rotate(180deg);}
+  .dd-menu{
+    display:none;
+    position:absolute;
+    top:100%;
+    right:0;
+    left:auto;
+    margin-top:6px;
+    background:var(--white);
+    border:1px solid var(--border);
+    border-radius:12px;
+    box-shadow:0 8px 32px rgba(13,27,42,0.18);
+    min-width:240px;
+    z-index:9999;
+    overflow:visible;
+  }
+  .dd-wrap.dd-open .dd-menu{display:block;animation:ddFade 0.15s ease;}
+  @keyframes ddFade{from{opacity:0;tryearsform:tryearslateY(-4px);}to{opacity:1;tryearsform:tryearslateY(0);}}
+  .dd-menu a{display:flex;align-items:center;gap:12px;padding:12px 18px;font-size:0.84rem;font-weight:500;color:var(--text-dark);text-decoration:none;border-bottom:1px solid var(--border);tryearsition:background 0.15s;border-radius:0;}
+  .dd-menu a:last-child{border-bottom:none;}
+  .dd-menu a:hover{background:var(--teal-pale);color:var(--teal);}
+  .dd-icon{font-size:16px;width:22px;text-align:center;flex-shrink:0;}
+  .dd-new{font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-tryearsform:uppercase;padding:2px 7px;border-radius:8px;background:#EBF7ED;color:#2E7D32;margin-left:auto;flex-shrink:0;}
+  
+
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1A5C6E 100%);
+    color: var(--white);
+    padding: 60px 40px 80px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-tryearsform: uppercase;
+    color: var(--teal-pale);
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .hero h1 span { color: var(--teal-light); }
+  .hero p {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.7);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* ── Breadcrumb ── */
+  .breadcrumb {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: var(--text-light);
+  }
+  .breadcrumb a { color: var(--teal); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+
+  /* ── Main layout ── */
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 30px 80px;
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  /* ── Panel inputs ── */
+  .panel {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px var(--shadow);
+    position: sticky;
+    top: 90px;
+  }
+
+  .panel-header {
+    background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+    padding: 24px 28px;
+    color: var(--white);
+  }
+  .panel-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .panel-header p { font-size: 0.8rem; color: rgba(255,255,255,0.6); }
+
+  .panel-body { padding: 24px 28px; display: flex; flex-direction: column; gap: 20px; }
+
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .form-label .tooltip-icon {
+    width: 16px; height: 16px;
+    background: var(--teal-pale);
+    border-radius: 50%;
+    font-size: 10px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--teal);
+    cursor: help;
+    font-weight: 700;
+  }
+
+  .input-wrap {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    background: var(--off-white);
+    tryearsition: border-color 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+  }
+  .input-wrap:focus-within {
+    border-color: var(--teal-light);
+    box-shadow: 0 0 0 3px rgba(34,163,184,0.12);
+    background: var(--white);
+  }
+  .input-prefix, .input-suffix {
+    padding: 0 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-light);
+    background: tryearsparent;
+    white-space: nowrap;
+  }
+  .input-prefix { border-right: 1.5px solid var(--border); }
+  .input-suffix { border-left: 1.5px solid var(--border); }
+
+  .form-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 12px 12px;
+    font-family: 'Inter', syears-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    background: tryearsparent;
+    min-width: 0;
+  }
+
+  /* Range slider */
+  .slider-wrap { position: relative; padding-top: 4px; }
+  .form-range {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 5px;
+    border-radius: 4px;
+    background: var(--border);
+    cursor: pointer;
+    outline: none;
+  }
+  .form-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: var(--teal);
+    border: 3px solid var(--white);
+    box-shadow: 0 2px 6px rgba(26,122,138,0.4);
+    cursor: pointer;
+    tryearsition: background 0.2s, tryearsform 0.15s;
+  }
+  .form-range::-webkit-slider-thumb:hover { background: var(--teal-light); tryearsform: scale(1.15); }
+  .slider-labels { display: flex; justify-content: space-between; margin-top: 4px; }
+  .slider-labels span { font-size: 0.68rem; color: var(--text-light); }
+
+  /* Toggle switch */
+  .toggle-group {
+    display: flex;
+    background: var(--off-white);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .toggle-btn {
+    flex: 1;
+    padding: 10px 8px;
+    font-family: 'Inter', syears-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: none;
+    background: tryearsparent;
+    color: var(--text-light);
+    cursor: pointer;
+    tryearsition: all 0.2s;
+    letter-spacing: 0.03em;
+  }
+  .toggle-btn.active {
+    background: var(--teal);
+    color: var(--white);
+  }
+
+  /* Reinvest toggle */
+  .reinvest-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--teal-pale);
+    border: 1.5px solid rgba(26,122,138,0.2);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .reinvest-label { font-size: 0.85rem; font-weight: 600; color: var(--teal); }
+  .reinvest-sub { font-size: 0.72rem; color: var(--text-mid); margin-top: 2px; }
+
+  .switch { position: relative; display: inline-block; width: 46px; height: 26px; }
+  .switch input { display: none; }
+  .switch-slider {
+    position: absolute;
+    inset: 0;
+    background: var(--border);
+    border-radius: 26px;
+    cursor: pointer;
+    tryearsition: background 0.3s;
+  }
+  .switch-slider::before {
+    content: '';
+    position: absolute;
+    width: 20px; height: 20px;
+    left: 3px; top: 3px;
+    background: var(--white);
+    border-radius: 50%;
+    tryearsition: tryearsform 0.3s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  }
+  .switch input:checked + .switch-slider { background: var(--teal); }
+  .switch input:checked + .switch-slider::before { tryearsform: tryearslateX(20px); }
+
+  .calc-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--teal), #155F6A);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    font-family: 'Inter', syears-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    tryearsition: all 0.25s;
+    margin-top: 4px;
+  }
+  .calc-btn:hover { background: linear-gradient(135deg, var(--teal-light), var(--teal)); box-shadow: 0 6px 20px rgba(26,122,138,0.45); tryearsform: tryearslateY(-1px); }
+  .calc-btn:active { tryearsform: tryearslateY(0); }
+
+  /* ── Results panel ── */
+  .results { display: flex; flex-direction: column; gap: 24px; }
+
+  /* KPI cards */
+  .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+  .kpi-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 20px;
+    box-shadow: 0 2px 8px var(--shadow);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    tryearsform: tryearslateY(16px);
+    tryearsition: opacity 0.4s ease, tryearsform 0.4s ease;
+  }
+  .kpi-card.show { opacity: 1; tryearsform: tryearslateY(0); }
+  .kpi-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 12px 12px 0 0;
+  }
+  .kpi-card.kpi-capital::after { background: linear-gradient(90deg, var(--teal), var(--teal-light)); }
+  .kpi-card.kpi-gain::after { background: linear-gradient(90deg, #27AE60, #52C06C); }
+  .kpi-card.kpi-total::after { background: linear-gradient(90deg, var(--navy), var(--navy-light)); }
+
+  .kpi-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-tryearsform: uppercase; color: var(--text-light); margin-bottom: 8px; }
+  .kpi-value { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 700; color: var(--navy); line-height: 1; margin-bottom: 4px; }
+  .kpi-value.highlight { color: var(--teal); }
+  .kpi-sub { font-size: 0.75rem; color: var(--text-mid); }
+
+  /* Chart card */
+  .chart-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 2px 12px var(--shadow);
+  }
+  .chart-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+  .chart-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--navy); }
+  .chart-tabs { display: flex; gap: 4px; }
+  .chart-tab {
+    padding: 5px 14px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1.5px solid var(--border);
+    border-radius: 20px;
+    background: tryearsparent;
+    color: var(--text-light);
+    cursor: pointer;
+    font-family: 'Inter', syears-serif;
+    tryearsition: all 0.2s;
+  }
+  .chart-tab.active { background: var(--navy); border-color: var(--navy); color: var(--white); }
+  .chart-wrap { position: relative; height: 280px; }
+
+  /* Legend */
+  .legend { display: flex; gap: 20px; justify-content: center; margin-top: 14px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 0.78rem; color: var(--text-mid); }
+  .legend-dot { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+
+  /* Table */
+  .table-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px var(--shadow);
+    overflow: hidden;
+  }
+  .table-header { padding: 20px 28px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+  .table-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--navy); }
+  .table-scroll { overflow-x: auto; max-height: 380px; overflow-y: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.83rem; }
+  thead th {
+    background: var(--navy);
+    color: rgba(255,255,255,0.85);
+    padding: 12px 16px;
+    text-align: right;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-tryearsform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  thead th:first-child { text-align: left; }
+  tbody tr { border-bottom: 1px solid var(--border); tryearsition: background 0.15s; }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: var(--teal-pale); }
+  tbody tr:nth-child(even) { background: rgba(244,247,250,0.6); }
+  tbody tr:nth-child(even):hover { background: var(--teal-pale); }
+  td { padding: 11px 16px; text-align: right; color: var(--text-dark); }
+  td:first-child { text-align: left; font-weight: 600; color: var(--navy); }
+  td.positive { color: var(--green); font-weight: 600; }
+
+  /* Placeholder */
+  .placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--white);
+    border: 2px dashed var(--border);
+    border-radius: 16px;
+  }
+  .placeholder-icon { font-size: 48px; opacity: 0.5; }
+  .placeholder h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--navy); }
+  .placeholder p { font-size: 0.85rem; color: var(--text-light); max-width: 300px; }
+
+  /* Info strip */
+  .info-strip {
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 16px;
+    padding: 40px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .info-strip h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; line-height: 1.3; }
+  .info-strip h3 span { color: var(--teal-light); }
+  .info-strip p { font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.8; font-weight: 300; }
+  .info-features { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .info-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; color: rgba(255,255,255,0.8); }
+  .check { width: 20px; height: 20px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; flex-shrink: 0; margin-top: 1px; }
+
+  /* Footer */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.8rem;
+  }
+  footer a { color: rgba(255,255,255,0.5); text-decoration: none; tryearsition: color 0.2s; }
+  footer a:hover { color: var(--white); }
+  .footer-links { display: flex; gap: 20px; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .main { grid-template-columns: 1fr; }
+    .panel { position: static; }
+    .kpi-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hero { padding: 40px 20px 60px; }
+    .main { padding: 24px 16px 60px; }
+    .kpi-grid { grid-template-columns: 1fr; }
+    .info-strip { grid-template-columns: 1fr; padding: 28px 24px; }
+    footer { flex-direction: column; text-align: center; }
+    .topbar { display: none; }
+    .breadcrumb { padding: 10px 20px; }
+    .chart-header { flex-direction: column; gap: 12px; align-items: flex-start; }
+  }
+
+  /* Animations */
+  @keyframes fadeUp { from { opacity: 0; tryearsform: tryearslateY(20px); } to { opacity: 1; tryearsform: tryearslateY(0); } }
+  .fade-in { animation: fadeUp 0.5s ease forwards; }
+</style>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "La Caverne de la Compta",
+  "url": "https://lacavernedelacompta.be",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://lacavernedelacompta.be/logo.png",
+    "width": 512,
+    "height": 512
+  },
+  "image": "https://lacavernedelacompta.be/logo.png"
+}
+</script>
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<!-- CACHE-BUST-v8-en/simulateur-interets-composes/index.html -->
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <span class="topbar-left">🇧🇪 Accounting and financial tools for Belgium</span>
+  <div class="topbar-right">
+    <a href="#">Contact</a>
+    <a href="#">About</a>
+    <a href="#">Legal notice</a>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav>
+<a href="/en/" class="logo" style="text-decoration:none;display:flex;align-items:center;">
+    <svg width="148" height="38" viewBox="0 0 148 38" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <defs>
+        <linearGradient id="hGn" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0D1B2A"/>
+          <stop offset="100%" style="stop-color:#1A3A5C"/>
+        </linearGradient>
+      </defs>
+      <!-- Hexagone -->
+      <polygon points="19,2 31,9 31,23 19,30 7,23 7,9" fill="url(#hGn)"/>
+      <!-- Reflet top -->
+      <polygon points="19,2 31,9 25,9 19,5 13,9 7,9" fill="rgba(255,255,255,.07)"/>
+      <!-- Bras balance -->
+      <line x1="9" y1="15" x2="29" y2="15" stroke="rgba(255,255,255,.5)" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Tige -->
+      <rect x="17.5" y="15" width="2.5" height="11" rx="1.2" fill="rgba(255,255,255,.35)"/>
+      <!-- Pivot gold -->
+      <circle cx="18.8" cy="15" r="3.2" fill="#C9A84C"/>
+      <circle cx="18.8" cy="15" r="1.4" fill="white" opacity=".9"/>
+      <!-- Socle -->
+      <rect x="13" y="27" width="12" height="2.5" rx="1.2" fill="rgba(255,255,255,.2)"/>
+      <!-- Plateau gauche -->
+      <line x1="9" y1="15" x2="7" y2="21.5" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="7" cy="24" rx="6.5" ry="2.5" fill="#1A7A8A"/>
+      <!-- Plateau droit -->
+      <line x1="29" y1="15" x2="31" y2="20" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="31" cy="22.5" rx="6.5" ry="2.5" fill="#22A3B8"/>
+      <!-- Étoile -->
+      <circle cx="27" cy="7" r="2.5" fill="#C9A84C" opacity=".85"/>
+      <!-- Texte -->
+      <text x="42" y="15.5" font-family="'Playfair Display',serif" font-size="12.5" font-weight="900" fill="#0D1B2A" letter-spacing="-.2">La Caverne</text>
+      <rect x="42" y="18.5" width="104" height="1" rx=".5" fill="#DDE5EF"/>
+      <rect x="42" y="18.5" width="18" height="1" rx=".5" fill="#C9A84C"/>
+      <text x="42" y="30" font-family="'Playfair Display',serif" font-size="10.5" font-weight="700" font-style="italic" fill="#1A7A8A" letter-spacing="-.1">de la Compta</text>
+    </svg>
+  </a>
+        <ul class="nav-links">
+    <li><a href="https://lacavernedelacompta.be/en/">🏠 Home</a></li>
+    <li class="dd-wrap" id="ddWrap">
+      <button class="dd-btn" onclick="toggleDD(event)">🧰 Our tools <span class="dd-chevron">▼</span></button>
+      <div class="dd-menu">
+        <a href="/en/simulateur-immobilier/"><span class="dd-icon">🏠</span>Property Simulator</a>
+        <a href="/en/simulateur-credit/"><span class="dd-icon">💳</span>Loan Simulator</a>
+        <a href="/en/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Rent Reclassification<span class="dd-new">Nouveau</span></a>
+        <a href="/en/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Chart of Accounts PCMN</a>
+        <a href="/en/simulateur-interets-composes/"><span class="dd-icon">📈</span>Compound Interest</a>
+        <a href="/en/simulateur-retenue/"><span class="dd-icon">🧾</span>Invoice Withholding</a>
+        <a href="/en/quick-memento-fiscal/"><span class="dd-icon">📌</span>Quick Tax Memo</a>
+        <a href="/en/remboursement-frais/"><span class="dd-icon">🚗</span>Mileage Allowance</a>
+      </div>
+    </li>
+  </ul>
+  <!-- ══ SWITCHER LANGUE ══ -->
+  <div id="langSwitcher" style="display:flex;align-items:center;gap:2px;background:#F4F7FA;border:1px solid #DDE5EF;border-radius:8px;padding:3px;margin-left:16px;flex-shrink:0;">
+    <a href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇫🇷 FR</a>
+    <a href="https://lacavernedelacompta.be/nl/simulateur-interets-composes/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇧🇪 NL</a>
+    <a href="https://lacavernedelacompta.be/en/simulateur-interets-composes/" aria-current="page" style="display:inline-flex;align-items:center;gap:3px;font-weight:700;color:#fff;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;background:#1A7A8A;white-space:nowrap;">🇬🇧 EN</a>
+    <a href="https://lacavernedelacompta.be/de/simulateur-interets-composes/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇩🇪 DE</a>
+  </div>
+  <!-- ══════════════════════ -->
+
+  
+</nav>
+<div style="text-align:right;font-size:0.72rem;color:var(--text-light);padding:6px 40px 0;font-style:italic;">
+    🕐 Updated: January 2025 — <a href="/en/mentions-legales/" style="color:var(--text-light)">Official sources</a>
+  </div>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <a href="/en/">Home</a>
+  <span>›</span>
+  <a href="/en/#simulateurs">Simulators</a>
+  <span>›</span>
+  <span>Compound Interest</span>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-badge">📈 Financial simulator</div>
+  <h1>Compound <span>Interest Simulator</span></h1>
+  <p>Visualize the power of compound interest: initial capital, regular contributions, interest reinvestment.</p>
+</section>
+
+<!-- Main -->
+<div class="main">
+
+  <!-- Left panel: Inputs -->
+  <aside class="panel">
+    <div class="panel-header">
+      <h2>⚙️ Parameters</h2>
+      <p>Adjust the values to simulate your savings</p>
+    </div>
+    <div class="panel-body">
+
+      <!-- Initial capital -->
+      <div class="form-group">
+        <label class="form-label">
+          Initial capital
+          <div class="tooltip-icon" title="Amount you invest at the start">?</div>
+        </label>
+        <div class="input-wrap">
+          <span class="input-prefix">€</span>
+          <input type="number" class="form-input" id="capital" value="10000" min="0" step="100">
+        </div>
+        <div class="slider-wrap">
+          <input type="range" class="form-range" id="capitalSlider" min="0" max="100000" step="500" value="10000">
+          <div class="slider-labels"><span>0 €</span><span>100 000 €</span></div>
+        </div>
+      </div>
+
+      <!-- Contribution périodique -->
+      <div class="form-group">
+        <label class="form-label">
+          Contribution <span id="versementLabel">monthly</span>
+          <div class="tooltip-icon" title="Amount added each chosen period">?</div>
+        </label>
+        <div class="toggle-group" id="pmtFreqGroup" style="margin-bottom:10px">
+          <button class="toggle-btn" data-val="365">Daily</button>
+          <button class="toggle-btn" data-val="52">Weekly</button>
+          <button class="toggle-btn active" data-val="12">Monthly</button>
+        </div>
+        <div class="input-wrap">
+          <span class="input-prefix">€</span>
+          <input type="number" class="form-input" id="versement" value="200" min="0" step="50">
+        </div>
+        <div class="slider-wrap">
+          <input type="range" class="form-range" id="versementSlider" min="0" max="5000" step="50" value="200">
+          <div class="slider-labels"><span>0 €</span><span id="versementSliderMax">€5,000/month</span></div>
+        </div>
+      </div>
+
+      <!-- Taux annuel -->
+      <div class="form-group">
+        <label class="form-label">
+          Annual interest rate
+          <div class="tooltip-icon" title="Estimated gross annual return">?</div>
+        </label>
+        <div class="input-wrap">
+          <input type="number" class="form-input" id="taux" value="7" min="0" max="30" step="0.1" style="padding-left:16px;">
+          <span class="input-suffix">%</span>
+        </div>
+        <div class="slider-wrap">
+          <input type="range" class="form-range" id="tauxSlider" min="0" max="20" step="0.1" value="7">
+          <div class="slider-labels"><span>0 %</span><span>20 %</span></div>
+        </div>
+      </div>
+
+      <!-- Durée -->
+      <div class="form-group">
+        <label class="form-label">
+          Investment duration
+          <div class="tooltip-icon" title="Number of investment years">?</div>
+        </label>
+        <div class="input-wrap">
+          <input type="number" class="form-input" id="duree" value="20" min="1" max="50" step="1" style="padding-left:16px;">
+          <span class="input-suffix">years</span>
+        </div>
+        <div class="slider-wrap">
+          <input type="range" class="form-range" id="dureeSlider" min="1" max="50" step="1" value="20">
+          <div class="slider-labels"><span>1 year</span><span>50 years</span></div>
+        </div>
+      </div>
+
+      <!-- Fréquence capitalisation -->
+      <div class="form-group">
+        <label class="form-label">Compounding frequency</label>
+        <div class="toggle-group" id="freqGroup">
+          <button class="toggle-btn" data-val="12">Monthlyle</button>
+          <button class="toggle-btn active" data-val="4">Quarterly</button>
+          <button class="toggle-btn" data-val="1">Annual</button>
+        </div>
+      </div>
+
+      <!-- Réinvestissement -->
+      <div class="reinvest-row">
+        <div>
+          <div class="reinvest-label">♻️ Reinvest interest</div>
+          <div class="reinvest-sub">Automatic compounding of gains</div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="reinvest" checked>
+          <span class="switch-slider"></span>
+        </label>
+      </div>
+
+      <button class="calc-btn" onclick="calculate()">Calculate my simulation →</button>
+    </div>
+  </aside>
+
+  <!-- Right: Results -->
+  <section class="results" id="results">
+
+    <div class="placeholder" id="placeholder">
+      <div class="placeholder-icon">📊</div>
+      <h3>Your simulation will appear here</h3>
+      <p>Enter your parameters and click "Calculate" to visualize your capital growth.</p>
+    </div>
+
+    <!-- KPIs (hidden initially) -->
+    <div class="kpi-grid" id="kpiGrid" style="display:none;">
+      <div class="kpi-card kpi-capital" id="kpi1">
+        <div class="kpi-label">Invested capital</div>
+        <div class="kpi-value" id="kpiCapital">—</div>
+        <div class="kpi-sub" id="kpiCapitalSub">—</div>
+      </div>
+      <div class="kpi-card kpi-gain" id="kpi2">
+        <div class="kpi-label">Generated interest</div>
+        <div class="kpi-value highlight" id="kpiInterets">—</div>
+        <div class="kpi-sub" id="kpiInteretsSub">—</div>
+      </div>
+      <div class="kpi-card kpi-total" id="kpi3">
+        <div class="kpi-label">Final capital</div>
+        <div class="kpi-value" id="kpiTotal">—</div>
+        <div class="kpi-sub" id="kpiTotalSub">—</div>
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart-card" id="chartCard" style="display:none;">
+      <div class="chart-header">
+        <div class="chart-title">Capital evolution over time</div>
+        <div class="chart-tabs">
+          <button class="chart-tab active" onclick="switchChart('bar', this)">Bar</button>
+          <button class="chart-tab" onclick="switchChart('line', this)">Line</button>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <canvas id="myChart"></canvas>
+      </div>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#1A7A8A;"></div>Invested capital</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#27AE60;"></div>Compound interest</div>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="table-card" id="tableCard" style="display:none;">
+      <div class="table-header">
+        <div class="table-title">📋 Annual capitalisation table</div>
+        <span style="font-size:0.75rem;color:var(--text-light);">Year by year detail</span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Invested capital</th>
+              <th>Generated interest</th>
+              <th>Total capital</th>
+              <th>Cumulative gain</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Info strip -->
+    <div class="info-strip" id="infoStrip" style="display:none;">
+      <div>
+        <h3>The magic of <span>compound interest</span></h3>
+        <p>Albert Einstein reportedly said compound interest is the "eighth wonder of the world". The earlier you start, the more powerful the compounding effect — time works in your favour.</p>
+      </div>
+      <ul class="info-features">
+        <li><div class="check">✓</div><span>Interest generates interest itself</span></li>
+        <li><div class="check">✓</div><span>The effect is exponential over the long term</span></li>
+        <li><div class="check">✓</div><span>Regular contributions significantly amplify the result</span></li>
+        <li><div class="check">✓</div><span>Every year counts: starting early makes all the difference</span></li>
+      </ul>
+    </div>
+
+  </section>
+</div>
+
+<!-- Footer -->
+<!-- ── DISCLAIMER ── -->
+<div style="background:#F4F7FA;border-top:1px solid #DDE5EF;padding:18px 40px;font-size:0.75rem;color:#8A9BB0;line-height:1.7;font-family:'Inter',syears-serif;">
+  <div style="max-width:1150px;margin:0 auto;">
+    <strong style="color:#4A6279;">⚠️ Disclaimer — For indicative purposes only:</strong>
+    The results obtained via the tools and simulators on this site have <strong style="color:#4A6279;">indicative value only</strong> and have no legal, tax or accounting value.
+    Calculations are based on the legal provisions in force at the date of their last update and are subject to change.
+    <strong style="color:#4A6279;">La Caverne de la Compta</strong> makes every effort to keep this data up to date but cannot guarantee its accuracy or completeness.
+    La Caverne de la Compta cannot be held liable for any direct or indirect damages resulting from the use of the information obtained.
+    The user is solely responsible for decisions made based on simulation results.
+    <strong style="color:#4A6279;">Consult an accountant, tax advisor or notary</strong> before making any decision. <strong style="color:#4A6279;">La Caverne de la Compta is not a licensed financial, tax or legal advisor</strong> and the information published does not in any way constitute personalised advice.
+    — <a href="mentions-legales.html#disclaimer" style="color:#1A7A8A;text-decoration:none;">Legal notice complètes</a>
+  </div>
+</div>
+<footer>
+  <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
+  <div class="footer-links">
+    <a href="/en/mentions-legales/">Legal notice</a>
+    <a href="/en/mentions-legales/#rgpd">RGPD</a>
+    <a href="/en/mentions-legales/#cookies">Cookies</a>
+    <a href="#">Contact</a>
+  </div>
+</footer>
+
+<script>
+  // ─── Sync sliders with inputs ───
+  function syncPair(inputId, sliderId) {
+    const input = document.getElementById(inputId);
+    const slider = document.getElementById(sliderId);
+    input.addEventListener('input', () => { slider.value = input.value; });
+    slider.addEventListener('input', () => { input.value = slider.value; });
+  }
+  syncPair('capital', 'capitalSlider');
+  syncPair('versement', 'versementSlider');
+  syncPair('taux', 'tauxSlider');
+  syncPair('duree', 'dureeSlider');
+
+
+  // ─── Frequency toggle ───
+  let freq = 4;
+  document.querySelectorAll('#freqGroup .toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#freqGroup .toggle-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      freq = parseInt(btn.dataset.val);
+      calculate();
+    });
+  });
+
+  // ─── Contribution frequency toggle ───
+  let pmtFreq = 12; // par défaut monthly
+  const pmtLabels = { 365: 'daily', 52: 'weekly', 12: 'monthly' };
+  const pmtSliderMax = { 365: '€500/day', 52: '€2,000/week', 12: '€5,000/month' };
+  const pmtSliderMaxVal = { 365: 500, 52: 2000, 12: 5000 };
+
+  document.querySelectorAll('#pmtFreqGroup .toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#pmtFreqGroup .toggle-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      pmtFreq = parseInt(btn.dataset.val);
+      // Mettre à jour label + slider max
+      document.getElementById('versementLabel').textContent = pmtLabels[pmtFreq];
+      const sliderMax = pmtSliderMaxVal[pmtFreq];
+      document.getElementById('versementSlider').max = sliderMax;
+      document.getElementById('versementSliderMax').textContent = pmtSliderMax[pmtFreq];
+      // Ajuster valeur par défaut selon fréquence
+      const defaultVals = { 365: 10, 52: 50, 12: 200 };
+      document.getElementById('versement').value = defaultVals[pmtFreq];
+      document.getElementById('versementSlider').value = defaultVals[pmtFreq];
+      calculate();
+    });
+  });
+
+  // ─── Chart instance ───
+  let myChart = null;
+  let chartType = 'bar';
+  let lastLabels = [], lastCapitaux = [], lastInterets = [];
+
+  function switchChart(type, el) {
+    chartType = type;
+    document.querySelectorAll('.chart-tab').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    if (myChart) {
+      myChart.destroy();
+      renderChart(lastLabels, lastCapitaux, lastInterets);
+    }
+  }
+
+  function renderChart(labels, capitaux, interets) {
+    const ctx = document.getElementById('myChart').getContext('2d');
+    if (myChart) myChart.destroy();
+    myChart = new Chart(ctx, {
+      type: chartType === 'line' ? 'line' : 'bar',
+      data: {
+        labels,
+        datasets: [
+          {
+            label: 'Invested capital',
+            data: capitaux,
+            backgroundColor: chartType === 'line' ? 'rgba(26,122,138,0.15)' : 'rgba(26,122,138,0.75)',
+            borderColor: '#1A7A8A',
+            borderWidth: chartType === 'line' ? 2 : 0,
+            fill: chartType === 'line',
+            tension: 0.4,
+            pointRadius: chartType === 'line' ? 0 : 0,
+          },
+          {
+            label: 'Compound interest',
+            data: interets,
+            backgroundColor: chartType === 'line' ? 'rgba(39,174,96,0.2)' : 'rgba(39,174,96,0.8)',
+            borderColor: '#27AE60',
+            borderWidth: chartType === 'line' ? 2 : 0,
+            fill: chartType === 'line',
+            tension: 0.4,
+            pointRadius: chartType === 'line' ? 0 : 0,
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 700, easing: 'easeOutQuart' },
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#0D1B2A',
+            titleColor: 'rgba(255,255,255,0.9)',
+            bodyColor: 'rgba(255,255,255,0.7)',
+            padding: 12,
+            cornerRadius: 8,
+            callbacks: {
+              label: ctx => ` ${ctx.dataset.label} : ${fmt(ctx.raw)} €`
+            }
+          }
+        },
+        scales: {
+          x: {
+            stacked: chartType !== 'line',
+            grid: { display: false },
+            ticks: { font: { size: 11 }, color: '#8A9BB0' }
+          },
+          y: {
+            stacked: chartType !== 'line',
+            grid: { color: 'rgba(0,0,0,0.05)' },
+            ticks: {
+              font: { size: 11 }, color: '#8A9BB0',
+              callback: v => fmt(v, 0) + ' €'
+            }
+          }
+        }
+      }
+    });
+  }
+
+  // ─── Format numbers ───
+  function fmt(n, decimals = 0) {
+    return new Intl.NumberFormat('fr-BE', { minimumFractionDigits: decimals, maximumFractionDigits: decimals }).format(Math.round(n));
+  }
+
+  // ─── Main calculation ───
+  function calculate() {
+    const C0       = parseFloat(document.getElementById('capital').value) || 0;
+    const pmt      = parseFloat(document.getElementById('versement').value) || 0;
+    const tauxYear   = parseFloat(document.getElementById('taux').value) / 100 || 0;
+    const duree    = parseInt(document.getElementById('duree').value) || 1;
+    const reinvest = document.getElementById('reinvest').checked;
+    const n        = freq; // periods per year
+
+    const rPeriod  = tauxYear / n;          // rate per period
+    const periods  = duree * n;            // total periods
+    const pmtPer   = pmt * pmtFreq / n;   // versement per capitalisation period (annualisé puis ramené à la période)
+
+    let yearly = [];
+    let capital = C0;
+    let totalInvested = C0;
+
+    for (let p = 1; p <= periods; p++) {
+      if (reinvest) {
+        capital = capital * (1 + rPeriod) + pmtPer;
+      } else {
+        // interests paid out, not reinvested → linear growth on initial only
+        capital = capital + capital * rPeriod + pmtPer;
+        // actually: interests are taken out each period → capital stays same (not reinvested)
+        // Better model: interests accumulate separately
+        // We'll track total capital and subtract interest from compounding
+      }
+      totalInvested += pmtPer;
+
+      if (p % n === 0) {
+        yearly.push({ year: p / n, capital, totalInvested });
+      }
+    }
+
+    // Recalculate properly for no-reinvest:
+    if (!reinvest) {
+      yearly = [];
+      let simpleCapital = C0;
+      let cumulInterets = 0;
+      totalInvested = C0;
+      for (let y = 1; y <= duree; y++) {
+        const newInvested = pmt * 12;
+        // interests on current capital (not reinvested → base stays, but we add versements)
+        const interestThisYear = simpleCapital * tauxAn;
+        cumulInterets += interestThisYear;
+        simpleCapital += newInvested;
+        totalInvested += newInvested;
+        yearly.push({ year: y, capital: simpleCapital + cumulInterets, totalInvested });
+      }
+    }
+
+    // Build chart data
+    const labels = yearly.map(r => `Year ${r.year}`);
+    const capitaux = yearly.map(r => Math.round(r.totalInvested));
+    const interets = yearly.map(r => Math.max(0, Math.round(r.capital - r.totalInvested)));
+
+    lastLabels = labels; lastCapitaux = capitaux; lastInterets = interets;
+
+    // KPIs
+    const finalRow = yearly[yearly.length - 1];
+    const finalCapital = finalRow.capital;
+    const finalInvested = finalRow.totalInvested;
+    const finalInterets = finalCapital - finalInvested;
+    const gainPct = finalInvested > 0 ? (finalInterets / finalInvested * 100) : 0;
+
+    // Show results
+    document.getElementById('placeholder').style.display = 'none';
+    document.getElementById('kpiGrid').style.display = 'grid';
+    document.getElementById('chartCard').style.display = 'block';
+    document.getElementById('tableCard').style.display = 'block';
+    document.getElementById('infoStrip').style.display = 'grid';
+
+    // Animate KPIs
+    ['kpi1','kpi2','kpi3'].forEach((id, i) => {
+      const el = document.getElementById(id);
+      el.classList.remove('show');
+      setTimeout(() => el.classList.add('show'), i * 120);
+    });
+
+    document.getElementById('kpiCapital').textContent = fmt(finalInvested) + ' €';
+    document.getElementById('kpiCapitalSub').textContent = `Initial capital + ${fmt(pmt * 12 * duree)} € contributed`;
+    document.getElementById('kpiInterets').textContent = fmt(finalInterets) + ' €';
+    document.getElementById('kpiInteretsSub').textContent = `+${fmt(gainPct, 1)} % return`;
+    document.getElementById('kpiTotal').textContent = fmt(finalCapital) + ' €';
+    document.getElementById('kpiTotalSub').textContent = reinvest ? 'With interest reinvestment' : 'Syears réinvestissement';
+
+    // Chart
+    renderChart(labels, capitaux, interets);
+
+    // Table
+    const tbody = document.getElementById('tableBody');
+    tbody.innerHTML = '';
+    let prevCapital = C0;
+    yearly.forEach(row => {
+      const interetYear = row.capital - row.totalInvested;
+      const newInvestedThisYear = row.year === 1 ? row.totalInvested : (row.totalInvested - yearly[row.year - 2].totalInvested);
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>Year ${row.year}</td>
+        <td>${fmt(row.totalInvested)} €</td>
+        <td class="positive">+${fmt(interetYear)} €</td>
+        <td><strong>${fmt(row.capital)} €</strong></td>
+        <td class="positive">+${fmt(row.capital - C0)} €</td>
+      `;
+      tbody.appendChild(tr);
+    });
+
+    // Scroll to results on mobile
+    if (window.innerWidth < 900) {
+      document.getElementById('kpiGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  // Auto-calculate on load
+  window.addEventListener('load', calculate);
+</script>
+
+<!-- ── BANNIÈRE COOKIES APD-CONFORME ── -->
+<style>
+#cookieBanner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;
+    overflow: visible;background:#0D1B2A;border-top:3px solid #1A7A8A;padding:16px 30px 14px;box-shadow:0 -4px 24px rgba(0,0,0,0.35);font-family:'Inter',syears-serif;}
+#cookieBanner .cb-top{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+#cookieBanner .cb-text{font-size:0.82rem;color:rgba(255,255,255,0.75);line-height:1.6;flex:1;min-width:200px;margin:0;}
+#cookieBanner .cb-text a{color:#22A3B8;text-decoration:none;}
+#cookieBanner .cb-cats{display:flex;gap:20px;flex-wrap:wrap;margin:10px 0 12px 0;padding-left:2px;}
+#cookieBanner .cb-cat{display:flex;align-items:center;gap:8px;cursor:pointer;}
+#cookieBanner .cb-cat label{font-size:0.8rem;color:rgba(255,255,255,0.8);cursor:pointer;user-select:none;}
+#cookieBanner .cb-cat input[type=checkbox]{width:16px;height:16px;accent-color:#1A7A8A;cursor:pointer;}
+#cookieBanner .cb-cat.required label{color:rgba(255,255,255,0.45);}
+#cookieBanner .cb-btns{display:flex;gap:10px;flex-shrink:0;align-items:flex-start;}
+#cookieBanner .cb-btn{padding:9px 18px;border-radius:7px;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Inter',syears-serif;white-space:nowrap;border:none;tryearsition:all 0.2s;}
+#cookieBanner .cb-btn-all{background:#1A7A8A;color:#fff;}
+#cookieBanner .cb-btn-all:hover{background:#22A3B8;}
+#cookieBanner .cb-btn-save{background:tryearsparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.25)!important;}
+#cookieBanner .cb-btn-save:hover{color:#fff;border-color:rgba(255,255,255,0.5)!important;}
+#cookieBanner .cb-btn-refuse{background:tryearsparent;color:rgba(255,255,255,0.5);font-size:0.75rem;font-weight:500;padding:4px 0;text-decoration:underline;cursor:pointer;}
+#cookieBanner .cb-btn-refuse:hover{color:rgba(255,255,255,0.8);}
+</style>
+<div id="cookieBanner">
+  <div class="cb-top">
+    <p class="cb-text">
+      🍪 <strong style="color:#fff;">This website uses cookies.</strong>
+      Essential cookies ensure the website works properly. Others require your consent.
+      <a href="/en/mentions-legales/">Cookie Policy</a>
+    </p>
+    <div class="cb-btns">
+      <button class="cb-btn cb-btn-all" onclick="cbAcceptAll()">Accept all</button>
+      <button class="cb-btn cb-btn-save" onclick="cbSaveChoices()">Save my choices</button>
+    </div>
+  </div>
+  <div class="cb-cats">
+    <div class="cb-cat required">
+      <input type="checkbox" id="cb_necessary" checked disabled>
+      <label for="cb_necessary">✅ Essential <span style="font-size:0.7rem;opacity:0.6">(always active)</span></label>
+    </div>
+    <div class="cb-cat">
+      <input type="checkbox" id="cb_analytics">
+      <label for="cb_analytics">📊 Analytics <span style="font-size:0.7rem;opacity:0.6">(Google Analytics)</span></label>
+    </div>
+    <div class="cb-cat">
+      <input type="checkbox" id="cb_ads">
+      <label for="cb_ads">📢 Advertising <span style="font-size:0.7rem;opacity:0.6">(Google AdSense)</span></label>
+    </div>
+    <button class="cb-btn-refuse" onclick="cbRefuseAll()">Refuse all</button>
+  </div>
+</div>
+<script>
+(function(){
+  var GA_ID='G-WNHZDLVPEL';
+  function getCk(n){return(document.cookie.split(';').map(function(c){return c.trim();}).find(function(c){return c.startsWith(n+'=');})+'=').split('=')[1]||null;}
+  function setCk(n,v){document.cookie=n+'='+v+';max-age=31536000;path=/;SameSite=Lax';}
+  function hideBanner(){document.getElementById('cookieBanner').style.display='none';}
+
+  function loadGA(){
+    if(window._gaLoaded)return;window._gaLoaded=true;
+    var s=document.createElement('script');s.async=true;
+    s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag=gtag;
+    gtag('js',new Date());gtag('config',GA_ID,{anonymize_ip:true});
+  }
+
+  // AdSense chargé via la balise head standard — on bloque via consent_mode
+  function updateConsentMode(analytics,ads){
+    if(window.gtag){
+      window.gtag('consent','update',{
+        analytics_storage: analytics?'granted':'denied',
+        ad_storage: ads?'granted':'denied',
+        ad_user_data: ads?'granted':'denied',
+        ad_personalization: ads?'granted':'denied'
+      });
+    }
+  }
+
+  window.cbAcceptAll=function(){
+    setCk('cb_analytics','1');setCk('cb_ads','1');
+    document.getElementById('cb_analytics').checked=true;
+    document.getElementById('cb_ads').checked=true;
+    loadGA();updateConsentMode(true,true);hideBanner();
+  };
+  window.cbRefuseAll=function(){
+    setCk('cb_analytics','0');setCk('cb_ads','0');
+    updateConsentMode(false,false);hideBanner();
+  };
+  window.cbSaveChoices=function(){
+    var a=document.getElementById('cb_analytics').checked;
+    var d=document.getElementById('cb_ads').checked;
+    setCk('cb_analytics',a?'1':'0');setCk('cb_ads',d?'1':'0');
+    if(a)loadGA();
+    updateConsentMode(a,d);hideBanner();
+  };
+
+  // Init au chargement
+  var ca=getCk('cb_analytics'),cd=getCk('cb_ads');
+  if(ca===null){
+    // Pas encore de choix → afficher bannière
+    document.getElementById('cookieBanner').style.display='block';
+  } else {
+    // Choix déjà enregistré → appliquer
+    document.getElementById('cb_analytics').checked=(ca==='1');
+    document.getElementById('cb_ads').checked=(cd==='1');
+    if(ca==='1')loadGA();
+    updateConsentMode(ca==='1',cd==='1');
+  }
+})();
+</script>
+
+
+<script>
+function toggleDD(e){
+  e.stopPropagation();
+  document.getElementById('ddWrap').classList.toggle('dd-open');
+}
+document.addEventListener('click',function(e){
+  var w=document.getElementById('ddWrap');
+  if(w && !w.contains(e.target)) w.classList.remove('dd-open');
+});
+</script>
+</body>
+</html>

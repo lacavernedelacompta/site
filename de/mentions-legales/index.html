@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rechtliche Hinweise, DSGVO & Cookies — La Caverne</title>
+  <meta name="description" content="Rechtliche Hinweise, DSGVO-Datenschutzrichtlinie und Cookie-Verwaltung von La Caverne de la Compta. Konformität mit der belgischen DSB.">
+  <meta name="keywords" content="rechtliche hinweise, DSGVO belgien, cookie-richtlinie, DSB belgien">
+  <meta name="author" content="La Caverne de la Compta">
+  <meta name="robots" content="index, follow">
+  <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/mentions-legales/">
+  <link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/mentions-legales/">
+  <link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/mentions-legales/">
+  <link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/mentions-legales/">
+  <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/mentions-legales/">
+  <link rel="canonical" href="https://lacavernedelacompta.be/de/mentions-legales/">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rechtliche Hinweise, DSGVO & Cookie-Richtlinie — La Caverne de la Compta">
+  <meta property="og:image" content="https://lacavernedelacompta.be/logo.png">
+
+  <meta property="og:description" content="Rechtliche Hinweise, DSGVO-Datenschutzrichtlinie und Cookie-Verwaltung von La Caverne de la Compta. Konformität mit der belgischen DSB.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lacavernedelacompta.be/mentions-legales.html">
+  <meta property="og:site_name" content="La Caverne de la Compta">
+  <meta property="og:locale" content="de_BE">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0D1B2A; --navy-mid: #1B2E44; --navy-light: #243B55;
+    --teal: #1A7A8A; --teal-light: #22A3B8; --teal-pale: #E8F6F8;
+    --white: #FFFFFF; --off-white: #F4F7FA;
+    --text-dark: #1A2535; --text-mid: #4A6279; --text-light: #8A9BB0;
+    --border: #DDE5EF; --shadow: rgba(13,27,42,0.12);
+    --green: #2E7D32; --green-pale: #EBF7ED;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--off-white); color:var(--text-dark); font-family:'Inter',sans-serif; min-height:100vh; }
+
+  .topbar { background:var(--navy); padding:10px 40px; display:flex; justify-content:space-between; align-items:center; }
+  .topbar-left { font-size:0.75rem; color:var(--text-light); letter-spacing:0.05em; }
+  .topbar-right { display:flex; gap:20px; }
+  .topbar-right a { font-size:0.75rem; color:var(--text-light); text-decoration:none; transition:color 0.2s; }
+  .topbar-right a:hover { color:var(--white); }
+
+  nav {
+    background: #ffffff;
+    border-bottom: 2px solid #22A3B8;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    box-shadow: 0 2px 12px rgba(13, 27, 42, 0.08);
+    overflow: visible;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
+  .logo-icon { width:40px; height:40px; background:linear-gradient(135deg,var(--teal),var(--navy)); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:20px; }
+  .logo-text { font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; color:var(--navy); }
+  .logo-sub { font-size:0.65rem; font-weight:500; color:var(--teal); letter-spacing:0.15em; text-transform:uppercase; }
+  .nav-links { display:flex; gap:4px; list-style:none; align-items:center; }
+  .nav-links>li { list-style:none; }
+  .nav-links a { padding:8px 16px; font-size:0.85rem; font-weight:500; color:var(--text-mid); text-decoration:none; border-radius:6px; transition:all 0.2s; }
+  .nav-links a:hover { background:var(--teal-pale); color:var(--teal); }
+  .nav-links a.active { background:var(--teal-pale); color:var(--teal); font-weight:600; }
+  .dd-wrap{position:relative;}
+  .dd-btn{display:flex;align-items:center;gap:6px;padding:8px 16px;font-size:.85rem;font-weight:500;color:var(--text-mid);background:none;border:none;cursor:pointer;border-radius:6px;font-family:'Playfair Display',sans-serif;transition:all .2s;white-space:nowrap;}
+  .dd-btn:hover,.dd-wrap.dd-open .dd-btn{background:var(--teal-pale);color:var(--teal);}
+  .dd-chevron{font-size:.55rem;transition:transform .2s;display:inline-block;}
+  .dd-wrap.dd-open .dd-chevron{transform:rotate(180deg);}
+  .dd-menu{display:none;position:absolute;top:calc(100% + 8px);right:0;left:auto;min-width:240px;background:var(--white);border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 32px var(--shadow);z-index:9999;
+    overflow:visible;}
+  .dd-wrap.dd-open .dd-menu{display:block;}
+  .dd-menu a{display:flex;align-items:center;gap:10px;padding:11px 16px;font-size:.84rem;color:var(--text-mid);text-decoration:none;transition:background .15s;border-bottom:1px solid var(--border);}
+  .dd-menu a:last-child{border-bottom:none;}
+  .dd-menu a:hover{background:var(--teal-pale);color:var(--teal);}
+  .dd-icon{font-size:1rem;width:22px;text-align:center;}
+  .dd-new{margin-left:auto;background:var(--teal);color:#fff;font-size:.62rem;font-weight:700;padding:2px 7px;border-radius:20px;}
+
+  .hero {
+    background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 60%,#1A5C6E 100%);
+    color:var(--white); padding:50px 40px 60px; position:relative; overflow:hidden;
+  }
+  .hero::before {
+    content:''; position:absolute; inset:0;
+    background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events:none;
+  }
+  .hero-inner { max-width:900px; margin:0 auto; position:relative; }
+  .hero-bread { font-size:0.78rem; color:rgba(255,255,255,0.5); margin-bottom:14px; }
+  .hero-bread a { color:rgba(255,255,255,0.5); text-decoration:none; }
+  .hero-bread a:hover { color:var(--white); }
+  .hero-badge { display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.15); border-radius:20px; padding:5px 14px; font-size:0.72rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal-pale); margin-bottom:16px; }
+  .hero h1 { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.4rem); font-weight:900; line-height:1.2; margin-bottom:10px; }
+  .hero h1 span { color:var(--teal-light); }
+  .hero p { font-size:0.9rem; color:rgba(255,255,255,0.6); font-weight:300; line-height:1.6; }
+
+  .main { max-width:900px; margin:0 auto; padding:50px 30px 80px; }
+
+  /* TOC */
+  .toc { background:var(--white); border:1px solid var(--border); border-radius:12px; padding:24px 28px; margin-bottom:40px; box-shadow:0 2px 8px var(--shadow); }
+  .toc-title { font-size:0.72rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--teal); margin-bottom:14px; }
+  .toc ol { padding-left:18px; display:flex; flex-direction:column; gap:6px; }
+  .toc li a { font-size:0.88rem; color:var(--text-mid); text-decoration:none; transition:color 0.2s; }
+  .toc li a:hover { color:var(--teal); }
+
+  /* Sections */
+  .section { margin-bottom:48px; scroll-margin-top:90px; }
+  .section-header { display:flex; align-items:center; gap:12px; margin-bottom:20px; padding-bottom:12px; border-bottom:2px solid var(--teal-pale); }
+  .section-icon { width:38px; height:38px; background:var(--teal-pale); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
+  .section-header h2 { font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:700; color:var(--navy); }
+
+  p { font-size:0.9rem; color:var(--text-mid); line-height:1.8; margin-bottom:14px; }
+  p:last-child { margin-bottom:0; }
+  h3 { font-size:0.95rem; font-weight:600; color:var(--navy); margin:20px 0 8px; }
+  ul, ol { padding-left:20px; margin-bottom:14px; }
+  li { font-size:0.9rem; color:var(--text-mid); line-height:1.8; }
+  a { color:var(--teal); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  strong { color:var(--text-dark); font-weight:600; }
+
+  /* Info box */
+  .info-box { background:var(--teal-pale); border-left:3px solid var(--teal); border-radius:0 8px 8px 0; padding:14px 18px; margin:16px 0; font-size:0.88rem; color:var(--text-mid); line-height:1.7; }
+  .info-box strong { color:var(--teal); }
+  .warn-box { background:#FFF3E0; border-left:3px solid #E65100; border-radius:0 8px 8px 0; padding:14px 18px; margin:16px 0; font-size:0.88rem; color:#5D3000; line-height:1.7; }
+
+  /* Identity card */
+  .id-card { background:var(--white); border:1px solid var(--border); border-radius:12px; overflow:hidden; box-shadow:0 2px 8px var(--shadow); margin:20px 0; }
+  .id-card-row { display:flex; border-bottom:1px solid var(--border); }
+  .id-card-row:last-child { border-bottom:none; }
+  .id-card-key { width:220px; flex-shrink:0; padding:12px 18px; background:var(--off-white); font-size:0.8rem; font-weight:600; color:var(--text-light); letter-spacing:0.05em; text-transform:uppercase; display:flex; align-items:center; }
+  .id-card-val { padding:12px 18px; font-size:0.88rem; color:var(--text-dark); font-weight:500; display:flex; align-items:center; }
+
+  /* Cookie table */
+  .cookie-table { width:100%; border-collapse:collapse; background:var(--white); border-radius:12px; overflow:hidden; box-shadow:0 2px 8px var(--shadow); margin:16px 0; font-size:0.85rem; }
+  .cookie-table th { background:var(--navy); color:var(--white); padding:11px 16px; text-align:left; font-size:0.75rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; }
+  .cookie-table td { padding:11px 16px; border-bottom:1px solid var(--border); color:var(--text-mid); vertical-align:top; line-height:1.6; }
+  .cookie-table tr:last-child td { border-bottom:none; }
+  .cookie-table tr:nth-child(even) td { background:#FAFCFE; }
+  .cookie-table td:first-child { font-weight:600; color:var(--navy); }
+  .badge { display:inline-block; padding:2px 8px; border-radius:10px; font-size:0.68rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; }
+  .badge.required { background:var(--green-pale); color:var(--green); }
+  .badge.analytics { background:#E3F2FD; color:#1565C0; }
+  .badge.ads { background:#FFF3E0; color:#E65100; }
+
+  footer { background:var(--navy); color:rgba(255,255,255,0.5); padding:30px 40px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-size:0.8rem; }
+  footer a { color:rgba(255,255,255,0.5); text-decoration:none; transition:color 0.2s; }
+  footer a:hover { color:var(--white); }
+  .footer-links { display:flex; gap:20px; }
+
+  @media (max-width:768px) {
+    nav { padding:0 20px; } .nav-links { display:none; }
+    .hero { padding:40px 20px 50px; } .main { padding:30px 16px 60px; }
+    .topbar { display:none; }
+    .id-card-key { width:140px; font-size:0.72rem; }
+    footer { flex-direction:column; text-align:center; }
+  }
+</style>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "La Caverne de la Compta",
+  "url": "https://lacavernedelacompta.be",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://lacavernedelacompta.be/logo.png",
+    "width": 512,
+    "height": 512
+  },
+  "image": "https://lacavernedelacompta.be/logo.png"
+}
+</script>
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<!-- CACHE-BUST-v8-de/mentions-legales/index.html -->
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-left">🇧🇪 Buchhaltungs- und Finanz-Tools für Belgien</span>
+  <div class="topbar-right">
+    <a href="/de/mentions-legales/">Rechtliche Hinweise</a>
+    <a href="#">Kontakt</a>
+    <a href="#">Über uns</a>
+  </div>
+</div>
+
+<nav>
+<a href="/de/" class="logo" style="text-decoration:none;display:flex;align-items:center;">
+    <svg width="148" height="38" viewBox="0 0 148 38" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <defs>
+        <linearGradient id="hGn" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0D1B2A"/>
+          <stop offset="100%" style="stop-color:#1A3A5C"/>
+        </linearGradient>
+      </defs>
+      <!-- Hexagone -->
+      <polygon points="19,2 31,9 31,23 19,30 7,23 7,9" fill="url(#hGn)"/>
+      <!-- Reflet top -->
+      <polygon points="19,2 31,9 25,9 19,5 13,9 7,9" fill="rgba(255,255,255,.07)"/>
+      <!-- Bras balance -->
+      <line x1="9" y1="15" x2="29" y2="15" stroke="rgba(255,255,255,.5)" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Tige -->
+      <rect x="17.5" y="15" width="2.5" height="11" rx="1.2" fill="rgba(255,255,255,.35)"/>
+      <!-- Pivot gold -->
+      <circle cx="18.8" cy="15" r="3.2" fill="#C9A84C"/>
+      <circle cx="18.8" cy="15" r="1.4" fill="white" opacity=".9"/>
+      <!-- Socle -->
+      <rect x="13" y="27" width="12" height="2.5" rx="1.2" fill="rgba(255,255,255,.2)"/>
+      <!-- Plateau gauche -->
+      <line x1="9" y1="15" x2="7" y2="21.5" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="7" cy="24" rx="6.5" ry="2.5" fill="#1A7A8A"/>
+      <!-- Plateau droit -->
+      <line x1="29" y1="15" x2="31" y2="20" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="31" cy="22.5" rx="6.5" ry="2.5" fill="#22A3B8"/>
+      <!-- Étoile -->
+      <circle cx="27" cy="7" r="2.5" fill="#C9A84C" opacity=".85"/>
+      <!-- Texte -->
+      <text x="42" y="15.5" font-family="'Playfair Display',serif" font-size="12.5" font-weight="900" fill="#0D1B2A" letter-spacing="-.2">La Caverne</text>
+      <rect x="42" y="18.5" width="104" height="1" rx=".5" fill="#DDE5EF"/>
+      <rect x="42" y="18.5" width="18" height="1" rx=".5" fill="#C9A84C"/>
+      <text x="42" y="30" font-family="'Playfair Display',serif" font-size="10.5" font-weight="700" font-style="italic" fill="#1A7A8A" letter-spacing="-.1">de la Compta</text>
+    </svg>
+  </a>
+        <ul class="nav-links">
+    <li><a href="https://lacavernedelacompta.be/de/">🏠 Startseite</a></li>
+    <li class="dd-wrap" id="ddWrap">
+      <button class="dd-btn" onclick="toggleDD(event)">🧰 Unsere Tools <span class="dd-chevron">▼</span></button>
+      <div class="dd-menu">
+        <a href="/de/simulateur-immobilier/"><span class="dd-icon">🏠</span>Immobiliensimulator</a>
+        <a href="/de/simulateur-credit/"><span class="dd-icon">💳</span>Kredit-Simulator</a>
+        <a href="/de/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Mietumqualifizierung<span class="dd-new">Nouveau</span></a>
+        <a href="/de/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Kontenplan PCMN</a>
+        <a href="/de/simulateur-interets-composes/"><span class="dd-icon">📈</span>Zinseszins</a>
+        <a href="/de/simulateur-retenue/"><span class="dd-icon">🧾</span>Rechnungseinbehalt</a>
+        <a href="/de/quick-memento-fiscal/"><span class="dd-icon">📌</span>Steuer-Quick-Memo</a>
+        <a href="/de/remboursement-frais/"><span class="dd-icon">🚗</span>Kilometerentschädigung</a>
+      </div>
+    </li>
+  </ul>
+  <!-- ══ SWITCHER LANGUE ══ -->
+  <div id="langSwitcher" style="display:flex;align-items:center;gap:2px;background:#F4F7FA;border:1px solid #DDE5EF;border-radius:8px;padding:3px;margin-left:16px;flex-shrink:0;">
+    <a href="https://lacavernedelacompta.be/fr/mentions-legales/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇫🇷 FR</a>
+    <a href="https://lacavernedelacompta.be/nl/mentions-legales/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇧🇪 NL</a>
+    <a href="https://lacavernedelacompta.be/en/mentions-legales/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇬🇧 EN</a>
+    <a href="https://lacavernedelacompta.be/de/mentions-legales/" aria-current="page" style="display:inline-flex;align-items:center;gap:3px;font-weight:700;color:#fff;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;background:#1A7A8A;white-space:nowrap;">🇩🇪 DE</a>
+  </div>
+  <!-- ══════════════════════ -->
+
+  
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-bread"><a href="/de/">Startseite</a> › Rechtliche Hinweise</div>
+    <div class="hero-badge">⚖️ Rechtliche Informationen</div>
+    <h1>Rechtliche Hinweise, <span>DSGVO & Cookies</span></h1>
+    <p>Pflichtangaben gemäß belgischem Recht, der DSGVO (EU 2016/679) und dem Gesetz vom 13. Juni 2005 über die elektronische Kommunikation.</p>
+  </div>
+</section>
+
+<main class="main">
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">📋 Inhaltsverzeichnis</div>
+    <ol>
+      <li><a href="#mentions">1. Pflichtangaben</a></li>
+      <li><a href="#disclaimer">2. Haftungsausschluss — Haftungsbeschränkung</a></li>
+      <li><a href="#propriete">3. Geistiges Eigentum</a></li>
+      <li><a href="#rgpd">4. Schutz personenbezogener Daten (DSGVO)</a></li>
+      <li><a href="#cookies">5. Cookie-Richtlinie</a></li>
+      <li><a href="#contact">6. Kontakt & Beschwerden</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. Mentions légales -->
+  <div class="section" id="mentions">
+    <div class="section-header">
+      <div class="section-icon">🏢</div>
+      <h2>1. Pflichtangaben</h2>
+    </div>
+    <p>Gemäß dem belgischen Gesetz vom 11. März 2003 über Dienste der Informationsgesellschaft (Umsetzung der Richtlinie 2000/31/EG) und den Anforderungen des FÖD Wirtschaft werden folgende Angaben veröffentlicht:</p>
+
+    <div class="id-card">
+      <div class="id-card-row">
+        <div class="id-card-key">Handelsname</div>
+        <div class="id-card-val"><strong>La Caverne de la Compta</strong></div>
+      </div>
+      <div class="id-card-row">
+        <div class="id-card-key">Adresse</div>
+        <div class="id-card-val">Rue Belle Vue 69, 4530 Villers-le-Bouillet, Belgique</div>
+      </div>
+      <div class="id-card-row">
+        <div class="id-card-key">Email</div>
+        <div class="id-card-val"><a href="/cdn-cgi/l/email-protection#41222e2f35202235012d2022203724332f2425242d20222e2c3135206f2324"><span class="__cf_email__" data-cfemail="21424e4f55404255614d4042405744534f4445444d40424e4c5155400f4344">[email&#160;protected]</span></a></div>
+      </div>
+      <div class="id-card-row">
+        <div class="id-card-key">KBO-Nummer</div>
+        <div class="id-card-val">0701.812.717</div>
+      </div>
+      <div class="id-card-row">
+        <div class="id-card-key">USt-IdNr.</div>
+        <div class="id-card-val">BE0701.812.717</div>
+      </div>
+      <div class="id-card-row">
+        <div class="id-card-key">Hosting</div>
+        <div class="id-card-val">Netlify, Inc. — 512 2nd Street, Suite 200, San Francisco, CA 94107, USA</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Disclaimer -->
+  <div class="section" id="disclaimer">
+    <div class="section-header">
+      <div class="section-icon">⚠️</div>
+      <h2>2. Haftungsausschluss — Haftungsbeschränkung</h2>
+    </div>
+
+    <div class="warn-box">
+      <strong>⚠️ Die auf dieser Website veröffentlichten Tools und Informationen dienen ausschließlich zu Informations- und Orientierungszwecken.</strong> Sie stellen in keiner Weise eine professionelle rechtliche, steuerliche, buchhalterische oder finanzielle Beratung dar.
+    </div>
+
+    <h3>Art der Inhalte</h3>
+    <p>La Caverne de la Compta ist eine Website mit Berechnungstools und Informationen für die breite Öffentlichkeit, Selbstständige und Finanzfachleute. Die veröffentlichten Simulatoren, Steuertarife und -memos basieren auf den zum Zeitpunkt ihrer letzten Aktualisierung in Belgien geltenden Rechts- und Verwaltungsvorschriften.</p>
+
+    <h3>Keine Gewährleistung</h3>
+    <p>Obwohl die Daten mit großer Sorgfalt aktualisiert werden, <strong>kann La Caverne de la Compta die Richtigkeit, Vollständigkeit oder Aktualität</strong> der veröffentlichten Informationen nicht garantieren. Das Steuer- und Sozialrecht ändert sich häufig. Es wird dringend empfohlen, vor jeder Entscheidung auf Grundlage der über diese Website erzielten Ergebnisse einen Wirtschaftsprüfer, Steuerberater oder Notar zu konsultieren.</p>
+
+    <h3>Haftungsbeschränkung</h3>
+    <p>La Caverne de la Compta lehnt jede Haftung ab für:</p>
+    <ul>
+      <li>Jeden Fehler oder jede Auslassung in den bereitgestellten Berechnungen oder Informationen</li>
+      <li>Jede Entscheidung, die auf Grundlage der Simulationsergebnisse getroffen wird</li>
+      <li>Jeden direkten oder indirekten Schaden, der aus der Nutzung der Website entsteht</li>
+      <li>Jede Unterbrechung oder Nichtverfügbarkeit der Website</li>
+    </ul>
+
+    <h3>Externe Links</h3>
+    <p>Die Website kann Links zu Websites Dritter (notaire.be, FÖD Finanzen usw.) enthalten. La Caverne de la Compta ist nicht verantwortlich für den Inhalt dieser Websites und kontrolliert diese nicht.</p>
+  </div>
+
+  <!-- 3. Propriété intellectuelle -->
+  <div class="section" id="propriete">
+    <div class="section-header">
+      <div class="section-icon">©️</div>
+      <h2>3. Geistiges Eigentum</h2>
+    </div>
+    <p>Alle Inhalte dieser Website (Texte, Code, Design, Struktur, zusammengestellte Daten) sind Eigentum von <strong>La Caverne de la Compta</strong> und durch das belgische Recht des geistigen Eigentums geschützt.</p>
+    <p>Jede Vervielfältigung, Verbreitung, Änderung oder gewerbliche Nutzung ohne vorherige schriftliche Genehmigung ist untersagt. Die persönliche und nicht-kommerzielle Nutzung ist unter Angabe der Quelle gestattet.</p>
+    <p>Steuertarife und amtliche Daten (FÖD Finanzen, NSSO usw.) sind öffentliche Informationen, deren Aufbereitung und Überprüfung La Caverne de la Compta übernimmt.</p>
+  </div>
+
+  <!-- 4. RGPD -->
+  <div class="section" id="rgpd">
+    <div class="section-header">
+      <div class="section-icon">🔒</div>
+      <h2>4. Schutz personenbezogener Daten (DSGVO)</h2>
+    </div>
+
+    <div class="info-box"><strong>Rechtsgrundlage:</strong> Verordnung (EU) 2016/679 vom 27. April 2016 (DSGVO) — Belgisches Gesetz vom 30. Juli 2018 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten.</div>
+
+    <h3>Verantwortlicher</h3>
+    <p><strong>La Caverne de la Compta</strong> — BCE 0701.812.717 — Rue Belle Vue 69, 4530 Villers-le-Bouillet — <a href="/cdn-cgi/l/email-protection#d4b7bbbaa0b5b7a094b8b5b7b5a2b1a6bab1b0b1b8b5b7bbb9a4a0b5fab6b1"><span class="__cf_email__" data-cfemail="482b27263c292b3c0824292b293e2d3a262d2c2d24292b2725383c29662a2d">[email&#160;protected]</span></a></p>
+
+    <h3>Erhobene Daten</h3>
+    <p>Diese Website erhebt <strong>keine personenbezogenen Daten direkt</strong> (kein Anmeldeformular, kein Benutzerkonto). Die einzigen verarbeiteten Daten sind:</p>
+    <ul>
+      <li>Im Kilometererstattungsrechner eingegebene Daten (Name, Adresse, Nationalregisternummer, IBAN, BCE) — <strong>nur im Browser per localStorage gespeichert, niemals übertragen</strong></li>
+      <li><strong>Anonymisierte Navigationsdaten</strong> über Google Analytics (gekürzte IP-Adresse, besuchte Seiten, Besuchsdauer)</li>
+      <li><strong>Werbedaten</strong> über Google AdSense (Targeting-Cookies, vorbehaltlich Ihrer Zustimmung)</li>
+    </ul>
+
+    <h3>Zwecke der Verarbeitung</h3>
+    <ul>
+      <li>Reichweitenmessung und Websiteverbesserung (Google Analytics)</li>
+      <li>Anzeige personalisierter oder nicht personalisierter Werbung (Google AdSense)</li>
+    </ul>
+
+    <h3>Speicherdauer</h3>
+    <p>Analytics-Daten werden maximal 14 Monate gespeichert. AdSense-Cookies folgen der Google-Richtlinie (siehe <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>).</p>
+
+    <h3>Ihre Rechte</h3>
+    <p>Gemäß der DSGVO stehen Ihnen folgende Rechte zu:</p>
+    <ul>
+      <li><strong>Auskunftsrecht</strong> — eine Kopie Ihrer Daten erhalten</li>
+      <li><strong>Berichtigungsrecht</strong> — unrichtige Daten korrigieren</li>
+      <li><strong>Recht auf Löschung</strong> — Löschung Ihrer Daten beantragen</li>
+      <li><strong>Widerspruchsrecht</strong> — der Verarbeitung zu Werbezwecken widersprechen</li>
+      <li><strong>Recht auf Datenübertragbarkeit</strong> — Ihre Daten in einem strukturierten Format erhalten</li>
+      <li><strong>Recht auf Widerruf der Einwilligung</strong> — jederzeit über das Cookie-Banner</li>
+    </ul>
+    <p>Zur Ausübung dieser Rechte: <a href="/cdn-cgi/l/email-protection#a4c7cbcad0c5c7d0e4c8c5c7c5d2c1d6cac1c0c1c8c5c7cbc9d4d0c58ac6c1"><span class="__cf_email__" data-cfemail="bcdfd3d2c8dddfc8fcd0dddfddcad9ced2d9d8d9d0dddfd3d1ccc8dd92ded9">[email&#160;protected]</span></a></p>
+
+    <h3>Aufsichtsbehörde</h3>
+    <p>Sie haben das Recht, eine Beschwerde bei der <strong>Datenschutzbehörde (DSB)</strong> einzureichen:<br>
+    Rue de la Presse 35, 1000 Bruxelles — <a href="https://www.autoriteprotectiondonnees.be" target="_blank">autoriteprotectiondonnees.be</a> — <a href="/cdn-cgi/l/email-protection#afccc0c1dbceccdbefcedfcb82c8cdce81cdca"><span class="__cf_email__" data-cfemail="83e0ecedf7e2e0f7c3e2f3e7aee4e1e2ade1e6">[email&#160;protected]</span></a></p>
+  </div>
+
+  <!-- 5. Cookies -->
+  <div class="section" id="cookies">
+    <div class="section-header">
+      <div class="section-icon">🍪</div>
+      <h2>5. Cookie-Richtlinie</h2>
+    </div>
+
+    <div class="info-box"><strong>Rechtsgrundlage:</strong> Belgisches Gesetz vom 13. Juni 2005 über die elektronische Kommunikation (Art. 129) — Richtlinie 2002/58/EG ePrivacy — DSGVO. Ihre Zustimmung ist erforderlich, bevor nicht wesentliche Cookies gesetzt werden.</div>
+
+    <h3>Was ist ein Cookie?</h3>
+    <p>Ein Cookie ist eine kleine Textdatei, die beim Besuch auf Ihrem Gerät abgelegt wird. Sie ermöglicht es, Informationen über Ihr Surfverhalten zu speichern. Sie können Ihre Einstellungen jederzeit über das Banner am Seitenende oder die Einstellungen Ihres Browsers ändern.</p>
+
+    <h3>Auf dieser Website verwendete Cookies</h3>
+    <table class="cookie-table">
+      <thead>
+        <tr>
+          <th>Cookie</th>
+          <th>Anbieter</th>
+          <th>Zweck</th>
+          <th>Dauer</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>cookie_consent</td>
+          <td>La Caverne de la Compta</td>
+          <td>Speichert Ihre Cookie-Zustimmungswahl</td>
+          <td>1 Jahr</td>
+          <td><span class="badge required">Notwendig</span></td>
+        </tr>
+        <tr>
+          <td>_ga, _ga_*</td>
+          <td>Google Analytics</td>
+          <td>Anonymisierte Reichweitenmessung (Seitenaufrufe, Dauer, Quelle)</td>
+          <td>2 Jahre</td>
+          <td><span class="badge analytics">Analytisch</span></td>
+        </tr>
+        <tr>
+          <td>_gid</td>
+          <td>Google Analytics</td>
+          <td>Unterscheidung der Nutzer</td>
+          <td>24h</td>
+          <td><span class="badge analytics">Analytisch</span></td>
+        </tr>
+        <tr>
+          <td>__gads, __gpi</td>
+          <td>Google AdSense</td>
+          <td>Werbeanzeige und -targeting</td>
+          <td>13 Monate</td>
+          <td><span class="badge ads">Werbung</span></td>
+        </tr>
+        <tr>
+          <td>IDE, DSID</td>
+          <td>Google DoubleClick</td>
+          <td>Seitenübergreifende zielgerichtete Werbung</td>
+          <td>13 Monate</td>
+          <td><span class="badge ads">Werbung</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Ihre Einstellungen verwalten</h3>
+    <p>Sie können nicht notwendige Cookies über das Banner am Ende jeder Seite akzeptieren oder ablehnen. Sie können außerdem:</p>
+    <ul>
+      <li>OpenStreetMap / OSRM (Entfernungsberechnung) — übermittelte Daten: Abfahrts- und Ankunftsadressen</li>
+<li>Zentrale Datenbank der Unternehmen via cbeapi.be (BCE-Abfrage) — übermittelte Daten: nur Unternehmensnummer</li>
+<li>Google Analytics-Tracking deaktivieren: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">tools.google.com/dlpage/gaoptout</a></li>
+      <li>Google-Werbeeinstellungen verwalten: <a href="https://adssettings.google.com" target="_blank">adssettings.google.com</a></li>
+      <li>Ihren Browser so konfigurieren, dass Cookies abgelehnt werden (siehe Browser-Hilfe)</li>
+    </ul>
+  </div>
+
+  <!-- 6. Contact -->
+  <div class="section" id="contact">
+    <div class="section-header">
+      <div class="section-icon">✉️</div>
+      <h2>6. Kontakt & Beschwerden</h2>
+    </div>
+    <p>Für alle Fragen zu diesen rechtlichen Hinweisen, zum Schutz Ihrer Daten oder zur Ausübung Ihrer Rechte:</p>
+    <div class="id-card">
+      <div class="id-card-row">
+        <div class="id-card-key">Email</div>
+        <div class="id-card-val"><a href="/cdn-cgi/l/email-protection#c7a4a8a9b3a6a4b387aba6a4a6b1a2b5a9a2a3a2aba6a4a8aab7b3a6e9a5a2"><span class="__cf_email__" data-cfemail="14777b7a6075776054787577756271667a7170717875777b796460753a7671">[email&#160;protected]</span></a></div>
+      </div>
+      <div class="id-card-row">
+        <div class="id-card-key">Antwortfrist</div>
+        <div class="id-card-val">Maximal 30 Tage (DSGVO-Frist)</div>
+      </div>
+      <div class="id-card-row">
+        <div class="id-card-key">DSB (Beschwerde)</div>
+        <div class="id-card-val"><a href="https://www.autoriteprotectiondonnees.be" target="_blank">autoriteprotectiondonnees.be</a></div>
+      </div>
+    </div>
+    <p style="margin-top:16px; font-size:0.82rem; color:var(--text-light);">Letzte Aktualisierung: Februar 2026</p>
+  </div>
+
+</main>
+
+<footer>
+  <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
+  <div class="footer-links">
+    <a href="/de/mentions-legales/">Impressum</a>
+    <a href="/de/mentions-legales/#rgpd">RGPD</a>
+    <a href="/de/mentions-legales/#cookies">Cookies</a>
+    <a href="#">Kontakt</a>
+  </div>
+</footer>
+
+<!-- ── BANNIÈRE COOKIES APD-CONFORME ── -->
+<style>
+#cookieBanner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;
+    overflow: visible;background:#0D1B2A;border-top:3px solid #1A7A8A;padding:16px 30px 14px;box-shadow:0 -4px 24px rgba(0,0,0,0.35);font-family:'Inter',sans-serif;}
+#cookieBanner .cb-top{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+#cookieBanner .cb-text{font-size:0.82rem;color:rgba(255,255,255,0.75);line-height:1.6;flex:1;min-width:200px;margin:0;}
+#cookieBanner .cb-text a{color:#22A3B8;text-decoration:none;}
+#cookieBanner .cb-cats{display:flex;gap:20px;flex-wrap:wrap;margin:10px 0 12px 0;padding-left:2px;}
+#cookieBanner .cb-cat{display:flex;align-items:center;gap:8px;cursor:pointer;}
+#cookieBanner .cb-cat label{font-size:0.8rem;color:rgba(255,255,255,0.8);cursor:pointer;user-select:none;}
+#cookieBanner .cb-cat input[type=checkbox]{width:16px;height:16px;accent-color:#1A7A8A;cursor:pointer;}
+#cookieBanner .cb-cat.required label{color:rgba(255,255,255,0.45);}
+#cookieBanner .cb-btns{display:flex;gap:10px;flex-shrink:0;align-items:flex-start;}
+#cookieBanner .cb-btn{padding:9px 18px;border-radius:7px;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;border:none;transition:all 0.2s;}
+#cookieBanner .cb-btn-all{background:#1A7A8A;color:#fff;}
+#cookieBanner .cb-btn-all:hover{background:#22A3B8;}
+#cookieBanner .cb-btn-save{background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.25)!important;}
+#cookieBanner .cb-btn-save:hover{color:#fff;border-color:rgba(255,255,255,0.5)!important;}
+#cookieBanner .cb-btn-refuse{background:transparent;color:rgba(255,255,255,0.5);font-size:0.75rem;font-weight:500;padding:4px 0;text-decoration:underline;cursor:pointer;}
+#cookieBanner .cb-btn-refuse:hover{color:rgba(255,255,255,0.8);}
+</style>
+<div id="cookieBanner">
+  <div class="cb-top">
+    <p class="cb-text">
+      🍪 <strong style="color:#fff;">Diese Website verwendet Cookies.</strong>
+      Notwendige Cookies gewährleisten die Funktionalität der Website. Andere erfordern Ihre Zustimmung.
+      <a href="/de/mentions-legales/">Cookie-Richtlinie</a>
+    </p>
+    <div class="cb-btns">
+      <button class="cb-btn cb-btn-all" onclick="cbAcceptAll()">Alle akzeptieren</button>
+      <button class="cb-btn cb-btn-save" onclick="cbSaveChoices()">Meine Auswahl speichern</button>
+    </div>
+  </div>
+  <div class="cb-cats">
+    <div class="cb-cat required">
+      <input type="checkbox" id="cb_necessary" checked disabled>
+      <label for="cb_necessary">✅ Notwendig <span style="font-size:0.7rem;opacity:0.6">(immer aktiv)</span></label>
+    </div>
+    <div class="cb-cat">
+      <input type="checkbox" id="cb_analytics">
+      <label for="cb_analytics">📊 Analytisch <span style="font-size:0.7rem;opacity:0.6">(Google Analytics)</span></label>
+    </div>
+    <div class="cb-cat">
+      <input type="checkbox" id="cb_ads">
+      <label for="cb_ads">📢 Werbung <span style="font-size:0.7rem;opacity:0.6">(Google AdSense)</span></label>
+    </div>
+    <button class="cb-btn-refuse" onclick="cbRefuseAll()">Alle ablehnen</button>
+  </div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(function(){
+  var GA_ID='G-WNHZDLVPEL';
+  function getCk(n){return(document.cookie.split(';').map(function(c){return c.trim();}).find(function(c){return c.startsWith(n+'=');})+'=').split('=')[1]||null;}
+  function setCk(n,v){document.cookie=n+'='+v+';max-age=31536000;path=/;SameSite=Lax';}
+  function hideBanner(){document.getElementById('cookieBanner').style.display='none';}
+
+  function loadGA(){
+    if(window._gaLoaded)return;window._gaLoaded=true;
+    var s=document.createElement('script');s.async=true;
+    s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag=gtag;
+    gtag('js',new Date());gtag('config',GA_ID,{anonymize_ip:true});
+  }
+
+  // AdSense chargé via la balise head standard — on bloque via consent_mode
+  function updateConsentMode(analytics,ads){
+    if(window.gtag){
+      window.gtag('consent','update',{
+        analytics_storage: analytics?'granted':'denied',
+        ad_storage: ads?'granted':'denied',
+        ad_user_data: ads?'granted':'denied',
+        ad_personalization: ads?'granted':'denied'
+      });
+    }
+  }
+
+  window.cbAcceptAll=function(){
+    setCk('cb_analytics','1');setCk('cb_ads','1');
+    document.getElementById('cb_analytics').checked=true;
+    document.getElementById('cb_ads').checked=true;
+    loadGA();updateConsentMode(true,true);hideBanner();
+  };
+  window.cbRefuseAll=function(){
+    setCk('cb_analytics','0');setCk('cb_ads','0');
+    updateConsentMode(false,false);hideBanner();
+  };
+  window.cbSaveChoices=function(){
+    var a=document.getElementById('cb_analytics').checked;
+    var d=document.getElementById('cb_ads').checked;
+    setCk('cb_ana

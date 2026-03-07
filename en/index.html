@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Caverne de la Compta — Free Tax Simulators &amp; PCMN in Belgium</title>
+  <meta name="description" content="Free simulators for Belgian accountants: registration duties, compound interest, co-contractor withholding, PCMN chart of accounts, Quick Tax Memo 2026.">
+  <meta name="keywords" content="tax simulator belgium, registration duties, PCMN, accounting belgium, compound interest, co-contractor withholding, director rent reclassification, mortgage credit belgium, tax memo 2026">
+  <meta name="author" content="La Caverne de la Compta">
+  <meta name="robots" content="index, follow">
+  <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/">
+  <link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/">
+  <link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/">
+  <link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/">
+  <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/">
+  <link rel="canonical" href="https://lacavernedelacompta.be/en/">
+  <!-- Open Graph -->
+  <meta property="og:title" content="La Caverne de la Compta — Free Tax Simulators &amp; PCMN in Belgium">
+  <meta property="og:image" content="https://lacavernedelacompta.be/logo.png">
+
+  <meta property="og:description" content="Free simulators for Belgian accountants: registration duties, compound interest, co-contractor withholding, PCMN chart of accounts, Quick Tax Memo 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lacavernedelacompta.be/en/">
+  <meta property="og:site_name" content="La Caverne de la Compta">
+  <meta property="og:locale" content="en_BE">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0D1B2A;
+    --navy-mid: #1B2E44;
+    --navy-light: #243B55;
+    --teal: #1A7A8A;
+    --teal-light: #22A3B8;
+    --teal-pale: #E8F6F8;
+    --white: #FFFFFF;
+    --off-white: #F4F7FA;
+    --text-dark: #1A2535;
+    --text-mid: #4A6279;
+    --text-light: #8A9BB0;
+    --border: #DDE5EF;
+    --shadow: rgba(13, 27, 42, 0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--off-white);
+    color: var(--text-dark);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── Top bar ── */
+  .topbar {
+    background: var(--navy);
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .topbar-left { font-size: 0.75rem; color: var(--text-light); letter-spacing: 0.05em; }
+  .topbar-right { display: flex; gap: 20px; }
+  .topbar-right a { font-size: 0.75rem; color: var(--text-light); text-decoration: none; transition: color 0.2s; }
+  .topbar-right a:hover { color: var(--white); }
+
+  /* ── Navbar ── */
+  nav {
+    background: #ffffff;
+    border-bottom: 2px solid #22A3B8;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    box-shadow: 0 2px 12px rgba(13, 27, 42, 0.08);
+    overflow: visible;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+
+  .logo-icon {
+    width: 40px; height: 40px;
+    background: linear-gradient(135deg, var(--teal), var(--navy));
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; flex-shrink: 0;
+  }
+
+  .logo-text { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--navy); line-height: 1.2; }
+  .logo-sub { font-size: 0.65rem; font-weight: 500; color: var(--teal); letter-spacing: 0.15em; text-transform: uppercase; }
+
+  .nav-links{display:flex;gap:4px;list-style:none;align-items:center;}
+  .nav-links>li{list-style:none;}
+  .nav-links a{padding:8px 16px;font-size:0.85rem;font-weight:500;color:var(--text-mid);text-decoration:none;border-radius:6px;transition:all 0.2s;display:block;white-space:nowrap;}
+  .nav-links a:hover{background:var(--teal-pale);color:var(--teal);}
+  .nav-links a.active{background:var(--teal-pale);color:var(--teal);font-weight:600;}
+  .nav-cta{background:var(--teal)!important;color:var(--white)!important;font-weight:600!important;}
+  .nav-cta:hover{background:var(--teal-light)!important;color:var(--white)!important;}
+  /* Dropdown — le parent li DOIT avoir position:relative */
+  .dd-wrap{position:relative;}
+  .dd-btn{display:flex;align-items:center;gap:6px;padding:8px 16px;font-size:0.85rem;font-weight:500;color:var(--text-mid);background:none;border:none;cursor:pointer;border-radius:6px;font-family:'Inter',sans-serif;transition:all 0.2s;white-space:nowrap;}
+  .dd-btn:hover,.dd-wrap.dd-open .dd-btn{background:var(--teal-pale);color:var(--teal);}
+  .dd-chevron{font-size:0.55rem;transition:transform 0.2s;display:inline-block;margin-top:1px;}
+  .dd-wrap.dd-open .dd-chevron{transform:rotate(180deg);}
+  .dd-menu{
+    display:none;
+    position:absolute;
+    top:100%;
+    right:0;
+    left:auto;
+    margin-top:6px;
+    background:var(--white);
+    border:1px solid var(--border);
+    border-radius:12px;
+    box-shadow:0 8px 32px rgba(13,27,42,0.18);
+    min-width:240px;
+    z-index:9999;
+    overflow:visible;
+  }
+  .dd-wrap.dd-open .dd-menu{display:block;animation:ddFade 0.15s ease;}
+  @keyframes ddFade{from{opacity:0;transform:translateY(-4px);}to{opacity:1;transform:translateY(0);}}
+  .dd-menu a{display:flex;align-items:center;gap:12px;padding:12px 18px;font-size:0.84rem;font-weight:500;color:var(--text-dark);text-decoration:none;border-bottom:1px solid var(--border);transition:background 0.15s;border-radius:0;}
+  .dd-menu a:last-child{border-bottom:none;}
+  .dd-menu a:hover{background:var(--teal-pale);color:var(--teal);}
+  .dd-icon{font-size:16px;width:22px;text-align:center;flex-shrink:0;}
+  .dd-new{font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:2px 7px;border-radius:8px;background:#EBF7ED;color:#2E7D32;margin-left:auto;flex-shrink:0;}
+  
+
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1A5C6E 100%);
+    color: var(--white);
+    padding: 80px 40px 100px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal-pale);
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero h1 span { color: var(--teal-light); }
+
+  .hero p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.7);
+    max-width: 520px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* ── Search ── */
+  .search-wrap { max-width: 580px; margin: 0 auto; position: relative; }
+
+  .search-box {
+    display: flex;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+  }
+
+  .search-box:focus-within { border-color: var(--teal-light); }
+
+  .search-icon-inner { padding: 0 18px; display: flex; align-items: center; color: var(--text-light); font-size: 17px; flex-shrink: 0; }
+
+  .search-input { flex: 1; border: none; outline: none; padding: 16px 0; font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--text-dark); background: transparent; }
+  .search-input::placeholder { color: var(--text-light); }
+
+  .search-btn {
+    margin: 6px; padding: 10px 28px;
+    background: linear-gradient(135deg, var(--teal), #155F6A);
+    border: none; border-radius: 7px;
+    color: var(--white); font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.85rem;
+    cursor: pointer; letter-spacing: 0.05em; transition: all 0.2s; white-space: nowrap;
+  }
+  .search-btn:hover { background: linear-gradient(135deg, var(--teal-light), var(--teal)); box-shadow: 0 4px 16px rgba(26,122,138,0.4); }
+
+  .search-suggestions {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0; right: 0;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    overflow: hidden;
+    z-index: 50;
+    border: 1px solid var(--border);
+  }
+
+  .sug-item { padding: 13px 20px; display: flex; align-items: center; gap: 12px; cursor: pointer; font-size: 0.88rem; color: var(--text-dark); border-bottom: 1px solid var(--border); transition: background 0.15s; }
+  .sug-item:last-child { border-bottom: none; }
+  .sug-item:hover { background: var(--teal-pale); }
+  .sug-desc { font-size: 0.75rem; color: var(--text-light); margin-left: auto; }
+
+  /* ── Stats ── */
+  .stats {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+
+  .stat-item { text-align: center; }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--teal); }
+  .stat-label { font-size: 0.72rem; color: var(--text-light); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; margin-top: 2px; }
+
+  /* ── Main ── */
+  .main { max-width: 1150px; margin: 0 auto; padding: 60px 30px 80px; }
+
+  .section-header { text-align: center; margin-bottom: 48px; }
+  .section-eyebrow { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+  .section-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; color: var(--navy); }
+  .section-header p { font-size: 0.95rem; color: var(--text-mid); margin-top: 8px; font-weight: 300; }
+
+  /* ── Cards ── */
+  .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 24px; }
+
+  .card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 36px 30px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 12px var(--shadow);
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s, border-color 0.3s;
+  }
+
+  .card.visible { opacity: 1; transform: translateY(0); }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--teal), var(--teal-light));
+    border-radius: 12px 12px 0 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+
+  .card:hover { box-shadow: 0 12px 40px rgba(13,27,42,0.15); border-color: var(--teal-light); transform: translateY(-4px); }
+  .card:hover::before { transform: scaleX(1); }
+
+  .card-icon-wrap {
+    width: 56px; height: 56px;
+    background: var(--teal-pale);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .card:hover .card-icon-wrap { background: linear-gradient(135deg, var(--teal), var(--teal-light)); transform: scale(1.05); }
+
+  .card-category { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+  .card-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; line-height: 1.3; }
+  .card-desc { font-size: 0.85rem; color: var(--text-mid); line-height: 1.75; }
+
+  .card-footer { margin-top: 24px; display: flex; align-items: center; justify-content: space-between; }
+  .card-link { font-size: 0.82rem; font-weight: 600; color: var(--teal); letter-spacing: 0.05em; display: flex; align-items: center; gap: 6px; transition: gap 0.2s; }
+  .card:hover .card-link { gap: 10px; }
+
+  .badge-free { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; background: #EBF7ED; color: #2E7D32; }
+
+  /* ── Info strip ── */
+  .info-strip {
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 16px;
+    padding: 50px;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .info-strip h3 { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 700; margin-bottom: 14px; line-height: 1.3; }
+  .info-strip h3 span { color: var(--teal-light); }
+  .info-strip p { font-size: 0.9rem; color: rgba(255,255,255,0.65); line-height: 1.8; font-weight: 300; }
+
+  .info-features { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .info-features li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.88rem; color: rgba(255,255,255,0.8); }
+  .check { width: 22px; height: 22px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0; margin-top: 1px; }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.8rem;
+  }
+
+  footer a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+  footer a:hover { color: var(--white); }
+  .footer-links { display: flex; gap: 20px; }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hero { padding: 60px 20px 80px; }
+    .stats { gap: 30px; padding: 20px; }
+    .main { padding: 40px 20px 60px; }
+    .info-strip { grid-template-columns: 1fr; padding: 36px 28px; }
+    footer { flex-direction: column; text-align: center; }
+    .topbar { display: none; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "La Caverne de la Compta",
+  "url": "https://lacavernedelacompta.be",
+  "description": "Free tax and accounting simulators for Belgian self-employed and accountants.",
+  "inLanguage": "en-BE",
+  "publisher": {
+    "@type": "Organization",
+    "name": "La Caverne de la Compta",
+    "url": "https://lacavernedelacompta.be"
+  },
+  "hasPart": [
+    {"@type": "WebApplication", "name": "Simulateur Droits d'Enregistrement", "url": "https://lacavernedelacompta.be/en/simulateur-immobilier/", "applicationCategory": "FinanceApplication"},
+    {"@type": "WebApplication", "name": "Simulateur de Crédit Hypothécaire", "url": "https://lacavernedelacompta.be/en/simulateur-credit/", "applicationCategory": "FinanceApplication"},
+    {"@type": "WebApplication", "name": "Simulateur Requalification Loyer Dirigeant", "url": "https://lacavernedelacompta.be/en/simulateur-requalification-loyer/", "applicationCategory": "FinanceApplication"},
+    {"@type": "WebApplication", "name": "Plan Comptable PCMN", "url": "https://lacavernedelacompta.be/en/pcmn-complet-societe-et-asbl/", "applicationCategory": "BusinessApplication"},
+    {"@type": "WebApplication", "name": "Quick-Mémo Fiscal", "url": "https://lacavernedelacompta.be/en/quick-memento-fiscal/", "applicationCategory": "FinanceApplication"}
+  ]
+}
+</script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<!-- CACHE-BUST-v8-en/index.html -->
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+<a href="/en/" class="logo" style="text-decoration:none;display:flex;align-items:center;">
+    <svg width="148" height="38" viewBox="0 0 148 38" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <defs>
+        <linearGradient id="hGn" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0D1B2A"/>
+          <stop offset="100%" style="stop-color:#1A3A5C"/>
+        </linearGradient>
+      </defs>
+      <!-- Hexagone -->
+      <polygon points="19,2 31,9 31,23 19,30 7,23 7,9" fill="url(#hGn)"/>
+      <!-- Reflet top -->
+      <polygon points="19,2 31,9 25,9 19,5 13,9 7,9" fill="rgba(255,255,255,.07)"/>
+      <!-- Bras balance -->
+      <line x1="9" y1="15" x2="29" y2="15" stroke="rgba(255,255,255,.5)" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Tige -->
+      <rect x="17.5" y="15" width="2.5" height="11" rx="1.2" fill="rgba(255,255,255,.35)"/>
+      <!-- Pivot gold -->
+      <circle cx="18.8" cy="15" r="3.2" fill="#C9A84C"/>
+      <circle cx="18.8" cy="15" r="1.4" fill="white" opacity=".9"/>
+      <!-- Socle -->
+      <rect x="13" y="27" width="12" height="2.5" rx="1.2" fill="rgba(255,255,255,.2)"/>
+      <!-- Plateau gauche -->
+      <line x1="9" y1="15" x2="7" y2="21.5" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="7" cy="24" rx="6.5" ry="2.5" fill="#1A7A8A"/>
+      <!-- Plateau droit -->
+      <line x1="29" y1="15" x2="31" y2="20" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="31" cy="22.5" rx="6.5" ry="2.5" fill="#22A3B8"/>
+      <!-- Étoile -->
+      <circle cx="27" cy="7" r="2.5" fill="#C9A84C" opacity=".85"/>
+      <!-- Texte -->
+      <text x="42" y="15.5" font-family="'Playfair Display',serif" font-size="12.5" font-weight="900" fill="#0D1B2A" letter-spacing="-.2">La Caverne</text>
+      <rect x="42" y="18.5" width="104" height="1" rx=".5" fill="#DDE5EF"/>
+      <rect x="42" y="18.5" width="18" height="1" rx=".5" fill="#C9A84C"/>
+      <text x="42" y="30" font-family="'Playfair Display',serif" font-size="10.5" font-weight="700" font-style="italic" fill="#1A7A8A" letter-spacing="-.1">de la Compta</text>
+    </svg>
+  </a>
+        <ul class="nav-links">
+    <li><a href="https://lacavernedelacompta.be/en/">🏠 Home</a></li>
+    <li class="dd-wrap" id="ddWrap">
+      <button class="dd-btn" onclick="toggleDD(event)">🧰 Our tools <span class="dd-chevron">▼</span></button>
+      <div class="dd-menu">
+        <a href="/en/simulateur-immobilier/"><span class="dd-icon">🏠</span>Property Simulator</a>
+        <a href="/en/simulateur-credit/"><span class="dd-icon">💳</span>Loan Simulator</a>
+        <a href="/en/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Rent Reclassification<span class="dd-new">Nouveau</span></a>
+        <a href="/en/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Chart of Accounts PCMN</a>
+        <a href="/en/simulateur-interets-composes/"><span class="dd-icon">📈</span>Compound Interest</a>
+        <a href="/en/simulateur-retenue/"><span class="dd-icon">🧾</span>Invoice Withholding</a>
+        <a href="/en/quick-memento-fiscal/"><span class="dd-icon">📌</span>Quick Tax Memo</a>
+        <a href="/en/remboursement-frais/"><span class="dd-icon">🚗</span>Mileage Allowance</a>
+      </div>
+    </li>
+  </ul>
+  <!-- ══ SWITCHER LANGUE ══ -->
+  <div id="langSwitcher" style="display:flex;align-items:center;gap:2px;background:#F4F7FA;border:1px solid #DDE5EF;border-radius:8px;padding:3px;margin-left:16px;flex-shrink:0;">
+    <a href="https://lacavernedelacompta.be/fr/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇫🇷 FR</a>
+    <a href="https://lacavernedelacompta.be/nl/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇧🇪 NL</a>
+    <a href="https://lacavernedelacompta.be/en/" aria-current="page" style="display:inline-flex;align-items:center;gap:3px;font-weight:700;color:#fff;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;background:#1A7A8A;white-space:nowrap;">🇬🇧 EN</a>
+    <a href="https://lacavernedelacompta.be/de/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇩🇪 DE</a>
+  </div>
+  <!-- ══════════════════════ -->
+
+  
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-badge">✦ Free professional tools</div>
+  <h1>Your accounting &amp; financial tools <span>in one place</span></h1>
+  <p>Loan simulators, PCMN chart of accounts, gross/net salary calculation — accurate, fast and free.</p>
+
+  <div class="search-wrap">
+    <div class="search-box">
+      <div class="search-icon-inner">🔍</div>
+      <input class="search-input" type="text" id="searchInput" placeholder="Search for a simulator, a PCMN account..." autocomplete="off">
+      <button class="search-btn">Search</button>
+    </div>
+    <div class="search-suggestions" id="suggestions">
+      <div class="sug-item" onclick="location.href='/en/simulateur-requalification-loyer/'">
+        <span>🏢</span><span style="font-weight:500">Director Rent Reclassification</span>
+        <span class="sug-desc">Art. 32 ITC 92 — rent ceiling</span>
+      </div>
+      <div class="sug-item" onclick="location.href='/en/simulateur-credit/'">
+        <span>💳</span><span style="font-weight:500">Loan Simulator</span>
+        <span class="sug-desc">Amortisation schedule, monthly payments</span>
+      </div>
+      <div class="sug-item" onclick="location.href='/en/simulateur-immobilier/'">
+        <span>🏠</span><span style="font-weight:500">Real Estate Simulator</span>
+        <span class="sug-desc">Frais d'achat & crédit hypothécaire</span>
+      </div>
+      <div class="sug-item" onclick="location.href='/en/pcmn-complet-societe-et-asbl/'">
+        <span>📋</span><span style="font-weight:500">PCMN Chart of Accounts</span>
+        <span class="sug-desc">Sociétés & ASBL — 1 025 comptes</span>
+      </div>
+      <div class="sug-item" onclick="location.href='/en/simulateur-interets-composes/'">
+        <span>📈</span><span style="font-weight:500">Compound Interest Simulator</span>
+        <span class="sug-desc">Épargne & rendement</span>
+      </div>
+      <div class="sug-item" onclick="location.href='/en/simulateur-retenue/'">
+        <span>🧾</span><span style="font-weight:500">Invoice Withholding</span>
+        <span class="sug-desc">Co-contractant & travaux</span>
+      </div>
+      <div class="sug-item" onclick="location.href='/en/quick-memento-fiscal/'">
+        <span>📌</span><span style="font-weight:500">Tax Quick-Memo</span>
+        <span class="sug-desc">Rates, BIK, investment deductions 2013-2027</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="stat-item"><div class="stat-num">7</div><div class="stat-label">Tools</div></div>
+  <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Free</div></div>
+  <div class="stat-item"><div class="stat-num">🇧🇪</div><div class="stat-label">Belgium-specific</div></div>
+  <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">Available</div></div>
+</div>
+
+<!-- Main content -->
+<main class="main">
+
+  <div class="section-header">
+    <span class="section-eyebrow">Our tools</span>
+    <h2 id="simulateurs">Choose your simulator</h2>
+    <p>Click on a tool to start your simulation</p>
+  </div>
+
+  <div class="cards-grid">
+
+    <a class="card" href="/en/simulateur-immobilier/">
+      <div class="card-icon-wrap">🏠</div>
+      <div class="card-category">Real Estate · Financing</div>
+      <h3 class="card-title">Real Estate Simulator</h3>
+      <p class="card-desc">Calculate purchase costs, registration duties, notary fees and mortgage deed costs — accurate to the cent, updated 2026.</p>
+      <div class="card-footer">
+        <span class="card-link">Go to simulator <span>→</span></span>
+        <span class="badge-free">Free</span>
+      </div>
+    </a>
+
+    <a class="card" href="/en/pcmn-complet-societe-et-asbl/">
+      <div class="card-icon-wrap">📋</div>
+      <div class="card-category">Accounting</div>
+      <h3 class="card-title">PCMN Chart of Accounts</h3>
+      <p class="card-desc">Browse the complete Belgian Minimum Normalised Chart of Accounts — companies and NPOs. 1,025 sub-accounts, classes 1 to 7, compliant with ITAA 2021 &amp; CBN.</p>
+      <div class="card-footer">
+        <span class="card-link">Browse the PCMN <span>→</span></span>
+        <span class="badge-free">Free</span>
+      </div>
+    </a>
+
+    <a class="card" href="/en/simulateur-interets-composes/">
+      <div class="card-icon-wrap">📈</div>
+      <div class="card-category">Savings · Investment</div>
+      <h3 class="card-title">Compound Interest Simulator</h3>
+      <p class="card-desc">Calculate the growth of your savings through compound interest. Visualise the effect of time and rate on your capital with an interactive chart.</p>
+      <div class="card-footer">
+        <span class="card-link">Go to simulator <span>→</span></span>
+        <span class="badge-free">Free</span>
+      </div>
+    </a>
+
+    <a class="card" href="/en/simulateur-retenue/">
+      <div class="card-icon-wrap">🧾</div>
+      <div class="card-category">Taxation · Invoicing</div>
+      <h3 class="card-title">Invoice Withholding</h3>
+      <p class="card-desc">Calculate the mandatory withholding on invoices for contractors and subcontractors in Belgium. Co-contractor, real estate works and fiscal/social debts.</p>
+      <div class="card-footer">
+        <span class="card-link">Go to simulator <span>→</span></span>
+        <span class="badge-free">Free</span>
+      </div>
+    </a>
+
+    <a class="card" href="/en/simulateur-credit/">
+      <div class="card-icon-wrap">💳</div>
+      <div class="card-category">Loan · Financing</div>
+      <h3 class="card-title">Loan Simulator</h3>
+      <p class="card-desc">Calculate your monthly payments and view your full amortisation schedule — constant annuity or constant capital, monthly, quarterly or annual frequency.</p>
+      <div class="card-footer">
+        <span class="card-link">Go to simulator <span>→</span></span>
+        <span class="badge-free">Free</span>
+      </div>
+    </a>
+
+    <a class="card" href="/en/simulateur-requalification-loyer/">
+      <div class="card-icon-wrap">🏢</div>
+      <div class="card-category">Director Taxation · Real Estate</div>
+      <h3 class="card-title">Director Rent Reclassification</h3>
+      <p class="card-desc">Calculate the risk of fiscal reclassification of rent paid by your company to yourself (art. 32 ITC 92). Joint ownership, mixed use, furnished, pro-rata — full analysis.</p>
+      <div class="card-footer">
+        <span class="card-link">Go to simulator <span>→</span></span>
+        <span class="badge-free">Free</span>
+      </div>
+    </a>
+
+    <a class="card" href="/en/quick-memento-fiscal/">
+      <div class="card-icon-wrap">📌</div>
+      <div class="card-category">Taxation · Reference</div>
+      <h3 class="card-title">Tax Quick-Memo</h3>
+      <p class="card-desc">All key figures of Belgian taxation at a glance: C/C rates, BIK, km allowances, investment deductions, notional interest, fuel prices — tax years 2013 to 2027.</p>
+      <div class="card-footer">
+        <span class="card-link">View the memo <span>→</span></span>
+        <span class="badge-free">Free</span>
+      </div>
+    </a>
+
+    <a class="card" href="/en/remboursement-frais/">
+      <div class="card-icon-wrap">🚗</div>
+      <div class="card-category">Tax · Mobility</div>
+      <h3 class="card-title">Mileage Allowance</h3>
+      <p class="card-desc">Calculate your mileage allowance and generate your expense report as PDF. BOSA rates 2024–2026, automatic distance calculation via OpenStreetMap.</p>
+      <div class="card-footer">
+        <span class="card-link">Generate my expense report <span>→</span></span>
+        <span class="badge-free">Free</span>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Info strip -->
+  <div class="info-strip">
+    <div>
+      <h3>Why <span>La Caverne de la Compta</span>?</h3>
+      <p>Tools designed for Belgian self-employed, accountants and students. Simple, reliable and always up to date with current legislation.</p>
+    </div>
+    <ul class="info-features">
+      <li><div class="check">✓</div><span>Calculations based on current Belgian legislation</span></li>
+      <li><div class="check">✓</div><span>Instant results, no registration required</span></li>
+      <li><div class="check">✓</div><span>Clear and intuitive interface for all user profiles</span></li>
+      <li><div class="check">✓</div><span>Accessible on mobile, tablet and computer</span></li>
+    </ul>
+  </div>
+
+</main>
+
+<!-- Footer -->
+<!-- ── DISCLAIMER ── -->
+<div style="background:#F4F7FA;border-top:1px solid #DDE5EF;padding:18px 40px;font-size:0.75rem;color:#8A9BB0;line-height:1.7;font-family:'Inter',sans-serif;">
+  <div style="max-width:1150px;margin:0 auto;">
+    <strong style="color:#4A6279;">⚠️ Disclaimer — Indicative value only:</strong>
+    The results obtained via the tools and simulators on this site have <strong style="color:#4A6279;">indicative value only</strong> and have no legal, fiscal or accounting value.
+    Calculations are based on the legal provisions in force at the date of their last update and are subject to change.
+    <strong style="color:#4A6279;">La Caverne de la Compta</strong> makes every effort to keep this data up to date but cannot guarantee its accuracy or completeness.
+    La Caverne de la Compta cannot under any circumstances be held liable for direct or indirect damages resulting from the use of the information obtained.
+    The user is solely responsible for decisions made based on simulation results.
+    <strong style="color:#4A6279;">Consult a certified accountant, tax adviser or notary</strong> before any decision. <strong style="color:#4A6279;">La Caverne de la Compta is not a certified financial, tax or legal adviser</strong> and the published information does not constitute personalised advice.
+    — <a href="mentions-legales.html#disclaimer" style="color:#1A7A8A;text-decoration:none;">Full legal notices</a>
+  </div>
+</div>
+<footer>
+  <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
+  <div class="footer-links">
+    <a href="/en/mentions-legales/">Legal notice</a>
+    <a href="/en/mentions-legales/#rgpd">RGPD</a>
+    <a href="/en/mentions-legales/#cookies">Cookies</a>
+    <a href="#">Contact</a>
+  </div>
+</footer>
+
+<script>
+  // Search
+  const input = document.getElementById('searchInput');
+  const suggestions = document.getElementById('suggestions');
+
+  input.addEventListener('input', () => {
+    suggestions.style.display = input.value.trim().length > 0 ? 'block' : 'none';
+  });
+  input.addEventListener('blur', () => setTimeout(() => suggestions.style.display = 'none', 200));
+
+  function goTo(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.style.borderColor = '#22A3B8';
+      el.style.boxShadow = '0 0 0 4px rgba(34,163,184,0.15)';
+      setTimeout(() => { el.style.borderColor = ''; el.style.boxShadow = ''; }, 1600);
+    }
+  }
+
+  // Card animations
+  const cards = document.querySelectorAll('.card');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const idx = [...cards].indexOf(entry.target);
+        setTimeout(() => entry.target.classList.add('visible'), idx * 120);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  cards.forEach(c => obs.observe(c));
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+</script>
+
+<!-- ── BANNIÈRE COOKIES APD-CONFORME ── -->
+<style>
+#cookieBanner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;
+    overflow: visible;background:#0D1B2A;border-top:3px solid #1A7A8A;padding:16px 30px 14px;box-shadow:0 -4px 24px rgba(0,0,0,0.35);font-family:'Inter',sans-serif;}
+#cookieBanner .cb-top{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+#cookieBanner .cb-text{font-size:0.82rem;color:rgba(255,255,255,0.75);line-height:1.6;flex:1;min-width:200px;margin:0;}
+#cookieBanner .cb-text a{color:#22A3B8;text-decoration:none;}
+#cookieBanner .cb-cats{display:flex;gap:20px;flex-wrap:wrap;margin:10px 0 12px 0;padding-left:2px;}
+#cookieBanner .cb-cat{display:flex;align-items:center;gap:8px;cursor:pointer;}
+#cookieBanner .cb-cat label{font-size:0.8rem;color:rgba(255,255,255,0.8);cursor:pointer;user-select:none;}
+#cookieBanner .cb-cat input[type=checkbox]{width:16px;height:16px;accent-color:#1A7A8A;cursor:pointer;}
+#cookieBanner .cb-cat.required label{color:rgba(255,255,255,0.45);}
+#cookieBanner .cb-btns{display:flex;gap:10px;flex-shrink:0;align-items:flex-start;}
+#cookieBanner .cb-btn{padding:9px 18px;border-radius:7px;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;border:none;transition:all 0.2s;}
+#cookieBanner .cb-btn-all{background:#1A7A8A;color:#fff;}
+#cookieBanner .cb-btn-all:hover{background:#22A3B8;}
+#cookieBanner .cb-btn-save{background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.25)!important;}
+#cookieBanner .cb-btn-save:hover{color:#fff;border-color:rgba(255,255,255,0.5)!important;}
+#cookieBanner .cb-btn-refuse{background:transparent;color:rgba(255,255,255,0.5);font-size:0.75rem;font-weight:500;padding:4px 0;text-decoration:underline;cursor:pointer;}
+#cookieBanner .cb-btn-refuse:hover{color:rgba(255,255,255,0.8);}
+</style>
+<div id="cookieBanner">
+  <div class="cb-top">
+    <p class="cb-text">
+      🍪 <strong style="color:#fff;">This website uses cookies.</strong>
+      Essential cookies ensure the website works properly. Others require your consent.
+      <a href="/en/mentions-legales/">Cookie Policy</a>
+    </p>
+    <div class="cb-btns">
+      <button class="cb-btn cb-btn-all" onclick="cbAcceptAll()">Accept all</button>
+      <button class="cb-btn cb-btn-save" onclick="cbSaveChoices()">Save my choices</button>
+    </div>
+  </div>
+  <div class="cb-cats">
+    <div class="cb-cat required">
+      <input type="checkbox" id="cb_necessary" checked disabled>
+      <label for="cb_necessary">✅ Essential <span style="font-size:0.7rem;opacity:0.6">(always active)</span></label>
+    </div>
+    <div class="cb-cat">
+      <input type="checkbox" id="cb_analytics">
+      <label for="cb_analytics">📊 Analytics <span style="font-size:0.7rem;opacity:0.6">(Google Analytics)</span></label>
+    </div>
+    <div class="cb-cat">
+      <input type="checkbox" id="cb_ads">
+      <label for="cb_ads">📢 Advertising <span style="font-size:0.7rem;opacity:0.6">(Google AdSense)</span></label>
+    </div>
+    <button class="cb-btn-refuse" onclick="cbRefuseAll()">Refuse all</button>
+  </div>
+</div>
+<script>
+(function(){
+  var GA_ID='G-WNHZDLVPEL';
+  function getCk(n){return(document.cookie.split(';').map(function(c){return c.trim();}).find(function(c){return c.startsWith(n+'=');})+'=').split('=')[1]||null;}
+  function setCk(n,v){document.cookie=n+'='+v+';max-age=31536000;path=/;SameSite=Lax';}
+  function hideBanner(){document.getElementById('cookieBanner').style.display='none';}
+
+  function loadGA(){
+    if(window._gaLoaded)return;window._gaLoaded=true;
+    var s=document.createElement('script');s.async=true;
+    s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag=gtag;
+    gtag('js',new Date());gtag('config',GA_ID,{anonymize_ip:true});
+  }
+
+  // AdSense chargé via la balise head standard — on bloque via consent_mode
+  function updateConsentMode(analytics,ads){
+    if(window.gtag){
+      window.gtag('consent','update',{
+        analytics_storage: analytics?'granted':'denied',
+        ad_storage: ads?'granted':'denied',
+        ad_user_data: ads?'granted':'denied',
+        ad_personalization: ads?'granted':'denied'
+      });
+    }
+  }
+
+  window.cbAcceptAll=function(){
+    setCk('cb_analytics','1');setCk('cb_ads','1');
+    document.getElementById('cb_analytics').checked=true;
+    document.getElementById('cb_ads').checked=true;
+    loadGA();updateConsentMode(true,true);hideBanner();
+  };
+  window.cbRefuseAll=function(){
+    setCk('cb_analytics','0');setCk('cb_ads','0');
+    updateConsentMode(false,false);hideBanner();
+  };
+  window.cbSaveChoices=function(){
+    var a=document.getElementById('cb_analytics').checked;
+    var d=document.getElementById('cb_ads').checked;
+    setCk('cb_analytics',a?'1':'0');setCk('cb_ads',d?'1':'0');
+    if(a)loadGA();
+    updateConsentMode(a,d);hideBanner();
+  };
+
+  // Init au chargement
+  var ca=getCk('cb_analytics'),cd=getCk('cb_ads');
+  if(ca===null){
+    // Pas encore de choix → afficher bannière
+    document.getElementById('cookieBanner').style.display='block';
+  } else {
+    // Choix déjà enregistré → appliquer
+    document.getElementById('cb_analytics').checked=(ca==='1');
+    document.getElementById('cb_ads').checked=(cd==='1');
+    if(ca==='1')loadGA();
+    updateConsentMode(ca==='1',cd==='1');
+  }
+})();
+</script>
+
+
+<script>
+function toggleDD(e){
+  e.stopPropagation();
+  document.getElementById('ddWrap').classList.toggle('dd-open');
+}
+document.addEventListener('click',function(e){
+  var w=document.getElementById('ddWrap');
+  if(w && !w.contains(e.target)) w.classList.remove('dd-open');
+});
+</script>
+</body>
+</html>

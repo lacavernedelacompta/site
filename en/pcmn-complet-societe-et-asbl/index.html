@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete Belgian Chart of Accounts PCMN — Companies & NPOs 2026</title>
+<meta name="description" content="Complete Belgian Chart of Accounts (PCMN) for companies and NPOs. 633 company accounts + 373 NPO accounts with legal references. Instant search.">
+<meta name="keywords" content="PCMN Belgium, Belgian chart of accounts, NPO chart of accounts, company chart of accounts Belgium, accounting accounts Belgium, PCMN Belgium">
+<meta name="author" content="La Caverne de la Compta">
+<meta name="robots" content="index, follow">
+  <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/">
+  <link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/pcmn-complet-societe-et-asbl/">
+  <link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/pcmn-complet-societe-et-asbl/">
+  <link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/pcmn-complet-societe-et-asbl/">
+  <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/">
+<link rel="canonical" href="https://lacavernedelacompta.be/en/pcmn-complet-societe-et-asbl/">
+<meta property="og:title" content="Complete Belgian Chart of Accounts PCMN — Companies & NPOs 2026">
+  <meta property="og:image" content="https://lacavernedelacompta.be/logo.png">
+
+<meta property="og:description" content="Complete Belgian Normalised Minimum Chart of Accounts (PCMN) for companies and NPOs in Belgium.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lacavernedelacompta.be/pcmn-complet-societe-et-asbl.html">
+<meta property="og:site_name" content="La Caverne de la Compta">
+<meta property="og:locale" content="en_BE">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0D1B2A; --navy-mid:#1B2E44; --teal:#1A7A8A; --teal-light:#22A3B8; --teal-pale:#E8F6F8;
+  --gold:#C9A84C; --white:#fff; --off:#F4F7FA; --border:#DDE5EF;
+  --text:#1A2535; --text-mid:#4A6279; --muted:#8A9BB0;
+  --shadow:rgba(13,27,42,.10); --green:#2E7D32; --green-pale:#EBF7ED;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--off);font-family:'DM Sans',sans-serif;color:var(--text);min-height:100vh;font-size:14px;}
+
+/* ── Topbar ── */
+.topbar{background:var(--navy);padding:7px 32px;display:flex;justify-content:space-between;align-items:center;}
+.topbar-left{font-size:.7rem;color:rgba(255,255,255,.4);letter-spacing:.04em;}
+.topbar-right{display:flex;gap:16px;}
+.topbar-right a{font-size:.7rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;}
+.topbar-right a:hover{color:white;}
+
+/* ── Nav ── */
+nav {
+    background: #ffffff;
+    border-bottom: 2px solid #22A3B8;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    box-shadow: 0 2px 12px rgba(13, 27, 42, 0.08);
+    overflow: visible;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+.nav-links{display:flex;gap:4px;list-style:none;align-items:center;}
+.nav-links a{padding:8px 14px;font-size:.83rem;font-weight:500;color:var(--text-mid);text-decoration:none;border-radius:6px;transition:all .15s;}
+.nav-links a:hover{background:var(--teal-pale);color:var(--teal);}
+.nav-links a.active{background:var(--teal-pale);color:var(--teal);font-weight:600;}
+.dd-wrap{position:relative;list-style:none;}
+.dd-btn{padding:8px 14px;font-size:.83rem;font-weight:500;color:var(--text-mid);background:none;border:none;cursor:pointer;border-radius:6px;display:flex;align-items:center;gap:6px;transition:all .15s;}
+.dd-btn:hover{background:var(--teal-pale);color:var(--teal);}
+.dd-chevron{font-size:.6rem;transition:transform .2s;}
+.dd-menu{display:none;position:absolute;top:calc(100% + 4px);right:0;left:auto;background:white;border:1px solid var(--border);border-radius:12px;padding:6px;box-shadow:0 8px 32px rgba(13,27,42,.12);min-width:220px;z-index:300;}
+.dd-menu.open{display:block;}
+.dd-menu a{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:8px;font-size:.82rem;color:var(--text-mid);text-decoration:none;transition:all .12s;}
+.dd-menu a:hover{background:var(--teal-pale);color:var(--teal);}
+.dd-icon{font-size:1rem;}
+.badge-new{background:var(--teal);color:white;font-size:.55rem;font-weight:700;padding:2px 6px;border-radius:8px;letter-spacing:.05em;}
+
+/* ── Hero ── */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#1A3A4A 60%,#1A7A8A 100%);color:white;padding:48px 32px 60px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(26,122,138,.2) 0%,transparent 60%);pointer-events:none;}
+.hero-bread{font-size:.75rem;color:rgba(255,255,255,.45);margin-bottom:14px;}
+.hero-bread a{color:rgba(255,255,255,.5);text-decoration:none;}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:5px 16px;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:16px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1.2;margin-bottom:12px;}
+.hero h1 em{font-style:italic;color:var(--teal-light);}
+.hero p{font-size:.9rem;color:rgba(255,255,255,.65);max-width:520px;margin:0 auto;line-height:1.6;}
+
+/* ── Stats ── */
+.stats{display:flex;background:white;border-bottom:1px solid var(--border);}
+.stat{flex:1;padding:16px;text-align:center;border-right:1px solid var(--border);}
+.stat:last-child{border-right:none;}
+.stat-n{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;color:var(--teal);}
+.stat-l{font-size:.72rem;color:var(--muted);font-weight:500;text-transform:uppercase;letter-spacing:.08em;margin-top:2px;}
+
+/* ── Entity selector ── */
+.selector{display:flex;align-items:center;gap:10px;padding:14px 32px;background:white;border-bottom:1px solid var(--border);}
+.sel-label{font-size:.8rem;font-weight:600;color:var(--text-mid);}
+.sel-btn{padding:7px 18px;border-radius:20px;font-size:.8rem;font-weight:600;border:1.5px solid var(--border);background:white;color:var(--text-mid);cursor:pointer;transition:all .15s;}
+.sel-btn.active{background:var(--teal);color:white;border-color:var(--teal);}
+
+/* ── Layout ── */
+.page-wrap{display:grid;grid-template-columns:260px 1fr;gap:0;max-width:1400px;margin:0 auto;padding:24px 24px 60px;gap:24px;}
+@media(max-width:900px){.page-wrap{grid-template-columns:1fr;}aside{display:none;}}
+
+/* ── Sidebar ── */
+aside{position:sticky;top:88px;height:calc(100vh - 100px);overflow-y:auto;scrollbar-width:thin;}
+.intro-box{background:white;border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:16px;font-size:.8rem;line-height:1.6;color:var(--text-mid);}
+.intro-box h2{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.toc-card{background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+.toc-head{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;cursor:pointer;background:var(--off);border-bottom:1px solid var(--border);}
+.toc-head-l{font-size:.8rem;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:6px;}
+.toc-chev{font-size:.65rem;color:var(--muted);transition:transform .2s;}
+.toc-body{padding:8px 6px;max-height:calc(100vh - 280px);overflow-y:auto;scrollbar-width:thin;}
+.toc-group{margin-bottom:6px;}
+.toc-cls{display:flex;align-items:center;gap:6px;padding:5px 8px;border-radius:6px;font-size:.78rem;font-weight:600;color:var(--navy);text-decoration:none;transition:all .12s;}
+.toc-cls:hover{background:var(--teal-pale);color:var(--teal);}
+.toc-badge{width:18px;height:18px;border-radius:4px;background:var(--navy);color:white;font-size:.65rem;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
+.toc-sub{list-style:none;padding-left:24px;}
+.toc-sub li a{display:block;padding:3px 8px;border-radius:4px;font-size:.72rem;color:var(--text-mid);text-decoration:none;transition:all .1s;}
+.toc-sub li a:hover{color:var(--teal);background:var(--teal-pale);}
+
+/* ── Search ── */
+.search-wrap{position:sticky;top:64px;z-index:100;background:var(--off);padding:12px 0 10px;margin-bottom:4px;}
+.search-inner{display:flex;align-items:center;gap:10px;background:white;border:1.5px solid var(--border);border-radius:10px;padding:10px 14px;box-shadow:0 2px 8px var(--shadow);transition:border-color .2s;}
+.search-inner:focus-within{border-color:var(--teal);}
+.search-inner input{border:none;outline:none;flex:1;font-size:.88rem;font-family:'DM Sans',sans-serif;color:var(--text);background:transparent;}
+.search-inner input::placeholder{color:var(--muted);}
+.search-count{font-size:.72rem;color:var(--muted);white-space:nowrap;font-family:'DM Mono',monospace;}
+
+/* ── Classes ── */
+.class-block{margin-bottom:20px;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:white;box-shadow:0 2px 10px var(--shadow);}
+.class-header{color:white;padding:14px 20px;display:flex;align-items:center;gap:12px;cursor:default;user-select:none;}
+.class-icon{font-size:1.3rem;}
+.class-info{flex:1;}
+.class-num{font-family:'DM Mono',monospace;font-size:.7rem;font-weight:700;opacity:.6;letter-spacing:.1em;text-transform:uppercase;}
+.class-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;line-height:1.2;}
+.class-count{font-size:.72rem;opacity:.55;margin-top:1px;}
+.class-chev{display:none;}
+.class-body{display:block;}
+.class-body.collapsed{display:none;}
+
+/* ── Groups ── */
+.group-block{border-top:1px solid var(--border);}
+.group-header{display:flex;align-items:center;gap:10px;padding:10px 20px;background:var(--off);cursor:default;user-select:none;transition:background .12s;}
+.group-header:hover{background:var(--teal-pale);}
+.group-code{font-family:'DM Mono',monospace;font-size:.78rem;font-weight:700;color:var(--teal);background:var(--teal-pale);padding:3px 8px;border-radius:5px;min-width:34px;text-align:center;}
+.group-name{font-size:.82rem;font-weight:600;color:var(--navy);flex:1;}
+.group-count{font-size:.7rem;color:var(--muted);}
+.group-chev{display:none;}
+.group-body{display:block;}
+.group-body.collapsed{display:none;}
+
+/* ── Accounts ── */
+.account-list{list-style:none;}
+.account-item{display:flex;align-items:stretch;border-bottom:1px solid #F0F3F7;transition:background .1s;}
+.account-item:last-child{border-bottom:none;}
+.account-item:hover{background:#F8FBFC;}
+.account-item.hidden{display:none;}
+.acc-code{font-family:'DM Mono',monospace;font-size:.85rem;font-weight:700;color:var(--teal);padding:10px 14px;min-width:100px;text-align:center;border-right:1px solid #F0F3F7;cursor:pointer;user-select:all;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .12s,color .12s;}
+.acc-code:hover{background:var(--teal);color:white;}
+.acc-code.copied{background:var(--green);color:white;}
+.acc-label{padding:10px 16px;font-size:.84rem;color:var(--text);flex:1;display:flex;align-items:center;line-height:1.4;cursor:pointer;transition:background .12s,color .12s;}
+.acc-label:hover{background:var(--teal-pale);color:var(--teal);}
+.acc-label.copied{background:var(--green-pale);color:var(--green);}
+.acc-label em{color:var(--muted);font-style:italic;font-size:.78em;margin-left:6px;}
+.acc-type{font-size:.65rem;font-weight:700;padding:2px 7px;border-radius:8px;margin-left:8px;flex-shrink:0;}
+.type-A{background:#EBF7ED;color:#2E7D32;}
+.type-P{background:#E8F6F8;color:#1A7A8A;}
+.type-C{background:#FFF3E0;color:#E65100;}
+
+/* ── No results ── */
+.no-results{text-align:center;padding:48px 24px;color:var(--muted);font-size:.9rem;display:none;}
+.no-results.visible{display:block;}
+
+/* ── Footer ── */
+footer{background:var(--navy);color:rgba(255,255,255,.5);padding:20px 32px;display:flex;justify-content:space-between;align-items:center;font-size:.75rem;flex-wrap:wrap;gap:10px;}
+footer a{color:rgba(255,255,255,.4);text-decoration:none;}
+footer a:hover{color:white;}
+
+/* ── Highlight ── */
+.hl{background:#FFF59D;border-radius:2px;}
+
+/* ── Toast ── */
+.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--navy);color:white;padding:10px 22px;border-radius:10px;font-size:.82rem;font-weight:500;box-shadow:0 4px 20px rgba(13,27,42,.25);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:9999;display:flex;align-items:center;gap:8px;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+.toast-icon{font-size:1rem;}
+
+/* Cookie banner */
+#cookieBanner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0D1B2A;border-top:3px solid #1A7A8A;padding:16px 30px 14px;box-shadow:0 -4px 24px rgba(0,0,0,0.35);font-family:'Inter',sans-serif;}
+#cookieBanner .cb-top{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+#cookieBanner .cb-text{font-size:0.82rem;color:rgba(255,255,255,0.75);line-height:1.6;flex:1;min-width:200px;margin:0;}
+#cookieBanner .cb-text a{color:#22A3B8;text-decoration:none;}
+#cookieBanner .cb-cats{display:flex;gap:20px;flex-wrap:wrap;margin:10px 0 12px 0;padding-left:2px;}
+#cookieBanner .cb-cat{display:flex;align-items:center;gap:8px;cursor:pointer;}
+#cookieBanner .cb-cat label{font-size:0.8rem;color:rgba(255,255,255,0.8);cursor:pointer;user-select:none;}
+#cookieBanner .cb-cat input[type=checkbox]{width:16px;height:16px;accent-color:#1A7A8A;cursor:pointer;}
+#cookieBanner .cb-cat.required label{color:rgba(255,255,255,0.45);}
+#cookieBanner .cb-btns{display:flex;gap:10px;flex-shrink:0;align-items:flex-start;}
+#cookieBanner .cb-btn{padding:9px 18px;border-radius:7px;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;border:none;transition:all 0.2s;}
+#cookieBanner .cb-btn-all{background:#1A7A8A;color:#fff;}
+#cookieBanner .cb-btn-all:hover{background:#22A3B8;}
+#cookieBanner .cb-btn-save{background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.25)!important;}
+#cookieBanner .cb-btn-save:hover{color:#fff;border-color:rgba(255,255,255,0.5)!important;}
+#cookieBanner .cb-btn-refuse{background:transparent;color:rgba(255,255,255,0.5);font-size:0.75rem;font-weight:500;padding:4px 0;text-decoration:underline;cursor:pointer;}
+#cookieBanner .cb-btn-refuse:hover{color:rgba(255,255,255,0.8);}
+</style>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "La Caverne de la Compta",
+  "url": "https://lacavernedelacompta.be",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://lacavernedelacompta.be/logo.png",
+    "width": 512,
+    "height": 512
+  },
+  "image": "https://lacavernedelacompta.be/logo.png"
+}
+</script>
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<!-- CACHE-BUST-v8-en/pcmn-complet-societe-et-asbl/index.html -->
+</head>
+<body>
+<div id="cookieBanner">
+  <div class="cb-top">
+    <p class="cb-text">
+      🍪 <strong style="color:#fff;">This website uses cookies.</strong>
+      Essential cookies ensure the website works properly. Others require your consent.
+      <a href="/en/mentions-legales/">Cookie Policy</a>
+    </p>
+    <div class="cb-btns">
+      <button class="cb-btn cb-btn-all" onclick="cbAcceptAll()">Accept all</button>
+      <button class="cb-btn cb-btn-save" onclick="cbSaveChoices()">Save my choices</button>
+    </div>
+  </div>
+  <div class="cb-cats">
+    <div class="cb-cat required">
+      <input type="checkbox" id="cb_necessary" checked disabled>
+      <label for="cb_necessary">✅ Essential <span style="font-size:0.7rem;opacity:0.6">(always active)</span></label>
+    </div>
+    <div class="cb-cat">
+      <input type="checkbox" id="cb_analytics">
+      <label for="cb_analytics">📊 Analytics <span style="font-size:0.7rem;opacity:0.6">(Google Analytics)</span></label>
+    </div>
+    <div class="cb-cat">
+      <input type="checkbox" id="cb_ads">
+      <label for="cb_ads">📢 Advertising <span style="font-size:0.7rem;opacity:0.6">(Google AdSense)</span></label>
+    </div>
+    <button class="cb-btn-refuse" onclick="cbRefuseAll()">Refuse all</button>
+  </div>
+</div>
+
+
+<!-- Toast -->
+<div class="toast" id="toast"><span class="toast-icon">✅</span><span id="toastMsg"></span></div>
+
+<!-- Topbar -->
+<div class="topbar">
+  <span class="topbar-left">🇧🇪 La Caverne de la Compta · PCMN · RD 29 April 2019 · ITAA 2021</span>
+  <div class="topbar-right">
+    <a href="/en/mentions-legales/">Legal Notice</a>
+    <a href="mentions-legales.html#rgpd">GDPR</a>
+    <a href="mentions-legales.html#cookies">Cookies</a>
+  </div>
+</div>
+
+<!-- Nav -->
+<nav>
+<a href="/en/" class="logo" style="text-decoration:none;display:flex;align-items:center;">
+    <svg width="148" height="38" viewBox="0 0 148 38" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <defs>
+        <linearGradient id="hGn" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0D1B2A"/>
+          <stop offset="100%" style="stop-color:#1A3A5C"/>
+        </linearGradient>
+      </defs>
+      <!-- Hexagone -->
+      <polygon points="19,2 31,9 31,23 19,30 7,23 7,9" fill="url(#hGn)"/>
+      <!-- Reflet top -->
+      <polygon points="19,2 31,9 25,9 19,5 13,9 7,9" fill="rgba(255,255,255,.07)"/>
+      <!-- Bras balance -->
+      <line x1="9" y1="15" x2="29" y2="15" stroke="rgba(255,255,255,.5)" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Tige -->
+      <rect x="17.5" y="15" width="2.5" height="11" rx="1.2" fill="rgba(255,255,255,.35)"/>
+      <!-- Pivot gold -->
+      <circle cx="18.8" cy="15" r="3.2" fill="#C9A84C"/>
+      <circle cx="18.8" cy="15" r="1.4" fill="white" opacity=".9"/>
+      <!-- Socle -->
+      <rect x="13" y="27" width="12" height="2.5" rx="1.2" fill="rgba(255,255,255,.2)"/>
+      <!-- Plateau gauche -->
+      <line x1="9" y1="15" x2="7" y2="21.5" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="7" cy="24" rx="6.5" ry="2.5" fill="#1A7A8A"/>
+      <!-- Plateau droit -->
+      <line x1="29" y1="15" x2="31" y2="20" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="31" cy="22.5" rx="6.5" ry="2.5" fill="#22A3B8"/>
+      <!-- Étoile -->
+      <circle cx="27" cy="7" r="2.5" fill="#C9A84C" opacity=".85"/>
+      <!-- Texte -->
+      <text x="42" y="15.5" font-family="'Playfair Display',serif" font-size="12.5" font-weight="900" fill="#0D1B2A" letter-spacing="-.2">La Caverne</text>
+      <rect x="42" y="18.5" width="104" height="1" rx=".5" fill="#DDE5EF"/>
+      <rect x="42" y="18.5" width="18" height="1" rx=".5" fill="#C9A84C"/>
+      <text x="42" y="30" font-family="'Playfair Display',serif" font-size="10.5" font-weight="700" font-style="italic" fill="#1A7A8A" letter-spacing="-.1">de la Compta</text>
+    </svg>
+  </a>
+        <ul class="nav-links">
+    <li><a href="https://lacavernedelacompta.be/en/">🏠 Home</a></li>
+    <li class="dd-wrap" id="ddWrap">
+      <button class="dd-btn" onclick="toggleDD(event)">🧰 Our tools <span class="dd-chevron">▼</span></button>
+      <div class="dd-menu">
+        <a href="/en/simulateur-immobilier/"><span class="dd-icon">🏠</span>Property Simulator</a>
+        <a href="/en/simulateur-credit/"><span class="dd-icon">💳</span>Loan Simulator</a>
+        <a href="/en/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Rent Reclassification<span class="dd-new">Nouveau</span></a>
+        <a href="/en/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Chart of Accounts PCMN</a>
+        <a href="/en/simulateur-interets-composes/"><span class="dd-icon">📈</span>Compound Interest</a>
+        <a href="/en/simulateur-retenue/"><span class="dd-icon">🧾</span>Invoice Withholding</a>
+        <a href="/en/quick-memento-fiscal/"><span class="dd-icon">📌</span>Quick Tax Memo</a>
+        <a href="/en/remboursement-frais/"><span class="dd-icon">🚗</span>Mileage Allowance</a>
+      </div>
+    </li>
+  </ul>
+  <!-- ══ SWITCHER LANGUE ══ -->
+  <div id="langSwitcher" style="display:flex;align-items:center;gap:2px;background:#F4F7FA;border:1px solid #DDE5EF;border-radius:8px;padding:3px;margin-left:16px;flex-shrink:0;">
+    <a href="https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇫🇷 FR</a>
+    <a href="https://lacavernedelacompta.be/nl/pcmn-complet-societe-et-asbl/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇧🇪 NL</a>
+    <a href="https://lacavernedelacompta.be/en/pcmn-complet-societe-et-asbl/" aria-current="page" style="display:inline-flex;align-items:center;gap:3px;font-weight:700;color:#fff;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;background:#1A7A8A;white-space:nowrap;">🇬🇧 EN</a>
+    <a href="https://lacavernedelacompta.be/de/pcmn-complet-societe-et-asbl/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇩🇪 DE</a>
+  </div>
+  <!-- ══════════════════════ -->
+
+  
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bread"><a href="/en/">Home</a> › Belgian Chart of Accounts</div>
+  <div class="hero-badge">✦ ITAA 2021 · CNC/CBN — Official Edition</div>
+  <h1>Normalised Minimum Chart of Accounts<br><em>Belgium (PCMN)</em></h1>
+  <p>All accounts from classes 0 to 7, their detailed sub-accounts and legal references — compliant with the Royal Decree of 29 April 2019.</p>
+</section>
+
+<!-- Stats -->
+<div class="stats" id="statsBar">
+  <div class="stat"><div class="stat-n">8</div><div class="stat-l">Classes</div></div>
+  <div class="stat"><div class="stat-n" id="statComptes">633</div><div class="stat-l">Accounts</div></div>
+  <div class="stat"><div class="stat-n">2026</div><div class="stat-l">Updated</div></div>
+  <div class="stat"><div class="stat-n">ITAA</div><div class="stat-l">Official source</div></div>
+</div>
+
+<!-- Entity selector -->
+<div class="selector">
+  <span class="sel-label">Entity type:</span>
+  <button class="sel-btn active" id="btn-societe" onclick="switchEntity('societe')">🏢 Company</button>
+  <button class="sel-btn" id="btn-asbl" onclick="switchEntity('asbl')">🤝 NPO / Foundation</button>
+</div>
+
+<!-- Page wrap -->
+<div class="page-wrap">
+
+  <!-- Sidebar -->
+  <aside>
+    <div class="intro-box">
+      <h2>What is the Belgian PCMN?</h2>
+      <p>The Normalised Minimum Chart of Accounts (PCMN) is the official framework for Belgian accounting, compliant with the Companies and Associations Code (CAC) and the Royal Decree of 29 April 2019.</p>
+      <div style="border-top:1px solid rgba(26,122,138,.2);margin-top:10px;padding-top:10px;font-size:.75rem;">
+        📎 <a href="https://www.cnc-cbn.be/fr/normes/plan-comptable-minimum-normalise" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-weight:500">Accounting Standards Commission (CNC/CBN)</a>
+      </div>
+    </div>
+    <div class="toc-card">
+      <div class="toc-head" onclick="toggleToc()">
+        <div class="toc-head-l">≡ Table of contents</div>
+        <span class="toc-chev" id="tocChev">▼</span>
+      </div>
+      <div class="toc-body" id="tocBody"></div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main>
+    <div class="search-wrap">
+      <div class="search-inner">
+        <span>🔍</span>
+        <input type="text" id="searchInput" placeholder="Search an account (e.g.: 411000, VAT, customers, depreciation...)" oninput="doSearch(this.value)" autocomplete="off"/>
+        <span class="search-count" id="searchCount"></span>
+      </div>
+    </div>
+    <div id="pcmnContent"></div>
+    <div class="no-results" id="noResults">No account found for this search.</div>
+  </main>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
+  <div class="footer-links">
+    <a href="/en/mentions-legales/">Legal notice</a>
+    <a href="/en/mentions-legales/#rgpd">RGPD</a>
+    <a href="/en/mentions-legales/#cookies">Cookies</a>
+    <a href="#">Contact</a>
+  </div>
+</footer>
+
+<script>
+// ═══════════════════════════════════════════════
+// DATA — Générée depuis pcmn-belgique.xlsx
+// Source : ITAA 2021 (Company) · CNC/CBN (NPO)
+// ═══════════════════════════════════════════════
+const PCMN_SOC = {"1": {"label": "Class 1 — Equity, Provisions & Long-term Liabilities", "groups": {"10": {"label": "Share capital", "accounts": [{"code": "100000", "label": "Subscribed capital", "type": "P"}, {"code": "101000", "label": "Uncalled capital (-)", "type": "P"}, {"code": "102000", "label": "Redeemed capital", "type": "P"}, {"code": "109000", "label": "Proprietor's account", "type": "P"}]}, "11": {"label": "Contribution outside capital [31]", "accounts": [{"code": "110000", "label": "Share premium (available contribution)", "type": "P"}, {"code": "110900", "label": "Other available contributions outside capital [31]", "type": "P"}, {"code": "111000", "label": "Unavailable share premium", "type": "P"}, {"code": "111900", "label": "Other unavailable contributions outside capital", "type": "P"}, {"code": "111901", "label": "Other unavailable uncalled contribution outside capital (-)", "type": "P"}]}, "12": {"label": "Revaluation surpluses", "accounts": [{"code": "120000", "label": "Revaluation surpluses on intangible fixed assets [1][2]", "type": "P"}, {"code": "121000", "label": "Revaluation surpluses on tangible fixed assets [2]", "type": "P"}, {"code": "121000", "label": "Unamortised portion of the surplus", "type": "P"}, {"code": "121100", "label": "Amortised portion of the surplus", "type": "P"}, {"code": "122000", "label": "Revaluation surpluses on financial fixed assets [2]", "type": "P"}, {"code": "123000", "label": "Revaluation surpluses on inventories [1]", "type": "P"}, {"code": "124000", "label": "Reversal of write-downs on short-term investments [3]", "type": "P"}, {"code": "125000", "label": "Reversal of write-downs on intangible and tangible fixed assets with unlimited useful life [3]", "type": "P"}]}, "13": {"label": "Reserves", "accounts": [{"code": "130000", "label": "Legal reserves", "type": "P"}, {"code": "131000", "label": "Other unavailable reserves", "type": "P"}, {"code": "131100", "label": "Statutorily unavailable reserves", "type": "P"}, {"code": "131200", "label": "Reserve for own shares", "type": "P"}, {"code": "131300", "label": "Financial assistance", "type": "P"}, {"code": "131900", "label": "Other unavailable reserves", "type": "P"}, {"code": "132000", "label": "Tax-exempt reserves", "type": "P"}, {"code": "132000", "label": "Tax-exempt reserves (spread taxation)", "type": "P"}, {"code": "132100", "label": "Tax-exempt reserves (investment reserves)", "type": "P"}, {"code": "132200", "label": "Tax-exempt reserves (gains on company vehicles)", "type": "P"}, {"code": "132300", "label": "Tax-exempt reserves (gains on vessels)", "type": "P"}, {"code": "132400", "label": "Tax-exempt reserves (monetary portion of capital gains)", "type": "P"}, {"code": "132500", "label": "Tax-exempt reserves (tax shelter)", "type": "P"}, {"code": "132600", "label": "Other tax-exempt reserves", "type": "P"}, {"code": "133000", "label": "Available reserves", "type": "P"}, {"code": "133100", "label": "Other available reserves", "type": "P"}]}, "14": {"label": "Retained earnings or Accumulated losses (-)", "accounts": [{"code": "140000", "label": "Retained earnings", "type": "P"}, {"code": "141000", "label": "Accumulated losses (-)", "type": "P"}]}, "15": {"label": "Capital subsidies", "accounts": [{"code": "150000", "label": "Capital (or investment) subsidies", "type": "P"}, {"code": "151000", "label": "Capital subsidies transferred to income statement (-)", "type": "P"}]}, "16": {"label": "Provisions and deferred taxes", "accounts": [{"code": "160000", "label": "Provisions for pensions and similar obligations", "type": "P"}, {"code": "160100", "label": "Provisions for early retirement", "type": "P"}, {"code": "161000", "label": "Provisions for tax charges", "type": "P"}, {"code": "162000", "label": "Provisions for major repairs and maintenance", "type": "P"}, {"code": "163000", "label": "Provisions for environmental obligations", "type": "P"}, {"code": "168000", "label": "Deferred taxes", "type": "P"}, {"code": "168000", "label": "Deferred taxes on capital subsidies", "type": "P"}, {"code": "168100", "label": "Deferred taxes on realised gains on intangible fixed assets", "type": "P"}, {"code": "168200", "label": "Deferred taxes on realised gains on tangible fixed assets", "type": "P"}, {"code": "168700", "label": "Deferred taxes on realised gains on securities issued by the Belgian public sector", "type": "P"}, {"code": "168800", "label": "Foreign deferred taxes", "type": "P"}]}, "17": {"label": "Liabilities due after one year", "accounts": [{"code": "170000", "label": "Subordinated loans", "type": "P"}, {"code": "170000", "label": "Convertible", "type": "P"}, {"code": "170100", "label": "Non-convertible", "type": "P"}, {"code": "171000", "label": "Non-subordinated bond loans", "type": "P"}, {"code": "171000", "label": "Convertible", "type": "P"}, {"code": "171100", "label": "Non-convertible", "type": "P"}, {"code": "171900", "label": "Bonds to be placed", "type": "P"}, {"code": "172000", "label": "Finance lease liabilities and similar * to be subdivided by contract", "type": "P"}, {"code": "173000", "label": "Credit institutions * to be subdivided by contract", "type": "P"}, {"code": "173000", "label": "Amounts payable on account", "type": "P"}, {"code": "173100", "label": "Promissory notes", "type": "P"}, {"code": "173200", "label": "Acceptance credits", "type": "P"}, {"code": "174000", "label": "Other loans * to be subdivided by contract", "type": "P"}, {"code": "175000", "label": "Trade payables", "type": "P"}, {"code": "175000", "label": "Suppliers", "type": "P"}, {"code": "175100", "label": "Bills payable", "type": "P"}, {"code": "176000", "label": "Advances received on orders", "type": "P"}, {"code": "178000", "label": "Cash deposits received", "type": "P"}, {"code": "179000", "label": "Other payables", "type": "P"}, {"code": "179000", "label": "Permanent advances from company directors", "type": "P"}, {"code": "179100", "label": "Permanent advances from shareholders – active partners", "type": "P"}]}, "19": {"label": "Advance to partners on distribution of net assets (-)", "accounts": [{"code": "190000", "label": "Advance to partners on distribution of net assets (-)", "type": "P"}]}}}, "2": {"label": "Class 2 — Non-current Assets", "groups": {"20": {"label": "Formation expenses [5]", "accounts": [{"code": "200000", "label": "Incorporation, capital increase or contribution costs", "type": "A"}, {"code": "201000", "label": "Loan issuance costs", "type": "A"}, {"code": "202000", "label": "Other formation expenses", "type": "A"}, {"code": "204000", "label": "Restructuring costs", "type": "A"}]}, "21": {"label": "Intangible fixed assets [6]", "accounts": [{"code": "210000", "label": "Research and development costs", "type": "A"}, {"code": "211000", "label": "Concessions, patents, licences, know-how, trademarks and similar rights", "type": "A"}, {"code": "212000", "label": "Goodwill", "type": "A"}, {"code": "213000", "label": "Advances paid", "type": "A"}, {"code": "215000", "label": "Software", "type": "A"}]}, "22": {"label": "Land and buildings [6]", "accounts": [{"code": "220000", "label": "Land — Acquisition value", "type": "A"}, {"code": "220800", "label": "Recorded surpluses", "type": "A"}, {"code": "220900", "label": "Recorded depreciation or write-downs", "type": "A"}, {"code": "221000", "label": "Buildings — Acquisition value", "type": "A"}, {"code": "221800", "label": "Recorded surpluses", "type": "A"}, {"code": "221900", "label": "Recorded depreciation or write-downs", "type": "A"}, {"code": "222000", "label": "Built-up land [7]", "type": "A"}, {"code": "223000", "label": "Other real rights on property", "type": "A"}]}, "23": {"label": "Plant, machinery and equipment [6]", "accounts": [{"code": "230000", "label": "Technical installations and machinery", "type": "A"}, {"code": "231000", "label": "Other installations", "type": "A"}, {"code": "232000", "label": "Tools and equipment", "type": "A"}, {"code": "233000", "label": "Spare parts", "type": "A"}, {"code": "235000", "label": "Returnable packaging", "type": "A"}]}, "24": {"label": "Furniture and rolling stock [6]", "accounts": [{"code": "240000", "label": "Office furniture and equipment", "type": "A"}, {"code": "241000", "label": "Rolling stock [33]", "type": "A"}]}, "25": {"label": "Assets held under finance leases and similar rights", "accounts": [{"code": "250000", "label": "Land and buildings", "type": "A"}, {"code": "251000", "label": "Plant, machinery and equipment", "type": "A"}, {"code": "252000", "label": "Furniture and rolling stock [33]", "type": "A"}]}, "26": {"label": "Other tangible fixed assets", "accounts": [{"code": "260000", "label": "Breeding livestock", "type": "A"}, {"code": "261000", "label": "Leasehold improvement costs", "type": "A"}, {"code": "262000", "label": "Other tangible fixed assets", "type": "A"}, {"code": "264000", "label": "Assets held in bare ownership", "type": "A"}, {"code": "265000", "label": "Decommissioned assets", "type": "A"}]}, "27": {"label": "Tangible fixed assets under construction and advances paid", "accounts": [{"code": "270000", "label": "Investments of the previous financial year", "type": "A"}, {"code": "270100", "label": "Investments of the financial year", "type": "A"}, {"code": "279800", "label": "Recorded depreciation of the previous financial year", "type": "A"}, {"code": "279900", "label": "Recorded depreciation of the financial year", "type": "A"}]}, "28": {"label": "Financial fixed assets", "accounts": [{"code": "280000", "label": "Equity interests in affiliated companies", "type": "A"}, {"code": "281000", "label": "Receivables from affiliated companies", "type": "A"}, {"code": "282000", "label": "Equity interests in companies with a participation link", "type": "A"}, {"code": "283000", "label": "Receivables from companies with a participation link", "type": "A"}, {"code": "284000", "label": "Other shares and interests", "type": "A"}, {"code": "285000", "label": "Other receivables", "type": "A"}, {"code": "288000", "label": "Cash deposits paid", "type": "A"}]}, "29": {"label": "Receivables due after one year", "accounts": [{"code": "290000", "label": "Trade receivables — Customers", "type": "A"}, {"code": "290100", "label": "Bills receivable", "type": "A"}, {"code": "291000", "label": "Other receivables", "type": "A"}]}}}, "3": {"label": "Class 3 — Inventories & Work in Progress", "groups": {"30": {"label": "Raw materials [9]", "accounts": [{"code": "300000", "label": "Acquisition value [10]", "type": "A"}, {"code": "309000", "label": "Recorded write-downs (-) [11]", "type": "A"}]}, "31": {"label": "Consumables and supplies [9]", "accounts": [{"code": "310000", "label": "Acquisition value [10]", "type": "A"}, {"code": "319000", "label": "Recorded write-downs (-) [11]", "type": "A"}]}, "32": {"label": "Work in progress [9]", "accounts": [{"code": "320000", "label": "Acquisition value [10]", "type": "A"}, {"code": "329000", "label": "Recorded write-downs (-) [11]", "type": "A"}]}, "33": {"label": "Finished goods [9]", "accounts": [{"code": "330000", "label": "Acquisition value [10]", "type": "A"}, {"code": "331000", "label": "Livestock", "type": "A"}, {"code": "332000", "label": "Plant nurseries", "type": "A"}, {"code": "333000", "label": "Products held in storage", "type": "A"}, {"code": "334000", "label": "Products held on consignment", "type": "A"}, {"code": "339000", "label": "Recorded write-downs (-) [11]", "type": "A"}]}, "34": {"label": "Goods for resale [9]", "accounts": [{"code": "340000", "label": "Acquisition value [10]", "type": "A"}, {"code": "349000", "label": "Recorded write-downs (-) [11]", "type": "A"}]}, "35": {"label": "Properties held for sale [9]", "accounts": [{"code": "350000", "label": "Acquisition value [10]", "type": "A"}, {"code": "351000", "label": "Properties acquired — VAT regime", "type": "A"}, {"code": "351000", "label": "Acquisition value", "type": "A"}, {"code": "351900", "label": "Recorded write-downs (-)", "type": "A"}, {"code": "352000", "label": "Property acquired — registration duty regime", "type": "A"}, {"code": "352000", "label": "Acquisition value", "type": "A"}, {"code": "352900", "label": "Recorded write-downs (-)", "type": "A"}, {"code": "359000", "label": "Recorded write-downs (-) [11]", "type": "A"}]}, "36": {"label": "Advances paid on inventory purchases", "accounts": [{"code": "360000", "label": "Advances paid", "type": "A"}, {"code": "369000", "label": "Recorded write-downs (-) [11]", "type": "A"}]}, "37": {"label": "Contracts in progress [12]", "accounts": [{"code": "370000", "label": "Acquisition value", "type": "A"}, {"code": "371000", "label": "Profit recognised", "type": "A"}, {"code": "379000", "label": "Recorded write-downs (-) [11]", "type": "A"}]}}}, "4": {"label": "Class 4 — Short-term Receivables & Liabilities", "groups": {"40": {"label": "Trade receivables [13]", "accounts": [{"code": "400000", "label": "Customers [14] — see also account 443 [P] if credit balance", "type": "A"}, {"code": "401000", "label": "Bills receivable", "type": "A"}, {"code": "403000", "label": "Suppliers with debit balance", "type": "A"}, {"code": "404000", "label": "Income receivable [15]", "type": "A"}, {"code": "405000", "label": "Returned packaging — on purchases", "type": "A"}, {"code": "406000", "label": "Advances paid [8]", "type": "A"}, {"code": "407000", "label": "Doubtful receivables", "type": "A"}, {"code": "409000", "label": "Recorded write-downs (-)", "type": "A"}]}, "41": {"label": "Other receivables [13]", "accounts": [{"code": "410000", "label": "Called but unpaid capital or contribution", "type": "A"}, {"code": "411000", "label": "VAT recoverable", "type": "A"}, {"code": "411000", "label": "VAT recoverable (purchase invoices / purchase credit notes)", "type": "A"}, {"code": "411200", "label": "VAT recoverable — VAT current account", "type": "A"}, {"code": "411400", "label": "VAT recoverable — adjustments in favour of the taxable person (grid 62)", "type": "A"}, {"code": "412000", "label": "Taxes and withholding taxes recoverable", "type": "A"}, {"code": "412800", "label": "Foreign taxes", "type": "A"}, {"code": "414000", "label": "Income receivable", "type": "A"}, {"code": "414000", "label": "Insurance claims receivable", "type": "A"}, {"code": "414100", "label": "Subsidies receivable", "type": "A"}, {"code": "414200", "label": "Premiums and royalties receivable", "type": "A"}, {"code": "414300", "label": "Rents receivable", "type": "A"}, {"code": "414400", "label": "Commissions receivable", "type": "A"}, {"code": "414500", "label": "Interest receivable", "type": "A"}, {"code": "414600", "label": "Coupons receivable", "type": "A"}, {"code": "416000", "label": "Sundry receivables", "type": "A"}, {"code": "416000", "label": "Current account advances to company directors", "type": "A"}, {"code": "416100", "label": "Current account advances to shareholders or partners", "type": "A"}, {"code": "417000", "label": "Doubtful receivables", "type": "A"}, {"code": "418000", "label": "Cash deposits paid", "type": "A"}, {"code": "419000", "label": "Recorded write-downs (-)", "type": "A"}]}, "42": {"label": "Long-term liabilities falling due within the year [16]", "accounts": [{"code": "420000", "label": "Same breakdown as account 17 — transfer at year end only [16]", "type": "P"}]}, "43": {"label": "Financial liabilities", "accounts": [{"code": "430000", "label": "Credit institutions — Fixed-term account loans", "type": "P"}, {"code": "431000", "label": "Credit institutions — Promissory notes", "type": "P"}, {"code": "432000", "label": "Credit institutions — Acceptance credits", "type": "P"}, {"code": "433000", "label": "Credit institutions — Current account liabilities [17]", "type": "P"}, {"code": "439000", "label": "Other loans", "type": "P"}]}, "44": {"label": "Trade payables", "accounts": [{"code": "440000", "label": "Suppliers [18] — see also account 403 [A] if debit balance", "type": "P"}, {"code": "441000", "label": "Bills payable", "type": "P"}, {"code": "443000", "label": "Customers with credit balance", "type": "P"}, {"code": "444000", "label": "Invoices to receive [19]", "type": "P"}]}, "45": {"label": "Tax, payroll and social security liabilities", "accounts": [{"code": "450000", "label": "Estimated tax liabilities", "type": "P"}, {"code": "450800", "label": "Foreign taxes", "type": "P"}, {"code": "451000", "label": "VAT payable", "type": "P"}, {"code": "451000", "label": "VAT payable (sales invoices / credit notes)", "type": "P"}, {"code": "451100", "label": "VAT payable — on intra-Community transactions", "type": "P"}, {"code": "451200", "label": "VAT payable — VAT current account", "type": "P"}, {"code": "451300", "label": "VAT payable — on co-contractor transactions", "type": "P"}, {"code": "451400", "label": "VAT payable — adjustments in favour of the State (grid 61)", "type": "P"}, {"code": "451500", "label": "VAT payable — deferred payment on imports", "type": "P"}, {"code": "451600", "label": "VAT payable on transactions taxable in another EU country", "type": "P"}, {"code": "451700", "label": "VAT payable — special VAT account", "type": "P"}, {"code": "452000", "label": "Taxes payable", "type": "P"}, {"code": "452800", "label": "Foreign taxes", "type": "P"}, {"code": "453000", "label": "Withheld prepayments", "type": "P"}, {"code": "453000", "label": "Withholding tax to be paid", "type": "P"}, {"code": "453100", "label": "Professional withholding tax", "type": "P"}, {"code": "453200", "label": "Withholding tax on investment income", "type": "P"}, {"code": "453300", "label": "Co-contractor withholding obligation", "type": "P"}, {"code": "453400", "label": "Other withholding taxes", "type": "P"}, {"code": "454000", "label": "National Social Security Office (NSSO)", "type": "P"}, {"code": "454000", "label": "NSSO — company contributions", "type": "P"}, {"code": "454300", "label": "NSSO — co-contractor", "type": "P"}, {"code": "455000", "label": "Remuneration", "type": "P"}, {"code": "455800", "label": "Pro rata year-end bonuses", "type": "P"}, {"code": "456000", "label": "Holiday pay", "type": "P"}, {"code": "456000", "label": "Holiday pay — white-collar employees", "type": "P"}, {"code": "456100", "label": "Holiday pay — blue-collar workers", "type": "P"}, {"code": "459000", "label": "Other social security liabilities", "type": "P"}]}, "46": {"label": "Advances received on orders", "accounts": [{"code": "460000", "label": "Advances to be received", "type": "P"}, {"code": "461000", "label": "Advances received", "type": "P"}]}, "47/48": {"label": "Other liabilities", "accounts": [{"code": "470000", "label": "Dividends and directors' fees from prior years", "type": "P"}, {"code": "471000", "label": "Dividends for the year", "type": "P"}, {"code": "472000", "label": "Directors' fees for the year", "type": "P"}, {"code": "473000", "label": "Other beneficiaries", "type": "P"}, {"code": "474000", "label": "Shares to be redeemed", "type": "P"}, {"code": "480000", "label": "Matured bonds and coupons", "type": "P"}, {"code": "481000", "label": "Liabilities to shareholders or partners arising from capital or contribution transactions", "type": "P"}, {"code": "482000", "label": "Current account advances from directors, shareholders and partners", "type": "P"}, {"code": "488000", "label": "Cash deposits received", "type": "P"}, {"code": "489000", "label": "Other sundry liabilities", "type": "P"}, {"code": "489100", "label": "Advances received on capital or contribution", "type": "P"}]}, "49": {"label": "Accruals and deferrals", "accounts": [{"code": "490000", "label": "Prepaid expenses [A]", "type": "A/P"}, {"code": "491000", "label": "Accrued income [A]", "type": "A/P"}, {"code": "495000", "label": "Tax shelter investment [A]", "type": "A/P"}, {"code": "496000", "label": "Negative foreign exchange translation differences [A] [32]", "type": "A/P"}, {"code": "492000", "label": "Accrued expenses [P]", "type": "A/P"}, {"code": "493000", "label": "Deferred income [P]", "type": "A/P"}, {"code": "497000", "label": "Positive foreign exchange translation differences [P] [32]", "type": "A/P"}, {"code": "498000", "label": "Result on outstanding issued options", "type": "A/P"}, {"code": "499000", "label": "Suspense accounts [P]", "type": "A/P"}]}}}, "5": {"label": "Class 5 — Short-term Investments & Cash", "groups": {"50": {"label": "Own shares", "accounts": [{"code": "500000", "label": "Own shares", "type": "A"}]}, "51/53": {"label": "Shares, interests and short-term investments other than fixed-income", "accounts": [{"code": "510000", "label": "Acquisition value", "type": "A"}, {"code": "510000", "label": "Shares and interests", "type": "A"}, {"code": "510100", "label": "Short-term investments other than fixed-income", "type": "A"}, {"code": "511000", "label": "Uncalled amounts (-)", "type": "A"}, {"code": "511000", "label": "Shares and interests", "type": "A"}, {"code": "519000", "label": "Recorded write-downs (-)", "type": "A"}, {"code": "519000", "label": "Shares and interests", "type": "A"}, {"code": "519100", "label": "Short-term investments other than fixed-income", "type": "A"}, {"code": "520000", "label": "Fixed-income securities — Acquisition value", "type": "A"}, {"code": "529000", "label": "Fixed-income securities — Recorded write-downs (-) [11]", "type": "A"}, {"code": "530000", "label": "Term deposits over one year", "type": "A"}, {"code": "531000", "label": "Term deposits over one month and up to one year", "type": "A"}, {"code": "532000", "label": "Term deposits up to one month", "type": "A"}, {"code": "539000", "label": "Recorded write-downs (-) [11]", "type": "A"}]}, "54": {"label": "Matured securities for collection [20]", "accounts": [{"code": "540000", "label": "Matured securities — may also be posted to account 55 [20]", "type": "A"}]}, "57": {"label": "Cash", "accounts": [{"code": "577100", "label": "Cash — foreign currencies", "type": "A"}, {"code": "578000", "label": "Cash — stamps", "type": "A"}, {"code": "579000", "label": "Cash — meal vouchers", "type": "A"}]}, "58": {"label": "Internal transfers", "accounts": [{"code": "580000", "label": "Transfers", "type": "A"}]}}}, "6": {"label": "Class 6 — Expenses", "groups": {"60": {"label": "Raw materials and goods [23]", "accounts": [{"code": "600000", "label": "Purchases of raw materials", "type": "R"}, {"code": "601000", "label": "Purchases of consumables", "type": "R"}, {"code": "602000", "label": "Purchases of services, works and studies", "type": "R"}, {"code": "603000", "label": "General subcontracting", "type": "R"}, {"code": "604000", "label": "Purchases of goods for resale", "type": "R"}, {"code": "605000", "label": "Purchases of properties held for sale", "type": "R"}, {"code": "606000", "label": "Incidental purchasing costs", "type": "R"}, {"code": "606100", "label": "Transport", "type": "R"}, {"code": "606200", "label": "Non-deductible VAT", "type": "R"}, {"code": "606300", "label": "Customs duties", "type": "R"}, {"code": "606400", "label": "Insurance", "type": "R"}, {"code": "606500", "label": "Other incidental costs", "type": "R"}, {"code": "606600", "label": "Transfers to main accounts (600 to 605)", "type": "R"}, {"code": "608000", "label": "Discounts and rebates obtained (-) [24]", "type": "R"}, {"code": "609000", "label": "Changes in inventories", "type": "R"}, {"code": "609000", "label": "Of raw materials", "type": "R"}, {"code": "609000", "label": "Change in raw materials inventories (opening stock)", "type": "R"}, {"code": "609010", "label": "Change in raw materials inventories (closing stock)", "type": "R"}, {"code": "609100", "label": "Of consumables", "type": "R"}, {"code": "609400", "label": "Of goods for resale", "type": "R"}, {"code": "609400", "label": "Change in goods inventories (opening stock)", "type": "R"}, {"code": "609410", "label": "Change in goods inventories (closing stock)", "type": "R"}, {"code": "609500", "label": "Of purchased properties held for sale", "type": "R"}]}, "61": {"label": "Miscellaneous goods and services", "accounts": [{"code": "610000", "label": "Rent and rental charges", "type": "R"}, {"code": "610100", "label": "Rental charges for machines, equipment and tools", "type": "R"}, {"code": "610200", "label": "Rental charges for rolling stock (vehicles etc.) [33]", "type": "R"}, {"code": "610300", "label": "Rental charges for rolling stock (commercial vehicles)", "type": "R"}, {"code": "611000", "label": "Maintenance and repair costs", "type": "R"}, {"code": "611100", "label": "Maintenance and repairs — machines, equipment and tools", "type": "R"}, {"code": "611200", "label": "Maintenance and repairs — rolling stock (cars) [33]", "type": "R"}, {"code": "611300", "label": "Maintenance and repairs — rolling stock (commercial vehicles)", "type": "R"}, {"code": "611400", "label": "Maintenance and repairs — land", "type": "R"}, {"code": "611500", "label": "Maintenance and repairs — buildings", "type": "R"}, {"code": "612000", "label": "Miscellaneous supplies and energy", "type": "R"}, {"code": "612000", "label": "Office supplies and printed materials", "type": "R"}, {"code": "612100", "label": "Books, brochures and documentation", "type": "R"}, {"code": "612200", "label": "Small equipment", "type": "R"}, {"code": "612300", "label": "Cleaning products", "type": "R"}, {"code": "612500", "label": "Water consumption", "type": "R"}, {"code": "612600", "label": "Gas consumption", "type": "R"}, {"code": "612700", "label": "Electricity consumption", "type": "R"}, {"code": "612800", "label": "Heating oil consumption", "type": "R"}, {"code": "613000", "label": "Third-party fees", "type": "R"}, {"code": "613000", "label": "Sales commissions", "type": "R"}, {"code": "613100", "label": "Purchase commissions", "type": "R"}, {"code": "613200", "label": "Professional fees", "type": "R"}, {"code": "613200", "label": "Fees — accountants or tax advisors", "type": "R"}, {"code": "613210", "label": "Fees — architects", "type": "R"}, {"code": "613220", "label": "Fees — doctors", "type": "R"}, {"code": "613250", "label": "Fees — lawyers", "type": "R"}, {"code": "613260", "label": "Fees — notaries", "type": "R"}, {"code": "613270", "label": "Fees — bailiffs", "type": "R"}, {"code": "613300", "label": "External services — service providers", "type": "R"}, {"code": "613300", "label": "Social secretariats", "type": "R"}, {"code": "613310", "label": "IT services", "type": "R"}, {"code": "613320", "label": "Factoring services", "type": "R"}, {"code": "613350", "label": "Technical inspection (vehicles etc.) [33]", "type": "R"}, {"code": "613370", "label": "Patent royalties", "type": "R"}, {"code": "613380", "label": "Licence royalties", "type": "R"}, {"code": "614000", "label": "Insurance — other than staff insurance", "type": "R"}, {"code": "614000", "label": "Fire insurance", "type": "R"}, {"code": "614100", "label": "Theft insurance", "type": "R"}, {"code": "614400", "label": "Vehicle insurance (cars etc.) [33]", "type": "R"}, {"code": "614600", "label": "Public liability insurance", "type": "R"}, {"code": "614700", "label": "Professional liability insurance", "type": "R"}, {"code": "614800", "label": "Goods transport insurance", "type": "R"}, {"code": "614900", "label": "Credit insurance", "type": "R"}, {"code": "615000", "label": "Transport and related costs on sales", "type": "R"}, {"code": "615100", "label": "Sea transport", "type": "R"}, {"code": "615400", "label": "Road transport", "type": "R"}, {"code": "615500", "label": "Air transport", "type": "R"}, {"code": "616000", "label": "Post — Communication — Advertising", "type": "R"}, {"code": "616000", "label": "Postage costs", "type": "R"}, {"code": "616200", "label": "Telephony", "type": "R"}, {"code": "616200", "label": "Telephone, mobile phone", "type": "R"}, {"code": "616210", "label": "Internet", "type": "R"}, {"code": "616500", "label": "Brand awareness expenditure", "type": "R"}, {"code": "616500", "label": "Travel expenses (tax deductible)", "type": "R"}, {"code": "616510", "label": "Travel expenses (subject to tax limitation)", "type": "R"}, {"code": "616520", "label": "Advertising and announcements", "type": "R"}, {"code": "616530", "label": "Participation in trade fairs and exhibitions", "type": "R"}, {"code": "616540", "label": "Business gifts", "type": "R"}, {"code": "616550", "label": "Subscriptions and dues", "type": "R"}, {"code": "616560", "label": "Donations and gifts", "type": "R"}, {"code": "616580", "label": "Entertainment expenses (limited deductibility)", "type": "R"}, {"code": "616590", "label": "Entertainment expenses (unlimited deductibility)", "type": "R"}, {"code": "617000", "label": "Temporary staff and persons made available", "type": "R"}, {"code": "617000", "label": "Temporary staff", "type": "R"}, {"code": "617100", "label": "Persons made available", "type": "R"}, {"code": "618000", "label": "Remuneration, supplementary insurance premiums and pensions of directors, managers and active partners not granted under an employment contract", "type": "R"}, {"code": "618000", "label": "Wages — emoluments — salaries", "type": "R"}, {"code": "618100", "label": "Expenses treated as remuneration", "type": "R"}, {"code": "618100", "label": "Self-employed social insurance", "type": "R"}, {"code": "618110", "label": "Benefits in kind", "type": "R"}, {"code": "618120", "label": "Life insurance", "type": "R"}, {"code": "618130", "label": "Drawings", "type": "R"}, {"code": "618400", "label": "Employer contributions for supplementary insurance", "type": "R"}, {"code": "618400", "label": "Accident insurance", "type": "R"}, {"code": "618410", "label": "Company directors insurance", "type": "R"}, {"code": "618420", "label": "Individual pension commitment", "type": "R"}, {"code": "618700", "label": "Retirement and survivor's pension", "type": "R"}, {"code": "618800", "label": "Fees of self-employed company directors", "type": "R"}]}, "62": {"label": "Remuneration, social charges and pensions", "accounts": [{"code": "620000", "label": "Remuneration and direct social benefits", "type": "R"}, {"code": "620000", "label": "Directors or managers [25]", "type": "R"}, {"code": "620100", "label": "Management staff", "type": "R"}, {"code": "620200", "label": "White-collar employees", "type": "R"}, {"code": "620300", "label": "Blue-collar workers", "type": "R"}, {"code": "620400", "label": "Other staff members", "type": "R"}, {"code": "621000", "label": "Employer contributions for social insurance", "type": "R"}, {"code": "621000", "label": "NSSO contributions", "type": "R"}, {"code": "621100", "label": "Business closure fund", "type": "R"}, {"code": "621200", "label": "HORECA fund contribution", "type": "R"}, {"code": "621300", "label": "CO2 contribution", "type": "R"}, {"code": "621400", "label": "Bad weather and loyalty stamps", "type": "R"}, {"code": "622000", "label": "Employer premiums for supplementary insurance", "type": "R"}, {"code": "622000", "label": "Group insurance", "type": "R"}, {"code": "622100", "label": "Insurance premiums", "type": "R"}, {"code": "623000", "label": "Other staff costs", "type": "R"}, {"code": "623000", "label": "Statutory accident at work insurance", "type": "R"}, {"code": "623100", "label": "Medical service", "type": "R"}, {"code": "623200", "label": "Guaranteed income insurance", "type": "R"}, {"code": "623300", "label": "Social transport subscriptions", "type": "R"}, {"code": "623400", "label": "Lunch on assignment", "type": "R"}, {"code": "623500", "label": "Work clothing", "type": "R"}, {"code": "623600", "label": "Training costs", "type": "R"}, {"code": "623700", "label": "Meal vouchers (employer's share)", "type": "R"}, {"code": "623800", "label": "Staff events", "type": "R"}, {"code": "623900", "label": "Other social benefits", "type": "R"}, {"code": "623910", "label": "Eco-vouchers", "type": "R"}, {"code": "623920", "label": "Culture vouchers", "type": "R"}, {"code": "624000", "label": "Retirement and survivor's pensions", "type": "R"}, {"code": "624000", "label": "Directors or managers [25]", "type": "R"}, {"code": "624100", "label": "Staff", "type": "R"}, {"code": "625000", "label": "Provisions for holiday pay and bonuses", "type": "R"}, {"code": "625000", "label": "Provision for holiday pay", "type": "R"}, {"code": "625100", "label": "Reversal of holiday pay provision (-)", "type": "R"}, {"code": "625200", "label": "Provision for year-end bonus", "type": "R"}, {"code": "625300", "label": "Reversal of year-end bonus provision (-)", "type": "R"}]}, "63": {"label": "Depreciation, write-downs and provisions for risks and charges", "accounts": [{"code": "630000", "label": "Depreciation and write-downs on fixed assets", "type": "R"}, {"code": "630000", "label": "Amortisation of formation expenses", "type": "R"}, {"code": "630100", "label": "Amortisation of intangible fixed assets", "type": "R"}, {"code": "630200", "label": "Depreciation of tangible fixed assets", "type": "R"}, {"code": "630800", "label": "Write-downs on intangible fixed assets", "type": "R"}, {"code": "630900", "label": "Write-downs on tangible fixed assets", "type": "R"}, {"code": "631000", "label": "Write-downs on inventories", "type": "R"}, {"code": "631000", "label": "Charge", "type": "R"}, {"code": "631100", "label": "Reversals (-)", "type": "R"}, {"code": "632000", "label": "Write-downs on contracts in progress", "type": "R"}, {"code": "632000", "label": "Charge", "type": "R"}, {"code": "632100", "label": "Reversals (-)", "type": "R"}, {"code": "633000", "label": "Write-downs on long-term trade receivables", "type": "R"}, {"code": "633000", "label": "Charge", "type": "R"}, {"code": "633100", "label": "Reversals (-)", "type": "R"}, {"code": "634000", "label": "Write-downs on short-term trade receivables", "type": "R"}, {"code": "634000", "label": "Charge", "type": "R"}, {"code": "634100", "label": "Reversals (-)", "type": "R"}, {"code": "635000", "label": "Provisions for pensions and similar obligations", "type": "R"}, {"code": "635000", "label": "Charge", "type": "R"}, {"code": "635100", "label": "Use and reversals (-)", "type": "R"}, {"code": "636000", "label": "Provisions for major repairs and maintenance", "type": "R"}, {"code": "636000", "label": "Charge", "type": "R"}, {"code": "636100", "label": "Use and reversals (-)", "type": "R"}, {"code": "637000", "label": "Provisions for environmental obligations", "type": "R"}, {"code": "637000", "label": "Charge", "type": "R"}, {"code": "637100", "label": "Use and reversals (-)", "type": "R"}, {"code": "638000", "label": "Provisions for other risks and charges", "type": "R"}, {"code": "638000", "label": "Charge", "type": "R"}, {"code": "638100", "label": "Use and reversals (-)", "type": "R"}]}, "64": {"label": "Other operating expenses", "accounts": [{"code": "640000", "label": "Operating taxes", "type": "R"}, {"code": "640000", "label": "Property tax", "type": "R"}, {"code": "640100", "label": "Eco-taxes", "type": "R"}, {"code": "640200", "label": "Road tax — rolling stock (cars) [33]", "type": "R"}, {"code": "640300", "label": "Road tax — rolling stock (other vehicles)", "type": "R"}, {"code": "640400", "label": "Regional taxes", "type": "R"}, {"code": "640410", "label": "Environmental taxes", "type": "R"}, {"code": "640500", "label": "Registration duties and legal publications", "type": "R"}, {"code": "640600", "label": "Provincial and municipal taxes", "type": "R"}, {"code": "640700", "label": "Non-deductible VAT", "type": "R"}, {"code": "640800", "label": "Customs duties and excise", "type": "R"}, {"code": "641000", "label": "Losses on routine disposals of tangible fixed assets", "type": "R"}, {"code": "642000", "label": "Losses on disposal of trade receivables", "type": "R"}, {"code": "644000", "label": "Deductible fines and penalties", "type": "R"}, {"code": "645000", "label": "Non-deductible fines and penalties", "type": "R"}, {"code": "646000", "label": "Losses on packaging", "type": "R"}, {"code": "647000", "label": "Losses on receivables", "type": "R"}, {"code": "647100", "label": "Losses on expired inventory", "type": "R"}, {"code": "649000", "label": "Operating costs capitalised as restructuring costs (-)", "type": "R"}]}, "65": {"label": "Financial charges", "accounts": [{"code": "650000", "label": "Debt costs", "type": "R"}, {"code": "650000", "label": "Interest, commissions and charges on debt", "type": "R"}, {"code": "650100", "label": "Amortisation of loan issuance costs", "type": "R"}, {"code": "650200", "label": "Capitalised interest during construction (-)", "type": "R"}, {"code": "651000", "label": "Write-downs on current assets [26]", "type": "R"}, {"code": "651000", "label": "Charge", "type": "R"}, {"code": "651100", "label": "Reversals (-)", "type": "R"}, {"code": "652000", "label": "Losses on disposal of current assets [26]", "type": "R"}, {"code": "653000", "label": "Discount charges on receivables", "type": "R"}, {"code": "654000", "label": "Exchange differences [27]", "type": "R"}, {"code": "655000", "label": "Foreign currency translation differences [27]", "type": "R"}, {"code": "656000", "label": "Provisions of a financial nature", "type": "R"}, {"code": "656000", "label": "Charge", "type": "R"}, {"code": "656100", "label": "Use and reversals (-)", "type": "R"}, {"code": "659000", "label": "Financial charges capitalised as restructuring costs (-)", "type": "R"}]}, "66": {"label": "Non-recurring operating and financial charges", "accounts": [{"code": "660000", "label": "Non-recurring depreciation and write-downs (charge)", "type": "R"}, {"code": "660000", "label": "On formation expenses", "type": "R"}, {"code": "660100", "label": "On intangible fixed assets", "type": "R"}, {"code": "660200", "label": "On tangible fixed assets", "type": "R"}, {"code": "661000", "label": "Write-downs on financial fixed assets (charge)", "type": "R"}, {"code": "662000", "label": "Provisions pour risques et charges non récurrents", "type": "R"}, {"code": "662000", "label": "Provisions for non-recurring operating risks and charges", "type": "R"}, {"code": "662000", "label": "Charge", "type": "R"}, {"code": "662010", "label": "Use (-)", "type": "R"}, {"code": "662100", "label": "Provisions for non-recurring financial risks and charges", "type": "R"}, {"code": "662100", "label": "Charge", "type": "R"}, {"code": "662110", "label": "Use (-)", "type": "R"}, {"code": "663000", "label": "Moins-values sur réalisation d'actifs immobilisés", "type": "R"}, {"code": "663000", "label": "Losses on disposal of intangible and tangible fixed assets", "type": "R"}, {"code": "663100", "label": "Losses on disposal of financial fixed assets", "type": "R"}, {"code": "667000", "label": "Loss on liquidation", "type": "R"}, {"code": "668000", "label": "Other non-recurring financial charges", "type": "R"}, {"code": "669000", "label": "Costs capitalised as restructuring costs (-)", "type": "R"}, {"code": "669000", "label": "Non-recurring operating costs capitalised", "type": "R"}, {"code": "669100", "label": "Non-recurring financial costs capitalised", "type": "R"}]}, "67": {"label": "Income taxes", "accounts": [{"code": "670000", "label": "Belgian income taxes for the year", "type": "R"}, {"code": "670000", "label": "Taxes and withholding taxes due or paid", "type": "R"}, {"code": "670100", "label": "Excess of taxes and withholding taxes paid, capitalised (-)", "type": "R"}, {"code": "670200", "label": "Estimated tax charges", "type": "R"}, {"code": "671000", "label": "Belgian income taxes for prior years", "type": "R"}, {"code": "671000", "label": "Tax supplements due or paid", "type": "R"}, {"code": "671100", "label": "Estimated tax supplements", "type": "R"}, {"code": "671200", "label": "Tax provisions established", "type": "R"}, {"code": "672000", "label": "Foreign income taxes for the year", "type": "R"}, {"code": "673000", "label": "Foreign income taxes for prior years", "type": "R"}]}, "68": {"label": "Transfers to deferred taxes and tax-exempt reserves", "accounts": [{"code": "680000", "label": "Transfers to deferred taxes", "type": "R"}, {"code": "689000", "label": "Transfers to tax-exempt reserves", "type": "R"}]}, "69": {"label": "Appropriation of results", "accounts": [{"code": "690000", "label": "Accumulated losses from the previous year", "type": "R"}, {"code": "691000", "label": "Allocation to equity", "type": "R"}, {"code": "692000", "label": "Transfer to reserves", "type": "R"}, {"code": "692000", "label": "Transfer to legal reserve", "type": "R"}, {"code": "692100", "label": "Transfer to other reserves", "type": "R"}, {"code": "693000", "label": "Profit to be carried forward", "type": "R"}, {"code": "694000", "label": "Return on contribution", "type": "R"}, {"code": "695000", "label": "Directors or managers", "type": "R"}, {"code": "696000", "label": "Employees", "type": "R"}, {"code": "697000", "label": "Other beneficiaries", "type": "R"}]}}}, "7": {"label": "Class 7 — Income", "groups": {"70": {"label": "Turnover", "accounts": [{"code": "700000", "label": "Sales VAT 0%", "type": "R"}, {"code": "700100", "label": "Sales VAT 6%", "type": "R"}, {"code": "700200", "label": "Sales VAT 12%", "type": "R"}, {"code": "700300", "label": "Sales VAT 21%", "type": "R"}, {"code": "700500", "label": "Sales — co-contractor", "type": "R"}, {"code": "700600", "label": "Sales — intra-Community deliveries", "type": "R"}, {"code": "700610", "label": "Sales — intra-Community services", "type": "R"}, {"code": "700700", "label": "Sales — outside the European Union", "type": "R"}, {"code": "700800", "label": "Sales — intra-Community deliveries: credit notes", "type": "R"}, {"code": "700810", "label": "Intra-Community services: credit notes", "type": "R"}, {"code": "700900", "label": "Sales outside EU: credit notes", "type": "R"}, {"code": "708000", "label": "Discounts and rebates granted (-) [28]", "type": "R"}, {"code": "709000", "label": "Rounding of payments in euros", "type": "R"}]}, "71": {"label": "Change in inventories and contracts in progress", "accounts": [{"code": "712000", "label": "Of work in progress", "type": "R"}, {"code": "713000", "label": "Of finished goods", "type": "R"}, {"code": "715000", "label": "Of constructed properties held for sale", "type": "R"}, {"code": "717000", "label": "Of contracts in progress", "type": "R"}, {"code": "717000", "label": "Acquisition value", "type": "R"}, {"code": "717100", "label": "Profit recognised", "type": "R"}]}, "72": {"label": "Own work capitalised", "accounts": [{"code": "720000", "label": "Own work capitalised", "type": "R"}]}, "74": {"label": "Other operating income", "accounts": [{"code": "740000", "label": "Operating subsidies and compensatory amounts", "type": "R"}, {"code": "741000", "label": "Gains on routine disposals of tangible fixed assets", "type": "R"}, {"code": "742000", "label": "Gains on disposal of trade receivables", "type": "R"}, {"code": "743000", "label": "Recovery of staff costs", "type": "R"}, {"code": "743100", "label": "Accidents — Insurance claims", "type": "R"}, {"code": "743200", "label": "Guaranteed wages", "type": "R"}, {"code": "743300", "label": "Time credits — training credits", "type": "R"}, {"code": "743400", "label": "Business plan — recruitment plan", "type": "R"}, {"code": "743500", "label": "Reintegration employment", "type": "R"}, {"code": "743600", "label": "Low wages", "type": "R"}, {"code": "743800", "label": "Career break", "type": "R"}, {"code": "744000", "label": "Royalties", "type": "R"}, {"code": "744100", "label": "Received from affiliated companies", "type": "R"}, {"code": "744200", "label": "On concession of operating rights", "type": "R"}, {"code": "745000", "label": "Non-professional rental income", "type": "R"}, {"code": "745100", "label": "Rental of buildings and land", "type": "R"}, {"code": "745200", "label": "Rental of installations and machines", "type": "R"}, {"code": "745300", "label": "Compensation for breach of lease", "type": "R"}, {"code": "745400", "label": "Gains on return of consignment packaging", "type": "R"}, {"code": "745500", "label": "Rental of operating rights", "type": "R"}, {"code": "746000", "label": "Recovery of costs from third parties", "type": "R"}, {"code": "746100", "label": "Charged to insurance companies", "type": "R"}, {"code": "746200", "label": "Use of withheld guarantees", "type": "R"}, {"code": "746400", "label": "Benefits in kind", "type": "R"}, {"code": "746500", "label": "Recovery of written-down receivables", "type": "R"}, {"code": "747000", "label": "Discounts and rebates obtained from suppliers", "type": "R"}, {"code": "747100", "label": "Discounts and rebates obtained", "type": "R"}, {"code": "747200", "label": "Commissions and brokerage fees", "type": "R"}, {"code": "748000", "label": "Sales of products outside the normal business activity", "type": "R"}, {"code": "748000", "label": "Sales of waste and scrap", "type": "R"}, {"code": "748100", "label": "Sales of packaging", "type": "R"}, {"code": "748400", "label": "Sales of fixed assets (invoicing)", "type": "R"}, {"code": "748900", "label": "Transfer to income", "type": "R"}]}, "75": {"label": "Financial income", "accounts": [{"code": "750000", "label": "Income from financial fixed assets", "type": "R"}, {"code": "751000", "label": "Income from current assets [26]", "type": "R"}, {"code": "752000", "label": "Gains on disposal of current assets [26]", "type": "R"}, {"code": "753000", "label": "Capital and interest subsidies", "type": "R"}, {"code": "754000", "label": "Exchange differences [27]", "type": "R"}, {"code": "755000", "label": "Foreign currency translation differences [27]", "type": "R"}]}, "76": {"label": "Non-recurring operating or financial income", "accounts": [{"code": "760000", "label": "Reversals of depreciation and write-downs", "type": "R"}, {"code": "760000", "label": "On intangible fixed assets", "type": "R"}, {"code": "760100", "label": "On tangible fixed assets", "type": "R"}, {"code": "761000", "label": "Reversals of write-downs on financial fixed assets", "type": "R"}, {"code": "762000", "label": "Reversals of provisions for non-recurring risks and charges", "type": "R"}, {"code": "762000", "label": "Reversals of provisions for non-recurring operating risks", "type": "R"}, {"code": "762100", "label": "Reversals of provisions for non-recurring financial risks", "type": "R"}, {"code": "763000", "label": "Gains on disposal of fixed assets", "type": "R"}, {"code": "763000", "label": "Gains on disposal of intangible and tangible fixed assets", "type": "R"}, {"code": "763100", "label": "Gains on disposal of financial fixed assets", "type": "R"}, {"code": "764100", "label": "Donations received", "type": "R"}, {"code": "764200", "label": "Insurance proceeds", "type": "R"}, {"code": "767000", "label": "Liquidation surplus", "type": "R"}, {"code": "768000", "label": "Income from debt waivers following judicial reorganisation", "type": "R"}, {"code": "769000", "label": "Other non-recurring financial income", "type": "R"}]}, "77": {"label": "Tax regularisations and reversals of tax provisions", "accounts": [{"code": "771000", "label": "Belgian income taxes", "type": "R"}, {"code": "771000", "label": "Regularisation of taxes due or paid", "type": "R"}, {"code": "771100", "label": "Regularisation of estimated taxes", "type": "R"}, {"code": "771200", "label": "Reversals of tax provisions", "type": "R"}, {"code": "773000", "label": "Foreign income taxes", "type": "R"}]}, "78": {"label": "Drawdowns on tax-exempt reserves and deferred taxes", "accounts": [{"code": "780000", "label": "Drawdowns on deferred taxes", "type": "R"}, {"code": "789000", "label": "Drawdowns on tax-exempt reserves", "type": "R"}]}, "79": {"label": "Appropriation of results", "accounts": [{"code": "990600", "label": "Profit (Loss) to be appropriated", "type": "R"}, {"code": "990500", "label": "Profit (Loss) for the year to be appropriated", "type": "R"}, {"code": "790000", "label": "Retained earnings from the previous year", "type": "R"}, {"code": "791000", "label": "Prélèvements sur l'apport", "type": "R"}, {"code": "792000", "label": "Prélèvements sur les réserves", "type": "R"}, {"code": "793000", "label": "Loss to be carried forward", "type": "R"}, {"code": "794000", "label": "Intervention d'associés (ou du propriétaire) dans la perte", "type": "R"}]}}}, "0": {"label": "Class 0 — Off-balance Sheet Rights and Commitments", "groups": {"00": {"label": "Garanties constituées par des tiers pour compte de l'entreprise", "accounts": [{"code": "000000", "label": "Créanciers de l'entreprise, bénéficiaires de garanties de tiers", "type": "HB"}, {"code": "001000", "label": "Tiers constituants de garanties pour compte de l'entreprise", "type": "HB"}]}, "01": {"label": "Garanties personnelles constituées pour compte de tiers", "accounts": [{"code": "010000", "label": "Débiteurs pour engagements sur effets en circulation", "type": "HB"}, {"code": "011000", "label": "Créanciers d'engagements sur effets en circulation", "type": "HB"}, {"code": "011000", "label": "Effets cédés par l'entreprise sous son endos", "type": "HB"}, {"code": "011100", "label": "Autres engagements sur effets en circulation", "type": "HB"}, {"code": "012000", "label": "Débiteurs pour autres garanties personnelles", "type": "HB"}, {"code": "013000", "label": "Créanciers d'autres garanties personnelles", "type": "HB"}]}, "02": {"label": "Garanties réelles constituées sur avoirs propres", "accounts": [{"code": "020000", "label": "Créanciers de l'entreprise, bénéficiaires de garanties réelles", "type": "HB"}, {"code": "021000", "label": "Garanties réelles constituées pour compte propre", "type": "HB"}, {"code": "022000", "label": "Créanciers de tiers, bénéficiaires de garanties réelles", "type": "HB"}, {"code": "023000", "label": "Garanties réelles constituées pour compte de tiers", "type": "HB"}]}, "03": {"label": "Garanties reçues", "accounts": [{"code": "030000", "label": "Dépôts statutaires", "type": "HB"}, {"code": "031000", "label": "Déposants statutaires", "type": "HB"}, {"code": "032000", "label": "Garanties reçues", "type": "HB"}, {"code": "033000", "label": "Constituants de garanties", "type": "HB"}]}, "04": {"label": "Biens et valeurs détenus par des tiers en leur nom mais aux risques et profits de l'entreprise", "accounts": [{"code": "040000", "label": "Tiers, détenteurs en leur nom mais aux risques et profits de l'entreprise de biens et de valeurs", "type": "HB"}, {"code": "041000", "label": "Biens et valeurs détenus par des tiers en leur nom mais aux risques et profits de l'entreprise", "type": "HB"}]}, "05": {"label": "Engagements d'acquisition et de cession d'immobilisations", "accounts": [{"code": "050000", "label": "Engagements d'acquisition", "type": "HB"}, {"code": "051000", "label": "Créanciers d'engagements d'acquisition", "type": "HB"}, {"code": "052000", "label": "Débiteurs pour engagements de cession", "type": "HB"}, {"code": "053000", "label": "Engagements de cession", "type": "HB"}]}, "06": {"label": "Forward markets", "accounts": [{"code": "060000", "label": "Goods purchased forward — to be received", "type": "HB"}, {"code": "061000", "label": "Creditors for goods purchased forward", "type": "HB"}, {"code": "062000", "label": "Debtors for goods sold forward", "type": "HB"}, {"code": "063000", "label": "Goods sold forward — to be delivered", "type": "HB"}, {"code": "064000", "label": "Foreign currencies purchased forward — to be received", "type": "HB"}, {"code": "065000", "label": "Creditors for foreign currencies purchased forward", "type": "HB"}, {"code": "066000", "label": "Debtors for foreign currencies sold forward", "type": "HB"}, {"code": "067000", "label": "Foreign currencies sold forward — to be delivered", "type": "HB"}]}, "07": {"label": "Biens et valeurs de tiers détenus par l'établissement", "accounts": [{"code": "070000", "label": "Long-term usage rights", "type": "HB"}, {"code": "070000", "label": "Sur terrains et constructions", "type": "HB"}, {"code": "070100", "label": "Sur installations, machines et outillage", "type": "HB"}, {"code": "070200", "label": "Sur mobilier et matériel roulant", "type": "HB"}, {"code": "071000", "label": "Créanciers de loyers et redevances", "type": "HB"}, {"code": "072000", "label": "Assets and securities of third parties received on deposit, consignment or for processing", "type": "HB"}, {"code": "073000", "label": "Commettants et déposants de biens et de valeurs", "type": "HB"}, {"code": "074000", "label": "Biens et valeurs détenus pour comptes ou aux risques et profits de tiers", "type": "HB"}, {"code": "075000", "label": "Creditors for assets and securities held on behalf of third parties or at their risk and profit", "type": "HB"}]}, "09": {"label": "Droits et engagements divers", "accounts": [{"code": "090000", "label": "Engagements de résolution de concordat", "type": "HB"}, {"code": "091000", "label": "Créances de résolution de concordat", "type": "HB"}, {"code": "092000", "label": "Créanciers sous conditions concordataires", "type": "HB"}, {"code": "093000", "label": "Droits sur conditions concordataires", "type": "HB"}, {"code": "094000", "label": "Pending litigation", "type": "HB"}, {"code": "095000", "label": "Créanciers de litiges en cours", "type": "HB"}, {"code": "096000", "label": "Débiteurs sur garanties techniques", "type": "HB"}, {"code": "097000", "label": "Droits sur garanties techniques", "type": "HB"}, {"code": "098000", "label": "Titulaires d'options (d'achat ou de vente sur titres)", "type": "HB"}, {"code": "099000", "label": "Options (d'achat ou de vente) sur titres émis", "type": "HB"}]}}}};
+const PCMN_NPO = {"1": {"label": "Class 1 — Association Funds, Provisions & Long-term Liabilities", "groups": {"10": {"label": "Fonds de l'association ou de la fondation [A1]", "accounts": [{"code": "100000", "label": "Patrimoine de départ [A1]", "type": "P"}, {"code": "101000", "label": "Moyens permanents (dons, legs, subsides durables) [A1]", "type": "P"}]}, "12": {"label": "Plus-values de réévaluation [A2][A3]", "accounts": [{"code": "120000", "label": "Plus-values de réévaluation sur immobilisations incorporelles [A2]", "type": "P"}, {"code": "121000", "label": "Plus-values de réévaluation sur immobilisations corporelles [A2]", "type": "P"}, {"code": "122000", "label": "Plus-values de réévaluation sur immobilisations financières [A2]", "type": "P"}, {"code": "124000", "label": "Reprises de réductions de valeurs sur placements de trésorerie [A3]", "type": "P"}]}, "13": {"label": "Fonds affectés et autres réserves", "accounts": [{"code": "130000", "label": "Fonds affectés pour investissements", "type": "P"}, {"code": "131000", "label": "Fonds affectés pour passif social", "type": "P"}, {"code": "132000", "label": "Tax-exempt reserves", "type": "P"}, {"code": "139000", "label": "Autres fonds affectés et autres réserves", "type": "P"}]}, "14": {"label": "Résultats reportés (+)(-)", "accounts": [{"code": "140000", "label": "Résultat positif reporté", "type": "P"}, {"code": "141000", "label": "Carried-forward negative result (-)", "type": "P"}]}, "15": {"label": "Capital subsidies", "accounts": [{"code": "150000", "label": "Capital (or investment) subsidies", "type": "P"}, {"code": "151000", "label": "Capital subsidies transferred to income statement (-)", "type": "P"}]}, "16": {"label": "Provisions et impôts différés [A4]", "accounts": [{"code": "160000", "label": "Provisions for pensions and similar obligations", "type": "P"}, {"code": "161000", "label": "Provisions for tax charges", "type": "P"}, {"code": "162000", "label": "Provisions for major repairs and maintenance", "type": "P"}, {"code": "163000", "label": "Provisions for environmental obligations", "type": "P"}, {"code": "164000", "label": "Provisions pour autres risques et charges [A4]", "type": "P"}, {"code": "165000", "label": "Provisions pour autres risques et charges (suite) [A4]", "type": "P"}, {"code": "167000", "label": "Provisions pour remboursement de subsides, legs et dons avec droit de reprise ✦ Spécifique NPO", "type": "P"}, {"code": "168000", "label": "Deferred taxes", "type": "P"}]}, "17": {"label": "Liabilities due after one year", "accounts": [{"code": "170000", "label": "Subordinated loans", "type": "P"}, {"code": "171000", "label": "Non-subordinated bond loans", "type": "P"}, {"code": "172000", "label": "Finance lease liabilities and similar", "type": "P"}, {"code": "173000", "label": "Credit institutions — Account liabilities", "type": "P"}, {"code": "173100", "label": "Credit institutions — Promissory notes", "type": "P"}, {"code": "173200", "label": "Credit institutions — Acceptance credits", "type": "P"}, {"code": "174000", "label": "Other loans", "type": "P"}, {"code": "175000", "label": "Dettes commerciales — Fournisseurs", "type": "P"}, {"code": "175100", "label": "Trade payables — Bills payable", "type": "P"}, {"code": "176000", "label": "Advances on orders", "type": "P"}, {"code": "178000", "label": "Cash deposits", "type": "P"}, {"code": "179000", "label": "Other liabilities — Interest-bearing", "type": "P"}, {"code": "179100", "label": "Other liabilities — Non-interest-bearing or at abnormally low rate", "type": "P"}]}}}, "2": {"label": "Class 2 — Formation Expenses, Non-current Assets & Long-term Receivables", "groups": {"20": {"label": "Formation expenses [A5]", "accounts": [{"code": "200000", "label": "Incorporation costs", "type": "A"}, {"code": "201000", "label": "Loan issuance costs", "type": "A"}, {"code": "202000", "label": "Other formation expenses", "type": "A"}, {"code": "204000", "label": "Restructuring costs", "type": "A"}]}, "21": {"label": "Intangible fixed assets [A6]", "accounts": [{"code": "210000", "label": "Research and development costs", "type": "A"}, {"code": "211000", "label": "Concessions, patents, licences, know-how, trademarks and similar rights", "type": "A"}, {"code": "212000", "label": "Goodwill", "type": "A"}, {"code": "213000", "label": "Advances paid [A8]", "type": "A"}]}, "22": {"label": "Land and buildings [A6][A7]", "accounts": [{"code": "220000", "label": "Land — Acquisition value", "type": "A"}, {"code": "220800", "label": "Terrains — Plus-values actées", "type": "A"}, {"code": "220900", "label": "Terrains — Réductions de valeur actées (-)", "type": "A"}, {"code": "221000", "label": "Buildings — Acquisition value", "type": "A"}, {"code": "221800", "label": "Constructions — Plus-values actées", "type": "A"}, {"code": "221900", "label": "Constructions — Amortissements et réductions de valeur actés (-)", "type": "A"}, {"code": "222000", "label": "Built-up land — Acquisition value [A7]", "type": "A"}, {"code": "222800", "label": "Built-up land — Recorded surpluses", "type": "A"}, {"code": "222900", "label": "Built-up land — Depreciation and write-downs (-)", "type": "A"}, {"code": "223000", "label": "Other real rights on property — Acquisition value", "type": "A"}, {"code": "223800", "label": "Other real rights — Recorded surpluses", "type": "A"}, {"code": "223900", "label": "Other real rights — Depreciation and write-downs (-)", "type": "A"}]}, "23": {"label": "Plant, machinery and equipment [A6]", "accounts": [{"code": "230000", "label": "Acquisition value", "type": "A"}, {"code": "238000", "label": "Recorded surpluses", "type": "A"}, {"code": "239000", "label": "Amortissements et réductions de valeur actés (-)", "type": "A"}]}, "24": {"label": "Furniture and rolling stock [A6]", "accounts": [{"code": "240000", "label": "Acquisition value", "type": "A"}, {"code": "248000", "label": "Recorded surpluses", "type": "A"}, {"code": "249000", "label": "Amortissements et réductions de valeur actés (-)", "type": "A"}]}, "25": {"label": "Assets held under finance leases and similar rights [A6]", "accounts": [{"code": "250000", "label": "Land and buildings — Acquisition value", "type": "A"}, {"code": "250800", "label": "Land and buildings — Recorded surpluses", "type": "A"}, {"code": "250900", "label": "Land and buildings — Depreciation (-)", "type": "A"}, {"code": "251000", "label": "Plant, machinery and equipment — Acquisition value", "type": "A"}, {"code": "251800", "label": "Plant, machinery and equipment — Recorded surpluses", "type": "A"}, {"code": "251900", "label": "Plant, machinery and equipment — Depreciation (-)", "type": "A"}, {"code": "252000", "label": "Furniture and rolling stock — Acquisition value", "type": "A"}, {"code": "252800", "label": "Furniture and rolling stock — Recorded surpluses", "type": "A"}, {"code": "252900", "label": "Furniture and rolling stock — Depreciation (-)", "type": "A"}]}, "26": {"label": "Other tangible fixed assets [A6]", "accounts": [{"code": "260000", "label": "Acquisition value", "type": "A"}, {"code": "268000", "label": "Recorded surpluses", "type": "A"}, {"code": "269000", "label": "Amortissements et réductions de valeur actés (-)", "type": "A"}]}, "27": {"label": "Tangible fixed assets under construction and advances paid [A6][A8]", "accounts": [{"code": "270000", "label": "Acquisition value", "type": "A"}, {"code": "279000", "label": "Recorded write-downs (-)", "type": "A"}]}, "28": {"label": "Financial fixed assets [A6]", "accounts": [{"code": "280000", "label": "Equity interests in affiliated companies — Acquisition value", "type": "A"}, {"code": "280100", "label": "Equity interests in affiliated companies — Uncalled amounts (-)", "type": "A"}, {"code": "280800", "label": "Equity interests in affiliated companies — Recorded surpluses", "type": "A"}, {"code": "280900", "label": "Equity interests in affiliated companies — Recorded write-downs (-)", "type": "A"}, {"code": "281000", "label": "Receivables from affiliated entities — on account", "type": "A"}, {"code": "281100", "label": "Receivables from affiliated entities — Bills receivable", "type": "A"}, {"code": "281200", "label": "Receivables from affiliated entities — Fixed-income securities", "type": "A"}, {"code": "281700", "label": "Receivables from affiliated entities — Doubtful", "type": "A"}, {"code": "281900", "label": "Receivables from affiliated entities — Recorded write-downs (-)", "type": "A"}, {"code": "282000", "label": "Equity interests — participation link — Acquisition value", "type": "A"}, {"code": "282100", "label": "Equity interests — participation link — Uncalled amounts (-)", "type": "A"}, {"code": "282800", "label": "Equity interests — participation link — Recorded surpluses", "type": "A"}, {"code": "282900", "label": "Equity interests — participation link — Write-downs (-)", "type": "A"}, {"code": "283000", "label": "Receivables — participation link — on account", "type": "A"}, {"code": "283100", "label": "Receivables — participation link — Bills receivable", "type": "A"}, {"code": "283200", "label": "Receivables — participation link — Fixed-income securities", "type": "A"}, {"code": "283700", "label": "Receivables — participation link — Doubtful", "type": "A"}, {"code": "283900", "label": "Receivables — participation link — Write-downs (-)", "type": "A"}, {"code": "284000", "label": "Other shares and interests — Acquisition value", "type": "A"}, {"code": "284100", "label": "Other shares and interests — Uncalled amounts (-)", "type": "A"}, {"code": "284800", "label": "Other shares and interests — Recorded surpluses", "type": "A"}, {"code": "284900", "label": "Other shares and interests — Recorded write-downs (-)", "type": "A"}, {"code": "285000", "label": "Other receivables — on account", "type": "A"}, {"code": "285100", "label": "Other receivables — Bills receivable", "type": "A"}, {"code": "285200", "label": "Other receivables — Fixed-income securities", "type": "A"}, {"code": "285700", "label": "Other receivables — Doubtful", "type": "A"}, {"code": "285900", "label": "Other receivables — Recorded write-downs (-)", "type": "A"}, {"code": "288000", "label": "Cash deposits paid", "type": "A"}]}, "29": {"label": "Receivables due after one year [A13]", "accounts": [{"code": "290000", "label": "Trade receivables — Customers", "type": "A"}, {"code": "290100", "label": "Trade receivables — Bills receivable", "type": "A"}, {"code": "290600", "label": "Trade receivables — Advances paid [A8]", "type": "A"}, {"code": "290700", "label": "Trade receivables — Doubtful", "type": "A"}, {"code": "290900", "label": "Trade receivables — Recorded write-downs (-)", "type": "A"}, {"code": "291000", "label": "Other receivables — on account", "type": "A"}, {"code": "291100", "label": "Other receivables — Bills receivable", "type": "A"}, {"code": "291200", "label": "Other receivables — Subsidies receivable", "type": "A"}, {"code": "291500", "label": "Other receivables — Non-interest-bearing or at abnormally low rate", "type": "A"}, {"code": "291600", "label": "Other receivables — Doubtful", "type": "A"}, {"code": "291900", "label": "Other receivables — Recorded write-downs (-)", "type": "A"}]}}}, "3": {"label": "Class 3 — Inventories & Work in Progress", "groups": {"30": {"label": "Raw materials [A9][A10][A11]", "accounts": [{"code": "300000", "label": "Valeur d'acquisition [A10]", "type": "A"}, {"code": "309000", "label": "Réductions de valeur actées (-) [A11]", "type": "A"}]}, "31": {"label": "Supplies [A9][A10][A11]", "accounts": [{"code": "310000", "label": "Valeur d'acquisition [A10]", "type": "A"}, {"code": "319000", "label": "Réductions de valeur actées (-) [A11]", "type": "A"}]}, "32": {"label": "Work in progress [A9][A11]", "accounts": [{"code": "320000", "label": "Acquisition value", "type": "A"}, {"code": "329000", "label": "Recorded write-downs (-)", "type": "A"}]}, "33": {"label": "Finished goods [A9][A10][A11]", "accounts": [{"code": "330000", "label": "Valeur d'acquisition [A10]", "type": "A"}, {"code": "339000", "label": "Recorded write-downs (-)", "type": "A"}]}, "34": {"label": "Goods for resale [A9][A10][A11]", "accounts": [{"code": "340000", "label": "Valeur d'acquisition [A10]", "type": "A"}, {"code": "349000", "label": "Recorded write-downs (-)", "type": "A"}]}, "35": {"label": "Properties held for sale [A9][A11]", "accounts": [{"code": "350000", "label": "Acquisition value", "type": "A"}, {"code": "359000", "label": "Recorded write-downs (-)", "type": "A"}]}, "36": {"label": "Advances paid on inventory purchases [A11]", "accounts": [{"code": "360000", "label": "Advances paid", "type": "A"}, {"code": "369000", "label": "Recorded write-downs (-)", "type": "A"}]}, "37": {"label": "Contracts in progress [A12]", "accounts": [{"code": "370000", "label": "Acquisition value", "type": "A"}, {"code": "371000", "label": "Profit recognised", "type": "A"}, {"code": "379000", "label": "Recorded write-downs (-)", "type": "A"}]}}}, "4": {"label": "Class 4 — Receivables & Liabilities Due Within One Year", "groups": {"40": {"label": "Trade receivables [A13][A14]", "accounts": [{"code": "400000", "label": "Customers [A14]", "type": "A"}, {"code": "401000", "label": "Bills receivable", "type": "A"}, {"code": "404000", "label": "Income receivable [A15]", "type": "A"}, {"code": "406000", "label": "Advances paid [A16]", "type": "A"}, {"code": "407000", "label": "Doubtful receivables", "type": "A"}, {"code": "409000", "label": "Réductions de valeurs actées (-)", "type": "A"}]}, "41": {"label": "Other receivables [A13]", "accounts": [{"code": "410000", "label": "Other sundry receivables", "type": "A"}, {"code": "411000", "label": "VAT recoverable", "type": "A"}, {"code": "412000", "label": "Belgian taxes recoverable (4120 to 4124)", "type": "A"}, {"code": "412500", "label": "Other Belgian taxes recoverable (4125 to 4127)", "type": "A"}, {"code": "412800", "label": "Foreign taxes recoverable", "type": "A"}, {"code": "413000", "label": "Subsidies receivable", "type": "A"}, {"code": "414000", "label": "Income receivable", "type": "A"}, {"code": "415000", "label": "Non-interest-bearing receivables or at abnormally low rate", "type": "A"}, {"code": "416000", "label": "Sundry receivables", "type": "A"}, {"code": "417000", "label": "Doubtful receivables", "type": "A"}, {"code": "418000", "label": "Cash deposits paid", "type": "A"}, {"code": "419000", "label": "Réductions de valeurs actées (-)", "type": "A"}]}, "42": {"label": "Long-term liabilities falling due within the year [A17]", "accounts": [{"code": "420000", "label": "Same breakdown as account 17 — transfer at year end only [A17]", "type": "P"}]}, "43": {"label": "Financial liabilities", "accounts": [{"code": "430000", "label": "Credit institutions — Fixed-term account loans", "type": "P"}, {"code": "431000", "label": "Credit institutions — Promissory notes", "type": "P"}, {"code": "432000", "label": "Credit institutions — Acceptance credits", "type": "P"}, {"code": "433000", "label": "Credit institutions — Current account liabilities [A19]", "type": "P"}, {"code": "439000", "label": "Other loans", "type": "P"}]}, "44": {"label": "Trade payables [A20][A21]", "accounts": [{"code": "440000", "label": "Suppliers [A20]", "type": "P"}, {"code": "441000", "label": "Bills payable", "type": "P"}, {"code": "444000", "label": "Invoices to receive [A21]", "type": "P"}]}, "45": {"label": "Tax, payroll and social security liabilities", "accounts": [{"code": "450000", "label": "Estimated tax liabilities — Belgian taxes (4500 to 4504)", "type": "P"}, {"code": "450500", "label": "Tax liabilities — Other Belgian taxes (4505 to 4507)", "type": "P"}, {"code": "450800", "label": "Tax liabilities — Foreign taxes", "type": "P"}, {"code": "451000", "label": "VAT payable", "type": "P"}, {"code": "452000", "label": "Taxes payable — Belgian taxes (4520 to 4524)", "type": "P"}, {"code": "452500", "label": "Taxes payable — Other Belgian taxes (4525 to 4527)", "type": "P"}, {"code": "452800", "label": "Taxes payable — Foreign", "type": "P"}, {"code": "453000", "label": "Withheld prepayments", "type": "P"}, {"code": "454000", "label": "National Social Security Office (NSSO)", "type": "P"}, {"code": "455000", "label": "Remuneration", "type": "P"}, {"code": "456000", "label": "Holiday pay", "type": "P"}, {"code": "459000", "label": "Other social security liabilities", "type": "P"}]}, "46": {"label": "Advances on orders", "accounts": [{"code": "460000", "label": "Advances received on orders", "type": "P"}]}, "48": {"label": "Other payables", "accounts": [{"code": "480000", "label": "Matured bonds and coupons", "type": "P"}, {"code": "483000", "label": "Subsidies to be repaid ✦ NPO-specific", "type": "P"}, {"code": "488000", "label": "Cash deposits received", "type": "P"}, {"code": "489000", "label": "Other sundry liabilities — Interest-bearing", "type": "P"}, {"code": "489100", "label": "Other sundry liabilities — Non-interest-bearing or at abnormally low rate", "type": "P"}]}, "49": {"label": "Accruals and deferred accounts", "accounts": [{"code": "490000", "label": "Prepaid expenses [A]", "type": "A/P"}, {"code": "491000", "label": "Accrued income [A]", "type": "A/P"}, {"code": "492000", "label": "Accrued expenses [P]", "type": "A/P"}, {"code": "493000", "label": "Deferred income [P]", "type": "A/P"}, {"code": "499000", "label": "Suspense accounts", "type": "A/P"}]}}}, "5": {"label": "Class 5 — Short-term Investments & Cash", "groups": {"50": {"label": "Short-term investments (excluding shares, fixed-income securities and term deposits)", "accounts": [{"code": "500000", "label": "Acquisition value", "type": "A"}, {"code": "509000", "label": "Réductions de valeurs actées (-)", "type": "A"}]}, "51": {"label": "Shares and interests", "accounts": [{"code": "510000", "label": "Acquisition value", "type": "A"}, {"code": "511000", "label": "Uncalled amounts (-)", "type": "A"}, {"code": "519000", "label": "Recorded write-downs (-)", "type": "A"}]}, "52": {"label": "Fixed-income securities", "accounts": [{"code": "520000", "label": "Acquisition value", "type": "A"}, {"code": "529000", "label": "Réductions de valeurs actées (-)", "type": "A"}]}, "53": {"label": "Term deposits", "accounts": [{"code": "530000", "label": "Deposits over one year", "type": "A"}, {"code": "531000", "label": "Deposits over one month and up to one year", "type": "A"}, {"code": "532000", "label": "Deposits up to one month", "type": "A"}, {"code": "539000", "label": "Recorded write-downs (-)", "type": "A"}]}, "54": {"label": "Matured securities for collection [A22]", "accounts": [{"code": "540000", "label": "Matured securities transferred for collection [A22]", "type": "A"}]}, "55": {"label": "Credit institutions [A23]", "accounts": [{"code": "550000", "label": "Current accounts (550 to 559, index …0)", "type": "A"}, {"code": "550100", "label": "Cheques issued (-) (index …1)", "type": "A"}, {"code": "550900", "label": "Recorded write-downs (-) (index …9)", "type": "A"}]}, "57": {"label": "Cash", "accounts": [{"code": "570000", "label": "Cash registers (570 to 577)", "type": "A"}, {"code": "578000", "label": "Stamp registers", "type": "A"}]}, "58": {"label": "Internal transfers", "accounts": [{"code": "580000", "label": "Internal transfers in transit", "type": "A"}]}}}, "6": {"label": "Class 6 — Expenses", "groups": {"60": {"label": "Raw materials and goods [A25][A26]", "accounts": [{"code": "600000", "label": "Purchases of raw materials", "type": "R"}, {"code": "601000", "label": "Purchases of consumables", "type": "R"}, {"code": "602000", "label": "Purchases of services, works and studies", "type": "R"}, {"code": "603000", "label": "General subcontracting", "type": "R"}, {"code": "604000", "label": "Purchases of goods for resale", "type": "R"}, {"code": "605000", "label": "Purchases of properties held for sale", "type": "R"}, {"code": "608000", "label": "Discounts and rebates obtained (-) [A26]", "type": "R"}, {"code": "609000", "label": "Change in inventories — raw materials", "type": "R"}, {"code": "609100", "label": "Change in inventories — consumables", "type": "R"}, {"code": "609400", "label": "Change in inventories — goods for resale", "type": "R"}, {"code": "609500", "label": "Change in inventories — properties held for sale", "type": "R"}]}, "61": {"label": "Miscellaneous goods and services [A27]", "accounts": [{"code": "610000", "label": "Rent and rental charges", "type": "R"}, {"code": "611000", "label": "Maintenance, repairs and cleaning", "type": "R"}, {"code": "612000", "label": "Miscellaneous supplies and energy", "type": "R"}, {"code": "613000", "label": "Professional fees, commissions and third-party payments", "type": "R"}, {"code": "614000", "label": "Insurance (excluding social insurance)", "type": "R"}, {"code": "615000", "label": "Transport and travel", "type": "R"}, {"code": "616000", "label": "Post, telephone, communication and advertising", "type": "R"}, {"code": "617000", "label": "Temporary staff and persons made available [A27]", "type": "R"}, {"code": "618000", "label": "Remuneration and pensions of non-salaried directors [A27]", "type": "R"}, {"code": "619000", "label": "Other miscellaneous goods and services", "type": "R"}]}, "62": {"label": "Remuneration, social charges and pensions [A27]", "accounts": [{"code": "620000", "label": "Remuneration and social benefits — Directors or managers [A27]", "type": "R"}, {"code": "620100", "label": "Remuneration and social benefits — Management staff", "type": "R"}, {"code": "620200", "label": "Remuneration and social benefits — White-collar employees", "type": "R"}, {"code": "620300", "label": "Remuneration and social benefits — Blue-collar workers", "type": "R"}, {"code": "620400", "label": "Remuneration and social benefits — Other staff members", "type": "R"}, {"code": "621000", "label": "Employer contributions for social insurance", "type": "R"}, {"code": "622000", "label": "Employer premiums for supplementary insurance", "type": "R"}, {"code": "623000", "label": "Other staff costs", "type": "R"}, {"code": "624000", "label": "Retirement and survivor's pensions — Directors or managers [A27]", "type": "R"}, {"code": "624100", "label": "Retirement and survivor's pensions — Staff", "type": "R"}]}, "63": {"label": "Depreciation, write-downs and provisions", "accounts": [{"code": "630000", "label": "Amortisation of formation expenses", "type": "R"}, {"code": "630100", "label": "Amortisation of intangible fixed assets", "type": "R"}, {"code": "630200", "label": "Depreciation of tangible fixed assets", "type": "R"}, {"code": "630800", "label": "Write-downs on intangible fixed assets", "type": "R"}, {"code": "630900", "label": "Write-downs on tangible fixed assets", "type": "R"}, {"code": "631000", "label": "Write-downs on inventories — charge", "type": "R"}, {"code": "631100", "label": "Write-downs on inventories — reversals (-)", "type": "R"}, {"code": "632000", "label": "Write-downs on contracts in progress — charge", "type": "R"}, {"code": "632100", "label": "Write-downs on contracts in progress — reversals (-)", "type": "R"}, {"code": "633000", "label": "Write-downs on trade receivables >1 year — charge", "type": "R"}, {"code": "633100", "label": "Write-downs on trade receivables >1 year — reversals (-)", "type": "R"}, {"code": "634000", "label": "Write-downs on receivables ≤1 year — charge", "type": "R"}, {"code": "634100", "label": "Write-downs on receivables ≤1 year — reversals (-)", "type": "R"}, {"code": "635000", "label": "Provisions for pensions and similar obligations — charge", "type": "R"}, {"code": "635100", "label": "Provisions for pensions and similar obligations — use and reversals (-)", "type": "R"}, {"code": "636000", "label": "Provisions for major repairs — charge", "type": "R"}, {"code": "636100", "label": "Provisions for major repairs — use and reversals (-)", "type": "R"}, {"code": "637000", "label": "Provisions for environmental obligations — charge", "type": "R"}, {"code": "637100", "label": "Provisions for environmental obligations — use and reversals (-)", "type": "R"}, {"code": "638000", "label": "Provisions for subsidies and legacies to be repaid and donations with right of recovery — charge ✦", "type": "R"}, {"code": "638100", "label": "Provisions for subsidies and legacies to be repaid — use and reversals (-) ✦", "type": "R"}, {"code": "639000", "label": "Provisions for other risks and charges — charge", "type": "R"}, {"code": "639100", "label": "Provisions for other risks and charges — use and reversals (-)", "type": "R"}]}, "64": {"label": "Other operating expenses", "accounts": [{"code": "640000", "label": "Tax charges", "type": "R"}, {"code": "641000", "label": "Losses on routine disposals of tangible fixed assets", "type": "R"}, {"code": "642000", "label": "Moins-values sur réalisations de créances commerciales", "type": "R"}, {"code": "644000", "label": "Miscellaneous operating expenses (644 to 648)", "type": "R"}, {"code": "649000", "label": "Operating costs capitalised as restructuring costs (-)", "type": "R"}]}, "65": {"label": "Financial charges", "accounts": [{"code": "650000", "label": "Debt costs — Interest, commissions and charges", "type": "R"}, {"code": "650100", "label": "Debt costs — Amortisation of loan issuance costs", "type": "R"}, {"code": "650200", "label": "Debt costs — Capitalised interest during construction (-)", "type": "R"}, {"code": "651000", "label": "Write-downs on current assets [A28] — charge", "type": "R"}, {"code": "651100", "label": "Write-downs on current assets — reversals (-)", "type": "R"}, {"code": "652000", "label": "Losses on disposal of current assets [A28]", "type": "R"}, {"code": "653000", "label": "Discount charges on receivables", "type": "R"}, {"code": "654000", "label": "Exchange differences [A28]", "type": "R"}, {"code": "655000", "label": "Foreign currency translation differences [A28]", "type": "R"}, {"code": "656000", "label": "Provisions of a financial nature — charge", "type": "R"}, {"code": "656100", "label": "Provisions of a financial nature — use and reversals (-)", "type": "R"}, {"code": "657000", "label": "Miscellaneous financial charges (657–658)", "type": "R"}, {"code": "659000", "label": "Financial charges capitalised as restructuring costs (-)", "type": "R"}]}, "66": {"label": "Non-recurring operating or financial charges", "accounts": [{"code": "660000", "label": "Non-recurring depreciation and write-downs — on formation expenses", "type": "R"}, {"code": "660100", "label": "Non-recurring depreciation and write-downs — on intangible assets", "type": "R"}, {"code": "660200", "label": "Non-recurring depreciation and write-downs — on tangible assets", "type": "R"}, {"code": "661000", "label": "Write-down on financial fixed assets (charge)", "type": "R"}, {"code": "662000", "label": "Provisions for non-recurring operating risks — charge", "type": "R"}, {"code": "662010", "label": "Provisions for non-recurring operating risks — use (-)", "type": "R"}, {"code": "662100", "label": "Provisions for non-recurring financial risks — charge", "type": "R"}, {"code": "662110", "label": "Provisions for non-recurring financial risks — use (-)", "type": "R"}, {"code": "663000", "label": "Losses on disposal of intangible and tangible assets", "type": "R"}, {"code": "663100", "label": "Losses on disposal of fixed assets", "type": "R"}, {"code": "664000", "label": "Other non-recurring operating charges (664 to 667)", "type": "R"}, {"code": "668000", "label": "Other non-recurring financial charges", "type": "R"}, {"code": "669000", "label": "Non-recurring operating costs capitalised as restructuring costs (-)", "type": "R"}, {"code": "669100", "label": "Non-recurring financial costs capitalised as restructuring costs (-)", "type": "R"}]}, "67": {"label": "Taxes", "accounts": [{"code": "670000", "label": "Belgian income taxes — taxes and withholding taxes due or paid", "type": "R"}, {"code": "670100", "label": "Belgian taxes — excess payments capitalised (-)", "type": "R"}, {"code": "670200", "label": "Belgian taxes — estimated tax charges", "type": "R"}, {"code": "671000", "label": "Belgian taxes prior years — supplements due or paid", "type": "R"}, {"code": "671100", "label": "Belgian taxes prior years — estimated supplements", "type": "R"}, {"code": "671200", "label": "Belgian taxes prior years — tax provisions established", "type": "R"}, {"code": "672000", "label": "Foreign income taxes for the year", "type": "R"}, {"code": "673000", "label": "Foreign income taxes for prior years", "type": "R"}]}, "68": {"label": "Transfers to deferred taxes and tax-exempt reserves", "accounts": [{"code": "680000", "label": "Transfers to deferred taxes", "type": "R"}, {"code": "689000", "label": "Transfers to tax-exempt reserves", "type": "R"}]}, "69": {"label": "Appropriation of results", "accounts": [{"code": "690000", "label": "Carried-forward negative result from prior year", "type": "R"}, {"code": "691000", "label": "Transfer to restricted funds and other reserves", "type": "R"}, {"code": "692000", "label": "Positive result to be carried forward", "type": "R"}]}}}, "7": {"label": "Class 7 — Income", "groups": {"70": {"label": "Turnover [A30]", "accounts": [{"code": "700000", "label": "Sales and services rendered (700 to 707)", "type": "R"}, {"code": "708000", "label": "Discounts and rebates granted (-) [A30]", "type": "R"}]}, "71": {"label": "Change in inventories and contracts in progress", "accounts": [{"code": "712000", "label": "Of work in progress", "type": "R"}, {"code": "713000", "label": "Of finished goods", "type": "R"}, {"code": "715000", "label": "Of constructed properties held for sale", "type": "R"}, {"code": "717000", "label": "Of contracts in progress — acquisition value", "type": "R"}, {"code": "717100", "label": "Of contracts in progress — profit recognised", "type": "R"}]}, "72": {"label": "Own work capitalised", "accounts": [{"code": "720000", "label": "Own work capitalised", "type": "R"}]}, "73": {"label": "Membership fees, donations, legacies and subsidies ✦ NPO/Foundation-specific account", "accounts": [{"code": "730000", "label": "Membership fees", "type": "R"}, {"code": "731000", "label": "Donations [A31]", "type": "R"}, {"code": "732000", "label": "Legacies", "type": "R"}, {"code": "733000", "label": "Subsidies", "type": "R"}]}, "74": {"label": "Other operating income", "accounts": [{"code": "740000", "label": "Operating subsidies and compensatory amounts", "type": "R"}, {"code": "741000", "label": "Gains on routine disposals of tangible fixed assets", "type": "R"}, {"code": "742000", "label": "Gains on disposal of trade receivables", "type": "R"}, {"code": "743000", "label": "Miscellaneous operating income (743 to 749)", "type": "R"}]}, "75": {"label": "Financial income [A32]", "accounts": [{"code": "750000", "label": "Income from financial fixed assets", "type": "R"}, {"code": "751000", "label": "Income from current assets [A32]", "type": "R"}, {"code": "752000", "label": "Gains on disposal of current assets [A32]", "type": "R"}, {"code": "753000", "label": "Capital and interest subsidies", "type": "R"}, {"code": "754000", "label": "Exchange differences [A28]", "type": "R"}, {"code": "755000", "label": "Foreign currency translation differences [A28]", "type": "R"}, {"code": "756000", "label": "Miscellaneous financial income (756 to 759)", "type": "R"}]}, "76": {"label": "Non-recurring operating or financial income", "accounts": [{"code": "760000", "label": "Reversals of depreciation and write-downs on intangible assets", "type": "R"}, {"code": "760100", "label": "Reversals of depreciation and write-downs on tangible assets", "type": "R"}, {"code": "761000", "label": "Reversals of write-downs on financial fixed assets", "type": "R"}, {"code": "762000", "label": "Reversals of provisions for non-recurring operating risks", "type": "R"}, {"code": "762100", "label": "Reversals of provisions for non-recurring financial risks", "type": "R"}, {"code": "763000", "label": "Gains on disposal of intangible and tangible assets", "type": "R"}, {"code": "763100", "label": "Gains on disposal of fixed assets", "type": "R"}, {"code": "764000", "label": "Other non-recurring operating income (764 to 768)", "type": "R"}, {"code": "769000", "label": "Other non-recurring financial income", "type": "R"}]}, "77": {"label": "Tax regularisation", "accounts": [{"code": "770000", "label": "Regularisation of Belgian income taxes", "type": "R"}, {"code": "773000", "label": "Regularisation of foreign income taxes", "type": "R"}]}, "78": {"label": "Drawdowns on tax-exempt reserves and deferred taxes", "accounts": [{"code": "780000", "label": "Drawdown on deferred taxes", "type": "R"}, {"code": "789000", "label": "Drawdown on tax-exempt reserves", "type": "R"}]}, "79": {"label": "Appropriation of results", "accounts": [{"code": "790000", "label": "Résultat positif de l'exercice antérieur reporté", "type": "R"}, {"code": "791000", "label": "Autres réserves (prélèvements)", "type": "R"}, {"code": "792000", "label": "Negative result to be carried forward", "type": "R"}]}}}, "0": {"label": "Class 0 — Off-balance Sheet Rights and Commitments", "groups": {"00": {"label": "Garanties constituées par des tiers pour compte de l'association ou de la fondation", "accounts": [{"code": "000000", "label": "Créanciers de l'association, bénéficiaires de garanties de tiers", "type": "HB"}, {"code": "001000", "label": "Tiers constituants de garanties pour compte de l'association", "type": "HB"}]}, "01": {"label": "Garanties personnelles pour compte de tiers", "accounts": [{"code": "010000", "label": "Débiteurs pour engagements sur effets en circulation", "type": "HB"}, {"code": "011000", "label": "Créanciers d'engagements — Effets cédés sous endos de l'association", "type": "HB"}, {"code": "011100", "label": "Créanciers d'engagements — Autres engagements sur effets en circulation", "type": "HB"}, {"code": "012000", "label": "Débiteurs pour autres garanties personnelles", "type": "HB"}, {"code": "013000", "label": "Créanciers d'autres garanties personnelles", "type": "HB"}]}, "02": {"label": "Garanties réelles constituées sur avoirs propres", "accounts": [{"code": "020000", "label": "Créanciers de l'association, bénéficiaires de garanties réelles", "type": "HB"}, {"code": "021000", "label": "Garanties réelles constituées pour compte propre", "type": "HB"}, {"code": "022000", "label": "Créanciers de tiers, bénéficiaires de garanties réelles", "type": "HB"}, {"code": "023000", "label": "Garanties réelles constituées pour compte de tiers", "type": "HB"}]}, "03": {"label": "Garanties reçues", "accounts": [{"code": "032000", "label": "Garanties reçues", "type": "HB"}, {"code": "033000", "label": "Constituants de garanties", "type": "HB"}]}, "04": {"label": "Biens et valeurs détenus par des tiers aux risques et profits de l'association", "accounts": [{"code": "040000", "label": "Tiers détenteurs de biens aux risques et profits de l'association", "type": "HB"}, {"code": "041000", "label": "Biens et valeurs détenus par des tiers aux risques et profits de l'association", "type": "HB"}]}, "05": {"label": "Engagements d'acquisition et de cession d'immobilisations", "accounts": [{"code": "050000", "label": "Engagements d'acquisition", "type": "HB"}, {"code": "051000", "label": "Créanciers d'engagements d'acquisition", "type": "HB"}, {"code": "052000", "label": "Débiteurs pour engagements de cession", "type": "HB"}, {"code": "053000", "label": "Engagements de cession", "type": "HB"}]}, "06": {"label": "Forward markets", "accounts": [{"code": "060000", "label": "Goods purchased forward — to be received", "type": "HB"}, {"code": "061000", "label": "Creditors for goods purchased forward", "type": "HB"}, {"code": "062000", "label": "Debtors for goods sold forward", "type": "HB"}, {"code": "063000", "label": "Goods sold forward — to be delivered", "type": "HB"}, {"code": "064000", "label": "Foreign currencies purchased forward — to be received", "type": "HB"}, {"code": "065000", "label": "Creditors for foreign currencies purchased forward", "type": "HB"}, {"code": "066000", "label": "Debtors for foreign currencies sold forward", "type": "HB"}, {"code": "067000", "label": "Foreign currencies sold forward — to be delivered", "type": "HB"}]}, "07": {"label": "Biens et valeurs de tiers détenus par l'association ou la fondation", "accounts": [{"code": "070000", "label": "Long-term usage rights on land and buildings", "type": "HB"}, {"code": "070100", "label": "Long-term usage rights on plant, machinery and equipment", "type": "HB"}, {"code": "070200", "label": "Long-term usage rights on furniture and rolling stock", "type": "HB"}, {"code": "071000", "label": "Créanciers de loyers et redevances", "type": "HB"}, {"code": "072000", "label": "Assets and securities of third parties received on deposit, consignment or for processing", "type": "HB"}, {"code": "073000", "label": "Commettants et déposants de biens et de valeurs", "type": "HB"}, {"code": "074000", "label": "Biens et valeurs détenus pour compte ou aux risques et profits de tiers", "type": "HB"}, {"code": "075000", "label": "Créanciers de biens et valeurs détenus pour compte de tiers", "type": "HB"}]}, "09": {"label": "Droits et engagements divers", "accounts": [{"code": "090000", "label": "Droits et engagements divers hors bilan", "type": "HB"}]}}}};
+
+const CLASS_META = {
+  '1':{icon:'🏛️',color:'#1A7A8A',short:'Equity, Provisions & LT Liabilities'},
+  '2':{icon:'🏗️',color:'#2E7D32',short:'Non-current assets'},
+  '3':{icon:'📦',color:'#E65100',short:'Inventories & work in progress'},
+  '4':{icon:'🔄',color:'#6A1B9A',short:'Receivables & Short-term liabilities'},
+  '5':{icon:'💰',color:'#0277BD',short:'Short-term investments & Cash'},
+  '6':{icon:'📤',color:'#C62828',short:'Expenses'},
+  '7':{icon:'📥',color:'#2E7D32',short:'Income'},
+  '0':{icon:'⚖️',color:'#5D4037',short:'Off-balance sheet rights & commitments'},
+};
+
+let currentEntity = 'societe';
+let currentSearch = '';
+
+// ── Navigation dropdown ──────────────────────
+function toggleDD(e){
+  e.stopPropagation();
+  document.getElementById('ddMenu').classList.toggle('open');
+}
+document.addEventListener('click', () => document.getElementById('ddMenu').classList.remove('open'));
+
+// ── Entity switch ────────────────────────────
+function switchEntity(e){
+  currentEntity = e;
+  document.getElementById('btn-societe').classList.toggle('active', e==='societe');
+  document.getElementById('btn-asbl').classList.toggle('active', e==='asbl');
+  const data = e==='societe' ? PCMN_SOC : PCMN_NPO;
+  const total = Object.values(data).reduce((s,cl)=>s+Object.values(cl.groups).reduce((ss,g)=>ss+g.accounts.length,0),0);
+  document.getElementById('statComptes').textContent = total;
+  document.getElementById('searchInput').value = '';
+  currentSearch = '';
+  document.getElementById('searchCount').textContent = '';
+  renderAll(data);
+  renderToc(data);
+}
+
+// ── Render ───────────────────────────────────
+function renderAll(data, search=''){
+  const container = document.getElementById('pcmnContent');
+  const noRes = document.getElementById('noResults');
+  let totalVisible = 0;
+  let html = '';
+
+  const classOrder = ['1','2','3','4','5','6','7','0'];
+  for(const clKey of classOrder){
+    if(!data[clKey]) continue;
+    const cl = data[clKey];
+    const meta = CLASS_META[clKey] || {icon:'📋',color:'#1A7A8A',short:''};
+
+    let classAccCount = 0;
+    let groupsHtml = '';
+    let classVisible = false;
+
+    for(const [gKey, grp] of Object.entries(cl.groups)){
+      let accsHtml = '';
+      let groupVisible = false;
+
+      for(const acc of grp.accounts){
+        const matchSearch = !search ||
+          acc.code.includes(search) ||
+          acc.label.toLowerCase().includes(search.toLowerCase());
+
+        if(matchSearch){
+          groupVisible = true;
+          classVisible = true;
+          totalVisible++;
+          const labelHtml = search ? highlight(acc.label, search) : escHtml(acc.label);
+          const codeHtml = search && acc.code.includes(search) ? `<span class="hl">${acc.code}</span>` : acc.code;
+          const typeBadge = acc.type ? `<span class="acc-type type-${acc.type}">${acc.type}</span>` : '';
+          accsHtml += `<li class="account-item" data-code="${acc.code}">
+            <span class="acc-code" onclick="copyCode('${acc.code}',this)" title="Click to copy the code">${codeHtml}</span>
+            <span class="acc-label" onclick="copyLabel(this)" data-label="${escHtml(acc.label)}" title="Click to copy the label">${labelHtml}${typeBadge}</span>
+          </li>`;
+          classAccCount++;
+        }
+      }
+
+      if(groupVisible || !search){
+        const collapsed = '';
+        groupsHtml += `<div class="group-block">
+          <div class="group-header">
+            <span class="group-code">${gKey}</span>
+            <span class="group-name">${escHtml(grp.label)}</span>
+            <span class="group-count">${grp.accounts.length} accounts</span>
+            <span class="group-chev">▼</span>
+          </div>
+          <div class="group-body${collapsed}">
+            <ul class="account-list">${accsHtml}</ul>
+          </div>
+        </div>`;
+      }
+    }
+
+    if(classVisible || !search){
+      const collapsed = '';
+      html += `<div class="class-block" id="cl${clKey}">
+        <div class="class-header" style="background:${meta.color}">
+          <span class="class-icon">${meta.icon}</span>
+          <div class="class-info">
+            <div class="class-num">Classe ${clKey}</div>
+            <div class="class-title">${escHtml(cl.label)}</div>
+            <div class="class-count">${classAccCount} sub-accounts</div>
+          </div>
+          <span class="class-chev">▼</span>
+        </div>
+        <div class="class-body${collapsed}">${groupsHtml}</div>
+      </div>`;
+    }
+  }
+
+  container.innerHTML = html;
+  if(search){
+    const cnt = document.getElementById('searchCount');
+    cnt.textContent = totalVisible > 0 ? `${totalVisible} result${totalVisible>1?'s':''}` : '';
+    noRes.classList.toggle('visible', totalVisible === 0);
+  } else {
+    document.getElementById('searchCount').textContent = '';
+    noRes.classList.remove('visible');
+  }
+}
+
+function renderToc(data){
+  const classOrder = ['1','2','3','4','5','6','7','0'];
+  let html = '';
+  for(const clKey of classOrder){
+    if(!data[clKey]) continue;
+    const cl = data[clKey];
+    const meta = CLASS_META[clKey] || {icon:'📋',color:'#1A7A8A'};
+    const groups = Object.entries(cl.groups).slice(0,8);
+    html += `<div class="toc-group">
+      <a href="#cl${clKey}" class="toc-cls" onclick="scrollToClass('cl${clKey}')">
+        <span class="toc-badge" style="background:${meta.color}">${clKey}</span>
+        ${escHtml(meta.short)}
+      </a>
+      <ul class="toc-sub">
+        ${groups.map(([gk,gv])=>`<li><a href="#g${gk}" onclick="scrollToGroup('g${gk}')">${gk} — ${escHtml(gv.label.substring(0,40))}${gv.label.length>40?'…':''}</a></li>`).join('')}
+      </ul>
+    </div>`;
+  }
+  document.getElementById('tocBody').innerHTML = html;
+}
+
+// ── Toggle ───────────────────────────────────
+function toggleClass(header){
+  const body = header.nextElementSibling;
+  const chev = header.querySelector('.class-chev');
+  body.classList.toggle('collapsed');
+  chev.style.transform = body.classList.contains('collapsed') ? '' : 'rotate(180deg)';
+}
+function toggleGroup(header){
+  const body = header.nextElementSibling;
+  const chev = header.querySelector('.group-chev');
+  body.classList.toggle('collapsed');
+  chev.style.transform = body.classList.contains('collapsed') ? '' : 'rotate(180deg)';
+}
+function toggleToc(){
+  const body = document.getElementById('tocBody');
+  const chev = document.getElementById('tocChev');
+  const collapsed = body.style.display === 'none';
+  body.style.display = collapsed ? '' : 'none';
+  chev.textContent = collapsed ? '▼' : '▶';
+}
+
+// ── Search ───────────────────────────────────
+let searchTimer;
+function doSearch(val){
+  currentSearch = val.trim();
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(()=>{
+    const data = currentEntity==='societe' ? PCMN_SOC : PCMN_NPO;
+    renderAll(data, currentSearch);
+  }, 120);
+}
+
+// ── Toast ────────────────────────────────────
+let toastTimer;
+function showToast(msg){
+  const toast = document.getElementById('toast');
+  document.getElementById('toastMsg').textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>toast.classList.remove('show'), 2000);
+}
+
+// ── Copy code ────────────────────────────────
+function copyCode(code, el){
+  navigator.clipboard.writeText(code).catch(()=>{});
+  el.classList.add('copied');
+  setTimeout(()=>el.classList.remove('copied'), 1200);
+  showToast(`Code « ${code} » copied!`);
+}
+
+// ── Copy label ───────────────────────────────
+function copyLabel(el){
+  const label = el.getAttribute('data-label') || el.textContent.trim();
+  navigator.clipboard.writeText(label).catch(()=>{});
+  el.classList.add('copied');
+  setTimeout(()=>el.classList.remove('copied'), 1200);
+  showToast(`Label « ${label} » copied!`);
+}
+
+// ── Scroll helpers ───────────────────────────
+function scrollToClass(id){
+  const el = document.getElementById(id);
+  if(el){
+    // Expand if collapsed
+    const body = el.querySelector('.class-body');
+    const chev = el.querySelector('.class-chev');
+    if(body && body.classList.contains('collapsed')){
+      body.classList.remove('collapsed');
+      if(chev) chev.style.transform = 'rotate(180deg)';
+    }
+    el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  return false;
+}
+function scrollToGroup(id){return false;}
+
+// ── Helpers ──────────────────────────────────
+function escHtml(s){
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function highlight(text, search){
+  const escaped = escHtml(text);
+  const re = new RegExp('(' + search.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')', 'gi');
+  return escaped.replace(re,'<span class="hl">$1</span>');
+}
+
+// ── Init ─────────────────────────────────────
+renderAll(PCMN_SOC);
+renderToc(PCMN_SOC);
+</script>
+</body>
+</html>

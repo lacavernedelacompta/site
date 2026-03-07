@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Umqualifizierungs-Simulator Miete Belgien 2026</title>
+<meta name="description" content="Berechnen Sie das Umqualifizierungsrisiko der Gesellschaftsmiete (Art. 32 EStG 92). Obergrenze 5/3 EW, Miteigentum, gemischte Nutzung. Tool 2026.">
+<meta name="keywords" content="umqualifizierung miete geschäftsführer belgien, art 32 EStG 92, miete gesellschaft geschäftsführer belgien, mietobergrenze geschäftsführer, umqualifizierung vergütung belgien, simulator miete geschäftsführer">
+<meta name="author" content="La Caverne de la Compta">
+<meta name="robots" content="index, follow">
+  <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-requalification-loyer/">
+  <link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-requalification-loyer/">
+  <link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-requalification-loyer/">
+  <link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-requalification-loyer/">
+  <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-requalification-loyer/">
+<link rel="canonical" href="https://lacavernedelacompta.be/de/simulateur-requalification-loyer/">
+<meta property="og:title" content="Umqualifizierungs-Simulator Miete Geschäftsführer — Art. 32 EStG 92 Belgien 2026">
+  <meta property="og:image" content="https://lacavernedelacompta.be/logo.png">
+
+<meta property="og:description" content="Berechnen Sie das Umqualifizierungsrisiko der von Ihrer Gesellschaft gezahlten Miete. Obergrenze 5/3 EW × Koeffizient, Miteigentum, möbliert — vollständige Analyse und Empfehlungen.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lacavernedelacompta.be/simulateur-requalification-loyer.html">
+<meta property="og:site_name" content="La Caverne de la Compta">
+<meta property="og:locale" content="de_BE">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0D1B2A;
+    --navy-mid: #1B2E44;
+    --navy-light: #243B55;
+    --teal: #1A7A8A;
+    --teal-light: #22A3B8;
+    --teal-pale: #E8F6F8;
+    --white: #FFFFFF;
+    --off-white: #F4F7FA;
+    --text-dark: #1A2535;
+    --text-mid: #4A6279;
+    --text-light: #8A9BB0;
+    --border: #DDE5EF;
+    --shadow: rgba(13, 27, 42, 0.12);
+    --warning: #E67E22;
+    --warning-pale: #FEF3E8;
+    --danger: #C0392B;
+    --danger-pale: #FDECEB;
+    --success: #1A7A4A;
+    --success-pale: #E8F6EE;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--off-white);
+    color: var(--text-dark);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── Top bar ── */
+  .topbar {
+    background: var(--navy);
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .topbar-left { font-size: 0.75rem; color: var(--text-light); letter-spacing: 0.05em; }
+  .topbar-right { display: flex; gap: 20px; }
+  .topbar-right a { font-size: 0.75rem; color: var(--text-light); text-decoration: none; transition: color 0.2s; }
+  .topbar-right a:hover { color: var(--white); }
+
+  /* ── Navbar ── */
+  nav {
+    background: #ffffff;
+    border-bottom: 2px solid #22A3B8;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    box-shadow: 0 2px 12px rgba(13, 27, 42, 0.08);
+    overflow: visible;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .logo-icon {
+    width: 40px; height: 40px;
+    background: linear-gradient(135deg, var(--teal), var(--navy));
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; flex-shrink: 0;
+  }
+  .logo-text { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--navy); line-height: 1.2; }
+  .logo-sub { font-size: 0.65rem; font-weight: 500; color: var(--teal); letter-spacing: 0.15em; text-transform: uppercase; }
+
+  .nav-links { display: flex; gap: 4px; list-style: none; align-items:center; }
+  .nav-links>li { list-style:none; }
+  .nav-links a { padding: 8px 16px; font-size: 0.85rem; font-weight: 500; color: var(--text-mid); text-decoration: none; border-radius: 6px; transition: all 0.2s; }
+  .nav-links a:hover { background: var(--teal-pale); color: var(--teal); }
+  .dd-wrap{position:relative;}
+  .dd-btn{display:flex;align-items:center;gap:6px;padding:8px 16px;font-size:.85rem;font-weight:500;color:var(--text-mid);background:none;border:none;cursor:pointer;border-radius:6px;font-family:'Inter',sans-serif;transition:all .2s;white-space:nowrap;}
+  .dd-btn:hover,.dd-wrap.dd-open .dd-btn{background:var(--teal-pale);color:var(--teal);}
+  .dd-chevron{font-size:.55rem;transition:transform .2s;display:inline-block;}
+  .dd-wrap.dd-open .dd-chevron{transform:rotate(180deg);}
+  .dd-menu{display:none;position:absolute;top:calc(100% + 8px);right:0;left:auto;min-width:240px;background:var(--white);border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 32px var(--shadow);z-index:9999;
+    overflow:visible;}
+  .dd-wrap.dd-open .dd-menu{display:block;}
+  .dd-menu a{display:flex;align-items:center;gap:10px;padding:11px 16px;font-size:.84rem;color:var(--text-mid);text-decoration:none;transition:background .15s;border-bottom:1px solid var(--border);}
+  .dd-menu a:last-child{border-bottom:none;}
+  .dd-menu a:hover{background:var(--teal-pale);color:var(--teal);}
+  .dd-icon{font-size:1rem;width:22px;text-align:center;}
+  .dd-new{margin-left:auto;background:var(--teal);color:#fff;font-size:.62rem;font-weight:700;padding:2px 7px;border-radius:20px;}
+  .nav-cta { padding: 9px 20px !important; background: var(--teal) !important; color: var(--white) !important; font-weight: 600 !important; }
+  .nav-cta:hover { background: var(--teal-light) !important; color: var(--white) !important; }
+
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1A5C6E 100%);
+    color: var(--white);
+    padding: 60px 40px 80px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal-pale);
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero h1 span { color: var(--teal-light); }
+  .hero p {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.7);
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* ── Breadcrumb ── */
+  .breadcrumb {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 40px;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .breadcrumb a { color: var(--teal); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+
+  /* ── Main ── */
+  .main { max-width: 1100px; margin: 0 auto; padding: 50px 30px 80px; }
+
+  /* ── Alert box ── */
+  .alert {
+    background: var(--warning-pale);
+    border: 1px solid #F0A830;
+    border-left: 4px solid var(--warning);
+    border-radius: 10px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 36px;
+    font-size: 0.86rem;
+    color: #7A4A0A;
+    line-height: 1.6;
+  }
+  .alert-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
+
+  /* ── Two-column layout ── */
+  .sim-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+  }
+
+  /* ── Panel ── */
+  .panel {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 32px 28px;
+    box-shadow: 0 2px 12px var(--shadow);
+  }
+  .panel-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .panel-subtitle { font-size: 0.82rem; color: var(--text-light); margin-bottom: 28px; }
+
+  /* ── Divider ── */
+  .divider { height: 1px; background: var(--border); margin: 22px 0; }
+
+  /* ── Form ── */
+  .field { margin-bottom: 20px; }
+  .field label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-mid);
+    margin-bottom: 7px;
+    letter-spacing: 0.02em;
+  }
+  .field label .tip {
+    font-weight: 400;
+    color: var(--text-light);
+    font-size: 0.76rem;
+    margin-left: 4px;
+  }
+  .input-wrap { position: relative; display: flex; align-items: center; }
+  .input-wrap input, .input-wrap select {
+    width: 100%;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 11px 44px 11px 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.92rem;
+    color: var(--text-dark);
+    background: var(--off-white);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    appearance: none;
+  }
+  .input-wrap input:focus, .input-wrap select:focus {
+    border-color: var(--teal);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(26,122,138,0.1);
+  }
+  .input-unit {
+    position: absolute;
+    right: 14px;
+    font-size: 0.82rem;
+    color: var(--text-light);
+    font-weight: 500;
+    pointer-events: none;
+  }
+  .select-arrow {
+    position: absolute;
+    right: 12px;
+    pointer-events: none;
+    color: var(--text-light);
+    font-size: 0.7rem;
+  }
+
+  /* ── Radio tabs ── */
+  .radio-tabs { display: flex; gap: 0; border: 1.5px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .radio-tabs input[type=radio] { display: none; }
+  .radio-tabs label {
+    flex: 1;
+    text-align: center;
+    padding: 10px 8px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text-mid);
+    cursor: pointer;
+    background: var(--off-white);
+    border-right: 1px solid var(--border);
+    transition: all 0.2s;
+    margin-bottom: 0;
+  }
+  .radio-tabs label:last-of-type { border-right: none; }
+  .radio-tabs input[type=radio]:checked + label {
+    background: var(--teal);
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  /* ── Section label ── */
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 16px;
+    margin-top: 4px;
+  }
+
+  /* ── Compute button ── */
+  .btn-compute {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, var(--teal), #155F6A);
+    border: none;
+    border-radius: 9px;
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: all 0.2s;
+    margin-top: 8px;
+  }
+  .btn-compute:hover { background: linear-gradient(135deg, var(--teal-light), var(--teal)); box-shadow: 0 6px 20px rgba(26,122,138,0.35); transform: translateY(-1px); }
+  .btn-compute:active { transform: translateY(0); }
+
+  /* ── Results ── */
+  .results-panel { display: none; }
+  .results-panel.visible { display: block; }
+
+  .result-status {
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .result-status.ok { background: var(--success-pale); border: 1px solid #5DC88A; }
+  .result-status.warning { background: var(--warning-pale); border: 1px solid #F0A830; }
+  .result-status.danger { background: var(--danger-pale); border: 1px solid #E87070; }
+  .result-status-icon { font-size: 1.6rem; flex-shrink: 0; }
+  .result-status-title { font-weight: 700; font-size: 0.95rem; color: var(--navy); }
+  .result-status-desc { font-size: 0.82rem; color: var(--text-mid); margin-top: 2px; }
+
+  /* ── KPIs ── */
+  .kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+  .kpi-box {
+    background: var(--off-white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .kpi-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin-bottom: 6px; }
+  .kpi-value { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--navy); }
+  .kpi-value.accent { color: var(--teal); }
+  .kpi-value.danger { color: var(--danger); }
+  .kpi-value.warning { color: var(--warning); }
+  .kpi-sub { font-size: 0.76rem; color: var(--text-light); margin-top: 2px; }
+
+  /* ── Breakdown table ── */
+  .breakdown { border-radius: 10px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 24px; }
+  .breakdown table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  .breakdown thead tr { background: var(--navy); color: var(--white); }
+  .breakdown thead th { padding: 11px 16px; text-align: left; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; }
+  .breakdown tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+  .breakdown tbody tr:last-child { border-bottom: none; }
+  .breakdown tbody tr:hover { background: var(--teal-pale); }
+  .breakdown tbody td { padding: 11px 16px; color: var(--text-dark); }
+  .breakdown tbody td:last-child { text-align: right; font-weight: 600; }
+  .breakdown .row-total { background: var(--teal-pale); font-weight: 700; }
+  .breakdown .row-total td { color: var(--teal); font-weight: 700; }
+  .breakdown .row-requalif { background: var(--danger-pale); }
+  .breakdown .row-requalif td { color: var(--danger); }
+  .badge-requalif { background: var(--danger); color: white; font-size: 0.65rem; font-weight: 700; padding: 2px 7px; border-radius: 10px; letter-spacing: 0.05em; margin-left: 6px; }
+  .badge-ok { background: var(--success); color: white; font-size: 0.65rem; font-weight: 700; padding: 2px 7px; border-radius: 10px; letter-spacing: 0.05em; margin-left: 6px; }
+
+  /* ── Recommendation box ── */
+  .reco-box {
+    background: var(--navy);
+    border-radius: 12px;
+    padding: 22px 24px;
+    color: rgba(255,255,255,0.85);
+    font-size: 0.86rem;
+    line-height: 1.7;
+  }
+  .reco-box h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--white); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+  .reco-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .reco-list li { display: flex; gap: 10px; align-items: flex-start; }
+  .reco-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal-light); flex-shrink: 0; margin-top: 6px; }
+
+  /* ── Info accordion ── */
+  .info-section { margin-top: 40px; }
+  .info-section h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--navy); margin-bottom: 20px; }
+  .accordion { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+  .accordion-item { border-bottom: 1px solid var(--border); }
+  .accordion-item:last-child { border-bottom: none; }
+  .accordion-header {
+    width: 100%; background: var(--white); border: none; text-align: left;
+    padding: 16px 20px; display: flex; justify-content: space-between; align-items: center;
+    font-family: 'Inter', sans-serif; font-size: 0.88rem; font-weight: 600;
+    color: var(--text-dark); cursor: pointer; transition: background 0.15s;
+  }
+  .accordion-header:hover { background: var(--teal-pale); }
+  .accordion-header.open { color: var(--teal); background: var(--teal-pale); }
+  .accordion-icon { font-size: 1rem; transition: transform 0.25s; color: var(--text-light); }
+  .accordion-header.open .accordion-icon { transform: rotate(180deg); }
+  .accordion-body {
+    display: none;
+    padding: 0 20px 18px;
+    background: var(--white);
+    font-size: 0.84rem;
+    color: var(--text-mid);
+    line-height: 1.75;
+  }
+  .accordion-body.open { display: block; }
+  .accordion-body strong { color: var(--navy); }
+
+  /* ── Info strip ── */
+  .info-strip {
+    background: linear-gradient(135deg, var(--navy), #1A3D5A);
+    border-radius: 14px;
+    padding: 40px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 50px;
+    color: var(--white);
+  }
+  .info-strip h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; }
+  .info-strip h3 span { color: var(--teal-light); }
+  .info-strip p { font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.7; font-weight: 300; }
+  .info-features { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .info-features li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.88rem; color: rgba(255,255,255,0.8); }
+  .check { width: 22px; height: 22px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0; margin-top: 1px; }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.8rem;
+  }
+  footer a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+  footer a:hover { color: var(--white); }
+  .footer-links { display: flex; gap: 20px; }
+
+  /* ── Result categories ── */
+  .result-categories { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+  .cat-box { border-radius: 10px; padding: 16px 18px; border: 1px solid; }
+  .cat-immo { background: var(--teal-pale); border-color: #9DD8E0; }
+  .cat-pro  { background: var(--danger-pale); border-color: #E87070; }
+  .cat-mob  { background: #EEF3FC; border-color: #94B4E8; }
+  .cat-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .cat-icon { font-size: 1.3rem; flex-shrink: 0; }
+  .cat-title { font-weight: 700; font-size: 0.9rem; color: var(--navy); line-height: 1.2; }
+  .cat-type { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-light); margin-top: 1px; }
+  .cat-code { margin-left: auto; font-size: 0.72rem; font-weight: 700; background: rgba(13,27,42,0.08); color: var(--navy); padding: 3px 9px; border-radius: 6px; white-space: nowrap; }
+  .cat-amount { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .cat-immo .cat-amount { color: var(--teal); }
+  .cat-pro  .cat-amount { color: var(--danger); }
+  .cat-mob  .cat-amount { color: #2855A0; }
+  .cat-desc { font-size: 0.8rem; color: var(--text-mid); line-height: 1.6; }
+
+  /* ── Indivision info box ── */
+  .info-indivision {
+    border-radius: 9px;
+    padding: 14px 16px;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: -6px;
+    margin-bottom: 4px;
+  }
+  .info-indivision.favorable {
+    background: var(--success-pale);
+    border: 1px solid #5DC88A;
+    color: #1A5C35;
+  }
+  .info-indivision.attention {
+    background: var(--warning-pale);
+    border: 1px solid #F0A830;
+    color: #7A4A0A;
+  }
+  .info-indivision-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+  .kpi-label-sub { font-size: 0.7rem; color: var(--text-light); font-weight: 400; display: block; margin-top: 1px; }
+
+  /* ── IPP info boxes ── */
+  .ipp-boxes { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
+  .ipp-box-single { grid-template-columns: 1fr; }
+  .ipp-info-box { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+  .ipp-info-box h4 { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: var(--teal); margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .ipp-info-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--off-white); font-size: 0.84rem; }
+  .ipp-info-row:last-child { border-bottom: none; }
+  .ipp-info-code { font-weight: 700; color: var(--navy); }
+  .ipp-info-code .decl-case { margin-left: 0; }
+  .ipp-info-val { font-weight: 600; color: var(--text-dark); }
+  .ipp-info-val.danger { color: var(--danger); }
+
+  /* ── Declaration table ── */
+  .decl-table-wrap { border-radius: 10px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 20px; }
+  .decl-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+  .decl-table thead tr { background: var(--navy); color: var(--white); }
+  .decl-table thead th { padding: 10px 14px; text-align: left; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+  .decl-table thead th:not(:first-child) { text-align: right; }
+  .decl-table tbody tr { border-bottom: 1px solid var(--border); }
+  .decl-table tbody tr:last-child { border-bottom: none; }
+  .decl-table tbody tr:hover { background: var(--teal-pale); }
+  .decl-table tbody td { padding: 11px 14px; vertical-align: middle; }
+  .decl-table tbody td:not(:first-child) { text-align: right; font-weight: 600; }
+  .decl-table .row-section { background: var(--off-white); }
+  .decl-table .row-section td { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); padding: 7px 14px; }
+  .decl-table .row-requalif td { color: var(--danger); }
+  .decl-table .row-mob td { color: #2855A0; }
+  .decl-table .row-total td { background: var(--teal-pale); font-weight: 700; color: var(--teal); border-top: 2px solid var(--teal); }
+  .decl-case { font-size: 0.68rem; font-weight: 700; background: rgba(13,27,42,0.07); color: var(--navy); padding: 2px 6px; border-radius: 5px; margin-left: 4px; white-space: nowrap; display:inline-block; }
+  .decl-cases { display:flex; flex-wrap:wrap; gap:3px; margin-top:4px; }
+  .decl-case-pro { background: rgba(192,57,43,0.1); color: var(--danger); }
+  .decl-case-mob { background: rgba(40,85,160,0.1); color: #2855A0; }
+  .dash-val { color: var(--text-light); font-weight: 400; font-size: 0.8rem; }
+
+  /* ── IPP tranche cards ── */
+  .ipp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 4px; }
+  .ipp-card input[type=radio] { display: none; }
+  .ipp-card label {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 3px; padding: 10px 6px 9px;
+    border: 1.5px solid var(--border);
+    border-radius: 9px;
+    cursor: pointer;
+    background: var(--off-white);
+    transition: all 0.2s;
+    text-align: center;
+  }
+  .ipp-card label:hover { border-color: var(--teal-light); background: var(--teal-pale); }
+  .ipp-card input[type=radio]:checked + label {
+    background: var(--navy); border-color: var(--navy); color: white;
+  }
+  .ipp-card input[type=radio]:checked + label .ipp-rate { color: var(--teal-light); }
+  .ipp-card input[type=radio]:checked + label .ipp-tranche,
+  .ipp-card input[type=radio]:checked + label .ipp-case { color: rgba(255,255,255,0.65); }
+  .ipp-rate { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--navy); line-height: 1; }
+  .ipp-tranche { font-size: 0.68rem; font-weight: 500; color: var(--text-light); line-height: 1.3; margin-top: 2px; }
+  .ipp-case { font-size: 0.65rem; color: var(--text-light); font-weight: 600; letter-spacing: 0.04em; margin-top: 2px; }
+
+  /* ── Range slider ── */
+  .slider-wrap { margin-top: 10px; margin-bottom: 4px; }
+  .slider-labels { display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-light); margin-bottom: 6px; }
+  .slider-value-display {
+    display: flex; align-items: center; justify-content: center;
+    gap: 6px; margin-bottom: 10px;
+  }
+  .slider-value-badge {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; font-weight: 700;
+    color: var(--teal);
+    min-width: 52px; text-align: center;
+  }
+  .slider-split {
+    font-size: 0.78rem; color: var(--text-light);
+    display: flex; gap: 16px; justify-content: center;
+    margin-bottom: 10px;
+  }
+  .slider-split span { display: flex; align-items: center; gap: 5px; }
+  .dot-dir { width: 8px; height: 8px; border-radius: 50%; background: var(--navy); display:inline-block; }
+  .dot-conj { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); display:inline-block; }
+
+  input[type=range] {
+    -webkit-appearance: none;
+    width: 100%; height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(to right, var(--teal) 0%, var(--teal) 50%, var(--border) 50%, var(--border) 100%);
+    outline: none; cursor: pointer; border: none;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 3px solid var(--teal);
+    box-shadow: 0 2px 8px rgba(26,122,138,0.3);
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  input[type=range]::-webkit-slider-thumb:hover {
+    border-color: var(--teal-light);
+    box-shadow: 0 2px 12px rgba(26,122,138,0.5);
+  }
+  input[type=range]::-moz-range-thumb {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 3px solid var(--teal);
+    cursor: pointer;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .sim-layout { grid-template-columns: 1fr; }
+    .info-strip { grid-template-columns: 1fr; padding: 30px 24px; gap: 28px; }
+  }
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hero { padding: 50px 20px 60px; }
+    .main { padding: 30px 16px 60px; }
+    footer { flex-direction: column; text-align: center; }
+    .topbar { display: none; }
+    .breadcrumb { padding: 12px 20px; }
+    .kpi-grid { grid-template-columns: 1fr; }
+  }
+
+/* Cookie banner */
+#cookieBanner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;
+    overflow: visible;background:#0D1B2A;border-top:3px solid #1A7A8A;padding:16px 30px 14px;box-shadow:0 -4px 24px rgba(0,0,0,0.35);font-family:'Inter',sans-serif;}
+#cookieBanner .cb-top{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+#cookieBanner .cb-text{font-size:0.82rem;color:rgba(255,255,255,0.75);line-height:1.6;flex:1;min-width:200px;margin:0;}
+#cookieBanner .cb-text a{color:#22A3B8;text-decoration:none;}
+#cookieBanner .cb-cats{display:flex;gap:20px;flex-wrap:wrap;margin:10px 0 12px 0;padding-left:2px;}
+#cookieBanner .cb-cat{display:flex;align-items:center;gap:8px;cursor:pointer;}
+#cookieBanner .cb-cat label{font-size:0.8rem;color:rgba(255,255,255,0.8);cursor:pointer;user-select:none;}
+#cookieBanner .cb-cat input[type=checkbox]{width:16px;height:16px;accent-color:#1A7A8A;cursor:pointer;}
+#cookieBanner .cb-cat.required label{color:rgba(255,255,255,0.45);}
+#cookieBanner .cb-btns{display:flex;gap:10px;flex-shrink:0;align-items:flex-start;}
+#cookieBanner .cb-btn{padding:9px 18px;border-radius:7px;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;border:none;transition:all 0.2s;}
+#cookieBanner .cb-btn-all{background:#1A7A8A;color:#fff;}
+#cookieBanner .cb-btn-all:hover{background:#22A3B8;}
+#cookieBanner .cb-btn-save{background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.25)!important;}
+#cookieBanner .cb-btn-save:hover{color:#fff;border-color:rgba(255,255,255,0.5)!important;}
+#cookieBanner .cb-btn-refuse{background:transparent;color:rgba(255,255,255,0.5);font-size:0.75rem;font-weight:500;padding:4px 0;text-decoration:underline;cursor:pointer;}
+#cookieBanner .cb-btn-refuse:hover{color:rgba(255,255,255,0.8);}
+</style>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "La Caverne de la Compta",
+  "url": "https://lacavernedelacompta.be",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://lacavernedelacompta.be/logo.png",
+    "width": 512,
+    "height": 512
+  },
+  "image": "https://lacavernedelacompta.be/logo.png"
+}
+</script>
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<!-- CACHE-BUST-v8-de/simulateur-requalification-loyer/index.html -->
+</head>
+<body>
+<div id="cookieBanner">
+  <div class="cb-top">
+    <p class="cb-text">
+      🍪 <strong style="color:#fff;">Diese Website verwendet Cookies.</strong>
+      Notwendige Cookies gewährleisten die Funktionalität der Website. Andere erfordern Ihre Zustimmung.
+      <a href="/de/mentions-legales/">Cookie-Richtlinie</a>
+    </p>
+    <div class="cb-btns">
+      <button class="cb-btn cb-btn-all" onclick="cbAcceptAll()">Alle akzeptieren</button>
+      <button class="cb-btn cb-btn-save" onclick="cbSaveChoices()">Meine Auswahl speichern</button>
+    </div>
+  </div>
+  <div class="cb-cats">
+    <div class="cb-cat required">
+      <input type="checkbox" id="cb_necessary" checked disabled>
+      <label for="cb_necessary">✅ Notwendig <span style="font-size:0.7rem;opacity:0.6">(immer aktiv)</span></label>
+    </div>
+    <div class="cb-cat">
+      <input type="checkbox" id="cb_analytics">
+      <label for="cb_analytics">📊 Analytisch <span style="font-size:0.7rem;opacity:0.6">(Google Analytics)</span></label>
+    </div>
+    <div class="cb-cat">
+      <input type="checkbox" id="cb_ads">
+      <label for="cb_ads">📢 Werbung <span style="font-size:0.7rem;opacity:0.6">(Google AdSense)</span></label>
+    </div>
+    <button class="cb-btn-refuse" onclick="cbRefuseAll()">Alle ablehnen</button>
+  </div>
+</div>
+
+
+<!-- Top bar -->
+<div class="topbar">
+  <span class="topbar-left">🇧🇪 Belgische Buchhaltung & Steuerrecht</span>
+  <div class="topbar-right">
+    <a href="/de/mentions-legales/">Rechtliche Hinweise</a>
+    <a href="mentions-legales.html#rgpd">DSGVO</a>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav>
+<a href="/de/" class="logo" style="text-decoration:none;display:flex;align-items:center;">
+    <svg width="148" height="38" viewBox="0 0 148 38" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <defs>
+        <linearGradient id="hGn" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0D1B2A"/>
+          <stop offset="100%" style="stop-color:#1A3A5C"/>
+        </linearGradient>
+      </defs>
+      <!-- Hexagone -->
+      <polygon points="19,2 31,9 31,23 19,30 7,23 7,9" fill="url(#hGn)"/>
+      <!-- Reflet top -->
+      <polygon points="19,2 31,9 25,9 19,5 13,9 7,9" fill="rgba(255,255,255,.07)"/>
+      <!-- Bras balance -->
+      <line x1="9" y1="15" x2="29" y2="15" stroke="rgba(255,255,255,.5)" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Tige -->
+      <rect x="17.5" y="15" width="2.5" height="11" rx="1.2" fill="rgba(255,255,255,.35)"/>
+      <!-- Pivot gold -->
+      <circle cx="18.8" cy="15" r="3.2" fill="#C9A84C"/>
+      <circle cx="18.8" cy="15" r="1.4" fill="white" opacity=".9"/>
+      <!-- Socle -->
+      <rect x="13" y="27" width="12" height="2.5" rx="1.2" fill="rgba(255,255,255,.2)"/>
+      <!-- Plateau gauche -->
+      <line x1="9" y1="15" x2="7" y2="21.5" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="7" cy="24" rx="6.5" ry="2.5" fill="#1A7A8A"/>
+      <!-- Plateau droit -->
+      <line x1="29" y1="15" x2="31" y2="20" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="31" cy="22.5" rx="6.5" ry="2.5" fill="#22A3B8"/>
+      <!-- Étoile -->
+      <circle cx="27" cy="7" r="2.5" fill="#C9A84C" opacity=".85"/>
+      <!-- Texte -->
+      <text x="42" y="15.5" font-family="'Playfair Display',serif" font-size="12.5" font-weight="900" fill="#0D1B2A" letter-spacing="-.2">La Caverne</text>
+      <rect x="42" y="18.5" width="104" height="1" rx=".5" fill="#DDE5EF"/>
+      <rect x="42" y="18.5" width="18" height="1" rx=".5" fill="#C9A84C"/>
+      <text x="42" y="30" font-family="'Playfair Display',serif" font-size="10.5" font-weight="700" font-style="italic" fill="#1A7A8A" letter-spacing="-.1">de la Compta</text>
+    </svg>
+  </a>
+        <ul class="nav-links">
+    <li><a href="https://lacavernedelacompta.be/de/">🏠 Startseite</a></li>
+    <li class="dd-wrap" id="ddWrap">
+      <button class="dd-btn" onclick="toggleDD(event)">🧰 Unsere Tools <span class="dd-chevron">▼</span></button>
+      <div class="dd-menu">
+        <a href="/de/simulateur-immobilier/"><span class="dd-icon">🏠</span>Immobiliensimulator</a>
+        <a href="/de/simulateur-credit/"><span class="dd-icon">💳</span>Kredit-Simulator</a>
+        <a href="/de/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Mietumqualifizierung<span class="dd-new">Nouveau</span></a>
+        <a href="/de/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Kontenplan PCMN</a>
+        <a href="/de/simulateur-interets-composes/"><span class="dd-icon">📈</span>Zinseszins</a>
+        <a href="/de/simulateur-retenue/"><span class="dd-icon">🧾</span>Rechnungseinbehalt</a>
+        <a href="/de/quick-memento-fiscal/"><span class="dd-icon">📌</span>Steuer-Quick-Memo</a>
+        <a href="/de/remboursement-frais/"><span class="dd-icon">🚗</span>Kilometerentschädigung</a>
+      </div>
+    </li>
+  </ul>
+  <!-- ══ SWITCHER LANGUE ══ -->
+  <div id="langSwitcher" style="display:flex;align-items:center;gap:2px;background:#F4F7FA;border:1px solid #DDE5EF;border-radius:8px;padding:3px;margin-left:16px;flex-shrink:0;">
+    <a href="https://lacavernedelacompta.be/fr/simulateur-requalification-loyer/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇫🇷 FR</a>
+    <a href="https://lacavernedelacompta.be/nl/simulateur-requalification-loyer/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇧🇪 NL</a>
+    <a href="https://lacavernedelacompta.be/en/simulateur-requalification-loyer/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇬🇧 EN</a>
+    <a href="https://lacavernedelacompta.be/de/simulateur-requalification-loyer/" aria-current="page" style="display:inline-flex;align-items:center;gap:3px;font-weight:700;color:#fff;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;background:#1A7A8A;white-space:nowrap;">🇩🇪 DE</a>
+  </div>
+  <!-- ══════════════════════ -->
+
+  
+</nav>
+<div style="text-align:right;font-size:.72rem;color:var(--text-light);padding:5px 40px 0;font-style:italic;">
+  🕐 Aktualisiert: Steuerjahr 2027 (Einkünfte 2026) — <a href="/de/mentions-legales/" style="color:var(--text-light)">Offizielle Quellen</a>
+</div>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <a href="/de/">🏠 Startseite</a>
+  <span>›</span>
+  <a href="/de/#simulateurs">Simulatoren</a>
+  <span>›</span>
+  <span>Mietumqualifizierung → Geschäftsführervergütung</span>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-badge">🏠 Geschäftsführerbesteuerung · Belgien</div>
+  <h1>Simulator für <span>Mietumqualifizierung</span><br>in Geschäftsführervergütung</h1>
+  <p>Berechnen Sie das steuerliche Umqualifizierungsrisiko der von Ihrer Gesellschaft an Sie gezahlten Miete gemäß Artikel 32 EStG 92.</p>
+</section>
+
+<!-- Main -->
+<main class="main">
+
+  <!-- Alert -->
+  <div class="alert">
+    <span class="alert-icon">⚠️</span>
+    <div>
+      <strong>Rechtlicher Kontext — Art. 32 Abs. 2 EStG 92:</strong> Wenn ein Geschäftsführer eine Immobilie an seine eigene Gesellschaft vermietet, wird der Teil der Miete, der <strong>5/3 des nicht indexierten Einheitswerts × Aufwertungskoeffizient</strong> übersteigt, automatisch als Geschäftsführervergütung umqualifiziert. Diese Umqualifizierung führt zu einer höheren Besteuerung (Einkommensteuer + Sozialabgaben) auf den Überschuss. Dieser Simulator hilft Ihnen, den Überschuss zu ermitteln und Ihre Situation zu optimieren.
+    </div>
+  </div>
+
+  <div class="sim-layout">
+
+    <!-- Left: inputs -->
+    <div class="panel" id="input-panel">
+      <div class="panel-title">⚙️ Simulationsparameter</div>
+      <div class="panel-subtitle">Geben Sie die Daten Ihrer Immobilie und des Mietvertrags ein</div>
+
+      <!-- Bien immobilier -->
+      <div class="section-label">Immobilie</div>
+
+      <div class="field">
+        <label>Nicht indexierter Einheitswert <span class="tip">(EW aus Ihrem Steuerbescheid)</span></label>
+        <div class="input-wrap">
+          <input type="number" id="rc_brut" placeholder="Ex: 1500" min="0" step="1">
+          <span class="input-unit">€/Jahr</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Steuerjahr <span class="tip">(Einkommensjahr)</span></label>
+        <div class="input-wrap">
+          <select id="annee">
+            <option value="2027" selected>Stj. 2027 — Einkünfte 2026 (Koeff. 5,75)</option>
+            <option value="2026">Stj. 2026 — Einkünfte 2025 (Koeff. 5,63)</option>
+            <option value="2025">Stj. 2025 — Einkünfte 2024 (Koeff. 5,46)</option>
+            <option value="2024">Stj. 2024 — Einkünfte 2023 (Koeff. 5,37)</option>
+            <option value="2023">Stj. 2023 — Einkünfte 2022 (Koeff. 4,86)</option>
+            <option value="2022">Stj. 2022 — Einkünfte 2021 (Koeff. 4,63)</option>
+            <option value="2021">Stj. 2021 — Einkünfte 2020 (Koeff. 4,60)</option>
+            <option value="2020">Stj. 2020 — Einkünfte 2019 (Koeff. 4,57)</option>
+            <option value="2019">Stj. 2019 — Einkünfte 2018 (Koeff. 4,47)</option>
+            <option value="2018">Stj. 2018 — Einkünfte 2017 (Koeff. 4,39)</option>
+            <option value="2017">Stj. 2017 — Einkünfte 2016 (Koeff. 4,31)</option>
+            <option value="2016">Stj. 2016 — Einkünfte 2015 (Koeff. 4,23)</option>
+            <option value="2015">Stj. 2015 — Einkünfte 2014 (Koeff. 4,23)</option>
+            <option value="2014">Stj. 2014 — Einkünfte 2013 (Koeff. 4,19)</option>
+            <option value="2013">Stj. 2013 — Einkünfte 2012 (Koeff. 4,10)</option>
+          </select>
+          <span class="select-arrow">▼</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Ist die Immobilie gemischt genutzt? <span class="tip">(Privatteil + beruflicher Teil)</span></label>
+        <div class="radio-tabs">
+          <input type="radio" name="type_bien" id="tb_non" value="non" checked>
+          <label for="tb_non">Nein — Einheitliche Nutzung</label>
+          <input type="radio" name="type_bien" id="tb_mix" value="mixte">
+          <label for="tb_mix">Ja — Gemischte Nutzung</label>
+        </div>
+      </div>
+
+      <div id="field_mixte" style="display:none">
+        <div class="field">
+          <label>Beruflicher Anteil der Immobilie <span class="tip">(% genutzt durch die Gesellschaft)</span></label>
+          <div class="slider-value-display">
+            <div class="slider-value-badge" id="partpro_display">60%</div>
+          </div>
+          <div class="slider-wrap">
+            <div class="slider-labels"><span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span></div>
+            <input type="range" id="part_pro" min="1" max="100" step="1" value="60">
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Propriété / indivision -->
+      <div class="section-label">Eigentum der Immobilie</div>
+
+      <div class="field">
+        <label>Wird die Immobilie gemeinsam mit Ihrem Ehegatten gehalten?</label>
+        <div class="radio-tabs">
+          <input type="radio" name="indivision" id="ind_non" value="non" checked>
+          <label for="ind_non">Nein — Geschäftsführer allein</label>
+          <input type="radio" name="indivision" id="ind_oui" value="oui">
+          <label for="ind_oui">Ja — Miteigentum</label>
+        </div>
+      </div>
+
+      <div id="field_indivision" style="display:none">
+        <div class="field">
+          <label>Anteil des Ehegatten am Eigentum <span class="tip">(gesetzliches Güterrecht: 50%)</span></label>
+
+          <div class="slider-value-display">
+            <div class="slider-value-badge" id="conjoint_display">50%</div>
+          </div>
+
+          <div class="slider-split">
+            <span><span class="dot-dir"></span> Geschäftsführer: <strong id="dir_pct">50%</strong></span>
+            <span><span class="dot-conj"></span> Ehegatte: <strong id="conj_pct">50%</strong></span>
+          </div>
+
+          <div class="slider-wrap">
+            <div class="slider-labels"><span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span></div>
+            <input type="range" id="part_conjoint" min="1" max="99" step="1" value="50">
+          </div>
+
+          <div style="font-size:0.76rem;color:var(--text-light);margin-top:10px;line-height:1.5;">
+            ⚠️ <strong>Hinweis:</strong> Im belgischen gesetzlichen Güterrecht, wenn <u>ein Geschäftsführer</u> an seine Gesellschaft vermietet: Anteil Ehegatte = <strong>50%</strong>. Wenn <u>zwei Geschäftsführer</u> gemeinsam vermieten: jeweils ebenfalls 50%.
+          </div>
+        </div>
+
+        <div class="info-indivision" id="info_indivision_box">
+          <!-- dynamic message injected here -->
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Contrat de location -->
+      <div class="section-label">Mietvertrag</div>
+
+      <div class="field">
+        <label>Eigentliche Miete <span class="tip">(erhaltener Mietbetrag für den Zeitraum)</span></label>
+        <div class="input-wrap">
+          <input type="number" id="loyer_propre" placeholder="z.B. 18000" min="0" step="100" oninput="updateLoyerTotal()">
+          <span class="input-unit">€</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Mietvorteile <span class="tip">(z.B. Arbeiten zu Lasten des Mieters über seine gesetzlichen Verpflichtungen hinaus)</span></label>
+        <div class="input-wrap">
+          <input type="number" id="loyer_avantages" placeholder="0" min="0" step="100" value="0" oninput="updateLoyerTotal()">
+          <span class="input-unit">€</span>
+        </div>
+      </div>
+
+      <div class="field" id="loyer_total_field" style="display:none">
+        <label>Miete gesamt + Vorteile <span class="tip">(Berechnungsbasis)</span></label>
+        <div class="input-wrap" style="background:var(--teal-pale);border-radius:8px;">
+          <input type="number" id="loyer_annuel" readonly style="background:transparent;font-weight:600;color:var(--teal);cursor:default;">
+          <span class="input-unit" style="color:var(--teal);font-weight:600;">€</span>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+        <div class="field">
+          <label>Von <span class="tip">(Startdatum)</span></label>
+          <div class="input-wrap">
+            <input type="date" id="date_debut" style="padding-right:10px">
+          </div>
+        </div>
+        <div class="field">
+          <label>Bis <span class="tip">(Enddatum)</span></label>
+          <div class="input-wrap">
+            <input type="date" id="date_fin" style="padding-right:10px">
+          </div>
+        </div>
+      </div>
+      <div class="info-indivision" id="info_periode_box" style="display:none;margin-top:-8px;margin-bottom:12px;">
+        <span class="info-indivision-icon">📅</span>
+        <div id="info_periode_text"></div>
+      </div>
+
+      <div class="field">
+        <label>Möbliert vermietet?</label>
+        <div class="radio-tabs">
+          <input type="radio" name="meuble" id="mb_non" value="non" checked>
+          <label for="mb_non">Nein — Unmöbliert</label>
+          <input type="radio" name="meuble" id="mb_oui" value="oui">
+          <label for="mb_oui">Ja — Möbliert</label>
+        </div>
+      </div>
+
+      <div id="field_meuble" style="display:none">
+        <div class="info-indivision favorable" style="margin-bottom:12px">
+          <span class="info-indivision-icon">⚖️</span>
+          <div>
+            <strong>60/40-Regel automatisch angewendet:</strong> <strong>40%</strong> der Miete = Kapitaleinkünfte (Möbel) · <strong>60%</strong> = Immobilieneinkünfte (Umqualifizierungsbasis).<br>
+            Der bewegliche Anteil unterliegt dem befreienden Kapitalertragsteuerabzug von 30% und ist von der Vergleichsbasis mit der EW-Obergrenze ausgenommen.
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+
+    </div>
+
+    <!-- Right: results -->
+    <div class="panel results-panel" id="results-panel">
+      <div class="panel-title">📋 Analyseergebnisse</div>
+      <div class="panel-subtitle" id="res-subtitle">–</div>
+
+      <!-- Status badge -->
+      <div class="result-status" id="result-status">
+        <div class="result-status-icon" id="status-icon">–</div>
+        <div>
+          <div class="result-status-title" id="status-title">–</div>
+          <div class="result-status-desc" id="status-desc">–</div>
+        </div>
+      </div>
+
+      <!-- KPIs -->
+      <div class="kpi-grid">
+        <div class="kpi-box">
+          <div class="kpi-label">Aufgewerteter EW</div>
+          <div class="kpi-value accent" id="kpi_rc_indexe">–</div>
+          <div class="kpi-sub" id="kpi_rc_sub">–</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-label">Zulässige Obergrenze</div>
+          <div class="kpi-value" id="kpi_plafond">–</div>
+          <div class="kpi-sub">5/3 × indexierter EW</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-label">Erhaltene Nettomiete</div>
+          <div class="kpi-value" id="kpi_loyer_net">–</div>
+          <div class="kpi-sub">Miete - Nebenkosten</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-label">Umqualifizierter Betrag</div>
+          <div class="kpi-value" id="kpi_requalif">–</div>
+          <div class="kpi-sub">Überschuss über Obergrenze</div>
+        </div>
+      </div>
+
+      <!-- Breakdown table -->
+      <div class="breakdown" id="breakdown-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Jahresbetrag</th>
+            </tr>
+          </thead>
+          <tbody id="breakdown-body">
+          </tbody>
+        </table>
+      </div>
+
+
+
+      <!-- IPP boxes -->
+      <div class="ipp-boxes" id="ipp-boxes">
+        <div class="ipp-info-box">
+          <h4>ESt-Informationen Geschäftsführer</h4>
+          <div id="ipp-dir-rows">–</div>
+        </div>
+        <div class="ipp-info-box" id="ipp-conj-box" style="display:none">
+          <h4>ESt-Informationen Partner</h4>
+          <div id="ipp-conj-rows">–</div>
+        </div>
+      </div>
+
+      <!-- Recommandations -->
+      <div class="reco-box" id="reco-box">
+        <h4>💡 Empfehlungen</h4>
+        <ul class="reco-list" id="reco-list"></ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Info accordion -->
+  <div class="info-section">
+    <h3>📚 Die Umqualifizierungsregel verstehen</h3>
+    <div class="accordion">
+
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Was ist Artikel 32 Abs. 2 EStG 92?</span>
+          <span class="accordion-icon">▼</span>
+        </button>
+        <div class="accordion-body">
+          Artikel 32, Absatz 2 des Einkommensteuergesetzbuchs 1992 sieht vor, dass wenn ein <strong>Geschäftsführer eine Immobilie an seine eigene Gesellschaft vermietet</strong>, der Teil der Miete, der <strong>5/3 des nicht indexierten Einheitswerts × Aufwertungskoeffizient</strong> übersteigt, automatisch als Geschäftsführervergütung umqualifiziert wird. Dieser Antimissbrauchsmechanismus soll verhindern, dass Geschäftsführer Einkünfte als Miete (weniger besteuert) statt als Vergütung erhalten.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Wie berechnet man den indexierten Einheitswert?</span>
+          <span class="accordion-icon">▼</span>
+        </button>
+        <div class="accordion-body">
+          Der <strong>nicht indexierte Einheitswert (EW ni)</strong> steht auf Ihrem Steuerbescheid. Für die Umqualifizierungsregel des Art. 32 Abs. 2 EStG 92 wird er mit einem <strong>Aufwertungskoeffizienten</strong> multipliziert, der jährlich vom FÖD Finanzen festgelegt wird — verschieden vom Indexierungskoeffizienten für die gewöhnliche Einkommensteuer. Die Obergrenze wird dann berechnet als <strong>EW ni × Aufwertungskoeff. × 5/3</strong>.<br><br>
+          Offizielle Koeffizienten: 2027: <strong>5,75</strong> · 2026: 5,63 · 2025: 5,46 · 2024: 5,37 · 2023: 4,86 · 2022: 4,63 · 2021: 4,60.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Was sind die Folgen einer Umqualifizierung?</span>
+          <span class="accordion-icon">▼</span>
+        </button>
+        <div class="accordion-body">
+          Der umqualifizierte Teil wird als <strong>Geschäftsführervergütung</strong> zur Einkommensteuer besteuert, nicht als Immobilieneinkünfte. Dies führt zu: (1) Anwendung des marginalen Einkommensteuersatzes (bis 50%), (2) Sozialbeiträge des Geschäftsführers (~20,5%), (3) möglicher Anwendung eines Berufssteuervorabzugs, (4) bei Steuerprüfung: Bußgelder und Verzugszinsen. Die Gesellschaft kann ihrerseits nur den nicht umqualifizierten Teil als Betriebsausgaben abziehen.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Wie vermeidet oder optimiert man die Umqualifizierung?</span>
+          <span class="accordion-icon">▼</span>
+        </button>
+        <div class="accordion-body">
+          Mehrere Strategien sind möglich: (1) <strong>Die Miete reduzieren</strong> auf unter die Obergrenze von 5/3 des aufgewerteten EW, (2) <strong>Den EW neu bewerten</strong> wenn er unterschätzt ist (Verfahren beim FÖD Finanzen), (3) <strong>Nur den beruflichen Teil</strong> der Immobilie vermieten (Büro usw.) und die Obergrenze nur auf diesen Teil berechnen, (4) <strong>Die Immobilie an die Gesellschaft verkaufen</strong> um die Vermietung zu vermeiden, (5) Einen Steuerberater konsultieren, um die geeignetste Struktur für Ihre Situation zu finden.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Gilt die Regel auch für Ehegatte und Kinder des Geschäftsführers?</span>
+          <span class="accordion-icon">▼</span>
+        </button>
+        <div class="accordion-body">
+          Ja. Die Umqualifizierung gilt auch, wenn die Immobilie im Eigentum des <strong>Ehegatten, des legal zusammenlebenden Partners oder der minderjährigen Kinder</strong> des Geschäftsführers steht, die die Familienwohnung bewohnen. Die Steuerbehörde kann davon ausgehen, dass der Geschäftsführer der tatsächliche wirtschaftliche Nutznießer der Vermietung ist, auch wenn die Immobilie formal auf den Namen eines Familienmitglieds steht.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Welche Auswirkungen hat eine möblierte Vermietung auf die Umqualifizierung?</span>
+          <span class="accordion-icon">▼</span>
+        </button>
+        <div class="accordion-body">
+          Bei <strong>möblierter Vermietung</strong> muss die Miete in zwei Teile aufgeteilt werden: den <strong>Immobilienteil</strong> (das unvermöblierte Objekt) und den <strong>beweglichen Teil</strong> (Möbel und Ausstattung). Nur der Immobilienteil unterliegt der Umqualifizierungsregel des Art. 32 Abs. 2 EStG 92 und wird mit der Obergrenze von 5/3 des indexierten EW verglichen. <br><br>
+          Der bewegliche Teil wird als <strong>Kapitaleinkünfte</strong> zum befreienden Kapitalertragsteuersatz von <strong>30%</strong> besteuert — oft vorteilhafter als der marginale Einkommensteuersatz. <br><br>
+          <strong>Praktische Aufteilung:</strong> Die Aufteilung muss realistisch und nachvollziehbar sein (detailliertes Möbelinventar, Verkehrswert usw.). Die Steuerbehörde kann einen überhöhten beweglichen Anteil anfechten. In der Praxis wird häufig die <strong>60/40-Regel</strong> angewandt: 60% der Immobilie zugeordnet, 40% den Möbeln und der Ausstattung.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Wie funktioniert das Miteigentum mit dem Ehegatten?</span>
+          <span class="accordion-icon">▼</span>
+        </button>
+        <div class="accordion-body">
+          Wenn die Immobilie <strong>im Miteigentum</strong> des Geschäftsführers und seines Ehegatten steht, unterliegt nur der <strong>Anteil des Geschäftsführers</strong> der Regel des Artikels 32 Abs. 2 EStG 92. Der Anteil des Ehegatten, der kein Geschäftsführer in der Gesellschaft ist, wird als gewöhnliche Immobilieneinkünfte besteuert, ohne Umqualifizierungsrisiko. <br><br>
+          <strong>Beispiel:</strong> Wenn die Immobilie 50/50 gehalten wird und die Gesamtmiete 20.000 €/Jahr beträgt, werden nur die dem Geschäftsführer zuzurechnenden 10.000 € mit der Obergrenze verglichen. Dies kann die zulässige Miete verdoppeln, ohne die Grenze zu überschreiten. <br><br>
+          <strong>Achtung:</strong> Wenn der Ehegatte <em>ebenfalls</em> Geschäftsführer in derselben Gesellschaft ist, unterliegen beide Anteile der Regel, wodurch der Vorteil des Miteigentums entfällt.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Info strip -->
+  <div class="info-strip">
+    <div>
+      <h3>Warum <span>La Caverne de la Compta</span>?</h3>
+      <p>Tools für belgische Selbständige, Buchhalter und Studenten. Einfach, zuverlässig und stets auf dem neuesten Stand der geltenden Gesetzgebung.</p>
+    </div>
+    <ul class="info-features">
+      <li><div class="check">✓</div><span>Berechnungen basierend auf der geltenden belgischen Gesetzgebung</span></li>
+      <li><div class="check">✓</div><span>Sofortige Ergebnisse, ohne Registrierung</span></li>
+      <li><div class="check">✓</div><span>Klare und intuitive Benutzeroberfläche für alle Profile</span></li>
+      <li><div class="check">✓</div><span>Zugänglich auf Mobiltelefon, Tablet und Computer</span></li>
+    </ul>
+  </div>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
+  <div class="footer-links">
+    <a href="/de/mentions-legales/">Impressum</a>
+    <a href="/de/mentions-legales/#rgpd">RGPD</a>
+    <a href="/de/mentions-legales/#cookies">Cookies</a>
+    <a href="#">Kontakt</a>
+  </div>
+</footer>
+
+<script>
+  // Coefficients de revalorisation RC — Art. 32 al.2 CIR 92
+  // Source : Quick-Mémo Fiscal La Caverne de la Compta (SPF Finances)
+  const COEFF_REVAL = {
+    2027: 5.75,
+    2026: 5.63,
+    2025: 5.46,
+    2024: 5.37,
+    2023: 4.86,
+    2022: 4.63,
+    2021: 4.60,
+    2020: 4.57,
+    2019: 4.47,
+    2018: 4.39,
+    2017: 4.31,
+    2016: 4.23,
+    2015: 4.23,
+    2014: 4.19,
+    2013: 4.10
+  };
+
+  // Taux cotisations sociales approx. indépendant principal
+  // Toggle mixte field
+  document.querySelectorAll('input[name="type_bien"]').forEach(r => {
+    r.addEventListener('change', () => {
+      document.getElementById('field_mixte').style.display = r.value === 'mixte' ? 'block' : 'none';
+    });
+  });
+
+  // Part pro slider sync
+  document.getElementById('part_pro').addEventListener('input', e => {
+    document.getElementById('partpro_display').textContent = e.target.value + '%';
+    const v = e.target.value;
+    e.target.style.background = `linear-gradient(to right, var(--teal) 0%, var(--teal) ${v}%, var(--border) ${v}%, var(--border) 100%)`;
+  });
+
+  // Toggle indivision field + dynamic info
+  document.querySelectorAll('input[name="indivision"]').forEach(r => {
+    r.addEventListener('change', () => {
+      document.getElementById('field_indivision').style.display = r.value === 'oui' ? 'block' : 'none';
+      if (r.value === 'oui') updateIndivisionInfo();
+    });
+  });
+
+  // Slider sync
+  function syncSlider(val) {
+    document.getElementById('conjoint_display').textContent = val + '%';
+    document.getElementById('conj_pct').textContent = val + '%';
+    document.getElementById('dir_pct').textContent = (100 - val) + '%';
+    const slider = document.getElementById('part_conjoint');
+    slider.style.background = `linear-gradient(to right, var(--teal) 0%, var(--teal) ${val}%, var(--border) ${val}%, var(--border) 100%)`;
+    updateIndivisionInfo();
+  }
+
+  document.getElementById('part_conjoint').addEventListener('input', e => syncSlider(parseInt(e.target.value)));
+
+  document.addEventListener('input', e => {
+    if (e.target.id === 'part_conjoint') updateIndivisionInfo();
+  });
+
+  // Toggle meublé field
+  document.querySelectorAll('input[name="meuble"]').forEach(r => {
+    r.addEventListener('change', () => {
+      document.getElementById('field_meuble').style.display = r.value === 'oui' ? 'block' : 'none';
+    });
+  });
+
+  // Update période info on date change
+  ['date_debut', 'date_fin'].forEach(id => {
+    document.getElementById(id).addEventListener('change', updatePeriodeInfo);
+  });
+
+  function updatePeriodeInfo() {
+    const d1 = document.getElementById('date_debut').value;
+    const d2 = document.getElementById('date_fin').value;
+    const box = document.getElementById('info_periode_box');
+    const txt = document.getElementById('info_periode_text');
+    if (!d1 || !d2) { box.style.display = 'none'; return; }
+    const start = new Date(d1), end = new Date(d2);
+    if (end < start) { box.className = 'info-indivision attention'; box.style.display = 'flex'; txt.innerHTML = 'Das Enddatum muss nach dem Startdatum liegen.'; return; }
+    const days = Math.round((end - start) / (1000 * 60 * 60 * 24)) + 1;
+    const annee = parseInt(document.getElementById('annee').value) - 1; // année des revenus
+    const daysInYear = (annee % 4 === 0 && (annee % 100 !== 0 || annee % 400 === 0)) ? 366 : 365;
+    const ratio = (days / daysInYear * 100).toFixed(1);
+    box.className = 'info-indivision favorable';
+    box.style.display = 'flex';
+    txt.innerHTML = `<strong>${days} Tage</strong> Vermietung von ${daysInYear} Tagen im Jahr = <strong>${ratio}%</strong> des Jahres. Die Obergrenze wird anteilig berechnet.`;
+  }
+
+  function updateIndivisionInfo() {
+    const partConj = parseFloat(document.getElementById('part_conjoint').value) || 50;
+    const partDir = 100 - partConj;
+    const box = document.getElementById('info_indivision_box');
+
+    if (partConj >= 50) {
+      box.className = 'info-indivision favorable';
+      box.innerHTML = `
+        <span class="info-indivision-icon">✅</span>
+        <div>
+          <strong>Situation favorable :</strong> Der/die Ehegatte/in hält <strong>${partConj}%</strong> der Immobilie.
+          Seule votre quote-part (<strong>${partDir}%</strong> du loyer) est soumise à la règle de requalification.
+          La part du loyer perçue par votre conjoint(e) échappe à l'article 32 al. 2 CIR 92 
+          <em>(sauf si le conjoint(e) est également dirigeant dans la même société)</em>.
+        </div>`;
+    } else {
+      box.className = 'info-indivision attention';
+      box.innerHTML = `
+        <span class="info-indivision-icon">⚠️</span>
+        <div>
+          <strong>Attention :</strong> Sie halten <strong>${partDir}%</strong> du bien (majorité).
+          La requalification s'applique sur votre quote-part du loyer. 
+          La part du conjoint(e) (<strong>${partConj}%</strong>) reste hors champ, 
+          mais votre exposition reste importante. Vérifiez si votre conjoint(e) est également mandataire dans la société.
+        </div>`;
+    }
+  }
+
+  function fmt(n) {
+    return new Intl.NumberFormat('de-BE', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
+  }
+
+  function calculer() {
+    const rc_brut = parseFloat(document.getElementById('rc_brut').value) || 0;
+    const annee = parseInt(document.getElementById('annee').value); // exercice d'imposition
+    const anneeRev = annee - 1; // année des revenus
+    const type_bien = document.querySelector('input[name="type_bien"]:checked').value;
+    const part_pro = type_bien === 'mixte' ? (parseFloat(document.getElementById('part_pro').value) || 100) / 100 : 1.0; // 1.0 = 100% si non mixte
+    const loyer_propre = parseFloat(document.getElementById('loyer_propre').value) || 0;
+    const loyer_avantages = parseFloat(document.getElementById('loyer_avantages').value) || 0;
+    const loyer_brut_periode = loyer_propre + loyer_avantages;
+    const charges = 0;
+    // Période de location (prorata)
+    const d1str = document.getElementById('date_debut').value;
+    const d2str = document.getElementById('date_fin').value;
+    let prorata = 1; // par défaut = pleine année
+    let nbJours = null;
+    if (d1str && d2str) {
+      const start = new Date(d1str), end = new Date(d2str);
+      if (end >= start) {
+        nbJours = Math.round((end - start) / (1000 * 60 * 60 * 24)) + 1;
+        const daysInYear = (anneeRev % 4 === 0 && (anneeRev % 100 !== 0 || anneeRev % 400 === 0)) ? 366 : 365;
+        prorata = nbJours / daysInYear;
+      }
+    }
+
+    // Indivision
+    const indivision = document.querySelector('input[name="indivision"]:checked').value;
+    const partConj = indivision === 'oui' ? (parseFloat(document.getElementById('part_conjoint').value) || 50) : 0;
+    const partDir = (100 - partConj) / 100;
+
+    // Meublé
+    const meuble = document.querySelector('input[name="meuble"]:checked').value;
+    const partMeuble = meuble === 'oui' ? 0.40 : 0; // Règle 60/40 : 40% mobilier fixe
+
+    if (rc_brut === 0 || loyer_brut_periode === 0) {
+      alert('Bitte geben Sie den Einheitswert und die erhaltene Miete ein.');
+      return;
+    }
+
+    const coeff = COEFF_REVAL[annee] || 5.63;
+
+    // ── Calcul selon la méthode de référence (Twinntax) ──
+    // RC dirigeant = RC net × % utilisation pro × % propriété dirigeant × prorata jours
+    const rc_dir = rc_brut * part_pro * partDir * prorata;
+    // RC partenaire = RC net × % utilisation pro × % propriété conjoint × prorata jours
+    const rc_conj = rc_brut * part_pro * (partConj / 100) * prorata;
+
+    // Loyer max dirigeant = RC dirigeant × (5/3) × coefficient revalorisation
+    const loyer_max_dir = rc_dir * (5 / 3) * coeff;
+    // Loyer max conjoint (non dirigeant) = pas de requalification
+    const loyer_max_conj = null; // pas applicable
+
+    // RC revalorisé (pour affichage)
+    const rc_revalorise = rc_brut * coeff;
+
+    const loyer_net = loyer_brut_periode - charges;
+    const loyer_mobilier_total = loyer_net * partMeuble;          // 40% si meublé → rev. mobilier
+    const loyer_immobilier = loyer_net * (1 - partMeuble);        // 60% si meublé, 100% sinon → soumis RC
+
+    // Loyer dirigeant = loyer immobilier × % propriété dirigeant
+    const loyer_dir = loyer_immobilier * partDir;
+    // Loyer conjoint = loyer immobilier × % propriété conjoint
+    const loyer_conjoint = loyer_immobilier * (partConj / 100);
+
+    // Requalification = loyer dirigeant - loyer max dirigeant (min 0)
+    const requalif = Math.max(0, loyer_dir - loyer_max_dir);
+    const loyer_admis_dir = Math.min(loyer_dir, loyer_max_dir);
+
+    // Parts mobilières par propriétaire
+    const loyer_mobilier_dir = loyer_mobilier_total * partDir;
+    const loyer_mob_conj_val = loyer_mobilier_total * (partConj / 100);
+
+    // Alias pour compatibilité affichage
+    const plafond_dir = loyer_max_dir;
+
+    // Display results
+    const panel = document.getElementById('results-panel');
+    panel.classList.add('visible');
+    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    const prorataLabel = nbJours ? ` · ${nbJours} Tage (${(prorata*100).toFixed(1)}%)` : ' · Vollständiges Jahr';
+    document.getElementById('res-subtitle').textContent = `Ex. ${annee} / Rev. ${anneeRev} — ${fmt(loyer_brut_periode)} perçus${prorataLabel}${meuble === 'oui' ? ` · Möbliert ${(partMeuble*100).toFixed(0)}%` : ''}${indivision === 'oui' ? ` · Geschäftsführer ${(partDir*100).toFixed(0)}%` : ''}`;
+
+    // ── Build declaration table ──
+    const hasConj = indivision === 'oui' && partConj > 0;
+    const loyer_normal_dir = loyer_admis_dir;
+    const loyer_mob_dir = loyer_mobilier_total * partDir;
+    // ── IPP info boxes (style Twinntax) ──
+    function ippRow(code, val, isDanger=false) {
+      return `<div class="ipp-info-row">
+        <span class="ipp-info-code"><span class="decl-case${isDanger ? ' decl-case-pro' : ''}">${code}</span></span>
+        <span class="ipp-info-val${isDanger ? ' danger' : ''}">${fmt(val)}</span>
+      </div>`;
+    }
+
+    // Dirigeant
+    let dirRows = '';
+    dirRows += ippRow('x401', requalif, requalif > 0);
+    dirRows += ippRow('x109', rc_dir);
+    dirRows += ippRow('x110', loyer_admis_dir);
+    if (meuble === 'oui') dirRows += ippRow('x156', loyer_mobilier_dir);
+    document.getElementById('ipp-dir-rows').innerHTML = dirRows;
+
+    // Partenaire (si indivision)
+    const conjBox = document.getElementById('ipp-conj-box');
+    if (hasConj) {
+      conjBox.style.display = 'block';
+      document.getElementById('ipp-boxes').classList.remove('ipp-box-single');
+      let conjRows = '';
+      conjRows += ippRow('x401', 0);   // conjoint non dirigeant → 0
+      conjRows += ippRow('x109', rc_conj);
+      conjRows += ippRow('x110', loyer_conjoint);
+      if (meuble === 'oui') conjRows += ippRow('x156', loyer_mob_conj_val);
+      document.getElementById('ipp-conj-rows').innerHTML = conjRows;
+    } else {
+      conjBox.style.display = 'none';
+      document.getElementById('ipp-boxes').classList.add('ipp-box-single');
+    }
+
+    // KPIs
+    document.getElementById('kpi_rc_indexe').textContent = fmt(rc_revalorise);
+    document.getElementById('kpi_rc_sub').textContent = `RC ${rc_brut}€ × ${coeff.toFixed(2)}`;
+    document.getElementById('kpi_plafond').textContent = fmt(loyer_max_dir);
+    document.getElementById('kpi_loyer_net').textContent = fmt(loyer_dir);
+
+    const kpiRequalif = document.getElementById('kpi_requalif');
+    kpiRequalif.textContent = fmt(requalif);
+    kpiRequalif.className = 'kpi-value ' + (requalif === 0 ? 'accent' : 'danger');
+
+    // Update KPI subtitles dynamically
+    document.querySelector('#kpi_plafond').closest('.kpi-box').querySelector('.kpi-sub').textContent =
+      (nbJours ? `5/3 × aufgew. EW × ${(prorata*100).toFixed(1)}% anteilig` : '5/3 × aufgewerteter EW') + (indivision === 'oui' ? ` × ${(partDir*100).toFixed(0)}% GF.` : '');
+    document.querySelector('#kpi_loyer_net').closest('.kpi-box').querySelector('.kpi-sub').textContent =
+      meuble === 'oui'
+        ? `Immobilienanteil der Miete × ${(partDir*100).toFixed(0)}% GF.`
+        : (indivision === 'oui' ? `Geschäftsführeranteil (${(partDir * 100).toFixed(0)}% der Nettomiete)` : 'Miete - Nebenkosten');
+
+    // Breakdown
+    const tbody = document.getElementById('breakdown-body');
+    tbody.innerHTML = `
+      <tr>
+        <td>Nicht indexierter Einheitswert (EW ni)</td>
+        <td>${fmt(rc_brut)}</td>
+      </tr>
+      <tr>
+        <td>Aufwertungskoeffizient ${annee} <span style="font-size:0.76rem;color:var(--text-light)">(Art. 32 Abs.2 EStG 92)</span></td>
+        <td>× ${coeff.toFixed(2)}${nbJours ? ` × ${(prorata*100).toFixed(1)}% (${nbJours}j)` : ''}</td>
+      </tr>
+      <tr>
+        <td>Aufgewerteter EW${type_bien === 'mixte' ? ` × ${(part_pro * 100).toFixed(0)}% (beruflicher Anteil)` : ''}</td>
+        <td>${fmt(rc_dir / partDir)}</td>
+      </tr>
+      ${indivision === 'oui' ? `
+      <tr>
+        <td>Anteil Geschäftsführer am Eigentum</td>
+        <td>${(partDir * 100).toFixed(0)}%</td>
+      </tr>
+      <tr>
+        <td>Anteil Ehegatte am Eigentum</td>
+        <td>${partConj.toFixed(0)}% <em style="font-size:0.78rem;color:var(--text-light)">(außerhalb Art. 32)</em></td>
+      </tr>` : ''}
+      <tr class="row-total">
+        <td><strong>Zulässige Obergrenze — Geschäftsführeranteil (5/3 × EW${nbJours ? ` × ${(prorata*100).toFixed(1)}%` : ''}${indivision === 'oui' ? ` × ${(partDir*100).toFixed(0)}%` : ''})</strong></td>
+        <td>${fmt(plafond_dir)}</td>
+      </tr>
+      <tr>
+        <td>Eigentliche Miete</td>
+        <td>${fmt(loyer_propre)}</td>
+      </tr>
+      ${loyer_avantages > 0 ? `<tr><td>Mietvorteile</td><td>+ ${fmt(loyer_avantages)}</td></tr>` : ''}
+      <tr>
+        <td><strong>Erhaltene Gesamtmiete</strong></td>
+        <td><strong>${fmt(loyer_brut_periode)}</strong></td>
+      </tr>
+      ${charges > 0 ? `<tr><td>Abgezogene Nebenkosten</td><td>- ${fmt(charges)}</td></tr>` : ''}
+      ${meuble === 'oui' ? `
+      <tr>
+        <td>Gesamtnettomiete (vor Aufteilung)</td>
+        <td>${fmt(loyer_net)}</td>
+      </tr>
+      <tr>
+        <td>Beweglicher Anteil — Möbel (${(partMeuble*100).toFixed(0)}%) <span style="font-size:0.72rem;background:#E8F0FA;color:#2855A0;padding:2px 7px;border-radius:10px;font-weight:700;margin-left:4px;">KAPITALEINKÜFTE</span></td>
+        <td>${fmt(loyer_mobilier_total)}</td>
+      </tr>
+      <tr>
+        <td>Immobilienteil — Umqualifizierungsbasis (${((1-partMeuble)*100).toFixed(0)}%)</td>
+        <td>${fmt(loyer_immobilier)}</td>
+      </tr>` : ''}
+      ${meuble !== 'oui' ? `<tr><td>Gesamtnettomiete</td><td>${fmt(loyer_net)}</td></tr>` : ''}
+      ${indivision === 'oui' ? `
+      <tr>
+        <td>Netto-Mietanteil — Ehegatte (${partConj.toFixed(0)}%) <span class="badge-ok">AUSSER REICHWEITE</span></td>
+        <td>${fmt(loyer_conjoint)}</td>
+      </tr>
+      <tr>
+        <td>Netto-Mietanteil — Geschäftsführer (${(partDir*100).toFixed(0)}%)</td>
+        <td>${fmt(loyer_dir)}</td>
+      </tr>` : ''}
+      <tr>
+        <td>Zulässige Miete als Immobilieneinkünfte (GF-Anteil) <span class="badge-ok">OK</span></td>
+        <td>${fmt(loyer_admis_dir)}</td>
+      </tr>
+      ${requalif > 0 ? `<tr class="row-requalif"><td><strong>Umqualifizierter Betrag als Vergütung</strong> <span class="badge-requalif">UMQUALIFIZIERT</span></td><td>${fmt(requalif)}</td></tr>` : ''}
+    `;
+
+
+    // Status
+    const statusEl = document.getElementById('result-status');
+    const statusIcon = document.getElementById('status-icon');
+    const statusTitle = document.getElementById('status-title');
+    const statusDesc = document.getElementById('status-desc');
+
+    if (requalif === 0) {
+      statusEl.className = 'result-status ok';
+      statusIcon.textContent = '✅';
+      statusTitle.textContent = 'Konforme Situation — Keine Umqualifizierung';
+      statusDesc.textContent = `Der dem Geschäftsführer zuzurechnende Mietanteil (${fmt(loyer_dir)}) liegt unter der zulässigen Obergrenze (${fmt(plafond_dir)}). Sie erfüllen die Vorschriften.`;
+    } else if (requalif < plafond_dir * 0.2) {
+      statusEl.className = 'result-status warning';
+      statusIcon.textContent = '⚠️';
+      statusTitle.textContent = 'Mäßige Überschreitung — Optimierung empfohlen';
+      statusDesc.textContent = `${fmt(requalif)} des Mietanteils des Geschäftsführers wird als Vergütung umqualifiziert. Eine Anpassung ist ratsam.`;
+    } else {
+      statusEl.className = 'result-status danger';
+      statusIcon.textContent = '🚨';
+      statusTitle.textContent = 'Erhebliche Überschreitung — Maßnahmen erforderlich';
+      statusDesc.textContent = `${fmt(requalif)} (${((requalif / loyer_dir) * 100).toFixed(1)}% des Geschäftsführeranteils) werden umqualifiziert. Konsultieren Sie einen Fachmann.`;
+    }
+
+    // Recommandations
+    const recoList = document.getElementById('reco-list');
+    recoList.innerHTML = '';
+    const recos = [];
+
+    if (requalif === 0) {
+      recos.push(`Ihre Situation ist konform. Sie können noch bis zu <strong>${fmt(plafond_dir - loyer_dir)}</strong> an zusätzlicher Miete (Geschäftsführeranteil) erhalten, bevor die Grenze überschritten wird.`);
+      if (indivision === 'oui') {
+        recos.push(`Der Mietanteil Ihres Ehegatten (<strong>${fmt(loyer_conjoint)}/Jahr</strong>) fällt nicht in den Umqualifizierungsbereich, was vorteilhaft ist. Stellen Sie sicher, dass Ihr Ehegatte kein Geschäftsführer in derselben Gesellschaft ist.`);
+      }
+      if (meuble === 'oui') {
+        recos.push(`Der bewegliche Anteil Ihrer Miete (<strong>${fmt(loyer_mobilier_total)}/Jahr</strong>) unterliegt dem befreienden Kapitalertragsteuerabzug von 30%, was generell vorteilhafter ist als die Einkommensteuer. Halten Sie die Immobilien-/Mobilienaufteilung klar in Ihrem Mietvertrag fest.`);
+      }
+      recos.push('Denken Sie daran, jährlich zu prüfen, da sich der Indexierungskoeffizient des EW jährlich ändert.');
+      recos.push('Bewahren Sie Ihren registrierten Mietvertrag und Zahlungsbelege gut auf, falls eine Steuerprüfung stattfindet.');
+    } else {
+      const loyerMaxTotal = plafond_dir / partDir;
+      const loyerMaxMsg = nbJours
+        ? `Max. Miete für den Zeitraum: <strong>${fmt(loyerMaxTotal)}</strong> (${nbJours} Tage)`
+        : `Max. Jahresmiete: <strong>${fmt(loyerMaxTotal)}/Jahr</strong> (~${fmt(loyerMaxTotal/12)}/Monat)`;
+      recos.push(`${loyerMaxMsg} um die Umqualifizierung zu beseitigen (Geschäftsführeranteil auf ${fmt(plafond_dir)} begrenzt).`);
+      if (indivision !== 'oui') {
+        recos.push('Erwägen Sie, die Immobilie in Miteigentum mit Ihrem Ehegatten (≥ 50%) zu bringen, um den der Umqualifizierung unterliegenden Anteil zu reduzieren.');
+      } else if (partConj < 50) {
+        recos.push(`Wenn Ihr Ehegatte seinen/ihren Anteil auf <strong>50% oder mehr</strong> erhöht, unterliegt nur Ihr verbleibender Anteil (<strong>${(100 - 50)}%</strong>) der Regel, was die Umqualifizierung eliminieren oder reduzieren könnte.`);
+      }
+      if (meuble !== 'oui') {
+        recos.push('Erwägen Sie eine <strong>möblierte</strong> Vermietung: Der den Möbeln zugeordnete Mietanteil (typischerweise 20–40%) wird zu Kapitaleinkünften (Steuerabzug 30%) und fällt aus der Vergleichsbasis mit der EW-Obergrenze, was das Umqualifizierungsrisiko mechanisch reduziert.');
+      } else {
+        recos.push('Die 60/40-Regel wird angewandt: 40% der Miete werden als Kapitaleinkünfte (30% Steuerabzug) behandelt, 60% als Immobilieneinkünfte, die der EW-Obergrenze unterliegen.');
+      }
+      recos.push('Prüfen Sie, ob Ihr Einheitswert korrekt bewertet wurde — eine Neubewertung beim FÖD Finanzen kann die Obergrenze legal erhöhen.');
+      if (type_bien !== 'mixte') {
+        recos.push('Wenn nur ein Teil der Immobilie beruflich genutzt wird, erwägen Sie den Wechsel zu <strong>gemischter Nutzung</strong> und begrenzen Sie den Mietvertrag auf den tatsächlichen beruflichen Anteil, um die Berechnungsbasis der Obergrenze zu reduzieren.');
+      }
+      recos.push('Konsultieren Sie Ihren Buchhalter oder Steuerberater für eine personalisierte Analyse Ihrer Situation.');
+    }
+
+    recos.forEach(r => {
+      const li = document.createElement('li');
+      li.innerHTML = `<div class="reco-dot"></div><span>${r}</span>`;
+      recoList.appendChild(li);
+    });
+  }
+
+  function toggleAccordion(btn) {
+    const body = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+    document.querySelectorAll('.accordion-header.open').forEach(h => {
+      h.classList.remove('open');
+      h.nextElementSibling.classList.remove('open');
+    });
+    if (!isOpen) {
+      btn.classList.add('open');
+      body.classList.add('open');
+    }
+  }
+
+  // ── Update loyer total field ──
+  function updateLoyerTotal() {
+    const propre = parseFloat(document.getElementById('loyer_propre').value) || 0;
+    const avantages = parseFloat(document.getElementById('loyer_avantages').value) || 0;
+    const total = propre + avantages;
+    document.getElementById('loyer_annuel').value = total || '';
+    const totalField = document.getElementById('loyer_total_field');
+    totalField.style.display = (avantages > 0 && propre > 0) ? 'block' : 'none';
+    autoCalc();
+  }
+
+  // ── Auto-calculate on any input change ──
+  let _debounceTimer = null;
+  function autoCalc() {
+    clearTimeout(_debounceTimer);
+    _debounceTimer = setTimeout(() => {
+      const rc = parseFloat(document.getElementById('rc_brut').value) || 0;
+      const loyer = parseFloat(document.getElementById('loyer_propre').value) || 0;
+      if (rc > 0 && loyer > 0) calculer();
+    }, 400);
+  }
+
+  // Listen to all inputs and selects in the form
+  document.getElementById('input-panel').querySelectorAll('input, select').forEach(el => {
+    el.addEventListener('input', autoCalc);
+    el.addEventListener('change', autoCalc);
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+  // ── Dropdown nav ──────────────────────────────────────────────────────────
+  function toggleDD(e){e.stopPropagation();document.getElementById('ddWrap').classList.toggle('dd-open');}
+  document.addEventListener('click',()=>document.getElementById('ddWrap').classList.remove('dd-open'));
+</script>
+</body>
+</html>

@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loan Simulator Belgium 2026 — Amortisation Schedule</title>
+<meta name="description" content="Belgian loan simulator with monthly, quarterly or annual amortisation schedule. Calculation of interest, repaid capital and outstanding balance.">
+<meta name="keywords" content="loan simulator belgium, amortisation schedule, mortgage calculation, monthly repayment, loan interest">
+<meta name="author" content="La Caverne de la Compta">
+<meta name="robots" content="index, follow">
+  <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-credit/">
+  <link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-credit/">
+  <link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-credit/">
+  <link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-credit/">
+  <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-credit/">
+<link rel="canonical" href="https://lacavernedelacompta.be/en/simulateur-credit/">
+<meta property="og:title" content="Loan Simulator — Amortisation Schedule Belgium 2026">
+  <meta property="og:image" content="https://lacavernedelacompta.be/logo.png">
+
+<meta property="og:description" content="Calculate your monthly payments, interest and outstanding balance with a complete amortisation schedule.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lacavernedelacompta.be/simulateur-credit.html">
+<meta property="og:site_name" content="La Caverne de la Compta">
+<meta property="og:locale" content="en_BE">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0D1B2A; --navy-mid:#1B2E44; --navy-light:#243B55;
+  --teal:#1A7A8A; --teal-light:#22A3B8; --teal-pale:#E8F6F8; --teal-ultra:#F0FAFB;
+  --white:#FFFFFF; --bg:#F4F7FA;
+  --text:#1A2535; --text-mid:#4A6279; --text-light:#8A9BB0;
+  --border:#DDE5EF; --shadow:rgba(13,27,42,0.10); --shadow-sm:rgba(13,27,42,0.06);
+  --green:#2E7D32; --green-pale:#EBF7ED;
+  --orange:#E65100; --orange-pale:#FFF3E0;
+  --red:#C62828; --red-pale:#FFEBEE;
+  --gold:#B8860B;
+  --radius:12px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh;font-size:14px;}
+
+/* ── Topbar ── */
+.topbar{background:var(--navy);padding:9px 40px;display:flex;justify-content:space-between;align-items:center;}
+.topbar-left{font-size:.73rem;color:var(--text-light);letter-spacing:.05em;}
+.topbar-right{display:flex;gap:20px;}
+.topbar-right a{font-size:.73rem;color:var(--text-light);text-decoration:none;}
+.topbar-right a:hover{color:#fff;}
+
+/* ── Nav ── */
+nav {
+    background: #ffffff;
+    border-bottom: 2px solid #22A3B8;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    box-shadow: 0 2px 12px rgba(13, 27, 42, 0.08);
+    overflow: visible;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--teal),var(--navy));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;}
+.logo-name{font-family:'Lora',serif;font-size:1rem;font-weight:700;color:var(--navy);line-height:1.2;}
+.logo-sub{font-size:.62rem;font-weight:500;color:var(--teal);letter-spacing:.15em;text-transform:uppercase;}
+.nav-links{display:flex;gap:4px;list-style:none;align-items:center;}
+.nav-links>li{list-style:none;}
+.nav-links a{padding:7px 14px;font-size:.84rem;font-weight:500;color:var(--text-mid);text-decoration:none;border-radius:6px;transition:all .2s;display:block;white-space:nowrap;}
+.nav-links a:hover,.nav-links a.active{background:var(--teal-pale);color:var(--teal);}
+.dd-wrap{position:relative;}
+.dd-btn{display:flex;align-items:center;gap:6px;padding:7px 14px;font-size:.84rem;font-weight:500;color:var(--text-mid);background:none;border:none;cursor:pointer;border-radius:6px;font-family:'DM Sans',sans-serif;transition:all .2s;white-space:nowrap;}
+.dd-btn:hover,.dd-wrap.dd-open .dd-btn{background:var(--teal-pale);color:var(--teal);}
+.dd-chevron{font-size:.52rem;transition:transform .2s;}
+.dd-wrap.dd-open .dd-chevron{transform:rotate(180deg);}
+.dd-menu{display:none;position:absolute;top:calc(100% + 8px);right:0;left:auto;min-width:240px;background:var(--white);border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 32px var(--shadow);z-index:9999;
+    overflow:visible;}
+.dd-wrap.dd-open .dd-menu{display:block;}
+.dd-menu a{display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:.83rem;color:var(--text-mid);text-decoration:none;transition:background .15s;}
+.dd-menu a:hover{background:var(--teal-pale);color:var(--teal);}
+.dd-icon{font-size:.95rem;width:20px;text-align:center;}
+.dd-new{margin-left:auto;background:var(--teal);color:#fff;font-size:.6rem;font-weight:700;padding:2px 7px;border-radius:20px;}
+
+/* ── Hero ── */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);padding:38px 40px 32px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-60px;right:-60px;width:320px;height:320px;background:radial-gradient(circle,rgba(26,122,138,.18) 0%,transparent 70%);pointer-events:none;}
+.hero-inner{max-width:1200px;margin:0 auto;}
+.hero-bread{font-size:.73rem;color:rgba(255,255,255,.45);margin-bottom:10px;}
+.hero-bread a{color:rgba(255,255,255,.45);text-decoration:none;}
+.hero-bread a:hover{color:#fff;}
+.hero-badge{display:inline-block;background:rgba(26,122,138,.3);color:var(--teal-light);font-size:.7rem;font-weight:600;padding:4px 12px;border-radius:20px;letter-spacing:.08em;margin-bottom:12px;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;color:#fff;margin-bottom:8px;line-height:1.25;}
+.hero h1 span{color:var(--teal-light);}
+.hero p{font-size:.9rem;color:rgba(255,255,255,.65);max-width:520px;}
+
+/* ── Update badge ── */
+.update-bar{text-align:right;font-size:.7rem;color:var(--text-light);padding:5px 40px 0;font-style:italic;}
+.update-bar a{color:var(--text-light);}
+
+/* ── Layout ── */
+.main{max-width:1200px;margin:28px auto 40px;padding:0 40px;display:grid;grid-template-columns:340px 1fr;gap:26px;align-items:start;}
+
+/* ── Form card ── */
+.form-card{background:var(--white);border-radius:var(--radius);box-shadow:0 2px 16px var(--shadow);border:1px solid var(--border);overflow:hidden;position:sticky;top:90px;}
+.form-card-head{background:linear-gradient(135deg,var(--navy),var(--navy-mid));padding:18px 22px;}
+.form-card-head h2{font-family:'Lora',serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:3px;}
+.form-card-head p{font-size:.74rem;color:rgba(255,255,255,.5);}
+.form-body{padding:22px;}
+
+.form-group{margin-bottom:18px;}
+.form-label{display:flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;color:var(--text-mid);margin-bottom:7px;text-transform:uppercase;letter-spacing:.04em;}
+.form-label .lbl-icon{font-size:.9rem;}
+.input-wrap{position:relative;display:flex;align-items:center;}
+.input-prefix,.input-suffix{position:absolute;font-size:.82rem;font-weight:600;color:var(--text-light);pointer-events:none;z-index:2;}
+.input-prefix{left:12px;}
+.input-suffix{right:12px;}
+.form-input{width:100%;padding:10px 36px 10px 32px;border:1.5px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:.92rem;font-weight:600;color:var(--text);background:var(--white);outline:none;transition:border .2s,box-shadow .2s;}
+.form-input:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(26,122,138,.1);}
+.form-input.no-prefix{padding-left:14px;}
+.form-input.no-suffix{padding-right:14px;}
+.form-range{width:100%;margin-top:8px;accent-color:var(--teal);cursor:pointer;}
+.slider-labels{display:flex;justify-content:space-between;font-size:.68rem;color:var(--text-light);margin-top:3px;}
+
+/* Toggle groupe */
+.toggle-group{display:flex;gap:6px;flex-wrap:wrap;}
+.tgl{padding:7px 14px;border-radius:6px;font-size:.78rem;font-weight:600;border:1.5px solid var(--border);background:var(--white);color:var(--text-mid);cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;}
+.tgl:hover{border-color:var(--teal);color:var(--teal);}
+.tgl.on{background:var(--teal);color:#fff;border-color:var(--teal);}
+
+/* Divider */
+.form-divider{border:none;border-top:1px dashed var(--border);margin:16px 0;}
+
+/* Btn calc */
+.btn-calc{width:100%;padding:13px;background:linear-gradient(135deg,var(--teal),var(--teal-light));color:#fff;border:none;border-radius:8px;font-family:'Lora',serif;font-size:.95rem;font-weight:700;cursor:pointer;transition:all .2s;letter-spacing:.02em;margin-top:4px;}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(26,122,138,.35);}
+.btn-calc:active{transform:none;}
+
+/* Disclaimer */
+.form-disclaimer{margin-top:12px;font-size:.7rem;color:var(--text-light);line-height:1.5;text-align:center;}
+
+/* ── Results panel ── */
+.results-panel{}
+
+/* KPI row */
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:22px;}
+.kpi{background:var(--white);border-radius:var(--radius);box-shadow:0 2px 12px var(--shadow-sm);border:1px solid var(--border);padding:16px 18px;transition:transform .2s;}
+.kpi:hover{transform:translateY(-2px);}
+.kpi-icon{font-size:1.3rem;margin-bottom:8px;}
+.kpi-label{font-size:.7rem;font-weight:600;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;}
+.kpi-val{font-family:'Lora',serif;font-size:1.35rem;font-weight:700;color:var(--navy);line-height:1;}
+.kpi-val.teal{color:var(--teal);}
+.kpi-val.orange{color:var(--orange);}
+.kpi-sub{font-size:.72rem;color:var(--text-light);margin-top:4px;}
+
+/* Chart */
+.chart-card{background:var(--white);border-radius:var(--radius);box-shadow:0 2px 12px var(--shadow-sm);border:1px solid var(--border);padding:20px 22px;margin-bottom:22px;}
+.chart-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
+.chart-title{font-family:'Lora',serif;font-size:.95rem;font-weight:700;color:var(--navy);}
+.chart-legend{display:flex;gap:16px;}
+.leg-item{display:flex;align-items:center;gap:6px;font-size:.72rem;color:var(--text-mid);}
+.leg-dot{width:10px;height:10px;border-radius:50%;}
+.leg-dot.capital{background:var(--teal);}
+.leg-dot.interets{background:var(--orange);}
+canvas{max-height:220px;}
+
+/* Table card */
+.table-card{background:var(--white);border-radius:var(--radius);box-shadow:0 2px 12px var(--shadow-sm);border:1px solid var(--border);overflow:hidden;}
+.table-head{padding:16px 22px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);}
+.table-title{font-family:'Lora',serif;font-size:.95rem;font-weight:700;color:var(--navy);}
+.table-actions{display:flex;gap:8px;align-items:center;}
+.freq-tabs{display:flex;gap:6px;}
+.freq-tab{padding:5px 12px;border-radius:6px;font-size:.75rem;font-weight:600;border:1.5px solid var(--border);background:var(--white);color:var(--text-mid);cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;}
+.freq-tab:hover{border-color:var(--teal);color:var(--teal);}
+.freq-tab.on{background:var(--teal);color:#fff;border-color:var(--teal);}
+.btn-export{padding:5px 12px;border-radius:6px;font-size:.75rem;font-weight:600;border:1.5px solid var(--border);background:var(--white);color:var(--text-mid);cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;}
+.btn-export:hover{border-color:var(--navy);color:var(--navy);}
+
+.table-wrap{overflow-x:auto;max-height:520px;overflow-y:auto;}
+table{width:100%;border-collapse:collapse;font-size:.82rem;}
+thead{position:sticky;top:0;z-index:5;}
+thead th{background:var(--navy);color:#fff;padding:10px 14px;font-weight:600;font-size:.75rem;letter-spacing:.04em;text-align:right;white-space:nowrap;}
+thead th:first-child{text-align:center;min-width:70px;}
+thead th:nth-child(2){text-align:left;}
+tbody tr{border-bottom:1px solid var(--border);transition:background .12s;}
+tbody tr:last-child{border-bottom:none;}
+tbody tr:hover{background:var(--teal-ultra);}
+tbody tr.subtotal{background:rgba(26,122,138,.06);}
+tbody tr.subtotal td{font-weight:600;color:var(--teal);}
+tbody tr.total-row{background:var(--navy);border:none !important;}
+tbody tr.total-row td{color:#fff;font-weight:700;padding:12px 14px;}
+td{padding:9px 14px;text-align:right;color:var(--text-mid);}
+td:first-child{text-align:center;font-family:'DM Mono',monospace;font-size:.78rem;font-weight:700;color:var(--text-light);}
+td:nth-child(2){text-align:left;font-weight:500;color:var(--text);}
+td.capital{color:var(--teal);font-weight:600;}
+td.interets{color:var(--orange);font-weight:600;}
+td.solde{font-family:'DM Mono',monospace;font-size:.8rem;}
+td.annuite{font-weight:700;color:var(--navy);}
+
+/* Empty state */
+.empty-state{padding:60px 20px;text-align:center;color:var(--text-light);}
+.empty-icon{font-size:3rem;margin-bottom:14px;opacity:.4;}
+.empty-title{font-family:'Lora',serif;font-size:1.1rem;color:var(--text-mid);margin-bottom:6px;}
+.empty-sub{font-size:.82rem;}
+
+/* Disclaimer */
+.disclaimer{background:#F4F7FA;border-top:1px solid var(--border);padding:16px 40px;font-size:.73rem;color:#8A9BB0;line-height:1.7;}
+.disclaimer-inner{max-width:1200px;margin:0 auto;}
+footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:.76rem;}
+.footer-links{display:flex;gap:18px;}
+.footer-links a{color:rgba(255,255,255,.35);text-decoration:none;}
+.footer-links a:hover{color:#fff;}
+
+@media(max-width:900px){
+  .main{grid-template-columns:1fr;padding:0 16px;}
+  .form-card{position:static;}
+  .kpis{grid-template-columns:1fr 1fr;}
+  nav,.topbar,.hero,.update-bar,.disclaimer,footer{padding-left:16px;padding-right:16px;}
+}
+@media(max-width:500px){.kpis{grid-template-columns:1fr;}}
+
+/* Cookie banner */
+#cookieBanner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0D1B2A;border-top:3px solid #1A7A8A;padding:16px 30px 14px;box-shadow:0 -4px 24px rgba(0,0,0,0.35);font-family:'Inter',sans-serif;}
+#cookieBanner .cb-top{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+#cookieBanner .cb-text{font-size:0.82rem;color:rgba(255,255,255,0.75);line-height:1.6;flex:1;min-width:200px;margin:0;}
+#cookieBanner .cb-text a{color:#22A3B8;text-decoration:none;}
+#cookieBanner .cb-cats{display:flex;gap:20px;flex-wrap:wrap;margin:10px 0 12px 0;padding-left:2px;}
+#cookieBanner .cb-cat{display:flex;align-items:center;gap:8px;cursor:pointer;}
+#cookieBanner .cb-cat label{font-size:0.8rem;color:rgba(255,255,255,0.8);cursor:pointer;user-select:none;}
+#cookieBanner .cb-cat input[type=checkbox]{width:16px;height:16px;accent-color:#1A7A8A;cursor:pointer;}
+#cookieBanner .cb-cat.required label{color:rgba(255,255,255,0.45);}
+#cookieBanner .cb-btns{display:flex;gap:10px;flex-shrink:0;align-items:flex-start;}
+#cookieBanner .cb-btn{padding:9px 18px;border-radius:7px;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;border:none;transition:all 0.2s;}
+#cookieBanner .cb-btn-all{background:#1A7A8A;color:#fff;}
+#cookieBanner .cb-btn-all:hover{background:#22A3B8;}
+#cookieBanner .cb-btn-save{background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.25)!important;}
+#cookieBanner .cb-btn-save:hover{color:#fff;border-color:rgba(255,255,255,0.5)!important;}
+#cookieBanner .cb-btn-refuse{background:transparent;color:rgba(255,255,255,0.5);font-size:0.75rem;font-weight:500;padding:4px 0;text-decoration:underline;cursor:pointer;}
+#cookieBanner .cb-btn-refuse:hover{color:rgba(255,255,255,0.8);}
+</style>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "La Caverne de la Compta",
+  "url": "https://lacavernedelacompta.be",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://lacavernedelacompta.be/logo.png",
+    "width": 512,
+    "height": 512
+  },
+  "image": "https://lacavernedelacompta.be/logo.png"
+}
+</script>
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<!-- CACHE-BUST-v8-en/simulateur-credit/index.html -->
+</head>
+<body>
+<div id="cookieBanner">
+  <div class="cb-top">
+    <p class="cb-text">
+      🍪 <strong style="color:#fff;">This website uses cookies.</strong>
+      Essential cookies ensure the website works properly. Others require your consent.
+      <a href="/en/mentions-legales/">Cookie Policy</a>
+    </p>
+    <div class="cb-btns">
+      <button class="cb-btn cb-btn-all" onclick="cbAcceptAll()">Accept all</button>
+      <button class="cb-btn cb-btn-save" onclick="cbSaveChoices()">Save my choices</button>
+    </div>
+  </div>
+  <div class="cb-cats">
+    <div class="cb-cat required">
+      <input type="checkbox" id="cb_necessary" checked disabled>
+      <label for="cb_necessary">✅ Essential <span style="font-size:0.7rem;opacity:0.6">(always active)</span></label>
+    </div>
+    <div class="cb-cat">
+      <input type="checkbox" id="cb_analytics">
+      <label for="cb_analytics">📊 Analytics <span style="font-size:0.7rem;opacity:0.6">(Google Analytics)</span></label>
+    </div>
+    <div class="cb-cat">
+      <input type="checkbox" id="cb_ads">
+      <label for="cb_ads">📢 Advertising <span style="font-size:0.7rem;opacity:0.6">(Google AdSense)</span></label>
+    </div>
+    <button class="cb-btn-refuse" onclick="cbRefuseAll()">Refuse all</button>
+  </div>
+</div>
+
+
+<div class="topbar">
+  <span class="topbar-left">🇧🇪 Belgian Accounting & Tax</span>
+  <div class="topbar-right">
+    <a href="/en/mentions-legales/">Legal notice</a>
+    <a href="mentions-legales.html#rgpd">GDPR</a>
+  </div>
+</div>
+
+<nav>
+<a href="/en/" class="logo" style="text-decoration:none;display:flex;align-items:center;">
+    <svg width="148" height="38" viewBox="0 0 148 38" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <defs>
+        <linearGradient id="hGn" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0D1B2A"/>
+          <stop offset="100%" style="stop-color:#1A3A5C"/>
+        </linearGradient>
+      </defs>
+      <!-- Hexagone -->
+      <polygon points="19,2 31,9 31,23 19,30 7,23 7,9" fill="url(#hGn)"/>
+      <!-- Reflet top -->
+      <polygon points="19,2 31,9 25,9 19,5 13,9 7,9" fill="rgba(255,255,255,.07)"/>
+      <!-- Bras balance -->
+      <line x1="9" y1="15" x2="29" y2="15" stroke="rgba(255,255,255,.5)" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Tige -->
+      <rect x="17.5" y="15" width="2.5" height="11" rx="1.2" fill="rgba(255,255,255,.35)"/>
+      <!-- Pivot gold -->
+      <circle cx="18.8" cy="15" r="3.2" fill="#C9A84C"/>
+      <circle cx="18.8" cy="15" r="1.4" fill="white" opacity=".9"/>
+      <!-- Socle -->
+      <rect x="13" y="27" width="12" height="2.5" rx="1.2" fill="rgba(255,255,255,.2)"/>
+      <!-- Plateau gauche -->
+      <line x1="9" y1="15" x2="7" y2="21.5" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="7" cy="24" rx="6.5" ry="2.5" fill="#1A7A8A"/>
+      <!-- Plateau droit -->
+      <line x1="29" y1="15" x2="31" y2="20" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="31" cy="22.5" rx="6.5" ry="2.5" fill="#22A3B8"/>
+      <!-- Étoile -->
+      <circle cx="27" cy="7" r="2.5" fill="#C9A84C" opacity=".85"/>
+      <!-- Texte -->
+      <text x="42" y="15.5" font-family="'Playfair Display',serif" font-size="12.5" font-weight="900" fill="#0D1B2A" letter-spacing="-.2">La Caverne</text>
+      <rect x="42" y="18.5" width="104" height="1" rx=".5" fill="#DDE5EF"/>
+      <rect x="42" y="18.5" width="18" height="1" rx=".5" fill="#C9A84C"/>
+      <text x="42" y="30" font-family="'Playfair Display',serif" font-size="10.5" font-weight="700" font-style="italic" fill="#1A7A8A" letter-spacing="-.1">de la Compta</text>
+    </svg>
+  </a>
+        <ul class="nav-links">
+    <li><a href="https://lacavernedelacompta.be/en/">🏠 Home</a></li>
+    <li class="dd-wrap" id="ddWrap">
+      <button class="dd-btn" onclick="toggleDD(event)">🧰 Our tools <span class="dd-chevron">▼</span></button>
+      <div class="dd-menu">
+        <a href="/en/simulateur-immobilier/"><span class="dd-icon">🏠</span>Property Simulator</a>
+        <a href="/en/simulateur-credit/"><span class="dd-icon">💳</span>Loan Simulator</a>
+        <a href="/en/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Rent Reclassification<span class="dd-new">Nouveau</span></a>
+        <a href="/en/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Chart of Accounts PCMN</a>
+        <a href="/en/simulateur-interets-composes/"><span class="dd-icon">📈</span>Compound Interest</a>
+        <a href="/en/simulateur-retenue/"><span class="dd-icon">🧾</span>Invoice Withholding</a>
+        <a href="/en/quick-memento-fiscal/"><span class="dd-icon">📌</span>Quick Tax Memo</a>
+        <a href="/en/remboursement-frais/"><span class="dd-icon">🚗</span>Mileage Allowance</a>
+      </div>
+    </li>
+  </ul>
+  <!-- ══ SWITCHER LANGUE ══ -->
+  <div id="langSwitcher" style="display:flex;align-items:center;gap:2px;background:#F4F7FA;border:1px solid #DDE5EF;border-radius:8px;padding:3px;margin-left:16px;flex-shrink:0;">
+    <a href="https://lacavernedelacompta.be/fr/simulateur-credit/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇫🇷 FR</a>
+    <a href="https://lacavernedelacompta.be/nl/simulateur-credit/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇧🇪 NL</a>
+    <a href="https://lacavernedelacompta.be/en/simulateur-credit/" aria-current="page" style="display:inline-flex;align-items:center;gap:3px;font-weight:700;color:#fff;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;background:#1A7A8A;white-space:nowrap;">🇬🇧 EN</a>
+    <a href="https://lacavernedelacompta.be/de/simulateur-credit/" style="display:inline-flex;align-items:center;gap:3px;color:#4A6279;font-size:0.78rem;letter-spacing:0.05em;text-decoration:none;padding:4px 9px;border-radius:5px;transition:background .15s,color .15s;white-space:nowrap;" onmouseover="this.style.background='#E8F6F8';this.style.color='#0D1B2A'" onmouseout="this.style.background='transparent';this.style.color='#4A6279'">🇩🇪 DE</a>
+  </div>
+  <!-- ══════════════════════ -->
+
+  
+</nav>
+<div class="update-bar">
+  🕐 Updated: January 2026 — <a href="/en/mentions-legales/">Official sources</a>
+</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-bread"><a href="/en/">Home</a> › <a href="#">Tools</a> › Loan Simulator</div>
+    <div class="hero-badge">💳 Fixed-rate loan</div>
+    <h1>Loan <span>Simulator</span></h1>
+    <p>Calculate your repayments and view your complete amortisation schedule — monthly, quarterly or annual.</p>
+  </div>
+</section>
+
+<div class="main">
+
+  <!-- FORMULAIRE -->
+  <div class="form-card">
+    <div class="form-card-head">
+      <h2>Loan parameters</h2>
+      <p>Fill in the fields below</p>
+    </div>
+    <div class="form-body">
+
+      <!-- Montant -->
+      <div class="form-group">
+        <label class="form-label"><span class="lbl-icon">💶</span> Loan amount</label>
+        <div class="input-wrap">
+          <span class="input-prefix">€</span>
+          <input type="number" class="form-input" id="montant" value="200000" min="1000" step="1000" oninput="syncSlider('montant','montantSlider');calculate()">
+        </div>
+        <div>
+          <input type="range" class="form-range" id="montantSlider" min="5000" max="1000000" step="1000" value="200000" oninput="syncInput('montantSlider','montant');calculate()">
+          <div class="slider-labels"><span>5 000 €</span><span>1 000 000 €</span></div>
+        </div>
+      </div>
+
+      <!-- Taux -->
+      <div class="form-group">
+        <label class="form-label"><span class="lbl-icon">📊</span> Annual interest rate</label>
+        <div class="input-wrap">
+          <input type="number" class="form-input no-prefix" id="taux" value="3.5" min="0.1" max="25" step="0.1" oninput="syncSlider('taux','tauxSlider');calculate()">
+          <span class="input-suffix">%</span>
+        </div>
+        <div>
+          <input type="range" class="form-range" id="tauxSlider" min="0.1" max="15" step="0.1" value="3.5" oninput="syncInput('tauxSlider','taux');calculate()">
+          <div class="slider-labels"><span>0,1 %</span><span>15 %</span></div>
+        </div>
+      </div>
+
+      <!-- Durée -->
+      <div class="form-group">
+        <label class="form-label"><span class="lbl-icon">📅</span> Loan duration</label>
+        <div class="input-wrap">
+          <input type="number" class="form-input no-prefix" id="duree" value="20" min="1" max="30" step="1" oninput="syncSlider('duree','dureeSlider');calculate()">
+          <span class="input-suffix">yrs</span>
+        </div>
+        <div>
+          <input type="range" class="form-range" id="dureeSlider" min="1" max="30" step="1" value="20" oninput="syncInput('dureeSlider','duree');calculate()">
+          <div class="slider-labels"><span>1 yr</span><span>30 yrs</span></div>
+        </div>
+      </div>
+
+      <hr class="form-divider">
+
+      <!-- Type de taux -->
+      <div class="form-group">
+        <label class="form-label"><span class="lbl-icon">⚙️</span> Repayment type</label>
+        <div class="toggle-group">
+          <button class="tgl on" id="typeAnn" onclick="setType('annuite',this)">Constant annuity</button>
+          <button class="tgl" id="typeConst" onclick="setType('constant',this)">Constant capital</button>
+        </div>
+        <div style="margin-top:8px;font-size:.73rem;color:var(--text-light);line-height:1.5;" id="typeDesc">
+          Same total amount each period. Interest decreases progressively.
+        </div>
+      </div>
+
+
+
+      <div class="form-disclaimer">⚠️ Indicative simulator — Consult your bank or broker before any commitment.</div>
+    </div>
+  </div>
+
+  <!-- RÉSULTATS -->
+  <div class="results-panel" id="results">
+
+    <!-- KPIs -->
+    <div class="kpis" id="kpisRow">
+      <div class="kpi">
+        <div class="kpi-icon">💶</div>
+        <div class="kpi-label">Repayment</div>
+        <div class="kpi-val teal" id="kpiEcheance">—</div>
+        <div class="kpi-sub" id="kpiEcheanceSub">per month</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-icon">📉</div>
+        <div class="kpi-label">Total interest</div>
+        <div class="kpi-val orange" id="kpiInterets">—</div>
+        <div class="kpi-sub" id="kpiCout">Coût total : —</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-icon">📊</div>
+        <div class="kpi-label">Estimated APR</div>
+        <div class="kpi-val" id="kpiTAEG">—</div>
+        <div class="kpi-sub">All-inclusive rate</div>
+      </div>
+    </div>
+
+    <!-- Graphique -->
+    <div class="chart-card" id="chartCard" style="display:none">
+      <div class="chart-head">
+        <span class="chart-title">Capital / Interest breakdown</span>
+        <div class="chart-legend">
+          <div class="leg-item"><div class="leg-dot capital"></div> Repaid capital</div>
+          <div class="leg-item"><div class="leg-dot interets"></div> Interest paid</div>
+        </div>
+      </div>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <!-- Tableau -->
+    <div class="table-card">
+      <div class="table-head">
+        <span class="table-title">Amortisation schedule</span>
+        <div class="table-actions">
+          <div class="freq-tabs">
+            <button class="freq-tab on" data-f="mensuel" onclick="setFreq(this)">Monthly</button>
+            <button class="freq-tab" data-f="trimestriel" onclick="setFreq(this)">Quarterly</button>
+            <button class="freq-tab" data-f="annuel" onclick="setFreq(this)">Annual</button>
+          </div>
+          <button class="btn-export" onclick="exportCSV()">⬇ CSV</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <div id="tableContainer">
+          <div class="empty-state">
+            <div class="empty-icon">📋</div>
+            <div class="empty-title">Amortisation schedule</div>
+            <div class="empty-sub">Fill in the parameters to see the schedule</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="disclaimer">
+  <div class="disclaimer-inner">
+    <strong style="color:#4A6279;">⚠️ Indicative value only:</strong>
+    This simulator is provided for indicative purposes only. The results do not constitute a credit offer.
+    <strong style="color:#4A6279;">Consult your bank, broker or financial adviser</strong> before any commitment.
+    — <a href="mentions-legales.html#disclaimer" style="color:#1A7A8A;text-decoration:none;">Full legal notices</a>
+  </div>
+</div>
+<footer>
+  <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
+  <div class="footer-links">
+    <a href="/en/mentions-legales/">Legal notice</a>
+    <a href="/en/mentions-legales/#rgpd">RGPD</a>
+    <a href="/en/mentions-legales/#cookies">Cookies</a>
+    <a href="#">Contact</a>
+  </div>
+</footer>
+
+<!-- Chart.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+// ── STATE ──────────────────────────────────────────────────────────────────
+let remboursementType = 'annuite'; // 'annuite' | 'constant'
+let freqTab = 'mensuel';
+let lastSchedule = []; // échéancier mensuel complet
+let chartInstance = null;
+
+// ── UTILS ──────────────────────────────────────────────────────────────────
+function fmt(n, dec=2){
+  return new Intl.NumberFormat('fr-BE',{minimumFractionDigits:dec,maximumFractionDigits:dec}).format(n);
+}
+function fmtE(n){ return fmt(n,2) + ' €'; }
+
+function syncSlider(inputId, sliderId){
+  document.getElementById(sliderId).value = document.getElementById(inputId).value;
+}
+function syncInput(sliderId, inputId){
+  document.getElementById(inputId).value = document.getElementById(sliderId).value;
+}
+
+// ── TYPE ───────────────────────────────────────────────────────────────────
+function setType(type, el){
+  remboursementType = type;
+  document.querySelectorAll('.tgl').forEach(b=>b.classList.remove('on'));
+  el.classList.add('on');
+  const desc = document.getElementById('typeDesc');
+  if(type==='annuite'){
+    desc.textContent = 'Same total amount each period. Interest decreases progressively.';
+  } else {
+    desc.textContent = 'Constant capital repaid. Interest and repayment decrease each period.';
+  }
+  calculate();
+}
+
+// ── FREQ ───────────────────────────────────────────────────────────────────
+function setFreq(el){
+  document.querySelectorAll('.freq-tab').forEach(b=>b.classList.remove('on'));
+  el.classList.add('on');
+  freqTab = el.dataset.f;
+  renderTable();
+}
+
+// ── CALCUL PRINCIPAL ───────────────────────────────────────────────────────
+function calculate(){
+  const C      = parseFloat(document.getElementById('montant').value)||0;
+  const tauxAn = parseFloat(document.getElementById('taux').value)||0;
+  const duree  = parseInt(document.getElementById('duree').value)||1;
+  const frais  = 0;
+  const assur  = 0;
+
+  const nPeriods = duree * 12; // nombre de mois
+  const r = tauxAn / 100 / 12; // taux mensuel
+
+  // Générer l'échéancier mensuel
+  lastSchedule = [];
+  let solde = C;
+  let totalInterets = 0;
+  let totalCapital = 0;
+
+  if(remboursementType === 'annuite'){
+    // Annuité constante : PMT = C * r / (1-(1+r)^-n)
+    const pmt = r === 0 ? C / nPeriods : C * r / (1 - Math.pow(1+r, -nPeriods));
+
+    for(let m=1; m<=nPeriods; m++){
+      const interet  = solde * r;
+      const capital  = pmt - interet;
+      solde          = Math.max(0, solde - capital);
+      totalInterets += interet;
+      totalCapital  += capital;
+      lastSchedule.push({
+        num: m,
+        annuite: pmt,
+        capital,
+        interet,
+        solde,
+        assurance: assur,
+        total: pmt + assur,
+      });
+    }
+  } else {
+    // Capital constant
+    const capitalParPeriode = C / nPeriods;
+    for(let m=1; m<=nPeriods; m++){
+      const interet = solde * r;
+      const annuite = capitalParPeriode + interet;
+      solde         = Math.max(0, solde - capitalParPeriode);
+      totalInterets += interet;
+      totalCapital  += capitalParPeriode;
+      lastSchedule.push({
+        num: m,
+        annuite,
+        capital: capitalParPeriode,
+        interet,
+        solde,
+        assurance: assur,
+        total: annuite + assur,
+      });
+    }
+  }
+
+  // KPIs
+  const echeance1 = lastSchedule[0].annuite;
+  const coutTotal = totalInterets + frais + assur * nPeriods;
+
+  // TAEG approximatif (Newton-Raphson sur flux mensuel)
+  let taeg = tauxAn / 100;
+  {
+    const flux = [-C - frais];
+    for(let m=0; m<nPeriods; m++) flux.push(lastSchedule[m].total);
+    // Méthode simple : approx par itération
+    let r2 = tauxAn/100/12;
+    for(let iter=0; iter<50; iter++){
+      let pv=0, dpv=0;
+      for(let i=1;i<=nPeriods;i++){
+        pv  += flux[i] / Math.pow(1+r2, i);
+        dpv += -i * flux[i] / Math.pow(1+r2, i+1);
+      }
+      const f = pv + flux[0];
+      if(Math.abs(f) < 0.01) break;
+      r2 -= f/dpv;
+    }
+    taeg = Math.pow(1+r2, 12) - 1;
+  }
+
+  document.getElementById('kpiEcheance').textContent = fmtE(echeance1);
+  document.getElementById('kpiEcheanceSub').textContent = remboursementType==='annuite'?'per month (constant)':'per month (1st payment)';
+  document.getElementById('kpiInterets').textContent = fmtE(totalInterets);
+  document.getElementById('kpiCout').textContent = 'Total cost: ' + fmtE(C + coutTotal);
+  document.getElementById('kpiTAEG').textContent = fmt(taeg*100,2) + ' %';
+
+  renderChart(totalCapital, totalInterets, frais + assur*nPeriods);
+  renderTable();
+}
+
+// ── GRAPHIQUE ──────────────────────────────────────────────────────────────
+function renderChart(capital, interets, frais){
+  document.getElementById('chartCard').style.display = 'block';
+  const ctx = document.getElementById('myChart').getContext('2d');
+  if(chartInstance) chartInstance.destroy();
+
+  // Données annuelles pour le graphique
+  const years = parseInt(document.getElementById('duree').value);
+  const labels=[], capData=[], intData=[];
+  for(let y=1;y<=years;y++){
+    const mois = lastSchedule.filter(m=>m.num>=(y-1)*12+1 && m.num<=y*12);
+    labels.push('Yr '+y);
+    capData.push(mois.reduce((s,m)=>s+m.capital,0));
+    intData.push(mois.reduce((s,m)=>s+m.interet,0));
+  }
+
+  chartInstance = new Chart(ctx,{
+    type:'bar',
+    data:{
+      labels,
+      datasets:[
+        {label:'Capital',data:capData,backgroundColor:'rgba(26,122,138,.75)',borderRadius:4,borderSkipped:false},
+        {label:'Interest',data:intData,backgroundColor:'rgba(230,81,0,.65)',borderRadius:4,borderSkipped:false},
+      ]
+    },
+    options:{
+      responsive:true,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.dataset.label+' : '+fmtE(ctx.parsed.y)}}},
+      scales:{
+        x:{grid:{display:false},ticks:{font:{size:10}}},
+        y:{grid:{color:'rgba(0,0,0,.05)'},ticks:{callback:v=>fmt(v,0)+' €',font:{size:10}}},
+      }
+    }
+  });
+}
+
+// ── TABLEAU ────────────────────────────────────────────────────────────────
+function renderTable(){
+  if(!lastSchedule.length) return;
+
+  let rows = [];
+  const freq = freqTab;
+
+  if(freq === 'mensuel'){
+    rows = lastSchedule.map(m=>({
+      label: 'Month '+m.num,
+      annuite: m.annuite,
+      capital: m.capital,
+      interet: m.interet,
+      assurance: m.assurance,
+      total: m.total,
+      solde: m.solde,
+      isSub: false,
+    }));
+  } else if(freq === 'trimestriel'){
+    for(let t=0; t<lastSchedule.length/3; t++){
+      const mois = lastSchedule.slice(t*3, t*3+3);
+      rows.push({
+        label: 'Q'+(t+1)+' - Yr '+(Math.floor(t/4)+1),
+        annuite: mois.reduce((s,m)=>s+m.annuite,0),
+        capital: mois.reduce((s,m)=>s+m.capital,0),
+        interet: mois.reduce((s,m)=>s+m.interet,0),
+        assurance: mois.reduce((s,m)=>s+m.assurance,0),
+        total: mois.reduce((s,m)=>s+m.total,0),
+        solde: mois[mois.length-1].solde,
+        isSub: false,
+      });
+    }
+  } else { // annuel
+    const years = parseInt(document.getElementById('duree').value);
+    for(let y=1;y<=years;y++){
+      const mois = lastSchedule.filter(m=>m.num>=(y-1)*12+1 && m.num<=y*12);
+      rows.push({
+        label: 'Year '+y,
+        annuite: mois.reduce((s,m)=>s+m.annuite,0),
+        capital: mois.reduce((s,m)=>s+m.capital,0),
+        interet: mois.reduce((s,m)=>s+m.interet,0),
+        assurance: mois.reduce((s,m)=>s+m.assurance,0),
+        total: mois.reduce((s,m)=>s+m.total,0),
+        solde: mois[mois.length-1].solde,
+        isSub: false,
+      });
+    }
+  }
+
+  // Totaux
+  const totAnnuite = rows.reduce((s,r)=>s+r.annuite,0);
+  const totCapital = rows.reduce((s,r)=>s+r.capital,0);
+  const totInteret = rows.reduce((s,r)=>s+r.interet,0);
+
+  let html = '<table>';
+  html += '<thead><tr>';
+  html += '<th>#</th><th>Period</th><th>Instalment</th><th>Capital</th><th>Interest</th>';
+  html += '<th>Outstanding balance</th>';
+  html += '</tr></thead><tbody>';
+
+  rows.forEach(r=>{
+    html += `<tr>
+      <td>${r.label.split(' ')[1]||r.label}</td>
+      <td>${r.label}</td>
+      <td class="annuite">${fmtE(r.annuite)}</td>
+      <td class="capital">${fmtE(r.capital)}</td>
+      <td class="interets">${fmtE(r.interet)}</td>`;
+    html += `<td class="solde">${fmtE(r.solde)}</td></tr>`;
+  });
+
+  // Ligne totaux
+  html += `<tr class="total-row">
+    <td colspan="2">TOTAL</td>
+    <td>${fmtE(totAnnuite)}</td>
+    <td>${fmtE(totCapital)}</td>
+    <td>${fmtE(totInteret)}</td>`;
+  html += `<td>0,00 €</td></tr>`;
+  html += '</tbody></table>';
+
+  document.getElementById('tableContainer').innerHTML = html;
+}
+
+// ── EXPORT CSV ─────────────────────────────────────────────────────────────
+function exportCSV(){
+  if(!lastSchedule.length) return;
+  let csv = 'Period;Instalment (€);Capital (€);Interest (€);Outstanding balance (€)\n';
+  lastSchedule.forEach(m=>{
+    csv += `Month ${m.num};${fmt(m.annuite)};${fmt(m.capital)};${fmt(m.interet)};${fmt(m.solde)}\n`;
+  });
+
+  const blob = new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8;'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'amortisation-schedule.csv';
+  a.click();
+}
+
+// ── NAV DD ─────────────────────────────────────────────────────────────────
+function toggleDD(e){e.stopPropagation();document.getElementById('ddWrap').classList.toggle('dd-open');}
+document.addEventListener('click',()=>document.getElementById('ddWrap').classList.remove('dd-open'));
+
+// ── INIT ───────────────────────────────────────────────────────────────────
+calculate();
+</script>
+
+<!-- Cookies -->
+<style>
+#cb{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0D1B2A;border-top:3px solid #1A7A8A;padding:14px 28px;}
+#cb .cbt{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+#cb p{font-size:.8rem;color:rgba(255,255,255,.7);line-height:1.6;flex:1;min-width:180px;margin:0;}
+#cb p a{color:#22A3B8;text-decoration:none;}
+#cb .cbc{display:flex;gap:18px;flex-wrap:wrap;margin:8px 0 10px;font-size:.78rem;color:rgba(255,255,255,.75);}
+#cb .cbc label{display:flex;align-items:center;gap:6px;cursor:pointer;}
+#cb .cbc input{width:15px;height:15px;accent-color:#1A7A8A;}
+#cb .cbb{display:flex;gap:9px;flex-shrink:0;}
+#cb button{padding:8px 16px;border-radius:7px;font-size:.8rem;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;border:none;}
+.cba{background:#1A7A8A;color:#fff;}
+.cbs{background:transparent;color:rgba(255,255,255,.65);border:1px solid rgba(255,255,255,.25)!important;}
+.cbr{background:transparent;color:rgba(255,255,255,.45);font-size:.73rem;text-decoration:underline;padding:3px 0!important;}
+</style>
+<div id="cb">
+  <div class="cbt">
+    <p>🍪 <strong style="color:#fff">This site uses cookies.</strong> Necessary cookies ensure the site works. <a href="mentions-legales.html#cookies">Learn more</a></p>
+    <div class="cbb">
+      <button class="cba" onclick="ca()">Accept all</button>
+      <button class="cbs" onclick="cs()">Save</button>
+    </div>
+  </div>
+  <div class="cbc">
+    <label><input type="checkbox" checked disabled> Necessary</label>
+    <label><input type="checkbox" id="ca2"> Analytics</label>
+    <label><input type="checkbox" id="ca3"> Advertising</label>
+  </div>
+  <button class="cbr" onclick="cr()">Refuse all</button>
+</div>
+<script>
+(function(){const k='lacaverne_cookie_consent';if(!localStorage.getItem(k))document.getElementById('cb').style.display='block';})();
+function ca(){localStorage.setItem('lacaverne_cookie_consent',JSON.stringify({a:true,p:true}));document.getElementById('cb').style.display='none';}
+function cr(){localStorage.setItem('lacaverne_cookie_consent',JSON.stringify({a:false,p:false}));document.getElementById('cb').style.display='none';}
+function cs(){localStorage.setItem('lacaverne_cookie_consent',JSON.stringify({a:document.getElementById('ca2').checked,p:document.getElementById('ca3').checked}));document.getElementById('cb').style.display='none';}
+</script>
+</body>
+</html>
