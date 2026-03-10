@@ -3,25 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Umqualifizierungs-Simulator Miete Belgien 2026</title>
-<meta name="description" content="Berechnen Sie das Umqualifizierungsrisiko der Gesellschaftsmiete (Art. 32 EStG 92). Obergrenze 5/3 EW, Miteigentum, gemischte Nutzung. Tool 2026.">
-<meta name="keywords" content="umqualifizierung miete geschäftsführer belgien, art 32 EStG 92, miete gesellschaft geschäftsführer belgien, mietobergrenze geschäftsführer, umqualifizierung vergütung belgien, simulator miete geschäftsführer">
+<title>Simulateur Mietneuqualifizierung Dirigeant Belgique 2026</title>
+<meta name="description" content="Berechnen Sie das Umqualifizierungsrisiko der Gesellschaftsmiete (Art. 32 EStG 92). Höchstgrenze 5/3, Miteigentum, Odoo.">
+<meta name="keywords" content="Mietneuqualifizierung Belgien, Art 32 EStG 92, Gesellschaftsmiete Geschäftsführer, Höchstgrenze 5/3 Katastereinkommen, Umqualifizierung Miete Belgien">
 <meta name="author" content="La Caverne de la Compta">
 <meta name="robots" content="index, follow">
-  <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-requalification-loyer/">
+  <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/de/simulateur-requalification-loyer/">
   <link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-requalification-loyer/">
   <link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-requalification-loyer/">
   <link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-requalification-loyer/">
-  <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-requalification-loyer/">
+  <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/de/simulateur-requalification-loyer/">
 <link rel="canonical" href="https://lacavernedelacompta.be/de/simulateur-requalification-loyer/">
-<meta property="og:title" content="Umqualifizierungs-Simulator Miete Geschäftsführer — Art. 32 EStG 92 Belgien 2026">
-  <meta property="og:image" content="https://lacavernedelacompta.be/logo.png">
+<meta property="og:title" content="Simulateur Mietneuqualifizierung Dirigeant — Art. 32 CIR 92 Belgique 2026">
+  <meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
 
-<meta property="og:description" content="Berechnen Sie das Umqualifizierungsrisiko der von Ihrer Gesellschaft gezahlten Miete. Obergrenze 5/3 EW × Koeffizient, Miteigentum, möbliert — vollständige Analyse und Empfehlungen.">
+<meta property="og:description" content="Calculez le risque de requalification du loyer versé par votre société. Plafond 5/3 RC × coefficient, indivision, meublé — analyse complète et recommandations.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lacavernedelacompta.be/simulateur-requalification-loyer.html">
 <meta property="og:site_name" content="La Caverne de la Compta">
-<meta property="og:locale" content="de_BE">
+<meta property="og:locale" content="fr_BE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -630,7 +632,138 @@
     .kpi-grid { grid-template-columns: 1fr; }
   }
 
-</style>
+
+
+  
+  }
+
+  
+  /* Fix overflow tables on mobile */
+    table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .chart-container, canvas { max-width: 100% !important; }
+  }
+  
+  }
+
+  
+  /* ── LANG DROPDOWN ── */
+  .lang-dropdown { position: relative; display: inline-block; position: relative !important; display: inline-block !important;}
+  .lang-current {
+    display: flex; align-items: center; gap: 6px;
+    padding: 5px 10px; border-radius: 6px;
+    background: #1A7A8A; color: #fff;
+    font-size: 0.78rem; font-weight: 700;
+    cursor: pointer; border: none;
+    letter-spacing: 0.05em; white-space: nowrap;
+  }
+  .lang-current:after { content: ' ▾'; font-size: 0.7rem; }
+  .lang-menu {
+    display: none; position: absolute;
+    top: calc(100% + 4px); right: 0;
+    background: #fff; border: 1px solid #DDE5EF;
+    border-radius: 8px; box-shadow: 0 8px 24px rgba(13,27,42,0.12);
+    min-width: 120px; z-index: 999999; overflow: hidden;
+  }
+  .lang-dropdown.open .lang-menu { display: block; }
+  .lang-menu a {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px; font-size: 0.82rem; font-weight: 500;
+    color: #1A2535; text-decoration: none;
+    border-bottom: 1px solid #F4F7FA;
+    transition: background 0.15s;
+  }
+  .lang-menu a:last-child { border-bottom: none; }
+  .lang-menu a:hover { background: #E8F5F7; color: #1A7A8A; }
+  .lang-menu a.active { font-weight: 700; color: #1A7A8A; }
+
+  
+  /* ── GLOBAL OVERFLOW FIX ── */
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  @media (max-width: 900px) {
+    * { box-sizing: border-box; }
+    .main, .container, .wrapper, .page-wrap, .content, .hero-inner,
+    .disclaimer-inner, .card, .form-card, .result-card, .table-wrap {
+      max-width: 100% !important;
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+    }
+    table {
+      display: block !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+      max-width: 100% !important;
+    }
+    canvas { max-width: 100% !important; height: auto !important; }
+    input[type=range] { max-width: 100% !important; }
+    .grid, [style*="display:grid"], [style*="display: grid"] {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  
+  
+  /* ── MOBILE NAV ── */
+  .hamburger { display: none; }
+  @media (max-width: 768px) {
+    .main-nav { padding: 0 16px !important; height: 56px !important; }
+    .nav-links { display: none !important; }
+    .nav-links.mobile-open {
+      display: flex !important;
+      flex-direction: column;
+      position: fixed;
+      top: 56px; left: 0; right: 0;
+      background: #fff;
+      border-bottom: 2px solid #22A3B8;
+      box-shadow: 0 8px 32px rgba(13,27,42,0.15);
+      z-index: 9998;
+      padding: 8px 0;
+      max-height: calc(100vh - 56px);
+      overflow-y: auto;
+    }
+    .nav-links.mobile-open > li > a {
+      display: block !important;
+      padding: 14px 20px;
+      font-size: 1rem;
+      border-bottom: 1px solid #DDE5EF;
+      color: #1A2535 !important;
+      text-align: center;
+    }
+    .dd-wrap { width: 100%; }
+    .dd-btn { width: 100% !important; text-align: center; padding: 14px 20px; font-size: 1rem; border-bottom: 1px solid #DDE5EF; background: none; border-left: none; border-right: none; border-top: none; border-radius: 0; color: #1A2535; }
+    .dd-menu {
+      position: static !important;
+      box-shadow: none !important;
+      border: none !important;
+      border-radius: 0 !important;
+      background: #F4F7FA !important;
+      min-width: unset !important;
+      display: none !important;
+    }
+    .dd-wrap.dd-open .dd-menu { display: block !important; }
+    .dd-menu a { padding: 12px 20px 12px 40px !important; border-bottom: 1px solid #DDE5EF !important; font-size: 0.9rem !important; display: block !important; }
+    .hamburger {
+      display: flex !important;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      margin-left: auto;
+      background: none;
+      border: none;
+      z-index: 9999;
+      flex-shrink: 0;
+    }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #1A2535; border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    #langSwitcher { margin-left: 8px; }
+  }
+
+  </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/favicon.svg">
@@ -642,47 +775,274 @@
   "url": "https://lacavernedelacompta.be",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://lacavernedelacompta.be/logo.png",
+    "url": "https://lacavernedelacompta.be/logo.svg",
     "width": 512,
     "height": 512
   },
-  "image": "https://lacavernedelacompta.be/logo.png"
+  "image": "https://lacavernedelacompta.be/logo.svg"
 }
 </script>
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
-<!-- CACHE-BUST-v8-de/simulateur-requalification-loyer/index.html -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@lacavernecompta">
+  <meta name="twitter:title" content="Simulateur Mietneuqualifizierung Dirigeant — Art. 32 CIR 92 Belgique 2026">
+  <meta name="twitter:description" content="Calculez le risque de requalification du loyer versé par votre société. Plafond 5/3 RC × coefficient, indivision, meublé — analyse complète et recommandations.">
+  <meta name="twitter:image" content="https://lacavernedelacompta.be/logo.svg">
+<!-- CACHE-BUST-v8-fr/simulateur-requalification-loyer/index.html -->
+<!-- Google tag (gtag.js) -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{
+  analytics_storage:'denied',
+  ad_storage:'denied',
+  ad_user_data:'denied',
+  ad_personalization:'denied',
+  wait_for_update:500
+});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNHZDLVPEL"></script>
+<script>
+gtag('js', new Date());
+gtag('config', 'G-WNHZDLVPEL');
+</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Simulateur Mietneuqualifizierung Dirigeant — Art. 32 CIR 92 Belgique 2026",
+  "url": "https://lacavernedelacompta.be/de/simulateur-requalification-loyer/",
+  "description": "Calculez le risque de requalification du loyer versé par votre société. Plafond 5/3 RC × coefficient, indivision, meublé — analyse complète et recommandations.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "La Caverne de la Compta",
+    "url": "https://lacavernedelacompta.be"
+  }
+}
+</script>
 </head>
 <body>
 
+<!-- Top bar -->
+<div class="topbar">
+  <span class="topbar-left">🇧🇪 La Caverne de la Compta</span>
+  <div class="topbar-right">
+    <a href="/de/mentions-legales/">Rechtliche Hinweise</a>
+    <a href="mentions-legales.html#rgpd">DSGVO</a>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="main-nav">
+<a href="/de/" class="logo" style="text-decoration:none;display:flex;align-items:center;">
+    <svg width="148" height="38" viewBox="0 0 148 38" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <defs>
+        <linearGradient id="hGn" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0D1B2A"/>
+          <stop offset="100%" style="stop-color:#1A3A5C"/>
+        </linearGradient>
+      </defs>
+      <!-- Hexagone -->
+      <polygon points="19,2 31,9 31,23 19,30 7,23 7,9" fill="url(#hGn)"/>
+      <!-- Reflet top -->
+      <polygon points="19,2 31,9 25,9 19,5 13,9 7,9" fill="rgba(255,255,255,.07)"/>
+      <!-- Bras balance -->
+      <line x1="9" y1="15" x2="29" y2="15" stroke="rgba(255,255,255,.5)" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Tige -->
+      <rect x="17.5" y="15" width="2.5" height="11" rx="1.2" fill="rgba(255,255,255,.35)"/>
+      <!-- Pivot gold -->
+      <circle cx="18.8" cy="15" r="3.2" fill="#C9A84C"/>
+      <circle cx="18.8" cy="15" r="1.4" fill="white" opacity=".9"/>
+      <!-- Socle -->
+      <rect x="13" y="27" width="12" height="2.5" rx="1.2" fill="rgba(255,255,255,.2)"/>
+      <!-- Plateau gauche -->
+      <line x1="9" y1="15" x2="7" y2="21.5" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="7" cy="24" rx="6.5" ry="2.5" fill="#1A7A8A"/>
+      <!-- Plateau droit -->
+      <line x1="29" y1="15" x2="31" y2="20" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="31" cy="22.5" rx="6.5" ry="2.5" fill="#22A3B8"/>
+      <!-- Étoile -->
+      <circle cx="27" cy="7" r="2.5" fill="#C9A84C" opacity=".85"/>
+      <!-- Texte -->
+      <text x="42" y="15.5" font-family="'Playfair Display',serif" font-size="12.5" font-weight="900" fill="#0D1B2A" letter-spacing="-.2">La Caverne</text>
+      <rect x="42" y="18.5" width="104" height="1" rx=".5" fill="#DDE5EF"/>
+      <rect x="42" y="18.5" width="18" height="1" rx=".5" fill="#C9A84C"/>
+      <text x="42" y="30" font-family="'Playfair Display',serif" font-size="10.5" font-weight="700" font-style="italic" fill="#1A7A8A" letter-spacing="-.1">de la Compta</text>
+    </svg>
+  </a>
+        <ul class="nav-links">
+    <li><a href="https://lacavernedelacompta.be/de/">🏠 Startseite</a></li>
+    <li class="dd-wrap" id="ddWrap">
+      <button class="dd-btn" onclick="toggleDD(event)">🧰 Unsere Tools <span class="dd-chevron">▼</span></button>
+      <div class="dd-menu" id="ddMenu">
+        <a href="/de/simulateur-immobilier/"><span class="dd-icon">🏠</span>Immobilien-Simulator</a>
+        <a href="/de/simulateur-credit/"><span class="dd-icon">💳</span>Kredit-Simulator</a>
+        <a href="/de/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Mietneuqualifizierung</a>
+        <a href="/de/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Kontenplan MAR</a>
+        <a href="/de/simulateur-interets-composes/"><span class="dd-icon">📈</span>Zinseszins-Rechner</a>
+        <a href="/de/simulateur-retenue/"><span class="dd-icon">🧾</span>Quellensteuer</a>
+        <a href="/de/quick-memento-fiscal/"><span class="dd-icon">📌</span>Steuerliche Kurzreferenz</a>
+        <a href="/de/remboursement-frais/"><span class="dd-icon">🚗</span>Kilometerpauschale</a>
+      </div>
+    </li>
+  </ul>
+  <!-- ══ SWITCHER LANGUE ══ -->
+  <div class="lang-dropdown" style="position:relative;display:inline-block;" id="langSwitcher">
+    <button class="lang-current" onclick="toggleLangMenu(event)">🇩🇪 DE</button>
+    <div class="lang-menu">
+<a href="https://lacavernedelacompta.be/de/simulateur-requalification-loyer/" class="active">🇫🇷 Français</a>
+<a href="https://lacavernedelacompta.be/nl/simulateur-requalification-loyer/" class="">🇧🇪 Nederlands</a>
+<a href="https://lacavernedelacompta.be/en/simulateur-requalification-loyer/" class="">🇬🇧 English</a>
+<a href="https://lacavernedelacompta.be/de/simulateur-requalification-loyer/" class="active">🇩🇪 Deutsch</a>
+    </div>
+  </div>
+  <!-- ══════════════════════ -->
+
+  
+  <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div style="text-align:right;font-size:.72rem;color:var(--text-light);padding:5px 40px 0;font-style:italic;">
+  🕐 Aktualisiert: Besteuerungsjahr 2027 (Einkünfte 2026) — <a href="/de/mentions-legales/" style="color:var(--text-light)">Offizielle Quellen</a>
+</div>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <a href="/de/">🏠 Startseite</a>
+  <span>›</span>
+  <a href="/de/#simulateurs">Simulatoren</a>
+  <span>›</span>
+  <span>Mietneuqualifizierung → Vergütung Geschäftsführer</span>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-badge">🏠 Steuer Geschäftsführer · Belgique</div>
+  <h1>Mietumqualifizierungssimulator<br><span>→ Geschäftsführervergütung</span></h1>
+  <p>Calculez le risque de steuerliche Umqualifizierung der von Ihrer Gesellschaft an Sie gezahlten Miete gemäß Artikel 32 WIB 92.</p>
+</section>
+
+<!-- Main -->
+<div style="margin:24px auto;text-align:center;max-width:100%;">
+<h2 style="font-size:1rem;color:#1A3A5C;margin:24px 0 8px;">📋 Wann wird die Miete als Geschäftsführervergütung umqualifiziert?</h2>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8043980001637749"
+     data-ad-slot="8050648588"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<main class="main">
+
+  <!-- Alert -->
+  <div class="alert">
+    <span class="alert-icon">⚠️</span>
+    <div>
+      <strong>Rechtlicher Kontext — Art. 32 Abs. 2 EStG 92:</strong> Wenn ein Geschäftsführer eine Immobilie an seine eigene Gesellschaft vermietet, wird der Mietanteil, der <strong>5/3 des nicht indexierten Katasterwerts × Aufwertungskoeffizient</strong> übersteigt, automatisch als Geschäftsführervergütung umqualifiziert. Diese Umqualifizierung führt zu einer höheren Steuerbelastung (Einkommensteuer + Sozialabgaben) auf den übersteigenden Betrag. Dieser Rechner hilft Ihnen, den Überschuss zu ermitteln und Ihre Situation zu optimieren.
+    </div>
+  </div>
+
+  <div class="sim-layout">
+
+    <!-- Left: inputs -->
+    <div class="panel" id="input-panel">
+      <div class="panel-title">⚙️ Simulationsparameter</div>
+      <div class="panel-subtitle">Geben Sie die Daten Ihrer Immobilie und des Mietvertrags ein</div>
+
+      <!-- Immobilie -->
+      <div class="section-label">Immobilie</div>
+
+      <div class="field">
+        <label>Nicht indexierter Katasterwert <span class="tip">(EK auf Ihrem Steuerzettel)</span></label>
+        <div class="input-wrap">
+          <input type="number" id="rc_brut" placeholder="Ex: 1500" min="0" step="1">
+          <span class="input-unit">€/an</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Besteuerungsjahr <span class="tip">(Einkommensjahr)</span></label>
+        <div class="input-wrap">
+          <select id="annee">
+            <option value="2027" selected>Ex. 2027 — Einnahmen 2026 (coeff. 5,75)</option>
+            <option value="2026">Ex. 2026 — Einnahmen 2025 (coeff. 5,63)</option>
+            <option value="2025">Ex. 2025 — Einnahmen 2024 (coeff. 5,46)</option>
+            <option value="2024">Ex. 2024 — Einnahmen 2023 (coeff. 5,37)</option>
+            <option value="2023">Ex. 2023 — Einnahmen 2022 (coeff. 4,86)</option>
+            <option value="2022">Ex. 2022 — Einnahmen 2021 (coeff. 4,63)</option>
+            <option value="2021">Ex. 2021 — Einnahmen 2020 (coeff. 4,60)</option>
+            <option value="2020">Ex. 2020 — Einnahmen 2019 (coeff. 4,57)</option>
+            <option value="2019">Ex. 2019 — Einnahmen 2018 (coeff. 4,47)</option>
+            <option value="2018">Ex. 2018 — Einnahmen 2017 (coeff. 4,39)</option>
+            <option value="2017">Ex. 2017 — Einnahmen 2016 (coeff. 4,31)</option>
+            <option value="2016">Ex. 2016 — Einnahmen 2015 (coeff. 4,23)</option>
+            <option value="2015">Ex. 2015 — Einnahmen 2014 (coeff. 4,23)</option>
+            <option value="2014">Ex. 2014 — Einnahmen 2013 (coeff. 4,19)</option>
+            <option value="2013">Ex. 2013 — Einnahmen 2012 (coeff. 4,10)</option>
+          </select>
+          <span class="select-arrow">▼</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Wird die Immobilie gemischt genutzt? <span class="tip">(privater + beruflicher Anteil)</span></label>
+        <div class="radio-tabs">
+          <input type="radio" name="type_bien" id="tb_non" value="non" checked>
+          <label for="tb_non">Nein — Ausschließliche Nutzung</label>
+          <input type="radio" name="type_bien" id="tb_mix" value="mixte">
+          <label for="tb_mix">Ja — Gemischte Nutzung</label>
+        </div>
+      </div>
+
+      <div id="field_mixte" style="display:none">
+        <div class="field">
+          <label>Beruflicher Anteil der Immobilie <span class="tip">(% der Gesellschaftsnutzung)</span></label>
+          <div class="slider-value-display">
+            <div class="slider-value-badge" id="partpro_display">60%</div>
+          </div>
+          <div class="slider-wrap">
+            <div class="slider-labels"><span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span></div>
+            <input type="range" id="part_pro" min="1" max="100" step="1" value="60">
+          </div>
+        </div>
+      </div>
 
       <div class="divider"></div>
 
-      <!-- Propriété / indivision -->
-      <div class="section-label">Eigentum der Immobilie</div>
+      <!-- Eigentum / Miteigentum -->
+      <div class="section-label">Eigentumsverhältnis</div>
 
       <div class="field">
-        <label>Wird die Immobilie gemeinsam mit Ihrem Ehegatten gehalten?</label>
+        <label>Wird die Immobilie im Miteigentum mit Ihrem Ehepartner gehalten?</label>
         <div class="radio-tabs">
           <input type="radio" name="indivision" id="ind_non" value="non" checked>
           <label for="ind_non">Nein — Geschäftsführer allein</label>
           <input type="radio" name="indivision" id="ind_oui" value="oui">
-          <label for="ind_oui">Ja — Miteigentum</label>
+          <label for="ind_oui">Ja — Im Miteigentum</label>
         </div>
       </div>
 
       <div id="field_indivision" style="display:none">
         <div class="field">
-          <label>Anteil des Ehegatten am Eigentum <span class="tip">(gesetzliches Güterrecht: 50%)</span></label>
+          <label>Eigentumsanteil des Ehepartners <span class="tip">(gesetzliches System: 50%)</span></label>
 
           <div class="slider-value-display">
             <div class="slider-value-badge" id="conjoint_display">50%</div>
           </div>
 
           <div class="slider-split">
-            <span><span class="dot-dir"></span> Geschäftsführer: <strong id="dir_pct">50%</strong></span>
-            <span><span class="dot-conj"></span> Ehegatte: <strong id="conj_pct">50%</strong></span>
+            <span><span class="dot-dir"></span> Dirigeant : <strong id="dir_pct">50%</strong></span>
+            <span><span class="dot-conj"></span> Conjoint(e) : <strong id="conj_pct">50%</strong></span>
           </div>
 
           <div class="slider-wrap">
@@ -691,7 +1051,7 @@
           </div>
 
           <div style="font-size:0.76rem;color:var(--text-light);margin-top:10px;line-height:1.5;">
-            ⚠️ <strong>Hinweis:</strong> Im belgischen gesetzlichen Güterrecht, wenn <u>ein Geschäftsführer</u> an seine Gesellschaft vermietet: Anteil Ehegatte = <strong>50%</strong>. Wenn <u>zwei Geschäftsführer</u> gemeinsam vermieten: jeweils ebenfalls 50%.
+            ⚠️ <strong>Hinweis:</strong> Im belgischen gesetzlichen Güterstand gilt: Vermietet <u>ein einziger Unternehmensleiter</u> an seine Gesellschaft, beträgt der Anteil des Ehepartners <strong>50%</strong>. Vermieten <u>zwei Unternehmensleiter</u> gemeinsam, hat jeder ebenfalls 50%.
           </div>
         </div>
 
@@ -702,19 +1062,19 @@
 
       <div class="divider"></div>
 
-      <!-- Contrat de location -->
+      <!-- Mietvertrag -->
       <div class="section-label">Mietvertrag</div>
 
       <div class="field">
-        <label>Eigentliche Miete <span class="tip">(erhaltener Mietbetrag für den Zeitraum)</span></label>
+        <label>Eigentlicher Mietpreis <span class="tip">(im Zeitraum erhaltener Mietbetrag)</span></label>
         <div class="input-wrap">
-          <input type="number" id="loyer_propre" placeholder="z.B. 18000" min="0" step="100" oninput="updateLoyerTotal()">
+          <input type="number" id="loyer_propre" placeholder="Ex: 18000" min="0" step="100" oninput="updateLoyerTotal()">
           <span class="input-unit">€</span>
         </div>
       </div>
 
       <div class="field">
-        <label>Mietvorteile <span class="tip">(z.B. Arbeiten zu Lasten des Mieters über seine gesetzlichen Verpflichtungen hinaus)</span></label>
+        <label>Mietvorteile <span class="tip">(z.B. Arbeiten zu Lasten des Mieters über seine gesetzlichen Pflichten hinaus)</span></label>
         <div class="input-wrap">
           <input type="number" id="loyer_avantages" placeholder="0" min="0" step="100" value="0" oninput="updateLoyerTotal()">
           <span class="input-unit">€</span>
@@ -722,7 +1082,7 @@
       </div>
 
       <div class="field" id="loyer_total_field" style="display:none">
-        <label>Miete gesamt + Vorteile <span class="tip">(Berechnungsbasis)</span></label>
+        <label>Gesamtmiete + Nebenkosten <span class="tip">(Berechnungsgrundlage)</span></label>
         <div class="input-wrap" style="background:var(--teal-pale);border-radius:8px;">
           <input type="number" id="loyer_annuel" readonly style="background:transparent;font-weight:600;color:var(--teal);cursor:default;">
           <span class="input-unit" style="color:var(--teal);font-weight:600;">€</span>
@@ -749,10 +1109,10 @@
       </div>
 
       <div class="field">
-        <label>Möbliert vermietet?</label>
+        <label>Möblierte Vermietung?</label>
         <div class="radio-tabs">
           <input type="radio" name="meuble" id="mb_non" value="non" checked>
-          <label for="mb_non">Nein — Unmöbliert</label>
+          <label for="mb_non">Nein — Leer</label>
           <input type="radio" name="meuble" id="mb_oui" value="oui">
           <label for="mb_oui">Ja — Möbliert</label>
         </div>
@@ -762,8 +1122,8 @@
         <div class="info-indivision favorable" style="margin-bottom:12px">
           <span class="info-indivision-icon">⚖️</span>
           <div>
-            <strong>60/40-Regel automatisch angewendet:</strong> <strong>40%</strong> der Miete = Kapitaleinkünfte (Möbel) · <strong>60%</strong> = Immobilieneinkünfte (Umqualifizierungsbasis).<br>
-            Der bewegliche Anteil unterliegt dem befreienden Kapitalertragsteuerabzug von 30% und ist von der Vergleichsbasis mit der EW-Obergrenze ausgenommen.
+            <strong>60/40-Regel von Amts wegen angewendet:</strong> <strong>40%</strong> der Miete = Kapitaleinkommen (Mobiliar) · <strong>60%</strong> = Immobilieneinkommen (Umqualifizierungsgrundlage).<br>
+            Der bewegliche Anteil unterliegt der befreienden Kapitalertragsteuer von 30% und ist von der Vergleichsrechnung mit der EK-Grenze ausgeschlossen.
           </div>
         </div>
       </div>
@@ -790,22 +1150,22 @@
       <!-- KPIs -->
       <div class="kpi-grid">
         <div class="kpi-box">
-          <div class="kpi-label">Aufgewerteter EW</div>
+          <div class="kpi-label">Aufgewertetes KE</div>
           <div class="kpi-value accent" id="kpi_rc_indexe">–</div>
           <div class="kpi-sub" id="kpi_rc_sub">–</div>
         </div>
         <div class="kpi-box">
           <div class="kpi-label">Zulässige Obergrenze</div>
           <div class="kpi-value" id="kpi_plafond">–</div>
-          <div class="kpi-sub">5/3 × indexierter EW</div>
+          <div class="kpi-sub">5/3 × indexiertes KE</div>
         </div>
         <div class="kpi-box">
           <div class="kpi-label">Erhaltene Nettomiete</div>
           <div class="kpi-value" id="kpi_loyer_net">–</div>
-          <div class="kpi-sub">Miete - Nebenkosten</div>
+          <div class="kpi-sub">Miete - Kosten</div>
         </div>
         <div class="kpi-box">
-          <div class="kpi-label">Umqualifizierter Betrag</div>
+          <div class="kpi-label">Betrag requalifié</div>
           <div class="kpi-value" id="kpi_requalif">–</div>
           <div class="kpi-sub">Überschuss über Obergrenze</div>
         </div>
@@ -817,7 +1177,7 @@
           <thead>
             <tr>
               <th>Element</th>
-              <th>Jahresbetrag</th>
+              <th>Betrag annuel</th>
             </tr>
           </thead>
           <tbody id="breakdown-body">
@@ -830,11 +1190,11 @@
       <!-- IPP boxes -->
       <div class="ipp-boxes" id="ipp-boxes">
         <div class="ipp-info-box">
-          <h4>ESt-Informationen Geschäftsführer</h4>
+          <h4>ESt-Daten Geschäftsführer</h4>
           <div id="ipp-dir-rows">–</div>
         </div>
         <div class="ipp-info-box" id="ipp-conj-box" style="display:none">
-          <h4>ESt-Informationen Partner</h4>
+          <h4>ESt-Daten Partner</h4>
           <div id="ipp-conj-rows">–</div>
         </div>
       </div>
@@ -859,28 +1219,28 @@
           <span class="accordion-icon">▼</span>
         </button>
         <div class="accordion-body">
-          Artikel 32, Absatz 2 des Einkommensteuergesetzbuchs 1992 sieht vor, dass wenn ein <strong>Geschäftsführer eine Immobilie an seine eigene Gesellschaft vermietet</strong>, der Teil der Miete, der <strong>5/3 des nicht indexierten Einheitswerts × Aufwertungskoeffizient</strong> übersteigt, automatisch als Geschäftsführervergütung umqualifiziert wird. Dieser Antimissbrauchsmechanismus soll verhindern, dass Geschäftsführer Einkünfte als Miete (weniger besteuert) statt als Vergütung erhalten.
+          Artikel 32 Absatz 2 des Einkommensteuergesetzbuches 1992 sieht vor, dass wenn ein <strong>Geschäftsführer eine Immobilie an seine eigene Gesellschaft vermietet</strong>, der Mietanteil, der <strong>5/3 des nicht indexierten Katastreinkommens × Aufwertungskoeffizient</strong> übersteigt, automatisch als Geschäftsführervergütung umqualifiziert. Dieser Missbrauchsschutz soll verhindern, dass Geschäftsführer Einnahmen als Miet- statt als Vergütungseinkommen (weniger besteuert) erhalten.
         </div>
       </div>
 
       <div class="accordion-item">
         <button class="accordion-header" onclick="toggleAccordion(this)">
-          <span>Wie berechnet man den indexierten Einheitswert?</span>
+          <span>Wie berechnet man das indexierte Katastereinkommen?</span>
           <span class="accordion-icon">▼</span>
         </button>
         <div class="accordion-body">
-          Der <strong>nicht indexierte Einheitswert (EW ni)</strong> steht auf Ihrem Steuerbescheid. Für die Umqualifizierungsregel des Art. 32 Abs. 2 EStG 92 wird er mit einem <strong>Aufwertungskoeffizienten</strong> multipliziert, der jährlich vom FÖD Finanzen festgelegt wird — verschieden vom Indexierungskoeffizienten für die gewöhnliche Einkommensteuer. Die Obergrenze wird dann berechnet als <strong>EW ni × Aufwertungskoeff. × 5/3</strong>.<br><br>
-          Offizielle Koeffizienten: 2027: <strong>5,75</strong> · 2026: 5,63 · 2025: 5,46 · 2024: 5,37 · 2023: 4,86 · 2022: 4,63 · 2021: 4,60.
+          Das <strong>nicht indexierte Katastereinkommen (KE)</strong> steht auf Ihrem Steuerbescheid. Für die Umqualifizierungsregel des Art. 32 Abs. 2 EStG 92 wird es mit einem <strong>Aufwertungskoeffizient</strong> multipliziert, der jährlich vom SPF Finanzen festgesetzt wird — getrennt vom Indexierungskoeffizienten für die gewöhnliche Einkommensteuer. Der Höchstbetrag wird anschließend berechnet als <strong>NKE × Aufwertungskoeff. × 5/3</strong>.<br><br>
+          Offizielle Koeffizienten: 2027 : <strong>5,75</strong> · 2026 : 5,63 · 2025 : 5,46 · 2024 : 5,37 · 2023 : 4,86 · 2022 : 4,63 · 2021 : 4,60.
         </div>
       </div>
 
       <div class="accordion-item">
         <button class="accordion-header" onclick="toggleAccordion(this)">
-          <span>Was sind die Folgen einer Umqualifizierung?</span>
+          <span>Welche Folgen hat eine Umqualifizierung?</span>
           <span class="accordion-icon">▼</span>
         </button>
         <div class="accordion-body">
-          Der umqualifizierte Teil wird als <strong>Geschäftsführervergütung</strong> zur Einkommensteuer besteuert, nicht als Immobilieneinkünfte. Dies führt zu: (1) Anwendung des marginalen Einkommensteuersatzes (bis 50%), (2) Sozialbeiträge des Geschäftsführers (~20,5%), (3) möglicher Anwendung eines Berufssteuervorabzugs, (4) bei Steuerprüfung: Bußgelder und Verzugszinsen. Die Gesellschaft kann ihrerseits nur den nicht umqualifizierten Teil als Betriebsausgaben abziehen.
+          Der umqualifizierte Teil wird als <strong>Geschäftsführervergütung</strong> der Einkommensteuer unterworfen, nicht als Immobilieneinkommen. Dies führt zu: (1) Anwendung des ESt-Grenzsteuersatzes (bis 50%), (2) Sozialabgaben Geschäftsführer (~20,5%), (3) möglichem Berufssteuervorabzug, (4) bei Steuerprüfung: Bußgelder und Verzugszinsen. Die Gesellschaft kann ihrerseits nur den nicht umqualifizierten Teil als Betriebsausgabe abziehen.
         </div>
       </div>
 
@@ -890,41 +1250,41 @@
           <span class="accordion-icon">▼</span>
         </button>
         <div class="accordion-body">
-          Mehrere Strategien sind möglich: (1) <strong>Die Miete reduzieren</strong> auf unter die Obergrenze von 5/3 des aufgewerteten EW, (2) <strong>Den EW neu bewerten</strong> wenn er unterschätzt ist (Verfahren beim FÖD Finanzen), (3) <strong>Nur den beruflichen Teil</strong> der Immobilie vermieten (Büro usw.) und die Obergrenze nur auf diesen Teil berechnen, (4) <strong>Die Immobilie an die Gesellschaft verkaufen</strong> um die Vermietung zu vermeiden, (5) Einen Steuerberater konsultieren, um die geeignetste Struktur für Ihre Situation zu finden.
+          Verschiedene Strategien sind möglich: (1) <strong>Miete senken</strong> unter die Obergrenze von 5/3 des aufgewerteten KE, (2) <strong>KE neu bewerten</strong>, falls unterbewertet (Verfahren beim SPF Finanzen), (3) <strong>Nur den beruflichen Teil vermieten</strong> (Büro usw.) und die Obergrenze nur auf diesen Teil berechnen, (4) <strong>Das Objekt an die Gesellschaft verkaufen</strong>, um die Vermietung zu vermeiden, (5) Einen Buchhalter konsultieren, um die am besten geeignete Struktur für Ihre Situation zu finden.
         </div>
       </div>
 
       <div class="accordion-item">
         <button class="accordion-header" onclick="toggleAccordion(this)">
-          <span>Gilt die Regel auch für Ehegatte und Kinder des Geschäftsführers?</span>
+          <span>Gilt die Regel für Ehepartner und Kinder des Geschäftsführers?</span>
           <span class="accordion-icon">▼</span>
         </button>
         <div class="accordion-body">
-          Ja. Die Umqualifizierung gilt auch, wenn die Immobilie im Eigentum des <strong>Ehegatten, des legal zusammenlebenden Partners oder der minderjährigen Kinder</strong> des Geschäftsführers steht, die die Familienwohnung bewohnen. Die Steuerbehörde kann davon ausgehen, dass der Geschäftsführer der tatsächliche wirtschaftliche Nutznießer der Vermietung ist, auch wenn die Immobilie formal auf den Namen eines Familienmitglieds steht.
+          Ja. Die Umqualifizierung gilt auch, wenn die Immobilie dem <strong>Ehepartner, dem gesetzlichen Lebenspartner oder den minderjährigen Kindern</strong> des Geschäftsführers gehört, die dort den Familienhaushalt bewohnen. Die Steuerverwaltung kann davon ausgehen, dass der Geschäftsführer der wirtschaftlich tatsächliche Begünstigte der Vermietung ist, auch wenn das Objekt formal auf den Namen eines Familienmitglieds lautet.
         </div>
       </div>
 
       <div class="accordion-item">
         <button class="accordion-header" onclick="toggleAccordion(this)">
-          <span>Welche Auswirkungen hat eine möblierte Vermietung auf die Umqualifizierung?</span>
+          <span>Welche Auswirkung hat möblierte Vermietung auf die Umqualifizierung?</span>
           <span class="accordion-icon">▼</span>
         </button>
         <div class="accordion-body">
-          Bei <strong>möblierter Vermietung</strong> muss die Miete in zwei Teile aufgeteilt werden: den <strong>Immobilienteil</strong> (das unvermöblierte Objekt) und den <strong>beweglichen Teil</strong> (Möbel und Ausstattung). Nur der Immobilienteil unterliegt der Umqualifizierungsregel des Art. 32 Abs. 2 EStG 92 und wird mit der Obergrenze von 5/3 des indexierten EW verglichen. <br><br>
-          Der bewegliche Teil wird als <strong>Kapitaleinkünfte</strong> zum befreienden Kapitalertragsteuersatz von <strong>30%</strong> besteuert — oft vorteilhafter als der marginale Einkommensteuersatz. <br><br>
-          <strong>Praktische Aufteilung:</strong> Die Aufteilung muss realistisch und nachvollziehbar sein (detailliertes Möbelinventar, Verkehrswert usw.). Die Steuerbehörde kann einen überhöhten beweglichen Anteil anfechten. In der Praxis wird häufig die <strong>60/40-Regel</strong> angewandt: 60% der Immobilie zugeordnet, 40% den Möbeln und der Ausstattung.
+          Bei <strong>möblierter Vermietung</strong> muss die Miete in zwei Teile aufgeteilt werden: den <strong>unbeweglichen</strong> Teil (die leere Immobilie) und den <strong>beweglichen</strong> Teil (Möbel und Ausstattung). Nur der unbewegliche Teil unterliegt der Umqualifizierungsregel des Art. 32 Abs. 2 EStG 92 und wird mit der Obergrenze von 5/3 des indexierten KE verglichen. <br><br>
+          Der bewegliche Teil wird als <strong>Kapitaleinkommen</strong> mit dem befreienden Quellensteuersatz von <strong>30%</strong> besteuert — oft vorteilhafter als der ESt-Grenzsteuersatz. <br><br>
+          <strong>Praktische Aufteilung:</strong> Die Verteilung muss realistisch und begründbar sein (detailliertes Mobiliarinventar, Marktwert usw.). Die Steuerverwaltung kann einen übertriebenen beweglichen Anteil anfechten. In der Praxis wird die <strong>60/40-Regel</strong> häufig angewendet: 60% der Immobilie zugerechnet, 40% dem Mobiliar und der Ausstattung.
         </div>
       </div>
 
       <div class="accordion-item">
         <button class="accordion-header" onclick="toggleAccordion(this)">
-          <span>Wie funktioniert das Miteigentum mit dem Ehegatten?</span>
+          <span>Wie funktioniert das Miteigentum mit dem Ehepartner?</span>
           <span class="accordion-icon">▼</span>
         </button>
         <div class="accordion-body">
-          Wenn die Immobilie <strong>im Miteigentum</strong> des Geschäftsführers und seines Ehegatten steht, unterliegt nur der <strong>Anteil des Geschäftsführers</strong> der Regel des Artikels 32 Abs. 2 EStG 92. Der Anteil des Ehegatten, der kein Geschäftsführer in der Gesellschaft ist, wird als gewöhnliche Immobilieneinkünfte besteuert, ohne Umqualifizierungsrisiko. <br><br>
-          <strong>Beispiel:</strong> Wenn die Immobilie 50/50 gehalten wird und die Gesamtmiete 20.000 €/Jahr beträgt, werden nur die dem Geschäftsführer zuzurechnenden 10.000 € mit der Obergrenze verglichen. Dies kann die zulässige Miete verdoppeln, ohne die Grenze zu überschreiten. <br><br>
-          <strong>Achtung:</strong> Wenn der Ehegatte <em>ebenfalls</em> Geschäftsführer in derselben Gesellschaft ist, unterliegen beide Anteile der Regel, wodurch der Vorteil des Miteigentums entfällt.
+          Wenn die Immobilie <strong>im Miteigentum</strong> zwischen dem Geschäftsführer und seinem/ihrem Ehepartner gehalten wird, unterliegt nur der <strong>Anteil des Geschäftsführers</strong> der Regel des Artikels 32 Abs. 2 EStG 92. Der Anteil des Ehepartners, der kein Geschäftsführer in der Gesellschaft ist, wird als gewöhnliches Immobilieneinkommen besteuert, ohne Umqualifizierungsrisiko. <br><br>
+          <strong>Beispiel:</strong> Wenn die Immobilie 50/50 gehalten wird und die Gesamtmiete 20.000 €/Jahr beträgt, werden nur die 10.000 €, die dem Geschäftsführer zuzurechnen sind, mit der Obergrenze verglichen. Dies kann die zulässige Miete verdoppeln, ohne die Obergrenze zu überschreiten. <br><br>
+          <strong>Achtung:</strong> Wenn der Ehepartner <em>ebenfalls</em> Geschäftsführer in derselben Gesellschaft ist, werden beide Anteile der Regel unterworfen, was den Vorteil des Miteigentums zunichte macht.
         </div>
       </div>
 
@@ -935,12 +1295,12 @@
   <div class="info-strip">
     <div>
       <h3>Warum <span>La Caverne de la Compta</span>?</h3>
-      <p>Tools für belgische Selbständige, Buchhalter und Studenten. Einfach, zuverlässig und stets auf dem neuesten Stand der geltenden Gesetzgebung.</p>
+      <p>Tools für belgische Selbstständige, Buchhalter und Studenten. Einfach, zuverlässig und stets aktuell mit der geltenden Gesetzgebung.</p>
     </div>
     <ul class="info-features">
       <li><div class="check">✓</div><span>Berechnungen basierend auf der geltenden belgischen Gesetzgebung</span></li>
-      <li><div class="check">✓</div><span>Sofortige Ergebnisse, ohne Registrierung</span></li>
-      <li><div class="check">✓</div><span>Klare und intuitive Benutzeroberfläche für alle Profile</span></li>
+      <li><div class="check">✓</div><span>Sofortige Ergebnisse, keine Registrierung erforderlich</span></li>
+      <li><div class="check">✓</div><span>Klare und intuitive Oberfläche für alle Profile</span></li>
       <li><div class="check">✓</div><span>Zugänglich auf Mobiltelefon, Tablet und Computer</span></li>
     </ul>
   </div>
@@ -960,8 +1320,8 @@
 <footer>
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
   <div class="footer-links">
-    <a href="/de/mentions-legales/">Impressum</a>
-    <a href="/de/mentions-legales/#rgpd">RGPD</a>
+    <a href="/de/mentions-legales/">Rechtliche Hinweise</a>
+    <a href="/de/mentions-legales/#rgpd">DSGVO</a>
     <a href="/de/mentions-legales/#cookies">Cookies</a>
     <a href="#">Kontakt</a>
   </div>
@@ -1053,7 +1413,7 @@
     const ratio = (days / daysInYear * 100).toFixed(1);
     box.className = 'info-indivision favorable';
     box.style.display = 'flex';
-    txt.innerHTML = `<strong>${days} Tage</strong> Vermietung von ${daysInYear} Tagen im Jahr = <strong>${ratio}%</strong> des Jahres. Die Obergrenze wird anteilig berechnet.`;
+    txt.innerHTML = `<strong>${days} Tage</strong> Vermietung über ${daysInYear} Tage im Jahr = <strong>${ratio}%</strong> des Jahres. Die Obergrenze wird anteilig berechnet.`;
   }
 
   function updateIndivisionInfo() {
@@ -1066,26 +1426,26 @@
       box.innerHTML = `
         <span class="info-indivision-icon">✅</span>
         <div>
-          <strong>Situation favorable :</strong> Der/die Ehegatte/in hält <strong>${partConj}%</strong> der Immobilie.
-          Seule votre quote-part (<strong>${partDir}%</strong> du loyer) est soumise à la règle de requalification.
-          La part du loyer perçue par votre conjoint(e) échappe à l'article 32 al. 2 CIR 92 
-          <em>(sauf si le conjoint(e) est également dirigeant dans la même société)</em>.
+          <strong>Günstige Situation:</strong> Der Ehepartner besitzt <strong>${partConj}%</strong> der Immobilie.
+          Nur Ihr Anteil (<strong>${partDir}%</strong> der Miete) unterliegt der Umqualifizierungsregel.
+          Der Mietanteil Ihres Ehepartners fällt nicht unter Art. 32 Abs. 2 EStG 92
+          <em>(außer wenn der Ehepartner ebenfalls Unternehmensleiter in derselben Gesellschaft ist)</em>.
         </div>`;
     } else {
       box.className = 'info-indivision attention';
       box.innerHTML = `
         <span class="info-indivision-icon">⚠️</span>
         <div>
-          <strong>Attention :</strong> Sie halten <strong>${partDir}%</strong> du bien (majorité).
-          La requalification s'applique sur votre quote-part du loyer. 
-          La part du conjoint(e) (<strong>${partConj}%</strong>) reste hors champ, 
+          <strong>Achtung:</strong> Sie besitzen <strong>${partDir}%</strong> der Immobilie (Mehrheit).
+          Die Umqualifizierung gilt für Ihren Mietanteil.
+          Der Ehepartneranteil (<strong>${partConj}%</strong>) reste hors champ, 
           mais votre exposition reste importante. Vérifiez si votre conjoint(e) est également mandataire dans la société.
         </div>`;
     }
   }
 
   function fmt(n) {
-    return new Intl.NumberFormat('de-BE', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
+    return new Intl.NumberFormat('fr-BE', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
   }
 
   function calculer() {
@@ -1122,7 +1482,7 @@
     const partMeuble = meuble === 'oui' ? 0.40 : 0; // Règle 60/40 : 40% mobilier fixe
 
     if (rc_brut === 0 || loyer_brut_periode === 0) {
-      alert('Bitte geben Sie den Einheitswert und die erhaltene Miete ein.');
+      alert('Bitte geben Sie das Katastereinkommen und die erhaltene Miete ein.');
       return;
     }
 
@@ -1139,7 +1499,7 @@
     // Loyer max conjoint (non dirigeant) = pas de requalification
     const loyer_max_conj = null; // pas applicable
 
-    // RC revalorisé (pour affichage)
+    // Aufgewertetes KE (pour affichage)
     const rc_revalorise = rc_brut * coeff;
 
     const loyer_net = loyer_brut_periode - charges;
@@ -1167,8 +1527,8 @@
     panel.classList.add('visible');
     panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    const prorataLabel = nbJours ? ` · ${nbJours} Tage (${(prorata*100).toFixed(1)}%)` : ' · Vollständiges Jahr';
-    document.getElementById('res-subtitle').textContent = `Ex. ${annee} / Rev. ${anneeRev} — ${fmt(loyer_brut_periode)} perçus${prorataLabel}${meuble === 'oui' ? ` · Möbliert ${(partMeuble*100).toFixed(0)}%` : ''}${indivision === 'oui' ? ` · Geschäftsführer ${(partDir*100).toFixed(0)}%` : ''}`;
+    const prorataLabel = nbJours ? ` · ${nbJours} jours (${(prorata*100).toFixed(1)}%)` : ' · Vollständiges Jahr';
+    document.getElementById('res-subtitle').textContent = `Ex. ${annee} / Rev. ${anneeRev} — ${fmt(loyer_brut_periode)} erhalten${prorataLabel}${meuble === 'oui' ? ` · Möbliert ${(partMeuble*100).toFixed(0)}%` : ''}${indivision === 'oui' ? ` · Geschäftsführer ${(partDir*100).toFixed(0)}%` : ''}`;
 
     // ── Build declaration table ──
     const hasConj = indivision === 'oui' && partConj > 0;
@@ -1218,25 +1578,25 @@
 
     // Update KPI subtitles dynamically
     document.querySelector('#kpi_plafond').closest('.kpi-box').querySelector('.kpi-sub').textContent =
-      (nbJours ? `5/3 × aufgew. EW × ${(prorata*100).toFixed(1)}% anteilig` : '5/3 × aufgewerteter EW') + (indivision === 'oui' ? ` × ${(partDir*100).toFixed(0)}% GF.` : '');
+      (nbJours ? `5/3 × RC reval. × ${(prorata*100).toFixed(1)}% prorata` : '5/3 × Aufgewertetes KE') + (indivision === 'oui' ? ` × ${(partDir*100).toFixed(0)}% GF.` : '');
     document.querySelector('#kpi_loyer_net').closest('.kpi-box').querySelector('.kpi-sub').textContent =
       meuble === 'oui'
-        ? `Immobilienanteil der Miete × ${(partDir*100).toFixed(0)}% GF.`
-        : (indivision === 'oui' ? `Geschäftsführeranteil (${(partDir * 100).toFixed(0)}% der Nettomiete)` : 'Miete - Nebenkosten');
+        ? `Immo-Anteil Miete × ${(partDir*100).toFixed(0)}% GF.`
+        : (indivision === 'oui' ? `Anteil Geschäftsführer (${(partDir * 100).toFixed(0)}% Nettomiete)` : 'Miete - Kosten');
 
     // Breakdown
     const tbody = document.getElementById('breakdown-body');
     tbody.innerHTML = `
       <tr>
-        <td>Nicht indexierter Einheitswert (EW ni)</td>
+        <td>Nicht indexiertes Katastereinkommen (KE)</td>
         <td>${fmt(rc_brut)}</td>
       </tr>
       <tr>
-        <td>Aufwertungskoeffizient ${annee} <span style="font-size:0.76rem;color:var(--text-light)">(Art. 32 Abs.2 EStG 92)</span></td>
+        <td>Aufwertungskoeffizient ${annee} <span style="font-size:0.76rem;color:var(--text-light)">(Art. 32 Abs. 2 EStG 92)</span></td>
         <td>× ${coeff.toFixed(2)}${nbJours ? ` × ${(prorata*100).toFixed(1)}% (${nbJours}j)` : ''}</td>
       </tr>
       <tr>
-        <td>Aufgewerteter EW${type_bien === 'mixte' ? ` × ${(part_pro * 100).toFixed(0)}% (beruflicher Anteil)` : ''}</td>
+        <td>Aufgewertetes KE${type_bien === 'mixte' ? ` × ${(part_pro * 100).toFixed(0)}% (Berufsanteil)` : ''}</td>
         <td>${fmt(rc_dir / partDir)}</td>
       </tr>
       ${indivision === 'oui' ? `
@@ -1245,51 +1605,51 @@
         <td>${(partDir * 100).toFixed(0)}%</td>
       </tr>
       <tr>
-        <td>Anteil Ehegatte am Eigentum</td>
-        <td>${partConj.toFixed(0)}% <em style="font-size:0.78rem;color:var(--text-light)">(außerhalb Art. 32)</em></td>
+        <td>Anteil Ehepartner am Eigentum</td>
+        <td>${partConj.toFixed(0)}% <em style="font-size:0.78rem;color:var(--text-light)">(hors champ art. 32)</em></td>
       </tr>` : ''}
       <tr class="row-total">
-        <td><strong>Zulässige Obergrenze — Geschäftsführeranteil (5/3 × EW${nbJours ? ` × ${(prorata*100).toFixed(1)}%` : ''}${indivision === 'oui' ? ` × ${(partDir*100).toFixed(0)}%` : ''})</strong></td>
+        <td><strong>Zulässige Obergrenze — part dirigeant (5/3 × RC${nbJours ? ` × ${(prorata*100).toFixed(1)}%` : ''}${indivision === 'oui' ? ` × ${(partDir*100).toFixed(0)}%` : ''})</strong></td>
         <td>${fmt(plafond_dir)}</td>
       </tr>
       <tr>
-        <td>Eigentliche Miete</td>
+        <td>Eigentlicher Mietpreis</td>
         <td>${fmt(loyer_propre)}</td>
       </tr>
       ${loyer_avantages > 0 ? `<tr><td>Mietvorteile</td><td>+ ${fmt(loyer_avantages)}</td></tr>` : ''}
       <tr>
-        <td><strong>Erhaltene Gesamtmiete</strong></td>
+        <td><strong>Gesamtmiete erhalten</strong></td>
         <td><strong>${fmt(loyer_brut_periode)}</strong></td>
       </tr>
       ${charges > 0 ? `<tr><td>Abgezogene Nebenkosten</td><td>- ${fmt(charges)}</td></tr>` : ''}
       ${meuble === 'oui' ? `
       <tr>
-        <td>Gesamtnettomiete (vor Aufteilung)</td>
+        <td>Nettomiete gesamt (vor Aufteilung)</td>
         <td>${fmt(loyer_net)}</td>
       </tr>
       <tr>
-        <td>Beweglicher Anteil — Möbel (${(partMeuble*100).toFixed(0)}%) <span style="font-size:0.72rem;background:#E8F0FA;color:#2855A0;padding:2px 7px;border-radius:10px;font-weight:700;margin-left:4px;">KAPITALEINKÜFTE</span></td>
+        <td>Beweglicher Anteil — Mobiliar (${(partMeuble*100).toFixed(0)}%) <span style="font-size:0.72rem;background:#E8F0FA;color:#2855A0;padding:2px 7px;border-radius:10px;font-weight:700;margin-left:4px;">REV. MOBILIER</span></td>
         <td>${fmt(loyer_mobilier_total)}</td>
       </tr>
       <tr>
-        <td>Immobilienteil — Umqualifizierungsbasis (${((1-partMeuble)*100).toFixed(0)}%)</td>
+        <td>Immobilienanteil — Umqualifizierungsgrundlage (${((1-partMeuble)*100).toFixed(0)}%)</td>
         <td>${fmt(loyer_immobilier)}</td>
       </tr>` : ''}
-      ${meuble !== 'oui' ? `<tr><td>Gesamtnettomiete</td><td>${fmt(loyer_net)}</td></tr>` : ''}
+      ${meuble !== 'oui' ? `<tr><td>Nettomiete gesamt</td><td>${fmt(loyer_net)}</td></tr>` : ''}
       ${indivision === 'oui' ? `
       <tr>
-        <td>Netto-Mietanteil — Ehegatte (${partConj.toFixed(0)}%) <span class="badge-ok">AUSSER REICHWEITE</span></td>
+        <td>Nettomiete — Ehepartner (${partConj.toFixed(0)}%) <span class="badge-ok">AUSSER REICHWEITE</span></td>
         <td>${fmt(loyer_conjoint)}</td>
       </tr>
       <tr>
-        <td>Netto-Mietanteil — Geschäftsführer (${(partDir*100).toFixed(0)}%)</td>
+        <td>Nettomietanteil — Unternehmensleiter (${(partDir*100).toFixed(0)}%)</td>
         <td>${fmt(loyer_dir)}</td>
       </tr>` : ''}
       <tr>
-        <td>Zulässige Miete als Immobilieneinkünfte (GF-Anteil) <span class="badge-ok">OK</span></td>
+        <td>Als Immobilieneinkommen anerkannte Miete (Anteil UL) <span class="badge-ok">OK</span></td>
         <td>${fmt(loyer_admis_dir)}</td>
       </tr>
-      ${requalif > 0 ? `<tr class="row-requalif"><td><strong>Umqualifizierter Betrag als Vergütung</strong> <span class="badge-requalif">UMQUALIFIZIERT</span></td><td>${fmt(requalif)}</td></tr>` : ''}
+      ${requalif > 0 ? `<tr class="row-requalif"><td><strong>Betrag als Vergütung umklassifiziert</strong> <span class="badge-requalif">REQUALIFIÉ</span></td><td>${fmt(requalif)}</td></tr>` : ''}
     `;
 
 
@@ -1303,17 +1663,17 @@
       statusEl.className = 'result-status ok';
       statusIcon.textContent = '✅';
       statusTitle.textContent = 'Konforme Situation — Keine Umqualifizierung';
-      statusDesc.textContent = `Der dem Geschäftsführer zuzurechnende Mietanteil (${fmt(loyer_dir)}) liegt unter der zulässigen Obergrenze (${fmt(plafond_dir)}). Sie erfüllen die Vorschriften.`;
+      statusDesc.textContent = `Der dem Geschäftsführer zuzurechnende Mietanteil (${fmt(loyer_dir)}) liegt unter der zulässigen Obergrenze (${fmt(plafond_dir)}). Sie sind regelkonform.`;
     } else if (requalif < plafond_dir * 0.2) {
       statusEl.className = 'result-status warning';
       statusIcon.textContent = '⚠️';
-      statusTitle.textContent = 'Mäßige Überschreitung — Optimierung empfohlen';
-      statusDesc.textContent = `${fmt(requalif)} des Mietanteils des Geschäftsführers wird als Vergütung umqualifiziert. Eine Anpassung ist ratsam.`;
+      statusTitle.textContent = 'Moderate Überschreitung — Optimierung empfohlen';
+      statusDesc.textContent = `${fmt(requalif)} des GF-Mietanteils wird als Vergütung umqualifiziert. Eine Anpassung wird empfohlen.`;
     } else {
       statusEl.className = 'result-status danger';
       statusIcon.textContent = '🚨';
       statusTitle.textContent = 'Erhebliche Überschreitung — Maßnahmen erforderlich';
-      statusDesc.textContent = `${fmt(requalif)} (${((requalif / loyer_dir) * 100).toFixed(1)}% des Geschäftsführeranteils) werden umqualifiziert. Konsultieren Sie einen Fachmann.`;
+      statusDesc.textContent = `${fmt(requalif)} (${((requalif / loyer_dir) * 100).toFixed(1)}% des GF-Anteils) werden umqualifiziert. Konsultieren Sie einen Fachmann.`;
     }
 
     // Recommandations
@@ -1322,34 +1682,34 @@
     const recos = [];
 
     if (requalif === 0) {
-      recos.push(`Ihre Situation ist konform. Sie können noch bis zu <strong>${fmt(plafond_dir - loyer_dir)}</strong> an zusätzlicher Miete (Geschäftsführeranteil) erhalten, bevor die Grenze überschritten wird.`);
+      recos.push(`Ihre Situation ist regelkonform. Sie können noch <strong>${fmt(plafond_dir - loyer_dir)}</strong> zusätzliche Miete erhalten (GF-Anteil) vor Überschreitung.`);
       if (indivision === 'oui') {
-        recos.push(`Der Mietanteil Ihres Ehegatten (<strong>${fmt(loyer_conjoint)}/Jahr</strong>) fällt nicht in den Umqualifizierungsbereich, was vorteilhaft ist. Stellen Sie sicher, dass Ihr Ehegatte kein Geschäftsführer in derselben Gesellschaft ist.`);
+        recos.push(`Der Mietanteil Ihres Ehepartners (<strong>${fmt(loyer_conjoint)}/Jahr</strong>) liegt außerhalb des Umqualifizierungsbereichs, was vorteilhaft ist. Stellen Sie sicher, dass Ihr Ehepartner kein Geschäftsführer in derselben Gesellschaft ist.`);
       }
       if (meuble === 'oui') {
-        recos.push(`Der bewegliche Anteil Ihrer Miete (<strong>${fmt(loyer_mobilier_total)}/Jahr</strong>) unterliegt dem befreienden Kapitalertragsteuerabzug von 30%, was generell vorteilhafter ist als die Einkommensteuer. Halten Sie die Immobilien-/Mobilienaufteilung klar in Ihrem Mietvertrag fest.`);
+        recos.push(`Der bewegliche Anteil Ihrer Miete (<strong>${fmt(loyer_mobilier_total)}/Jahr</strong>) unterliegt der befreienden Quellensteuer von 30%, was in der Regel vorteilhafter als die ESt ist. Halten Sie die Aufteilung Immobilien/Mobiliar klar in Ihrem Mietvertrag fest.`);
       }
-      recos.push('Denken Sie daran, jährlich zu prüfen, da sich der Indexierungskoeffizient des EW jährlich ändert.');
-      recos.push('Bewahren Sie Ihren registrierten Mietvertrag und Zahlungsbelege gut auf, falls eine Steuerprüfung stattfindet.');
+      recos.push('Überprüfen Sie dies jedes Jahr, da sich der Koeffizient d\'indexation du RC évolue annuellement.');
+      recos.push('Bewahren Sie Ihren registrierten Mietvertrag und Zahlungsnachweise gut auf für den Fall einer Steuerprüfung.');
     } else {
       const loyerMaxTotal = plafond_dir / partDir;
       const loyerMaxMsg = nbJours
-        ? `Max. Miete für den Zeitraum: <strong>${fmt(loyerMaxTotal)}</strong> (${nbJours} Tage)`
-        : `Max. Jahresmiete: <strong>${fmt(loyerMaxTotal)}/Jahr</strong> (~${fmt(loyerMaxTotal/12)}/Monat)`;
-      recos.push(`${loyerMaxMsg} um die Umqualifizierung zu beseitigen (Geschäftsführeranteil auf ${fmt(plafond_dir)} begrenzt).`);
+        ? `Max. Miete im Zeitraum: <strong>${fmt(loyerMaxTotal)}</strong> (${nbJours} Tage)`
+        : `Jährliche Höchstmiete: <strong>${fmt(loyerMaxTotal)}/Jahr</strong> (~${fmt(loyerMaxTotal/12)}/Monat)`;
+      recos.push(`${loyerMaxMsg} um die Umqualifizierung zu beseitigen (GF-Anteil begrenzt auf ${fmt(plafond_dir)}).`);
       if (indivision !== 'oui') {
-        recos.push('Erwägen Sie, die Immobilie in Miteigentum mit Ihrem Ehegatten (≥ 50%) zu bringen, um den der Umqualifizierung unterliegenden Anteil zu reduzieren.');
+        recos.push('Erwägen Sie, die Immobilie im Miteigentum mit Ihrem Ehepartner (≥ 50%) zu halten, um den der Umqualifizierung unterliegenden Anteil zu reduzierenon.');
       } else if (partConj < 50) {
-        recos.push(`Wenn Ihr Ehegatte seinen/ihren Anteil auf <strong>50% oder mehr</strong> erhöht, unterliegt nur Ihr verbleibender Anteil (<strong>${(100 - 50)}%</strong>) der Regel, was die Umqualifizierung eliminieren oder reduzieren könnte.`);
+        recos.push(`Wenn Ihr Ehepartner seinen Anteil auf <strong>50% oder mehr</strong> erhöht, unterliegt nur Ihr Restanteil (<strong>${(100 - 50)}%</strong>) der Regel, was die Umqualifizierung beseitigen oder reduzieren könnte.`);
       }
       if (meuble !== 'oui') {
-        recos.push('Erwägen Sie eine <strong>möblierte</strong> Vermietung: Der den Möbeln zugeordnete Mietanteil (typischerweise 20–40%) wird zu Kapitaleinkünften (Steuerabzug 30%) und fällt aus der Vergleichsbasis mit der EW-Obergrenze, was das Umqualifizierungsrisiko mechanisch reduziert.');
+        recos.push('Erwägen Sie eine <strong>möblierte</strong> Vermietung: der den Möbeln zugeteilte Mietanteil (typisch 20–40%) wird zu revenu mobilier (précompte 30%) et sort de la base de comparaison avec le plafond RC, réduisant mécaniquement le risque de requalification.');
       } else {
-        recos.push('Die 60/40-Regel wird angewandt: 40% der Miete werden als Kapitaleinkünfte (30% Steuerabzug) behandelt, 60% als Immobilieneinkünfte, die der EW-Obergrenze unterliegen.');
+        recos.push('Die 60/40-Regel wird angewendet: 40% der Miete wird als Kapitaleinkommen (QSt 30%), 60% als Immobilieneinkommen behandeltr soumis au plafond RC.');
       }
-      recos.push('Prüfen Sie, ob Ihr Einheitswert korrekt bewertet wurde — eine Neubewertung beim FÖD Finanzen kann die Obergrenze legal erhöhen.');
+      recos.push('Prüfen Sie, ob Ihr Katastereinkommen korrekt bewertet ist — eine Neubewertung beim SPF Finanzen kann es legal erhöhenlement le plafond.');
       if (type_bien !== 'mixte') {
-        recos.push('Wenn nur ein Teil der Immobilie beruflich genutzt wird, erwägen Sie den Wechsel zu <strong>gemischter Nutzung</strong> und begrenzen Sie den Mietvertrag auf den tatsächlichen beruflichen Anteil, um die Berechnungsbasis der Obergrenze zu reduzieren.');
+        recos.push('Wenn nur ein Teil der Immobilie beruflich genutzt wird, erwägen Sie den Wechsel zu <strong>gemischter Nutzung</strong> und limiter le bail à la part professionnelle réelle pour réduire la base de calcul du plafond.');
       }
       recos.push('Konsultieren Sie Ihren Buchhalter oder Steuerberater für eine personalisierte Analyse Ihrer Situation.');
     }
@@ -1495,44 +1855,44 @@ document.addEventListener('click', function(e) {
 <div id="cookieBanner" role="dialog" aria-modal="true">
   <!-- Vue principale -->
   <div id="cbMain">
-    <h2 class="cb-title">Vos paramètres de confidentialité</h2>
-    <p class="cb-text">La Caverne de la Compta utilise des cookies pour collecter des informations à propos de votre appareil, votre navigateur et votre comportement de navigation.</p>
-    <p class="cb-text">En outre, si vous nous en donnez l'autorisation, nous pouvons utiliser vos données pour <strong>personnaliser le contenu</strong> et <strong>afficher des publicités pertinentes</strong> via Google AdSense. Nous mesurons également l'audience avec <strong>Google Analytics</strong> pour améliorer le site.</p>
-    <p class="cb-text">En cliquant sur « D'accord », vous donnez votre consentement. Si vous ne souhaitez pas tout autoriser, cliquez sur « Modifier manuellement ». Vous pouvez modifier vos choix à tout moment via le lien <strong>Gestion des cookies</strong> en bas de page. Pour en savoir plus, consultez notre <a href="/fr/mentions-legales/#cookies">politique de cookies</a>.</p>
+    <h2 class="cb-title">Ihre Datenschutzeinstellungen</h2>
+    <p class="cb-text">La Caverne de la Compta verwendet Cookies, um Informationen über Ihr Gerät, Ihren Browser und Ihr Surfverhalten zu erfassen.</p>
+    <p class="cb-text">Wenn Sie uns Ihre Einwilligung erteilen, können wir Ihre Daten verwenden, um <strong>Inhalte zu personalisieren</strong> und <strong>relevante Werbung</strong> über Google AdSense anzuzeigen. Wir messen auch das Benutzerverhalten mit <strong>Google Analytics</strong>, um die Website zu verbessern.</p>
+    <p class="cb-text">Durch Klicken auf « Einverstanden » geben Sie Ihre Zustimmung. Wenn Sie nicht alles zulassen möchten, klicken Sie auf « Manuell anpassen ». Sie können Ihre Auswahl jederzeit über den Link <strong>Cookie-Verwaltung</strong> am Seitenende ändern. Weitere Informationen finden Sie in unserer <a href="/de/mentions-legales/#cookies">Cookie-Richtlinie</a>.</p>
     <div class="cb-btns">
-      <button class="cb-btn-agree" onclick="cookieAcceptAll()">D'accord</button>
-      <button class="cb-btn-modify" onclick="cbShowDetail()">Modifier manuellement</button>
+      <button class="cb-btn-agree" onclick="cookieAcceptAll()">Einverstanden</button>
+      <button class="cb-btn-modify" onclick="cbShowDetail()">Manuell anpassen</button>
     </div>
   </div>
   <!-- Vue détaillée -->
   <div id="cbDetail">
-    <button class="cb-back" onclick="cbShowMain()">← Retour</button>
-    <h2 class="cb-title">Définir vos préférences</h2>
+    <button class="cb-back" onclick="cbShowMain()">← Zurück</button>
+    <h2 class="cb-title">Ihre Präferenzen festlegen</h2>
     <div class="cb-cat">
       <div>
-        <div class="cb-cat-name">🔒 Nécessaires <span style="font-size:0.7rem;color:#F5A623;">(toujours actifs)</span></div>
-        <div class="cb-cat-desc">Indispensables au fonctionnement du site : navigation, sécurité, préférences de langue. Ne peuvent pas être désactivés.</div>
+        <div class="cb-cat-name">🔒 Notwendig <span style="font-size:0.7rem;color:#F5A623;">(immer aktiv)</span></div>
+        <div class="cb-cat-desc">Unverzichtbar für den Betrieb der Website: Navigation, Sicherheit, Spracheinstellungen. Können nicht deaktiviert werden.</div>
       </div>
       <label class="cb-toggle required"><input type="checkbox" checked disabled><span class="cb-toggle-slider"></span></label>
     </div>
     <div class="cb-cat">
       <div>
-        <div class="cb-cat-name">📊 Analytiques <span style="font-size:0.7rem;color:#8A9BB0;">(Google Analytics)</span></div>
-        <div class="cb-cat-desc">Nous permettent de comprendre comment vous utilisez le site pour l'améliorer continuellement.</div>
+        <div class="cb-cat-name">📊 Analytisch <span style="font-size:0.7rem;color:#8A9BB0;">(Google Analytics)</span></div>
+        <div class="cb-cat-desc">Helfen uns zu verstehen, wie Sie die Website nutzen, damit wir sie kontinuierlich verbessern können.</div>
       </div>
       <label class="cb-toggle"><input type="checkbox" id="cbAnalytics" checked><span class="cb-toggle-slider"></span></label>
     </div>
     <div class="cb-cat">
       <div>
-        <div class="cb-cat-name">📢 Publicitaires <span style="font-size:0.7rem;color:#8A9BB0;">(Google AdSense)</span></div>
-        <div class="cb-cat-desc">Permettent d'afficher des publicités pour financer le site gratuitement pour vous.</div>
+        <div class="cb-cat-name">📢 Werbung <span style="font-size:0.7rem;color:#8A9BB0;">(Google AdSense)</span></div>
+        <div class="cb-cat-desc">Ermöglichen die Anzeige von Werbung, um die Website für Sie kostenlos zu finanzieren.</div>
       </div>
       <label class="cb-toggle"><input type="checkbox" id="cbAds" checked><span class="cb-toggle-slider"></span></label>
     </div>
     <div class="cb-detail-btns">
-      <button class="cb-btn-saveall" onclick="cookieAcceptAll()">Tout accepter</button>
-      <button class="cb-btn-saveprefs" onclick="cookieSavePrefs()">Enregistrer mes choix</button>
-      <button class="cb-btn-refuseall" onclick="cookieRefuseAll()">Tout refuser</button>
+      <button class="cb-btn-saveall" onclick="cookieAcceptAll()">Alle akzeptieren</button>
+      <button class="cb-btn-saveprefs" onclick="cookieSavePrefs()">Meine Auswahl speichern</button>
+      <button class="cb-btn-refuseall" onclick="cookieRefuseAll()">Alle ablehnen</button>
     </div>
   </div>
 </div>
@@ -1607,6 +1967,5 @@ document.addEventListener('click', function(e) {
 })();
 </script>
 <!-- END COOKIE BANNER -->
-
 </body>
 </html>

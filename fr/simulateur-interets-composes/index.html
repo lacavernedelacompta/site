@@ -16,13 +16,15 @@
   <link rel="canonical" href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/">
   <!-- Open Graph -->
   <meta property="og:title" content="Simulateur Intérêts Composés Belgique — Épargne & Investissement">
-  <meta property="og:image" content="https://lacavernedelacompta.be/logo.png">
+  <meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
 
   <meta property="og:description" content="Calculez la croissance de votre épargne avec les intérêts composés. Visualisez l'effet du temps sur vos placements. Outil gratuit belge.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lacavernedelacompta.be/simulateur-interets-composes.html">
   <meta property="og:site_name" content="La Caverne de la Compta">
   <meta property="og:locale" content="fr_BE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
@@ -336,7 +338,7 @@
     color: var(--white);
   }
 
-  /* Reinvest toggle */
+  /* Reinvest checkbox */
   .reinvest-row {
     display: flex;
     align-items: center;
@@ -345,32 +347,36 @@
     border: 1.5px solid rgba(26,122,138,0.2);
     border-radius: 10px;
     padding: 14px 16px;
+    cursor: pointer;
+    user-select: none;
   }
+  .reinvest-row:hover { background: rgba(26,122,138,0.12); }
   .reinvest-label { font-size: 0.85rem; font-weight: 600; color: var(--teal); }
   .reinvest-sub { font-size: 0.72rem; color: var(--text-mid); margin-top: 2px; }
 
-  .switch { position: relative; display: inline-block; width: 46px; height: 26px; }
-  .switch input { display: none; }
-  .switch-slider {
-    position: absolute;
-    inset: 0;
-    background: var(--border);
-    border-radius: 26px;
+  /* Custom checkbox */
+  .reinvest-checkbox {
+    width: 22px; height: 22px;
+    border: 2px solid rgba(26,122,138,0.5);
+    border-radius: 6px;
+    background: white;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s;
     cursor: pointer;
-    transition: background 0.3s;
   }
-  .switch-slider::before {
+  .reinvest-checkbox.checked {
+    background: var(--teal);
+    border-color: var(--teal);
+  }
+  .reinvest-checkbox.checked::after {
     content: '';
-    position: absolute;
-    width: 20px; height: 20px;
-    left: 3px; top: 3px;
-    background: var(--white);
-    border-radius: 50%;
-    transition: transform 0.3s;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    width: 13px; height: 7px;
+    border-left: 2.5px solid white;
+    border-bottom: 2.5px solid white;
+    transform: rotate(-45deg) translateY(-2px);
+    display: block;
   }
-  .switch input:checked + .switch-slider { background: var(--teal); }
-  .switch input:checked + .switch-slider::before { transform: translateX(20px); }
 
   .calc-btn {
     width: 100%;
@@ -594,7 +600,7 @@
     top: calc(100% + 4px); right: 0;
     background: #fff; border: 1px solid #DDE5EF;
     border-radius: 8px; box-shadow: 0 8px 24px rgba(13,27,42,0.12);
-    min-width: 120px; z-index: 999999; overflow: hidden;
+    min-width: 120px; z-index:9000; overflow: hidden;
   }
   .lang-dropdown.open .lang-menu { display: block; }
   .lang-menu a {
@@ -707,17 +713,61 @@
   "url": "https://lacavernedelacompta.be",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://lacavernedelacompta.be/logo.png",
+    "url": "https://lacavernedelacompta.be/logo.svg",
     "width": 512,
     "height": 512
   },
-  "image": "https://lacavernedelacompta.be/logo.png"
+  "image": "https://lacavernedelacompta.be/logo.svg"
 }
 </script>
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@lacavernecompta">
+  <meta name="twitter:title" content="Simulateur Intérêts Composés Belgique">
+  <meta name="twitter:description" content="Calculez la croissance de votre épargne avec les intérêts composés. Visualisez l'effet du temps sur vos placements. Outil gratuit belge.">
+  <meta name="twitter:image" content="https://lacavernedelacompta.be/logo.svg">
 <!-- CACHE-BUST-v8-fr/simulateur-interets-composes/index.html -->
+<!-- Google tag (gtag.js) -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{
+  analytics_storage:'denied',
+  ad_storage:'denied',
+  ad_user_data:'denied',
+  ad_personalization:'denied',
+  wait_for_update:500
+});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNHZDLVPEL"></script>
+<script>
+gtag('js', new Date());
+gtag('config', 'G-WNHZDLVPEL');
+</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Simulateur Intérêts Composés Belgique — Épargne & Investissement",
+  "url": "https://lacavernedelacompta.be/fr/simulateur-interets-composes/",
+  "description": "Calculez la croissance de votre épargne avec les intérêts composés. Visualisez l'effet du temps sur vos placements. Outil gratuit belge.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "La Caverne de la Compta",
+    "url": "https://lacavernedelacompta.be"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -820,6 +870,7 @@
   <p>Visualisez la puissance des intérêts composés : capital initial, versements réguliers, réinvestissement des intérêts.</p>
 </section>
 <div style="margin:24px auto;text-align:center;max-width:100%;padding:0 16px;">
+<h2 style="font-size:1rem;color:#1A3A5C;margin:24px 0 8px;">📋 Comment fonctionne le calcul des intérêts composés ?</h2>
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-8043980001637749"
@@ -920,15 +971,13 @@
       </div>
 
       <!-- Réinvestissement -->
-      <div class="reinvest-row">
+      <div class="reinvest-row" onclick="toggleReinvest()">
         <div>
           <div class="reinvest-label">♻️ Réinvestir les intérêts</div>
           <div class="reinvest-sub">Capitalisation automatique des gains</div>
         </div>
-        <label class="switch">
-          <input type="checkbox" id="reinvest" checked>
-          <span class="switch-slider"></span>
-        </label>
+        <div class="reinvest-checkbox checked" id="reinvestBox"></div>
+        <input type="checkbox" id="reinvest" checked style="display:none">
       </div>
 
       <button class="calc-btn" onclick="calculate()">Calculer ma simulation →</button>
@@ -1308,8 +1357,8 @@
 
 <!-- ── BANNIÈRE COOKIES APD-CONFORME ── -->
 <style>
-#cookieOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99998;backdrop-filter:blur(3px);}
-#cookieBanner{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:99999;
+#cookieOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:1000000;backdrop-filter:blur(3px);}
+#cookieBanner{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1000001;
   background:#fff;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.3);
   width:min(580px,94vw);max-height:88vh;overflow-y:auto;font-family:'Inter',sans-serif;}
 /* Main view */
@@ -1509,6 +1558,13 @@ document.addEventListener('click', function(e) {
   var ld = document.getElementById('langSwitcher');
   if (ld && !ld.contains(e.target)) ld.classList.remove('open');
 });
+
+function toggleReinvest() {
+  const cb = document.getElementById('reinvest');
+  const box = document.getElementById('reinvestBox');
+  cb.checked = !cb.checked;
+  box.classList.toggle('checked', cb.checked);
+}
 </script>
 </body>
 </html>

@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plan Comptable PCMN Complet Belgique — Sociétés & ASBL 2026</title>
-<meta name="description" content="PCMN complet pour sociétés et ASBL en Belgique. 633 comptes Société + 373 comptes ASBL avec descriptions et références légales. Recherche instantanée.">
-<meta name="keywords" content="PCMN belgique, plan comptable belge, plan comptable ASBL, plan comptable société belgique, comptes comptables belgique, PCN belgique">
+<title>Plan Comptable PCMN Complet Belgique — Sociétés, ASBL & Odoo 2026</title>
+<meta name="description" content="PCMN complet pour sociétés et ASBL en Belgique — compatible Odoo. Recherche instantanée parmi 633 + 373 comptes.">
+<meta name="keywords" content="PCMN belgique, plan comptable belge, plan comptable Odoo, Odoo comptabilité belgique, plan comptable ASBL, plan comptable société belgique, comptes comptables belgique, PCN belgique, comptabilité Odoo belgique">
 <meta name="author" content="La Caverne de la Compta">
 <meta name="robots" content="index, follow">
   <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/">
@@ -14,14 +14,16 @@
   <link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/pcmn-complet-societe-et-asbl/">
   <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/">
 <link rel="canonical" href="https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/">
-<meta property="og:title" content="Plan Comptable PCMN Complet Belgique — Sociétés & ASBL 2026">
-  <meta property="og:image" content="https://lacavernedelacompta.be/logo.png">
+<meta property="og:title" content="Plan Comptable PCMN Complet Belgique — Sociétés, ASBL & Odoo 2026">
+  <meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
 
 <meta property="og:description" content="Plan Comptable Minimum Normalisé (PCMN) complet pour sociétés et ASBL en Belgique.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lacavernedelacompta.be/pcmn-complet-societe-et-asbl.html">
 <meta property="og:site_name" content="La Caverne de la Compta">
 <meta property="og:locale" content="fr_BE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -55,7 +57,7 @@ nav {
     top: 0;
     z-index: 1000;
   }
-.nav-links{display:flex;gap:4px;list-style:none;align-items:center;}
+.nav-links{display:flex;gap:4px;list-style:none;align-items:center;flex:1;justify-content:center;}
 .nav-links a{padding:8px 14px;font-size:.83rem;font-weight:500;color:var(--text-mid);text-decoration:none;border-radius:6px;transition:all .15s;}
 .nav-links a:hover{background:var(--teal-pale);color:var(--teal);}
 .nav-links a.active{background:var(--teal-pale);color:var(--teal);font-weight:600;}
@@ -180,6 +182,17 @@ footer a:hover{color:white;}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 .toast-icon{font-size:1rem;}
 
+
+  /* ── LANG DROPDOWN ── */
+  .lang-dropdown { position: relative; display: inline-block; }
+  .lang-current { display: flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 6px; background: #1A7A8A; color: #fff; font-size: 0.78rem; font-weight: 700; cursor: pointer; border: none; letter-spacing: 0.05em; white-space: nowrap; }
+  .lang-current:after { content: ' ▾'; font-size: 0.7rem; }
+  .lang-menu { display: none; position: absolute; top: calc(100% + 4px); right: 0; background: #fff; border: 1px solid #DDE5EF; border-radius: 8px; box-shadow: 0 8px 24px rgba(13,27,42,0.12); min-width: 130px; z-index:9000; overflow: hidden; }
+  .lang-dropdown.open .lang-menu { display: block; }
+  .lang-menu a { display: flex; align-items: center; gap: 8px; padding: 10px 14px; font-size: 0.82rem; font-weight: 500; color: #1A2535; text-decoration: none; border-bottom: 1px solid #F4F7FA; }
+  .lang-menu a:last-child { border-bottom: none; }
+  .lang-menu a:hover { background: #E8F5F7; color: #1A7A8A; }
+  .lang-menu a.active { font-weight: 700; color: #1A7A8A; }
 </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
@@ -192,19 +205,159 @@ footer a:hover{color:white;}
   "url": "https://lacavernedelacompta.be",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://lacavernedelacompta.be/logo.png",
+    "url": "https://lacavernedelacompta.be/logo.svg",
     "width": 512,
     "height": 512
   },
-  "image": "https://lacavernedelacompta.be/logo.png"
+  "image": "https://lacavernedelacompta.be/logo.svg"
 }
 </script>
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@lacavernecompta">
+  <meta name="twitter:title" content="Plan Comptable PCMN Complet Belgique — Sociétés, ASBL & Odoo 2026">
+  <meta name="twitter:description" content="Plan Comptable Minimum Normalisé (PCMN) complet pour sociétés et ASBL en Belgique.">
+  <meta name="twitter:image" content="https://lacavernedelacompta.be/logo.svg">
 <!-- CACHE-BUST-v8-fr/pcmn-complet-societe-et-asbl/index.html -->
+<!-- Google tag (gtag.js) -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{
+  analytics_storage:'denied',
+  ad_storage:'denied',
+  ad_user_data:'denied',
+  ad_personalization:'denied',
+  wait_for_update:500
+});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNHZDLVPEL"></script>
+<script>
+gtag('js', new Date());
+gtag('config', 'G-WNHZDLVPEL');
+</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Plan Comptable PCMN Complet Belgique — Sociétés, ASBL & Odoo 2026",
+  "url": "https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/",
+  "description": "Plan Comptable Minimum Normalisé (PCMN) complet pour sociétés et ASBL en Belgique.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "La Caverne de la Compta",
+    "url": "https://lacavernedelacompta.be"
+  }
+}
+</script>
 </head>
 <body>
+
+<!-- Topbar -->
+<div class="topbar">
+  <span class="topbar-left">🇧🇪 La Caverne de la Compta · PCMN · AR 29 avril 2019 · ITAA 2021</span>
+  <div class="topbar-right">
+    <a href="/fr/mentions-legales/">Mentions légales</a>
+    <a href="/fr/mentions-legales/#rgpd">RGPD</a>
+    <a href="/fr/mentions-legales/#cookies">Cookies</a>
+  </div>
+</div>
+
+<!-- Nav -->
+<nav class="main-nav">
+<a href="/fr/" class="logo" style="text-decoration:none;display:flex;align-items:center;">
+    <svg width="148" height="38" viewBox="0 0 148 38" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <defs>
+        <linearGradient id="hGn" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0D1B2A"/>
+          <stop offset="100%" style="stop-color:#1A3A5C"/>
+        </linearGradient>
+      </defs>
+      <!-- Hexagone -->
+      <polygon points="19,2 31,9 31,23 19,30 7,23 7,9" fill="url(#hGn)"/>
+      <!-- Reflet top -->
+      <polygon points="19,2 31,9 25,9 19,5 13,9 7,9" fill="rgba(255,255,255,.07)"/>
+      <!-- Bras balance -->
+      <line x1="9" y1="15" x2="29" y2="15" stroke="rgba(255,255,255,.5)" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Tige -->
+      <rect x="17.5" y="15" width="2.5" height="11" rx="1.2" fill="rgba(255,255,255,.35)"/>
+      <!-- Pivot gold -->
+      <circle cx="18.8" cy="15" r="3.2" fill="#C9A84C"/>
+      <circle cx="18.8" cy="15" r="1.4" fill="white" opacity=".9"/>
+      <!-- Socle -->
+      <rect x="13" y="27" width="12" height="2.5" rx="1.2" fill="rgba(255,255,255,.2)"/>
+      <!-- Plateau gauche -->
+      <line x1="9" y1="15" x2="7" y2="21.5" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="7" cy="24" rx="6.5" ry="2.5" fill="#1A7A8A"/>
+      <!-- Plateau droit -->
+      <line x1="29" y1="15" x2="31" y2="20" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="31" cy="22.5" rx="6.5" ry="2.5" fill="#22A3B8"/>
+      <!-- Étoile -->
+      <circle cx="27" cy="7" r="2.5" fill="#C9A84C" opacity=".85"/>
+      <!-- Texte -->
+      <text x="42" y="15.5" font-family="'Playfair Display',serif" font-size="12.5" font-weight="900" fill="#0D1B2A" letter-spacing="-.2">La Caverne</text>
+      <rect x="42" y="18.5" width="104" height="1" rx=".5" fill="#DDE5EF"/>
+      <rect x="42" y="18.5" width="18" height="1" rx=".5" fill="#C9A84C"/>
+      <text x="42" y="30" font-family="'Playfair Display',serif" font-size="10.5" font-weight="700" font-style="italic" fill="#1A7A8A" letter-spacing="-.1">de la Compta</text>
+    </svg>
+  </a>
+        <ul class="nav-links">
+    <li><a href="https://lacavernedelacompta.be/fr/">🏠 Accueil</a></li>
+    <li class="dd-wrap" id="ddWrap">
+      <button class="dd-btn" onclick="toggleDD(event)">🧰 Nos outils <span class="dd-chevron">▼</span></button>
+      <div class="dd-menu" id="ddMenu">
+        <a href="/fr/simulateur-immobilier/"><span class="dd-icon">🏠</span>Simulateur Immobilier</a>
+        <a href="/fr/simulateur-credit/"><span class="dd-icon">💳</span>Simulateur de Crédit</a>
+        <a href="/fr/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Requalification Loyer</a>
+        <a href="/fr/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Plan Comptable PCMN</a>
+        <a href="/fr/simulateur-interets-composes/"><span class="dd-icon">📈</span>Intérêts Composés</a>
+        <a href="/fr/simulateur-retenue/"><span class="dd-icon">🧾</span>Retenue sur Facture</a>
+        <a href="/fr/quick-memento-fiscal/"><span class="dd-icon">📌</span>Quick-Mémo Fiscal</a>
+        <a href="/fr/remboursement-frais/"><span class="dd-icon">🚗</span>Indemnité Kilométrique</a>
+      </div>
+    </li>
+  </ul>
+  <!-- ══ SWITCHER LANGUE ══ -->
+  <div class="lang-dropdown" style="position:relative;display:inline-block;" id="langSwitcher">
+    <button class="lang-current" onclick="toggleLangMenu(event)">🇫🇷 FR</button>
+    <div class="lang-menu">
+<a href="https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/" class="active">🇫🇷 Français</a>
+<a href="https://lacavernedelacompta.be/nl/pcmn-complet-societe-et-asbl/" class="">🇧🇪 Nederlands</a>
+<a href="https://lacavernedelacompta.be/en/pcmn-complet-societe-et-asbl/" class="">🇬🇧 English</a>
+<a href="https://lacavernedelacompta.be/de/pcmn-complet-societe-et-asbl/" class="">🇩🇪 Deutsch</a>
+    </div>
+  </div>
+  <!-- ══════════════════════ -->
+
+  
+  <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bread"><a href="/fr/">Accueil</a> › Plan Comptable Belge</div>
+  <div class="hero-badge">✦ ITAA 2021 · CNC/CBN — Édition officielle</div>
+  <h1>Plan Comptable Minimum Normalisé<br><em>Belgique (PCMN)</em></h1>
+  <p>Tous les comptes des classes 0 à 7, leurs sous-comptes détaillés et leurs références légales — conforme à l'AR du 29 avril 2019.</p>
+</section>
+
+<!-- Stats -->
+<div class="stats" id="statsBar">
+  <div class="stat"><div class="stat-n">8</div><div class="stat-l">Classes</div></div>
+  <div class="stat"><div class="stat-n" id="statComptes">633</div><div class="stat-l">Comptes</div></div>
+  <div class="stat"><div class="stat-n">2026</div><div class="stat-l">Mis à jour</div></div>
+  <div class="stat"><div class="stat-n">ITAA</div><div class="stat-l">Source officielle</div></div>
+</div>
 
 
 <!-- Entity selector -->
@@ -248,7 +401,26 @@ footer a:hover{color:white;}
   </main>
 <!-- Main -->
   <div style="margin:24px auto;text-align:center;max-width:100%;">
-<ins class="adsbygoogle"
+
+    <section class="odoo-seo-section" style="background:#f0f7ff;border:1px solid #c3daf5;border-radius:10px;padding:24px 28px;margin:32px 0;max-width:900px;margin-left:auto;margin-right:auto;">
+      <h2 style="font-size:1.15rem;color:#1A3A5C;margin-bottom:12px;">🟣 PCMN &amp; Odoo Comptabilité Belgique</h2>
+      <p style="color:#2d4a6a;line-height:1.7;margin-bottom:10px;">
+        Le PCMN belge est nativement compatible avec <strong>Odoo Comptabilité</strong> (module <em>Accounting</em>). 
+        Dans Odoo, chaque compte du plan comptable correspond directement à un compte PCMN : les classes 1 à 7 
+        pour les sociétés, et les classes 1 à 8 pour les ASBL, sont toutes mappées dans le <em>chart of accounts</em> belge d'Odoo.
+      </p>
+      <ul style="color:#2d4a6a;line-height:1.8;padding-left:20px;margin-bottom:10px;">
+        <li>🔗 Odoo utilise le <strong>plan comptable Odoo Belgique</strong> conforme au PCMN et à l'AR du 29 avril 2019</li>
+        <li>🔗 Les comptes <strong>Odoo comptabilité belgique</strong> respectent la nomenclature PCMN pour sociétés et ASBL</li>
+        <li>🔗 Compatible avec la <strong>déclaration TVA belge</strong>, les bilans UBO et les rapports ONSS via Odoo</li>
+        <li>🔗 Recherchez ci-dessus n'importe quel compte PCMN pour vérifier sa correspondance Odoo</li>
+      </ul>
+      <p style="color:#555;font-size:0.88rem;">
+        Mots-clés : plan comptable Odoo belgique · Odoo comptabilité belgique · PCMN Odoo · rekeningenstelsel Odoo · 
+        Odoo boekhouding belgie · Belgian chart of accounts Odoo · Kontenplan Odoo Belgien
+      </p>
+    </section>
+    <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-8043980001637749"
      data-ad-slot="8050648588"
@@ -554,8 +726,8 @@ document.addEventListener('click', function(e) {
 </script>
 <!-- ── BANNIÈRE COOKIES APD-CONFORME ── -->
 <style>
-#cookieOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99998;backdrop-filter:blur(3px);}
-#cookieBanner{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:99999;
+#cookieOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:1000000;backdrop-filter:blur(3px);}
+#cookieBanner{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1000001;
   background:#fff;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.3);
   width:min(580px,94vw);max-height:88vh;overflow-y:auto;font-family:'Inter',sans-serif;}
 /* Main view */

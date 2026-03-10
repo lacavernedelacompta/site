@@ -3,25 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simulator Herkwalificatie Huur Bestuurder België 2026</title>
-<meta name="description" content="Bereken het risico op herkwalificatie van de huur door uw vennootschap (art. 32 WIB 92). Plafond 5/3 KI, onverdeeldheid, gemengd gebruik. Tool 2026.">
-<meta name="keywords" content="herkwalificatie huur bestuurder belgië, art 32 WIB 92, huur vennootschap bestuurder belgië, plafond huur bestuurder, herkwalificatie bezoldiging belgië, simulator huur bestuurder">
+<title>Simulator Herkwalificatie Huur Dirigeant Belgique 2026</title>
+<meta name="description" content="Calculez le risque de requalification du loyer société (art. 32 CIR 92). Plafond 5/3 RC, indivision, usage mixte, meublé. Outil gratuit 2026.">
+<meta name="keywords" content="herkwalificatie huur bestuurder België, art 32 WIB 92, vennootschapshuur bestuurder plafond, huur bezoldiging bestuurder België 2026">
 <meta name="author" content="La Caverne de la Compta">
 <meta name="robots" content="index, follow">
-  <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-requalification-loyer/">
+  <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/nl/simulateur-requalification-loyer/">
   <link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-requalification-loyer/">
   <link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-requalification-loyer/">
   <link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-requalification-loyer/">
-  <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-requalification-loyer/">
+  <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/nl/simulateur-requalification-loyer/">
 <link rel="canonical" href="https://lacavernedelacompta.be/nl/simulateur-requalification-loyer/">
-<meta property="og:title" content="Simulator Herkwalificatie Huur Bestuurder — Art. 32 WIB 92 België 2026">
-  <meta property="og:image" content="https://lacavernedelacompta.be/logo.png">
+<meta property="og:title" content="Simulator Herkwalificatie Huur Dirigeant — Art. 32 CIR 92 Belgique 2026">
+  <meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
 
-<meta property="og:description" content="Bereken het risico op herkwalificatie van de huur die uw vennootschap betaalt. Plafond 5/3 KI × coëfficiënt, onverdeeldheid, gemeubeld — volledige analyse en aanbevelingen.">
+<meta property="og:description" content="Calculez le risque de requalification du loyer versé par votre société. Plafond 5/3 RC × coefficient, indivision, meublé — analyse complète et recommandations.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lacavernedelacompta.be/simulateur-requalification-loyer.html">
 <meta property="og:site_name" content="La Caverne de la Compta">
-<meta property="og:locale" content="nl_BE">
+<meta property="og:locale" content="fr_BE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -630,7 +632,138 @@
     .kpi-grid { grid-template-columns: 1fr; }
   }
 
-</style>
+
+
+  
+  }
+
+  
+  /* Fix overflow tables on mobile */
+    table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .chart-container, canvas { max-width: 100% !important; }
+  }
+  
+  }
+
+  
+  /* ── LANG DROPDOWN ── */
+  .lang-dropdown { position: relative; display: inline-block; position: relative !important; display: inline-block !important;}
+  .lang-current {
+    display: flex; align-items: center; gap: 6px;
+    padding: 5px 10px; border-radius: 6px;
+    background: #1A7A8A; color: #fff;
+    font-size: 0.78rem; font-weight: 700;
+    cursor: pointer; border: none;
+    letter-spacing: 0.05em; white-space: nowrap;
+  }
+  .lang-current:after { content: ' ▾'; font-size: 0.7rem; }
+  .lang-menu {
+    display: none; position: absolute;
+    top: calc(100% + 4px); right: 0;
+    background: #fff; border: 1px solid #DDE5EF;
+    border-radius: 8px; box-shadow: 0 8px 24px rgba(13,27,42,0.12);
+    min-width: 120px; z-index: 999999; overflow: hidden;
+  }
+  .lang-dropdown.open .lang-menu { display: block; }
+  .lang-menu a {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px; font-size: 0.82rem; font-weight: 500;
+    color: #1A2535; text-decoration: none;
+    border-bottom: 1px solid #F4F7FA;
+    transition: background 0.15s;
+  }
+  .lang-menu a:last-child { border-bottom: none; }
+  .lang-menu a:hover { background: #E8F5F7; color: #1A7A8A; }
+  .lang-menu a.active { font-weight: 700; color: #1A7A8A; }
+
+  
+  /* ── GLOBAL OVERFLOW FIX ── */
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  @media (max-width: 900px) {
+    * { box-sizing: border-box; }
+    .main, .container, .wrapper, .page-wrap, .content, .hero-inner,
+    .disclaimer-inner, .card, .form-card, .result-card, .table-wrap {
+      max-width: 100% !important;
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+    }
+    table {
+      display: block !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+      max-width: 100% !important;
+    }
+    canvas { max-width: 100% !important; height: auto !important; }
+    input[type=range] { max-width: 100% !important; }
+    .grid, [style*="display:grid"], [style*="display: grid"] {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  
+  
+  /* ── MOBILE NAV ── */
+  .hamburger { display: none; }
+  @media (max-width: 768px) {
+    .main-nav { padding: 0 16px !important; height: 56px !important; }
+    .nav-links { display: none !important; }
+    .nav-links.mobile-open {
+      display: flex !important;
+      flex-direction: column;
+      position: fixed;
+      top: 56px; left: 0; right: 0;
+      background: #fff;
+      border-bottom: 2px solid #22A3B8;
+      box-shadow: 0 8px 32px rgba(13,27,42,0.15);
+      z-index: 9998;
+      padding: 8px 0;
+      max-height: calc(100vh - 56px);
+      overflow-y: auto;
+    }
+    .nav-links.mobile-open > li > a {
+      display: block !important;
+      padding: 14px 20px;
+      font-size: 1rem;
+      border-bottom: 1px solid #DDE5EF;
+      color: #1A2535 !important;
+      text-align: center;
+    }
+    .dd-wrap { width: 100%; }
+    .dd-btn { width: 100% !important; text-align: center; padding: 14px 20px; font-size: 1rem; border-bottom: 1px solid #DDE5EF; background: none; border-left: none; border-right: none; border-top: none; border-radius: 0; color: #1A2535; }
+    .dd-menu {
+      position: static !important;
+      box-shadow: none !important;
+      border: none !important;
+      border-radius: 0 !important;
+      background: #F4F7FA !important;
+      min-width: unset !important;
+      display: none !important;
+    }
+    .dd-wrap.dd-open .dd-menu { display: block !important; }
+    .dd-menu a { padding: 12px 20px 12px 40px !important; border-bottom: 1px solid #DDE5EF !important; font-size: 0.9rem !important; display: block !important; }
+    .hamburger {
+      display: flex !important;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      margin-left: auto;
+      background: none;
+      border: none;
+      z-index: 9999;
+      flex-shrink: 0;
+    }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #1A2535; border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    #langSwitcher { margin-left: 8px; }
+  }
+
+  </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/favicon.svg">
@@ -642,28 +775,255 @@
   "url": "https://lacavernedelacompta.be",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://lacavernedelacompta.be/logo.png",
+    "url": "https://lacavernedelacompta.be/logo.svg",
     "width": 512,
     "height": 512
   },
-  "image": "https://lacavernedelacompta.be/logo.png"
+  "image": "https://lacavernedelacompta.be/logo.svg"
 }
 </script>
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
-<!-- CACHE-BUST-v8-nl/simulateur-requalification-loyer/index.html -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@lacavernecompta">
+  <meta name="twitter:title" content="Simulator Herkwalificatie Huur Dirigeant — Art. 32 CIR 92 Belgique 2026">
+  <meta name="twitter:description" content="Calculez le risque de requalification du loyer versé par votre société. Plafond 5/3 RC × coefficient, indivision, meublé — analyse complète et recommandations.">
+  <meta name="twitter:image" content="https://lacavernedelacompta.be/logo.svg">
+<!-- CACHE-BUST-v8-fr/simulateur-requalification-loyer/index.html -->
+<!-- Google tag (gtag.js) -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{
+  analytics_storage:'denied',
+  ad_storage:'denied',
+  ad_user_data:'denied',
+  ad_personalization:'denied',
+  wait_for_update:500
+});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNHZDLVPEL"></script>
+<script>
+gtag('js', new Date());
+gtag('config', 'G-WNHZDLVPEL');
+</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Simulator Herkwalificatie Huur Dirigeant — Art. 32 CIR 92 Belgique 2026",
+  "url": "https://lacavernedelacompta.be/nl/simulateur-requalification-loyer/",
+  "description": "Calculez le risque de requalification du loyer versé par votre société. Plafond 5/3 RC × coefficient, indivision, meublé — analyse complète et recommandations.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "La Caverne de la Compta",
+    "url": "https://lacavernedelacompta.be"
+  }
+}
+</script>
 </head>
 <body>
 
+<!-- Top bar -->
+<div class="topbar">
+  <span class="topbar-left">🇧🇪 La Caverne de la Compta</span>
+  <div class="topbar-right">
+    <a href="/nl/mentions-legales/">Wettelijke vermeldingen</a>
+    <a href="mentions-legales.html#rgpd">GDPR</a>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="main-nav">
+<a href="/nl/" class="logo" style="text-decoration:none;display:flex;align-items:center;">
+    <svg width="148" height="38" viewBox="0 0 148 38" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <defs>
+        <linearGradient id="hGn" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0D1B2A"/>
+          <stop offset="100%" style="stop-color:#1A3A5C"/>
+        </linearGradient>
+      </defs>
+      <!-- Hexagone -->
+      <polygon points="19,2 31,9 31,23 19,30 7,23 7,9" fill="url(#hGn)"/>
+      <!-- Reflet top -->
+      <polygon points="19,2 31,9 25,9 19,5 13,9 7,9" fill="rgba(255,255,255,.07)"/>
+      <!-- Bras balance -->
+      <line x1="9" y1="15" x2="29" y2="15" stroke="rgba(255,255,255,.5)" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Tige -->
+      <rect x="17.5" y="15" width="2.5" height="11" rx="1.2" fill="rgba(255,255,255,.35)"/>
+      <!-- Pivot gold -->
+      <circle cx="18.8" cy="15" r="3.2" fill="#C9A84C"/>
+      <circle cx="18.8" cy="15" r="1.4" fill="white" opacity=".9"/>
+      <!-- Socle -->
+      <rect x="13" y="27" width="12" height="2.5" rx="1.2" fill="rgba(255,255,255,.2)"/>
+      <!-- Plateau gauche -->
+      <line x1="9" y1="15" x2="7" y2="21.5" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="7" cy="24" rx="6.5" ry="2.5" fill="#1A7A8A"/>
+      <!-- Plateau droit -->
+      <line x1="29" y1="15" x2="31" y2="20" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="31" cy="22.5" rx="6.5" ry="2.5" fill="#22A3B8"/>
+      <!-- Étoile -->
+      <circle cx="27" cy="7" r="2.5" fill="#C9A84C" opacity=".85"/>
+      <!-- Texte -->
+      <text x="42" y="15.5" font-family="'Playfair Display',serif" font-size="12.5" font-weight="900" fill="#0D1B2A" letter-spacing="-.2">La Caverne</text>
+      <rect x="42" y="18.5" width="104" height="1" rx=".5" fill="#DDE5EF"/>
+      <rect x="42" y="18.5" width="18" height="1" rx=".5" fill="#C9A84C"/>
+      <text x="42" y="30" font-family="'Playfair Display',serif" font-size="10.5" font-weight="700" font-style="italic" fill="#1A7A8A" letter-spacing="-.1">de la Compta</text>
+    </svg>
+  </a>
+        <ul class="nav-links">
+    <li><a href="https://lacavernedelacompta.be/nl/">🏠 Startpagina</a></li>
+    <li class="dd-wrap" id="ddWrap">
+      <button class="dd-btn" onclick="toggleDD(event)">🧰 Onze tools <span class="dd-chevron">▼</span></button>
+      <div class="dd-menu" id="ddMenu">
+        <a href="/nl/simulateur-immobilier/"><span class="dd-icon">🏠</span>Vastgoedsimulator</a>
+        <a href="/nl/simulateur-credit/"><span class="dd-icon">💳</span>Kredietsimulator</a>
+        <a href="/nl/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Herkwalificatie huur</a>
+        <a href="/nl/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Boekhoudplan MAR</a>
+        <a href="/nl/simulateur-interets-composes/"><span class="dd-icon">📈</span>Samengestelde intrest</a>
+        <a href="/nl/simulateur-retenue/"><span class="dd-icon">🧾</span>Inhouding op factuur</a>
+        <a href="/nl/quick-memento-fiscal/"><span class="dd-icon">📌</span>Fiscale memo</a>
+        <a href="/nl/remboursement-frais/"><span class="dd-icon">🚗</span>Kilometervergoeding</a>
+      </div>
+    </li>
+  </ul>
+  <!-- ══ SWITCHER LANGUE ══ -->
+  <div class="lang-dropdown" style="position:relative;display:inline-block;" id="langSwitcher">
+    <button class="lang-current" onclick="toggleLangMenu(event)">🇧🇪 NL</button>
+    <div class="lang-menu">
+<a href="https://lacavernedelacompta.be/nl/simulateur-requalification-loyer/" class="active">🇫🇷 Français</a>
+<a href="https://lacavernedelacompta.be/nl/simulateur-requalification-loyer/" class="active">🇧🇪 Nederlands</a>
+<a href="https://lacavernedelacompta.be/en/simulateur-requalification-loyer/" class="">🇬🇧 English</a>
+<a href="https://lacavernedelacompta.be/de/simulateur-requalification-loyer/" class="">🇩🇪 Deutsch</a>
+    </div>
+  </div>
+  <!-- ══════════════════════ -->
+
+  
+  <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div style="text-align:right;font-size:.72rem;color:var(--text-light);padding:5px 40px 0;font-style:italic;">
+  🕐 Bijgewerkt: Aanslagjaar 2027 (inkomsten 2026) — <a href="/nl/mentions-legales/" style="color:var(--text-light)">Officiële bronnen</a>
+</div>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <a href="/nl/">🏠 Startpagina</a>
+  <span>›</span>
+  <a href="/nl/#simulateurs">Simulatoren</a>
+  <span>›</span>
+  <span>Herkwalificatie huur → Bezoldiging bedrijfsleider</span>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-badge">🏠 Fiscaliteit bedrijfsleider · Belgique</div>
+  <h1>Huurherkwalificatiesimulator<br><span>→ Bezoldiging Bestuurder</span></h1>
+  <p>Calculez le risque de fiscale herkwalificatie van de huur betaald door uw vennootschap aan uzelf overeenkomstig artikel 32 WIB 92.</p>
+</section>
+
+<!-- Main -->
+<div style="margin:24px auto;text-align:center;max-width:100%;">
+<h2 style="font-size:1rem;color:#1A3A5C;margin:24px 0 8px;">📋 Wanneer wordt huur geherkwalificeerd als bezoldiging bestuurder?</h2>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8043980001637749"
+     data-ad-slot="8050648588"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<main class="main">
+
+  <!-- Alert -->
+  <div class="alert">
+    <span class="alert-icon">⚠️</span>
+    <div>
+      <strong>Wettelijke context — Art. 32 lid 2 WIB 92:</strong> Wanneer een bedrijfsleider een onroerend goed verhuurt aan zijn eigen vennootschap, wordt het deel van de huur dat hoger is dan <strong>5/3 van het niet-geïndexeerd kadastraal inkomen × herwaarderingscoëfficiënt</strong> automatisch geherkwalificeerd als bezoldiging van bedrijfsleider. Deze herkwalificatie leidt tot een zwaardere belasting (personenbelasting + sociale bijdragen) op het overschrijdende bedrag. Deze simulator helpt u het overschot te identificeren en uw situatie te optimaliseren.
+    </div>
+  </div>
+
+  <div class="sim-layout">
+
+    <!-- Left: inputs -->
+    <div class="panel" id="input-panel">
+      <div class="panel-title">⚙️ Simulatieparameters</div>
+      <div class="panel-subtitle">Vul de gegevens van uw goed en het huurcontract in</div>
+
+      <!-- Onroerend goed -->
+      <div class="section-label">Onroerend goed</div>
+
+      <div class="field">
+        <label>Niet-geïndexeerd kadastraal inkomen <span class="tip">(KI op uw aanslagbiljet)</span></label>
+        <div class="input-wrap">
+          <input type="number" id="rc_brut" placeholder="Ex: 1500" min="0" step="1">
+          <span class="input-unit">€/an</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Aanslagjaar <span class="tip">(inkomensjaar)</span></label>
+        <div class="input-wrap">
+          <select id="annee">
+            <option value="2027" selected>Ex. 2027 — Inkomsten 2026 (coeff. 5,75)</option>
+            <option value="2026">Ex. 2026 — Inkomsten 2025 (coeff. 5,63)</option>
+            <option value="2025">Ex. 2025 — Inkomsten 2024 (coeff. 5,46)</option>
+            <option value="2024">Ex. 2024 — Inkomsten 2023 (coeff. 5,37)</option>
+            <option value="2023">Ex. 2023 — Inkomsten 2022 (coeff. 4,86)</option>
+            <option value="2022">Ex. 2022 — Inkomsten 2021 (coeff. 4,63)</option>
+            <option value="2021">Ex. 2021 — Inkomsten 2020 (coeff. 4,60)</option>
+            <option value="2020">Ex. 2020 — Inkomsten 2019 (coeff. 4,57)</option>
+            <option value="2019">Ex. 2019 — Inkomsten 2018 (coeff. 4,47)</option>
+            <option value="2018">Ex. 2018 — Inkomsten 2017 (coeff. 4,39)</option>
+            <option value="2017">Ex. 2017 — Inkomsten 2016 (coeff. 4,31)</option>
+            <option value="2016">Ex. 2016 — Inkomsten 2015 (coeff. 4,23)</option>
+            <option value="2015">Ex. 2015 — Inkomsten 2014 (coeff. 4,23)</option>
+            <option value="2014">Ex. 2014 — Inkomsten 2013 (coeff. 4,19)</option>
+            <option value="2013">Ex. 2013 — Inkomsten 2012 (coeff. 4,10)</option>
+          </select>
+          <span class="select-arrow">▼</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Is het goed gemengd gebruikt? <span class="tip">(privé- + beroepsgedeelte)</span></label>
+        <div class="radio-tabs">
+          <input type="radio" name="type_bien" id="tb_non" value="non" checked>
+          <label for="tb_non">Nee — Uitsluitend gebruik</label>
+          <input type="radio" name="type_bien" id="tb_mix" value="mixte">
+          <label for="tb_mix">Ja — Gemengd gebruik</label>
+        </div>
+      </div>
+
+      <div id="field_mixte" style="display:none">
+        <div class="field">
+          <label>Professioneel aandeel van het goed <span class="tip">(% gebruikt door de vennootschap)</span></label>
+          <div class="slider-value-display">
+            <div class="slider-value-badge" id="partpro_display">60%</div>
+          </div>
+          <div class="slider-wrap">
+            <div class="slider-labels"><span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span></div>
+            <input type="range" id="part_pro" min="1" max="100" step="1" value="60">
+          </div>
+        </div>
+      </div>
 
       <div class="divider"></div>
 
-      <!-- Propriété / indivision -->
-      <div class="section-label">Eigendom van het goed</div>
+      <!-- Eigendom / onverdeeldheid -->
+      <div class="section-label">Eigendomsverhoudingen</div>
 
       <div class="field">
-        <label>Is het goed in onverdeeldheid met uw echtgeno(o)t(e)?</label>
+        <label>Wordt het goed in onverdeeldheid bezeten met uw echtgeno(o)t(e)?</label>
         <div class="radio-tabs">
           <input type="radio" name="indivision" id="ind_non" value="non" checked>
           <label for="ind_non">Nee — Bestuurder alleen</label>
@@ -674,15 +1034,15 @@
 
       <div id="field_indivision" style="display:none">
         <div class="field">
-          <label>Aandeel van de echtgeno(o)t(e) in de eigendom <span class="tip">(wettelijk stelsel: 50%)</span></label>
+          <label>Aandeel van de echtgeno(o)t(e) in het eigendom <span class="tip">(wettelijk stelsel: 50%)</span></label>
 
           <div class="slider-value-display">
             <div class="slider-value-badge" id="conjoint_display">50%</div>
           </div>
 
           <div class="slider-split">
-            <span><span class="dot-dir"></span> Bestuurder: <strong id="dir_pct">50%</strong></span>
-            <span><span class="dot-conj"></span> Echtgeno(o)t(e): <strong id="conj_pct">50%</strong></span>
+            <span><span class="dot-dir"></span> Dirigeant : <strong id="dir_pct">50%</strong></span>
+            <span><span class="dot-conj"></span> Conjoint(e) : <strong id="conj_pct">50%</strong></span>
           </div>
 
           <div class="slider-wrap">
@@ -691,7 +1051,7 @@
           </div>
 
           <div style="font-size:0.76rem;color:var(--text-light);margin-top:10px;line-height:1.5;">
-            ⚠️ <strong>Nota:</strong> In het Belgisch wettelijk stelsel, als <u>één bestuurder</u> verhuurt aan zijn vennootschap: aandeel echtgeno(o)t(e) = <strong>50%</strong>. Als <u>twee bestuurders</u> samen verhuren: elk ook 50%.
+            ⚠️ <strong>Opmerking:</strong> In het Belgisch wettelijk stelsel geldt: verhuurt <u>één bedrijfsleider</u> aan zijn vennootschap, dan bedraagt het aandeel van de echtgeno(o)t(e) <strong>50%</strong>. Verhuren <u>twee bedrijfsleiders</u> samen, dan heeft elk eveneens 50%.
           </div>
         </div>
 
@@ -702,19 +1062,19 @@
 
       <div class="divider"></div>
 
-      <!-- Contrat de location -->
-      <div class="section-label">Huurovereenkomst</div>
+      <!-- Huurcontract -->
+      <div class="section-label">Huurcontract</div>
 
       <div class="field">
         <label>Eigenlijke huur <span class="tip">(ontvangen huurbedrag over de periode)</span></label>
         <div class="input-wrap">
-          <input type="number" id="loyer_propre" placeholder="Bv: 18000" min="0" step="100" oninput="updateLoyerTotal()">
+          <input type="number" id="loyer_propre" placeholder="Ex: 18000" min="0" step="100" oninput="updateLoyerTotal()">
           <span class="input-unit">€</span>
         </div>
       </div>
 
       <div class="field">
-        <label>Huurvoordelen <span class="tip">(bv. werken ten laste van de huurder buiten zijn wettelijke verplichtingen)</span></label>
+        <label>Huurvoordelen <span class="tip">(bv. werken ten laste van huurder buiten zijn wettelijke verplichtingen)</span></label>
         <div class="input-wrap">
           <input type="number" id="loyer_avantages" placeholder="0" min="0" step="100" value="0" oninput="updateLoyerTotal()">
           <span class="input-unit">€</span>
@@ -722,7 +1082,7 @@
       </div>
 
       <div class="field" id="loyer_total_field" style="display:none">
-        <label>Totaal huur + voordelen <span class="tip">(berekeningsbasis)</span></label>
+        <label>Totale huur + bijkomende kosten <span class="tip">(berekeningsgrondslag)</span></label>
         <div class="input-wrap" style="background:var(--teal-pale);border-radius:8px;">
           <input type="number" id="loyer_annuel" readonly style="background:transparent;font-weight:600;color:var(--teal);cursor:default;">
           <span class="input-unit" style="color:var(--teal);font-weight:600;">€</span>
@@ -749,12 +1109,12 @@
       </div>
 
       <div class="field">
-        <label>Gemeubeld verhuurd?</label>
+        <label>Gemeubileerde verhuur?</label>
         <div class="radio-tabs">
           <input type="radio" name="meuble" id="mb_non" value="non" checked>
           <label for="mb_non">Nee — Leeg</label>
           <input type="radio" name="meuble" id="mb_oui" value="oui">
-          <label for="mb_oui">Ja — Gemeubeld</label>
+          <label for="mb_oui">Ja — Gemeubileerd</label>
         </div>
       </div>
 
@@ -762,8 +1122,8 @@
         <div class="info-indivision favorable" style="margin-bottom:12px">
           <span class="info-indivision-icon">⚖️</span>
           <div>
-            <strong>60/40-regel automatisch toegepast:</strong> <strong>40%</strong> van de huur = roerend inkomen (meubels) · <strong>60%</strong> = onroerend inkomen (basis voor herkwalificatie).<br>
-            Het roerend gedeelte is onderworpen aan de bevrijdende roerende voorheffing van 30% en uitgesloten van de vergelijking met het KI-plafond.
+            <strong>60/40-regel van rechtswege toegepast:</strong> <strong>40%</strong> van de huur = roerend inkomen (meubels) · <strong>60%</strong> = onroerend inkomen (basis herkwalificatie).<br>
+            Het roerende deel is onderworpen aan de bevrijdende roerende voorheffing van 30% en uitgesloten van de vergelijking met het KI-plafond.
           </div>
         </div>
       </div>
@@ -800,7 +1160,7 @@
           <div class="kpi-sub">5/3 × geïndexeerd KI</div>
         </div>
         <div class="kpi-box">
-          <div class="kpi-label">Ontvangen nettohuur</div>
+          <div class="kpi-label">Nettohuur ontvangen</div>
           <div class="kpi-value" id="kpi_loyer_net">–</div>
           <div class="kpi-sub">Huur - lasten</div>
         </div>
@@ -817,7 +1177,7 @@
           <thead>
             <tr>
               <th>Element</th>
-              <th>Jaarlijks bedrag</th>
+              <th>Bedrag annuel</th>
             </tr>
           </thead>
           <tbody id="breakdown-body">
@@ -830,11 +1190,11 @@
       <!-- IPP boxes -->
       <div class="ipp-boxes" id="ipp-boxes">
         <div class="ipp-info-box">
-          <h4>PB-informatie bestuurder</h4>
+          <h4>PB-gegevens bestuurder</h4>
           <div id="ipp-dir-rows">–</div>
         </div>
         <div class="ipp-info-box" id="ipp-conj-box" style="display:none">
-          <h4>PB-informatie partner</h4>
+          <h4>PB-gegevens partner</h4>
           <div id="ipp-conj-rows">–</div>
         </div>
       </div>
@@ -855,22 +1215,22 @@
 
       <div class="accordion-item">
         <button class="accordion-header" onclick="toggleAccordion(this)">
-          <span>Wat is artikel 32 al. 2 WIB 92?</span>
+          <span>Wat is artikel 32 lid 2 WIB 92?</span>
           <span class="accordion-icon">▼</span>
         </button>
         <div class="accordion-body">
-          Artikel 32, lid 2 van het Wetboek van Inkomstenbelastingen 1992 bepaalt dat wanneer een <strong>bedrijfsleider een onroerend goed verhuurt aan zijn eigen vennootschap</strong>, het deel van de huur dat <strong>5/3 van het niet-geïndexeerd kadastraal inkomen × herwaarderingscoëfficiënt</strong> overschrijdt automatisch als bezoldiging van bestuurder wordt geherkwalificeerd. Dit anti-misbruikmechanisme beoogt te voorkomen dat bestuurders inkomsten ontvangen als huur (minder belast) in plaats van als bezoldiging.
+          Artikel 32, lid 2 van het Wetboek van Inkomstenbelastingen 1992 bepaalt dat wanneer een <strong>bedrijfsleider een onroerend goed verhuurt aan zijn eigen vennootschap</strong>, het deel van de huur dat hoger is dan <strong>5/3 van het niet-geïndexeerd kadastraal inkomen × herwaarderingscoëfficiënt</strong> automatisch wordt geherkwalificeerd als bezoldiging van bedrijfsleider. Dit antimisbruikmechanisme beoogt te voorkomen dat bestuurders inkomsten ontvangen in de vorm van huur (minder belast) in plaats van als bezoldiging.
         </div>
       </div>
 
       <div class="accordion-item">
         <button class="accordion-header" onclick="toggleAccordion(this)">
-          <span>Hoe berekent u het geïndexeerd kadastraal inkomen?</span>
+          <span>Hoe berekent u het geïndexeerde kadastraal inkomen?</span>
           <span class="accordion-icon">▼</span>
         </button>
         <div class="accordion-body">
-          Het <strong>niet-geïndexeerd kadastraal inkomen (KI ni)</strong> staat op uw aanslagbiljet. Voor de herkwalificatieregel van art. 32 al. 2 WIB 92 wordt het vermenigvuldigd met een <strong>herwaarderingscoëfficiënt</strong> die jaarlijks door de FOD Financiën wordt vastgesteld — anders dan de indexeringscoëfficiënt voor de gewone PB. Het plafond wordt vervolgens berekend als <strong>KI ni × herwaarderingscoëff. × 5/3</strong>.<br><br>
-          Officiële coëfficiënten: 2027: <strong>5,75</strong> · 2026: 5,63 · 2025: 5,46 · 2024: 5,37 · 2023: 4,86 · 2022: 4,63 · 2021: 4,60.
+          Het <strong>niet-geïndexeerd kadastraal inkomen (KI)</strong> staat op uw aanslagbiljet. Voor de herkwalificatieregel van art. 32 lid 2 WIB 92 wordt het vermenigvuldigd met een <strong>herwaarderingscoëfficiënt</strong> die jaarlijks wordt vastgesteld door de FOD Financiën — anders dan de indexeringscoëfficiënt voor de gewone personenbelasting. Het plafond wordt vervolgens berekend als <strong>KI × herwaarderingscoëff. × 5/3</strong>.<br><br>
+          Officiële coëfficiëntens : 2027 : <strong>5,75</strong> · 2026 : 5,63 · 2025 : 5,46 · 2024 : 5,37 · 2023 : 4,86 · 2022 : 4,63 · 2021 : 4,60.
         </div>
       </div>
 
@@ -880,7 +1240,7 @@
           <span class="accordion-icon">▼</span>
         </button>
         <div class="accordion-body">
-          Het geherkwalificeerde deel wordt belast als <strong>bezoldiging van bestuurder</strong> in de PB, en niet als onroerend inkomen. Dit leidt tot: (1) toepassing van het marginale PB-tarief (tot 50%), (2) sociale bijdragen van bestuurder (~20,5%), (3) mogelijke toepassing van een bedrijfsvoorheffing, (4) bij fiscale controle: boetes en nalatigheidsinteresten. De vennootschap kan van haar kant enkel het niet-geherkwalificeerde deel als beroepskosten aftrekken.
+          Het geherkwalificeerde deel wordt belast als <strong>bezoldiging van bedrijfsleider</strong> in de personenbelasting, en niet als onroerend inkomen. Dit brengt mee: (1) toepassing van het marginale PB-tarief (tot 50%), (2) sociale bijdragen bestuurder (~20,5%), (3) mogelijke inhouding van bedrijfsvoorheffing, (4) bij fiscale controle: boetes en nalatigheidsintresten. De vennootschap kan van haar kant alleen het niet-geherkwalificeerde deel als beroepskost aftrekken.
         </div>
       </div>
 
@@ -890,41 +1250,41 @@
           <span class="accordion-icon">▼</span>
         </button>
         <div class="accordion-body">
-          Verschillende strategieën zijn mogelijk: (1) <strong>De huur verlagen</strong> tot onder het plafond van 5/3 van het geherwaardeerde KI, (2) <strong>Het KI herwaarderen</strong> als het onderschat is (procedure bij FOD Financiën), (3) <strong>Enkel het beroepsgedeelte</strong> van het goed verhuren (kantoor, etc.) en het plafond enkel op dat deel berekenen, (4) <strong>Het goed verkopen aan de vennootschap</strong> om verhuur te vermijden, (5) Een accountant raadplegen om de meest geschikte structuur voor uw situatie te vinden.
+          Verschillende strategieën zijn mogelijk: (1) <strong>Huur verlagen</strong> tot onder het plafond van 5/3 van het geherwaardeerde KI, (2) <strong>KI herevalueren</strong> indien ondergewaardeerd (procedure bij de FOD Financiën), (3) <strong>Alleen het beroepsgedeelte verhuren</strong> van het goed (bureau, enz.) en het plafond op dat deel berekenen, (4) <strong>Het goed aan de vennootschap verkopen</strong> om verhuur te vermijden, (5) Een accountant raadplegen om de meest geschikte structuur voor uw situatie te vinden.
         </div>
       </div>
 
       <div class="accordion-item">
         <button class="accordion-header" onclick="toggleAccordion(this)">
-          <span>Geldt de regel ook voor de echtgenoot en kinderen van de bestuurder?</span>
+          <span>Geldt de regel voor echtgeno(o)t(e) en kinderen van de bestuurder?</span>
           <span class="accordion-icon">▼</span>
         </button>
         <div class="accordion-body">
-          Ja. De herkwalificatie is ook van toepassing wanneer het goed in eigendom is van de <strong>echtgeno(o)t(e), de wettelijk samenwonende partner of de minderjarige kinderen</strong> van de bestuurder die de gezinswoning bewonen. De fiscale administratie kan oordelen dat de bestuurder de werkelijke economische begunstigde van de verhuur is, zelfs als het goed formeel op naam van een familielid staat.
+          Ja. De herkwalificatie geldt ook wanneer het goed in handen is van de <strong>echtgeno(o)t(e), de wettelijk samenwonende partner of de minderjarige kinderen</strong> van de bestuurder die er de gezinswoning in bewonen. De belastingadministratie kan oordelen dat de bestuurder de economisch werkelijke begunstigde is van de verhuur, ook al staat het goed formeel op naam van een familielid.
         </div>
       </div>
 
       <div class="accordion-item">
         <button class="accordion-header" onclick="toggleAccordion(this)">
-          <span>Welk effect heeft gemeubeld verhuren op de herkwalificatie?</span>
+          <span>Welk effect heeft gemeubileerde verhuur op de herkwalificatie?</span>
           <span class="accordion-icon">▼</span>
         </button>
         <div class="accordion-body">
-          Bij <strong>gemeubeld verhuren</strong> moet de huur in twee delen worden opgesplitst: het <strong>onroerende</strong> gedeelte (het kale goed) en het <strong>roerende</strong> gedeelte (meubels en uitrusting). Enkel het onroerende gedeelte is onderworpen aan de herkwalificatieregel van art. 32 al. 2 WIB 92 en wordt vergeleken met het plafond van 5/3 van het geïndexeerd KI. <br><br>
-          Het roerende gedeelte wordt belast als <strong>roerend inkomen</strong> aan het bevrijdend tarief van de roerende voorheffing van <strong>30%</strong> — vaak voordeliger dan het marginale PB-tarief. <br><br>
-          <strong>Praktische verdeling:</strong> De verdeling moet realistisch en aantoonbaar zijn (gedetailleerde inventaris van meubels, venale waarde, etc.). De fiscale administratie kan een overdreven roerend gedeelte betwisten. In de praktijk wordt de <strong>60/40-regel</strong> veel toegepast: 60% toegerekend aan het onroerend goed, 40% aan meubels en uitrusting.
+          Bij <strong>gemeubileerde verhuur</strong> moet de huur worden opgesplitst in twee delen: het <strong>onroerende</strong> deel (het kale goed) en het <strong>roerende</strong> deel (het meubilair en de uitrusting). Alleen het onroerende deel is onderworpen aan de herkwalificatieregel van art. 32 lid 2 WIB 92 en wordt vergeleken met het plafond van 5/3 van het geïndexeerd KI. <br><br>
+          Het roerende deel wordt belast als <strong>roerend inkomen</strong> aan het bevrijdende tarief van de roerende voorheffing van <strong>30%</strong> — vaak voordeliger dan het marginale PB-tarief. <br><br>
+          <strong>Praktische opsplitsing:</strong> De verdeling moet realistisch en verantwoord zijn (gedetailleerde inventaris van het meubilair, venale waarde, enz.). De belastingadministratie kan een overdreven roerend aandeel betwisten. In de praktijk wordt de <strong>60/40-regel</strong> vaak toegepast: 60% toegewezen aan het onroerend goed, 40% aan het meubilair en de uitrusting.
         </div>
       </div>
 
       <div class="accordion-item">
         <button class="accordion-header" onclick="toggleAccordion(this)">
-          <span>Hoe werkt de onverdeeldheid met de echtgeno(o)t(e)?</span>
+          <span>Hoe werkt onverdeeldheid met de echtgeno(o)t(e)?</span>
           <span class="accordion-icon">▼</span>
         </button>
         <div class="accordion-body">
-          Wanneer het goed <strong>in onverdeeldheid</strong> wordt gehouden door de bestuurder en zijn echtgeno(o)t(e), is enkel het <strong>aandeel van de bestuurder</strong> onderworpen aan de regel van artikel 32 al. 2 WIB 92. Het aandeel van de echtgeno(o)t(e) die geen bestuurder is in de vennootschap wordt belast als gewoon onroerend inkomen, zonder risico op herkwalificatie. <br><br>
-          <strong>Voorbeeld:</strong> Als het goed 50/50 wordt gehouden en de totale huur 20.000 €/jaar bedraagt, worden enkel de 10.000 € die aan de bestuurder toerekenbaar zijn vergeleken met het plafond. Dit kan het toegestane huurbedrag verdubbelen zonder overschrijding. <br><br>
-          <strong>Opgelet:</strong> als de echtgeno(o)t(e) <em>ook</em> bestuurder is in dezelfde vennootschap, zullen beide aandelen aan de regel zijn onderworpen, waardoor het voordeel van de onverdeeldheid tenietgaat.
+          Wanneer het goed <strong>in onverdeeldheid</strong> wordt bezeten door de bestuurder en zijn/haar echtgeno(o)t(e), is alleen het <strong>aandeel van de bestuurder</strong> onderworpen aan de regel van artikel 32 lid 2 WIB 92. Het aandeel van de echtgeno(o)t(e) die geen bestuurder is in de vennootschap wordt belast als gewoon onroerend inkomen, zonder herkwalificatierisico. <br><br>
+          <strong>Voorbeeld:</strong> Als het goed 50/50 wordt bezeten en de totale huur 20.000 €/jaar bedraagt, worden alleen de 10.000 € toe te schrijven aan de bestuurder vergeleken met het plafond. Dit kan het toelaatbare huurbedrag verdubbelen zonder overschrijding. <br><br>
+          <strong>Opgelet:</strong> als de echtgeno(o)t(e) <em>ook</em> bestuurder is in dezelfde vennootschap, zullen beide aandelen aan de regel worden onderworpen, waardoor het voordeel van de onverdeeldheid teniet wordt gedaan.
         </div>
       </div>
 
@@ -935,11 +1295,11 @@
   <div class="info-strip">
     <div>
       <h3>Waarom <span>La Caverne de la Compta</span>?</h3>
-      <p>Tools ontworpen voor Belgische zelfstandigen, boekhouders en studenten. Eenvoudig, betrouwbaar en altijd bijgewerkt met de geldende wetgeving.</p>
+      <p>Tools ontworpen voor Belgische zelfstandigen, boekhouders en studenten. Eenvoudig, betrouwbaar en altijd up-to-date met de geldende wetgeving.</p>
     </div>
     <ul class="info-features">
-      <li><div class="check">✓</div><span>Berekeningen gebaseerd op de geldende Belgische wetgeving</span></li>
-      <li><div class="check">✓</div><span>Onmiddellijke resultaten, zonder registratie</span></li>
+      <li><div class="check">✓</div><span>Berekeningen op basis van de geldende Belgische wetgeving</span></li>
+      <li><div class="check">✓</div><span>Directe resultaten, geen registratie vereist</span></li>
       <li><div class="check">✓</div><span>Duidelijke en intuïtieve interface voor alle profielen</span></li>
       <li><div class="check">✓</div><span>Toegankelijk op mobiel, tablet en computer</span></li>
     </ul>
@@ -961,7 +1321,7 @@
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
   <div class="footer-links">
     <a href="/nl/mentions-legales/">Wettelijke vermeldingen</a>
-    <a href="/nl/mentions-legales/#rgpd">RGPD</a>
+    <a href="/nl/mentions-legales/#rgpd">GDPR</a>
     <a href="/nl/mentions-legales/#cookies">Cookies</a>
     <a href="#">Contact</a>
   </div>
@@ -1053,7 +1413,7 @@
     const ratio = (days / daysInYear * 100).toFixed(1);
     box.className = 'info-indivision favorable';
     box.style.display = 'flex';
-    txt.innerHTML = `<strong>${days} dagen</strong> verhuur op ${daysInYear} dagen in het jaar = <strong>${ratio}%</strong> van het jaar. Het plafond wordt pro rata berekend.`;
+    txt.innerHTML = `<strong>${days} dagen</strong> verhuur over ${daysInYear} dagen in het jaar = <strong>${ratio}%</strong> van het jaar. Het plafond wordt pro rata berekend.`;
   }
 
   function updateIndivisionInfo() {
@@ -1066,26 +1426,26 @@
       box.innerHTML = `
         <span class="info-indivision-icon">✅</span>
         <div>
-          <strong>Situation favorable :</strong> De echtgeno(o)t(e) bezit <strong>${partConj}%</strong> van het goed.
-          Seule votre quote-part (<strong>${partDir}%</strong> du loyer) est soumise à la règle de requalification.
-          La part du loyer perçue par votre conjoint(e) échappe à l'article 32 al. 2 CIR 92 
-          <em>(sauf si le conjoint(e) est également dirigeant dans la même société)</em>.
+          <strong>Gunstige situatie:</strong> De echtgeno(o)t(e) bezit <strong>${partConj}%</strong> van het goed.
+          Alleen uw aandeel (<strong>${partDir}%</strong> van de huur) is onderworpen aan de herkwalificatieregel.
+          Het huurdeel van uw echtgeno(o)t(e) valt buiten artikel 32 lid 2 WIB 92
+          <em>(behalve als de echtgeno(o)t(e) ook bedrijfsleider is in dezelfde vennootschap)</em>.
         </div>`;
     } else {
       box.className = 'info-indivision attention';
       box.innerHTML = `
         <span class="info-indivision-icon">⚠️</span>
         <div>
-          <strong>Attention :</strong> U bezit <strong>${partDir}%</strong> du bien (majorité).
-          La requalification s'applique sur votre quote-part du loyer. 
-          La part du conjoint(e) (<strong>${partConj}%</strong>) reste hors champ, 
+          <strong>Opgelet:</strong> U bezit <strong>${partDir}%</strong> van het goed (meerderheid).
+          De herkwalificatie geldt voor uw huuraandeel.
+          Het aandeel van de echtgeno(o)t(e) (<strong>${partConj}%</strong>) reste hors champ, 
           mais votre exposition reste importante. Vérifiez si votre conjoint(e) est également mandataire dans la société.
         </div>`;
     }
   }
 
   function fmt(n) {
-    return new Intl.NumberFormat('nl-BE', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
+    return new Intl.NumberFormat('fr-BE', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
   }
 
   function calculer() {
@@ -1139,7 +1499,7 @@
     // Loyer max conjoint (non dirigeant) = pas de requalification
     const loyer_max_conj = null; // pas applicable
 
-    // RC revalorisé (pour affichage)
+    // Geherwaardeerd KI (pour affichage)
     const rc_revalorise = rc_brut * coeff;
 
     const loyer_net = loyer_brut_periode - charges;
@@ -1167,8 +1527,8 @@
     panel.classList.add('visible');
     panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    const prorataLabel = nbJours ? ` · ${nbJours} dagen (${(prorata*100).toFixed(1)}%)` : ' · Volledig jaar';
-    document.getElementById('res-subtitle').textContent = `Ex. ${annee} / Rev. ${anneeRev} — ${fmt(loyer_brut_periode)} perçus${prorataLabel}${meuble === 'oui' ? ` · Gemeubeld ${(partMeuble*100).toFixed(0)}%` : ''}${indivision === 'oui' ? ` · Bestuurder ${(partDir*100).toFixed(0)}%` : ''}`;
+    const prorataLabel = nbJours ? ` · ${nbJours} jours (${(prorata*100).toFixed(1)}%)` : ' · Volledig jaar';
+    document.getElementById('res-subtitle').textContent = `Ex. ${annee} / Rev. ${anneeRev} — ${fmt(loyer_brut_periode)} ontvangen${prorataLabel}${meuble === 'oui' ? ` · Gemeubileerd ${(partMeuble*100).toFixed(0)}%` : ''}${indivision === 'oui' ? ` · Bestuurder ${(partDir*100).toFixed(0)}%` : ''}`;
 
     // ── Build declaration table ──
     const hasConj = indivision === 'oui' && partConj > 0;
@@ -1218,78 +1578,78 @@
 
     // Update KPI subtitles dynamically
     document.querySelector('#kpi_plafond').closest('.kpi-box').querySelector('.kpi-sub').textContent =
-      (nbJours ? `5/3 × geherw. KI × ${(prorata*100).toFixed(1)}% pro rata` : '5/3 × geherwaardeerd KI') + (indivision === 'oui' ? ` × ${(partDir*100).toFixed(0)}% best.` : '');
+      (nbJours ? `5/3 × RC reval. × ${(prorata*100).toFixed(1)}% prorata` : '5/3 × Geherwaardeerd KI') + (indivision === 'oui' ? ` × ${(partDir*100).toFixed(0)}% best.` : '');
     document.querySelector('#kpi_loyer_net').closest('.kpi-box').querySelector('.kpi-sub').textContent =
       meuble === 'oui'
-        ? `Onroerend gedeelte huur × ${(partDir*100).toFixed(0)}% best.`
-        : (indivision === 'oui' ? `Aandeel bestuurder (${(partDir * 100).toFixed(0)}% van de nettohuur)` : 'Huur - lasten');
+        ? `Immo-deel huur × ${(partDir*100).toFixed(0)}% best.`
+        : (indivision === 'oui' ? `Aandeel bestuurder (${(partDir * 100).toFixed(0)}% nettohuur)` : 'Huur - lasten');
 
     // Breakdown
     const tbody = document.getElementById('breakdown-body');
     tbody.innerHTML = `
       <tr>
-        <td>Niet-geïndexeerd kadastraal inkomen (KI ni)</td>
+        <td>Niet-geïndexeerd kadastraal inkomen (KI)</td>
         <td>${fmt(rc_brut)}</td>
       </tr>
       <tr>
-        <td>Herwaarderingscoëfficiënt ${annee} <span style="font-size:0.76rem;color:var(--text-light)">(art. 32 al.2 WIB 92)</span></td>
+        <td>Herwaarderingscoëfficiënt ${annee} <span style="font-size:0.76rem;color:var(--text-light)">(art. 32 lid 2 WIB 92)</span></td>
         <td>× ${coeff.toFixed(2)}${nbJours ? ` × ${(prorata*100).toFixed(1)}% (${nbJours}j)` : ''}</td>
       </tr>
       <tr>
-        <td>Geherwaardeerd KI${type_bien === 'mixte' ? ` × ${(part_pro * 100).toFixed(0)}% (beroepsgedeelte)` : ''}</td>
+        <td>Geherwaardeerd KI${type_bien === 'mixte' ? ` × ${(part_pro * 100).toFixed(0)}% (beroepsdeel)` : ''}</td>
         <td>${fmt(rc_dir / partDir)}</td>
       </tr>
       ${indivision === 'oui' ? `
       <tr>
-        <td>Aandeel bestuurder in de eigendom</td>
+        <td>Aandeel bestuurder in het eigendom</td>
         <td>${(partDir * 100).toFixed(0)}%</td>
       </tr>
       <tr>
-        <td>Aandeel echtgeno(o)t(e) in de eigendom</td>
-        <td>${partConj.toFixed(0)}% <em style="font-size:0.78rem;color:var(--text-light)">(buiten toepassingsgebied art. 32)</em></td>
+        <td>Aandeel echtgeno(o)t(e) in het eigendom</td>
+        <td>${partConj.toFixed(0)}% <em style="font-size:0.78rem;color:var(--text-light)">(hors champ art. 32)</em></td>
       </tr>` : ''}
       <tr class="row-total">
-        <td><strong>Toegestaan plafond — aandeel bestuurder (5/3 × KI${nbJours ? ` × ${(prorata*100).toFixed(1)}%` : ''}${indivision === 'oui' ? ` × ${(partDir*100).toFixed(0)}%` : ''})</strong></td>
+        <td><strong>Toegestaan plafond — part dirigeant (5/3 × RC${nbJours ? ` × ${(prorata*100).toFixed(1)}%` : ''}${indivision === 'oui' ? ` × ${(partDir*100).toFixed(0)}%` : ''})</strong></td>
         <td>${fmt(plafond_dir)}</td>
       </tr>
       <tr>
         <td>Eigenlijke huur</td>
         <td>${fmt(loyer_propre)}</td>
       </tr>
-      ${loyer_avantages > 0 ? `<tr><td>Huurvoordelen</td><td>+ ${fmt(loyer_avantages)}</td></tr>` : ''}
+      ${loyer_avantages > 0 ? `<tr><td>Voordelen van huren</td><td>+ ${fmt(loyer_avantages)}</td></tr>` : ''}
       <tr>
-        <td><strong>Totaal ontvangen huur</strong></td>
+        <td><strong>Totale ontvangen huur</strong></td>
         <td><strong>${fmt(loyer_brut_periode)}</strong></td>
       </tr>
       ${charges > 0 ? `<tr><td>Afgetrokken huurlasten</td><td>- ${fmt(charges)}</td></tr>` : ''}
       ${meuble === 'oui' ? `
       <tr>
-        <td>Totale nettohuur (vóór verdeling)</td>
+        <td>Totale nettohuur (vóór uitsplitsing)</td>
         <td>${fmt(loyer_net)}</td>
       </tr>
       <tr>
-        <td>Roerend gedeelte — meubels (${(partMeuble*100).toFixed(0)}%) <span style="font-size:0.72rem;background:#E8F0FA;color:#2855A0;padding:2px 7px;border-radius:10px;font-weight:700;margin-left:4px;">ROEREND INK.</span></td>
+        <td>Roerend deel — meubilair (${(partMeuble*100).toFixed(0)}%) <span style="font-size:0.72rem;background:#E8F0FA;color:#2855A0;padding:2px 7px;border-radius:10px;font-weight:700;margin-left:4px;">REV. MOBILIER</span></td>
         <td>${fmt(loyer_mobilier_total)}</td>
       </tr>
       <tr>
-        <td>Onroerend gedeelte — basis herkwalificatie (${((1-partMeuble)*100).toFixed(0)}%)</td>
+        <td>Onroerend deel — basis herkwalificatie (${((1-partMeuble)*100).toFixed(0)}%)</td>
         <td>${fmt(loyer_immobilier)}</td>
       </tr>` : ''}
       ${meuble !== 'oui' ? `<tr><td>Totale nettohuur</td><td>${fmt(loyer_net)}</td></tr>` : ''}
       ${indivision === 'oui' ? `
       <tr>
-        <td>Netto huurgedeelte — echtgeno(o)t(e) (${partConj.toFixed(0)}%) <span class="badge-ok">BUITEN BEREIK</span></td>
+        <td>Nettohuur — echtgeno(o)t(e) (${partConj.toFixed(0)}%) <span class="badge-ok">BUITEN BEREIK</span></td>
         <td>${fmt(loyer_conjoint)}</td>
       </tr>
       <tr>
-        <td>Netto huurgedeelte — bestuurder (${(partDir*100).toFixed(0)}%)</td>
+        <td>Netto huurdeel — bedrijfsleider (${(partDir*100).toFixed(0)}%)</td>
         <td>${fmt(loyer_dir)}</td>
       </tr>` : ''}
       <tr>
-        <td>Toegelaten huur als onroerend inkomen (aandeel best.) <span class="badge-ok">OK</span></td>
+        <td>Huur erkend als onroerend inkomen (aandeel BL) <span class="badge-ok">OK</span></td>
         <td>${fmt(loyer_admis_dir)}</td>
       </tr>
-      ${requalif > 0 ? `<tr class="row-requalif"><td><strong>Geherkwalificeerd bedrag als bezoldiging</strong> <span class="badge-requalif">GEHERKWALIFICEERD</span></td><td>${fmt(requalif)}</td></tr>` : ''}
+      ${requalif > 0 ? `<tr class="row-requalif"><td><strong>Bedrag en vergoeding opnieuw geclassificeerd</strong> <span class="badge-requalif">REQUALIFIÉ</span></td><td>${fmt(requalif)}</td></tr>` : ''}
     `;
 
 
@@ -1303,17 +1663,17 @@
       statusEl.className = 'result-status ok';
       statusIcon.textContent = '✅';
       statusTitle.textContent = 'Conforme situatie — Geen herkwalificatie';
-      statusDesc.textContent = `Het aan de bestuurder toerekenbare huurgedeelte (${fmt(loyer_dir)}) ligt onder het toegestane plafond (${fmt(plafond_dir)}). U voldoet aan de regelgeving.`;
+      statusDesc.textContent = `Het huuraandeel toe te kennen aan de bestuurder (${fmt(loyer_dir)}) ligt onder het toegestane plafond (${fmt(plafond_dir)}). U voldoet aan de regels.`;
     } else if (requalif < plafond_dir * 0.2) {
       statusEl.className = 'result-status warning';
       statusIcon.textContent = '⚠️';
       statusTitle.textContent = 'Matige overschrijding — Optimalisatie aanbevolen';
-      statusDesc.textContent = `${fmt(requalif)} van het huurgedeelte van de bestuurder zal worden geherkwalificeerd als bezoldiging. Een aanpassing is aangewezen.`;
+      statusDesc.textContent = `${fmt(requalif)} van het huuraandeel van de bestuurder wordt geherkwalificeerd als bezoldiging. Een aanpassing is aanbevolen.`;
     } else {
       statusEl.className = 'result-status danger';
       statusIcon.textContent = '🚨';
-      statusTitle.textContent = 'Significante overschrijding — Actie vereist';
-      statusDesc.textContent = `${fmt(requalif)} (${((requalif / loyer_dir) * 100).toFixed(1)}% van het bestuurdersdeel) worden geherkwalificeerd. Raadpleeg een professional.`;
+      statusTitle.textContent = 'Aanzienlijke overschrijding — Actie vereist';
+      statusDesc.textContent = `${fmt(requalif)} (${((requalif / loyer_dir) * 100).toFixed(1)}% van het aandeel bestuurder) worden geherkwalificeerd. Raadpleeg een professional.`;
     }
 
     // Recommandations
@@ -1322,34 +1682,34 @@
     const recos = [];
 
     if (requalif === 0) {
-      recos.push(`Uw situatie is conform. U kunt nog tot <strong>${fmt(plafond_dir - loyer_dir)}</strong> extra huur (aandeel bestuurder) ontvangen vóór overschrijding.`);
+      recos.push(`Uw situatie is conform. U kunt nog <strong>${fmt(plafond_dir - loyer_dir)}</strong> extra huur ontvangen (aandeel bestuurder) vóór overschrijding.`);
       if (indivision === 'oui') {
-        recos.push(`Het huurgedeelte van uw echtgeno(o)t(e) (<strong>${fmt(loyer_conjoint)}/jaar</strong>) valt buiten het toepassingsgebied van de herkwalificatie, wat voordelig is. Zorg ervoor dat uw echtgeno(o)t(e) geen bestuurder is in dezelfde vennootschap.`);
+        recos.push(`Het huuraandeel van uw echtgeno(o)t(e) (<strong>${fmt(loyer_conjoint)}/jaar</strong>) valt buiten het toepassingsgebied van de herkwalificatie, wat voordelig is. Zorg ervoor dat uw echtgeno(o)t(e) geen bestuurder is in dezelfde vennootschap.`);
       }
       if (meuble === 'oui') {
-        recos.push(`Het roerende gedeelte van uw huur (<strong>${fmt(loyer_mobilier_total)}/jaar</strong>) is onderworpen aan de bevrijdende roerende voorheffing van 30%, wat doorgaans voordeliger is dan de PB. Bewaar de verdeling onroerend/roerend duidelijk in uw huurovereenkomst.`);
+        recos.push(`Het roerend deel van uw huur (<strong>${fmt(loyer_mobilier_total)}/jaar</strong>) is onderworpen aan de roerende voorheffing van 30% (bevrijdend), wat doorgaans voordeliger is dan de personenbelasting. Bewaar de opsplitsing onroerend/roerend duidelijk in uw huurovereenkomst.`);
       }
-      recos.push('Controleer elk jaar, want de indexeringscoëfficiënt van het KI evolueert jaarlijks.');
-      recos.push('Bewaar uw geregistreerde huurovereenkomst en betalingsbewijzen goed voor het geval er een fiscale controle plaatsvindt.');
+      recos.push('Controleer dit elk jaar, want de coëfficiënt d\'indexation du RC évolue annuellement.');
+      recos.push('Bewaar uw geregistreerde huurovereenkomst en betalingsbewijzen goed in geval van fiscale controle.');
     } else {
       const loyerMaxTotal = plafond_dir / partDir;
       const loyerMaxMsg = nbJours
         ? `Max. huur over de periode: <strong>${fmt(loyerMaxTotal)}</strong> (${nbJours} dagen)`
-        : `Max. jaarlijkse huur: <strong>${fmt(loyerMaxTotal)}/jaar</strong> (~${fmt(loyerMaxTotal/12)}/maand)`;
+        : `Maximale jaarlijkse huur: <strong>${fmt(loyerMaxTotal)}/jaar</strong> (~${fmt(loyerMaxTotal/12)}/maand)`;
       recos.push(`${loyerMaxMsg} om de herkwalificatie te elimineren (aandeel bestuurder beperkt tot ${fmt(plafond_dir)}).`);
       if (indivision !== 'oui') {
-        recos.push('Overweeg het goed in onverdeeldheid te plaatsen met uw echtgeno(o)t(e) (≥ 50%) om het aan herkwalificatie onderworpen gedeelte te verminderen.');
+        recos.push('Overweeg het goed in onverdeeldheid te brengen met uw echtgeno(o)t(e) (≥ 50%) om het aan herkwalificatie onderworpen deel te verminderenon.');
       } else if (partConj < 50) {
-        recos.push(`Als uw echtgeno(o)t(e) zijn/haar aandeel verhoogt tot <strong>50% of meer</strong>, is enkel uw resterende aandeel (<strong>${(100 - 50)}%</strong>) aan de regel onderworpen, wat de herkwalificatie kan elimineren of verminderen.`);
+        recos.push(`Als uw echtgeno(o)t(e) zijn/haar aandeel verhoogt tot <strong>50% of meer</strong>, wordt alleen uw resterend aandeel (<strong>${(100 - 50)}%</strong>) aan de regel onderworpen, wat de herkwalificatie kan elimineren of verminderen.`);
       }
       if (meuble !== 'oui') {
-        recos.push('Overweeg <strong>gemeubeld</strong> te verhuren: het deel van de huur toegewezen aan meubels (typisch 20–40%) wordt een roerend inkomen (voorheffing 30%) en valt buiten de vergelijkingsbasis met het KI-plafond, wat het herkwalificatierisico mechanisch vermindert.');
+        recos.push('Overweeg een <strong>gemeubileerde</strong> verhuur: het deel van de huur toegekend aan het meubilair (typisch 20–40%) wordt ee revenu mobilier (précompte 30%) et sort de la base de comparaison avec le plafond RC, réduisant mécaniquement le risque de requalification.');
       } else {
-        recos.push('De 60/40-regel wordt toegepast: 40% van de huur wordt behandeld als roerend inkomen (voorheffing 30%), 60% als onroerend inkomen onderworpen aan het KI-plafond.');
+        recos.push('De 60/40-regel wordt toegepast: 40% van de huur wordt behandeld als roerend inkomen (RV 30%), 60% als onroerend inkomr soumis au plafond RC.');
       }
-      recos.push('Controleer of uw kadastraal inkomen correct is geëvalueerd — een herwaardering bij FOD Financiën kan het plafond wettelijk verhogen.');
+      recos.push('Controleer of uw kadastraal inkomen correct is geëvalueerd — een herevaluatie bij de FOD Financiën kan het legaal verhogenlement le plafond.');
       if (type_bien !== 'mixte') {
-        recos.push('Als slechts een gedeelte van het goed beroepsmatig wordt gebruikt, overweeg over te gaan naar <strong>gemengd gebruik</strong> en het huurcontract te beperken tot het werkelijke beroepsgedeelte om de berekeningsbasis van het plafond te verminderen.');
+        recos.push('Als slechts een deel van het goed professioneel wordt gebruikt, overweeg dan <strong>gemengd gebruik</strong> en limiter le bail à la part professionnelle réelle pour réduire la base de calcul du plafond.');
       }
       recos.push('Raadpleeg uw accountant of fiscaal adviseur voor een gepersonaliseerde analyse van uw situatie.');
     }
@@ -1495,44 +1855,44 @@ document.addEventListener('click', function(e) {
 <div id="cookieBanner" role="dialog" aria-modal="true">
   <!-- Vue principale -->
   <div id="cbMain">
-    <h2 class="cb-title">Vos paramètres de confidentialité</h2>
-    <p class="cb-text">La Caverne de la Compta utilise des cookies pour collecter des informations à propos de votre appareil, votre navigateur et votre comportement de navigation.</p>
-    <p class="cb-text">En outre, si vous nous en donnez l'autorisation, nous pouvons utiliser vos données pour <strong>personnaliser le contenu</strong> et <strong>afficher des publicités pertinentes</strong> via Google AdSense. Nous mesurons également l'audience avec <strong>Google Analytics</strong> pour améliorer le site.</p>
-    <p class="cb-text">En cliquant sur « D'accord », vous donnez votre consentement. Si vous ne souhaitez pas tout autoriser, cliquez sur « Modifier manuellement ». Vous pouvez modifier vos choix à tout moment via le lien <strong>Gestion des cookies</strong> en bas de page. Pour en savoir plus, consultez notre <a href="/fr/mentions-legales/#cookies">politique de cookies</a>.</p>
+    <h2 class="cb-title">Uw privacyinstellingen</h2>
+    <p class="cb-text">La Caverne de la Compta gebruikt cookies om informatie te verzamelen over uw apparaat, uw browser en uw surfgedrag.</p>
+    <p class="cb-text">Indien u ons daarvoor toestemming geeft, kunnen wij uw gegevens gebruiken om <strong>content te personaliseren</strong> en <strong>relevante advertenties te tonen</strong> via Google AdSense. Wij meten ook het bezoekersverkeer met <strong>Google Analytics</strong> om de site te verbeteren.</p>
+    <p class="cb-text">Door op « Akkoord » te klikken, geeft u uw toestemming. Als u niet alles wilt toestaan, klik dan op « Handmatig aanpassen ». U kunt uw keuzes te allen tijde wijzigen via de link <strong>Cookiebeheer</strong> onderaan de pagina. Raadpleeg onze <a href="/nl/mentions-legales/#cookies">cookieverklaring</a> voor meer informatie.</p>
     <div class="cb-btns">
-      <button class="cb-btn-agree" onclick="cookieAcceptAll()">D'accord</button>
-      <button class="cb-btn-modify" onclick="cbShowDetail()">Modifier manuellement</button>
+      <button class="cb-btn-agree" onclick="cookieAcceptAll()">Akkoord</button>
+      <button class="cb-btn-modify" onclick="cbShowDetail()">Handmatig aanpassen</button>
     </div>
   </div>
   <!-- Vue détaillée -->
   <div id="cbDetail">
-    <button class="cb-back" onclick="cbShowMain()">← Retour</button>
-    <h2 class="cb-title">Définir vos préférences</h2>
+    <button class="cb-back" onclick="cbShowMain()">← Terug</button>
+    <h2 class="cb-title">Uw voorkeuren instellen</h2>
     <div class="cb-cat">
       <div>
-        <div class="cb-cat-name">🔒 Nécessaires <span style="font-size:0.7rem;color:#F5A623;">(toujours actifs)</span></div>
-        <div class="cb-cat-desc">Indispensables au fonctionnement du site : navigation, sécurité, préférences de langue. Ne peuvent pas être désactivés.</div>
+        <div class="cb-cat-name">🔒 Noodzakelijk <span style="font-size:0.7rem;color:#F5A623;">(altijd actief)</span></div>
+        <div class="cb-cat-desc">Onmisbaar voor het functioneren van de site: navigatie, beveiliging, taalvoorkeur. Kunnen niet worden uitgeschakeld.</div>
       </div>
       <label class="cb-toggle required"><input type="checkbox" checked disabled><span class="cb-toggle-slider"></span></label>
     </div>
     <div class="cb-cat">
       <div>
-        <div class="cb-cat-name">📊 Analytiques <span style="font-size:0.7rem;color:#8A9BB0;">(Google Analytics)</span></div>
-        <div class="cb-cat-desc">Nous permettent de comprendre comment vous utilisez le site pour l'améliorer continuellement.</div>
+        <div class="cb-cat-name">📊 Analytisch <span style="font-size:0.7rem;color:#8A9BB0;">(Google Analytics)</span></div>
+        <div class="cb-cat-desc">Helpt ons te begrijpen hoe u de site gebruikt, zodat wij deze voortdurend kunnen verbeteren.</div>
       </div>
       <label class="cb-toggle"><input type="checkbox" id="cbAnalytics" checked><span class="cb-toggle-slider"></span></label>
     </div>
     <div class="cb-cat">
       <div>
-        <div class="cb-cat-name">📢 Publicitaires <span style="font-size:0.7rem;color:#8A9BB0;">(Google AdSense)</span></div>
-        <div class="cb-cat-desc">Permettent d'afficher des publicités pour financer le site gratuitement pour vous.</div>
+        <div class="cb-cat-name">📢 Advertenties <span style="font-size:0.7rem;color:#8A9BB0;">(Google AdSense)</span></div>
+        <div class="cb-cat-desc">Maakt het mogelijk advertenties te tonen om de site gratis voor u te financieren.</div>
       </div>
       <label class="cb-toggle"><input type="checkbox" id="cbAds" checked><span class="cb-toggle-slider"></span></label>
     </div>
     <div class="cb-detail-btns">
-      <button class="cb-btn-saveall" onclick="cookieAcceptAll()">Tout accepter</button>
-      <button class="cb-btn-saveprefs" onclick="cookieSavePrefs()">Enregistrer mes choix</button>
-      <button class="cb-btn-refuseall" onclick="cookieRefuseAll()">Tout refuser</button>
+      <button class="cb-btn-saveall" onclick="cookieAcceptAll()">Alles accepteren</button>
+      <button class="cb-btn-saveprefs" onclick="cookieSavePrefs()">Mijn keuzes opslaan</button>
+      <button class="cb-btn-refuseall" onclick="cookieRefuseAll()">Alles weigeren</button>
     </div>
   </div>
 </div>
@@ -1607,6 +1967,5 @@ document.addEventListener('click', function(e) {
 })();
 </script>
 <!-- END COOKIE BANNER -->
-
 </body>
 </html>

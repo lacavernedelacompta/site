@@ -15,13 +15,15 @@
   <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/quick-memento-fiscal/">
 <link rel="canonical" href="https://lacavernedelacompta.be/fr/quick-memento-fiscal/">
 <meta property="og:title" content="Quick-Mémo Fiscal Belgique 2026 — Taux, ATN, VAI, DPI & DNA">
-  <meta property="og:image" content="https://lacavernedelacompta.be/logo.png">
+  <meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
 
 <meta property="og:description" content="Mémo fiscal belge 2026 : taux légaux, ATN, versements anticipés (VAI), déduction pour investissement (DPI), DNA véhicules, épargne-pension.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lacavernedelacompta.be/quick-memento-fiscal.html">
 <meta property="og:site_name" content="La Caverne de la Compta">
 <meta property="og:locale" content="fr_BE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#0D1B2A;--navy-mid:#1B2E44;--navy-light:#243B55;--teal:#1A7A8A;--teal-light:#22A3B8;--teal-pale:#E8F6F8;--white:#FFFFFF;--off-white:#F4F7FA;--text-dark:#1A2535;--text-mid:#4A6279;--text-light:#8A9BB0;--border:#DDE5EF;--shadow:rgba(13,27,42,0.12);}
@@ -52,7 +54,7 @@ nav {
 .logo-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--teal),var(--navy));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
 .logo-text{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);line-height:1.2;}
 .logo-sub{font-size:.65rem;font-weight:500;color:var(--teal);letter-spacing:.15em;text-transform:uppercase;}
-.nav-links{display:flex;gap:4px;list-style:none;align-items:center;}
+.nav-links{display:flex;gap:4px;list-style:none;align-items:center;;flex:1;justify-content:center;}
 .nav-links>li{list-style:none;}
 .nav-links a{padding:8px 16px;font-size:.85rem;font-weight:500;color:var(--text-mid);text-decoration:none;border-radius:6px;transition:all .2s;display:block;white-space:nowrap;}
 .nav-links a:hover,.nav-links a.active{background:var(--teal-pale);color:var(--teal);}
@@ -131,6 +133,17 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
   .hero h1{font-size:1.4rem;}
 }
 
+
+  /* ── LANG DROPDOWN ── */
+  .lang-dropdown { position: relative; display: inline-block; }
+  .lang-current { display: flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 6px; background: #1A7A8A; color: #fff; font-size: 0.78rem; font-weight: 700; cursor: pointer; border: none; letter-spacing: 0.05em; white-space: nowrap; }
+  .lang-current:after { content: ' ▾'; font-size: 0.7rem; }
+  .lang-menu { display: none; position: absolute; top: calc(100% + 4px); right: 0; background: #fff; border: 1px solid #DDE5EF; border-radius: 8px; box-shadow: 0 8px 24px rgba(13,27,42,0.12); min-width: 130px; z-index:9000; overflow: hidden; }
+  .lang-dropdown.open .lang-menu { display: block; }
+  .lang-menu a { display: flex; align-items: center; gap: 8px; padding: 10px 14px; font-size: 0.82rem; font-weight: 500; color: #1A2535; text-decoration: none; border-bottom: 1px solid #F4F7FA; }
+  .lang-menu a:last-child { border-bottom: none; }
+  .lang-menu a:hover { background: #E8F5F7; color: #1A7A8A; }
+  .lang-menu a.active { font-weight: 700; color: #1A7A8A; }
 </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
@@ -143,21 +156,231 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
   "url": "https://lacavernedelacompta.be",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://lacavernedelacompta.be/logo.png",
+    "url": "https://lacavernedelacompta.be/logo.svg",
     "width": 512,
     "height": 512
   },
-  "image": "https://lacavernedelacompta.be/logo.png"
+  "image": "https://lacavernedelacompta.be/logo.svg"
 }
 </script>
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@lacavernecompta">
+  <meta name="twitter:title" content="Quick-Mémo Fiscal Belgique 2026">
+  <meta name="twitter:description" content="Mémo fiscal belge 2026 : taux légaux, ATN, versements anticipés (VAI), déduction pour investissement (DPI), DNA véhicules, épargne-pension.">
+  <meta name="twitter:image" content="https://lacavernedelacompta.be/logo.svg">
 <!-- CACHE-BUST-v8-fr/quick-memento-fiscal/index.html -->
+<!-- Google tag (gtag.js) -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{
+  analytics_storage:'denied',
+  ad_storage:'denied',
+  ad_user_data:'denied',
+  ad_personalization:'denied',
+  wait_for_update:500
+});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNHZDLVPEL"></script>
+<script>
+gtag('js', new Date());
+gtag('config', 'G-WNHZDLVPEL');
+</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Quick-Mémo Fiscal Belgique 2026 — Taux, ATN, VAI, DPI & DNA",
+  "url": "https://lacavernedelacompta.be/fr/quick-memento-fiscal/",
+  "description": "Mémo fiscal belge 2026 : taux légaux, ATN, versements anticipés (VAI), déduction pour investissement (DPI), DNA véhicules, épargne-pension.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "La Caverne de la Compta",
+    "url": "https://lacavernedelacompta.be"
+  }
+}
+</script>
 </head>
 <body>
 
+<div class="topbar">
+  <span class="topbar-left">🇧🇪 Comptabilité & Fiscalité Belge</span>
+  <div class="topbar-right">
+    <a href="/fr/mentions-legales/">Mentions légales</a>
+    <a href="/fr/mentions-legales/#rgpd">RGPD</a>
+  </div>
+</div>
 
+<nav class="main-nav">
+<a href="/fr/" class="logo" style="text-decoration:none;display:flex;align-items:center;">
+    <svg width="148" height="38" viewBox="0 0 148 38" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <defs>
+        <linearGradient id="hGn" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0D1B2A"/>
+          <stop offset="100%" style="stop-color:#1A3A5C"/>
+        </linearGradient>
+      </defs>
+      <!-- Hexagone -->
+      <polygon points="19,2 31,9 31,23 19,30 7,23 7,9" fill="url(#hGn)"/>
+      <!-- Reflet top -->
+      <polygon points="19,2 31,9 25,9 19,5 13,9 7,9" fill="rgba(255,255,255,.07)"/>
+      <!-- Bras balance -->
+      <line x1="9" y1="15" x2="29" y2="15" stroke="rgba(255,255,255,.5)" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Tige -->
+      <rect x="17.5" y="15" width="2.5" height="11" rx="1.2" fill="rgba(255,255,255,.35)"/>
+      <!-- Pivot gold -->
+      <circle cx="18.8" cy="15" r="3.2" fill="#C9A84C"/>
+      <circle cx="18.8" cy="15" r="1.4" fill="white" opacity=".9"/>
+      <!-- Socle -->
+      <rect x="13" y="27" width="12" height="2.5" rx="1.2" fill="rgba(255,255,255,.2)"/>
+      <!-- Plateau gauche -->
+      <line x1="9" y1="15" x2="7" y2="21.5" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="7" cy="24" rx="6.5" ry="2.5" fill="#1A7A8A"/>
+      <!-- Plateau droit -->
+      <line x1="29" y1="15" x2="31" y2="20" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="31" cy="22.5" rx="6.5" ry="2.5" fill="#22A3B8"/>
+      <!-- Étoile -->
+      <circle cx="27" cy="7" r="2.5" fill="#C9A84C" opacity=".85"/>
+      <!-- Texte -->
+      <text x="42" y="15.5" font-family="'Playfair Display',serif" font-size="12.5" font-weight="900" fill="#0D1B2A" letter-spacing="-.2">La Caverne</text>
+      <rect x="42" y="18.5" width="104" height="1" rx=".5" fill="#DDE5EF"/>
+      <rect x="42" y="18.5" width="18" height="1" rx=".5" fill="#C9A84C"/>
+      <text x="42" y="30" font-family="'Playfair Display',serif" font-size="10.5" font-weight="700" font-style="italic" fill="#1A7A8A" letter-spacing="-.1">de la Compta</text>
+    </svg>
+  </a>
+        <ul class="nav-links">
+    <li><a href="https://lacavernedelacompta.be/fr/">🏠 Accueil</a></li>
+    <li class="dd-wrap" id="ddWrap">
+      <button class="dd-btn" onclick="toggleDD(event)">🧰 Nos outils <span class="dd-chevron">▼</span></button>
+      <div class="dd-menu" id="ddMenu">
+        <a href="/fr/simulateur-immobilier/"><span class="dd-icon">🏠</span>Simulateur Immobilier</a>
+        <a href="/fr/simulateur-credit/"><span class="dd-icon">💳</span>Simulateur de Crédit</a>
+        <a href="/fr/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Requalification Loyer</a>
+        <a href="/fr/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Plan Comptable PCMN</a>
+        <a href="/fr/simulateur-interets-composes/"><span class="dd-icon">📈</span>Intérêts Composés</a>
+        <a href="/fr/simulateur-retenue/"><span class="dd-icon">🧾</span>Retenue sur Facture</a>
+        <a href="/fr/quick-memento-fiscal/"><span class="dd-icon">📌</span>Quick-Mémo Fiscal</a>
+        <a href="/fr/remboursement-frais/"><span class="dd-icon">🚗</span>Indemnité Kilométrique</a>
+      </div>
+    </li>
+  </ul>
+  <!-- ══ SWITCHER LANGUE ══ -->
+  <div class="lang-dropdown" style="position:relative;display:inline-block;" id="langSwitcher">
+    <button class="lang-current" onclick="toggleLangMenu(event)">🇫🇷 FR</button>
+    <div class="lang-menu">
+<a href="https://lacavernedelacompta.be/fr/quick-memento-fiscal/" class="active">🇫🇷 Français</a>
+<a href="https://lacavernedelacompta.be/nl/quick-memento-fiscal/" class="">🇧🇪 Nederlands</a>
+<a href="https://lacavernedelacompta.be/en/quick-memento-fiscal/" class="">🇬🇧 English</a>
+<a href="https://lacavernedelacompta.be/de/quick-memento-fiscal/" class="">🇩🇪 Deutsch</a>
+    </div>
+  </div>
+  <!-- ══════════════════════ -->
+
+  
+  <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div style="text-align:right;font-size:.72rem;color:var(--text-light);padding:5px 40px 0;font-style:italic;">
+  🕐 Exercice d'imposition 2027 (revenus 2026) — <a href="/fr/mentions-legales/" style="color:var(--text-light)">Sources officielles</a>
+</div>
+
+
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-bread"><a href="/fr/">Accueil</a> › Quick-Mémo Fiscal</div>
+    <div class="hero-badge">📌 Référence rapide · EI 2013 → 2027</div>
+    <div style="font-size:0.72rem;color:rgba(255,255,255,0.55);margin-top:6px;letter-spacing:0.03em;">🔄 Mis à jour : 28/02/2026</div>
+    <h1>Quick-Mémo <span>Fiscal Belge</span></h1>
+    <p>Recherchez instantanément n'importe quel taux, plafond ou montant. Tapez "ATN", "VAI", "épargne", "diesel"…</p>
+  </div>
+</section>
+<div style="margin:24px auto;text-align:center;max-width:100%;padding:0 16px;">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8043980001637749"
+     data-ad-slot="8050648588"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- Search sticky -->
+<div class="search-bar">
+  <div class="search-inner">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="q" placeholder="Rechercher un poste fiscal…" oninput="doSearch()">
+      <button class="clear-btn" id="clr" onclick="clearQ()">✕</button>
+    </div>
+    <div class="tags" id="tags">
+      <button class="tag on" data-c="all" onclick="setTag(this)">Tout</button>
+      <button class="tag" data-c="taux" onclick="setTag(this)">Taux C/C</button>
+      <button class="tag" data-c="km" onclick="setTag(this)">Kilométrique</button>
+      <button class="tag" data-c="atn" onclick="setTag(this)">ATN</button>
+      <button class="tag" data-c="dpi" onclick="setTag(this)">DPI</button>
+      <button class="tag" data-c="vai" onclick="setTag(this)">VAI</button>
+      <button class="tag" data-c="vehicule" onclick="setTag(this)">Véhicules</button>
+      <button class="tag" data-c="divers" onclick="setTag(this)">Divers</button>
+    </div>
+    <span class="count" id="cnt"></span>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="tbl-box">
+    <table>
+      <thead id="thead"></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="disclaimer">
+  <div class="disclaimer-inner">
+    <strong style="color:#4A6279;">⚠️ Valeur indicative uniquement.</strong>
+    Les données ont une valeur indicative et ne constituent pas un conseil fiscal ou juridique.
+    <strong style="color:#4A6279;">Consultez un expert-comptable ou conseiller fiscal</strong> avant toute décision.
+    — <a href="mentions-legales.html#disclaimer" style="color:#1A7A8A;text-decoration:none;">Mentions légales complètes</a>
+  </div>
+</div>
+
+<!-- ── RÉFÉRENCES LÉGALES ── -->
+<div style="background:var(--white);border-top:2px solid var(--border);padding:36px 40px;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <h2 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:6px;">📚 Références légales</h2>
+    <p style="font-size:.8rem;color:var(--text-light);margin-bottom:28px;">Base légale des données publiées dans ce mémo fiscal — CIR 92, AR d'exécution et circulaires SPF Finances.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px;">
+
+      <!-- Taux C/C -->
+      <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+        <div style="background:var(--navy);padding:11px 16px;display:flex;align-items:center;gap:9px;">
+          <span style="font-size:1rem;">💳</span>
+          <span style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:#fff;">Taux Compte Courant & Requalification</span>
+        </div>
+        <div style="padding:14px 16px;font-size:.78rem;color:var(--text-mid);line-height:1.9;">
+          <div>📌 <strong>C/C débiteur :</strong> Art. 18 §3 CIR 92 — AR 21/12/2023 (MB 29/12/2023)</div>
+          <div>📌 <strong>C/C créditeur :</strong> Art. 18 §3 CIR 92 — AR 21/12/2023</div>
+          <div>📌 <strong>Requalification loyer :</strong> Art. 32 al. 2 CIR 92 — coeff. 5/3 du RCni</div>
+          <div>📌 <strong>Indexation RC :</strong> Art. 518 CIR 92 — SPF Finances, circulaire annuelle</div>
+          <div style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);">
+            <a href="https://finances.belgium.be" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-size:.75rem;">🔗 SPF Finances — finances.belgium.be</a>
+          </div>
+        </div>
+      </div>
+
+      
       <!-- Indemnité kilométrique -->
       <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;">
         <div style="background:var(--navy);padding:11px 16px;display:flex;align-items:center;gap:9px;">
@@ -457,63 +680,83 @@ render();
 .cbs{background:transparent;color:rgba(255,255,255,.65);border:1px solid rgba(255,255,255,.25)!important;}
 .cbr{background:transparent;color:rgba(255,255,255,.45);font-size:.73rem;font-weight:500;text-decoration:underline;padding:3px 0!important;}
 </style>
-<div id="cb">
-  <div class="cbt">
-    <p>🍪 <strong style="color:#fff">Ce site utilise des cookies.</strong> Les cookies nécessaires assurent le fonctionnement du site. <a href="mentions-legales.html#cookies">En savoir plus</a></p>
-    <div class="cbb">
-      <button class="cba" onclick="ca()">Tout accepter</button>
-      <button class="cbs" onclick="cs()">Enregistrer</button>
-    </div>
-  </div>
-  <div class="cbc">
-    <label><input type="checkbox" checked disabled> Nécessaires</label>
-    <label><input type="checkbox" id="ca2"> Analytiques (Google Analytics)</label>
-    <label><input type="checkbox" id="ca3"> Publicitaires (Google AdSense)</label>
-  </div>
-  <button class="cbr" onclick="cr()">Tout refuser</button>
-</div>
+
 <script>
-(function(){const k='lacaverne_cookie_consent';if(!localStorage.getItem(k))document.getElementById('cb').style.display='block';})();
-function ca(){localStorage.setItem('lacaverne_cookie_consent',JSON.stringify({a:true,p:true}));document.getElementById('cb').style.display='none';}
-function cr(){localStorage.setItem('lacaverne_cookie_consent',JSON.stringify({a:false,p:false}));document.getElementById('cb').style.display='none';}
-function cs(){localStorage.setItem('lacaverne_cookie_consent',JSON.stringify({a:document.getElementById('ca2').checked,p:document.getElementById('ca3').checked}));document.getElementById('cb').style.display='none';}
-
-  
-
-
-  // ── HAMBURGER MENU ──
-  function toggleMobileMenu(e) {
-    e.stopPropagation();
-    var nav = document.querySelector('.nav-links');
-    var btn = document.querySelector('.hamburger');
-    if (nav) nav.classList.toggle('mobile-open');
-    if (btn) btn.classList.toggle('open');
+(function(){
+  function showBanner(){
+    document.getElementById('cookieBanner').style.display='block';
+    document.getElementById('cookieOverlay').style.display='block';
+    document.body.style.overflow='hidden';
   }
-  document.addEventListener('click', function(e) {
-    var nav = document.querySelector('.nav-links');
-    var btn = document.querySelector('.hamburger');
-    var wrap = document.querySelector('.main-nav');
-    if (wrap && !wrap.contains(e.target)) {
-      if (nav) nav.classList.remove('mobile-open');
-      if (btn) btn.classList.remove('open');
+  function hideBanner(){
+    document.getElementById('cookieBanner').style.display='none';
+    document.getElementById('cookieOverlay').style.display='none';
+    document.body.style.overflow='';
+  }
+  window.cbShowDetail=function(){
+    document.getElementById('cbMain').style.display='none';
+    document.getElementById('cbDetail').style.display='block';
+  };
+  window.cbShowMain=function(){
+    document.getElementById('cbDetail').style.display='none';
+    document.getElementById('cbMain').style.display='block';
+  };
+  function updateConsentMode(analytics,ads){
+    if(typeof gtag==='function'){
+      gtag('consent','update',{
+        analytics_storage:analytics?'granted':'denied',
+        ad_storage:ads?'granted':'denied',
+        ad_user_data:ads?'granted':'denied',
+        ad_personalization:ads?'granted':'denied'
+      });
     }
-  });
-
-
-function toggleLangMenu(e) {
-  e.stopPropagation();
-  var ld = document.getElementById('langSwitcher');
-  if (ld) ld.classList.toggle('open');
-}
-document.addEventListener('click', function(e) {
-  var ld = document.getElementById('langSwitcher');
-  if (ld && !ld.contains(e.target)) ld.classList.remove('open');
-});
+    if(ads&&!window._adsenseLoaded){
+      window._adsenseLoaded=true;
+      var s=document.createElement('script');
+      s.async=true;s.crossOrigin='anonymous';
+      s.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749';
+      document.head.appendChild(s);
+    }
+  }
+  window.cookieAcceptAll=function(){
+    localStorage.setItem('cb_analytics','1');
+    localStorage.setItem('cb_ads','1');
+    updateConsentMode(true,true);
+    hideBanner();
+  };
+  window.cookieSavePrefs=function(){
+    var ca=document.getElementById('cbAnalytics').checked?'1':'0';
+    var cd=document.getElementById('cbAds').checked?'1':'0';
+    localStorage.setItem('cb_analytics',ca);
+    localStorage.setItem('cb_ads',cd);
+    updateConsentMode(ca==='1',cd==='1');
+    hideBanner();
+  };
+  window.cookieRefuseAll=function(){
+    localStorage.setItem('cb_analytics','0');
+    localStorage.setItem('cb_ads','0');
+    updateConsentMode(false,false);
+    hideBanner();
+  };
+  window.openCookieSettings=function(){
+    var ca=localStorage.getItem('cb_analytics');
+    var cd=localStorage.getItem('cb_ads');
+    if(ca!==null)document.getElementById('cbAnalytics').checked=(ca==='1');
+    if(cd!==null)document.getElementById('cbAds').checked=(cd==='1');
+    cbShowMain();
+    showBanner();
+  };
+  var ca=localStorage.getItem('cb_analytics');
+  if(ca===null){showBanner();}
+  else{updateConsentMode(ca==='1',localStorage.getItem('cb_ads')==='1');}
+})();
 </script>
+<!-- END COOKIE BANNER -->
+
 <!-- ── BANNIÈRE COOKIES APD-CONFORME ── -->
 <style>
-#cookieOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99998;backdrop-filter:blur(3px);}
-#cookieBanner{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:99999;
+#cookieOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:1000000;backdrop-filter:blur(3px);}
+#cookieBanner{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1000001;
   background:#fff;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.3);
   width:min(580px,94vw);max-height:88vh;overflow-y:auto;font-family:'Inter',sans-serif;}
 /* Main view */
@@ -669,6 +912,16 @@ document.addEventListener('click', function(e) {
 })();
 </script>
 <!-- END COOKIE BANNER -->
-
+<script>
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  var ld = document.getElementById('langSwitcher');
+  if (ld) ld.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var ld = document.getElementById('langSwitcher');
+  if (ld && !ld.contains(e.target)) ld.classList.remove('open');
+});
+</script>
 </body>
 </html>

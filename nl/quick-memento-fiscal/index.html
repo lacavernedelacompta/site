@@ -5,23 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fiscale Quick-Memo België 2026 — Tarieven, VAA, IKT, IDA & DNA</title>
 <meta name="description" content="Belgische fiscale memo 2026: wettelijke rentevoeten, voordelen van alle aard (VAA), voorafbetalingen (IKT), investeringsaftrek (IDA), DNA voertuigen.">
-<meta name="keywords" content="fiscale memo belgië 2026, VAA belgië, voordelen alle aard 2026, voorafbetalingen belasting belgië, investeringsaftrek belgië, DNA voertuigen belgië, wettelijk rentetarief belgië">
+<meta name="keywords" content="fiscale memo België 2026, voordelen alle aard België, voorafbetalingen belasting België, investeringsaftrek België, niet-aftrekbare kosten">
 <meta name="author" content="La Caverne de la Compta">
 <meta name="robots" content="index, follow">
-  <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/quick-memento-fiscal/">
+  <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/nl/quick-memento-fiscal/">
   <link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/quick-memento-fiscal/">
   <link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/quick-memento-fiscal/">
   <link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/quick-memento-fiscal/">
-  <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/quick-memento-fiscal/">
+  <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/nl/quick-memento-fiscal/">
 <link rel="canonical" href="https://lacavernedelacompta.be/nl/quick-memento-fiscal/">
-<meta property="og:title" content="Fiscale Quick-Memo België 2026 — Tarieven, VAA, IKT, IDA & DNA">
-  <meta property="og:image" content="https://lacavernedelacompta.be/logo.png">
+<meta property="og:title" content="Fiscale memo Belgique 2026 — Tarief, VAA, VAI, DBI & DNA">
+  <meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
 
-<meta property="og:description" content="Belgische fiscale memo 2026: wettelijke rentevoeten, voordelen van alle aard (VAA), voorafbetalingen (IKT), investeringsaftrek (IDA), DNA voertuigen.">
+<meta property="og:description" content="Mémo fiscal belge 2026 : taux légaux, VAA, versements anticipés (VAI), déduction pour investissement (DBI), DNA véhicules, épargne-pension.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lacavernedelacompta.be/quick-memento-fiscal.html">
 <meta property="og:site_name" content="La Caverne de la Compta">
-<meta property="og:locale" content="nl_BE">
+<meta property="og:locale" content="fr_BE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#0D1B2A;--navy-mid:#1B2E44;--navy-light:#243B55;--teal:#1A7A8A;--teal-light:#22A3B8;--teal-pale:#E8F6F8;--white:#FFFFFF;--off-white:#F4F7FA;--text-dark:#1A2535;--text-mid:#4A6279;--text-light:#8A9BB0;--border:#DDE5EF;--shadow:rgba(13,27,42,0.12);}
@@ -52,7 +54,7 @@ nav {
 .logo-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--teal),var(--navy));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
 .logo-text{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);line-height:1.2;}
 .logo-sub{font-size:.65rem;font-weight:500;color:var(--teal);letter-spacing:.15em;text-transform:uppercase;}
-.nav-links{display:flex;gap:4px;list-style:none;align-items:center;}
+.nav-links{display:flex;gap:4px;list-style:none;align-items:center;;flex:1;justify-content:center;}
 .nav-links>li{list-style:none;}
 .nav-links a{padding:8px 16px;font-size:.85rem;font-weight:500;color:var(--text-mid);text-decoration:none;border-radius:6px;transition:all .2s;display:block;white-space:nowrap;}
 .nav-links a:hover,.nav-links a.active{background:var(--teal-pale);color:var(--teal);}
@@ -131,6 +133,17 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
   .hero h1{font-size:1.4rem;}
 }
 
+
+  /* ── LANG DROPDOWN ── */
+  .lang-dropdown { position: relative; display: inline-block; }
+  .lang-current { display: flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 6px; background: #1A7A8A; color: #fff; font-size: 0.78rem; font-weight: 700; cursor: pointer; border: none; letter-spacing: 0.05em; white-space: nowrap; }
+  .lang-current:after { content: ' ▾'; font-size: 0.7rem; }
+  .lang-menu { display: none; position: absolute; top: calc(100% + 4px); right: 0; background: #fff; border: 1px solid #DDE5EF; border-radius: 8px; box-shadow: 0 8px 24px rgba(13,27,42,0.12); min-width: 130px; z-index:9000; overflow: hidden; }
+  .lang-dropdown.open .lang-menu { display: block; }
+  .lang-menu a { display: flex; align-items: center; gap: 8px; padding: 10px 14px; font-size: 0.82rem; font-weight: 500; color: #1A2535; text-decoration: none; border-bottom: 1px solid #F4F7FA; }
+  .lang-menu a:last-child { border-bottom: none; }
+  .lang-menu a:hover { background: #E8F5F7; color: #1A7A8A; }
+  .lang-menu a.active { font-weight: 700; color: #1A7A8A; }
 </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
@@ -143,21 +156,231 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
   "url": "https://lacavernedelacompta.be",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://lacavernedelacompta.be/logo.png",
+    "url": "https://lacavernedelacompta.be/logo.svg",
     "width": 512,
     "height": 512
   },
-  "image": "https://lacavernedelacompta.be/logo.png"
+  "image": "https://lacavernedelacompta.be/logo.svg"
 }
 </script>
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
-<!-- CACHE-BUST-v8-nl/quick-memento-fiscal/index.html -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@lacavernecompta">
+  <meta name="twitter:title" content="Fiscale memo Belgique 2026 — Tarief, VAA, VAI, DBI & DNA">
+  <meta name="twitter:description" content="Mémo fiscal belge 2026 : taux légaux, VAA, versements anticipés (VAI), déduction pour investissement (DBI), DNA véhicules, épargne-pension.">
+  <meta name="twitter:image" content="https://lacavernedelacompta.be/logo.svg">
+<!-- CACHE-BUST-v8-fr/quick-memento-fiscal/index.html -->
+<!-- Google tag (gtag.js) -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{
+  analytics_storage:'denied',
+  ad_storage:'denied',
+  ad_user_data:'denied',
+  ad_personalization:'denied',
+  wait_for_update:500
+});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNHZDLVPEL"></script>
+<script>
+gtag('js', new Date());
+gtag('config', 'G-WNHZDLVPEL');
+</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Fiscale memo Belgique 2026 — Tarief, VAA, VAI, DBI & DNA",
+  "url": "https://lacavernedelacompta.be/nl/quick-memento-fiscal/",
+  "description": "Mémo fiscal belge 2026 : taux légaux, VAA, versements anticipés (VAI), déduction pour investissement (DBI), DNA véhicules, épargne-pension.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "La Caverne de la Compta",
+    "url": "https://lacavernedelacompta.be"
+  }
+}
+</script>
 </head>
 <body>
 
+<div class="topbar">
+  <span class="topbar-left">🇧🇪 La Caverne de la Compta</span>
+  <div class="topbar-right">
+    <a href="/nl/mentions-legales/">Wettelijke vermeldingen</a>
+    <a href="/nl/mentions-legales/#rgpd">GDPR</a>
+  </div>
+</div>
 
+<nav class="main-nav">
+<a href="/nl/" class="logo" style="text-decoration:none;display:flex;align-items:center;">
+    <svg width="148" height="38" viewBox="0 0 148 38" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <defs>
+        <linearGradient id="hGn" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0D1B2A"/>
+          <stop offset="100%" style="stop-color:#1A3A5C"/>
+        </linearGradient>
+      </defs>
+      <!-- Hexagone -->
+      <polygon points="19,2 31,9 31,23 19,30 7,23 7,9" fill="url(#hGn)"/>
+      <!-- Reflet top -->
+      <polygon points="19,2 31,9 25,9 19,5 13,9 7,9" fill="rgba(255,255,255,.07)"/>
+      <!-- Bras balance -->
+      <line x1="9" y1="15" x2="29" y2="15" stroke="rgba(255,255,255,.5)" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Tige -->
+      <rect x="17.5" y="15" width="2.5" height="11" rx="1.2" fill="rgba(255,255,255,.35)"/>
+      <!-- Pivot gold -->
+      <circle cx="18.8" cy="15" r="3.2" fill="#C9A84C"/>
+      <circle cx="18.8" cy="15" r="1.4" fill="white" opacity=".9"/>
+      <!-- Socle -->
+      <rect x="13" y="27" width="12" height="2.5" rx="1.2" fill="rgba(255,255,255,.2)"/>
+      <!-- Plateau gauche -->
+      <line x1="9" y1="15" x2="7" y2="21.5" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="7" cy="24" rx="6.5" ry="2.5" fill="#1A7A8A"/>
+      <!-- Plateau droit -->
+      <line x1="29" y1="15" x2="31" y2="20" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="31" cy="22.5" rx="6.5" ry="2.5" fill="#22A3B8"/>
+      <!-- Étoile -->
+      <circle cx="27" cy="7" r="2.5" fill="#C9A84C" opacity=".85"/>
+      <!-- Texte -->
+      <text x="42" y="15.5" font-family="'Playfair Display',serif" font-size="12.5" font-weight="900" fill="#0D1B2A" letter-spacing="-.2">La Caverne</text>
+      <rect x="42" y="18.5" width="104" height="1" rx=".5" fill="#DDE5EF"/>
+      <rect x="42" y="18.5" width="18" height="1" rx=".5" fill="#C9A84C"/>
+      <text x="42" y="30" font-family="'Playfair Display',serif" font-size="10.5" font-weight="700" font-style="italic" fill="#1A7A8A" letter-spacing="-.1">de la Compta</text>
+    </svg>
+  </a>
+        <ul class="nav-links">
+    <li><a href="https://lacavernedelacompta.be/nl/">🏠 Startpagina</a></li>
+    <li class="dd-wrap" id="ddWrap">
+      <button class="dd-btn" onclick="toggleDD(event)">🧰 Onze tools <span class="dd-chevron">▼</span></button>
+      <div class="dd-menu" id="ddMenu">
+        <a href="/nl/simulateur-immobilier/"><span class="dd-icon">🏠</span>Vastgoedsimulator</a>
+        <a href="/nl/simulateur-credit/"><span class="dd-icon">💳</span>Kredietsimulator</a>
+        <a href="/nl/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Herkwalificatie huur</a>
+        <a href="/nl/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Boekhoudplan MAR</a>
+        <a href="/nl/simulateur-interets-composes/"><span class="dd-icon">📈</span>Samengestelde intrest</a>
+        <a href="/nl/simulateur-retenue/"><span class="dd-icon">🧾</span>Inhouding op factuur</a>
+        <a href="/nl/quick-memento-fiscal/"><span class="dd-icon">📌</span>Fiscale memo</a>
+        <a href="/nl/remboursement-frais/"><span class="dd-icon">🚗</span>Kilometervergoeding</a>
+      </div>
+    </li>
+  </ul>
+  <!-- ══ SWITCHER LANGUE ══ -->
+  <div class="lang-dropdown" style="position:relative;display:inline-block;" id="langSwitcher">
+    <button class="lang-current" onclick="toggleLangMenu(event)">🇧🇪 NL</button>
+    <div class="lang-menu">
+<a href="https://lacavernedelacompta.be/nl/quick-memento-fiscal/" class="active">🇫🇷 Français</a>
+<a href="https://lacavernedelacompta.be/nl/quick-memento-fiscal/" class="active">🇧🇪 Nederlands</a>
+<a href="https://lacavernedelacompta.be/en/quick-memento-fiscal/" class="">🇬🇧 English</a>
+<a href="https://lacavernedelacompta.be/de/quick-memento-fiscal/" class="">🇩🇪 Deutsch</a>
+    </div>
+  </div>
+  <!-- ══════════════════════ -->
+
+  
+  <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div style="text-align:right;font-size:.72rem;color:var(--text-light);padding:5px 40px 0;font-style:italic;">
+  🕐 Exercice d'imposition 2027 (revenus 2026) — <a href="/nl/mentions-legales/" style="color:var(--text-light)">Officiële bronnen</a>
+</div>
+
+
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-bread"><a href="/nl/">Accueil</a> › Fiscale memo</div>
+    <div class="hero-badge">📌 Snelreferentie · AJ 2013 → 2027</div>
+    <div style="font-size:0.72rem;color:rgba(255,255,255,0.55);margin-top:6px;letter-spacing:0.03em;">🔄 Bijgewerkt : 28/02/2026</div>
+    <h1>Korte Notitie <span>Belgische Belasting</span></h1>
+    <p>Zoek onmiddellijk elk tarief, plafond of bedrag. Typ "VAA", "VAI", "sparen", "diesel"…</p>
+  </div>
+</section>
+<div style="margin:24px auto;text-align:center;max-width:100%;padding:0 16px;">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8043980001637749"
+     data-ad-slot="8050648588"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- Search sticky -->
+<div class="search-bar">
+  <div class="search-inner">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="q" placeholder="Zoek een fiscale post…" oninput="doSearch()">
+      <button class="clear-btn" id="clr" onclick="clearQ()">✕</button>
+    </div>
+    <div class="tags" id="tags">
+      <button class="tag on" data-c="all" onclick="setTag(this)">Alles</button>
+      <button class="tag" data-c="taux" onclick="setTag(this)">Tarief V/V</button>
+      <button class="tag" data-c="km" onclick="setTag(this)">Kilometrisch</button>
+      <button class="tag" data-c="atn" onclick="setTag(this)">VAA</button>
+      <button class="tag" data-c="dpi" onclick="setTag(this)">DBI</button>
+      <button class="tag" data-c="vai" onclick="setTag(this)">VAI</button>
+      <button class="tag" data-c="vehicule" onclick="setTag(this)">Voertuigen</button>
+      <button class="tag" data-c="divers" onclick="setTag(this)">Diversen</button>
+    </div>
+    <span class="count" id="cnt"></span>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="tbl-box">
+    <table>
+      <thead id="thead"></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="disclaimer">
+  <div class="disclaimer-inner">
+    <strong style="color:#4A6279;">⚠️ Louter indicatief.</strong>
+    De gegevens zijn indicatief en vormen geen fiscaal of juridisch advies.
+    <strong style="color:#4A6279;">Raadpleeg een erkend boekhouder of adviseller fiscal</strong> voordat er een besluit wordt genomen.
+    — <a href="mentions-legales.html#disclaimer" style="color:#1A7A8A;text-decoration:none;">Volledige wettelijke vermeldingen</a>
+  </div>
+</div>
+
+<!-- ── RÉFÉRENCES LÉGALES ── -->
+<div style="background:var(--white);border-top:2px solid var(--border);padding:36px 40px;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <h2 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:6px;">📚 Wettelijke referenties</h2>
+    <p style="font-size:.8rem;color:var(--text-light);margin-bottom:28px;">Wettelijke basis van de in dit mémo fiscaal — WIB 92, uitvoerings-KB's en circulaires FOD Financiën.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px;">
+
+      <!-- Tarief V/V -->
+      <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+        <div style="background:var(--navy);padding:11px 16px;display:flex;align-items:center;gap:9px;">
+          <span style="font-size:1rem;">💳</span>
+          <span style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:#fff;">Betaalrekening en herkwalificatietarief</span>
+        </div>
+        <div style="padding:14px 16px;font-size:.78rem;color:var(--text-mid);line-height:1.9;">
+          <div>📌 <strong>R/C debetsaldo:</strong> Art. 18 §3 WIB 92 — KB 21/12/2023 (BS 29/12/2023)</div>
+          <div>📌 <strong>R/C habensaldo:</strong> Art. 18 §3 WIB 92 — KB 21/12/2023</div>
+          <div>📌 <strong>Herkwalificatie huur:</strong> Art. 32 lid 2 WIB 92 — coëff. 5/3 van het NKI</div>
+          <div>📌 <strong>Indexering KI:</strong> Art. 518 WIB 92 — FOD Financiën, jaarlijkse circulaire</div>
+          <div style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);">
+            <a href="https://finances.belgium.be" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-size:.75rem;">🔗 SPF Finances — finances.belgium.be</a>
+          </div>
+        </div>
+      </div>
+
+      
       <!-- Indemnité kilométrique -->
       <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;">
         <div style="background:var(--navy);padding:11px 16px;display:flex;align-items:center;gap:9px;">
@@ -165,47 +388,47 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
           <span style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:#fff;">Kilometervergoeding</span>
         </div>
         <div style="padding:14px 16px;font-size:.78rem;color:var(--text-mid);line-height:1.9;">
-          <div>📌 <strong>Rechtsgrondslag:</strong> Art. 38 §1 al. 1, 9° WIB 92</div>
-          <div>📌 <strong>Vrijstelling:</strong> Beperkt tot 200 km/dag heen-terug woonplaats-vaste werkplek</div>
+          <div>📌 <strong>Wettelijke basis:</strong> Art. 38 §1 al. 1, 9° CIR 92</div>
+          <div>📌 <strong>Vrijstelling:</strong> Beperkt tot 200 km/dag heen en terug woonplaats-vaste werkplaats</div>
           <div>📌 <strong>Publicatie:</strong> Driemaandelijks ministerieel besluit — Belgisch Staatsblad</div>
-          <div>📌 <strong>Berekening:</strong> Gebaseerd op brandstofprijzen (FEBIAC-formule)</div>
+          <div>📌 <strong>Berekening:</strong> Gebaseerd op de brandstofprijs (FEBIAC-formule)</div>
           <div style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);">
-            <a href="https://finances.belgium.be/nl/particulieren/voordelen_van_alle_aard/kilometervergoeding" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-size:.75rem;">🔗 FOD Financiën — Kilometervergoeding</a>
+            <a href="https://finances.belgium.be/fr/particuliers/avantages_toutes_nature/indemnite-kilometrique" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-size:.75rem;">🔗 SPF Finances — Indemnité kilométrique</a>
           </div>
         </div>
       </div>
 
-      <!-- ATN -->
+      <!-- VAA -->
       <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;">
         <div style="background:var(--navy);padding:11px 16px;display:flex;align-items:center;gap:9px;">
           <span style="font-size:1rem;">💼</span>
-          <span style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:#fff;">VAA — Voordelen van Alle Aard</span>
+          <span style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:#fff;">Voordelen van alle aard</span>
         </div>
         <div style="padding:14px 16px;font-size:.78rem;color:var(--text-mid);line-height:1.9;">
-          <div>📌 <strong>Rechtsgrondslag:</strong> Art. 36 WIB 92 + KB/WIB art. 18 §3</div>
+          <div>📌 <strong>Wettelijke basis:</strong> Art. 36 CIR 92 + AR/CIR art. 18 §3</div>
           <div>📌 <strong>Verwarming / Elektriciteit:</strong> KB 28/10/2022 — jaarlijks geïndexeerde forfaitaire bedragen</div>
           <div>📌 <strong>PC, tablet, internet, GSM:</strong> KB 30/07/2018 — vaste forfaits</div>
-          <div>📌 <strong>Onroerend goed:</strong> Art. 36 §2 WIB 92 — GKI × 2 × 100/60 (bestuurders)</div>
-          <div>📌 <strong>VAA voertuig:</strong> Art. 36 §2 WIB 92 — CO2-formule + jaarlijks geïndexeerd minimum</div>
+          <div>📌 <strong>Onroerend goed:</strong> Art. 36 §2 WIB 92 — KIi × 2 × 100/60 (bedrijfsleiders)</div>
+          <div>📌 <strong>VAA wagen:</strong> Art. 36 §2 WIB 92 — CO2-formule + geïndexeerd jaarlijks minimum</div>
           <div style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);">
-            <a href="https://finances.belgium.be/nl/particulieren/voordelen_van_alle_aard" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-size:.75rem;">🔗 FOD Financiën — Voordelen van alle aard</a>
+            <a href="https://finances.belgium.be/fr/particuliers/avantages_toutes_nature" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-size:.75rem;">🔗 SPF Finances — Avantages de toute nature</a>
           </div>
         </div>
       </div>
 
-      <!-- DPI -->
+      <!-- DBI -->
       <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;">
         <div style="background:var(--navy);padding:11px 16px;display:flex;align-items:center;gap:9px;">
           <span style="font-size:1rem;">📉</span>
-          <span style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:#fff;">IDA — Investeringsaftrek</span>
+          <span style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:#fff;">Investeringsaftrek</span>
         </div>
         <div style="padding:14px 16px;font-size:.78rem;color:var(--text-mid);line-height:1.9;">
-          <div>📌 <strong>Rechtsgrondslag:</strong> Art. 68–77 WIB 92 (NP) — Art. 201 WIB 92 (Ven.)</div>
-          <div>📌 <strong>Gewoon tarief:</strong> Jaarlijks vastgesteld bij KB — geïndexeerd op de consumptieprijzen</div>
-          <div>📌 <strong>Verhoogde IDA:</strong> Specifieke investeringen (energie, O&O, digitalisering)</div>
-          <div>📌 <strong>Hervorming 2023:</strong> Wet van 12/03/2023 — nieuw versterkt IDA-stelsel</div>
+          <div>📌 <strong>Wettelijke basis:</strong> Art. 68–77 CIR 92 (PP) — Art. 201 CIR 92 (Soc.)</div>
+          <div>📌 <strong>Gewone tarief:</strong> Jaarlijks vastgesteld bij KB — geïndexeerd op de consumptieprijzen</div>
+          <div>📌 <strong>Verhoogde DBI:</strong> Specifieke investeringen (energie, O&O, digitalisering)</div>
+          <div>📌 <strong>Hervorming 2023:</strong> Wet van 12/03/2023 — nieuw versterkt DBI-stelsel</div>
           <div style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);">
-            <a href="https://finances.belgium.be/nl/ondernemingen/vennootschapsbelasting/aftrekken/investeringsaftrek" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-size:.75rem;">🔗 FOD Financiën — Investeringsaftrek</a>
+            <a href="https://finances.belgium.be/fr/entreprises/impot_des_societes/deductions/deduction-pour-investissement" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-size:.75rem;">🔗 SPF Finances — Déduction pour investissement</a>
           </div>
         </div>
       </div>
@@ -214,16 +437,16 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
       <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;">
         <div style="background:var(--navy);padding:11px 16px;display:flex;align-items:center;gap:9px;">
           <span style="font-size:1rem;">📊</span>
-          <span style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:#fff;">IKT — Investeringskrediettermijnen</span>
+          <span style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:#fff;">Vooruitbetalingen van belastingen</span>
         </div>
         <div style="padding:14px 16px;font-size:.78rem;color:var(--text-mid);line-height:1.9;">
-          <div>📌 <strong>Rechtsgrondslag:</strong> Art. 218 & 157–168 WIB 92</div>
-          <div>📌 <strong>Verhoging:</strong> Van toepassing bij onvoldoende betalingen — tarief jaarlijks vastgesteld bij KB</div>
-          <div>📌 <strong>Vennootschappen:</strong> VB1 (10/4) · VB2 (10/7) · VB3 (10/10) · VB4 (20/12)</div>
-          <div>📌 <strong>NP / Zelfstandigen:</strong> Dezelfde data — verschillende bonificaties vanaf 2022</div>
-          <div>📌 <strong>Publicatie:</strong> Circulaire FOD Financiën begin aanslagjaar</div>
+          <div>📌 <strong>Wettelijke basis:</strong> Art. 218 & 157–168 CIR 92</div>
+          <div>📌 <strong>Vermeerdering:</strong> Van toepassing bij onvoldoende voorafbetalingen — tarief jaarlijks bij KB vastgesteld</div>
+          <div>📌 <strong>Vennootschappen:</strong> VA1 (10/4) · VA2 (10/7) · VA3 (10/10) · VA4 (20/12)</div>
+          <div>📌 <strong>PP / Zelfstandigen:</strong> Dezelfde data — verschillende bonificaties vanaf 2022</div>
+          <div>📌 <strong>Publicatie:</strong> Circulaire FOD Financiën bij het begin van het boekjaar</div>
           <div style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);">
-            <a href="https://finances.belgium.be/nl/ondernemingen/vennootschapsbelasting/voorafbetalingen" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-size:.75rem;">🔗 FOD Financiën — Voorafbetalingen</a>
+            <a href="https://finances.belgium.be/fr/entreprises/impot_des_societes/versements-anticipes" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-size:.75rem;">🔗 SPF Finances — Versements anticipés</a>
           </div>
         </div>
       </div>
@@ -232,15 +455,15 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
       <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;">
         <div style="background:var(--navy);padding:11px 16px;display:flex;align-items:center;gap:9px;">
           <span style="font-size:1rem;">🏦</span>
-          <span style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:#fff;">Notionele Interest (NIA)</span>
+          <span style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:#fff;">Fictieve Belangen</span>
         </div>
         <div style="padding:14px 16px;font-size:.78rem;color:var(--text-mid);line-height:1.9;">
-          <div>📌 <strong>Rechtsgrondslag:</strong> Art. 205bis–205novies WIB 92</div>
-          <div>📌 <strong>Berekening:</strong> Gebaseerd op het gemiddeld tarief OLO 10 jaar (Nationale Bank)</div>
-          <div>📌 <strong>KMO:</strong> Tarief verhoogd met 0,5 basispunt t.o.v. grote vennootschappen</div>
+          <div>📌 <strong>Wettelijke basis:</strong> Art. 205bis–205novies CIR 92</div>
+          <div>📌 <strong>Berekening:</strong> Gebaseerd op de gemiddelde rente van 10-jarige OLO (Nationale Bank)</div>
+          <div>📌 <strong>KMO:</strong> Verhoogd tarief met 0,5 basispunt ten opzichte van grote vennootschappen</div>
           <div>📌 <strong>Afgeschaft vanaf AJ 2024:</strong> Vervangen door de aftrek voor verhoogd risicokapitaal</div>
           <div style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);">
-            <a href="https://finances.belgium.be/nl/ondernemingen/vennootschapsbelasting/aftrekken/notionele-interestaftrek" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-size:.75rem;">🔗 FOD Financiën — Notionele interest</a>
+            <a href="https://finances.belgium.be/fr/entreprises/impot_des_societes/deductions/deduction-interets-notionnels" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-size:.75rem;">🔗 SPF Finances — Intérêts notionnels</a>
           </div>
         </div>
       </div>
@@ -249,16 +472,16 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
       <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;">
         <div style="background:var(--navy);padding:11px 16px;display:flex;align-items:center;gap:9px;">
           <span style="font-size:1rem;">🚗</span>
-          <span style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:#fff;">Voertuigen — NKA & Aftrekbaarheid</span>
+          <span style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:#fff;">Voertuigen — Niet-aftrekbare kosten en aftrekbaarheid</span>
         </div>
         <div style="padding:14px 16px;font-size:.78rem;color:var(--text-mid);line-height:1.9;">
-          <div>📌 <strong>Autokosten:</strong> Art. 66 WIB 92 — niet-aanvaarde kosten (NKA)</div>
-          <div>📌 <strong>NKA-formule (vanaf 2020):</strong> 120% − (0,5% × coëff × g CO2/km) — Wet 17/03/2019</div>
+          <div>📌 <strong>Autokosten:</strong> Art. 66 WIB 92 — niet-aftrekbare uitgaven (NBA)</div>
+          <div>📌 <strong>NBA-formule (vanaf 2020):</strong> 120% − (0,5% × coëff × g CO2/km) — Wet 17/03/2019</div>
           <div>📌 <strong>Minimum 40%:</strong> Bij uitstoot ≥ 200g CO2/km</div>
           <div>📌 <strong>Elektrisch:</strong> 100% aftrekbaar tot 31/12/2026 — daarna degressief</div>
           <div>📌 <strong>Brandstofprijzen:</strong> FOD Economie — Prijzenobservatorium</div>
           <div style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);">
-            <a href="https://finances.belgium.be/nl/ondernemingen/vennootschapsbelasting/beroepskosten/autokosten" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-size:.75rem;">🔗 FOD Financiën — Autokosten</a>
+            <a href="https://finances.belgium.be/fr/entreprises/impot_des_societes/frais-professionnels/frais-de-voiture" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-size:.75rem;">🔗 SPF Finances — Frais de voiture</a>
           </div>
         </div>
       </div>
@@ -267,17 +490,17 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
       <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;">
         <div style="background:var(--navy);padding:11px 16px;display:flex;align-items:center;gap:9px;">
           <span style="font-size:1rem;">📋</span>
-          <span style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:#fff;">Diversen — Plafonds & Vrijstellingen</span>
+          <span style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:#fff;">Diversen — Maximumbedragen en vrijstellingen</span>
         </div>
         <div style="padding:14px 16px;font-size:.78rem;color:var(--text-mid);line-height:1.9;">
           <div>📌 <strong>Pensioensparen:</strong> Art. 1451 1° WIB 92 — jaarlijks geïndexeerd plafond</div>
-          <div>📌 <strong>VAPZ:</strong> Art. 52ter WIB 92 — 8,17% van de geplafonneerde netto-inkomsten</div>
-          <div>📌 <strong>Kinderopvangkosten:</strong> Art. 1451 3° WIB 92 — KB dat het dagbedrag vaststelt</div>
-          <div>📌 <strong>Vrij. woon-werk:</strong> Art. 38 §1 al. 1, 9° WIB 92 — jaarlijks geïndexeerd plafond</div>
+          <div>📌 <strong>VAPZ:</strong> Art. 52ter WIB 92 — 8,17% van de begrensde netto-inkomsten</div>
+          <div>📌 <strong>Kinderopvangkosten:</strong> Art. 1451 3° WIB 92 — KB bepaalt het dagbedrag</div>
+          <div>📌 <strong>Vrijst. woon-werk:</strong> Art. 38 §1 lid 1, 9° WIB 92 — jaarlijks geïndexeerd plafond</div>
           <div>📌 <strong>Giften:</strong> Art. 1451 4° WIB 92 — min. 40€, max. 10% van het netto-inkomen</div>
           <div>📌 <strong>Dividend VVPRbis:</strong> Art. 269 §2 WIB 92 — RV 15% onder voorwaarden</div>
           <div style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);">
-            <a href="https://finances.belgium.be/nl/particulieren/fiscale_voordelen" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-size:.75rem;">🔗 FOD Financiën — Fiscale voordelen particulieren</a>
+            <a href="https://finances.belgium.be/fr/particuliers/avantages_fiscaux" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-size:.75rem;">🔗 SPF Finances — Avantages fiscaux particuliers</a>
           </div>
         </div>
       </div>
@@ -299,7 +522,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
   <div class="footer-links">
     <a href="/nl/mentions-legales/">Wettelijke vermeldingen</a>
-    <a href="/nl/mentions-legales/#rgpd">RGPD</a>
+    <a href="/nl/mentions-legales/#rgpd">GDPR</a>
     <a href="/nl/mentions-legales/#cookies">Cookies</a>
     <a href="#">Contact</a>
   </div>
@@ -316,51 +539,53 @@ const YRS=[
 
 const ROWS=[
   // TAUX C/C
-  {g:'Rekening-couranttarief',c:'taux',l:'R/C debet (bestuurder → vennootschap)',t:'cc débiteur intérêt compte courant',d:['—','5,57%','6,25%','5,43%','7,14%','6,48%','10,20%','8,78%','8,94%','8,78%','9,27%','8,16%','9,20%','8,80%','9,50%']},
+  {g:'Rekening-couranttarief',c:'taux',l:'R/C debiet (bestuurder → vennootschap)',t:'cc débiteur intérêt compte courant',d:['—','5,57%','6,25%','5,43%','7,14%','6,48%','10,20%','8,78%','8,94%','8,78%','9,27%','8,16%','9,20%','8,80%','9,50%']},
   {g:'Rekening-couranttarief',c:'taux',l:'R/C credit (vennootschap → bestuurder)',t:'cc créditeur intérêt compte courant',d:['6,00%','7,08%','8,02%','5,70%','4,07%','4,07%','4,06%','4,09–5%','5,00%','—','—','—','—','—','—']},
-  {g:'Rekening-couranttarief',c:'taux',l:'Herkwalificatie huur (coëff. 5/3 NKI)',t:'requalification loyer revenu cadastral coefficient',d:['5,75','5,63','5,46','5,37','4,86','4,63','4,60','4,57','4,47','4,39','4,31','4,23','4,23','4,19','4,10']},
-  {g:'Rekening-couranttarief',c:'taux',l:'Indexatie Kadastraal Inkomen (coëfficiënt)',t:'indexation revenu cadastral coefficient rc',d:['2,3000','2,2446','2,1763','2,0915','1,9084','1,8630','1,8492','1,8230','1,7863','1,7491','1,7153','1,7057','1,7000','1,6813','1,6349']},
+  {g:'Rekening-couranttarief',c:'taux',l:'Herkwalificatie huur (coëff. 5/3 KI)',t:'requalification loyer revenu cadastral coefficient',d:['5,75','5,63','5,46','5,37','4,86','4,63','4,60','4,57','4,47','4,39','4,31','4,23','4,23','4,19','4,10']},
+  {g:'Rekening-couranttarief',c:'taux',l:'Indexering Kadastraal Inkomen (coëfficiënt)',t:'indexation revenu cadastral coefficient rc',d:['2,3000','2,2446','2,1763','2,0915','1,9084','1,8630','1,8492','1,8230','1,7863','1,7491','1,7153','1,7057','1,7000','1,6813','1,6349']},
   // KILOMÉTRIQUE
   {g:'Kilometervergoeding',c:'km',l:'1e Kwartaal (€/km)',t:'indemnité kilométrique t1 trimestre 1 forfait déplacement',d:['0,4326','0,4290','0,4269','0,4259','0,3707','0,3542','0,3653','0,3573','0,3460','0,3363','0,3468','0,3468','0,3461','0,3456','0,3352']},
   {g:'Kilometervergoeding',c:'km',l:'2e Kwartaal (€/km)',t:'indemnité kilométrique t2 trimestre 2 forfait déplacement',d:['—','0,4320','0,4265','0,4246','0,4020','0,3707','0,3542','0,3653','0,3573','0,3460','0,3363','0,3412','0,3468','0,3461','0,3456']},
   {g:'Kilometervergoeding',c:'km',l:'3e Kwartaal (€/km)',t:'indemnité kilométrique t3 trimestre 3 forfait déplacement',d:['—','0,4309','0,4297','0,4237','0,4170','0,3542','0,3653','0,3573','0,3460','0,3363','0,3468','0,3412','0,3468','0,3461','0,3456']},
   {g:'Kilometervergoeding',c:'km',l:'4e Kwartaal (€/km)',t:'indemnité kilométrique t4 trimestre 4 forfait déplacement',d:['—','0,4312','0,4293','0,4259','0,4201','0,3707','0,3542','0,3653','0,3573','0,3460','0,3363','0,3412','0,3468','0,3461','0,3456']},
   // ATN
-  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'Gratis verwarming — Bestuurder (€/j)',t:'atn chauffage dirigeant avantage nature',d:['2.560','2.500','2.430','2.330','2.130','2.080','2.060','2.030','1.990','1.950','1.910','1.900','1.900','1.870','1.820']},
-  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'Gratis verwarming — Personeel (€/j)',t:'atn chauffage personnel travailleur avantage nature',d:['1.150','1.130','1.090','1.050','960','930','930','910','900','880','860','860','850','840','820']},
-  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'Gratis elektriciteit — Bestuurder (€/j)',t:'atn électricité dirigeant avantage nature',d:['1.280','1.250','1.210','1.160','1.060','1.030','1.030','1.010','990','970','950','950','940','930','910']},
-  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'Gratis elektriciteit — Personeel (€/j)',t:'atn électricité personnel travailleur avantage nature',d:['580','560','550','520','480','470','460','460','450','440','430','430','430','420','410']},
-  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'Vaste pc / laptop — per toestel (€/j)',t:'atn pc ordinateur portable avantage nature',d:['72','72','72','72','72','72','72','72','72','180','180','180','Inch.','Inch.','Inch.']},
-  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'Tablet — per toestel (€/j)',t:'atn tablette ipad avantage nature',d:['36','36','36','36','36','36','36','36','36','—','—','—','—','—','—']},
-  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'Privé-internet (€/j)',t:'atn internet connexion avantage nature',d:['60','60','60','60','60','60','60','60','60','60','60','60','Inch.','Inch.','Inch.']},
-  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'GSM / Mobiele telefoon (€/j)',t:'atn gsm téléphone smartphone avantage nature',d:['48','48','48','48','48','48','48','48','48','—','—','—','—','—','—']},
-  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'Ter beschikking gesteld onroerend goed (formule)',t:'atn immeuble logement mise à disposition avantage nature',d:['RCi×2×100/60','RCi×2×100/60','RCi×2×100/60','RCi×2×100/60','RCi×2×100/60','RCi×2×100/60','RCi×2×100/60','RCi×2×100/60','RCi×1×100/60','—','—','—','—','—','—']},
-  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'VAA voertuig — minimumforfait (€/j)',t:'atn voiture minimum forfait avantage nature véhicule',d:['1.690','1.650','1.600','1.540','1.400','1.370','1.360','1.340','1.310','1.280','1.260','1.250','1.250','1.230','1.200']},
+  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'Gratis verwarming — Bestuurder (€/jaar)',t:'atn chauffage dirigeant avantage nature',d:['2.560','2.500','2.430','2.330','2.130','2.080','2.060','2.030','1.990','1.950','1.910','1.900','1.900','1.870','1.820']},
+  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'Gratis verwarming — Personeel (€/jaar)',t:'atn chauffage personnel travailleur avantage nature',d:['1.150','1.130','1.090','1.050','960','930','930','910','900','880','860','860','850','840','820']},
+  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'Gratis elektriciteit — Bestuurder (€/jaar)',t:'atn électricité dirigeant avantage nature',d:['1.280','1.250','1.210','1.160','1.060','1.030','1.030','1.010','990','970','950','950','940','930','910']},
+  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'Gratis elektriciteit — Personeel (€/jaar)',t:'atn électricité personnel travailleur avantage nature',d:['580','560','550','520','480','470','460','460','450','440','430','430','430','420','410']},
+  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'Desktop / laptop — per toestel (€/jaar)',t:'atn pc ordinateur portable avantage nature',d:['72','72','72','72','72','72','72','72','72','180','180','180','Inch.','Inch.','Inch.']},
+  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'Tablet — per toestel (€/jaar)',t:'atn tablette ipad avantage nature',d:['36','36','36','36','36','36','36','36','36','—','—','—','—','—','—']},
+  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'Privéinternet (€/jaar)',t:'atn internet connexion avantage nature',d:['60','60','60','60','60','60','60','60','60','60','60','60','Inch.','Inch.','Inch.']},
+  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'GSM / mobiele telefoon (€/jaar)',t:'atn gsm téléphone smartphone avantage nature',d:['48','48','48','48','48','48','48','48','48','—','—','—','—','—','—']},
+  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'Ter beschikking gesteld gebouw (formule)',t:'atn immeuble logement mise à disposition avantage nature',d:['RCi×2×100/60','RCi×2×100/60','RCi×2×100/60','RCi×2×100/60','RCi×2×100/60','RCi×2×100/60','RCi×2×100/60','RCi×2×100/60','RCi×1×100/60','—','—','—','—','—','—']},
+  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'VAA auto — minimum forfait (€/jaar)',t:'atn voiture minimum forfait avantage nature véhicule',d:['1.690','1.650','1.600','1.540','1.400','1.370','1.360','1.340','1.310','1.280','1.260','1.250','1.250','1.230','1.200']},
+  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'VAA auto — CO2 ref. diesel (g/km)',t:'atn voiture co2 référence diesel calcul',d:['58','58','59','65','67','75','82','84','88','91','91','91','—','—','—']},
+  {g:'VAA — Voordelen van Alle Aard',c:'atn',l:'VAA auto — CO2 ref. benzine/LPG/CNG (g/km)',t:'atn voiture co2 référence essence gaz calcul',d:['70','70','71','78','82','91','99','102','107','111','111','111','—','—','—']},
   // DPI
-  {g:'IDA — Investeringsaftrek',c:'dpi',l:'IDA — NP / Kleine vennootschappen (1 gebruik)',t:'dpi déduction investissement pp petites sociétés',d:['10%','10%','8%/12,5%','8%/17,5%','8–25%/10,5%','8–25%/10,5%','8–25%/10,5%','20%/10,5%','8–20%/10,5%','8%/10,5%','8%/10,5%','3,5%/10,5%','3,5%/10,5%','4,5%/11,5%','5,5%/12,5%']},
-  {g:'IDA — Investeringsaftrek',c:'dpi',l:'IDA — Grote vennootschappen (1 gebruik)',t:'dpi déduction investissement grandes sociétés',d:['20%','20%','15,5%/22,5%','20,5%/27,5%','13,5%/20,5%','13,5%/20,5%','13,5%/20,5%','13,5%/20,5%','13,5%/20,5%','—','—','—','—','—','—']},
+  {g:'IAF — Investeringsaftrek',c:'dpi',l:'IAF — PP / Kleine vennootschappen (1 gebruik)',t:'dpi déduction investissement pp petites sociétés',d:['10%','10%','8%/12,5%','8%/17,5%','8–25%/10,5%','8–25%/10,5%','8–25%/10,5%','20%/10,5%','8–20%/10,5%','8%/10,5%','8%/10,5%','3,5%/10,5%','3,5%/10,5%','4,5%/11,5%','5,5%/12,5%']},
+  {g:'IAF — Investeringsaftrek',c:'dpi',l:'IAF — Grote vennootschappen (1 gebruik)',t:'dpi déduction investissement grandes sociétés',d:['20%','20%','15,5%/22,5%','20,5%/27,5%','13,5%/20,5%','13,5%/20,5%','13,5%/20,5%','13,5%/20,5%','13,5%/20,5%','—','—','—','—','—','—']},
   // VAI
-  {g:'IKT — Voorafbetalingen van Belasting',c:'vai',l:'IKT — Verhoging vennootschappen',t:'vai versements anticipés majoration sociétés impôt',d:['6,75%','6,75%','9,00%','6,75%','6,75%','6,75%','6,75%','6,75%','6,75%','2,25%','1,125%','1,125%','1,69%','2,25%','2,25%']},
-  {g:'IKT — Voorafbetalingen van Belasting',c:'vai',l:'IKT — Bonificaties vennootschappen (VB1–VB2–VB3–VB4)',t:'vai versements anticipés bonifications sociétés',d:['9–7,5–6–4,5%','9–7,5–6–4,5%','12–10–8–6%','9–7,5–6–4,5%','9–7,5–6–4,5%','9–7,5–6–4,5%','9–7,5–6–4,5%','9–7,5–6–4,5%','9–7,5–6–4,5%','3–2,5–2–1,5%','1,5–1,25–1–0,75%','1,5–1,25–1–0,75%','2,25–1,88–1,5–1,13%','3–2,5–2–1,5%','3–2,5–2–1,5%']},
-  {g:'IKT — Voorafbetalingen van Belasting',c:'vai',l:'IKT — Verhoging zelfstandigen NP',t:'vai versements anticipés majoration indépendants pp',d:['6,75%','6,75%','9,00%','4,50%','2,25%','2,25%','2,25%','2,25%','2,25%','2,25%','1,125%','1,125%','1,69%','2,25%','2,25%']},
-  {g:'IKT — Voorafbetalingen van Belasting',c:'vai',l:'IKT — Bonificaties zelfstandigen NP (VB1–VB2–VB3–VB4)',t:'vai versements anticipés bonifications indépendants pp',d:['9–7,5–6–4,5%','9–7,5–6–4,5%','12–10–8–6%','6–5–4–3%','3–2,5–2–1,5%','3–2,5–2–1,5%','3–2,5–2–1,5%','3–2,5–2–1,5%','3–2,5–2–1,5%','3–2,5–2–1,5%','1,5–1,25–1–0,75%','1,5–1,25–1–0,75%','2,25–1,88–1,5–1,13%','3–2,5–2–1,5%','3–2,5–2–1,5%']},
+  {g:'VAI — Versements Anticipés d\'Impôt',c:'vai',l:'VA — Vermeerdering vennootschappen',t:'vai versements anticipés majoration sociétés impôt',d:['6,75%','6,75%','9,00%','6,75%','6,75%','6,75%','6,75%','6,75%','6,75%','2,25%','1,125%','1,125%','1,69%','2,25%','2,25%']},
+  {g:'VAI — Versements Anticipés d\'Impôt',c:'vai',l:'VA — Verminderingen vennootschappen (VA1–VA2–VA3–VA4)',t:'vai versements anticipés bonifications sociétés',d:['9–7,5–6–4,5%','9–7,5–6–4,5%','12–10–8–6%','9–7,5–6–4,5%','9–7,5–6–4,5%','9–7,5–6–4,5%','9–7,5–6–4,5%','9–7,5–6–4,5%','9–7,5–6–4,5%','3–2,5–2–1,5%','1,5–1,25–1–0,75%','1,5–1,25–1–0,75%','2,25–1,88–1,5–1,13%','3–2,5–2–1,5%','3–2,5–2–1,5%']},
+  {g:'VAI — Versements Anticipés d\'Impôt',c:'vai',l:'VA — Vermeerdering zelfstandigen PP',t:'vai versements anticipés majoration indépendants pp',d:['6,75%','6,75%','9,00%','4,50%','2,25%','2,25%','2,25%','2,25%','2,25%','2,25%','1,125%','1,125%','1,69%','2,25%','2,25%']},
+  {g:'VAI — Versements Anticipés d\'Impôt',c:'vai',l:'VA — Verminderingen zelfstandigen PP (VA1–VA2–VA3–VA4)',t:'vai versements anticipés bonifications indépendants pp',d:['9–7,5–6–4,5%','9–7,5–6–4,5%','12–10–8–6%','6–5–4–3%','3–2,5–2–1,5%','3–2,5–2–1,5%','3–2,5–2–1,5%','3–2,5–2–1,5%','3–2,5–2–1,5%','3–2,5–2–1,5%','1,5–1,25–1–0,75%','1,5–1,25–1–0,75%','2,25–1,88–1,5–1,13%','3–2,5–2–1,5%','3–2,5–2–1,5%']},
   // INTÉRÊTS NOTIONNELS
-  {g:'Notionele Interest (NIA)',c:'taux',l:'Notionele interest — KMO',t:'intérêts notionnels dri pme taux',d:['Afgesch.','Afgesch.','Afgesch.','Afgesch.','0,443%','0,340%','0,408%','1,226%','1,246%','0,737%','1,631%','2,130%','3,130%','3,242%','3,500%']},
-  {g:'Notionele Interest (NIA)',c:'taux',l:'Notionele interest — Andere vennootschappen',t:'intérêts notionnels dri autres sociétés taux',d:['Afgesch.','Afgesch.','Afgesch.','Afgesch.','0,000%','0,000%','0,000%','0,726%','0,746%','0,237%','1,131%','1,630%','2,630%','2,742%','3,000%']},
+  {g:'Notionele interesten (DRI)',c:'taux',l:'Notionele interesten — KMO',t:'intérêts notionnels dri pme taux',d:['Abrogé','Abrogé','Abrogé','Abrogé','0,443%','0,340%','0,408%','1,226%','1,246%','0,737%','1,631%','2,130%','3,130%','3,242%','3,500%']},
+  {g:'Notionele interesten (DRI)',c:'taux',l:'Notionele interesten — Andere vennootschappen',t:'intérêts notionnels dri autres sociétés taux',d:['Abrogé','Abrogé','Abrogé','Abrogé','0,000%','0,000%','0,000%','0,726%','0,746%','0,237%','1,131%','1,630%','2,630%','2,742%','3,000%']},
   // VÉHICULES
-  {g:'Voertuigen — NKA & Aftrekbaarheid',c:'vehicule',l:'NKA-formule (vanaf 2020)',t:'dna formule calcul co2 véhicule',d:['120%−(0,5%×coeff×CO2)','120%−(0,5%×coeff×CO2)','120%−(0,5%×coeff×CO2)','120%−(0,5%×coeff×CO2)','120%−(0,5%×coeff×CO2)','120%−(0,5%×coeff×CO2)','120%−(0,5%×coeff×CO2)','120%−(0,5%×coeff×CO2)','—','—','—','—','—','—','—']},
-  {g:'Voertuigen — NKA & Aftrekbaarheid',c:'vehicule',l:'Autokosten + brandstof (NKA/VAA) — tarief',t:'dna véhicule frais auto carburant déductibilité taux',d:['40%','40%','40%','40%','40%','40%','40%','40%','40%','40%','17%','17%','17%','17%','17%']},
-  {g:'Voertuigen — NKA & Aftrekbaarheid',c:'vehicule',l:'Autokosten zonder brandstof (NKA/VAA) — tarief',t:'dna véhicule frais auto sans carburant déductibilité taux',d:['17%','17%','17%','17%','17%','17%','17%','17%','17%','17%','17%','17%','17%','17%','17%']},
-  {g:'Voertuigen — NKA & Aftrekbaarheid',c:'vehicule',l:'Ref.prijs Euro 95 (€/liter, jaargemiddelde)',t:'carburant euro 95 essence prix référence',d:['—','1,6541','1,7315','1,8351','1,9182','1,6060','1,3890','1,4574','1,4694','1,4046','1,3371','1,4296','1,5956','1,6508','1,7076']},
-  {g:'Voertuigen — NKA & Aftrekbaarheid',c:'vehicule',l:'Ref.prijs Super 98 (€/liter, jaargemiddelde)',t:'carburant super 98 essence prix référence',d:['—','1,7148','1,8366','1,9912','2,0287','1,6360','1,4172','1,5310','1,5511','1,4861','1,4016','1,4966','1,6438','1,7054','1,7396']},
-  {g:'Voertuigen — NKA & Aftrekbaarheid',c:'vehicule',l:'Ref.prijs Diesel (€/liter, jaargemiddelde)',t:'carburant diesel prix référence',d:['—','1,7352','1,7913','1,8341','1,9895','1,5270','1,3679','1,5215','1,5037','1,3277','1,1871','1,2236','1,4154','1,4758','1,5318']},
-  {g:'Voertuigen — NKA & Aftrekbaarheid',c:'vehicule',l:'Ref.prijs LPG (€/liter, jaargemiddelde)',t:'carburant lpg gaz prix référence',d:['—','0,8062','0,7487','0,6840','0,8165','0,6466','0,4684','0,5101','0,5484','0,4907','0,4105','0,4532','0,5960','0,6719','0,7183']},
+  {g:'Voertuigen — NDA & Aftrekbaarheid',c:'vehicule',l:'Formule NDA (vanaf 2020)',t:'dna formule calcul co2 véhicule',d:['120%−(0,5%×coeff×CO2)','120%−(0,5%×coeff×CO2)','120%−(0,5%×coeff×CO2)','120%−(0,5%×coeff×CO2)','120%−(0,5%×coeff×CO2)','120%−(0,5%×coeff×CO2)','120%−(0,5%×coeff×CO2)','120%−(0,5%×coeff×CO2)','—','—','—','—','—','—','—']},
+  {g:'Voertuigen — NDA & Aftrekbaarheid',c:'vehicule',l:'Autokosten + brandstof (NDA/VAA) — tarief',t:'dna véhicule frais auto carburant déductibilité taux',d:['40%','40%','40%','40%','40%','40%','40%','40%','40%','40%','17%','17%','17%','17%','17%']},
+  {g:'Voertuigen — NDA & Aftrekbaarheid',c:'vehicule',l:'Autokosten zonder brandstof (NDA/VAA) — tarief',t:'dna véhicule frais auto sans carburant déductibilité taux',d:['17%','17%','17%','17%','17%','17%','17%','17%','17%','17%','17%','17%','17%','17%','17%']},
+  {g:'Voertuigen — NDA & Aftrekbaarheid',c:'vehicule',l:'Ref.prijs Euro 95 (€/liter, jaargemiddelde)',t:'carburant euro 95 essence prix référence',d:['—','1,6541','1,7315','1,8351','1,9182','1,6060','1,3890','1,4574','1,4694','1,4046','1,3371','1,4296','1,5956','1,6508','1,7076']},
+  {g:'Voertuigen — NDA & Aftrekbaarheid',c:'vehicule',l:'Ref.prijs Super 98 (€/liter, jaargemiddelde)',t:'carburant super 98 essence prix référence',d:['—','1,7148','1,8366','1,9912','2,0287','1,6360','1,4172','1,5310','1,5511','1,4861','1,4016','1,4966','1,6438','1,7054','1,7396']},
+  {g:'Voertuigen — NDA & Aftrekbaarheid',c:'vehicule',l:'Ref.prijs Diesel (€/liter, jaargemiddelde)',t:'carburant diesel prix référence',d:['—','1,7352','1,7913','1,8341','1,9895','1,5270','1,3679','1,5215','1,5037','1,3277','1,1871','1,2236','1,4154','1,4758','1,5318']},
+  {g:'Voertuigen — NDA & Aftrekbaarheid',c:'vehicule',l:'Ref.prijs LPG (€/liter, jaargemiddelde)',t:'carburant lpg gaz prix référence',d:['—','0,8062','0,7487','0,6840','0,8165','0,6466','0,4684','0,5101','0,5484','0,4907','0,4105','0,4532','0,5960','0,6719','0,7183']},
   // DIVERS
   {g:'Diversen — Plafonds & Vrijstellingen',c:'divers',l:'Pensioensparen — laag / hoog plafond (€)',t:'épargne pension plafond déduction retraite',d:['1.050/1.350','1.050/1.350','1.020/1.310','990/1.270','990/1.270','990/1.270','990/1.270','980/1.260','960','940','940','940','940','940','910']},
-  {g:'Diversen — Plafonds & Vrijstellingen',c:'divers',l:'VAPZ 8,17% — jaarlijks plafond (€)',t:'plci pension libre complémentaire indépendant plafond',d:['4.086,34','4.000,44','3.965,77','3.859,40','3.447,62','3.302,77','3.291,30','3.256,87','3.187,04','3.127,24','3.060,07','3.027,09','3.027,09','3.017,73','2.962,88']},
+  {g:'Diversen — Plafonds & Vrijstellingen',c:'divers',l:'VAPW 8,17% — jaarplafond (€)',t:'plci pension libre complémentaire indépendant plafond',d:['4.086,34','4.000,44','3.965,77','3.859,40','3.447,62','3.302,77','3.291,30','3.256,87','3.187,04','3.127,24','3.060,07','3.027,09','3.027,09','3.017,73','2.962,88']},
   {g:'Diversen — Plafonds & Vrijstellingen',c:'divers',l:'Kinderopvangkosten — max. per dag (€)',t:'frais garde enfant plafond déduction',d:['—','16,90','16,40','15,70','14,40','14,00','13,00','11,20','11,20','11,20','Inch.','Inch.','Inch.','Inch.','Inch.']},
-  {g:'Diversen — Plafonds & Vrijstellingen',c:'divers',l:'Vrijstelling woon-werk auto (€/j)',t:'exonération domicile travail voiture déplacement',d:['500','500','490','470','430','420','410','410','400','390','380','380','380','370','350']},
-  {g:'Diversen — Plafonds & Vrijstellingen',c:'divers',l:'Gift — minimaal aftrekbaar bedrag (€)',t:'libéralité don déductible association',d:['40','40','40','40','40','40','40','40','40','40','40','40','40','—','—']},
+  {g:'Diversen — Plafonds & Vrijstellingen',c:'divers',l:'Vrijstelling woon-werkverkeer auto (€/jaar)',t:'exonération domicile travail voiture déplacement',d:['500','500','490','470','430','420','410','410','400','390','380','380','380','370','350']},
+  {g:'Diversen — Plafonds & Vrijstellingen',c:'divers',l:'Gift — minimum aftrekbaar bedrag (€)',t:'libéralité don déductible association',d:['40','40','40','40','40','40','40','40','40','40','40','40','40','—','—']},
   {g:'Diversen — Plafonds & Vrijstellingen',c:'divers',l:'Vrijgesteld dividend VVPRbis (€)',t:'dividende vvprbis exonéré précompte mobilier',d:['833','859','833','800','800','800','800','812','800','640','—','—','—','—','—']},
   {g:'Diversen — Plafonds & Vrijstellingen',c:'divers',l:'Roerende voorheffing op vrijgesteld dividend (€)',t:'précompte mobilier dividende vvprbis exonéré',d:['249,90','257,70','249,90','240,00','240,00','240,00','240,00','243,60','240,00','192,00','—','—','—','—','—']},
 ];
@@ -368,12 +593,12 @@ const ROWS=[
 // ── BUILD HEAD ─────────────────────────────────────────────────────────────
 function buildHead(){
   const t=document.getElementById('thead');
-  let r1='<tr><th>Fiscaal item</th>';
+  let r1='<tr><th>Poste fiscal</th>';
   let r2='<tr><th></th>';
   YRS.forEach((y,i)=>{
     const cn=i===0?' class="now"':'';
-    r1+=`<th${cn}>AJ ${y.ei}</th>`;
-    r2+=`<th${cn}>Ink. ${y.rev}</th>`;
+    r1+=`<th${cn}>EI ${y.ei}</th>`;
+    r2+=`<th${cn}>Rev. ${y.rev}</th>`;
   });
   t.innerHTML=r1+'</tr>'+r2+'</tr>';
 }
@@ -397,7 +622,7 @@ function render(){
     }
     html+='<tr class="row"><td>'+r.l+'</td>';
     r.d.forEach((v,i)=>{
-      const isNA=v==='—'||v==='Afgesch.'||v==='Inch.';
+      const isNA=v==='—'||v==='Abrogé'||v==='Inch.';
       const cls=isNA?'na':i===0?'now':'';
       html+=`<td class="${cls}">${v}</td>`;
     });
@@ -405,10 +630,10 @@ function render(){
   });
 
   if(!filtered.length){
-    html=`<tr><td colspan="${YRS.length+1}" class="no-res">Geen resultaten — probeer een ander zoekwoord.</td></tr>`;
+    html=`<tr><td colspan="${YRS.length+1}" class="no-res">Aucun résultat — essayez un autre mot-clé.</td></tr>`;
   }
   document.getElementById('tbody').innerHTML=html;
-  document.getElementById('cnt').textContent=filtered.length?`${filtered.length} rij${filtered.length>1?'en':''}` :'';
+  document.getElementById('cnt').textContent=filtered.length?`${filtered.length} ligne${filtered.length>1?'s':''}` :'';
 }
 
 function doSearch(){
@@ -455,63 +680,83 @@ render();
 .cbs{background:transparent;color:rgba(255,255,255,.65);border:1px solid rgba(255,255,255,.25)!important;}
 .cbr{background:transparent;color:rgba(255,255,255,.45);font-size:.73rem;font-weight:500;text-decoration:underline;padding:3px 0!important;}
 </style>
-<div id="cb">
-  <div class="cbt">
-    <p>🍪 <strong style="color:#fff">Deze website gebruikt cookies.</strong> Noodzakelijke cookies zorgen voor de werking van de site. <a href="mentions-legales.html#cookies">Meer info</a></p>
-    <div class="cbb">
-      <button class="cba" onclick="ca()">Alles accepteren</button>
-      <button class="cbs" onclick="cs()">Opslaan</button>
-    </div>
-  </div>
-  <div class="cbc">
-    <label><input type="checkbox" checked disabled> Noodzakelijk</label>
-    <label><input type="checkbox" id="ca2"> Analytisch (Google Analytics)</label>
-    <label><input type="checkbox" id="ca3"> Reclame (Google AdSense)</label>
-  </div>
-  <button class="cbr" onclick="cr()">Alles weigeren</button>
-</div>
+
 <script>
-(function(){const k='lacaverne_cookie_consent';if(!localStorage.getItem(k))document.getElementById('cb').style.display='block';})();
-function ca(){localStorage.setItem('lacaverne_cookie_consent',JSON.stringify({a:true,p:true}));document.getElementById('cb').style.display='none';}
-function cr(){localStorage.setItem('lacaverne_cookie_consent',JSON.stringify({a:false,p:false}));document.getElementById('cb').style.display='none';}
-function cs(){localStorage.setItem('lacaverne_cookie_consent',JSON.stringify({a:document.getElementById('ca2').checked,p:document.getElementById('ca3').checked}));document.getElementById('cb').style.display='none';}
-
-  
-
-
-  // ── HAMBURGER MENU ──
-  function toggleMobileMenu(e) {
-    e.stopPropagation();
-    var nav = document.querySelector('.nav-links');
-    var btn = document.querySelector('.hamburger');
-    if (nav) nav.classList.toggle('mobile-open');
-    if (btn) btn.classList.toggle('open');
+(function(){
+  function showBanner(){
+    document.getElementById('cookieBanner').style.display='block';
+    document.getElementById('cookieOverlay').style.display='block';
+    document.body.style.overflow='hidden';
   }
-  document.addEventListener('click', function(e) {
-    var nav = document.querySelector('.nav-links');
-    var btn = document.querySelector('.hamburger');
-    var wrap = document.querySelector('.main-nav');
-    if (wrap && !wrap.contains(e.target)) {
-      if (nav) nav.classList.remove('mobile-open');
-      if (btn) btn.classList.remove('open');
+  function hideBanner(){
+    document.getElementById('cookieBanner').style.display='none';
+    document.getElementById('cookieOverlay').style.display='none';
+    document.body.style.overflow='';
+  }
+  window.cbShowDetail=function(){
+    document.getElementById('cbMain').style.display='none';
+    document.getElementById('cbDetail').style.display='block';
+  };
+  window.cbShowMain=function(){
+    document.getElementById('cbDetail').style.display='none';
+    document.getElementById('cbMain').style.display='block';
+  };
+  function updateConsentMode(analytics,ads){
+    if(typeof gtag==='function'){
+      gtag('consent','update',{
+        analytics_storage:analytics?'granted':'denied',
+        ad_storage:ads?'granted':'denied',
+        ad_user_data:ads?'granted':'denied',
+        ad_personalization:ads?'granted':'denied'
+      });
     }
-  });
-
-
-function toggleLangMenu(e) {
-  e.stopPropagation();
-  var ld = document.getElementById('langSwitcher');
-  if (ld) ld.classList.toggle('open');
-}
-document.addEventListener('click', function(e) {
-  var ld = document.getElementById('langSwitcher');
-  if (ld && !ld.contains(e.target)) ld.classList.remove('open');
-});
+    if(ads&&!window._adsenseLoaded){
+      window._adsenseLoaded=true;
+      var s=document.createElement('script');
+      s.async=true;s.crossOrigin='anonymous';
+      s.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749';
+      document.head.appendChild(s);
+    }
+  }
+  window.cookieAcceptAll=function(){
+    localStorage.setItem('cb_analytics','1');
+    localStorage.setItem('cb_ads','1');
+    updateConsentMode(true,true);
+    hideBanner();
+  };
+  window.cookieSavePrefs=function(){
+    var ca=document.getElementById('cbAnalytics').checked?'1':'0';
+    var cd=document.getElementById('cbAds').checked?'1':'0';
+    localStorage.setItem('cb_analytics',ca);
+    localStorage.setItem('cb_ads',cd);
+    updateConsentMode(ca==='1',cd==='1');
+    hideBanner();
+  };
+  window.cookieRefuseAll=function(){
+    localStorage.setItem('cb_analytics','0');
+    localStorage.setItem('cb_ads','0');
+    updateConsentMode(false,false);
+    hideBanner();
+  };
+  window.openCookieSettings=function(){
+    var ca=localStorage.getItem('cb_analytics');
+    var cd=localStorage.getItem('cb_ads');
+    if(ca!==null)document.getElementById('cbAnalytics').checked=(ca==='1');
+    if(cd!==null)document.getElementById('cbAds').checked=(cd==='1');
+    cbShowMain();
+    showBanner();
+  };
+  var ca=localStorage.getItem('cb_analytics');
+  if(ca===null){showBanner();}
+  else{updateConsentMode(ca==='1',localStorage.getItem('cb_ads')==='1');}
+})();
 </script>
+<!-- END COOKIE BANNER -->
+
 <!-- ── BANNIÈRE COOKIES APD-CONFORME ── -->
 <style>
-#cookieOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99998;backdrop-filter:blur(3px);}
-#cookieBanner{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:99999;
+#cookieOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:1000000;backdrop-filter:blur(3px);}
+#cookieBanner{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1000001;
   background:#fff;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.3);
   width:min(580px,94vw);max-height:88vh;overflow-y:auto;font-family:'Inter',sans-serif;}
 /* Main view */
@@ -555,44 +800,44 @@ document.addEventListener('click', function(e) {
 <div id="cookieBanner" role="dialog" aria-modal="true">
   <!-- Vue principale -->
   <div id="cbMain">
-    <h2 class="cb-title">Vos paramètres de confidentialité</h2>
-    <p class="cb-text">La Caverne de la Compta utilise des cookies pour collecter des informations à propos de votre appareil, votre navigateur et votre comportement de navigation.</p>
-    <p class="cb-text">En outre, si vous nous en donnez l'autorisation, nous pouvons utiliser vos données pour <strong>personnaliser le contenu</strong> et <strong>afficher des publicités pertinentes</strong> via Google AdSense. Nous mesurons également l'audience avec <strong>Google Analytics</strong> pour améliorer le site.</p>
-    <p class="cb-text">En cliquant sur « D'accord », vous donnez votre consentement. Si vous ne souhaitez pas tout autoriser, cliquez sur « Modifier manuellement ». Vous pouvez modifier vos choix à tout moment via le lien <strong>Gestion des cookies</strong> en bas de page. Pour en savoir plus, consultez notre <a href="/fr/mentions-legales/#cookies">politique de cookies</a>.</p>
+    <h2 class="cb-title">Uw privacyinstellingen</h2>
+    <p class="cb-text">La Caverne de la Compta gebruikt cookies om informatie te verzamelen over uw apparaat, uw browser en uw surfgedrag.</p>
+    <p class="cb-text">Indien u ons daarvoor toestemming geeft, kunnen wij uw gegevens gebruiken om <strong>content te personaliseren</strong> en <strong>relevante advertenties te tonen</strong> via Google AdSense. Wij meten ook het bezoekersverkeer met <strong>Google Analytics</strong> om de site te verbeteren.</p>
+    <p class="cb-text">Door op « Akkoord » te klikken, geeft u uw toestemming. Als u niet alles wilt toestaan, klik dan op « Handmatig aanpassen ». U kunt uw keuzes te allen tijde wijzigen via de link <strong>Cookiebeheer</strong> onderaan de pagina. Raadpleeg onze <a href="/nl/mentions-legales/#cookies">cookieverklaring</a> voor meer informatie.</p>
     <div class="cb-btns">
-      <button class="cb-btn-agree" onclick="cookieAcceptAll()">D'accord</button>
-      <button class="cb-btn-modify" onclick="cbShowDetail()">Modifier manuellement</button>
+      <button class="cb-btn-agree" onclick="cookieAcceptAll()">Akkoord</button>
+      <button class="cb-btn-modify" onclick="cbShowDetail()">Handmatig aanpassen</button>
     </div>
   </div>
   <!-- Vue détaillée -->
   <div id="cbDetail">
-    <button class="cb-back" onclick="cbShowMain()">← Retour</button>
-    <h2 class="cb-title">Définir vos préférences</h2>
+    <button class="cb-back" onclick="cbShowMain()">← Terug</button>
+    <h2 class="cb-title">Uw voorkeuren instellen</h2>
     <div class="cb-cat">
       <div>
-        <div class="cb-cat-name">🔒 Nécessaires <span style="font-size:0.7rem;color:#F5A623;">(toujours actifs)</span></div>
-        <div class="cb-cat-desc">Indispensables au fonctionnement du site : navigation, sécurité, préférences de langue. Ne peuvent pas être désactivés.</div>
+        <div class="cb-cat-name">🔒 Noodzakelijk <span style="font-size:0.7rem;color:#F5A623;">(altijd actief)</span></div>
+        <div class="cb-cat-desc">Onmisbaar voor het functioneren van de site: navigatie, beveiliging, taalvoorkeur. Kunnen niet worden uitgeschakeld.</div>
       </div>
       <label class="cb-toggle required"><input type="checkbox" checked disabled><span class="cb-toggle-slider"></span></label>
     </div>
     <div class="cb-cat">
       <div>
-        <div class="cb-cat-name">📊 Analytiques <span style="font-size:0.7rem;color:#8A9BB0;">(Google Analytics)</span></div>
-        <div class="cb-cat-desc">Nous permettent de comprendre comment vous utilisez le site pour l'améliorer continuellement.</div>
+        <div class="cb-cat-name">📊 Analytisch <span style="font-size:0.7rem;color:#8A9BB0;">(Google Analytics)</span></div>
+        <div class="cb-cat-desc">Helpt ons te begrijpen hoe u de site gebruikt, zodat wij deze voortdurend kunnen verbeteren.</div>
       </div>
       <label class="cb-toggle"><input type="checkbox" id="cbAnalytics" checked><span class="cb-toggle-slider"></span></label>
     </div>
     <div class="cb-cat">
       <div>
-        <div class="cb-cat-name">📢 Publicitaires <span style="font-size:0.7rem;color:#8A9BB0;">(Google AdSense)</span></div>
-        <div class="cb-cat-desc">Permettent d'afficher des publicités pour financer le site gratuitement pour vous.</div>
+        <div class="cb-cat-name">📢 Advertenties <span style="font-size:0.7rem;color:#8A9BB0;">(Google AdSense)</span></div>
+        <div class="cb-cat-desc">Maakt het mogelijk advertenties te tonen om de site gratis voor u te financieren.</div>
       </div>
       <label class="cb-toggle"><input type="checkbox" id="cbAds" checked><span class="cb-toggle-slider"></span></label>
     </div>
     <div class="cb-detail-btns">
-      <button class="cb-btn-saveall" onclick="cookieAcceptAll()">Tout accepter</button>
-      <button class="cb-btn-saveprefs" onclick="cookieSavePrefs()">Enregistrer mes choix</button>
-      <button class="cb-btn-refuseall" onclick="cookieRefuseAll()">Tout refuser</button>
+      <button class="cb-btn-saveall" onclick="cookieAcceptAll()">Alles accepteren</button>
+      <button class="cb-btn-saveprefs" onclick="cookieSavePrefs()">Mijn keuzes opslaan</button>
+      <button class="cb-btn-refuseall" onclick="cookieRefuseAll()">Alles weigeren</button>
     </div>
   </div>
 </div>
@@ -667,6 +912,16 @@ document.addEventListener('click', function(e) {
 })();
 </script>
 <!-- END COOKIE BANNER -->
-
+<script>
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  var ld = document.getElementById('langSwitcher');
+  if (ld) ld.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var ld = document.getElementById('langSwitcher');
+  if (ld && !ld.contains(e.target)) ld.classList.remove('open');
+});
+</script>
 </body>
 </html>

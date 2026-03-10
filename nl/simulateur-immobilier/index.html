@@ -16,13 +16,15 @@
   <link rel="canonical" href="https://lacavernedelacompta.be/nl/simulateur-immobilier/">
   <!-- Open Graph -->
   <meta property="og:title" content="Belgische Registratierechten Simulator 2026 — Wallonië, Brussel, Vlaanderen">
-  <meta property="og:image" content="https://lacavernedelacompta.be/logo.png">
+  <meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
 
   <meta property="og:description" content="Bereken uw registratierechten voor vastgoed in België. 3% Wallonië, vrijstelling Brussel, 2% Vlaanderen. Met hypothecair krediet en mandaat. Bijgewerkt 2026.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lacavernedelacompta.be/simulateur-immobilier.html">
   <meta property="og:site_name" content="La Caverne de la Compta">
   <meta property="og:locale" content="nl_BE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <!-- ════ GOOGLE ADSENSE — remplace ca-pub-XXXXXXXXXXXXXXXX par ton ID ════ -->
 <!--  -->
@@ -472,7 +474,7 @@
     top: calc(100% + 4px); right: 0;
     background: #fff; border: 1px solid #DDE5EF;
     border-radius: 8px; box-shadow: 0 8px 24px rgba(13,27,42,0.12);
-    min-width: 120px; z-index: 999999; overflow: hidden;
+    min-width: 120px; z-index:9000; overflow: hidden;
   }
   .lang-dropdown.open .lang-menu { display: block; }
   .lang-menu a {
@@ -585,17 +587,61 @@
   "url": "https://lacavernedelacompta.be",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://lacavernedelacompta.be/logo.png",
+    "url": "https://lacavernedelacompta.be/logo.svg",
     "width": 512,
     "height": 512
   },
-  "image": "https://lacavernedelacompta.be/logo.png"
+  "image": "https://lacavernedelacompta.be/logo.svg"
 }
 </script>
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@lacavernecompta">
+  <meta name="twitter:title" content="Belgische Registratierechten Simulator 2026 — Wallonië, Brussel, Vlaanderen">
+  <meta name="twitter:description" content="Bereken uw registratierechten voor vastgoed in België. 3% Wallonië, vrijstelling Brussel, 2% Vlaanderen. Met hypothecair krediet en mandaat. Bijgewerkt 2026.">
+  <meta name="twitter:image" content="https://lacavernedelacompta.be/logo.svg">
 <!-- CACHE-BUST-v8-nl/simulateur-immobilier/index.html -->
+<!-- Google tag (gtag.js) -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{
+  analytics_storage:'denied',
+  ad_storage:'denied',
+  ad_user_data:'denied',
+  ad_personalization:'denied',
+  wait_for_update:500
+});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNHZDLVPEL"></script>
+<script>
+gtag('js', new Date());
+gtag('config', 'G-WNHZDLVPEL');
+</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Belgische Registratierechten Simulator 2026 — Wallonië, Brussel, Vlaanderen",
+  "url": "https://lacavernedelacompta.be/nl/simulateur-immobilier/",
+  "description": "Bereken uw registratierechten voor vastgoed in België. 3% Wallonië, vrijstelling Brussel, 2% Vlaanderen. Met hypothecair krediet en mandaat. Bijgewerkt 2026.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "La Caverne de la Compta",
+    "url": "https://lacavernedelacompta.be"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -690,6 +736,7 @@
   <p class="subtitle">Notariskosten · Registratierechten · Hypothecair krediet</p>
 </section>
 <div style="margin:24px auto;text-align:center;max-width:100%;padding:0 16px;">
+<h2 style="font-size:1rem;color:#1A3A5C;margin:24px 0 8px;">📋 Hoe registratierechten berekenen in België?</h2>
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-8043980001637749"
@@ -744,8 +791,8 @@
           <div class="field" id="fieldHabitationPropre" style="grid-column: 1 / -1">
             <label id="labelHabitationPropre">Eigen en enige woning?</label>
             <div class="radio-group" id="habitationPropre">
-              <div class="radio-btn active" data-val="oui" onclick="setRadio('habitationPropre',this)">Oui</div>
-              <div class="radio-btn" data-val="non" onclick="setRadio('habitationPropre',this)">Non</div>
+              <div class="radio-btn active" data-val="oui" onclick="setRadio('habitationPropre',this)">Ja</div>
+              <div class="radio-btn" data-val="non" onclick="setRadio('habitationPropre',this)">Nee</div>
             </div>
             <div id="infoHabitationPropre" class="info-box" style="margin-top:0.75rem;font-size:0.82rem"></div>
           </div>
@@ -929,7 +976,7 @@
             </div>
             <div>
               <label for="credit125" style="font-size:.88rem;font-weight:600;color:var(--navy);cursor:pointer;">
-                💡 Kosten opnemen in het krediet <span style="background:var(--teal);color:#fff;font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:4px;letter-spacing:.04em;">CRÉDIT 125%</span>
+                💡 Kosten opnemen in het krediet <span style="background:var(--teal);color:#fff;font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:4px;letter-spacing:.04em;">KREDIET 125%</span>
               </label>
               <p style="font-size:.78rem;color:var(--text-mid);margin-top:5px;line-height:1.5;">De aankoopaktekosten en hypotheekaktekosten zijn <strong>opgenomen in het geleende bedrag</strong> — uw inbreng dekt enkel de aankoopprijs. Sommige banken staan dit toe tot 125% van de waarde van het pand.</p>
               <div id="credit125Detail" style="display:none;margin-top:10px;font-size:.78rem;color:var(--text-mid);border-top:1px dashed rgba(26,122,138,.25);padding-top:10px;line-height:1.8;">
@@ -984,8 +1031,8 @@
             <div class="field" style="grid-column: 1 / -1">
               <label>Gebruikt u dit krediet om uw enige woning te financieren?</label>
               <div class="radio-group" id="creditHabitationUnique">
-                <div class="radio-btn active" data-val="oui" onclick="setRadio('creditHabitationUnique',this);calc()">Oui</div>
-                <div class="radio-btn" data-val="non" onclick="setRadio('creditHabitationUnique',this);calc()">Non</div>
+                <div class="radio-btn active" data-val="oui" onclick="setRadio('creditHabitationUnique',this);calc()">Ja</div>
+                <div class="radio-btn" data-val="non" onclick="setRadio('creditHabitationUnique',this);calc()">Nee</div>
               </div>
             </div>
 
@@ -1002,22 +1049,22 @@
             <div class="field" id="fieldMandatLieAchat" style="display:none">
               <label>Is het hypothecair mandaat gekoppeld aan een aankoop?</label>
               <div class="radio-group" id="mandatLieAchat">
-                <div class="radio-btn active" data-val="oui" onclick="setRadio('mandatLieAchat',this);calc()">Oui</div>
+                <div class="radio-btn active" data-val="oui" onclick="setRadio('mandatLieAchat',this);calc()">Ja</div>
                 <div class="radio-btn" data-val="non" onclick="setRadio('mandatLieAchat',this);calc()">Nee / ik weet het niet</div>
               </div>
             </div>
             <div class="field" id="fieldMandatDeuxiemeActe" style="display:none">
               <label>Is het hypothecair mandaat de tweede financieringsakte?</label>
               <div class="radio-group" id="mandatDeuxiemeActe">
-                <div class="radio-btn" data-val="oui" onclick="setRadio('mandatDeuxiemeActe',this);updateMandatHabitationVis();calc()">Oui</div>
+                <div class="radio-btn" data-val="oui" onclick="setRadio('mandatDeuxiemeActe',this);updateMandatHabitationVis();calc()">Ja</div>
                 <div class="radio-btn active" data-val="non" onclick="setRadio('mandatDeuxiemeActe',this);updateMandatHabitationVis();calc()">Nee / ik weet het niet</div>
               </div>
             </div>
             <div class="field" style="grid-column: 1 / -1" id="fieldMandatHabitationUnique" style="display:none">
               <label>Gebruikt u het hypothecair mandaat om uw eigen en enige gezinswoning te financieren?</label>
               <div class="radio-group" id="mandatHabitationUnique">
-                <div class="radio-btn active" data-val="oui" onclick="setRadio('mandatHabitationUnique',this);calc()">Oui</div>
-                <div class="radio-btn" data-val="non" onclick="setRadio('mandatHabitationUnique',this);calc()">Non</div>
+                <div class="radio-btn active" data-val="oui" onclick="setRadio('mandatHabitationUnique',this);calc()">Ja</div>
+                <div class="radio-btn" data-val="non" onclick="setRadio('mandatHabitationUnique',this);calc()">Nee</div>
               </div>
             </div>
 
@@ -1261,7 +1308,7 @@ function updateHabitationPropreInfo() {
         <strong>Domiciliëring:</strong> U moet zich domiciliëren op het adres van het pand binnen <strong>3 jaar</strong> na de notariële akte. <u>Er geldt geen minimale woonperiode</u> daarna (in tegenstelling tot Brussel dat 5 jaar vereist).<br><br>
         <strong>Enige woning:</strong> U mag op de datum van de notariële akte niet de <strong>volle eigendom</strong> bezitten van een ander pand bestemd voor bewoning of een bouwgrond, noch <strong>in België noch in het buitenland</strong>. De voorwaarde wordt strikt gecontroleerd door Vlabel (Vlaamse belastingdienst).<br><br>
         <strong>💡 Blote eigendom / Vruchtgebruik:</strong> Enkel blote eigendom of vruchtgebruik van een ander pand bezitten vormt <u>geen belemmering</u> voor het tarief van 2%. Enkel de volledige eigendom is blokkerend.<br><br>
-        <strong>⚠️ Bouwgrond :</strong> La possession d'un terrain à bâtir fait <u>également</u> obstacle au taux de 2%, même si ce terrain est situé à l'étranger. Vous seriez taxé à 12%.<br><br>
+        <strong>⚠️ Bouwgrond:</strong> Het bezit van een bouwgrond vormt <u>eveneens</u> een hinderpaal voor het tarief van 2%, zelfs als dit perceel in het buitenland ligt. U zou worden belast aan 12%.<br><br>
         <strong>🏠 Bescheiden woning:</strong> Als de aankoopprijs niet meer bedraagt dan <strong>€220.000</strong> (of <strong>€240.000</strong> in centrumsteden en de Vlaamse Rand) geniet u een bijkomende korting van <strong>€1.867</strong> op uw registratierechten (mits voldaan aan de voorwaarden van het tarief van 2%).<br><br>
         <strong>💡 Bezit u al een woning?</strong> U kunt toch genieten van het tarief van 2% als u zich ertoe verbindt <strong>dit pand te verkopen binnen 2 jaar</strong> na de aankoopakte.<br><br>
         <strong>💡 Aankoop als koppel:</strong> Als u samen koopt en de ene voldoet aan de voorwaarden maar de andere niet, geldt het tarief van 2% enkel op het aandeel van degene die voldoet aan de voorwaarden. <u>Belangrijk verschil met Brussel</u> waar beiden aan de voorwaarden moeten voldoen.<br>
@@ -1305,7 +1352,7 @@ function setRadio(group, el) {
     const isTerrain = state.typeBien === 'terrain';
     const isFlandre = state.region === 'flandre';
     document.getElementById('labelHabitationPropre').textContent = isTerrain
-      ? 'Avez-vous l\'intention de construire votre propre et unique habitation sur ce terrain et de l\'occuper dans un délai de 5 jaar ?'
+      ? 'Bent u van plan op dit perceel uw eigen en enige woning te bouwen en er binnen 5 jaar te gaan wonen?'
       : 'Eigen en enige woning?';
     // En Flandre, terrain = toujours 12%, la question est inutile
     document.getElementById('fieldHabitationPropre').style.display = (isTerrain && isFlandre) ? 'none' : '';
@@ -2184,7 +2231,7 @@ calc();
     La Caverne de la Compta kan in geen geval aansprakelijk worden gesteld voor directe of indirecte schade als gevolg van het gebruik van de verkregen informatie.
     De gebruiker is als enige verantwoordelijk voor beslissingen genomen op basis van de simulatieresultaten.
     <strong style="color:#4A6279;">Raadpleeg een accountant, fiscaal adviseur of notaris</strong> vóór elke beslissing. <strong style="color:#4A6279;">La Caverne de la Compta is geen erkend financieel, fiscaal of juridisch adviseur</strong> en de gepubliceerde informatie vormt in geen geval een gepersonaliseerd advies.
-    — <a href="mentions-legales.html#disclaimer" style="color:#1A7A8A;text-decoration:none;">Juridische vermeldingen complètes</a>
+    — <a href="mentions-legales.html#disclaimer" style="color:#1A7A8A;text-decoration:none;">Volledige juridische vermeldingen</a>
   </div>
 </div>
 <div style="margin:32px auto;text-align:center;max-width:100%;">
@@ -2200,7 +2247,7 @@ calc();
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
   <div class="footer-links">
     <a href="/nl/mentions-legales/">Wettelijke vermeldingen</a>
-    <a href="/nl/mentions-legales/#rgpd">RGPD</a>
+    <a href="/nl/mentions-legales/#rgpd">AVG</a>
     <a href="/nl/mentions-legales/#cookies">Cookies</a>
     <a href="#">Contact</a>
   </div>
@@ -2209,8 +2256,8 @@ calc();
 
 <!-- ── BANNIÈRE COOKIES APD-CONFORME ── -->
 <style>
-#cookieOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99998;backdrop-filter:blur(3px);}
-#cookieBanner{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:99999;
+#cookieOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:1000000;backdrop-filter:blur(3px);}
+#cookieBanner{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1000001;
   background:#fff;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.3);
   width:min(580px,94vw);max-height:88vh;overflow-y:auto;font-family:'Inter',sans-serif;}
 /* Main view */
@@ -2254,44 +2301,44 @@ calc();
 <div id="cookieBanner" role="dialog" aria-modal="true">
   <!-- Vue principale -->
   <div id="cbMain">
-    <h2 class="cb-title">Vos paramètres de confidentialité</h2>
-    <p class="cb-text">La Caverne de la Compta utilise des cookies pour collecter des informations à propos de votre appareil, votre navigateur et votre comportement de navigation.</p>
-    <p class="cb-text">En outre, si vous nous en donnez l'autorisation, nous pouvons utiliser vos données pour <strong>personnaliser le contenu</strong> et <strong>afficher des publicités pertinentes</strong> via Google AdSense. Nous mesurons également l'audience avec <strong>Google Analytics</strong> pour améliorer le site.</p>
-    <p class="cb-text">En cliquant sur « D'accord », vous donnez votre consentement. Si vous ne souhaitez pas tout autoriser, cliquez sur « Modifier manuellement ». Vous pouvez modifier vos choix à tout moment via le lien <strong>Gestion des cookies</strong> en bas de page. Pour en savoir plus, consultez notre <a href="/fr/mentions-legales/#cookies">politique de cookies</a>.</p>
+    <h2 class="cb-title">Uw privacyinstellingen</h2>
+    <p class="cb-text">La Caverne de la Compta gebruikt cookies om informatie te verzamelen over uw apparaat, uw browser en uw surfgedrag.</p>
+    <p class="cb-text">Indien u ons daarvoor toestemming geeft, kunnen wij uw gegevens gebruiken om <strong>content te personaliseren</strong> en <strong>relevante advertenties te tonen</strong> via Google AdSense. Wij meten ook het bezoekersverkeer met <strong>Google Analytics</strong> om de site te verbeteren.</p>
+    <p class="cb-text">Door op « Akkoord » te klikken, geeft u uw toestemming. Als u niet alles wilt toestaan, klik dan op « Handmatig aanpassen ». U kunt uw keuzes te allen tijde wijzigen via de link <strong>Cookiebeheer</strong> onderaan de pagina. Raadpleeg onze <a href="/nl/mentions-legales/#cookies">cookieverklaring</a> voor meer informatie.</p>
     <div class="cb-btns">
-      <button class="cb-btn-agree" onclick="cookieAcceptAll()">D'accord</button>
-      <button class="cb-btn-modify" onclick="cbShowDetail()">Modifier manuellement</button>
+      <button class="cb-btn-agree" onclick="cookieAcceptAll()">Akkoord</button>
+      <button class="cb-btn-modify" onclick="cbShowDetail()">Handmatig aanpassen</button>
     </div>
   </div>
   <!-- Vue détaillée -->
   <div id="cbDetail">
-    <button class="cb-back" onclick="cbShowMain()">← Retour</button>
-    <h2 class="cb-title">Définir vos préférences</h2>
+    <button class="cb-back" onclick="cbShowMain()">← Terug</button>
+    <h2 class="cb-title">Uw voorkeuren instellen</h2>
     <div class="cb-cat">
       <div>
-        <div class="cb-cat-name">🔒 Nécessaires <span style="font-size:0.7rem;color:#F5A623;">(toujours actifs)</span></div>
-        <div class="cb-cat-desc">Indispensables au fonctionnement du site : navigation, sécurité, préférences de langue. Ne peuvent pas être désactivés.</div>
+        <div class="cb-cat-name">🔒 Noodzakelijk <span style="font-size:0.7rem;color:#F5A623;">(altijd actief)</span></div>
+        <div class="cb-cat-desc">Onmisbaar voor het functioneren van de site: navigatie, beveiliging, taalvoorkeur. Kunnen niet worden uitgeschakeld.</div>
       </div>
       <label class="cb-toggle required"><input type="checkbox" checked disabled><span class="cb-toggle-slider"></span></label>
     </div>
     <div class="cb-cat">
       <div>
-        <div class="cb-cat-name">📊 Analytiques <span style="font-size:0.7rem;color:#8A9BB0;">(Google Analytics)</span></div>
-        <div class="cb-cat-desc">Nous permettent de comprendre comment vous utilisez le site pour l'améliorer continuellement.</div>
+        <div class="cb-cat-name">📊 Analytisch <span style="font-size:0.7rem;color:#8A9BB0;">(Google Analytics)</span></div>
+        <div class="cb-cat-desc">Helpt ons te begrijpen hoe u de site gebruikt, zodat wij deze voortdurend kunnen verbeteren.</div>
       </div>
       <label class="cb-toggle"><input type="checkbox" id="cbAnalytics" checked><span class="cb-toggle-slider"></span></label>
     </div>
     <div class="cb-cat">
       <div>
-        <div class="cb-cat-name">📢 Publicitaires <span style="font-size:0.7rem;color:#8A9BB0;">(Google AdSense)</span></div>
-        <div class="cb-cat-desc">Permettent d'afficher des publicités pour financer le site gratuitement pour vous.</div>
+        <div class="cb-cat-name">📢 Advertenties <span style="font-size:0.7rem;color:#8A9BB0;">(Google AdSense)</span></div>
+        <div class="cb-cat-desc">Maakt het mogelijk advertenties te tonen om de site gratis voor u te financieren.</div>
       </div>
       <label class="cb-toggle"><input type="checkbox" id="cbAds" checked><span class="cb-toggle-slider"></span></label>
     </div>
     <div class="cb-detail-btns">
-      <button class="cb-btn-saveall" onclick="cookieAcceptAll()">Tout accepter</button>
-      <button class="cb-btn-saveprefs" onclick="cookieSavePrefs()">Enregistrer mes choix</button>
-      <button class="cb-btn-refuseall" onclick="cookieRefuseAll()">Tout refuser</button>
+      <button class="cb-btn-saveall" onclick="cookieAcceptAll()">Alles accepteren</button>
+      <button class="cb-btn-saveprefs" onclick="cookieSavePrefs()">Mijn keuzes opslaan</button>
+      <button class="cb-btn-refuseall" onclick="cookieRefuseAll()">Alles weigeren</button>
     </div>
   </div>
 </div>

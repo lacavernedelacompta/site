@@ -3,17 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mileage Allowance Simulator Belgium 2026</title>
+<title>Simulateur Mileage Allowance Belgique 2026</title>
+  <meta name="keywords" content="mileage allowance belgium 2026, kilometre reimbursement belgium, ONSS mileage rate, expense report belgium, car expenses belgium">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://lacavernedelacompta.be/en/remboursement-frais/">
-  <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/remboursement-frais/">
+  <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/en/remboursement-frais/">
   <link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/remboursement-frais/">
   <link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/remboursement-frais/">
   <link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/remboursement-frais/">
-  <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/remboursement-frais/">
-  <meta name="description" content="Calculate and generate your mileage reimbursement in Belgium. 2026 ONSS rate, automatic distance calculation via OpenStreetMap, PDF export.">
-  <meta property="og:image" content="https://lacavernedelacompta.be/logo.png">
+  <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/en/remboursement-frais/">
+  <meta name="description" content="Calculez et générez votre note de frais kilométriques en Belgique. Rate ONSS 2026, calcul automatique des distances, génération PDF.">
+    <meta property="og:title" content="Mileage Allowance Simulator Belgium 2026 — Expense Report PDF">
+  <meta property="og:description" content="Calculate and generate your mileage expense report in Belgium. ONSS rate 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="La Caverne de la Compta">
+  <meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
+  <meta property="og:url" content="https://lacavernedelacompta.be/en/remboursement-frais/">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -164,97 +173,220 @@
   @media print {
     @page {
       size: A4 portrait;
-      margin: 12mm 14mm 12mm 14mm;
+      margin: 0;
     }
 
-    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; box-sizing: border-box !important; }
 
-    body { background: white !important; font-size: 11pt; }
+    /* Show ONLY the invoice — hide everything else */
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      background: white !important;
+      font-size: 10pt;
+      font-family: Arial, Helvetica, sans-serif;
+      width: 210mm !important;
+    }
 
-    .app-header, .profiles-grid, .mode-selector,
-    #modeA-content, #modeB-content, .btn-row,
-    .inv-section-title, .trips-banner, .toast { display: none !important; }
+    /* Hide all page chrome */
+    nav, footer, .app-header,
+    .profiles-grid, .mode-selector,
+    #modeA-content, #modeB-content,
+    .btn-row, .inv-section-title,
+    .trips-banner, .toast,
+    .cookie-banner, #cookieBar { display: none !important; }
 
-    .container { padding: 0 !important; max-width: 100% !important; }
+    /* Show the invoice regardless of JS display:none */
+    .invoice-wrap {
+      display: block !important;
+      visibility: visible !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 210mm !important;
+    }
 
-    .invoice-wrap { display: block !important; }
+    /* Container: strip padding */
+    .container {
+      padding: 0 !important;
+      margin: 0 !important;
+      max-width: 210mm !important;
+    }
+
+    /* Hide everything inside container EXCEPT the invoice-wrap */
+    .container > *:not(.invoice-wrap) { display: none !important; }
 
     .invoice {
       box-shadow: none !important;
       border: none !important;
       border-radius: 0 !important;
-      width: 100%;
+      width: 210mm !important;
+      margin: 0 !important;
     }
 
+    /* ── Header ── */
     .invoice-header {
       background: #0D1B2A !important;
       color: white !important;
-      padding: 16mm 14mm 12mm !important;
+      padding: 12mm 14mm 10mm !important;
       border-radius: 0 !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: flex-start !important;
     }
     .invoice-header .inv-title {
-      font-size: 20pt !important;
+      font-size: 18pt !important;
+      font-weight: 700 !important;
       color: #e8d5a3 !important;
+      margin: 0 0 4px 0 !important;
+      font-family: Georgia, serif !important;
+    }
+    .invoice-header .inv-ref {
+      font-size: 8pt !important;
+      color: rgba(255,255,255,0.5) !important;
+      letter-spacing: 0.05em !important;
+    }
+    .invoice-header .inv-date {
+      text-align: right !important;
     }
     .invoice-header .inv-date strong {
+      display: block !important;
       color: #C9A84C !important;
-      font-size: 12pt !important;
+      font-size: 11pt !important;
+      margin-bottom: 3px !important;
     }
-    .invoice-header .inv-ref { color: rgba(255,255,255,0.6) !important; }
-    .invoice-header .inv-date { color: rgba(255,255,255,0.8) !important; }
 
+    /* ── Body ── */
     .invoice-body {
-      padding: 10mm 14mm !important;
+      padding: 8mm 14mm !important;
+      background: white !important;
     }
 
+    /* ── Parties ── */
     .inv-parties {
-      margin-bottom: 8mm !important;
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      gap: 14mm !important;
+      margin-bottom: 7mm !important;
       padding-bottom: 6mm !important;
+      border-bottom: 1px solid #ddd !important;
     }
-    .inv-party .party-title { color: #C9A84C !important; font-size: 8pt !important; }
-    .inv-party .party-name  { font-size: 13pt !important; }
-    .inv-party .party-line  { font-size: 9pt !important; }
+    .inv-party .party-title {
+      font-size: 7pt !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.12em !important;
+      text-transform: uppercase !important;
+      color: #C9A84C !important;
+      margin-bottom: 3px !important;
+    }
+    .inv-party .party-name {
+      font-size: 12pt !important;
+      font-weight: 600 !important;
+      color: #0D1B2A !important;
+    }
+    .inv-party .party-line {
+      font-size: 8pt !important;
+      color: #666 !important;
+      line-height: 1.5 !important;
+      margin-top: 2px !important;
+    }
 
-    table { font-size: 9pt !important; page-break-inside: auto; }
-    tr    { page-break-inside: avoid; page-break-after: auto; }
-    thead { display: table-header-group; }
+    /* ── Table ── */
+    table {
+      width: 100% !important;
+      font-size: 9pt !important;
+      border-collapse: collapse !important;
+      page-break-inside: auto !important;
+      margin-bottom: 6mm !important;
+    }
+    div[style*="overflow-x"] { overflow: visible !important; }
+    thead { display: table-header-group !important; }
+    tr { page-break-inside: avoid !important; page-break-after: auto !important; }
 
     .inv-table th {
       background: #f0ede6 !important;
       color: #0D1B2A !important;
-      font-size: 8pt !important;
+      font-size: 7.5pt !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.06em !important;
       padding: 5px 8px !important;
+      border-bottom: 2px solid #d4c9b8 !important;
+      text-align: left !important;
     }
-    .inv-table td { padding: 6px 8px !important; font-size: 9pt !important; }
+    .inv-table td {
+      padding: 5px 8px !important;
+      font-size: 9pt !important;
+      border-bottom: 1px solid #eee !important;
+      color: #1a2a3a !important;
+    }
+    .td-amount, .inv-table th:last-child, .inv-table td:last-child {
+      text-align: right !important;
+    }
+    .td-amount { font-weight: 600 !important; }
 
+    /* ── Total bar ── */
     .inv-total-bar {
       background: #0D1B2A !important;
       color: white !important;
-      border-radius: 4px !important;
-      padding: 8px 12px !important;
-      margin-top: 6mm !important;
+      border-radius: 6px !important;
+      padding: 6px 12px !important;
+      margin-top: 4mm !important;
+      margin-bottom: 6mm !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      page-break-inside: avoid !important;
     }
-    .inv-total-bar .tot-label  { color: #e8d5a3 !important; font-size: 8pt !important; }
-    .inv-total-bar .tot-amount { color: #C9A84C !important; font-size: 20pt !important; }
+    .inv-total-bar .tot-label {
+      font-size: 7pt !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.1em !important;
+      color: #e8d5a3 !important;
+      font-weight: 700 !important;
+    }
+    #inv-total-sub {
+      font-size: 7.5pt !important;
+      color: rgba(255,255,255,0.5) !important;
+      margin-top: 2px !important;
+    }
+    .inv-total-bar .tot-amount {
+      font-size: 20pt !important;
+      font-weight: 700 !important;
+      color: #C9A84C !important;
+      font-family: Georgia, serif !important;
+    }
 
-    .inv-
+    /* ── Legal note ── */
+    .invoice-body > div:last-of-type {
+      font-size: 7.5pt !important;
+      padding: 6px 10px !important;
+      background: #f5f2ec !important;
+      border-radius: 4px !important;
+      color: #666 !important;
+      line-height: 1.7 !important;
+      page-break-inside: avoid !important;
+    }
 
+    /* ── Payment section ── */
     #inv-payment {
       background: #0D1B2A !important;
-      padding: 8mm 14mm !important;
+      padding: 6mm 14mm !important;
       border-top: 3px solid #C9A84C !important;
-      page-break-inside: avoid;
+      page-break-inside: avoid !important;
     }
     #inv-payment div { color: white !important; }
 
-    /* Legal note box */
-    .invoice-body > div:last-of-type {
-      font-size: 8pt !important;
-      padding: 8px 10px !important;
-      margin-top: 5mm !important;
-      background: #f0ede6 !important;
-      border-radius: 4px !important;
+    /* ── Footer ── */
+    .inv-footer {
+      display: flex !important;
+      justify-content: space-between !important;
+      padding: 4px 14mm !important;
+      background: #f5f2ec !important;
+      border-top: 1px solid #ddd !important;
+      font-size: 7pt !important;
+      color: #999 !important;
     }
+    .inv-footer a { color: #999 !important; }
   }
 nav {
     background: #ffffff;
@@ -318,7 +450,150 @@ nav {
   .dd-menu a:last-child{border-bottom:none;}
   .dd-menu a:hover{background:var(--teal-pale);color:var(--teal);}
 
-</style>
+/* ── Footer ── */
+  footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:.76rem;}
+  .footer-links{display:flex;gap:20px;}
+  .footer-links a{color:rgba(255,255,255,.35);text-decoration:none;}
+  .footer-links a:hover{color:#fff;}
+  @media(max-width:600px){footer{padding-left:14px;padding-right:14px;flex-direction:column;text-align:center;}}
+
+  /* Badges */
+  .badge { display:inline-block; padding:2px 8px; border-radius:4px; font-size:0.72rem; font-weight:600; }
+  .badge.required { background:#E8F6F8; color:#1A7A8A; }
+  .badge.analytics { background:#FFF3E0; color:#C9A84C; }
+  .badge.ads { background:#FCE4EC; color:#C0392B; }
+  .badge.functional { background:#E8F5E9; color:#1A6640; }
+
+  
+  }
+
+  
+  /* Fix overflow tables on mobile */
+    table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .chart-container, canvas { max-width: 100% !important; }
+  }
+  
+  }
+
+  
+  /* ── LANG DROPDOWN ── */
+  .lang-dropdown { position: relative; display: inline-block; position: relative !important; display: inline-block !important;}
+  .lang-current {
+    display: flex; align-items: center; gap: 6px;
+    padding: 5px 10px; border-radius: 6px;
+    background: #1A7A8A; color: #fff;
+    font-size: 0.78rem; font-weight: 700;
+    cursor: pointer; border: none;
+    letter-spacing: 0.05em; white-space: nowrap;
+  }
+  .lang-current:after { content: ' ▾'; font-size: 0.7rem; }
+  .lang-menu {
+    display: none; position: absolute;
+    top: calc(100% + 4px); right: 0;
+    background: #fff; border: 1px solid #DDE5EF;
+    border-radius: 8px; box-shadow: 0 8px 24px rgba(13,27,42,0.12);
+    min-width: 120px; z-index:9000; overflow: hidden;
+  }
+  .lang-dropdown.open .lang-menu { display: block; }
+  .lang-menu a {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px; font-size: 0.82rem; font-weight: 500;
+    color: #1A2535; text-decoration: none;
+    border-bottom: 1px solid #F4F7FA;
+    transition: background 0.15s;
+  }
+  .lang-menu a:last-child { border-bottom: none; }
+  .lang-menu a:hover { background: #E8F5F7; color: #1A7A8A; }
+  .lang-menu a.active { font-weight: 700; color: #1A7A8A; }
+
+  
+  /* ── GLOBAL OVERFLOW FIX ── */
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  @media (max-width: 900px) {
+    * { box-sizing: border-box; }
+    .mayn, .container, .wrapper, .page-wrap, .content, .hero-inner,
+    .disclaimer-inner, .card, .form-card, .result-card, .table-wrap {
+      max-width: 100% !important;
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+    }
+    table {
+      display: block !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+      max-width: 100% !important;
+    }
+    canvas { max-width: 100% !important; height: auto !important; }
+    input[type=range] { max-width: 100% !important; }
+    .grid, [style*="display:grid"], [style*="display: grid"] {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  
+  
+  /* ── MOBILE NAV ── */
+  .hamburger { display: none; }
+  @media (max-width: 768px) {
+    .mayn-nav { padding: 0 16px !important; height: 56px !important; }
+    .nav-links { display: none !important; }
+    .nav-links.mobile-open {
+      display: flex !important;
+      flex-direction: column;
+      position: fixed;
+      top: 56px; left: 0; right: 0;
+      background: #fff;
+      border-bottom: 2px solid #22A3B8;
+      box-shadow: 0 8px 32px rgba(13,27,42,0.15);
+      z-index: 9998;
+      padding: 8px 0;
+      max-height: calc(100vh - 56px);
+      overflow-y: auto;
+    }
+    .nav-links.mobile-open > li > a {
+      display: block !important;
+      padding: 14px 20px;
+      font-size: 1rem;
+      border-bottom: 1px solid #DDE5EF;
+      color: #1A2535 !important;
+      text-align: center;
+    }
+    .dd-wrap { width: 100%; }
+    .dd-btn { width: 100% !important; text-align: center; padding: 14px 20px; font-size: 1rem; border-bottom: 1px solid #DDE5EF; background: none; border-left: none; border-right: none; border-top: none; border-radius: 0; color: #1A2535; }
+    .dd-menu {
+      position: static !important;
+      box-shadow: none !important;
+      border: none !important;
+      border-radius: 0 !important;
+      background: #F4F7FA !important;
+      min-width: unset !important;
+      display: none !important;
+    }
+    .dd-wrap.dd-open .dd-menu { display: block !important; }
+    .dd-menu a { padding: 12px 20px 12px 40px !important; border-bottom: 1px solid #DDE5EF !important; font-size: 0.9rem !important; display: block !important; }
+    .hamburger {
+      display: flex !important;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      margin-left: auto;
+      background: none;
+      border: none;
+      z-index: 9999;
+      flex-shrink: 0;
+    }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #1A2535; border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    #langSwitcher { margin-left: 8px; }
+  }
+
+  </style>
 <script>function toggleDD(e){
   e.stopPropagation();
   document.getElementById('ddWrap').classList.toggle('dd-open');
@@ -336,29 +611,223 @@ document.addEventListener("click",function(){var d=document.getElementById("ddWr
   "url": "https://lacavernedelacompta.be",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://lacavernedelacompta.be/logo.png",
+    "url": "https://lacavernedelacompta.be/logo.svg",
     "width": 512,
     "height": 512
   },
-  "image": "https://lacavernedelacompta.be/logo.png"
+  "image": "https://lacavernedelacompta.be/logo.svg"
 }
 </script>
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
-<!-- CACHE-BUST-v8-en/remboursement-frais/index.html -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@lacavernecompta">
+  <meta name="twitter:title" content="Simulateur Indemnité Kilométrique Belgique 2026">
+  <meta name="twitter:description" content="Calculez et générez votre note de frais kilométriques. Taux ONSS 2026, génération PDF.">
+  <meta name="twitter:image" content="https://lacavernedelacompta.be/logo.svg">
+<!-- CACHE-BUST-v8-fr/remboursement-frais/index.html -->
+<!-- Google tag (gtag.js) -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{
+  analytics_storage:'denied',
+  ad_storage:'denied',
+  ad_user_data:'denied',
+  ad_personalization:'denied',
+  wait_for_update:500
+});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNHZDLVPEL"></script>
+<script>
+gtag('js', new Date());
+gtag('config', 'G-WNHZDLVPEL');
+</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Mileage Allowance Simulator Belgium 2026 — Expense Report PDF",
+  "url": "https://lacavernedelacompta.be/en/remboursement-frais/",
+  "description": "Calculate and generate your mileage expense report in Belgium. ONSS rate 2026.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "La Caverne de la Compta",
+    "url": "https://lacavernedelacompta.be"
+  }
+}
+</script>
 </head>
 <body>
+<nav class="mayn-nav">
+<a href="/en/" class="logo" style="text-decoration:none;display:flex;align-items:center;">
+    <svg width="148" height="38" viewBox="0 0 148 38" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <defs>
+        <linearGradient id="hGn" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0D1B2A"/>
+          <stop offset="100%" style="stop-color:#1A3A5C"/>
+        </linearGradient>
+      </defs>
+      <!-- Hexagone -->
+      <polygon points="19,2 31,9 31,23 19,30 7,23 7,9" fill="url(#hGn)"/>
+      <!-- Reflet top -->
+      <polygon points="19,2 31,9 25,9 19,5 13,9 7,9" fill="rgba(255,255,255,.07)"/>
+      <!-- Bras balance -->
+      <line x1="9" y1="15" x2="29" y2="15" stroke="rgba(255,255,255,.5)" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Tige -->
+      <rect x="17.5" y="15" width="2.5" height="11" rx="1.2" fill="rgba(255,255,255,.35)"/>
+      <!-- Pivot gold -->
+      <circle cx="18.8" cy="15" r="3.2" fill="#C9A84C"/>
+      <circle cx="18.8" cy="15" r="1.4" fill="white" opacity=".9"/>
+      <!-- Socle -->
+      <rect x="13" y="27" width="12" height="2.5" rx="1.2" fill="rgba(255,255,255,.2)"/>
+      <!-- Plateau gauche -->
+      <line x1="9" y1="15" x2="7" y2="21.5" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="7" cy="24" rx="6.5" ry="2.5" fill="#1A7A8A"/>
+      <!-- Plateau droit -->
+      <line x1="29" y1="15" x2="31" y2="20" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="31" cy="22.5" rx="6.5" ry="2.5" fill="#22A3B8"/>
+      <!-- Étoile -->
+      <circle cx="27" cy="7" r="2.5" fill="#C9A84C" opacity=".85"/>
+      <!-- Texte -->
+      <text x="42" y="15.5" font-family="'Playfair Display',serif" font-size="12.5" font-weight="900" fill="#0D1B2A" letter-spacing="-.2">La Caverne</text>
+      <rect x="42" y="18.5" width="104" height="1" rx=".5" fill="#DDE5EF"/>
+      <rect x="42" y="18.5" width="18" height="1" rx=".5" fill="#C9A84C"/>
+      <text x="42" y="30" font-family="'Playfair Display',serif" font-size="10.5" font-weight="700" font-style="italic" fill="#1A7A8A" letter-spacing="-.1">de la Compta</text>
+    </svg>
+  </a>
+        <ul class="nav-links">
+    <li><a href="https://lacavernedelacompta.be/en/">🏠 Home</a></li>
+    <li class="dd-wrap" id="ddWrap">
+      <button class="dd-btn" onclick="toggleDD(event)">🧰 Our tools <span class="dd-chevron">▼</span></button>
+      <div class="dd-menu" id="ddMenu">
+        <a href="/en/simulateur-immobilier/"><span class="dd-icon">🏠</span>Property Simulator</a>
+        <a href="/en/simulateur-credit/"><span class="dd-icon">💳</span>Credit Simulator</a>
+        <a href="/en/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Rent Requalification</a>
+        <a href="/en/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Chart of Accounts</a>
+        <a href="/en/simulateur-interets-composes/"><span class="dd-icon">📈</span>Compound Interest</a>
+        <a href="/en/simulateur-retenue/"><span class="dd-icon">🧾</span>Invoice Withholding</a>
+        <a href="/en/quick-memento-fiscal/"><span class="dd-icon">📌</span>Tax Quick Reference</a>
+        <a href="/en/remboursement-frais/"><span class="dd-icon">🚗</span>Mileage Allowance</a>
+      </div>
+    </li>
+  </ul>
+  <!-- ══ SWITCHER LANGUE ══ -->
+  <div class="lang-dropdown" style="position:relative;display:inline-block;" id="langSwitcher">
+    <button class="lang-current" onclick="toggleLangMenu(event)">🇬🇧 EN</button>
+    <div class="lang-menu">
+<a href="https://lacavernedelacompta.be/en/remboursement-frais/" class="active">🇫🇷 Français</a>
+<a href="https://lacavernedelacompta.be/nl/remboursement-frais/" class="">🇧🇪 Nederlands</a>
+<a href="https://lacavernedelacompta.be/en/remboursement-frais/" class="active">🇬🇧 English</a>
+<a href="https://lacavernedelacompta.be/de/remboursement-frais/" class="">🇩🇪 Deutsch</a>
+    </div>
+  </div>
+  <!-- ══════════════════════ -->
+
+  
+  <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
 
 
+<header class="app-header">
+  <div>
+    <h1 class="logo" style="font-size:inherit;margin:0;">Mileage <span>Allowance</span></h1>
+    <div class="subtitle">Expense report generator · Belgium</div>
+  </div>
+  <div class="header-divider"></div>
+  <div style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.7;">
+    BOSA rate 2024–2026 · Distance OpenStreetMap<br>
+    <span style="color:var(--gold-light)">✦ Profiles & trips automatically saved</span>
+  </div>
+</header>
 
-  <!-- RGPD NOTICE -->
+<div class="container">
+
+  <!-- PROFILS -->
+  <div class="profiles-grid">
+    <div class="card">
+      <div class="card-title">
+        <div class="card-title-left">👤 My information <span class="pill pill-blue" id="pill-person">Not saved</span></div>
+      </div>
+      <div class="form-grid" style="gap:12px;">
+        <div class="field"><label>First name</label><input type="text" id="p_prenom" placeholder="Marie" oninput="markUnsaved('person')"></div>
+        <div class="field"><label>Last name</label><input type="text" id="p_nom" placeholder="Dupont" oninput="markUnsaved('person')"></div>
+        <div class="field" style="grid-column:1/-1"><label>Street and number</label><input type="text" id="p_rue" placeholder="Rue de la Paix 12" oninput="markUnsaved('person')"></div>
+        <div class="field"><label>Postal code</label><input type="text" id="p_cp" placeholder="1000" oninput="markUnsaved('person')" maxlength="6"></div>
+        <div class="field"><label>City</label><input type="text" id="p_ville" placeholder="Bruxelles" oninput="markUnsaved('person')"></div>
+        <div class="field">
+          <label>N° national <span style="font-size:10px;font-weight:400;color:var(--gray);text-transform:none;letter-spacing:0;">(optional)</span></label>
+          <input type="text" id="p_nn" placeholder="00.00.00-000.00" maxlength="15" oninput="maskNN(this); markUnsaved('person')">
+        </div>
+        <div class="field">
+          <label>IBAN <span style="font-size:10px;font-weight:400;color:var(--gray);text-transform:none;letter-spacing:0;">(optional)</span></label>
+          <input type="text" id="p_iban" placeholder="BE00 0000 0000 0000" maxlength="19" oninput="maskIBAN(this); markUnsaved('person')" onfocus="prefixBE('p_iban')">
+        </div>
+      </div>
+      <div class="save-row">
+        <span class="save-hint" id="hint-person"></span>
+        <button class="btn btn-sm btn-save" onclick="saveProfile('person')">💾 Save</button>
+        <button class="btn btn-sm btn-ghost" onclick="clearProfile('person')">Clear</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">
+        <div class="card-title-left">🏢 Company / Employer <span class="pill pill-blue" id="pill-company">Not saved</span></div>
+      </div>
+      <div class="form-grid" style="gap:12px;">
+        <div class="field" style="grid-column:1/-1">
+          <label style="display:flex;align-items:center;justify-content:space-between;">
+            <span>Company number (CBE)</span>
+            <span id="bce-status" style="font-size:11px;font-weight:400;text-transform:none;letter-spacing:0;"></span>
+          </label>
+          <div style="display:flex;gap:8px;">
+            <input type="text" id="c_bce" placeholder="BE 0000.000.000" maxlength="15" oninput="maskBCE(this); markUnsaved('company'); onBceInput(this.value)" onfocus="prefixBE('c_bce')" style="flex:1;">
+            <button onclick="lookupBce()" id="btnBce" style="background:var(--blue);color:white;border:none;border-radius:8px;padding:0 14px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;cursor:pointer;white-space:nowrap;height:40px;transition:all 0.2s;" onmouseover="this.style.background='var(--navy)'" onmouseout="this.style.background='var(--blue)'">🔍 Search</button>
+          </div>
+        </div>
+        <div class="field" style="grid-column:1/-1">
+          <label style="display:flex;align-items:center;justify-content:space-between;">
+            <span>EU VAT number (VIES)</span>
+            <span id="vies-status" style="font-size:11px;font-weight:400;text-transform:none;letter-spacing:0;"></span>
+          </label>
+          <div style="display:flex;gap:8px;">
+            <input type="text" id="c_vat" placeholder="BE 0000.000.000" maxlength="15" oninput="maskVAT(this); markUnsaved('company'); onVatInput(this.value)" onfocus="prefixBE('c_vat')" style="flex:1;">
+            <button onclick="lookupVies()" id="btnVies" style="background:var(--blue);color:white;border:none;border-radius:8px;padding:0 14px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;cursor:pointer;white-space:nowrap;height:40px;transition:all 0.2s;" onmouseover="this.style.background='var(--navy)'" onmouseout="this.style.background='var(--blue)'">🇪🇺 VIES</button>
+          </div>
+          <div id="vies-result" style="display:none;margin-top:8px;padding:10px 12px;border-radius:8px;background:#E8F6F8;border:1px solid #B2E0E8;font-size:12px;color:#1A7A8A;line-height:1.6;"></div>
+        </div>
+        <div class="field" style="grid-column:1/-1"><label>Company name</label><input type="text" id="c_nom" placeholder="Entreprise SA" oninput="markUnsaved('company')"></div>
+        <div class="field" style="grid-column:1/-1"><label>Street and number</label><input type="text" id="c_rue" placeholder="Avenue des Arts 5" oninput="markUnsaved('company')"></div>
+        <div class="field"><label>Postal code</label><input type="text" id="c_cp" placeholder="1210" oninput="markUnsaved('company')" maxlength="6"></div>
+        <div class="field"><label>City</label><input type="text" id="c_ville" placeholder="Bruxelles" oninput="markUnsaved('company')"></div>
+
+      </div>
+      <div class="save-row">
+        <span class="save-hint" id="hint-company"></span>
+        <button class="btn btn-sm btn-save" onclick="saveProfile('company')">💾 Save</button>
+        <button class="btn btn-sm btn-ghost" onclick="clearProfile('company')">Clear</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- GDPR NOTICE -->
   <div style="background:#E8F6F8;border:1px solid #E8F6F8;border-radius:10px;padding:14px 18px;margin-bottom:24px;display:flex;gap:12px;align-items:flex-start;">
     <span style="font-size:20px;flex-shrink:0;">🔒</span>
     <div style="font-size:12px;color:#1A7A8A;line-height:1.7;">
-      <strong>Your data stays on your device.</strong> No information entered here is sent to a server. Everything is stored only in the local storage (localStorage) of your browser, on this device.<br>
-      Le <strong>national ID number</strong> is sensitive personal data (Belgian law of 8 August 1983). Its use in this form is <strong>entirely optional</strong> — only provide it if your employer explicitly requires it.<br>
-      <span style="color:#8A8F99;">Use the "Clear" buttons in each section to delete all your saved data.</span>
+      <strong>Your data stays on your device.</strong> No information entered here is transmitted to a server. Everything is stored exclusively in your browser (localStorage), on this device.<br>
+      The national ID number is sensitive personal data.(Belgian law of 8 August 1983). Its use in this form is <strong>entirely optional</strong> — only fill it in if your employer explicitly requires it.<br>
+      <span style="color:#8A8F99;">To delete all your saved data, use the "Clear" buttons in each section.</span>
     </div>
   </div>
   <!-- MODE -->
@@ -370,7 +839,7 @@ document.addEventListener("click",function(){var d=document.getElementById("ddWr
     </div>
     <div class="mode-card" id="modeB-card" onclick="setMode('B')">
       <div class="mode-icon">📅</div>
-      <div class="mode-title">Period mode</div>
+      <div class="mode-title">Mode Period</div>
       <div class="mode-desc">Simply enter the number of km per quarter</div>
     </div>
   </div>
@@ -388,7 +857,7 @@ document.addEventListener("click",function(){var d=document.getElementById("ddWr
         <div class="tb-sub" id="bannerSub"></div>
       </div>
       <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
-        <span style="font-size:11px;color:rgba(255,255,255,0.4);">Last saved: <span id="bannerDate"></span></span>
+        <span style="font-size:11px;color:rgba(255,255,255,0.4);">Last saved : <span id="bannerDate"></span></span>
         <button class="btn btn-sm btn-ghost" onclick="clearAllTrips()" style="border-color:rgba(255,255,255,0.25);color:rgba(255,255,255,0.7);">🗑️ Clear all</button>
       </div>
     </div>
@@ -419,28 +888,28 @@ document.addEventListener("click",function(){var d=document.getElementById("ddWr
         </div>
       </div>
 
-      <!-- 2. Departure + Arrival -->
+      <!-- 2. Départ + Arrivée -->
       <div class="addr-row">
         <div class="field">
           <label>Departure point</label>
           <div class="ac-wrap">
-            <input type="text" id="tripFrom" placeholder="Ex: Bruxelles, rue de la Loi 16" autocomplete="off" style="width:100%;">
+            <input type="text" id="tripFrom" placeholder="E.g.: Brussels, rue de la Loi 16" autocomplete="off" style="width:100%;">
             <div class="ac-list" id="acFrom"></div>
           </div>
         </div>
         <div class="field">
           <label>Arrival point</label>
           <div class="ac-wrap">
-            <input type="text" id="tripTo" placeholder="E.g.: Liège, Place Saint-Lambert" autocomplete="off" style="width:100%;">
+            <input type="text" id="tripTo" placeholder="E.g.: Liège, place Saint-Lambert" autocomplete="off" style="width:100%;">
             <div class="ac-list" id="acTo"></div>
           </div>
         </div>
       </div>
 
-      <!-- 3. Km + calculate button -->
+      <!-- 3. Km + bouton calcul -->
       <div class="calc-row">
         <div class="field">
-          <label>Kilometers</label>
+          <label>Kilometres</label>
           <input type="number" id="tripKm" placeholder="auto-calculated or entered manually" min="0" step="0.1">
         </div>
         <div><div style="height:20px;"></div>
@@ -451,9 +920,9 @@ document.addEventListener("click",function(){var d=document.getElementById("ddWr
       </div>
       <div class="calc-status" id="calcStatus"></div>
 
-      <!-- 4. Reason -->
+      <!-- 4. Purpose -->
       <div class="field" style="margin-top:14px;">
-        <label>Reason / Purpose of trip</label>
+        <label>Purpose / Reason for trip</label>
         <textarea id="tripJustif" placeholder="E.g.: Client meeting, site visit, training…"></textarea>
       </div>
 
@@ -465,20 +934,20 @@ document.addEventListener("click",function(){var d=document.getElementById("ddWr
 
     <div class="card card-mb">
       <div class="section-title">
-        Recorded trips
+        Trips recorded
         <span class="pill pill-saved" id="tripsSavedPill" style="display:none;">✓ Saved</span>
       </div>
       <div id="tripsEmpty" class="empty-state">
         <div class="es-icon">🗺️</div>
-        No trips recorded yet.<br>Add your trips above.
+        No trip recorded.<br>Add your trips using the form above.
       </div>
       <div id="tripsTableWrap" style="display:none;overflow-x:auto;">
         <table>
-          <thead><tr><th>Date</th><th>From → To</th><th>Reason</th><th>Km</th><th>Rate</th><th>Amount</th><th></th></tr></thead>
+          <thead><tr><th>Date</th><th>From → To</th><th>Purpose</th><th>Km</th><th>Rate</th><th>Amount</th><th></th></tr></thead>
           <tbody id="tripsBody"></tbody>
         </table>
         <div style="display:flex;justify-content:flex-end;padding:14px 12px 4px;gap:8px;align-items:center;">
-          <span style="font-size:13px;color:var(--gray);">Total :</span>
+          <span style="font-size:13px;color:var(--gray);">Total:</span>
           <span id="tripsTotal" style="font-family:'DM Serif Display',serif;font-size:22px;color:var(--navy);">0,00 €</span>
         </div>
       </div>
@@ -491,7 +960,7 @@ document.addEventListener("click",function(){var d=document.getElementById("ddWr
       <div class="section-title">Mileage per quarter / period</div>
       <div id="periodRows"></div>
       <div style="display:flex;justify-content:flex-end;padding-top:14px;gap:8px;align-items:center;">
-        <span style="font-size:13px;color:var(--gray);">Total :</span>
+        <span style="font-size:13px;color:var(--gray);">Total:</span>
         <span id="periodTotal" style="font-family:'DM Serif Display',serif;font-size:22px;color:var(--navy);">0,00 €</span>
       </div>
     </div>
@@ -500,11 +969,11 @@ document.addEventListener("click",function(){var d=document.getElementById("ddWr
   <div class="card card-mb" style="padding:20px 32px;margin-bottom:24px;">
     <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
       <div style="display:flex;align-items:center;gap:12px;flex:1;min-width:220px;">
-        <label style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;color:var(--blue);white-space:nowrap;">📅 Report date</label>
+        <label style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;color:var(--blue);white-space:nowrap;">📅 Summary date</label>
         <input type="date" id="invoiceDate" style="border:1.5px solid var(--border);border-radius:8px;padding:9px 13px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);background:var(--cream);outline:none;flex:1;">
       </div>
       <div style="display:flex;gap:10px;flex-wrap:wrap;">
-        <button class="btn btn-green" onclick="generateInvoice()" style="padding:13px 28px;font-size:14px;">📄 Generate report</button>
+        <button class="btn btn-green" onclick="generateInvoice()" style="padding:13px 28px;font-size:14px;">📄 Generate summary</button>
         <button class="btn btn-ghost" onclick="resetAll()">🗑️ Clear trips</button>
       </div>
     </div>
@@ -513,16 +982,16 @@ document.addEventListener("click",function(){var d=document.getElementById("ddWr
   <!-- INVOICE -->
   <div class="invoice-wrap fade-in" id="invoiceWrap">
     <div class="section-title inv-section-title" style="margin-bottom:16px;">
-      Report — Expense Note
+      Summary — Expense report
       <span class="pill" style="background:var(--green);color:white;">Generated</span>
     </div>
     <div class="invoice">
       <div class="invoice-header">
         <div>
-          <div class="inv-title">Mileage Expense Note</div>
+          <div class="inv-title">Mileage Reimbursement Report</div>
           <div class="inv-ref" id="inv-ref"></div>
         </div>
-        <div class="inv-date"><strong id="inv-date-val"></strong>Travel expense reimbursement</div>
+        <div class="inv-date"><strong id="inv-date-val"></strong>Mileage expense reimbursement</div>
       </div>
       <div class="invoice-body">
         <div class="inv-parties">
@@ -532,7 +1001,7 @@ document.addEventListener("click",function(){var d=document.getElementById("ddWr
             <div class="party-line" id="inv-person-details"></div>
           </div>
           <div class="inv-party">
-            <div class="party-title">Company / Employer</div>
+            <div class="party-title">Company / Employeur</div>
             <div class="party-name" id="inv-company-name"></div>
             <div class="party-line" id="inv-company-details"></div>
           </div>
@@ -547,13 +1016,13 @@ document.addEventListener("click",function(){var d=document.getElementById("ddWr
           </div>
           <div style="text-align:right;">
             <div class="tot-amount" id="inv-total"></div>
-            <div style="font-size:11px;color:rgba(255,255,255,0.4);">Non-taxable · No social deduction</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.4);">Non-taxable · No social security deductions</div>
           </div>
         </div>
         <div style="margin-top:22px;padding:14px 16px;background:var(--light);border-radius:8px;font-size:12px;color:var(--gray);line-height:1.8;">
           ✦ Mileage rates based on BOSA circulars published in the Belgian Official Gazette — revised quarterly.<br>
-          ✦ The mileage allowance is exempt from tax and social security contributions within the legal limits.<br>
-          ✦ This document is for indicative purposes. Verify applicable conditions with your employer.
+          ✦ The mileage allowance is exempt from tax and social contributions within the legal limits in force.<br>
+          ✦ This document is for indicative purposes. Verify the applicable conditions with your employer.
         </div>
       </div>
       <div id="inv-payment" style="display:none;margin:0 0 0 0;padding:16px 40px;background:var(--navy);border-top:3px solid var(--accent);">
@@ -568,7 +1037,7 @@ document.addEventListener("click",function(){var d=document.getElementById("ddWr
             <div style="font-size:14px;color:var(--accent);font-weight:600;font-family:'DM Serif Display',serif;letter-spacing:1px;" id="inv-pay-iban"></div>
           </div>
           <div>
-            <div style="font-size:10px;color:rgba(255,255,255,0.45);margin-bottom:3px;">Communication</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.45);margin-bottom:3px;">Reference</div>
             <div style="font-size:13px;color:rgba(255,255,255,0.8);" id="inv-pay-ref"></div>
           </div>
           <div>
@@ -583,7 +1052,7 @@ document.addEventListener("click",function(){var d=document.getElementById("ddWr
       </div>
     </div>
     <div class="btn-row" style="margin-top:14px;justify-content:flex-end;">
-      <button class="btn btn-primary" onclick="window.print()">🖨️ Print / PDF</button>
+      <button class="btn btn-primary" onclick="window.print()">🖨️ Save as PDF</button>
     </div>
   </div>
 
@@ -628,7 +1097,7 @@ function showToast(msg, color) {
 //  PROFILES
 // ══════════════════════
 const PERSON_FIELDS  = ['p_prenom','p_nom','p_rue','p_cp','p_ville','p_nn','p_iban'];
-const COMPANY_FIELDS = ['c_nom','c_rue','c_cp','c_ville','c_bce'];
+const COMPANY_FIELDS = ['c_nom','c_rue','c_cp','c_ville','c_bce','c_vat'];
 
 function saveProfile(type) {
   const fields = type === 'person' ? PERSON_FIELDS : COMPANY_FIELDS;
@@ -660,7 +1129,7 @@ function clearProfile(type) {
 function markUnsaved(type) {
   const pid = type === 'person' ? 'pill-person' : 'pill-company';
   const hid = type === 'person' ? 'hint-person' : 'hint-company';
-  document.getElementById(pid).textContent = 'Modified';
+  document.getElementById(pid).textContent = 'Modifié';
   document.getElementById(pid).className = 'pill pill-orange';
   document.getElementById(hid).textContent = 'Unsaved changes';
   document.getElementById(hid).className = 'save-hint';
@@ -674,8 +1143,8 @@ function setPillSaved(type, saved) {
     pill.textContent = '✓ Saved'; pill.className = 'pill pill-saved';
     hint.textContent = 'Data saved in your browser'; hint.className = 'save-hint saved';
   } else {
-    pill.textContent = 'Not saved'; pill.className = 'pill pill-blue';
-    hint.textContent = 'Click Save to memorise'; hint.className = 'save-hint';
+    pill.textContent = 'Unsaved'; pill.className = 'pill pill-blue';
+    hint.textContent = 'Click Save to remember'; hint.className = 'save-hint';
   }
 }
 
@@ -731,10 +1200,25 @@ function clearAllTrips() {
 //  AUTO RATE FROM DATE
 // ══════════════════════
 document.getElementById('tripDate').addEventListener('change', function() {
+  const d = this.value;
+  let matched = false;
   for (const r of RATES) {
-    if (this.value >= r.from && this.value <= r.to) {
-      document.getElementById('tripRate').value = r.rate; break;
+    if (d >= r.from && d <= r.to) {
+      // Use toFixed(4) to match the string value of <option>
+      document.getElementById('tripRate').value = r.rate.toFixed(4);
+      matched = true;
+      break;
     }
+  }
+  if (!matched) {
+    // Date outside known ranges — pick closest or leave as is
+    document.getElementById('tripRate').value = '';
+  }
+  // Show confirmation to user
+  const sel = document.getElementById('tripRate');
+  const chosen = sel.options[sel.selectedIndex];
+  if (chosen && chosen.value) {
+    showToast('📅 Rate auto-selected: ' + chosen.text.split('→')[1].trim(), 'var(--blue)');
   }
 });
 
@@ -751,7 +1235,7 @@ function doAutocomplete(inputId, listId) {
   acTimers[inputId] = setTimeout(function() {
     fetch(
       'https://nominatim.openstreetmap.org/search?format=json&q=' + encodeURIComponent(q) + '&limit=5&addressdetails=1',
-      { headers: { 'Accept-Language': 'en' } }
+      { headers: { 'Accept-Language': 'fr' } }
     ).then(function(r) { return r.json(); })
     .then(function(data) {
       if (!data.length) { list.style.display = 'none'; return; }
@@ -793,7 +1277,7 @@ async function getCoords(inputId) {
   const q = el.value.trim(); if (!q) return null;
   const r = await fetch(
     'https://nominatim.openstreetmap.org/search?format=json&q=' + encodeURIComponent(q) + '&limit=1',
-    { headers: { 'Accept-Language': 'en' } }
+    { headers: { 'Accept-Language': 'fr' } }
   );
   const data = await r.json();
   if (!data.length) return null;
@@ -805,7 +1289,7 @@ async function getCoords(inputId) {
 async function doCalcDistance() {
   const btn = document.getElementById('btnCalc');
   if (!document.getElementById('tripFrom').value.trim() || !document.getElementById('tripTo').value.trim()) {
-    showCalcStatus('error', '⚠️ Please enter both departure and arrival.'); return;
+    showCalcStatus('error', '⚠️ Please enter departure and arrival.'); return;
   }
   btn.disabled = true; document.getElementById('calcIcon').textContent = '⏳';
   showCalcStatus('loading', '🔍 Geolocating addresses…');
@@ -814,14 +1298,14 @@ async function doCalcDistance() {
     const to   = await getCoords('tripTo');
     if (!from) { showCalcStatus('error', '❌ Departure not found.'); done(); return; }
     if (!to)   { showCalcStatus('error', '❌ Arrival not found.'); done(); return; }
-    showCalcStatus('loading', '🗺️ Calculating road route (OpenStreetMap)…');
+    showCalcStatus('loading', '🗺️ Calculating route (OpenStreetMap)…');
     const r = await fetch('https://router.project-osrm.org/route/v1/driving/' + from.lon + ',' + from.lat + ';' + to.lon + ',' + to.lat + '?overview=false');
     const data = await r.json();
-    if (data.code !== 'Ok' || !data.routes.length) { showCalcStatus('error', '❌ Route not found. Please check the addresses.'); done(); return; }
+    if (data.code !== 'Ok' || !data.routes.length) { showCalcStatus('error', '❌ Route not found. Check the addresses.'); done(); return; }
     const km = (data.routes[0].distance / 1000).toFixed(1);
     document.getElementById('tripKm').value = km;
-    showCalcStatus('success', '✅ Distance : <strong>' + km + ' km</strong> par la route');
-  } catch(e) { showCalcStatus('error', '❌ Network error. Please try again.'); }
+    showCalcStatus('success', '✅ Distance: <strong>' + km + ' km</strong> by road');
+  } catch(e) { showCalcStatus('error', '❌ Network error. Please retry.'); }
   done();
   function done() { btn.disabled = false; document.getElementById('calcIcon').textContent = '📍'; }
 }
@@ -852,7 +1336,7 @@ function addTrip() {
   renderTrips();
   updateBanner(new Date().toISOString());
   clearForm();
-  showToast('✅ Trip added and saved! (' + trips.length + ' total)');
+  showToast('✅ Trip added and saved! (' + trips.length + ' au total)');
 }
 
 function clearForm() {
@@ -900,7 +1384,7 @@ function renderTrips() {
 function buildPeriodRows() {
   document.getElementById('periodRows').innerHTML = RATES.map(function(r, i) {
     return '<div class="period-km-row">' +
-      '<div><div class="period-label">' + r.label + '</div><div class="period-rate">Circular ' + r.circ + ' — ' + fmt(r.rate) + ' / km</div></div>' +
+      '<div><div class="period-label">' + r.label + '</div><div class="period-rate">Circulaire ' + r.circ + ' — ' + fmt(r.rate) + ' / km</div></div>' +
       '<div style="display:flex;align-items:center;gap:8px;">' +
         '<label style="font-size:12px;color:var(--gray);">Km :</label>' +
         '<input type="number" class="km-input" id="pKm_' + i + '" placeholder="0" min="0" step="0.1" oninput="calcPeriod()">' +
@@ -959,25 +1443,25 @@ function generateInvoice() {
   document.getElementById('inv-date-val').textContent   = dateStr;
   document.getElementById('inv-person-name').textContent = [prenom, nom].filter(Boolean).join(' ') || 'Not provided';
   document.getElementById('inv-person-details').innerHTML =
-    [adresse ? '📍 ' + adresse : '', nn ? 'Nat. no.: ' + nn : '', iban ? 'IBAN : ' + iban : '']
+    [adresse ? '📍 ' + adresse : '', nn ? 'N° nat. : ' + nn : '', iban ? 'IBAN : ' + iban : '']
     .filter(Boolean).join('<br>') || '<span style="color:#aaa">—</span>';
   document.getElementById('inv-company-name').textContent = cNom || 'Not provided';
   document.getElementById('inv-company-details').innerHTML =
-    [cAdr ? '📍 ' + cAdr : '', cBce ? 'CBE: ' + cBce : '', '']
+    [cAdr ? '📍 ' + cAdr : '', cBce ? 'BCE : ' + cBce : '', '']
     .filter(Boolean).join('<br>') || '<span style="color:#aaa">—</span>';
 
   let total = 0, thead = '', tbody = '', subText = '';
 
   if (mode === 'A') {
     if (!trips.length) { alert('Please enter at least one trip first.'); return; }
-    thead = '<tr><th>Date</th><th>Route</th><th>Reason</th><th>Km</th><th>Rate (€/km)</th><th>Amount</th></tr>';
+    thead = '<tr><th>Date</th><th>Journey</th><th>Purpose</th><th>Km</th><th>Rate (€/km)</th><th>Amount</th></tr>';
     tbody = trips.map(function(t) {
       total += t.amount;
       return '<tr><td>' + fmtD(t.date) + '</td><td><strong>' + t.from + '</strong> → ' + t.to + '</td><td style="font-size:12px;color:#4A6279;">' + (t.justif||'—') + '</td><td>' + t.km + ' km</td><td>' + fmt(t.rate) + '</td><td class="td-amount">' + fmtE(t.amount) + '</td></tr>';
     }).join('');
     subText = trips.length + ' trip(s) · ' + trips.reduce(function(s,t){return s+t.km;},0).toFixed(1) + ' km total';
   } else {
-    thead = '<tr><th>Period</th><th>Circular</th><th>Rate (€/km)</th><th>Kilometers</th><th>Amount</th></tr>';
+    thead = '<tr><th>Period</th><th>Circular</th><th>Rate (€/km)</th><th>Kilometres</th><th>Amount</th></tr>';
     let rows = '';
     RATES.forEach(function(r, i) {
       const km = parseFloat(document.getElementById('pKm_' + i).value) || 0;
@@ -1010,7 +1494,7 @@ function generateInvoice() {
 }
 
 function resetAll() {
-  if (!confirm('Clear all recorded trips?')) return;
+  if (!confirm('Delete all entered trips?')) return;
   trips = []; renderTrips();
   localStorage.removeItem('frais_trips');
   document.getElementById('tripsBanner').style.display = 'none';
@@ -1087,7 +1571,7 @@ function onBceInput(val) {
   if (digits.length === 10) lookupBce();
 }
 
-async async function lookupBce() {
+async function lookupBce() {
   var raw    = document.getElementById('c_bce').value.trim();
   var digits = raw.replace(/[^0-9]/g, '');
 
@@ -1103,10 +1587,15 @@ async async function lookupBce() {
   var num = digits.length === 10 ? digits : '0' + digits;
 
   try {
-    var url  = 'https://cbeapi.be/api/v1/company?q=' + num;
+    var url = 'https://api.kbodata.app/company/' + num;
     var resp = await fetch(url, { headers: { 'Accept': 'application/json' } });
-    if (!resp.ok) throw new Error('not found');
-    var data    = await resp.json();
+    if (!resp.ok) {
+      // Fallback: try Open Data KBO
+      var url2 = 'https://kbodata.be/v2/entity/' + num + '.json';
+      resp = await fetch(url2);
+      if (!resp.ok) throw new Error('not found');
+    }
+    var data = await resp.json();
     var company = Array.isArray(data) ? data[0] : data;
     if (!company) throw new Error('empty');
     bceApply(company, num);
@@ -1118,16 +1607,23 @@ async async function lookupBce() {
 }
 
 function bceApply(company, num) {
-  // Name
-  var name = company.name || company.denomination || company.Denomination || '';
+  // Name — handle kbodata.app, kbodata.be and legacy formats
+  var name = company.name || company.denomination || company.Denomination ||
+             (company.names && company.names[0] && company.names[0].name) || '';
   if (name) document.getElementById('c_nom').value = name;
 
-  // Address — split into rue, cp, ville
-  var adr    = company.address || company.Address || {};
-  var street = adr.street || adr.Street || adr.streetName || '';
-  var hnum   = adr.number || adr.houseNumber || adr.HouseNumber || '';
-  var zip    = adr.zipCode || adr.zip || adr.postalCode || adr.ZipCode || '';
-  var city   = adr.municipality || adr.city || adr.Municipality || '';
+  // Address — handle multiple response shapes
+  var adr = company.address || company.Address ||
+            (company.addresses && company.addresses[0]) || {};
+  var street = adr.street || adr.Street || adr.streetFR || adr.streetNL || adr.streetName || '';
+  var hnum   = adr.number || adr.houseNumber || adr.HouseNumber || adr.houseNum || '';
+  var zip    = adr.zipCode || adr.zip || adr.postalCode || adr.ZipCode || adr.municipalityNL || '';
+  var city   = adr.municipality || adr.city || adr.Municipality ||
+               adr.municipalityFR || adr.cityFR || '';
+  // kbodata.app puts zip inside municipality sometimes
+  if (!zip && adr.municipality && /^\d{4}/.test(adr.municipality)) {
+    zip = adr.municipality.match(/^\d{4}/)[0];
+  }
   if (street) document.getElementById('c_rue').value = street + (hnum ? ' ' + hnum : '');
   if (zip)    document.getElementById('c_cp').value  = zip;
   if (city)   document.getElementById('c_ville').value = city;
@@ -1140,6 +1636,118 @@ function bceApply(company, num) {
   bceSetStatus('✅ Company found!', 'var(--green)');
   showToast('✅ CBE data loaded automatically!');
 }
+// ══════════════════════
+//  VAT / VIES LOOKUP
+// ══════════════════════
+function maskVAT(el) {
+  var raw = el.value.replace(/[^A-Za-z0-9]/g, '').toUpperCase();
+  // Keep country prefix (2 letters) then digits
+  if (raw.length <= 2) { el.value = raw; return; }
+  var cc   = raw.substring(0,2);
+  var nums = raw.substring(2).replace(/[^0-9]/g, '');
+  // Format like BCE for BE: BE 0000.000.000
+  if (cc === 'BE' && nums.length > 0) {
+    var p1 = nums.substring(0,4);
+    var p2 = nums.substring(4,7);
+    var p3 = nums.substring(7,10);
+    el.value = cc + ' ' + p1 + (p2 ? '.' + p2 : '') + (p3 ? '.' + p3 : '');
+  } else {
+    el.value = cc + ' ' + nums;
+  }
+}
+
+function viesSetStatus(msg, color) {
+  var el = document.getElementById('vies-status');
+  el.textContent = msg;
+  el.style.color = color;
+}
+
+function onVatInput(val) {
+  var clean = val.replace(/[^A-Za-z0-9]/g, '');
+  // Auto-trigger when full BE number entered (BE + 10 digits)
+  if (clean.length >= 12 && clean.substring(0,2).toUpperCase() === 'BE') lookupVies();
+}
+
+async function lookupVies() {
+  var raw   = document.getElementById('c_vat').value.trim();
+  var clean = raw.replace(/[^A-Za-z0-9]/g, '').toUpperCase();
+
+  if (clean.length < 10) {
+    viesSetStatus('⚠️ Invalid number', 'var(--red)');
+    return;
+  }
+
+  var cc  = clean.substring(0, 2);
+  var num = clean.substring(2);
+
+  if (!/^[A-Z]{2}$/.test(cc)) {
+    viesSetStatus('⚠️ Préfixe pays manquant (ex: BE, FR, DE)', 'var(--red)');
+    return;
+  }
+
+  viesSetStatus('⏳ VIES verification...', 'var(--blue)');
+  document.getElementById('btnVies').disabled = true;
+  document.getElementById('vies-result').style.display = 'none';
+
+  try {
+    // Official EU VIES REST API
+    var url  = 'https://ec.europa.eu/taxation_customs/vies/rest-api/ms/' + cc + '/vat/' + num;
+    var resp = await fetch(url, { headers: { 'Accept': 'application/json' } });
+
+    if (!resp.ok) throw new Error('vies_error');
+    var data = await resp.json();
+
+    if (!data.valid) {
+      viesSetStatus('❌ VAT number invalid or not registered', 'var(--red)');
+      document.getElementById('vies-result').style.display = 'none';
+    } else {
+      viesSetStatus('✅ VAT number valid', 'var(--green)');
+
+      // Fill company name and address if available and fields are empty
+      if (data.name && data.name !== '---' && !document.getElementById('c_nom').value.trim()) {
+        document.getElementById('c_nom').value = data.name;
+      }
+      if (data.address && data.address !== '---') {
+        // Parse address string e.g. "RUE XYZ 1, 1000 BRUXELLES"
+        var lines = data.address.split(/[\n,]+/).map(function(l) { return l.trim(); }).filter(Boolean);
+        if (lines.length >= 1 && !document.getElementById('c_rue').value.trim()) {
+          document.getElementById('c_rue').value = lines[0];
+        }
+        if (lines.length >= 2) {
+          var cpVille = lines[lines.length - 1];
+          var cpMatch = cpVille.match(/^(\d{4,5})\s+(.*)/);
+          if (cpMatch) {
+            if (!document.getElementById('c_cp').value.trim())   document.getElementById('c_cp').value   = cpMatch[1];
+            if (!document.getElementById('c_ville').value.trim()) document.getElementById('c_ville').value = cpMatch[2];
+          }
+        }
+      }
+
+      // Show VIES badge
+      var resultEl = document.getElementById('vies-result');
+      resultEl.style.display = 'block';
+      resultEl.innerHTML =
+        '<strong>🇪🇺 VIES — VAT number verified</strong><br>' +
+        (data.name && data.name !== '---'    ? '🏢 ' + data.name    + '<br>' : '') +
+        (data.address && data.address !== '---' ? '📍 ' + data.address.replace(/\n/g, ', ') + '<br>' : '') +
+        '<span style="color:#8A9BB0;font-size:11px;">Source: ec.europa.eu/vies · ' + new Date().toLocaleDateString('en-GB') + '</span>';
+
+      markUnsaved('company');
+      showToast('✅ VAT VIES verified and valid!');
+    }
+  } catch(e) {
+    viesSetStatus('⚠️ VIES unavailable — check on ec.europa.eu/vies', 'var(--orange)');
+    // Provide direct link as fallback
+    var resultEl = document.getElementById('vies-result');
+    resultEl.style.display = 'block';
+    resultEl.innerHTML =
+      '⚠️ The VIES service is temporarily unavailable.<br>' +
+      '<a href="https://ec.europa.eu/taxation_customs/vies/#/vat-validation" target="_blank" rel="noopener" style="color:var(--blue);">Check manually on ec.europa.eu/vies →</a>';
+  }
+
+  document.getElementById('btnVies').disabled = false;
+}
+
 // Set default invoice date to today
 document.getElementById('invoiceDate').value = new Date().toISOString().split('T')[0];
 
@@ -1150,6 +1758,7 @@ buildPeriodRows();
 updateBanner(null);
 </script>
 <div style="margin:32px auto;text-align:center;max-width:100%;">
+<h2 style="font-size:1rem;color:#1A3A5C;margin:24px 0 8px;">📋 ONSS rate and mileage allowance calculation in Belgium</h2>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
@@ -1171,7 +1780,7 @@ updateBanner(null);
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
   <div class="footer-links">
     <a href="/en/mentions-legales/">Legal notice</a>
-    <a href="/en/mentions-legales/#rgpd">RGPD</a>
+    <a href="/en/mentions-legales/#rgpd">GDPR</a>
     <a href="/en/mentions-legales/#cookies">Cookies</a>
     <a href="#">Contact</a>
   </div>
@@ -1184,66 +1793,7 @@ document.addEventListener('click',function(e){
 });
 </script>
 <script>
-(function(){
-  var GA_ID='G-WNHZDLVPEL';
-  function getCk(n){return(document.cookie.split(';').map(function(c){return c.trim();}).find(function(c){return c.startsWith(n+'=');})+'=').split('=')[1]||null;}
-  function setCk(n,v){document.cookie=n+'='+v+';max-age=31536000;path=/;SameSite=Lax';}
-  function hideBanner(){document.getElementById('cookieBanner').style.display='none';}
-
-  function loadGA(){
-    if(window._gaLoaded)return;window._gaLoaded=true;
-    var s=document.createElement('script');s.async=true;
-    s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;
-    document.head.appendChild(s);
-    window.dataLayer=window.dataLayer||[];
-    function gtag(){dataLayer.push(arguments);}
-    window.gtag=gtag;
-    gtag('js',new Date());gtag('config',GA_ID,{anonymize_ip:true});
-  }
-
-  // AdSense loaded via standard head tag — blocked via consent_mode
-  function updateConsentMode(analytics,ads){
-    if(window.gtag){
-      window.gtag('consent','update',{
-        analytics_storage: analytics?'granted':'denied',
-        ad_storage: ads?'granted':'denied',
-        ad_user_data: ads?'granted':'denied',
-        ad_personalization: ads?'granted':'denied'
-      });
-    }
-  }
-
-  window.cbAcceptAll=function(){
-    setCk('cb_analytics','1');setCk('cb_ads','1');
-    document.getElementById('cb_analytics').checked=true;
-    document.getElementById('cb_ads').checked=true;
-    loadGA();updateConsentMode(true,true);hideBanner();
-  };
-  window.cbRefuseAll=function(){
-    setCk('cb_analytics','0');setCk('cb_ads','0');
-    updateConsentMode(false,false);hideBanner();
-  };
-  window.cbSaveChoices=function(){
-    var a=document.getElementById('cb_analytics').checked;
-    var d=document.getElementById('cb_ads').checked;
-    setCk('cb_analytics',a?'1':'0');setCk('cb_ads',d?'1':'0');
-    if(a)loadGA();
-    updateConsentMode(a,d);hideBanner();
-  };
-
-  // Init au chargement
-  var ca=getCk('cb_analytics'),cd=getCk('cb_ads');
-  if(ca===null){
-    // No choice yet → show banner
-    document.getElementById('cookieBanner').style.display='block';
-  } else {
-    // Choice already saved → apply
-    document.getElementById('cb_analytics').checked=(ca==='1');
-    document.getElementById('cb_ads').checked=(cd==='1');
-    if(ca==='1')loadGA();
-    updateConsentMode(ca==='1',cd==='1');
-  }
-})();
+/* Cookie consent handled by the APD-compliant banner below */
 
   
 
@@ -1259,7 +1809,7 @@ document.addEventListener('click',function(e){
   document.addEventListener('click', function(e) {
     var nav = document.querySelector('.nav-links');
     var btn = document.querySelector('.hamburger');
-    var wrap = document.querySelector('.main-nav');
+    var wrap = document.querySelector('.mayn-nav');
     if (wrap && !wrap.contains(e.target)) {
       if (nav) nav.classList.remove('mobile-open');
       if (btn) btn.classList.remove('open');
@@ -1279,21 +1829,21 @@ document.addEventListener('click', function(e) {
 </script>
 <!-- ── BANNIÈRE COOKIES APD-CONFORME ── -->
 <style>
-#cookieOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99998;backdrop-filter:blur(3px);}
-#cookieBanner{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:99999;
+#cookieOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:1000000;backdrop-filter:blur(3px);}
+#cookieBanner{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1000001;
   background:#fff;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.3);
   width:min(580px,94vw);max-height:88vh;overflow-y:auto;font-family:'Inter',sans-serif;}
-/* Main view */
-#cbMain{padding:32px 36px;}
-#cbMain .cb-title{font-size:1.25rem;font-weight:700;color:#1A2535;text-align:center;margin:0 0 20px;}
-#cbMain .cb-text{font-size:0.82rem;color:#4A5568;line-height:1.7;margin:0 0 14px;}
-#cbMain .cb-text a{color:#1A7A8A;text-decoration:underline;}
-#cbMain .cb-text strong{color:#1A2535;}
-#cbMain .cb-btns{display:flex;flex-direction:column;gap:10px;margin-top:24px;}
-#cbMain .cb-btn-agree{padding:14px;border-radius:8px;background:#F5A623;color:#fff;font-size:0.95rem;font-weight:700;border:none;cursor:pointer;transition:background 0.2s;font-family:'Inter',sans-serif;width:100%;}
-#cbMain .cb-btn-agree:hover{background:#e8961a;}
-#cbMain .cb-btn-modify{padding:12px;border-radius:8px;background:#fff;color:#1A2535;font-size:0.88rem;font-weight:600;border:2px solid #DDE5EF;cursor:pointer;transition:all 0.2s;font-family:'Inter',sans-serif;width:100%;}
-#cbMain .cb-btn-modify:hover{border-color:#1A2535;}
+/* Mayn view */
+#cbMayn{padding:32px 36px;}
+#cbMayn .cb-title{font-size:1.25rem;font-weight:700;color:#1A2535;text-align:center;margin:0 0 20px;}
+#cbMayn .cb-text{font-size:0.82rem;color:#4A5568;line-height:1.7;margin:0 0 14px;}
+#cbMayn .cb-text a{color:#1A7A8A;text-decoration:underline;}
+#cbMayn .cb-text strong{color:#1A2535;}
+#cbMayn .cb-btns{display:flex;flex-direction:column;gap:10px;margin-top:24px;}
+#cbMayn .cb-btn-agree{padding:14px;border-radius:8px;background:#F5A623;color:#fff;font-size:0.95rem;font-weight:700;border:none;cursor:pointer;transition:background 0.2s;font-family:'Inter',sans-serif;width:100%;}
+#cbMayn .cb-btn-agree:hover{background:#e8961a;}
+#cbMayn .cb-btn-modify{padding:12px;border-radius:8px;background:#fff;color:#1A2535;font-size:0.88rem;font-weight:600;border:2px solid #DDE5EF;cursor:pointer;transition:all 0.2s;font-family:'Inter',sans-serif;width:100%;}
+#cbMayn .cb-btn-modify:hover{border-color:#1A2535;}
 /* Detail view */
 #cbDetail{display:none;padding:28px 36px;}
 #cbDetail .cb-back{background:none;border:none;color:#1A7A8A;font-size:0.82rem;cursor:pointer;padding:0 0 16px;display:flex;align-items:center;gap:6px;font-family:'Inter',sans-serif;}
@@ -1317,51 +1867,51 @@ document.addEventListener('click', function(e) {
 #cbDetail .cb-btn-refuseall{background:none;border:none;color:#A0AEC0;font-size:0.78rem;cursor:pointer;text-decoration:underline;padding:6px 0;font-family:'Inter',sans-serif;text-align:center;}
 #cbDetail .cb-btn-refuseall:hover{color:#4A5568;}
 @media(max-width:480px){
-  #cbMain,#cbDetail{padding:24px 20px;}
+  #cbMayn,#cbDetail{padding:24px 20px;}
 }
 </style>
 <div id="cookieOverlay"></div>
 <div id="cookieBanner" role="dialog" aria-modal="true">
   <!-- Vue principale -->
-  <div id="cbMain">
-    <h2 class="cb-title">Vos paramètres de confidentialité</h2>
-    <p class="cb-text">La Caverne de la Compta utilise des cookies pour collecter des informations à propos de votre appareil, votre navigateur et votre comportement de navigation.</p>
-    <p class="cb-text">En outre, si vous nous en donnez l'autorisation, nous pouvons utiliser vos données pour <strong>personnaliser le contenu</strong> et <strong>afficher des publicités pertinentes</strong> via Google AdSense. Nous mesurons également l'audience avec <strong>Google Analytics</strong> pour améliorer le site.</p>
-    <p class="cb-text">En cliquant sur « D'accord », vous donnez votre consentement. Si vous ne souhaitez pas tout autoriser, cliquez sur « Modifier manuellement ». Vous pouvez modifier vos choix à tout moment via le lien <strong>Gestion des cookies</strong> en bas de page. Pour en savoir plus, consultez notre <a href="/fr/mentions-legales/#cookies">politique de cookies</a>.</p>
+  <div id="cbMayn">
+    <h2 class="cb-title">Your privacy settings</h2>
+    <p class="cb-text">La Caverne de la Compta uses cookies to collect information about your device, browser and browsing behaviour.</p>
+    <p class="cb-text">If you give us your consent, we may use your data to <strong>personalise content</strong> and <strong>display relevant advertisements</strong> via Google AdSense. We also measure audience with <strong>Google Analytics</strong> to improve the site.</p>
+    <p class="cb-text">By clicking « Accept », you give your consent. If you do not wish to allow everything, click « Customise ». You can change your choices at any time via the <strong>Cookie management</strong> link at the bottom of the page. For more information, please consult our <a href="/en/mentions-legales/#cookies">cookie policy</a>.</p>
     <div class="cb-btns">
-      <button class="cb-btn-agree" onclick="cookieAcceptAll()">D'accord</button>
-      <button class="cb-btn-modify" onclick="cbShowDetail()">Modifier manuellement</button>
+      <button class="cb-btn-agree" onclick="cookieAcceptAll()">Accept</button>
+      <button class="cb-btn-modify" onclick="cbShowDetail()">Customise</button>
     </div>
   </div>
   <!-- Vue détaillée -->
   <div id="cbDetail">
-    <button class="cb-back" onclick="cbShowMain()">← Retour</button>
-    <h2 class="cb-title">Définir vos préférences</h2>
+    <button class="cb-back" onclick="cbShowMayn()">← Back</button>
+    <h2 class="cb-title">Set your preferences</h2>
     <div class="cb-cat">
       <div>
-        <div class="cb-cat-name">🔒 Nécessaires <span style="font-size:0.7rem;color:#F5A623;">(toujours actifs)</span></div>
-        <div class="cb-cat-desc">Indispensables au fonctionnement du site : navigation, sécurité, préférences de langue. Ne peuvent pas être désactivés.</div>
+        <div class="cb-cat-name">🔒 Necessary <span style="font-size:0.7rem;color:#F5A623;">(always active)</span></div>
+        <div class="cb-cat-desc">Essential for the site to function: navigation, security, language preferences. Cannot be disabled.</div>
       </div>
       <label class="cb-toggle required"><input type="checkbox" checked disabled><span class="cb-toggle-slider"></span></label>
     </div>
     <div class="cb-cat">
       <div>
-        <div class="cb-cat-name">📊 Analytiques <span style="font-size:0.7rem;color:#8A9BB0;">(Google Analytics)</span></div>
-        <div class="cb-cat-desc">Nous permettent de comprendre comment vous utilisez le site pour l'améliorer continuellement.</div>
+        <div class="cb-cat-name">📊 Analytics <span style="font-size:0.7rem;color:#8A9BB0;">(Google Analytics)</span></div>
+        <div class="cb-cat-desc">Help us understand how you use the site so we can continually improve it.</div>
       </div>
       <label class="cb-toggle"><input type="checkbox" id="cbAnalytics" checked><span class="cb-toggle-slider"></span></label>
     </div>
     <div class="cb-cat">
       <div>
-        <div class="cb-cat-name">📢 Publicitaires <span style="font-size:0.7rem;color:#8A9BB0;">(Google AdSense)</span></div>
-        <div class="cb-cat-desc">Permettent d'afficher des publicités pour financer le site gratuitement pour vous.</div>
+        <div class="cb-cat-name">📢 Advertising <span style="font-size:0.7rem;color:#8A9BB0;">(Google AdSense)</span></div>
+        <div class="cb-cat-desc">Allow advertising to be displayed to fund the site free of charge for you.</div>
       </div>
       <label class="cb-toggle"><input type="checkbox" id="cbAds" checked><span class="cb-toggle-slider"></span></label>
     </div>
     <div class="cb-detail-btns">
-      <button class="cb-btn-saveall" onclick="cookieAcceptAll()">Tout accepter</button>
-      <button class="cb-btn-saveprefs" onclick="cookieSavePrefs()">Enregistrer mes choix</button>
-      <button class="cb-btn-refuseall" onclick="cookieRefuseAll()">Tout refuser</button>
+      <button class="cb-btn-saveall" onclick="cookieAcceptAll()">Accept all</button>
+      <button class="cb-btn-saveprefs" onclick="cookieSavePrefs()">Save my choices</button>
+      <button class="cb-btn-refuseall" onclick="cookieRefuseAll()">Refuse all</button>
     </div>
   </div>
 </div>
@@ -1378,12 +1928,12 @@ document.addEventListener('click', function(e) {
     document.body.style.overflow='';
   }
   window.cbShowDetail=function(){
-    document.getElementById('cbMain').style.display='none';
+    document.getElementById('cbMayn').style.display='none';
     document.getElementById('cbDetail').style.display='block';
   };
-  window.cbShowMain=function(){
+  window.cbShowMayn=function(){
     document.getElementById('cbDetail').style.display='none';
-    document.getElementById('cbMain').style.display='block';
+    document.getElementById('cbMayn').style.display='block';
   };
   function updateConsentMode(analytics,ads){
     if(typeof gtag==='function'){
@@ -1427,7 +1977,7 @@ document.addEventListener('click', function(e) {
     var cd=localStorage.getItem('cb_ads');
     if(ca!==null)document.getElementById('cbAnalytics').checked=(ca==='1');
     if(cd!==null)document.getElementById('cbAds').checked=(cd==='1');
-    cbShowMain();
+    cbShowMayn();
     showBanner();
   };
   var ca=localStorage.getItem('cb_analytics');
@@ -1436,6 +1986,5 @@ document.addEventListener('click', function(e) {
 })();
 </script>
 <!-- END COOKIE BANNER -->
-
 </body>
 </html>

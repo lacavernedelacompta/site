@@ -5,23 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kredietsimulator België 2026 — Aflossingstabel</title>
 <meta name="description" content="Belgische kredietsimulator met maandelijkse, driemaandelijkse of jaarlijkse aflossingstabel. Berekening van rente, afgelost kapitaal en resterend saldo.">
-<meta name="keywords" content="kredietsimulator belgië, aflossingstabel, berekening hypotheeklening, maandelijkse aflossing, rente lening">
+<meta name="keywords" content="kredietsimulator belgië, aflossingstabel, berekening hypothecair krediet, maandelijkse afbetaling, intrest lening">
 <meta name="author" content="La Caverne de la Compta">
 <meta name="robots" content="index, follow">
-  <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-credit/">
+  <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/nl/simulateur-credit/">
   <link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-credit/">
   <link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-credit/">
   <link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-credit/">
-  <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-credit/">
+  <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/nl/simulateur-credit/">
 <link rel="canonical" href="https://lacavernedelacompta.be/nl/simulateur-credit/">
-<meta property="og:title" content="Kredietsimulator — Aflossingstabel België 2026">
-  <meta property="og:image" content="https://lacavernedelacompta.be/logo.png">
+<meta property="og:title" content="Kredietsimulator — Tableau d'Amortissement Belgique 2026">
+  <meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
 
-<meta property="og:description" content="Bereken uw maandelijkse aflossingen, rente en resterend saldo met een volledige aflossingstabel.">
+<meta property="og:description" content="Calculez vos mensualités, intérêts et solde restant dû avec tableau d'amortissement complet.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lacavernedelacompta.be/simulateur-credit.html">
 <meta property="og:site_name" content="La Caverne de la Compta">
-<meta property="og:locale" content="nl_BE">
+<meta property="og:locale" content="fr_BE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -219,7 +221,138 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
 }
 @media(max-width:500px){.kpis{grid-template-columns:1fr;}}
 
-</style>
+
+
+  
+  }
+
+  
+  /* Fix overflow tables on mobile */
+    table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .chart-container, canvas { max-width: 100% !important; }
+  }
+  
+  }
+
+  
+  /* ── LANG DROPDOWN ── */
+  .lang-dropdown { position: relative; display: inline-block; position: relative !important; display: inline-block !important;}
+  .lang-current {
+    display: flex; align-items: center; gap: 6px;
+    padding: 5px 10px; border-radius: 6px;
+    background: #1A7A8A; color: #fff;
+    font-size: 0.78rem; font-weight: 700;
+    cursor: pointer; border: none;
+    letter-spacing: 0.05em; white-space: nowrap;
+  }
+  .lang-current:after { content: ' ▾'; font-size: 0.7rem; }
+  .lang-menu {
+    display: none; position: absolute;
+    top: calc(100% + 4px); right: 0;
+    background: #fff; border: 1px solid #DDE5EF;
+    border-radius: 8px; box-shadow: 0 8px 24px rgba(13,27,42,0.12);
+    min-width: 120px; z-index: 999999; overflow: hidden;
+  }
+  .lang-dropdown.open .lang-menu { display: block; }
+  .lang-menu a {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px; font-size: 0.82rem; font-weight: 500;
+    color: #1A2535; text-decoration: none;
+    border-bottom: 1px solid #F4F7FA;
+    transition: background 0.15s;
+  }
+  .lang-menu a:last-child { border-bottom: none; }
+  .lang-menu a:hover { background: #E8F5F7; color: #1A7A8A; }
+  .lang-menu a.active { font-weight: 700; color: #1A7A8A; }
+
+  
+  /* ── GLOBAL OVERFLOW FIX ── */
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  @media (max-width: 900px) {
+    * { box-sizing: border-box; }
+    .main, .container, .wrapper, .page-wrap, .content, .hero-inner,
+    .disclaimer-inner, .card, .form-card, .result-card, .table-wrap {
+      max-width: 100% !important;
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+    }
+    table {
+      display: block !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+      max-width: 100% !important;
+    }
+    canvas { max-width: 100% !important; height: auto !important; }
+    input[type=range] { max-width: 100% !important; }
+    .grid, [style*="display:grid"], [style*="display: grid"] {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  
+  
+  /* ── MOBILE NAV ── */
+  .hamburger { display: none; }
+  @media (max-width: 768px) {
+    .main-nav { padding: 0 16px !important; height: 56px !important; }
+    .nav-links { display: none !important; }
+    .nav-links.mobile-open {
+      display: flex !important;
+      flex-direction: column;
+      position: fixed;
+      top: 56px; left: 0; right: 0;
+      background: #fff;
+      border-bottom: 2px solid #22A3B8;
+      box-shadow: 0 8px 32px rgba(13,27,42,0.15);
+      z-index: 9998;
+      padding: 8px 0;
+      max-height: calc(100vh - 56px);
+      overflow-y: auto;
+    }
+    .nav-links.mobile-open > li > a {
+      display: block !important;
+      padding: 14px 20px;
+      font-size: 1rem;
+      border-bottom: 1px solid #DDE5EF;
+      color: #1A2535 !important;
+      text-align: center;
+    }
+    .dd-wrap { width: 100%; }
+    .dd-btn { width: 100% !important; text-align: center; padding: 14px 20px; font-size: 1rem; border-bottom: 1px solid #DDE5EF; background: none; border-left: none; border-right: none; border-top: none; border-radius: 0; color: #1A2535; }
+    .dd-menu {
+      position: static !important;
+      box-shadow: none !important;
+      border: none !important;
+      border-radius: 0 !important;
+      background: #F4F7FA !important;
+      min-width: unset !important;
+      display: none !important;
+    }
+    .dd-wrap.dd-open .dd-menu { display: block !important; }
+    .dd-menu a { padding: 12px 20px 12px 40px !important; border-bottom: 1px solid #DDE5EF !important; font-size: 0.9rem !important; display: block !important; }
+    .hamburger {
+      display: flex !important;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      margin-left: auto;
+      background: none;
+      border: none;
+      z-index: 9999;
+      flex-shrink: 0;
+    }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #1A2535; border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    #langSwitcher { margin-left: 8px; }
+  }
+
+  </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/favicon.svg">
@@ -231,24 +364,189 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
   "url": "https://lacavernedelacompta.be",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://lacavernedelacompta.be/logo.png",
+    "url": "https://lacavernedelacompta.be/logo.svg",
     "width": 512,
     "height": 512
   },
-  "image": "https://lacavernedelacompta.be/logo.png"
+  "image": "https://lacavernedelacompta.be/logo.svg"
 }
 </script>
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
-<!-- CACHE-BUST-v8-nl/simulateur-credit/index.html -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@lacavernecompta">
+  <meta name="twitter:title" content="Kredietsimulator — Tableau d'Amortissement Belgique 2026">
+  <meta name="twitter:description" content="Calculez vos mensualités, intérêts et solde restant dû avec tableau d'amortissement complet.">
+  <meta name="twitter:image" content="https://lacavernedelacompta.be/logo.svg">
+<!-- CACHE-BUST-v8-fr/simulateur-credit/index.html -->
+<!-- Google tag (gtag.js) -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{
+  analytics_storage:'denied',
+  ad_storage:'denied',
+  ad_user_data:'denied',
+  ad_personalization:'denied',
+  wait_for_update:500
+});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNHZDLVPEL"></script>
+<script>
+gtag('js', new Date());
+gtag('config', 'G-WNHZDLVPEL');
+</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Kredietsimulator — Tableau d'Amortissement Belgique 2026",
+  "url": "https://lacavernedelacompta.be/nl/simulateur-credit/",
+  "description": "Calculez vos mensualités, intérêts et solde restant dû avec tableau d'amortissement complet.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "La Caverne de la Compta",
+    "url": "https://lacavernedelacompta.be"
+  }
+}
+</script>
 </head>
 <body>
 
+<div class="topbar">
+  <span class="topbar-left">🇧🇪 La Caverne de la Compta</span>
+  <div class="topbar-right">
+    <a href="/nl/mentions-legales/">Wettelijke vermeldingen</a>
+    <a href="mentions-legales.html#rgpd">GDPR</a>
+  </div>
+</div>
 
-      <!-- Taux -->
+<nav class="main-nav">
+<a href="/nl/" class="logo" style="text-decoration:none;display:flex;align-items:center;">
+    <svg width="148" height="38" viewBox="0 0 148 38" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <defs>
+        <linearGradient id="hGn" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0D1B2A"/>
+          <stop offset="100%" style="stop-color:#1A3A5C"/>
+        </linearGradient>
+      </defs>
+      <!-- Hexagone -->
+      <polygon points="19,2 31,9 31,23 19,30 7,23 7,9" fill="url(#hGn)"/>
+      <!-- Reflet top -->
+      <polygon points="19,2 31,9 25,9 19,5 13,9 7,9" fill="rgba(255,255,255,.07)"/>
+      <!-- Bras balance -->
+      <line x1="9" y1="15" x2="29" y2="15" stroke="rgba(255,255,255,.5)" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Tige -->
+      <rect x="17.5" y="15" width="2.5" height="11" rx="1.2" fill="rgba(255,255,255,.35)"/>
+      <!-- Pivot gold -->
+      <circle cx="18.8" cy="15" r="3.2" fill="#C9A84C"/>
+      <circle cx="18.8" cy="15" r="1.4" fill="white" opacity=".9"/>
+      <!-- Socle -->
+      <rect x="13" y="27" width="12" height="2.5" rx="1.2" fill="rgba(255,255,255,.2)"/>
+      <!-- Plateau gauche -->
+      <line x1="9" y1="15" x2="7" y2="21.5" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="7" cy="24" rx="6.5" ry="2.5" fill="#1A7A8A"/>
+      <!-- Plateau droit -->
+      <line x1="29" y1="15" x2="31" y2="20" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="31" cy="22.5" rx="6.5" ry="2.5" fill="#22A3B8"/>
+      <!-- Étoile -->
+      <circle cx="27" cy="7" r="2.5" fill="#C9A84C" opacity=".85"/>
+      <!-- Texte -->
+      <text x="42" y="15.5" font-family="'Playfair Display',serif" font-size="12.5" font-weight="900" fill="#0D1B2A" letter-spacing="-.2">La Caverne</text>
+      <rect x="42" y="18.5" width="104" height="1" rx=".5" fill="#DDE5EF"/>
+      <rect x="42" y="18.5" width="18" height="1" rx=".5" fill="#C9A84C"/>
+      <text x="42" y="30" font-family="'Playfair Display',serif" font-size="10.5" font-weight="700" font-style="italic" fill="#1A7A8A" letter-spacing="-.1">de la Compta</text>
+    </svg>
+  </a>
+        <ul class="nav-links">
+    <li><a href="https://lacavernedelacompta.be/nl/">🏠 Startpagina</a></li>
+    <li class="dd-wrap" id="ddWrap">
+      <button class="dd-btn" onclick="toggleDD(event)">🧰 Onze tools <span class="dd-chevron">▼</span></button>
+      <div class="dd-menu" id="ddMenu">
+        <a href="/nl/simulateur-immobilier/"><span class="dd-icon">🏠</span>Vastgoedsimulator</a>
+        <a href="/nl/simulateur-credit/"><span class="dd-icon">💳</span>Kredietsimulator</a>
+        <a href="/nl/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Herkwalificatie huur</a>
+        <a href="/nl/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Boekhoudplan MAR</a>
+        <a href="/nl/simulateur-interets-composes/"><span class="dd-icon">📈</span>Samengestelde intrest</a>
+        <a href="/nl/simulateur-retenue/"><span class="dd-icon">🧾</span>Inhouding op factuur</a>
+        <a href="/nl/quick-memento-fiscal/"><span class="dd-icon">📌</span>Fiscale memo</a>
+        <a href="/nl/remboursement-frais/"><span class="dd-icon">🚗</span>Kilometervergoeding</a>
+      </div>
+    </li>
+  </ul>
+  <!-- ══ SWITCHER LANGUE ══ -->
+  <div class="lang-dropdown" style="position:relative;display:inline-block;" id="langSwitcher">
+    <button class="lang-current" onclick="toggleLangMenu(event)">🇧🇪 NL</button>
+    <div class="lang-menu">
+<a href="https://lacavernedelacompta.be/nl/simulateur-credit/" class="active">🇫🇷 Français</a>
+<a href="https://lacavernedelacompta.be/nl/simulateur-credit/" class="active">🇧🇪 Nederlands</a>
+<a href="https://lacavernedelacompta.be/en/simulateur-credit/" class="">🇬🇧 English</a>
+<a href="https://lacavernedelacompta.be/de/simulateur-credit/" class="">🇩🇪 Deutsch</a>
+    </div>
+  </div>
+  <!-- ══════════════════════ -->
+
+  
+  <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="update-bar">
+  🕐 Bijgewerkt: Januari 2026 — <a href="/nl/mentions-legales/">Officiële bronnen</a>
+</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-bread"><a href="/nl/">Accueil</a> › <a href="#">Outils</a> › Kredietsimulator</div>
+    <div class="hero-badge">💳 Lening met vaste rente</div>
+    <h1>Kredietsimulator</h1>
+    <p>Bereken uw aflossingen en raadpleeg uw afbetalingstabel complet — mensuel, trimestriel ou annuel.</p>
+  </div>
+</section>
+<div style="margin:24px auto;text-align:center;max-width:100%;padding:0 16px;">
+<h2 style="font-size:1rem;color:#1A3A5C;margin:24px 0 8px;">📋 Hoe uw aflossingstabel berekenen?</h2>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8043980001637749"
+     data-ad-slot="8050648588"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="main">
+
+  <!-- FORMULAIRE -->
+  <div class="form-card">
+    <div class="form-card-head">
+      <h2>Parameters van het krediet</h2>
+      <p>Vul de onderstaande velden in</p>
+    </div>
+    <div class="form-body">
+
+      <!-- Bedrag -->
       <div class="form-group">
-        <label class="form-label"><span class="lbl-icon">📊</span> Jaarlijkse rentevoet</label>
+        <label class="form-label"><span class="lbl-icon">💶</span> Leningbedrag</label>
+        <div class="input-wrap">
+          <span class="input-prefix">€</span>
+          <input type="number" class="form-input" id="montant" value="200000" min="1000" step="1000" oninput="syncSlider('montant','montantSlider');calculate()">
+        </div>
+        <div>
+          <input type="range" class="form-range" id="montantSlider" min="5000" max="1000000" step="1000" value="200000" oninput="syncInput('montantSlider','montant');calculate()">
+          <div class="slider-labels"><span>5 000 €</span><span>1 000 000 €</span></div>
+        </div>
+      </div>
+
+      <!-- Tarief -->
+      <div class="form-group">
+        <label class="form-label"><span class="lbl-icon">📊</span> Jaarlijkse rente</label>
         <div class="input-wrap">
           <input type="number" class="form-input no-prefix" id="taux" value="3.5" min="0.1" max="25" step="0.1" oninput="syncSlider('taux','tauxSlider');calculate()">
           <span class="input-suffix">%</span>
@@ -261,14 +559,14 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
 
       <!-- Durée -->
       <div class="form-group">
-        <label class="form-label"><span class="lbl-icon">📅</span> Looptijd krediet</label>
+        <label class="form-label"><span class="lbl-icon">📅</span> Kredietduur</label>
         <div class="input-wrap">
           <input type="number" class="form-input no-prefix" id="duree" value="20" min="1" max="30" step="1" oninput="syncSlider('duree','dureeSlider');calculate()">
-          <span class="input-suffix">jaar</span>
+          <span class="input-suffix">ans</span>
         </div>
         <div>
           <input type="range" class="form-range" id="dureeSlider" min="1" max="30" step="1" value="20" oninput="syncInput('dureeSlider','duree');calculate()">
-          <div class="slider-labels"><span>1 jaar</span><span>30 jaar</span></div>
+          <div class="slider-labels"><span>1 an</span><span>30 ans</span></div>
         </div>
       </div>
 
@@ -276,19 +574,19 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
 
       <!-- Type de taux -->
       <div class="form-group">
-        <label class="form-label"><span class="lbl-icon">⚙️</span> Aflossingstype</label>
+        <label class="form-label"><span class="lbl-icon">⚙️</span> Type terugbetaling</label>
         <div class="toggle-group">
-          <button class="tgl on" id="typeAnn" onclick="setType('annuite',this)">Vaste annuïteit</button>
+          <button class="tgl on" id="typeAnn" onclick="setType('annuite',this)">Constante annuïteit</button>
           <button class="tgl" id="typeConst" onclick="setType('constant',this)">Constant kapitaal</button>
         </div>
         <div style="margin-top:8px;font-size:.73rem;color:var(--text-light);line-height:1.5;" id="typeDesc">
-          Hetzelfde totale bedrag elke periode. De rente neemt geleidelijk af.
+          Elk kwartaal hetzelfde totaalbedrag. De interesten dalen geleidelijk.
         </div>
       </div>
 
 
 
-      <div class="form-disclaimer">⚠️ Indicatieve simulator — Raadpleeg uw bank of makelaar voor elk engagement.</div>
+      <div class="form-disclaimer">⚠️ Indicatieve simulator — Raadpleeg uw bank of makelaar vóór enige verbintenis.</div>
     </div>
   </div>
 
@@ -305,25 +603,25 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
       </div>
       <div class="kpi">
         <div class="kpi-icon">📉</div>
-        <div class="kpi-label">Totale rente</div>
+        <div class="kpi-label">Totale intresten</div>
         <div class="kpi-val orange" id="kpiInterets">—</div>
-        <div class="kpi-sub" id="kpiCout">Coût total : —</div>
+        <div class="kpi-sub" id="kpiCout">Totale kost: —</div>
       </div>
       <div class="kpi">
         <div class="kpi-icon">📊</div>
-        <div class="kpi-label">Geschatte JKP</div>
+        <div class="kpi-label">Geschat JKP</div>
         <div class="kpi-val" id="kpiTAEG">—</div>
-        <div class="kpi-sub">Totaal kostenpercentage</div>
+        <div class="kpi-sub">Alles inbegrepen</div>
       </div>
     </div>
 
     <!-- Graphique -->
     <div class="chart-card" id="chartCard" style="display:none">
       <div class="chart-head">
-        <span class="chart-title">Verdeling Kapitaal / Rente</span>
+        <span class="chart-title">Verdeling Kapitaal / Intresten</span>
         <div class="chart-legend">
-          <div class="leg-item"><div class="leg-dot capital"></div> Afgelost kapitaal</div>
-          <div class="leg-item"><div class="leg-dot interets"></div> Betaalde rente</div>
+          <div class="leg-item"><div class="leg-dot capital"></div> Terugbetaald kapitaal</div>
+          <div class="leg-item"><div class="leg-dot interets"></div> Betaalde intresten</div>
         </div>
       </div>
       <canvas id="myChart"></canvas>
@@ -332,11 +630,11 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
     <!-- Tableau -->
     <div class="table-card">
       <div class="table-head">
-        <span class="table-title">Aflossingstabel</span>
+        <span class="table-title">Afbetalingstabel</span>
         <div class="table-actions">
           <div class="freq-tabs">
             <button class="freq-tab on" data-f="mensuel" onclick="setFreq(this)">Maandelijks</button>
-            <button class="freq-tab" data-f="trimestriel" onclick="setFreq(this)">Per kwartaal</button>
+            <button class="freq-tab" data-f="trimestriel" onclick="setFreq(this)">Driemaandelijks</button>
             <button class="freq-tab" data-f="annuel" onclick="setFreq(this)">Jaarlijks</button>
           </div>
           <button class="btn-export" onclick="exportCSV()">⬇ CSV</button>
@@ -346,8 +644,8 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
         <div id="tableContainer">
           <div class="empty-state">
             <div class="empty-icon">📋</div>
-            <div class="empty-title">Aflossingstabel</div>
-            <div class="empty-sub">Vul de parameters in om de tabel te zien</div>
+            <div class="empty-title">Afbetalingstabel</div>
+            <div class="empty-sub">Vul de parameters in en klik op Berekenen</div>
           </div>
         </div>
       </div>
@@ -358,10 +656,10 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
 
 <div class="disclaimer">
   <div class="disclaimer-inner">
-    <strong style="color:#4A6279;">⚠️ Uitsluitend indicatieve waarde:</strong>
-    Deze simulator is louter indicatief. De resultaten vormen geen kredietaanbod.
-    <strong style="color:#4A6279;">Raadpleeg uw bank, makelaar of financieel adviseur</strong> voor elk engagement.
-    — <a href="mentions-legales.html#disclaimer" style="color:#1A7A8A;text-decoration:none;">Volledige juridische vermeldingen</a>
+    <strong style="color:#4A6279;">⚠️ Louter indicatief:</strong>
+    Deze simulator is alleen ter indicatie. De resultats vormen geen kredietaanbod.
+    <strong style="color:#4A6279;">Consultez votre banque, courtier ou conseiller financier</strong> avant tout engagement.
+    — <a href="mentions-legales.html#disclaimer" style="color:#1A7A8A;text-decoration:none;">Volledige wettelijke vermeldingen</a>
   </div>
 </div>
 <div style="margin:32px auto;text-align:center;max-width:100%;">
@@ -377,7 +675,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
   <div class="footer-links">
     <a href="/nl/mentions-legales/">Wettelijke vermeldingen</a>
-    <a href="/nl/mentions-legales/#rgpd">RGPD</a>
+    <a href="/nl/mentions-legales/#rgpd">GDPR</a>
     <a href="/nl/mentions-legales/#cookies">Cookies</a>
     <a href="#">Contact</a>
   </div>
@@ -412,9 +710,9 @@ function setType(type, el){
   el.classList.add('on');
   const desc = document.getElementById('typeDesc');
   if(type==='annuite'){
-    desc.textContent = 'Hetzelfde totale bedrag elke periode. De rente neemt geleidelijk af.';
+    desc.textContent = 'Elk kwartaal hetzelfde totaalbedrag. De interesten dalen geleidelijk.';
   } else {
-    desc.textContent = 'Constant afgelost kapitaal. De rente en de aflossing dalen elke periode.';
+    desc.textContent = 'Constant kapitaal afgelost. De intresten en de maandlast dalen elke periode.';
   }
   calculate();
 }
@@ -445,7 +743,7 @@ function calculate(){
   let totalCapital = 0;
 
   if(remboursementType === 'annuite'){
-    // Annuité constante : PMT = C * r / (1-(1+r)^-n)
+    // Constante annuïteit : PMT = C * r / (1-(1+r)^-n)
     const pmt = r === 0 ? C / nPeriods : C * r / (1 - Math.pow(1+r, -nPeriods));
 
     for(let m=1; m<=nPeriods; m++){
@@ -510,7 +808,7 @@ function calculate(){
   }
 
   document.getElementById('kpiEcheance').textContent = fmtE(echeance1);
-  document.getElementById('kpiEcheanceSub').textContent = remboursementType==='annuite'?'per maand (vast)':'per maand (1e aflossing)';
+  document.getElementById('kpiEcheanceSub').textContent = remboursementType==='annuite'?'per maand (constant)':'per maand (1e betaling)';
   document.getElementById('kpiInterets').textContent = fmtE(totalInterets);
   document.getElementById('kpiCout').textContent = 'Totale kost: ' + fmtE(C + coutTotal);
   document.getElementById('kpiTAEG').textContent = fmt(taeg*100,2) + ' %';
@@ -540,13 +838,13 @@ function renderChart(capital, interets, frais){
     data:{
       labels,
       datasets:[
-        {label:'Kapitaal',data:capData,backgroundColor:'rgba(26,122,138,.75)',borderRadius:4,borderSkipped:false},
-        {label:'Rente',data:intData,backgroundColor:'rgba(230,81,0,.65)',borderRadius:4,borderSkipped:false},
+        {label:'Capital',data:capData,backgroundColor:'rgba(26,122,138,.75)',borderRadius:4,borderSkipped:false},
+        {label:'Intérêts',data:intData,backgroundColor:'rgba(230,81,0,.65)',borderRadius:4,borderSkipped:false},
       ]
     },
     options:{
       responsive:true,
-      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+fmtE(ctx.parsed.y)}}},
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.dataset.label+' : '+fmtE(ctx.parsed.y)}}},
       scales:{
         x:{grid:{display:false},ticks:{font:{size:10}}},
         y:{grid:{color:'rgba(0,0,0,.05)'},ticks:{callback:v=>fmt(v,0)+' €',font:{size:10}}},
@@ -577,7 +875,7 @@ function renderTable(){
     for(let t=0; t<lastSchedule.length/3; t++){
       const mois = lastSchedule.slice(t*3, t*3+3);
       rows.push({
-        label: 'K'+(t+1)+' - Jaar '+(Math.floor(t/4)+1),
+        label: 'T'+(t+1)+' - An '+(Math.floor(t/4)+1),
         annuite: mois.reduce((s,m)=>s+m.annuite,0),
         capital: mois.reduce((s,m)=>s+m.capital,0),
         interet: mois.reduce((s,m)=>s+m.interet,0),
@@ -592,7 +890,7 @@ function renderTable(){
     for(let y=1;y<=years;y++){
       const mois = lastSchedule.filter(m=>m.num>=(y-1)*12+1 && m.num<=y*12);
       rows.push({
-        label: 'Jaar '+y,
+        label: 'Année '+y,
         annuite: mois.reduce((s,m)=>s+m.annuite,0),
         capital: mois.reduce((s,m)=>s+m.capital,0),
         interet: mois.reduce((s,m)=>s+m.interet,0),
@@ -611,7 +909,7 @@ function renderTable(){
 
   let html = '<table>';
   html += '<thead><tr>';
-  html += '<th>#</th><th>Periode</th><th>Annuïteit</th><th>Kapitaal</th><th>Rente</th>';
+  html += '<th>#</th><th>Periode</th><th>Annuïteit</th><th>Kapitaal</th><th>Intresten</th>';
   html += '<th>Resterend saldo</th>';
   html += '</tr></thead><tbody>';
 
@@ -627,7 +925,7 @@ function renderTable(){
 
   // Ligne totaux
   html += `<tr class="total-row">
-    <td colspan="2">TOTAAL</td>
+    <td colspan="2">TOTAL</td>
     <td>${fmtE(totAnnuite)}</td>
     <td>${fmtE(totCapital)}</td>
     <td>${fmtE(totInteret)}</td>`;
@@ -640,15 +938,15 @@ function renderTable(){
 // ── EXPORT CSV ─────────────────────────────────────────────────────────────
 function exportCSV(){
   if(!lastSchedule.length) return;
-  let csv = 'Periode;Annuïteit (€);Kapitaal (€);Rente (€);Resterend saldo (€)\n';
+  let csv = 'Periode;Annuïteit (€);Kapitaal (€);Intresten (€);Resterend saldo (€)\n';
   lastSchedule.forEach(m=>{
-    csv += `Maand ${m.num};${fmt(m.annuite)};${fmt(m.capital)};${fmt(m.interet)};${fmt(m.solde)}\n`;
+    csv += `Mois ${m.num};${fmt(m.annuite)};${fmt(m.capital)};${fmt(m.interet)};${fmt(m.solde)}\n`;
   });
 
   const blob = new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8;'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'aflossingstabel-krediet.csv';
+  a.download = 'amortissement-credit.csv';
   a.click();
 }
 
@@ -680,57 +978,21 @@ calculate();
 </style>
 <div id="cb">
   <div class="cbt">
-    <p>🍪 <strong style="color:#fff">Deze website gebruikt cookies.</strong> Noodzakelijke cookies zorgen voor de werking van de site. <a href="mentions-legales.html#cookies">Meer info</a></p>
+    <p>🍪 <strong style="color:#fff">Deze website gebruikt cookies.</strong> De noodzakelijke cookies zorgen voor het functioneren van de site. <a href="mentions-legales.html#cookies">Meer weten</a></p>
     <div class="cbb">
       <button class="cba" onclick="ca()">Alles accepteren</button>
-      <button class="cbs" onclick="cs()">Opslaan</button>
+      <button class="cbs" onclick="cs()">Enregistrer</button>
     </div>
   </div>
   <div class="cbc">
     <label><input type="checkbox" checked disabled> Noodzakelijk</label>
     <label><input type="checkbox" id="ca2"> Analytisch</label>
-    <label><input type="checkbox" id="ca3"> Reclame</label>
+    <label><input type="checkbox" id="ca3"> Advertenties</label>
   </div>
   <button class="cbr" onclick="cr()">Alles weigeren</button>
 </div>
-<script>
-(function(){const k='lacaverne_cookie_consent';if(!localStorage.getItem(k))document.getElementById('cb').style.display='block';})();
-function ca(){localStorage.setItem('lacaverne_cookie_consent',JSON.stringify({a:true,p:true}));document.getElementById('cb').style.display='none';}
-function cr(){localStorage.setItem('lacaverne_cookie_consent',JSON.stringify({a:false,p:false}));document.getElementById('cb').style.display='none';}
-function cs(){localStorage.setItem('lacaverne_cookie_consent',JSON.stringify({a:document.getElementById('ca2').checked,p:document.getElementById('ca3').checked}));document.getElementById('cb').style.display='none';}
 
-  
-
-
-  // ── HAMBURGER MENU ──
-  function toggleMobileMenu(e) {
-    e.stopPropagation();
-    var nav = document.querySelector('.nav-links');
-    var btn = document.querySelector('.hamburger');
-    if (nav) nav.classList.toggle('mobile-open');
-    if (btn) btn.classList.toggle('open');
-  }
-  document.addEventListener('click', function(e) {
-    var nav = document.querySelector('.nav-links');
-    var btn = document.querySelector('.hamburger');
-    var wrap = document.querySelector('.main-nav');
-    if (wrap && !wrap.contains(e.target)) {
-      if (nav) nav.classList.remove('mobile-open');
-      if (btn) btn.classList.remove('open');
-    }
-  });
-
-
-function toggleLangMenu(e) {
-  e.stopPropagation();
-  var ld = document.getElementById('langSwitcher');
-  if (ld) ld.classList.toggle('open');
-}
-document.addEventListener('click', function(e) {
-  var ld = document.getElementById('langSwitcher');
-  if (ld && !ld.contains(e.target)) ld.classList.remove('open');
-});
-</script>
+<!-- END COOKIE BANNER -->
 <!-- ── BANNIÈRE COOKIES APD-CONFORME ── -->
 <style>
 #cookieOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99998;backdrop-filter:blur(3px);}
@@ -778,44 +1040,44 @@ document.addEventListener('click', function(e) {
 <div id="cookieBanner" role="dialog" aria-modal="true">
   <!-- Vue principale -->
   <div id="cbMain">
-    <h2 class="cb-title">Vos paramètres de confidentialité</h2>
-    <p class="cb-text">La Caverne de la Compta utilise des cookies pour collecter des informations à propos de votre appareil, votre navigateur et votre comportement de navigation.</p>
-    <p class="cb-text">En outre, si vous nous en donnez l'autorisation, nous pouvons utiliser vos données pour <strong>personnaliser le contenu</strong> et <strong>afficher des publicités pertinentes</strong> via Google AdSense. Nous mesurons également l'audience avec <strong>Google Analytics</strong> pour améliorer le site.</p>
-    <p class="cb-text">En cliquant sur « D'accord », vous donnez votre consentement. Si vous ne souhaitez pas tout autoriser, cliquez sur « Modifier manuellement ». Vous pouvez modifier vos choix à tout moment via le lien <strong>Gestion des cookies</strong> en bas de page. Pour en savoir plus, consultez notre <a href="/fr/mentions-legales/#cookies">politique de cookies</a>.</p>
+    <h2 class="cb-title">Uw privacyinstellingen</h2>
+    <p class="cb-text">La Caverne de la Compta gebruikt cookies om informatie te verzamelen over uw apparaat, uw browser en uw surfgedrag.</p>
+    <p class="cb-text">Indien u ons daarvoor toestemming geeft, kunnen wij uw gegevens gebruiken om <strong>content te personaliseren</strong> en <strong>relevante advertenties te tonen</strong> via Google AdSense. Wij meten ook het bezoekersverkeer met <strong>Google Analytics</strong> om de site te verbeteren.</p>
+    <p class="cb-text">Door op « Akkoord » te klikken, geeft u uw toestemming. Als u niet alles wilt toestaan, klik dan op « Handmatig aanpassen ». U kunt uw keuzes te allen tijde wijzigen via de link <strong>Cookiebeheer</strong> onderaan de pagina. Raadpleeg onze <a href="/nl/mentions-legales/#cookies">cookieverklaring</a> voor meer informatie.</p>
     <div class="cb-btns">
-      <button class="cb-btn-agree" onclick="cookieAcceptAll()">D'accord</button>
-      <button class="cb-btn-modify" onclick="cbShowDetail()">Modifier manuellement</button>
+      <button class="cb-btn-agree" onclick="cookieAcceptAll()">Akkoord</button>
+      <button class="cb-btn-modify" onclick="cbShowDetail()">Handmatig aanpassen</button>
     </div>
   </div>
   <!-- Vue détaillée -->
   <div id="cbDetail">
-    <button class="cb-back" onclick="cbShowMain()">← Retour</button>
-    <h2 class="cb-title">Définir vos préférences</h2>
+    <button class="cb-back" onclick="cbShowMain()">← Terug</button>
+    <h2 class="cb-title">Uw voorkeuren instellen</h2>
     <div class="cb-cat">
       <div>
-        <div class="cb-cat-name">🔒 Nécessaires <span style="font-size:0.7rem;color:#F5A623;">(toujours actifs)</span></div>
-        <div class="cb-cat-desc">Indispensables au fonctionnement du site : navigation, sécurité, préférences de langue. Ne peuvent pas être désactivés.</div>
+        <div class="cb-cat-name">🔒 Noodzakelijk <span style="font-size:0.7rem;color:#F5A623;">(altijd actief)</span></div>
+        <div class="cb-cat-desc">Onmisbaar voor het functioneren van de site: navigatie, beveiliging, taalvoorkeur. Kunnen niet worden uitgeschakeld.</div>
       </div>
       <label class="cb-toggle required"><input type="checkbox" checked disabled><span class="cb-toggle-slider"></span></label>
     </div>
     <div class="cb-cat">
       <div>
-        <div class="cb-cat-name">📊 Analytiques <span style="font-size:0.7rem;color:#8A9BB0;">(Google Analytics)</span></div>
-        <div class="cb-cat-desc">Nous permettent de comprendre comment vous utilisez le site pour l'améliorer continuellement.</div>
+        <div class="cb-cat-name">📊 Analytisch <span style="font-size:0.7rem;color:#8A9BB0;">(Google Analytics)</span></div>
+        <div class="cb-cat-desc">Helpt ons te begrijpen hoe u de site gebruikt, zodat wij deze voortdurend kunnen verbeteren.</div>
       </div>
       <label class="cb-toggle"><input type="checkbox" id="cbAnalytics" checked><span class="cb-toggle-slider"></span></label>
     </div>
     <div class="cb-cat">
       <div>
-        <div class="cb-cat-name">📢 Publicitaires <span style="font-size:0.7rem;color:#8A9BB0;">(Google AdSense)</span></div>
-        <div class="cb-cat-desc">Permettent d'afficher des publicités pour financer le site gratuitement pour vous.</div>
+        <div class="cb-cat-name">📢 Advertenties <span style="font-size:0.7rem;color:#8A9BB0;">(Google AdSense)</span></div>
+        <div class="cb-cat-desc">Maakt het mogelijk advertenties te tonen om de site gratis voor u te financieren.</div>
       </div>
       <label class="cb-toggle"><input type="checkbox" id="cbAds" checked><span class="cb-toggle-slider"></span></label>
     </div>
     <div class="cb-detail-btns">
-      <button class="cb-btn-saveall" onclick="cookieAcceptAll()">Tout accepter</button>
-      <button class="cb-btn-saveprefs" onclick="cookieSavePrefs()">Enregistrer mes choix</button>
-      <button class="cb-btn-refuseall" onclick="cookieRefuseAll()">Tout refuser</button>
+      <button class="cb-btn-saveall" onclick="cookieAcceptAll()">Alles accepteren</button>
+      <button class="cb-btn-saveprefs" onclick="cookieSavePrefs()">Mijn keuzes opslaan</button>
+      <button class="cb-btn-refuseall" onclick="cookieRefuseAll()">Alles weigeren</button>
     </div>
   </div>
 </div>
@@ -890,6 +1152,16 @@ document.addEventListener('click', function(e) {
 })();
 </script>
 <!-- END COOKIE BANNER -->
-
+<script>
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  var ld = document.getElementById('langSwitcher');
+  if (ld) ld.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var ld = document.getElementById('langSwitcher');
+  if (ld && !ld.contains(e.target)) ld.classList.remove('open');
+});
+</script>
 </body>
 </html>
