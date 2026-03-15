@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Simulateur de Crédit Belgique 2026 — Tableau d'Amortissement</title>
-<meta name="description" content="Simulateur de crédit belge avec tableau d'amortissement mensuel, trimestriel ou annuel. Calcul des intérêts, capital remboursé et solde restant dû.">
+<meta name="description" content="Simulateur de crédit belge gratuit avec tableau d\'amortissement mensuel, trimestriel ou annuel. Calcul des intérêts, capital remboursé et solde restant dû.">
 <meta name="keywords" content="simulateur crédit belgique, tableau amortissement, calcul prêt immobilier, mensualité crédit, intérêts emprunt">
 <meta name="author" content="La Caverne de la Compta">
 <meta name="robots" content="index, follow">
@@ -224,15 +224,12 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
 
 
   
-  }
 
   
   /* Fix overflow tables on mobile */
     table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .chart-container, canvas { max-width: 100% !important; }
-  }
   
-  }
 
   
   /* ── LANG DROPDOWN ── */
@@ -352,7 +349,139 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
     #langSwitcher { margin-left: 8px; }
   }
 
-  </style>
+  
+  /* ── Section expert SEO ── */
+  .expert-section {
+    max-width: 1140px;
+    margin: 48px auto 0;
+    padding: 0 30px;
+  }
+  .expert-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+  .expert-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 24px 0 8px;
+  }
+  .expert-section p {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    margin-bottom: 12px;
+  }
+  .expert-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+  }
+  .expert-section ul li {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 6px;
+  }
+  .expert-section ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-weight: 700;
+  }
+  .expert-section .expert-highlight {
+    background: var(--teal-pale);
+    border-left: 4px solid var(--teal);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 0.88rem;
+    color: var(--text-dark);
+    line-height: 1.7;
+  }
+  .expert-section .expert-highlight strong { color: var(--teal); }
+  .expert-internal-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    padding: 12px 20px;
+    background: var(--teal-pale);
+    border: 1px solid rgba(26,122,138,0.25);
+    border-radius: 10px;
+    font-size: 0.88rem;
+    color: var(--teal);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  .expert-internal-link:hover {
+    background: var(--teal);
+    color: var(--white);
+  }
+
+  /* ── Tooltips ── */
+  .form-label .tooltip-icon {
+    width: 18px; height: 18px;
+    background: var(--teal-pale);
+    border: 1.5px solid rgba(26,122,138,0.3);
+    border-radius: 50%;
+    font-size: 10px;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--teal);
+    cursor: pointer;
+    font-weight: 700;
+    position: relative;
+    flex-shrink: 0;
+    vertical-align: middle;
+    margin-left: 4px;
+  }
+  .form-label .tooltip-icon .tooltip-bubble {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 10px);
+    background: var(--navy);
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 400;
+    line-height: 1.65;
+    padding: 12px 14px;
+    border-radius: 10px;
+    white-space: normal;
+    width: 220px;
+    box-shadow: 0 6px 24px rgba(13,27,42,0.35);
+    z-index: 99999;
+    pointer-events: none;
+    text-align: left;
+  }
+  .form-label .tooltip-icon .tooltip-bubble::after {
+    content: '';
+    position: absolute;
+    top: 100%; right: 10px;
+    border: 6px solid transparent;
+    border-top-color: var(--navy);
+  }
+  .form-label .tooltip-icon .tt-title {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #22A3B8;
+    margin-bottom: 5px;
+  }
+  .form-label .tooltip-icon:hover .tooltip-bubble,
+  .form-label .tooltip-icon.tt-open .tooltip-bubble { display: block; }
+
+  .form-body, .panel, .panel > *, aside.panel { overflow: visible !important; }
+</style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/favicon.svg">
@@ -499,7 +628,7 @@ gtag('config', 'G-WNHZDLVPEL');
   <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 <div class="update-bar">
-  🕐 Mis à jour : Janvier 2026 — <a href="/fr/mentions-legales/">Sources officielles</a>
+  🕐 Mis à jour : Janvier 2026  — Trouvez un expert agréé sur <a href="https://www.itaa.be/fr/accueil/" target="_blank" rel="noopener" style="color:#1A7A8A;text-decoration:none;font-weight:600;">ITAA — Institut des Conseillers Fiscaux et des Comptables</a> — <a href="/fr/mentions-legales/">Sources officielles</a>
 </div>
 
 <section class="hero">
@@ -533,15 +662,34 @@ gtag('config', 'G-WNHZDLVPEL');
 
       <!-- Montant -->
       <div class="form-group">
-        <label class="form-label"><span class="lbl-icon">💶</span> Montant emprunté</label>
+        <label class="form-label"><span class="lbl-icon">🏠</span> Prix du bien / Montant total</label>
         <div class="input-wrap">
           <span class="input-prefix">€</span>
-          <input type="number" class="form-input" id="montant" value="200000" min="1000" step="1000" oninput="syncSlider('montant','montantSlider');calculate()">
+          <input type="number" class="form-input" id="montant" value="200000" min="1000" step="1000" oninput="syncSlider('montant','montantSlider');updateApport()">
         </div>
         <div>
           <input type="range" class="form-range" id="montantSlider" min="5000" max="1000000" step="1000" value="200000" oninput="syncInput('montantSlider','montant');calculate()">
           <div class="slider-labels"><span>5 000 €</span><span>1 000 000 €</span></div>
         </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label"><span class="lbl-icon">🏦</span> Apport personnel</label>
+        <div class="input-wrap">
+          <span class="input-prefix">€</span>
+          <input type="number" class="form-input" id="apport" value="0" min="0" step="1000" oninput="syncSlider('apport','apportSlider');updateApport()">
+        </div>
+        <div class="slider-wrap">
+          <input type="range" class="form-range" id="apportSlider" min="0" max="500000" step="1000" value="0" oninput="syncInput('apportSlider','apport');updateApport()">
+          <div class="slider-labels"><span>0 €</span><span>500 000 €</span></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label"><span class="lbl-icon">💶</span> Montant net emprunté</label>
+        <div class="input-wrap" style="background:var(--off-white);opacity:0.85;">
+          <span class="input-prefix">€</span>
+          <input type="number" class="form-input" id="montantNet" value="200000" readonly style="color:var(--teal);font-weight:700;cursor:default;">
+        </div>
+        <div style="font-size:0.75rem;color:var(--text-light);margin-top:4px;padding-left:2px;"><span id="apportPct"></span>&nbsp;— Prix − apport</div>
       </div>
 
       <!-- Taux -->
@@ -662,6 +810,18 @@ gtag('config', 'G-WNHZDLVPEL');
     — <a href="mentions-legales.html#disclaimer" style="color:#1A7A8A;text-decoration:none;">Mentions légales complètes</a>
   </div>
 </div>
+<div class="expert-section">
+  <h2>Maîtrisez votre tableau d'amortissement en Belgique</h2>
+  <p>Un crédit hypothécaire ou un prêt professionnel vous engage sur le long terme. Comprendre votre tableau d'amortissement vous permet de mieux gérer votre budget et de négocier les meilleures conditions auprès des banques belges.</p>
+  <ul>
+    <li><strong>Mensualités</strong> : chaque paiement comprend une part d'intérêts et une part de remboursement en capital — la proportion évolue en faveur du capital au fil du temps</li>
+    <li><strong>Quotité</strong> : le rapport entre le montant emprunté et la valeur du bien. En dessous de 80%, vous obtenez généralement de meilleures conditions</li>
+    <li><strong>Taux fixe vs variable</strong> : le taux fixe offre la sécurité, le taux variable peut être plus avantageux à court terme mais comporte un risque</li>
+  </ul>
+  <div class="expert-highlight"><strong>Calcul de mensualité prêt hypothécaire Belgique 2026 :</strong> Avec les taux actuels, simulez différents scénarios (durée 15, 20, 25 ans) pour trouver l'équilibre optimal entre mensualité et coût total du crédit.</div>
+  <a href="/fr/simulateur-immobilier/" class="expert-internal-link">🏠 Estimez aussi vos droits d'enregistrement avec notre Simulateur immobilier →</a>
+</div>
+
 <div style="margin:32px auto;text-align:center;max-width:100%;">
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -726,8 +886,32 @@ function setFreq(el){
 }
 
 // ── CALCUL PRINCIPAL ───────────────────────────────────────────────────────
-function calculate(){
-  const C      = parseFloat(document.getElementById('montant').value)||0;
+
+  function updateApport() {
+    const prix   = parseFloat(document.getElementById('montant').value) || 0;
+    const apport = parseFloat(document.getElementById('apport').value)  || 0;
+    const net    = Math.max(0, prix - apport);
+    document.getElementById('montantNet').value = net;
+    const pct = prix > 0 ? (apport / prix * 100) : 0;
+    document.getElementById('apportPct').textContent = pct > 0 ? pct.toFixed(1) + '% du prix' : '';
+    const sl = document.getElementById('apportSlider');
+    if (sl) { sl.max = prix; if (apport > prix) { sl.value = prix; document.getElementById('apport').value = prix; } }
+    calculate();
+  }
+
+  
+  function toggleTooltip(el) {
+    const isOpen = el.classList.contains('tt-open');
+    document.querySelectorAll('.tooltip-icon.tt-open').forEach(t => t.classList.remove('tt-open'));
+    if (!isOpen) el.classList.add('tt-open');
+  }
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.tooltip-icon'))
+      document.querySelectorAll('.tooltip-icon.tt-open').forEach(t => t.classList.remove('tt-open'));
+  });
+
+  function calculate(){
+  const C      = parseFloat(document.getElementById('montantNet').value) || parseFloat(document.getElementById('montant').value) || 0;
   const tauxAn = parseFloat(document.getElementById('taux').value)||0;
   const duree  = parseInt(document.getElementById('duree').value)||1;
   const frais  = 0;

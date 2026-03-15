@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invoice Withholding Simulator Sub-contractor Belgium — 15.44%</title>
-  <meta name="description" content="Calculate the mandatory invoice withholding for sub-contractors in Belgium (15.44% if tax or social debts). Tool compliant with Belgian regulations.">
+  <title>Invoice Withholding Simulator Belgium — 15.44%</title>
+  <meta name="description" content="Calculate the mandatory invoice withholding for sub-contractors in Belgium (15.44% if tax or social debts). Free tool compliant with Belgian regulations.">
   <meta name="keywords" content="invoice withholding sub-contractor belgium, invoice withholding belgium, 15.44% belgium, tax debts supplier belgium, contractor withholding">
   <meta name="author" content="La Caverne de la Compta">
   <meta name="robots" content="index, follow">
@@ -468,15 +468,12 @@
   }
 
   
-  }
 
   
   /* Fix overflow tables on mobile */
     table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .chart-container, canvas { max-width: 100% !important; }
-  }
   
-  }
 
   
   /* ── LANG DROPDOWN ── */
@@ -596,7 +593,85 @@
     #langSwitcher { margin-left: 8px; }
   }
 
-  </style>
+  
+  /* ── Section expert SEO ── */
+  .expert-section {
+    max-width: 1140px;
+    margin: 48px auto 0;
+    padding: 0 30px;
+  }
+  .expert-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+  .expert-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 24px 0 8px;
+  }
+  .expert-section p {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    margin-bottom: 12px;
+  }
+  .expert-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+  }
+  .expert-section ul li {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 6px;
+  }
+  .expert-section ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-weight: 700;
+  }
+  .expert-section .expert-highlight {
+    background: var(--teal-pale);
+    border-left: 4px solid var(--teal);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 0.88rem;
+    color: var(--text-dark);
+    line-height: 1.7;
+  }
+  .expert-section .expert-highlight strong { color: var(--teal); }
+  .expert-internal-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    padding: 12px 20px;
+    background: var(--teal-pale);
+    border: 1px solid rgba(26,122,138,0.25);
+    border-radius: 10px;
+    font-size: 0.88rem;
+    color: var(--teal);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  .expert-internal-link:hover {
+    background: var(--teal);
+    color: var(--white);
+  }
+</style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/favicon.svg">
@@ -746,7 +821,7 @@ gtag('config', 'G-WNHZDLVPEL');
   <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 <div style="text-align:right;font-size:0.72rem;color:var(--text-light);padding:6px 40px 0;font-style:italic;">
-    🕐 Updated: January 2025 — <a href="/en/mentions-legales/" style="color:var(--text-light)">Official sources</a>
+    🕐 Updated: January 2025  — Find a certified expert at <a href="https://www.itaa.be/en/itaa-institute-for-tax-advisors-and-accountants-welcome/" target="_blank" rel="noopener" style="color:#1A7A8A;text-decoration:none;font-weight:600;">ITAA — Institute for Tax Advisors and Accountants</a> — <a href="/en/mentions-legales/" style="color:var(--text-light)">Official sources</a>
   </div>
 
 <!-- Hero -->
@@ -1138,6 +1213,19 @@ gtag('config', 'G-WNHZDLVPEL');
     — <a href="mentions-legales.html#disclaimer" style="color:#1A7A8A;text-decoration:none;">Full legal notices</a>
   </div>
 </div>
+<div class="expert-section">
+  <h2>Invoice withholding: Article 30bis, joint liability and 2026 obligations</h2>
+  <p>In the construction sector and other high-risk sectors, Belgian law requires a <strong>15.44% withholding</strong> on invoices from sub-contractors with social or tax debts. This obligation stems from <strong>Articles 30bis and 30ter of the VAT Code</strong>.</p>
+  <h3>When to apply the 15.44% withholding?</h3>
+  <ul>
+    <li>When your sub-contractor appears on the ONSS or FPS Finance debtor list</li>
+    <li>For any contract in construction (NACE 41-43), security, temp work and cleaning</li>
+    <li>Even for foreign sub-contractors performing work in Belgium</li>
+  </ul>
+  <div class="expert-highlight"><strong>Joint liability:</strong> Failing to make this withholding can make the main contractor jointly liable for the sub-contractor's debts. Always verify via <strong>checkobligationderetenue.be</strong> before each payment.</div>
+  <a href="/en/quick-memento-fiscal/" class="expert-internal-link">📌 All 2026 rates in our Belgian Tax Quick-Memo →</a>
+</div>
+
 <div style="margin:32px auto;text-align:center;max-width:100%;">
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"

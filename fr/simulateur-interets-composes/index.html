@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulateur Intérêts Composés Belgique — Épargne</title>
-  <meta name="description" content="Calculez la croissance de votre épargne avec les intérêts composés. Visualisez l'effet du temps sur vos placements. Outil gratuit belge.">
-  <meta name="keywords" content="intérêts composés belgique, simulateur épargne belgique, calculateur placement, rendement épargne, intérêts composés calculateur">
+  <title>Intérêts Composés Belgique 2026 — Épargne, Rente & Précompte</title>
+  <meta name="description" content="Calculez votre épargne avec les intérêts composés. Mode Rente : capital pour X €/mois. Précompte 30%, règle des 4%, tableau annuel/mensuel. Outil gratuit.">
+  <meta name="keywords" content="intérêts composés belgique, simulateur épargne belgique, capital rente mensuelle belgique, précompte mobilier intérêts, règle 4% FIRE belgique, ETF rendement belgique, calculateur placement belgique, simulateur rente passive 2026">
   <meta name="author" content="La Caverne de la Compta">
   <meta name="robots" content="index, follow">
   <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/">
@@ -15,7 +15,7 @@
   <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/">
   <link rel="canonical" href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/">
   <!-- Open Graph -->
-  <meta property="og:title" content="Simulateur Intérêts Composés Belgique — Épargne & Investissement">
+  <meta property="og:title" content="Simulateur Intérêts Composés Belgique 2026 — Épargne, Rente & Précompte">
   <meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
 
   <meta property="og:description" content="Calculez la croissance de votre épargne avec les intérêts composés. Visualisez l'effet du temps sur vos placements. Outil gratuit belge.">
@@ -239,14 +239,67 @@
     gap: 6px;
   }
   .form-label .tooltip-icon {
-    width: 16px; height: 16px;
+    width: 18px; height: 18px;
     background: var(--teal-pale);
+    border: 1.5px solid rgba(26,122,138,0.3);
     border-radius: 50%;
     font-size: 10px;
-    display: flex; align-items: center; justify-content: center;
+    display: inline-flex; align-items: center; justify-content: center;
     color: var(--teal);
-    cursor: help;
+    cursor: pointer;
     font-weight: 700;
+    position: relative;
+    flex-shrink: 0;
+    user-select: none;
+    vertical-align: middle;
+    margin-left: 4px;
+  }
+  .form-label .tooltip-icon .tooltip-bubble {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 10px);
+    background: var(--navy);
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 400;
+    line-height: 1.65;
+    padding: 12px 14px;
+    border-radius: 10px;
+    white-space: normal;
+    width: 260px;
+    box-shadow: 0 6px 24px rgba(13,27,42,0.35);
+    z-index: 9999;
+    pointer-events: none;
+    text-align: left;
+  }
+  .form-label .tooltip-icon .tooltip-bubble::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 6px;
+    border: 6px solid transparent;
+    border-top-color: var(--navy);
+  }
+  .form-label .tooltip-icon .tt-title {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #22A3B8;
+    margin-bottom: 5px;
+  }
+  .form-label .tooltip-icon .tt-example {
+    display: block;
+    margin-top: 7px;
+    padding-top: 7px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.55);
+    font-style: italic;
+  }
+  .form-label .tooltip-icon:hover .tooltip-bubble,
+  .form-label .tooltip-icon.tt-open .tooltip-bubble {
+    display: block;
   }
 
   .input-wrap {
@@ -573,15 +626,12 @@
   .fade-in { animation: fadeUp 0.5s ease forwards; }
 
   
-  }
 
   
   /* Fix overflow tables on mobile */
     table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .chart-container, canvas { max-width: 100% !important; }
-  }
   
-  }
 
   
   /* ── LANG DROPDOWN ── */
@@ -701,7 +751,111 @@
     #langSwitcher { margin-left: 8px; }
   }
 
-  </style>
+  
+  /* ── Mode tabs ── */
+  .mode-tabs {
+    display: flex;
+    background: rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 4px;
+    gap: 4px;
+  }
+  .mode-tab {
+    flex: 1;
+    padding: 9px 8px;
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+    color: rgba(255,255,255,0.55);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .mode-tab.active {
+    background: var(--white);
+    color: var(--navy);
+    box-shadow: 0 2px 8px rgba(13,27,42,0.2);
+  }
+
+  /* ── Rente result ── */
+  .rente-result-box {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    align-self: start;
+    min-width: 0;
+  }
+  .rente-hero-card {
+    background: linear-gradient(145deg, #0D1B2A 0%, #1A3A5C 100%);
+    border-radius: 18px;
+    padding: 36px 40px;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(13,27,42,0.25);
+  }
+  .rente-hero-card::before {
+    content: '€';
+    position: absolute;
+    right: 24px; top: 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 7rem;
+    font-weight: 900;
+    color: rgba(201,168,76,0.08);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .rente-hero-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 12px;
+  }
+  .rente-capital {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.4rem;
+    font-weight: 900;
+    color: #C9A84C;
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+  .rente-caption {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.5);
+  }
+  .rente-formula {
+    background: var(--teal-pale);
+    border: 1px solid rgba(26,122,138,0.2);
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 0.85rem;
+    color: var(--text-mid);
+  }
+  .rente-formula strong { color: var(--teal); font-weight: 700; }
+
+  /* ── Section expert SEO ── */
+  .expert-section {
+    max-width: 1140px;
+    margin: 48px auto 0;
+    padding: 0 30px;
+  }
+  .expert-section h2 { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:700; color:var(--navy); margin-bottom:16px; line-height:1.3; }
+  .expert-section h3 { font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; color:var(--navy); margin:24px 0 8px; }
+  .expert-section p { font-size:0.9rem; color:var(--text-mid); line-height:1.8; margin-bottom:12px; }
+  .expert-section ul { list-style:none; padding:0; margin:0 0 16px; }
+  .expert-section ul li { font-size:0.9rem; color:var(--text-mid); line-height:1.8; padding-left:20px; position:relative; margin-bottom:6px; }
+  .expert-section ul li::before { content:'→'; position:absolute; left:0; color:var(--teal); font-weight:700; }
+  .expert-section .expert-highlight { background:var(--teal-pale); border-left:4px solid var(--teal); border-radius:0 8px 8px 0; padding:14px 18px; margin:16px 0; font-size:0.88rem; color:var(--text-dark); line-height:1.7; }
+  .expert-section .expert-highlight strong { color:var(--teal); }
+  .expert-internal-link { display:inline-flex; align-items:center; gap:8px; margin-top:24px; padding:12px 20px; background:var(--teal-pale); border:1px solid rgba(26,122,138,0.25); border-radius:10px; font-size:0.88rem; color:var(--teal); text-decoration:none; font-weight:600; transition:all 0.2s; }
+  .expert-internal-link:hover { background:var(--teal); color:var(--white); }
+</style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/favicon.svg">
@@ -724,7 +878,7 @@
 <meta property="og:image:height" content="512">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@lacavernecompta">
-  <meta name="twitter:title" content="Simulateur Intérêts Composés Belgique">
+  <meta name="twitter:title" content="Simulateur Intérêts Composés Belgique 2026 — Épargne, Rente & Précompte">
   <meta name="twitter:description" content="Calculez la croissance de votre épargne avec les intérêts composés. Visualisez l'effet du temps sur vos placements. Outil gratuit belge.">
   <meta name="twitter:image" content="https://lacavernedelacompta.be/logo.svg">
 <!-- CACHE-BUST-v8-fr/simulateur-interets-composes/index.html -->
@@ -851,7 +1005,7 @@ gtag('config', 'G-WNHZDLVPEL');
   <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 <div style="text-align:right;font-size:0.72rem;color:var(--text-light);padding:6px 40px 0;font-style:italic;">
-    🕐 Mis à jour : Janvier 2025 — <a href="/fr/mentions-legales/" style="color:var(--text-light)">Sources officielles</a>
+    🕐 Mis à jour : Janvier 2025  — Trouvez un expert agréé sur <a href="https://www.itaa.be/fr/accueil/" target="_blank" rel="noopener" style="color:#1A7A8A;text-decoration:none;font-weight:600;">ITAA — Institut des Conseillers Fiscaux et des Comptables</a> — <a href="/fr/mentions-legales/" style="color:var(--text-light)">Sources officielles</a>
   </div>
 
 <!-- Breadcrumb -->
@@ -886,16 +1040,18 @@ gtag('config', 'G-WNHZDLVPEL');
   <!-- Left panel: Inputs -->
   <aside class="panel">
     <div class="panel-header">
-      <h2>⚙️ Paramètres</h2>
-      <p>Ajustez les valeurs pour simuler votre épargne</p>
+      <div class="mode-tabs">
+        <button class="mode-tab active" id="tabEpargne" onclick="switchMode('epargne')">📈 Mode Épargne</button>
+        <button class="mode-tab" id="tabRente" onclick="switchMode('rente')">💰 Mode Rente</button>
+      </div>
     </div>
-    <div class="panel-body">
+    <div class="panel-body" id="panelEpargne">
 
       <!-- Capital initial -->
       <div class="form-group">
         <label class="form-label">
           Capital initial
-          <div class="tooltip-icon" title="Montant que vous placez au départ">?</div>
+          <div class="tooltip-icon" onclick="toggleTooltip(this)"><span class="tooltip-bubble"><span class="tt-title">Capital initial</span>Le montant investi une seule fois au départ, avant tout versement régulier. Plus il est élevé, plus la base de calcul des intérêts est grande dès le début.<span class="tt-example">💡 10 000 € à 7% pendant 20 ans = +28 000 € d'intérêts sans rien ajouter.</span></span>?</div>
         </label>
         <div class="input-wrap">
           <span class="input-prefix">€</span>
@@ -911,7 +1067,7 @@ gtag('config', 'G-WNHZDLVPEL');
       <div class="form-group">
         <label class="form-label">
           Versement <span id="versementLabel">mensuel</span>
-          <div class="tooltip-icon" title="Somme ajoutée à chaque période choisie">?</div>
+          <div class="tooltip-icon" onclick="toggleTooltip(this)"><span class="tooltip-bubble"><span class="tt-title">Versement périodique</span>Somme que vous ajoutez régulièrement à votre épargne. Les versements réguliers sont l'un des leviers les plus puissants de la capitalisation.<span class="tt-example">💡 200 €/mois pendant 20 ans = 48 000 € versés, mais bien plus grâce aux intérêts composés.</span></span>?</div>
         </label>
         <div class="toggle-group" id="pmtFreqGroup" style="margin-bottom:10px">
           <button class="toggle-btn" data-val="365">Journalier</button>
@@ -932,7 +1088,7 @@ gtag('config', 'G-WNHZDLVPEL');
       <div class="form-group">
         <label class="form-label">
           Taux d'intérêt annuel
-          <div class="tooltip-icon" title="Rendement annuel brut estimé">?</div>
+          <div class="tooltip-icon" onclick="toggleTooltip(this)"><span class="tooltip-bubble"><span class="tt-title">Taux d'intérêt annuel</span>Rendement annuel brut estimé de votre placement. Livret : 2–3 %, Obligations : 3–5 %, Actions/ETF : 6–10 %.<span class="tt-example">💡 Un ETF World tourne historiquement autour de 7–9 % brut/an (non garanti).</span></span>?</div>
         </label>
         <div class="input-wrap">
           <input type="number" class="form-input" id="taux" value="7" min="0" max="30" step="0.1" style="padding-left:16px;">
@@ -948,7 +1104,7 @@ gtag('config', 'G-WNHZDLVPEL');
       <div class="form-group">
         <label class="form-label">
           Durée du placement
-          <div class="tooltip-icon" title="Nombre d'années d'investissement">?</div>
+          <div class="tooltip-icon" onclick="toggleTooltip(this)"><span class="tooltip-bubble"><span class="tt-title">Durée du placement</span>Nombre d'années pendant lesquelles vous laissez votre capital fructifier. Le temps est le facteur le plus déterminant.<span class="tt-example">💡 Commencer à 25 ans plutôt qu'à 35 ans peut doubler votre capital à la retraite.</span></span>?</div>
         </label>
         <div class="input-wrap">
           <input type="number" class="form-input" id="duree" value="20" min="1" max="50" step="1" style="padding-left:16px;">
@@ -980,7 +1136,48 @@ gtag('config', 'G-WNHZDLVPEL');
         <input type="checkbox" id="reinvest" checked style="display:none">
       </div>
 
-      <button class="calc-btn" onclick="calculate()">Calculer ma simulation →</button>
+
+      <div class="form-group">
+        <label class="form-label">Impôt sur les intérêts (optionnel) <div class="tooltip-icon" onclick="toggleTooltip(this)"><span class="tooltip-bubble"><span class="tt-title">Précompte mobilier (Belgique)</span>Taux d'imposition sur les intérêts. Standard belge : 30 %. Laissez à 0 % si non applicable.<span class="tt-example">💡 Taux belge standard : 30 % (précompte mobilier).</span></span>?</div></label>
+        <div class="toggle-group" id="epImpotGroup">
+          <button class="toggle-btn active" data-impot="0" onclick="setEpImpot(this)">Aucun (0%)</button>
+          <button class="toggle-btn" data-impot="0.15" onclick="setEpImpot(this)">15%</button>
+          <button class="toggle-btn" data-impot="0.30" onclick="setEpImpot(this)">30%</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-body" id="panelRente" style="display:none; flex-direction:column; gap:20px;">
+      <div class="form-group">
+        <label class="form-label">Rente mensuelle souhaitée <div class="tooltip-icon" onclick="toggleTooltip(this)"><span class="tooltip-bubble"><span class="tt-title">Rente mensuelle</span>Le montant net que vous voulez percevoir chaque mois depuis votre capital.<span class="tt-example">💡 1 000 €/mois = 12 000 €/an. À 7% il faut ~171 000 € de capital.</span></span>?</div></label>
+        <div class="input-wrap">
+          <span class="input-prefix">€</span>
+          <input type="number" class="form-input" id="renteTarget" value="1000" min="0" step="50" oninput="calculateRente()">
+        </div>
+        <div class="slider-wrap">
+          <input type="range" class="form-range" id="renteSlider" min="0" max="10000" step="50" value="1000">
+          <div class="slider-labels"><span>0 €</span><span>10 000 €</span></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Taux annuel brut <div class="tooltip-icon" onclick="toggleTooltip(this)"><span class="tooltip-bubble"><span class="tt-title">Taux annuel brut</span>Rendement brut attendu avant impôt.<span class="tt-example">💡 ETF World : ~7–9 % brut/an. Obligations : 3–5 %.</span></span>?</div></label>
+        <div class="input-wrap">
+          <input type="number" class="form-input" id="renteTaux" value="7" min="0.1" max="20" step="0.1" style="padding-left:16px;">
+          <span class="input-suffix">%</span>
+        </div>
+        <div class="slider-wrap">
+          <input type="range" class="form-range" id="renteTauxSlider" min="0.5" max="15" step="0.1" value="7">
+          <div class="slider-labels"><span>0,5 %</span><span>15 %</span></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Impôt sur les intérêts (optionnel) <div class="tooltip-icon" onclick="toggleTooltip(this)"><span class="tooltip-bubble"><span class="tt-title">Précompte mobilier (Belgique)</span>Taux d'imposition sur les intérêts. Standard belge : 30 %. Laissez à 0 % si non applicable.<span class="tt-example">💡 Taux belge standard : 30 % (précompte mobilier).</span></span>?</div></label>
+        <div class="toggle-group" id="renteImpotGroup">
+          <button class="toggle-btn active" data-impot="0" onclick="setRenteImpot(this)">Aucun (0%)</button>
+          <button class="toggle-btn" data-impot="0.15" onclick="setRenteImpot(this)">15%</button>
+          <button class="toggle-btn" data-impot="0.30" onclick="setRenteImpot(this)">30%</button>
+        </div>
+      </div>
     </div>
   </aside>
 
@@ -990,7 +1187,7 @@ gtag('config', 'G-WNHZDLVPEL');
     <div class="placeholder" id="placeholder">
       <div class="placeholder-icon">📊</div>
       <h3>Votre simulation apparaîtra ici</h3>
-      <p>Renseignez vos paramètres et cliquez sur "Calculer" pour visualiser la croissance de votre capital.</p>
+      <p>Renseignez vos paramètres ci-contre pour visualiser le capital nécessaire.</p>
     </div>
 
     <!-- KPIs (hidden initially) -->
@@ -1033,8 +1230,12 @@ gtag('config', 'G-WNHZDLVPEL');
     <!-- Table -->
     <div class="table-card" id="tableCard" style="display:none;">
       <div class="table-header">
-        <div class="table-title">📋 Tableau de capitalisation annuel</div>
-        <span style="font-size:0.75rem;color:var(--text-light);">Détail année par année</span>
+        <div class="table-title">📋 Tableau de capitalisation</div>
+        <div style="display:flex;gap:4px;" id="tableFreqGroup">
+          <button class="chart-tab active" data-tfreq="an" onclick="switchTableFreq('an',this)">Annuel</button>
+          <button class="chart-tab" data-tfreq="trim" onclick="switchTableFreq('trim',this)">Trimestriel</button>
+          <button class="chart-tab" data-tfreq="men" onclick="switchTableFreq('men',this)">Mensuel</button>
+        </div>
       </div>
       <div class="table-scroll">
         <table>
@@ -1067,6 +1268,17 @@ gtag('config', 'G-WNHZDLVPEL');
     </div>
 
   </section>
+
+  <div id="renteResultBox" class="rente-result-box" style="display:none;">
+    <div class="rente-hero-card">
+      <div class="rente-hero-label">Capital nécessaire</div>
+      <div class="rente-capital" id="renteCapital">—</div>
+      <div class="rente-caption" id="renteCapitalSub">—</div>
+    </div>
+    <div class="rente-formula">
+      <strong>📐 Formule :</strong>&nbsp;<span id="renteFormula">—</span>
+    </div>
+  </div>
 </div>
 
 <!-- Footer -->
@@ -1083,6 +1295,18 @@ gtag('config', 'G-WNHZDLVPEL');
     — <a href="mentions-legales.html#disclaimer" style="color:#1A7A8A;text-decoration:none;">Mentions légales complètes</a>
   </div>
 </div>
+<div class="expert-section">
+  <h2>Intérêts composés en Belgique : stratégie FIRE, ETF et précompte mobilier</h2>
+  <p>Les intérêts composés représentent l'un des mécanismes les plus puissants de création de richesse à long terme. En Belgique, tout investisseur doit cependant intégrer la fiscalité spécifique dans ses calculs pour obtenir une projection réaliste.</p>
+  <h3>Le précompte mobilier belge : 30% sur vos revenus financiers</h3>
+  <p>La plupart des revenus financiers en Belgique (dividendes, intérêts, plus-values sur certains produits) sont soumis au <strong>précompte mobilier de 30%</strong>. Utilisez le toggle "Impôt" de notre simulateur pour visualiser l'impact réel sur votre capital final et comparer les scénarios bruts et nets.</p>
+  <h3>La règle des 4% et la stratégie FIRE en Belgique</h3>
+  <p>La <strong>règle des 4% (Trinity Study)</strong> stipule qu'un portefeuille peut supporter un retrait annuel de 4% pendant au moins 30 ans sans s'épuiser. En mode Rente, notre simulateur calcule précisément le capital nécessaire pour générer votre rente mensuelle souhaitée, en tenant compte du taux net après précompte.</p>
+  <div class="expert-highlight"><strong>Exemple concret :</strong> Pour vivre de 1 500 €/mois avec un portefeuille ETF à 7% brut et 30% de précompte (taux net 4,9%), il vous faut un capital de <strong>367 347 €</strong>. Sans impôt à 7% brut, seulement 257 143 €. La différence est majeure — notre simulateur vous donne le chiffre exact.</div>
+  <p>La fréquence de capitalisation joue également un rôle : une capitalisation mensuelle génère davantage qu'une capitalisation annuelle pour le même taux nominal. Notre tableau Annuel/Trimestriel/Mensuel vous permet de visualiser cet effet précisément.</p>
+  <a href="/fr/simulateur-immobilier/" class="expert-internal-link">🏠 Prêt à investir dans l'immobilier ? Simulez vos droits d'enregistrement →</a>
+</div>
+
 <div style="margin:32px auto;text-align:center;max-width:100%;">
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -1107,8 +1331,8 @@ gtag('config', 'G-WNHZDLVPEL');
   function syncPair(inputId, sliderId) {
     const input = document.getElementById(inputId);
     const slider = document.getElementById(sliderId);
-    input.addEventListener('input', () => { slider.value = input.value; });
-    slider.addEventListener('input', () => { input.value = slider.value; });
+    input.addEventListener('input', () => { slider.value = input.value; calculate(); });
+    slider.addEventListener('input', () => { input.value = slider.value; calculate(); });
   }
   syncPair('capital', 'capitalSlider');
   syncPair('versement', 'versementSlider');
@@ -1279,7 +1503,7 @@ gtag('config', 'G-WNHZDLVPEL');
       let cumulInterets = 0;
       totalInvested = C0;
       for (let y = 1; y <= duree; y++) {
-        const newInvested = pmt * 12;
+        const newInvested = pmt * pmtFreq;
         // interests on current capital (not reinvested → base stays, but we add versements)
         const interestThisYear = simpleCapital * tauxAn;
         cumulInterets += interestThisYear;
@@ -1318,32 +1542,20 @@ gtag('config', 'G-WNHZDLVPEL');
     });
 
     document.getElementById('kpiCapital').textContent = fmt(finalInvested) + ' €';
-    document.getElementById('kpiCapitalSub').textContent = `Capital initial + ${fmt(pmt * 12 * duree)} € versés`;
-    document.getElementById('kpiInterets').textContent = fmt(finalInterets) + ' €';
-    document.getElementById('kpiInteretsSub').textContent = `+${fmt(gainPct, 1)} % de rendement`;
+    document.getElementById('kpiCapitalSub').textContent = `Capital initial + ${fmt(pmt * pmtFreq * duree)} € versés`;
+    const finalInteretsNet = finalInterets * (1 - epImpot);
+    document.getElementById('kpiInterets').textContent = fmt(finalInteretsNet) + ' €';
+    const gainPctNet = finalInvested > 0 ? (finalInteretsNet / finalInvested * 100) : 0;
+    document.getElementById('kpiInteretsSub').textContent = `+${fmt(gainPctNet, 1)} % de rendement net`;
     document.getElementById('kpiTotal').textContent = fmt(finalCapital) + ' €';
     document.getElementById('kpiTotalSub').textContent = reinvest ? 'Avec réinvestissement des intérêts' : 'Sans réinvestissement';
 
     // Chart
     renderChart(labels, capitaux, interets);
 
-    // Table
-    const tbody = document.getElementById('tableBody');
-    tbody.innerHTML = '';
-    let prevCapital = C0;
-    yearly.forEach(row => {
-      const interetAn = row.capital - row.totalInvested;
-      const newInvestedThisYear = row.year === 1 ? row.totalInvested : (row.totalInvested - yearly[row.year - 2].totalInvested);
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td>Année ${row.year}</td>
-        <td>${fmt(row.totalInvested)} €</td>
-        <td class="positive">+${fmt(interetAn)} €</td>
-        <td><strong>${fmt(row.capital)} €</strong></td>
-        <td class="positive">+${fmt(row.capital - C0)} €</td>
-      `;
-      tbody.appendChild(tr);
-    });
+    // Store for buildTable
+    lastRawData = { C0, pmt, pmtFreq, tauxAn, duree, reinvest, freq, yearly };
+    buildTable(currentTableFreq);
 
     // Scroll to results on mobile
     if (window.innerWidth < 900) {
@@ -1351,8 +1563,133 @@ gtag('config', 'G-WNHZDLVPEL');
     }
   }
 
+
+
+  // ── TOOLTIP TOGGLE ──
+  function toggleTooltip(el) {
+    const isOpen = el.classList.contains('tt-open');
+    document.querySelectorAll('.tooltip-icon.tt-open').forEach(t => t.classList.remove('tt-open'));
+    if (!isOpen) el.classList.add('tt-open');
+  }
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.tooltip-icon')) {
+      document.querySelectorAll('.tooltip-icon.tt-open').forEach(t => t.classList.remove('tt-open'));
+    }
+  });
+
+  // ── MODE TABS ──
+  function switchMode(mode) {
+    const isRente = mode === 'rente';
+    document.getElementById('panelEpargne').style.display = isRente ? 'none' : 'flex';
+    document.getElementById('panelRente').style.display   = isRente ? 'flex' : 'none';
+    document.getElementById('results').style.display      = isRente ? 'none' : 'flex';
+    const box = document.getElementById('renteResultBox');
+    if (box) box.style.display = isRente ? 'flex' : 'none';
+    document.getElementById('tabEpargne').classList.toggle('active', !isRente);
+    document.getElementById('tabRente').classList.toggle('active', isRente);
+    if (isRente) calculateRente();
+  }
+
+  // ── IMPÔT ÉPARGNE ──
+  let epImpot = 0;
+  function setEpImpot(el) {
+    document.querySelectorAll('#epImpotGroup .toggle-btn').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+    epImpot = parseFloat(el.dataset.impot);
+    if (document.getElementById('kpiGrid').style.display !== 'none') calculate();
+  }
+
+  // ── IMPÔT RENTE ──
+  let renteImpot = 0;
+  function setRenteImpot(el) {
+    document.querySelectorAll('#renteImpotGroup .toggle-btn').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+    renteImpot = parseFloat(el.dataset.impot);
+    calculateRente();
+  }
+
+  // ── SYNC SLIDERS RENTE ──
+  function syncRente(inId, slId) {
+    const inp = document.getElementById(inId);
+    const sl  = document.getElementById(slId);
+    if (!inp || !sl) return;
+    inp.addEventListener('input', () => { sl.value = inp.value; calculateRente(); });
+    sl.addEventListener('input',  () => { inp.value = sl.value; calculateRente(); });
+  }
+  syncRente('renteTarget', 'renteSlider');
+  syncRente('renteTaux',   'renteTauxSlider');
+
+  // ── CALCUL RENTE ──
+  function calculateRente() {
+    const renteM   = parseFloat(document.getElementById('renteTarget').value) || 0;
+    const tauxBrut = parseFloat(document.getElementById('renteTaux').value) / 100 || 0;
+    const tauxNet  = tauxBrut * (1 - renteImpot);
+    if (tauxNet <= 0 || renteM <= 0) return;
+    const capital = (renteM * 12) / tauxNet;
+    const fmtN = n => new Intl.NumberFormat('fr-BE').format(Math.round(n));
+    const box = document.getElementById('renteResultBox');
+    if (!box) return;
+    box.style.display = 'flex';
+    document.getElementById('renteCapital').textContent    = fmtN(capital) + ' €';
+    document.getElementById('renteCapitalSub').textContent = fmtN(renteM) + ' €/mois';
+    document.getElementById('renteFormula').innerHTML =
+      fmtN(renteM) + ' €/mois × 12 ÷ ' + (tauxNet*100).toFixed(2) +
+      '% = <strong>' + fmtN(capital) + ' €</strong>';
+    if (window.innerWidth < 900) box.scrollIntoView({ behavior:'smooth', block:'start' });
+  }
+
+  // ── FREQ HINTS ──
+  const freqHints = { '12': 'Mensuelle — vos intérêts sont recalculés et ajoutés chaque mois.', '4': 'Trimestrielle — recalcul tous les 3 mois (standard bancaire belge).', '1': 'Annuelle — recalcul une fois par an (moins avantageux sur le long terme).' };
+
+  // ── TABLE GRANULARITY ──
+  let currentTableFreq = 'an';
+  let lastRawData = null;
+
+  function switchTableFreq(tfreq, el) {
+    currentTableFreq = tfreq;
+    document.querySelectorAll('#tableFreqGroup .chart-tab').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+    if (lastRawData) buildTable(tfreq);
+  }
+
+  function buildTable(tfreq) {
+    if (!lastRawData) return;
+    const { C0, pmt, pmtFreq, tauxAn, duree, reinvest } = lastRawData;
+    const tbody = document.getElementById('tableBody');
+    tbody.innerHTML = '';
+    const step = tfreq === 'an' ? 1 : tfreq === 'trim' ? 4 : 12;
+    const capFreq = lastRawData.freq || freq;
+    const rPeriod = Math.pow(1 + tauxAn / capFreq, capFreq / step) - 1;
+    const pmtPerStep = pmt * pmtFreq / step;
+    const stepsTotal = duree * step;
+    const taxRate = (typeof epImpot !== 'undefined') ? epImpot : 0;
+    let capital = C0, totalInvested = C0, prevInteretCumul = 0;
+    for (let s = 1; s <= stepsTotal; s++) {
+      if (reinvest) capital = capital * (1 + rPeriod) + pmtPerStep;
+      else capital += capital * rPeriod + pmtPerStep;
+      totalInvested += pmtPerStep;
+      let label;
+      if (tfreq === 'an') label = 'Année ' + s;
+      else if (tfreq === 'trim') { const yr=Math.ceil(s/4),q=((s-1)%4)+1; label='T'+q+' — Année '+yr; }
+      else { const yr=Math.ceil(s/12),mo=((s-1)%12)+1; label='Mois'+mo+' — Année '+yr; }
+      const interetBrut = capital - totalInvested;
+      const interetCumul = interetBrut * (1 - taxRate);
+      const interetPeriode = interetCumul - prevInteretCumul;
+      prevInteretCumul = interetCumul;
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td>${label}</td><td>${fmt(totalInvested)} €</td><td class="positive">+${fmt(interetPeriode)} €</td><td><strong>${fmt(capital)} €</strong></td><td class="positive">+${fmt(interetCumul)} €</td>`;
+      tbody.appendChild(tr);
+      if (tfreq === 'men' && s >= 60 && s < stepsTotal) {
+        const trM = document.createElement('tr');
+        trM.innerHTML = '<td colspan="5" style="text-align:center;color:var(--text-light);font-style:italic;padding:12px;">… ' + (stepsTotal-60) + ' périodes supplémentaires …</td>';
+        tbody.appendChild(trM);
+        break;
+      }
+    }
+  }
+
   // Auto-calculate on load
-  window.addEventListener('load', calculate);
+  window.addEventListener('load', function(){ calculate(); calculateRente(); });
 </script>
 
 <!-- ── BANNIÈRE COOKIES APD-CONFORME ── -->
@@ -1564,6 +1901,7 @@ function toggleReinvest() {
   const box = document.getElementById('reinvestBox');
   cb.checked = !cb.checked;
   box.classList.toggle('checked', cb.checked);
+  if (document.getElementById('kpiGrid').style.display !== 'none') calculate();
 }
 </script>
 </body>

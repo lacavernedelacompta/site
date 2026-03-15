@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zinseszins-Rechner Belgien — Sparen & Investieren</title>
-  <meta name="description" content="Berechnen Sie das Wachstum Ihrer Ersparnisse mit Zinseszins. Visualisieren Sie den Zeiteffekt auf Ihre Anlagen. Kostenloses Tool Belgien.">
-  <meta name="keywords" content="zinseszins belgien, spar-simulator belgien, anlagenrechner, sparrendite, zinseszins-rechner">
+  <title>Zinseszins-Rechner Belgien 2026 — Sparen & Quellensteuer</title>
+  <meta name="description" content="Ersparnisse mit Zinseszins berechnen. Rentemodus: Kapital für X €/Monat. Quellensteuer 30%, 4%-Regel, jährliche/monatliche Tabelle. Kostenloses Tool.">
+  <meta name="keywords" content="Zinseszins Rechner Belgien, Spar-Simulator Belgien, Rentenkapital Rechner, Quellensteuer Zinsen Belgien, 4%-Regel FIRE Belgien, ETF Rendite Belgien, Anlagerechner 2026, passives Einkommen Belgien">
   <meta name="author" content="La Caverne de la Compta">
   <meta name="robots" content="index, follow">
   <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/">
@@ -15,7 +15,7 @@
   <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/">
   <link rel="canonical" href="https://lacavernedelacompta.be/de/simulateur-interets-composes/">
   <!-- Open Graph -->
-  <meta property="og:title" content="Zinseszins-Rechner Belgien — Sparen & Investieren">
+  <meta property="og:title" content="Zinseszins-Rechner Belgien 2026 — Sparen, Rente & Quellensteuer">
   <meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
 
   <meta property="og:description" content="Berechnen Sie das Wachstum Ihrer Ersparnisse mit Zinseszins. Visualisieren Sie den Zeiteffekt auf Ihre Anlagen. Kostenloses Tool Belgien.">
@@ -239,14 +239,67 @@
     gap: 6px;
   }
   .form-label .tooltip-icon {
-    width: 16px; height: 16px;
+    width: 18px; height: 18px;
     background: var(--teal-pale);
+    border: 1.5px solid rgba(26,122,138,0.3);
     border-radius: 50%;
     font-size: 10px;
-    display: flex; align-items: center; justify-content: center;
+    display: inline-flex; align-items: center; justify-content: center;
     color: var(--teal);
-    cursor: help;
+    cursor: pointer;
     font-weight: 700;
+    position: relative;
+    flex-shrink: 0;
+    user-select: none;
+    vertical-align: middle;
+    margin-left: 4px;
+  }
+  .form-label .tooltip-icon .tooltip-bubble {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 10px);
+    background: var(--navy);
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 400;
+    line-height: 1.65;
+    padding: 12px 14px;
+    border-radius: 10px;
+    white-space: normal;
+    width: 260px;
+    box-shadow: 0 6px 24px rgba(13,27,42,0.35);
+    z-index: 9999;
+    pointer-events: none;
+    text-align: left;
+  }
+  .form-label .tooltip-icon .tooltip-bubble::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 6px;
+    border: 6px solid transparent;
+    border-top-color: var(--navy);
+  }
+  .form-label .tooltip-icon .tt-title {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #22A3B8;
+    margin-bottom: 5px;
+  }
+  .form-label .tooltip-icon .tt-example {
+    display: block;
+    margin-top: 7px;
+    padding-top: 7px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.55);
+    font-style: italic;
+  }
+  .form-label .tooltip-icon:hover .tooltip-bubble,
+  .form-label .tooltip-icon.tt-open .tooltip-bubble {
+    display: block;
   }
 
   .input-wrap {
@@ -573,15 +626,12 @@
   .fade-in { animation: fadeUp 0.5s ease forwards; }
 
   
-  }
 
   
   /* Fix overflow tables on mobile */
     table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .chart-container, canvas { max-width: 100% !important; }
-  }
   
-  }
 
   
   /* ── LANG DROPDOWN ── */
@@ -701,7 +751,111 @@
     #langSwitcher { margin-left: 8px; }
   }
 
-  </style>
+  
+  /* ── Mode tabs ── */
+  .mode-tabs {
+    display: flex;
+    background: rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 4px;
+    gap: 4px;
+  }
+  .mode-tab {
+    flex: 1;
+    padding: 9px 8px;
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+    color: rgba(255,255,255,0.55);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .mode-tab.active {
+    background: var(--white);
+    color: var(--navy);
+    box-shadow: 0 2px 8px rgba(13,27,42,0.2);
+  }
+
+  /* ── Rente result ── */
+  .rente-result-box {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    align-self: start;
+    min-width: 0;
+  }
+  .rente-hero-card {
+    background: linear-gradient(145deg, #0D1B2A 0%, #1A3A5C 100%);
+    border-radius: 18px;
+    padding: 36px 40px;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(13,27,42,0.25);
+  }
+  .rente-hero-card::before {
+    content: '€';
+    position: absolute;
+    right: 24px; top: 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 7rem;
+    font-weight: 900;
+    color: rgba(201,168,76,0.08);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .rente-hero-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 12px;
+  }
+  .rente-capital {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.4rem;
+    font-weight: 900;
+    color: #C9A84C;
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+  .rente-caption {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.5);
+  }
+  .rente-formula {
+    background: var(--teal-pale);
+    border: 1px solid rgba(26,122,138,0.2);
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 0.85rem;
+    color: var(--text-mid);
+  }
+  .rente-formula strong { color: var(--teal); font-weight: 700; }
+
+  /* ── Section expert SEO ── */
+  .expert-section {
+    max-width: 1140px;
+    margin: 48px auto 0;
+    padding: 0 30px;
+  }
+  .expert-section h2 { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:700; color:var(--navy); margin-bottom:16px; line-height:1.3; }
+  .expert-section h3 { font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; color:var(--navy); margin:24px 0 8px; }
+  .expert-section p { font-size:0.9rem; color:var(--text-mid); line-height:1.8; margin-bottom:12px; }
+  .expert-section ul { list-style:none; padding:0; margin:0 0 16px; }
+  .expert-section ul li { font-size:0.9rem; color:var(--text-mid); line-height:1.8; padding-left:20px; position:relative; margin-bottom:6px; }
+  .expert-section ul li::before { content:'→'; position:absolute; left:0; color:var(--teal); font-weight:700; }
+  .expert-section .expert-highlight { background:var(--teal-pale); border-left:4px solid var(--teal); border-radius:0 8px 8px 0; padding:14px 18px; margin:16px 0; font-size:0.88rem; color:var(--text-dark); line-height:1.7; }
+  .expert-section .expert-highlight strong { color:var(--teal); }
+  .expert-internal-link { display:inline-flex; align-items:center; gap:8px; margin-top:24px; padding:12px 20px; background:var(--teal-pale); border:1px solid rgba(26,122,138,0.25); border-radius:10px; font-size:0.88rem; color:var(--teal); text-decoration:none; font-weight:600; transition:all 0.2s; }
+  .expert-internal-link:hover { background:var(--teal); color:var(--white); }
+</style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/favicon.svg">
@@ -724,7 +878,7 @@
 <meta property="og:image:height" content="512">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@lacavernecompta">
-  <meta name="twitter:title" content="Zinseszins-Rechner Belgien — Sparen & Investieren">
+  <meta name="twitter:title" content="Zinseszins-Rechner Belgien 2026 — Sparen, Rente & Quellensteuer">
   <meta name="twitter:description" content="Berechnen Sie das Wachstum Ihrer Ersparnisse mit Zinseszins. Visualisieren Sie den Zeiteffekt auf Ihre Anlagen. Kostenloses Tool Belgien.">
   <meta name="twitter:image" content="https://lacavernedelacompta.be/logo.svg">
 <!-- CACHE-BUST-v8-de/simulateur-interets-composes/index.html -->
@@ -851,7 +1005,7 @@ gtag('config', 'G-WNHZDLVPEL');
   <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 <div style="text-align:right;font-size:0.72rem;color:var(--text-light);padding:6px 40px 0;font-style:italic;">
-    🕐 Aktualisiert: Januar 2025 — <a href="/de/mentions-legales/" style="color:var(--text-light)">Offizielle Quellen</a>
+    🕐 Aktualisiert: Januar 2025  — Finden Sie einen zugelassenen Experten auf <a href="https://www.itaa.be/de/" target="_blank" rel="noopener" style="color:#1A7A8A;text-decoration:none;font-weight:600;">ITAA — Institut für Steuerberater und Buchhalter</a> — <a href="/de/mentions-legales/" style="color:var(--text-light)">Offizielle Quellen</a>
   </div>
 
 <!-- Breadcrumb -->
@@ -885,16 +1039,18 @@ gtag('config', 'G-WNHZDLVPEL');
   <!-- Left panel: Inputs -->
   <aside class="panel">
     <div class="panel-header">
-      <h2>⚙️ Parameter</h2>
-      <p>Passen Sie die Werte an, um Ihre Ersparnisse zu simulieren</p>
+      <div class="mode-tabs">
+        <button class="mode-tab active" id="tabEpargne" onclick="switchMode('epargne')">📈 Sparen</button>
+        <button class="mode-tab" id="tabRente" onclick="switchMode('rente')">💰 Rente</button>
+      </div>
     </div>
-    <div class="panel-body">
+    <div class="panel-body" id="panelEpargne">
 
       <!-- Anfangskapital -->
       <div class="form-group">
         <label class="form-label">
           Anfangskapital
-          <div class="tooltip-icon" title="Betrag, den Sie zu Beginn anlegen">?</div>
+          <div class="tooltip-icon" onclick="toggleTooltip(this)"><span class="tooltip-bubble"><span class="tt-title">Startkapital</span>Der Betrag, den Sie einmalig zu Beginn anlegen. Je höher dieser Betrag, desto größer die Zinsbasis von Anfang an.<span class="tt-example">💡 10.000 € bei 7% über 20 Jahre = +28.000 € Zinsen ohne weitere Einzahlungen.</span></span>?</div>
         </label>
         <div class="input-wrap">
           <span class="input-prefix">€</span>
@@ -910,7 +1066,7 @@ gtag('config', 'G-WNHZDLVPEL');
       <div class="form-group">
         <label class="form-label">
           Einzahlung <span id="versementLabel">monatlich</span>
-          <div class="tooltip-icon" title="Betrag, der in jedem gewählten Zeitraum hinzugefügt wird">?</div>
+          <div class="tooltip-icon" onclick="toggleTooltip(this)"><span class="tooltip-bubble"><span class="tt-title">Regelmäßige Einzahlung</span>Betrag, den Sie regelmäßig zu Ihren Ersparnissen hinzufügen. Regelmäßige Einzahlungen sind einer der wirkungsvollsten Hebel beim Vermögensaufbau.<span class="tt-example">💡 200 €/Monat über 20 Jahre = 48.000 € eingezahlt, aber dank Zinseszins deutlich mehr.</span></span>?</div>
         </label>
         <div class="toggle-group" id="pmtFreqGroup" style="margin-bottom:10px">
           <button class="toggle-btn" data-val="365">Täglich</button>
@@ -931,7 +1087,7 @@ gtag('config', 'G-WNHZDLVPEL');
       <div class="form-group">
         <label class="form-label">
           Jährlicher Zinssatz
-          <div class="tooltip-icon" title="Geschätzter jährlicher Bruttoertrag">?</div>
+          <div class="tooltip-icon" onclick="toggleTooltip(this)"><span class="tooltip-bubble"><span class="tt-title">Jährlicher Zinssatz</span>Geschätzte jährliche Bruttorendite. Sparkonto: 2–3%, Anleihen: 3–5%, Aktien/ETF: 6–10%.<span class="tt-example">💡 Ein Welt-ETF erzielte historisch ~7–9% Brutto/Jahr (keine Garantie).</span></span>?</div>
         </label>
         <div class="input-wrap">
           <input type="number" class="form-input" id="taux" value="7" min="0" max="30" step="0.1" style="padding-left:16px;">
@@ -947,7 +1103,7 @@ gtag('config', 'G-WNHZDLVPEL');
       <div class="form-group">
         <label class="form-label">
           Anlagedauer
-          <div class="tooltip-icon" title="Anzahl der Anlagejahre">?</div>
+          <div class="tooltip-icon" onclick="toggleTooltip(this)"><span class="tooltip-bubble"><span class="tt-title">Anlagedauer</span>Anzahl der Jahre, in denen Sie Ihr Kapital wachsen lassen. Zeit ist der entscheidende Faktor beim Zinseszins.<span class="tt-example">💡 Mit 25 statt 35 Jahren zu beginnen kann Ihr Altersvorsorgekapital verdoppeln.</span></span>?</div>
         </label>
         <div class="input-wrap">
           <input type="number" class="form-input" id="duree" value="20" min="1" max="50" step="1" style="padding-left:16px;">
@@ -979,7 +1135,48 @@ gtag('config', 'G-WNHZDLVPEL');
         <input type="checkbox" id="reinvest" checked style="display:none">
       </div>
 
-      <button class="calc-btn" onclick="calculate()">Simulation berechnen →</button>
+
+      <div class="form-group">
+        <label class="form-label">Steuer auf Zinsen (optional) <div class="tooltip-icon" onclick="toggleTooltip(this)"><span class="tooltip-bubble"><span class="tt-title">Quellensteuer</span>Steuersatz auf Zinsen. Belgischer Standard: 30%. Bei 0% lassen, falls nicht anwendbar.<span class="tt-example">💡 Belgischer Standardsatz: 30% Quellensteuer.</span></span>?</div></label>
+        <div class="toggle-group" id="epImpotGroup">
+          <button class="toggle-btn active" data-impot="0" onclick="setEpImpot(this)">Keine (0%)</button>
+          <button class="toggle-btn" data-impot="0.15" onclick="setEpImpot(this)">15%</button>
+          <button class="toggle-btn" data-impot="0.30" onclick="setEpImpot(this)">30%</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-body" id="panelRente" style="display:none; flex-direction:column; gap:20px;">
+      <div class="form-group">
+        <label class="form-label">Gewünschte monatliche Rente <div class="tooltip-icon" onclick="toggleTooltip(this)"><span class="tooltip-bubble"><span class="tt-title">Monatliche Rente</span>Der Nettobetrag, den Sie jeden Monat erhalten möchten.<span class="tt-example">💡 1.000 €/Monat = 12.000 €/Jahr. Bei 7% benötigen Sie ~171.000 €.</span></span>?</div></label>
+        <div class="input-wrap">
+          <span class="input-prefix">€</span>
+          <input type="number" class="form-input" id="renteTarget" value="1000" min="0" step="50" oninput="calculateRente()">
+        </div>
+        <div class="slider-wrap">
+          <input type="range" class="form-range" id="renteSlider" min="0" max="10000" step="50" value="1000">
+          <div class="slider-labels"><span>0 €</span><span>10 000 €</span></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Brutto-Jahreszins <div class="tooltip-icon" onclick="toggleTooltip(this)"><span class="tooltip-bubble"><span class="tt-title">Bruttojahresrendite</span>Erwartete Rendite vor Steuer.<span class="tt-example">💡 Welt-ETF: ~7–9% brutto/Jahr. Anleihen: 3–5%.</span></span>?</div></label>
+        <div class="input-wrap">
+          <input type="number" class="form-input" id="renteTaux" value="7" min="0.1" max="20" step="0.1" style="padding-left:16px;">
+          <span class="input-suffix">%</span>
+        </div>
+        <div class="slider-wrap">
+          <input type="range" class="form-range" id="renteTauxSlider" min="0.5" max="15" step="0.1" value="7">
+          <div class="slider-labels"><span>0,5 %</span><span>15 %</span></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Steuer auf Zinsen (optional) <div class="tooltip-icon" onclick="toggleTooltip(this)"><span class="tooltip-bubble"><span class="tt-title">Quellensteuer</span>Steuersatz auf Zinsen. Belgischer Standard: 30%. Bei 0% lassen, falls nicht anwendbar.<span class="tt-example">💡 Belgischer Standardsatz: 30% Quellensteuer.</span></span>?</div></label>
+        <div class="toggle-group" id="renteImpotGroup">
+          <button class="toggle-btn active" data-impot="0" onclick="setRenteImpot(this)">Keine (0%)</button>
+          <button class="toggle-btn" data-impot="0.15" onclick="setRenteImpot(this)">15%</button>
+          <button class="toggle-btn" data-impot="0.30" onclick="setRenteImpot(this)">30%</button>
+        </div>
+      </div>
     </div>
   </aside>
 
@@ -989,7 +1186,7 @@ gtag('config', 'G-WNHZDLVPEL');
     <div class="placeholder" id="placeholder">
       <div class="placeholder-icon">📊</div>
       <h3>Ihre Simulation erscheint hier</h3>
-      <p>Geben Sie Ihre Parameter ein und klicken Sie auf "Berechnen", um das Wachstum Ihres Kapitals zu visualisieren.</p>
+      <p>Geben Sie Ihre Parameter ein, um das erforderliche Kapital zu berechnen.</p>
     </div>
 
     <!-- KPIs (hidden initially) -->
@@ -1032,8 +1229,12 @@ gtag('config', 'G-WNHZDLVPEL');
     <!-- Table -->
     <div class="table-card" id="tableCard" style="display:none;">
       <div class="table-header">
-        <div class="table-title">📋 Jährliche Kapitalisierungstabelle</div>
-        <span style="font-size:0.75rem;color:var(--text-light);">Jahr für Jahr Detail</span>
+        <div class="table-title">📋 Tableau de capitalisation</div>
+        <div style="display:flex;gap:4px;" id="tableFreqGroup">
+          <button class="chart-tab active" data-tfreq="an" onclick="switchTableFreq('an',this)">Jährlich</button>
+          <button class="chart-tab" data-tfreq="trim" onclick="switchTableFreq('trim',this)">Vierteljährlich</button>
+          <button class="chart-tab" data-tfreq="men" onclick="switchTableFreq('men',this)">Monatlich</button>
+        </div>
       </div>
       <div class="table-scroll">
         <table>
@@ -1066,6 +1267,17 @@ gtag('config', 'G-WNHZDLVPEL');
     </div>
 
   </section>
+
+  <div id="renteResultBox" class="rente-result-box" style="display:none;">
+    <div class="rente-hero-card">
+      <div class="rente-hero-label">Benötigtes Kapital</div>
+      <div class="rente-capital" id="renteCapital">—</div>
+      <div class="rente-caption" id="renteCapitalSub">—</div>
+    </div>
+    <div class="rente-formula">
+      <strong>📐 Formel :</strong>&nbsp;<span id="renteFormula">—</span>
+    </div>
+  </div>
 </div>
 
 <!-- Footer -->
@@ -1082,6 +1294,17 @@ gtag('config', 'G-WNHZDLVPEL');
     — <a href="mentions-legales.html#disclaimer" style="color:#1A7A8A;text-decoration:none;">Vollständiges Impressum</a>
   </div>
 </div>
+<div class="expert-section">
+  <h2>Zinseszins in Belgien: FIRE-Strategie, ETFs und Quellensteuer</h2>
+  <p>Zinseszins ist einer der mächtigsten Mechanismen zur Vermögensbildung auf lange Sicht. In Belgien muss jedoch jeder Anleger die spezifische Besteuerung in seine Berechnungen einbeziehen, um realistische Projektionen zu erhalten.</p>
+  <h3>Belgische Quellensteuer: 30% auf Ihre Kapitalerträge</h3>
+  <p>Die meisten Kapitalerträge in Belgien (Dividenden, Zinsen, Kursgewinne auf bestimmte Produkte) unterliegen der <strong>Quellensteuer von 30%</strong>. Verwenden Sie den "Steuer"-Umschalter in unserem Simulator, um die reale Auswirkung auf Ihr Endkapital zu sehen.</p>
+  <h3>Die 4%-Regel und die FIRE-Strategie in Belgien</h3>
+  <p>Die <strong>4%-Regel (Trinity Study)</strong> besagt, dass ein Portfolio mindestens 30 Jahre lang jährliche Entnahmen von 4% verkraften kann. Im Rentemodus berechnet unser Simulator genau das Kapital, das für Ihre gewünschte monatliche Rente benötigt wird.</p>
+  <div class="expert-highlight"><strong>Konkretes Beispiel:</strong> Um 1.500 €/Monat aus einem ETF-Portfolio bei 7% brutto und 30% Quellensteuer (4,9% Nettosatz) zu erhalten, benötigen Sie ein Kapital von <strong>367.347 €</strong>. Ohne Steuer bei 7% brutto nur 257.143 €.</div>
+  <a href="/de/simulateur-immobilier/" class="expert-internal-link">🏠 In Immobilien investieren? Simulieren Sie Ihre Grunderwerbsteuer →</a>
+</div>
+
 <div style="margin:32px auto;text-align:center;max-width:100%;">
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -1090,6 +1313,13 @@ gtag('config', 'G-WNHZDLVPEL');
      data-ad-client="ca-pub-8043980001637749"
      data-ad-slot="9017409611"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<!-- ── DISCLAIMER ── -->
+<div style="background:#F4F7FA;border-top:1px solid #DDE5EF;padding:18px 40px;font-size:0.75rem;color:#8A9BB0;line-height:1.7;font-family:'Inter',sans-serif;">
+  <div style="max-width:1150px;margin:0 auto;">
+    <strong style="color:#4A6279;">⚠️ Hinweis — Nur indikativer Wert :</strong>
+    Die berechneten Ergebnisse sind indikativ. Vergangene Renditen sind keine Garantie für zukünftige Ergebnisse. <strong style="color:#4A6279;">Wenden Sie sich an einen zugelassenen Finanzberater</strong> vor jeder Anlageentscheidung. — <a href="/de/mentions-legales/" style="color:#1A7A8A;text-decoration:none;">Vollständige rechtliche Hinweise</a>
+  </div>
 </div>
 <footer>
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
@@ -1106,8 +1336,8 @@ gtag('config', 'G-WNHZDLVPEL');
   function syncPair(inputId, sliderId) {
     const input = document.getElementById(inputId);
     const slider = document.getElementById(sliderId);
-    input.addEventListener('input', () => { slider.value = input.value; });
-    slider.addEventListener('input', () => { input.value = slider.value; });
+    input.addEventListener('input', () => { slider.value = input.value; calculate(); });
+    slider.addEventListener('input', () => { input.value = slider.value; calculate(); });
   }
   syncPair('capital', 'capitalSlider');
   syncPair('versement', 'versementSlider');
@@ -1278,7 +1508,7 @@ gtag('config', 'G-WNHZDLVPEL');
       let cumulInterets = 0;
       totalInvested = C0;
       for (let y = 1; y <= duree; y++) {
-        const newInvested = pmt * 12;
+        const newInvested = pmt * pmtFreq;
         // interests on current capital (not reinvested → base stays, but we add versements)
         const interestThisYear = simpleCapital * tauxAn;
         cumulInterets += interestThisYear;
@@ -1318,31 +1548,19 @@ gtag('config', 'G-WNHZDLVPEL');
 
     document.getElementById('kpiCapital').textContent = fmt(finalInvested) + ' €';
     document.getElementById('kpiCapitalSub').textContent = `Anfangskapital + ${fmt(pmt * 12 * duree)} € eingezahlt`;
-    document.getElementById('kpiInterets').textContent = fmt(finalInterets) + ' €';
-    document.getElementById('kpiInteretsSub').textContent = `+${fmt(gainPct, 1)} % Rendite`;
+    const finalInteretsNet = finalInterets * (1 - epImpot);
+    document.getElementById('kpiInterets').textContent = fmt(finalInteretsNet) + ' €';
+    const gainPctNet = finalInvested > 0 ? (finalInteretsNet / finalInvested * 100) : 0;
+    document.getElementById('kpiInteretsSub').textContent = `+${fmt(gainPctNet, 1)} % Nettorendite`;
     document.getElementById('kpiTotal').textContent = fmt(finalCapital) + ' €';
-    document.getElementById('kpiTotalSub').textContent = reinvest ? 'Mit Zinswiederanlage' : 'SJahre Wiederanlage';
+    document.getElementById('kpiTotalSub').textContent = reinvest ? 'Mit Zinseszins' : 'Ohne Wiederanlage';
 
     // Chart
     renderChart(labels, capitaux, interets);
 
     // Table
-    const tbody = document.getElementById('tableBody');
-    tbody.innerHTML = '';
-    let prevCapital = C0;
-    yearly.forEach(row => {
-      const interetJahr = row.capital - row.totalInvested;
-      const newInvestedThisYear = row.year === 1 ? row.totalInvested : (row.totalInvested - yearly[row.year - 2].totalInvested);
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td>Jahr ${row.year}</td>
-        <td>${fmt(row.totalInvested)} €</td>
-        <td class="positive">+${fmt(interetJahr)} €</td>
-        <td><strong>${fmt(row.capital)} €</strong></td>
-        <td class="positive">+${fmt(row.capital - C0)} €</td>
-      `;
-      tbody.appendChild(tr);
-    });
+    lastRawData = { C0, pmt, pmtFreq, tauxAn: tauxJahr, duree, reinvest, freq };
+    buildTable(currentTableFreq);
 
     // Scroll to results on mobile
     if (window.innerWidth < 900) {
@@ -1350,8 +1568,133 @@ gtag('config', 'G-WNHZDLVPEL');
     }
   }
 
+
+
+  // ── TOOLTIP TOGGLE ──
+  function toggleTooltip(el) {
+    const isOpen = el.classList.contains('tt-open');
+    document.querySelectorAll('.tooltip-icon.tt-open').forEach(t => t.classList.remove('tt-open'));
+    if (!isOpen) el.classList.add('tt-open');
+  }
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.tooltip-icon')) {
+      document.querySelectorAll('.tooltip-icon.tt-open').forEach(t => t.classList.remove('tt-open'));
+    }
+  });
+
+  // ── MODE TABS ──
+  function switchMode(mode) {
+    const isRente = mode === 'rente';
+    document.getElementById('panelEpargne').style.display = isRente ? 'none' : 'flex';
+    document.getElementById('panelRente').style.display   = isRente ? 'flex' : 'none';
+    document.getElementById('results').style.display      = isRente ? 'none' : 'flex';
+    const box = document.getElementById('renteResultBox');
+    if (box) box.style.display = isRente ? 'flex' : 'none';
+    document.getElementById('tabEpargne').classList.toggle('active', !isRente);
+    document.getElementById('tabRente').classList.toggle('active', isRente);
+    if (isRente) calculateRente();
+  }
+
+  // ── IMPÔT ÉPARGNE ──
+  let epImpot = 0;
+  function setEpImpot(el) {
+    document.querySelectorAll('#epImpotGroup .toggle-btn').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+    epImpot = parseFloat(el.dataset.impot);
+    if (document.getElementById('kpiGrid').style.display !== 'none') calculate();
+  }
+
+  // ── IMPÔT RENTE ──
+  let renteImpot = 0;
+  function setRenteImpot(el) {
+    document.querySelectorAll('#renteImpotGroup .toggle-btn').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+    renteImpot = parseFloat(el.dataset.impot);
+    calculateRente();
+  }
+
+  // ── SYNC SLIDERS RENTE ──
+  function syncRente(inId, slId) {
+    const inp = document.getElementById(inId);
+    const sl  = document.getElementById(slId);
+    if (!inp || !sl) return;
+    inp.addEventListener('input', () => { sl.value = inp.value; calculateRente(); });
+    sl.addEventListener('input',  () => { inp.value = sl.value; calculateRente(); });
+  }
+  syncRente('renteTarget', 'renteSlider');
+  syncRente('renteTaux',   'renteTauxSlider');
+
+  // ── CALCUL RENTE ──
+  function calculateRente() {
+    const renteM   = parseFloat(document.getElementById('renteTarget').value) || 0;
+    const tauxBrut = parseFloat(document.getElementById('renteTaux').value) / 100 || 0;
+    const tauxNet  = tauxBrut * (1 - renteImpot);
+    if (tauxNet <= 0 || renteM <= 0) return;
+    const capital = (renteM * 12) / tauxNet;
+    const fmtN = n => new Intl.NumberFormat('de-DE').format(Math.round(n));
+    const box = document.getElementById('renteResultBox');
+    if (!box) return;
+    box.style.display = 'flex';
+    document.getElementById('renteCapital').textContent    = fmtN(capital) + ' €';
+    document.getElementById('renteCapitalSub').textContent = fmtN(renteM) + ' €/Monat';
+    document.getElementById('renteFormula').innerHTML =
+      fmtN(renteM) + ' €/Monat × 12 ÷ ' + (tauxNet*100).toFixed(2) +
+      '% = <strong>' + fmtN(capital) + ' €</strong>';
+    if (window.innerWidth < 900) box.scrollIntoView({ behavior:'smooth', block:'start' });
+  }
+
+  // ── FREQ HINTS ──
+  const freqHints = { '12': 'Monatlich — Ihre Zinsen werden monatlich neu berechnet und hinzugefügt.', '4': 'Vierteljährlich — Neuberechnung alle 3 Monate (belgischer Bankstandard).', '1': 'Jährlich — Neuberechnung einmal pro Jahr (langfristig weniger vorteilhaft).' };
+
+  // ── TABLE GRANULARITY ──
+  let currentTableFreq = 'an';
+  let lastRawData = null;
+
+  function switchTableFreq(tfreq, el) {
+    currentTableFreq = tfreq;
+    document.querySelectorAll('#tableFreqGroup .chart-tab').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+    if (lastRawData) buildTable(tfreq);
+  }
+
+  function buildTable(tfreq) {
+    if (!lastRawData) return;
+    const { C0, pmt, pmtFreq, tauxAn, duree, reinvest } = lastRawData;
+    const tbody = document.getElementById('tableBody');
+    tbody.innerHTML = '';
+    const step = tfreq === 'an' ? 1 : tfreq === 'trim' ? 4 : 12;
+    const capFreq = lastRawData.freq || freq;
+    const rPeriod = Math.pow(1 + tauxAn / capFreq, capFreq / step) - 1;
+    const pmtPerStep = pmt * pmtFreq / step;
+    const stepsTotal = duree * step;
+    const taxRate = (typeof epImpot !== 'undefined') ? epImpot : 0;
+    let capital = C0, totalInvested = C0, prevInteretCumul = 0;
+    for (let s = 1; s <= stepsTotal; s++) {
+      if (reinvest) capital = capital * (1 + rPeriod) + pmtPerStep;
+      else capital += capital * rPeriod + pmtPerStep;
+      totalInvested += pmtPerStep;
+      let label;
+      if (tfreq === 'an') label = 'Jahr ' + s;
+      else if (tfreq === 'trim') { const yr=Math.ceil(s/4),q=((s-1)%4)+1; label='Q'+q+' — Jahr '+yr; }
+      else { const yr=Math.ceil(s/12),mo=((s-1)%12)+1; label='Monat'+mo+' — Jahr '+yr; }
+      const interetBrut = capital - totalInvested;
+      const interetCumul = interetBrut * (1 - taxRate);
+      const interetPeriode = interetCumul - prevInteretCumul;
+      prevInteretCumul = interetCumul;
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td>${label}</td><td>${fmt(totalInvested)} €</td><td class="positive">+${fmt(interetPeriode)} €</td><td><strong>${fmt(capital)} €</strong></td><td class="positive">+${fmt(interetCumul)} €</td>`;
+      tbody.appendChild(tr);
+      if (tfreq === 'men' && s >= 60 && s < stepsTotal) {
+        const trM = document.createElement('tr');
+        trM.innerHTML = '<td colspan="5" style="text-align:center;color:var(--text-light);font-style:italic;padding:12px;">… ' + (stepsTotal-60) + ' weitere Perioden …</td>';
+        tbody.appendChild(trM);
+        break;
+      }
+    }
+  }
+
   // Auto-calculate on load
-  window.addEventListener('load', calculate);
+  window.addEventListener('load', function(){ calculate(); calculateRente(); });
 </script>
 
 <!-- ── BANNIÈRE COOKIES APD-CONFORME ── -->
@@ -1563,6 +1906,7 @@ function toggleReinvest() {
   const box = document.getElementById('reinvestBox');
   cb.checked = !cb.checked;
   box.classList.toggle('checked', cb.checked);
+  if (document.getElementById('kpiGrid').style.display !== 'none') calculate();
 }
 </script>
 </body>
