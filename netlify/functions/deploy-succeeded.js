@@ -22,6 +22,9 @@ const URLS = [
   '/en/simulateur-requalification-loyer/', '/en/simulateur-interets-composes/',
   '/en/simulateur-retenue/', '/en/pcmn-complet-societe-et-asbl/',
   '/en/quick-memento-fiscal/', '/en/remboursement-frais/', '/en/mentions-legales/',
+  '/fr/simulateur-frais-propres/',
+  '/fr/questionnaire-frais-propres/',
+  '/nl/questionnaire-frais-propres/',
 ].map(path => BASE_URL + path);
 
 function httpPost(hostname, path, body) {

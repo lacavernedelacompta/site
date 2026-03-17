@@ -1,0 +1,2610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Own Business Expenses Belgium 2026 — Questionnaire</title>
+<meta name="description" content="Calculate your own ONSS business expenses 2026: home office, PC, car. Distinguish BIK and reimbursable expenses. Generate PDF expense report. Free.">>
+<meta name="keywords" content="own business expenses belgium, expense report belgium 2026, ONSS allowances, BIK benefit in kind, expense reimbursement director">
+<meta name="author" content="La Caverne de la Compta">
+<meta name="robots" content="index, follow">
+<link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/fr/questionnaire-frais-propres/">
+<link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/questionnaire-frais-propres/">
+<link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/questionnaire-frais-propres/">
+<link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/questionnaire-frais-propres/">
+<link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/questionnaire-frais-propres/">
+<link rel="canonical" href="https://lacavernedelacompta.be/en/questionnaire-frais-propres/">
+<meta property="og:title" content="Own Business Expenses Belgium 2026 — Questionnaire & Expense Report">
+<meta property="og:description" content="Guided questionnaire: calculate your ONSS business expenses 2026 and generate your PDF expense report. BIK vs own expenses explained.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lacavernedelacompta.be/en/questionnaire-frais-propres/">
+<meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
+<meta property="og:locale" content="en_BE">
+<meta property="og:site_name" content="La Caverne de la Compta">
+<meta property="og:locale" content="en_BE">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
+
+<style>
+:root {
+  --navy:#0D1B2A; --navy-mid:#1B2E44; --teal:#1A7A8A; --teal-light:#22A3B8; --teal-pale:#E8F6F8;
+  --gold:#C9A84C; --gold-pale:#FBF5E6;
+  --white:#FFFFFF; --off:#F4F7FA; --text:#1A2535; --text-mid:#4A6279; --text-light:#8A9BB0;
+  --border:#DDE5EF; --shadow:rgba(13,27,42,.10);
+  --green:#1B7A3E; --green-pale:#EBF7ED;
+  --orange:#C05C00; --orange-pale:#FFF3E0;
+  --red:#C0392B; --red-pale:#FEE8E6;
+  --info:#1A4A7A; --info-pale:#E8F0FB;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',sans-serif;background:var(--off);color:var(--text);min-height:100vh;}
+
+/* ── TOPBAR ── */
+.topbar{background:var(--navy-mid);padding:7px 40px;display:flex;justify-content:space-between;align-items:center;}
+.topbar-left{font-size:.75rem;color:var(--text-light);letter-spacing:.05em;}
+.topbar-right{display:flex;gap:20px;}
+.topbar-right a{font-size:.75rem;color:var(--text-light);text-decoration:none;transition:color .2s;}
+.topbar-right a:hover{color:var(--white);}
+
+/* ── NAV ── */
+nav.main-nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:0;z-index:1000;box-shadow:0 2px 12px var(--shadow);}
+.nav-links{display:flex;list-style:none;gap:4px;align-items:center;}
+.nav-links a{padding:8px 14px;font-size:.83rem;font-weight:500;color:var(--text-mid);text-decoration:none;border-radius:6px;transition:all .15s;}
+.nav-links a:hover{background:var(--teal-pale);color:var(--teal);}
+.nav-links a.active{background:var(--teal-pale);color:var(--teal);font-weight:600;}
+.dd-wrap{position:relative;list-style:none;}
+.dd-btn{padding:8px 14px;font-size:.83rem;font-weight:500;color:var(--text-mid);background:none;border:none;cursor:pointer;border-radius:6px;display:flex;align-items:center;gap:6px;transition:all .15s;}
+.dd-btn:hover,.dd-wrap.dd-open .dd-btn{background:var(--teal-pale);color:var(--teal);}
+.dd-chevron{font-size:.7rem;transition:transform .2s;}
+.dd-wrap.dd-open .dd-chevron{transform:rotate(180deg);}
+.dd-menu{display:none;position:absolute;top:calc(100% + 4px);left:0;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:6px;box-shadow:0 8px 32px rgba(13,27,42,.12);min-width:230px;z-index:300;}
+.dd-wrap.dd-open .dd-menu{display:block;}
+.dd-menu a{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:8px;font-size:.82rem;color:var(--text-mid);text-decoration:none;transition:all .12s;}
+.dd-menu a:hover{background:var(--teal-pale);color:var(--teal);}
+.dd-icon{font-size:1rem;width:22px;text-align:center;}
+.lang-dropdown{position:relative;display:inline-block;}
+.lang-current{display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:6px;background:var(--teal);color:#fff;font-size:.78rem;font-weight:700;cursor:pointer;border:none;letter-spacing:.05em;}
+.lang-current:after{content:' ▾';font-size:.7rem;}
+.lang-menu{display:none;position:absolute;top:calc(100% + 4px);right:0;background:#fff;border:1px solid var(--border);border-radius:8px;box-shadow:0 8px 24px rgba(13,27,42,.12);min-width:120px;z-index:9000;overflow:hidden;}
+.lang-dropdown.open .lang-menu{display:block;}
+.lang-menu a{display:flex;align-items:center;gap:8px;padding:10px 14px;font-size:.82rem;font-weight:500;color:var(--text);text-decoration:none;border-bottom:1px solid var(--off);transition:background .15s;}
+.lang-menu a:last-child{border-bottom:none;}
+.lang-menu a:hover{background:var(--teal-pale);color:var(--teal);}
+.lang-menu a.active{font-weight:700;color:var(--teal);}
+.hamburger{display:none;}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#1A3A4A 60%,var(--teal) 100%);color:white;padding:48px 32px 60px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(26,122,138,.2) 0%,transparent 60%);pointer-events:none;}
+.hero-bread{font-size:.75rem;color:rgba(255,255,255,.45);margin-bottom:14px;}
+.hero-bread a{color:rgba(255,255,255,.5);text-decoration:none;}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:5px 16px;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:16px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1.2;margin-bottom:12px;}
+.hero h1 em{font-style:italic;color:var(--teal-light);}
+.hero p{font-size:.9rem;color:rgba(255,255,255,.65);max-width:560px;margin:0 auto;line-height:1.6;}
+.hero p strong{color:white;}
+
+/* ── MAIN LAYOUT ── */
+.main{max-width:1100px;margin:0 auto;padding:32px 24px 80px;display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:start;}
+
+/* ── WIZARD SHELL ── */
+.wizard{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 2px 16px var(--shadow);}
+.wizard-header{background:var(--navy);color:white;padding:20px 28px;display:flex;align-items:center;gap:12px;}
+.wizard-header-icon{width:40px;height:40px;background:rgba(255,255,255,.12);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;}
+.wizard-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;}
+.wizard-subtitle{font-size:.78rem;color:rgba(255,255,255,.55);margin-top:2px;}
+
+/* ── STEP PROGRESS ── */
+.step-progress{padding:20px 28px 16px;background:var(--white);border-bottom:1px solid var(--off);}
+.step-dots{display:flex;align-items:center;gap:0;margin-bottom:10px;}
+.step-dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;flex-shrink:0;transition:all .3s;cursor:default;}
+.step-dot.done{background:var(--teal);color:white;}
+.step-dot.active{background:var(--navy);color:white;box-shadow:0 0 0 3px rgba(26,122,138,.25);}
+.step-dot.pending{background:var(--border);color:var(--text-light);}
+.step-connector{flex:1;height:2px;background:var(--border);transition:background .3s;}
+.step-connector.done{background:var(--teal);}
+.step-labels{display:flex;justify-content:space-between;gap:4px;}
+.step-label{font-size:.65rem;color:var(--text-light);text-align:center;flex:1;line-height:1.3;transition:color .3s;}
+.step-dot.clickable{cursor:pointer;}
+.step-dot.clickable:hover{opacity:.8;transform:scale(1.15);transition:transform .15s;}
+.step-label.clickable{cursor:pointer;}
+.step-label.clickable:hover{color:var(--teal);text-decoration:underline;}
+.step-label.done{color:var(--teal);}
+
+/* ── STEP SCREENS ── */
+.step-screen{display:none;padding:28px 28px 24px;animation:fadeIn .25s ease;}
+.step-screen.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+
+.step-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px;}
+.step-intro{font-size:.84rem;color:var(--text-mid);line-height:1.6;margin-bottom:20px;}
+
+/* Profilee cards */
+.profile-toggle{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+.profile-card{border:2px solid var(--border);border-radius:12px;padding:20px 16px;cursor:pointer;transition:all .2s;text-align:center;background:var(--white);}
+.profile-card:hover{border-color:var(--teal);background:var(--teal-pale);}
+.profile-card.selected{border-color:var(--teal);background:var(--teal-pale);}
+.profile-card input[type=radio]{display:none;}
+.profile-card-icon{font-size:2rem;margin-bottom:8px;}
+.profile-card-label{font-size:.9rem;font-weight:700;color:var(--navy);}
+.profile-card-sub{font-size:.74rem;color:var(--text-light);margin-top:3px;}
+
+/* Form rows */
+.form-row{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--off);}
+.form-row:last-child{border-bottom:none;}
+.form-row-left{flex:1;}
+.form-row-label{font-size:.88rem;font-weight:600;color:var(--text);line-height:1.4;}
+.form-row-sub{font-size:.74rem;color:var(--text-light);margin-top:3px;line-height:1.5;}
+.form-row-right{flex-shrink:0;display:flex;align-items:center;gap:8px;}
+
+/* ── ATN / PROPRES MEGA TOGGLE ── */
+.choice-group{display:flex;flex-direction:column;gap:8px;margin-top:12px;}
+.choice-btn{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:all .18s;background:var(--white);text-align:left;width:100%;}
+.choice-btn:hover{border-color:var(--text-light);}
+.choice-btn.active-aucun{border-color:var(--border);background:var(--off);}
+.choice-btn.active-atn{border-color:var(--red);background:var(--red-pale);}
+.choice-btn.active-propres{border-color:var(--green);background:var(--green-pale);}
+.choice-btn-icon{font-size:1.3rem;flex-shrink:0;margin-top:1px;}
+.choice-btn-text{}
+.choice-btn-title{font-size:.84rem;font-weight:700;color:var(--text);}
+.choice-btn-desc{font-size:.74rem;color:var(--text-light);margin-top:2px;line-height:1.4;}
+.choice-btn.active-aucun .choice-btn-title{color:var(--text-mid);}
+.choice-btn.active-atn .choice-btn-title{color:var(--red);}
+.choice-btn.active-atn .choice-btn-desc{color:#A03020;}
+.choice-btn.active-propres .choice-btn-title{color:var(--green);}
+.choice-btn.active-propres .choice-btn-desc{color:#155F30;}
+
+/* Mini toggle (compact, 3-way) */
+.tri-toggle{display:flex;border:1.5px solid var(--border);border-radius:8px;overflow:hidden;background:var(--white);}
+.tri-toggle button{padding:7px 12px;border:none;background:none;cursor:pointer;font-size:.76rem;font-weight:600;color:var(--text-light);transition:all .15s;white-space:nowrap;}
+.tri-toggle button.active-none{background:var(--off);color:var(--text-mid);}
+.tri-toggle button.active-atn{background:var(--red-pale);color:var(--red);}
+.tri-toggle button.active-propres{background:var(--green-pale);color:var(--green);}
+.tri-toggle button + button{border-left:1px solid var(--border);}
+
+/* Number input */
+.num-input-wrap{display:flex;align-items:center;border:1.5px solid var(--border);border-radius:8px;overflow:hidden;background:var(--white);}
+.num-input-wrap input{width:68px;border:none;outline:none;padding:8px 10px;font-size:.88rem;font-family:'DM Sans',sans-serif;color:var(--text);text-align:right;background:transparent;}
+.num-input-wrap span{padding:8px 10px 8px 4px;font-size:.78rem;color:var(--text-light);background:transparent;}
+
+/* Badges */
+.atn-badge{display:inline-flex;align-items:center;gap:5px;background:var(--red-pale);color:var(--red);font-size:.72rem;font-weight:600;padding:3px 9px;border-radius:5px;margin-top:5px;}
+.propres-badge{display:inline-flex;align-items:center;gap:5px;background:var(--green-pale);color:var(--green);font-size:.72rem;font-weight:600;padding:3px 9px;border-radius:5px;margin-top:5px;}
+
+/* Notices */
+.notice{background:var(--info-pale);border:1px solid #C5D8F0;border-radius:9px;padding:11px 14px;font-size:.78rem;color:var(--info);line-height:1.55;margin-bottom:16px;display:flex;gap:8px;}
+.notice-icon{flex-shrink:0;font-size:1rem;}
+.notice a{color:var(--teal);font-weight:600;}
+.notice-warn{background:var(--orange-pale);border-color:#F5C87A;color:var(--orange);}
+.notice-dirigeant{background:#FBF5E6;border-color:#E8C96A;color:#7A5500;}
+.notice-km{background:var(--teal-pale);border-color:#99D9E5;color:#0E4F5A;}
+.notice-success{background:var(--green-pale);border-color:#9ED4B2;color:var(--green);}
+
+/* ── NAVIGATION BUTTONS ── */
+.step-nav{display:flex;gap:10px;margin-top:24px;padding-top:20px;border-top:1px solid var(--off);}
+.btn{padding:10px 20px;border-radius:9px;font-size:.85rem;font-weight:600;cursor:pointer;border:none;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .15s;font-family:'DM Sans',sans-serif;}
+.btn-primary{background:var(--teal);color:white;}
+.btn-primary:hover{background:var(--teal-light);}
+.btn-secondary{background:var(--off);color:var(--text-mid);border:1.5px solid var(--border);}
+.btn-secondary:hover{background:var(--border);}
+.btn-pdf{background:#e63946;color:white;}
+.btn-pdf:hover{background:#c1121f;}
+.btn-pdf:disabled{opacity:.5;cursor:not-allowed;}
+.btn-reset{background:var(--off);color:var(--text-mid);border:1.5px solid var(--border);}
+.btn-reset:hover{background:var(--border);}
+.btn-success{background:var(--green);color:white;}
+.btn-success:hover{background:#135F2E;}
+
+/* ── RESULT PANEL ── */
+.result-panel{position:sticky;top:88px;}
+.result-card{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 2px 16px var(--shadow);}
+.result-header{background:var(--navy);padding:20px 24px;color:white;}
+.result-header-title{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;margin-bottom:2px;}
+.result-header-sub{font-size:.74rem;color:rgba(255,255,255,.5);}
+.result-total-wrap{padding:20px 24px;border-bottom:1px solid var(--border);}
+.result-total-amount{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;color:var(--teal);line-height:1;}
+.result-total-label{font-size:.76rem;color:var(--text-light);margin-top:4px;}
+.result-breakdown{padding:16px 24px;}
+.result-breakdown-title{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-light);margin-bottom:12px;}
+.result-line{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--off);font-size:.82rem;}
+.result-line:last-child{border-bottom:none;}
+.result-line-label{color:var(--text-mid);}
+.result-line-value{font-weight:600;color:var(--text);font-family:'DM Mono',monospace;font-size:.8rem;}
+.result-line-value.zero{color:var(--text-light);font-weight:400;}
+.result-line.atn-line .result-line-label{color:var(--red);}
+.result-line.atn-line .result-line-value{color:var(--red);}
+.result-actions{padding:16px 24px;display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--border);}
+
+/* Info sidebar */
+.info-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px;box-shadow:0 2px 8px var(--shadow);margin-top:16px;}
+.info-box-title{font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.info-box ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.info-box li{font-size:.78rem;color:var(--text-mid);padding-left:14px;position:relative;line-height:1.5;}
+.info-box li::before{content:'→';position:absolute;left:0;color:var(--teal);font-weight:700;}
+
+/* ── ATN EXPLAINER ── */
+.atn-explainer{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;}
+.atn-card{border-radius:10px;padding:16px;}
+.atn-card-red{background:var(--red-pale);border:1.5px solid #F5B8B0;}
+.atn-card-green{background:var(--green-pale);border:1.5px solid #9ED4B2;}
+.atn-card-title{font-size:.84rem;font-weight:700;margin-bottom:6px;}
+.atn-card-red .atn-card-title{color:var(--red);}
+.atn-card-green .atn-card-title{color:var(--green);}
+.atn-card-body{font-size:.74rem;line-height:1.55;color:var(--text-mid);}
+.atn-card-example{font-size:.7rem;margin-top:6px;font-style:italic;}
+
+/* ── NOTE DE FRAIS ── */
+#noteDefrais{display:none;}
+.note-wrap{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:40px;box-shadow:0 4px 24px var(--shadow);margin-top:24px;}
+.note-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:32px;padding-bottom:24px;border-bottom:2px solid var(--border);}
+.note-logo-area h2{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--navy);}
+.note-logo-area p{font-size:.8rem;color:var(--text-light);margin-top:4px;}
+.note-meta{text-align:right;}
+.note-meta h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--teal);}
+.note-meta p{font-size:.78rem;color:var(--text-mid);margin-top:4px;}
+.note-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px;}
+.note-info-item{background:var(--off);border-radius:8px;padding:12px 16px;}
+.note-info-item label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-light);display:block;margin-bottom:4px;}
+.note-info-item span{font-size:.88rem;color:var(--text);font-weight:500;}
+.note-table{width:100%;border-collapse:collapse;margin-bottom:24px;}
+.note-table th{background:var(--navy);color:rgba(255,255,255,.85);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;padding:10px 14px;text-align:left;font-weight:600;}
+.note-table td{padding:10px 14px;font-size:.84rem;border-bottom:1px solid var(--border);}
+.note-table tr:last-child td{border-bottom:none;}
+.note-table tr:nth-child(even) td{background:var(--off);}
+.note-table .amount{font-family:'DM Mono',monospace;font-size:.82rem;text-align:right;}
+.note-total-bar{background:var(--navy);color:white;padding:14px 20px;border-radius:8px;display:flex;justify-content:space-between;align-items:center;}
+.note-total-bar span:first-child{font-size:.85rem;font-weight:600;}
+.note-total-bar span:last-child{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:var(--teal-light);}
+.note-disclaimer{margin-top:20px;padding:12px 16px;background:var(--gold-pale);border:1px solid #E8C96A;border-radius:8px;font-size:.74rem;color:#7A5500;line-height:1.5;}
+.note-actions{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);color:rgba(255,255,255,.5);padding:30px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.8rem;margin-top:60px;}
+footer a{color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s;}
+footer a:hover{color:var(--white);}
+.footer-links{display:flex;gap:20px;}
+
+/* ── SUMMARY STEP ── */
+.summary-section{margin-bottom:20px;}
+.summary-section-title{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-light);margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--off);}
+.summary-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--off);font-size:.84rem;}
+.summary-row:last-child{border-bottom:none;}
+.summary-row .lbl{color:var(--text-mid);}
+.summary-row .val{font-weight:600;font-family:'DM Mono',monospace;font-size:.82rem;}
+.summary-row .val.atn{color:var(--red);}
+.summary-row .val.propres{color:var(--green);}
+.summary-row .val.zero{color:var(--text-light);font-weight:400;}
+.summary-total{background:var(--navy);color:white;border-radius:10px;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;margin-top:16px;}
+.summary-total-label{font-size:.85rem;font-weight:600;}
+.summary-total-amount{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;color:var(--teal-light);}
+
+
+/* ── INFO BLOCKS (personne + société) ── */
+.info-block{background:var(--white);border:1.5px solid var(--border);border-radius:12px;overflow:hidden;}
+.info-block-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:var(--off);border-bottom:1px solid var(--border);}
+.info-block-title{font-size:.86rem;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:8px;}
+.info-saved-badge{font-size:.72rem;font-weight:600;color:var(--green);background:var(--green-pale);padding:2px 8px;border-radius:10px;}
+.info-block-save{font-size:.78rem;font-weight:600;padding:6px 14px;background:var(--teal);color:white;border:none;border-radius:7px;cursor:pointer;transition:background .15s;}
+.info-block-save:hover{background:var(--teal-light);}
+.info-block-body{padding:16px 18px;display:flex;flex-direction:column;gap:12px;}
+.info-block-clear{display:block;width:100%;padding:8px;font-size:.76rem;color:var(--text-light);background:none;border:none;border-top:1px solid var(--off);cursor:pointer;transition:color .15s;}
+.info-block-clear:hover{color:var(--red);}
+.info-field{display:flex;flex-direction:column;gap:4px;}
+.info-field label{font-size:.76rem;font-weight:600;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;}
+.info-field input{border:1.5px solid var(--border);border-radius:8px;padding:8px 12px;font-size:.84rem;font-family:'DM Sans',sans-serif;outline:none;color:var(--text);transition:border-color .15s;}
+.info-field input:focus{border-color:var(--teal);}
+.info-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media(max-width:480px){.info-grid-2{grid-template-columns:1fr;}}
+
+/* ── YES / NO QUESTION CARDS ── */
+.yn-question{background:var(--off);border:1.5px solid var(--border);border-radius:12px;padding:16px 18px;margin-bottom:12px;transition:all .2s;}
+.yn-question.yn-pristine{background:var(--off);border-color:var(--border);}
+.yn-question.yn-active-oui{border-color:var(--green);background:var(--green-pale);}
+.yn-question.yn-active-oui .yn-q-label{color:var(--green);}
+.yn-question.yn-active-non{border-color:var(--red);background:var(--red-pale);}
+.yn-question.yn-active-non .yn-q-label{color:var(--red);}
+.yn-question.yn-active-non .yn-q-sub{color:#A03020;}
+.yn-q-text{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;}
+.yn-q-icon{font-size:1.5rem;flex-shrink:0;margin-top:2px;}
+.yn-q-label{font-size:.88rem;font-weight:600;color:var(--text);line-height:1.4;margin-bottom:3px;}
+.yn-q-sub{font-size:.74rem;color:var(--text-light);line-height:1.5;}
+.yn-btns{display:flex;gap:10px;}
+.yn-btn{flex:1;padding:10px 16px;border-radius:9px;font-size:.84rem;font-weight:600;cursor:pointer;border:1.5px solid var(--border);background:var(--white);color:var(--text-mid);transition:all .18s;font-family:'DM Sans',sans-serif;}
+.yn-btn:hover{border-color:var(--text-light);}
+.yn-btn.active-yn-pristine{background:var(--off);border-color:var(--border);color:var(--text-mid);}
+.yn-btn.active-yn-non{background:var(--red-pale);border-color:var(--red);color:var(--red);}
+.yn-btn.active-yn-oui{background:var(--green);border-color:var(--green);color:white;}
+.yn-question.yn-active-non{border-color:var(--red);background:var(--red-pale);}
+.yn-question.yn-active-non .yn-q-label{color:var(--red);}
+.yn-question.yn-active-non .yn-q-sub{color:#A03020;}
+.yn-question.yn-active-oui{border-color:var(--green);background:var(--green-pale);}
+.yn-result.res-non{background:var(--red-pale);color:var(--red);border:1px solid #F5B8B0;}
+.yn-result{margin-top:10px;padding:9px 13px;border-radius:7px;font-size:.78rem;font-weight:600;display:flex;align-items:center;gap:7px;}
+.yn-result.res-oui{background:var(--green-pale);color:var(--green);border:1px solid #9ED4B2;}
+.yn-result.res-non{background:var(--off);color:var(--text-light);border:1px solid var(--border);}
+
+.yn-qty-input{margin-top:12px;padding:12px 14px;background:rgba(27,122,62,.06);border-radius:8px;border:1px solid #9ED4B2;}
+.qty-row{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.qty-label{font-size:.82rem;font-weight:600;color:var(--green);}
+.yn-atn-notice{margin-top:10px;padding:9px 13px;border-radius:7px;font-size:.78rem;background:var(--red-pale);color:var(--red);border:1px solid #F5B8B0;display:flex;align-items:flex-start;gap:7px;line-height:1.5;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .main{grid-template-columns:1fr;}
+  .result-panel{position:static;}
+}
+@media(max-width:768px){
+  nav.main-nav{padding:0 16px;height:56px;}
+  .nav-links{display:none;}
+  .hero{padding:40px 20px 50px;}
+  .hero h1{font-size:1.6rem;}
+  .main{padding:20px 16px 60px;}
+  .topbar{display:none;}
+  footer{flex-direction:column;text-align:center;}
+  .hamburger{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:all .3s;}
+  .atn-explainer{grid-template-columns:1fr;}
+  .note-info-grid{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+  .step-label{display:none;}
+  .step-screen{padding:20px 18px;}
+  .note-wrap{padding:24px 20px;}
+}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNHZDLVPEL"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WNHZDLVPEL');</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Own Business Expenses Simulator Belgium 2026",
+  "url": "https://lacavernedelacompta.be/en/questionnaire-frais-propres/",
+  "description": "Guided questionnaire to calculate ONSS own business expenses 2026 in Belgium. Distinguishes BIK and reimbursable expenses. Generates a PDF expense report.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "inLanguage": "en-BE",
+  "publisher": {
+    "@type": "Organization",
+    "name": "La Caverne de la Compta",
+    "url": "https://lacavernedelacompta.be"
+  },
+  "featureList": [
+    "Calcul forfaits ONSS 2026 officiels",
+    "Distinction ATN vs frais propres",
+    "Note de frais PDF exportable",
+    "Employee et dirigeant d'entreprise",
+    "Bureau domicile 160,99 €/month",
+    "Sauvegarde locale du profil"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the ONSS home office allowance for 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The ONSS home office allowance (structural telework ≥1 day/week) is €160.99/month from 1 March 2025, updated in March 2026."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between BIK and own expenses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A BIK (Benefit in Kind) is a benefit provided by the company (PC, car, internet) — it is taxable. Own expenses are costs you pay personally for your employer — they are reimbursable with ONSS exemption according to official allowances."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do own expenses also apply to company directors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, partially. The home office, internet, PC and car allowances apply to directors. The allowances linked to employment contracts (itinerant workers, clothing, tools) are reserved for salaried employees."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <span class="topbar-left">🇧🇪 Accounting and tax tools for Belgium</span>
+  <div class="topbar-right">
+    <a href="#">Contact</a>
+    <a href="#">About</a>
+    <a href="/en/mentions-legales/">Legal notices</a>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="main-nav">
+  <a href="/en/" class="logo" style="text-decoration:none;display:flex;align-items:center;">
+    <svg width="148" height="38" viewBox="0 0 148 38" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <defs><linearGradient id="hGn" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0D1B2A"/><stop offset="100%" style="stop-color:#1A3A5C"/></linearGradient></defs>
+      <polygon points="19,2 31,9 31,23 19,30 7,23 7,9" fill="url(#hGn)"/>
+      <polygon points="19,2 31,9 25,9 19,5 13,9 7,9" fill="rgba(255,255,255,.07)"/>
+      <line x1="9" y1="15" x2="29" y2="15" stroke="rgba(255,255,255,.5)" stroke-width="1.8" stroke-linecap="round"/>
+      <rect x="17.5" y="15" width="2.5" height="11" rx="1.2" fill="rgba(255,255,255,.35)"/>
+      <circle cx="18.8" cy="15" r="3.2" fill="#C9A84C"/><circle cx="18.8" cy="15" r="1.4" fill="white" opacity=".9"/>
+      <rect x="13" y="27" width="12" height="2.5" rx="1.2" fill="rgba(255,255,255,.2)"/>
+      <line x1="9" y1="15" x2="7" y2="21.5" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="7" cy="24" rx="6.5" ry="2.5" fill="#1A7A8A"/>
+      <line x1="29" y1="15" x2="31" y2="20" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="31" cy="22.5" rx="6.5" ry="2.5" fill="#22A3B8"/>
+      <circle cx="27" cy="7" r="2.5" fill="#C9A84C" opacity=".85"/>
+      <text x="42" y="15.5" font-family="'Playfair Display',serif" font-size="12.5" font-weight="900" fill="#0D1B2A" letter-spacing="-.2">La Caverne</text>
+      <rect x="42" y="18.5" width="104" height="1" rx=".5" fill="#DDE5EF"/>
+      <rect x="42" y="18.5" width="18" height="1" rx=".5" fill="#C9A84C"/>
+      <text x="42" y="30" font-family="'Playfair Display',serif" font-size="10.5" font-weight="700" font-style="italic" fill="#1A7A8A" letter-spacing="-.1">de la Compta</text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/en/">🏠 Home</a></li>
+    <li class="dd-wrap" id="ddWrap">
+      <button class="dd-btn" onclick="toggleDD(event)">🧰 Our Tools <span class="dd-chevron">▼</span></button>
+      <div class="dd-menu" id="ddMenu">
+        <a href="/en/simulateur-immobilier/"><span class="dd-icon">🏠</span>Simulateur Immobilier</a>
+        <a href="/en/simulateur-credit/"><span class="dd-icon">💳</span>Simulateur de Crédit</a>
+        <a href="/en/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Requalification Loyer</a>
+        <a href="/en/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Plan Comptable PCMN</a>
+        <a href="/en/simulateur-interets-composes/"><span class="dd-icon">📈</span>Intérêts Composés</a>
+        <a href="/en/simulateur-retenue/"><span class="dd-icon">🧾</span>Retenue sur Facture</a>
+        <a href="/en/quick-memento-fiscal/"><span class="dd-icon">📌</span>Quick-Mémo Fiscal</a>
+        <a href="/en/remboursement-frais/"><span class="dd-icon">🚗</span>Indemnité Kilométrique</a>
+        <a href="/fr/simulateur-frais-propres/"><span class="dd-icon">💼</span>Frais Propres (tableau)</a>
+        <a href="/en/questionnaire-frais-propres/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">📝</span>Questionnaire Frais Propres</a>
+      </div>
+    </li>
+  </ul>
+  <div class="lang-dropdown" id="langSwitcher">
+    <button class="lang-current" onclick="toggleLangMenu(event)">🇫🇷 FR</button>
+    <div class="lang-menu">
+      <a href="/en/questionnaire-frais-propres/" class="active">🇫🇷 Français</a>
+      <a href="/nl/">🇧🇪 Nederlands</a>
+      <a href="/en/">🇬🇧 English</a>
+      <a href="/de/">🇩🇪 Deutsch</a>
+    </div>
+  </div>
+  <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div style="text-align:right;font-size:.72rem;color:var(--text-light);padding:6px 40px 0;font-style:italic;">
+  🕐 Updated: March 2026 — Forfaits ONSS officiels — <a href="https://www.socialsecurity.be/employer/instructions/dmfa/fr/latest/instructions/salary/particularcases/expensesreimbursement.html" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-weight:600;">Source: ONSS</a>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bread"><a href="/en/">Home</a> › <a href="/fr/simulateur-frais-propres/">Frais Propres</a> › Questionnaire</div>
+  <div class="hero-badge">✦ Guided questionnaire — ONSS allowances 2026</div>
+  <h1>Own Business <br><em>Expenses Questionnaire</em></h1>
+  <p>Answer the questions and get your <strong>monthly expense report</strong> based on official ONSS allowances. Note: if a benefit is provided by the company, it's a <strong>BIK</strong> — not own expenses.</p>
+</section>
+
+<!-- AdSense -->
+<div style="max-width:1100px;margin:20px auto 0;padding:0 24px;">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8043980001637749" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- Main -->
+<div class="main">
+
+  <!-- QUESTIONNAIRE WIZARD -->
+  <div>
+    <div class="wizard">
+
+      <!-- ══════════════════════════════════════════
+           ÉCRAN RAPIDE "MON MOIS" (profil sauvegardé)
+      ══════════════════════════════════════════ -->
+      <div id="quick-screen" style="display:none;">
+        <div class="wizard-header" style="background:var(--green);">
+          <div class="wizard-header-icon">⚡</div>
+          <div>
+            <div class="wizard-title">Your profile is saved</div>
+            <div class="wizard-subtitle">Just fill in the variable elements for this month</div>
+          </div>
+        </div>
+
+        <div style="padding:20px 28px;">
+
+          <!-- Profile sauvegardé résumé -->
+          <div id="saved-profile-summary" style="background:var(--green-pale);border:1px solid #9ED4B2;border-radius:10px;padding:14px 16px;margin-bottom:20px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+              <div style="font-size:.78rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.06em;">✅ Profilee saved</div>
+              <button onclick="editProfilee()" style="font-size:.75rem;font-weight:600;color:var(--teal);background:none;border:1px solid var(--teal);border-radius:6px;padding:4px 10px;cursor:pointer;">✎ Edit</button>
+            </div>
+            <div id="saved-items-list" style="font-size:.8rem;color:var(--text-mid);line-height:1.8;"></div>
+          </div>
+
+          <!-- Period -->
+          <div class="form-row" style="border-bottom:1px solid var(--off);">
+            <div class="form-row-left">
+              <div class="form-row-label">Period</div>
+              <div class="form-row-sub">Month for which you are generating the report</div>
+            </div>
+            <div class="form-row-right">
+              <input type="month" id="quick-periode" oninput="document.getElementById('periode').value=this.value;recalc();"
+                style="border:1.5px solid var(--border);border-radius:8px;padding:8px 12px;font-size:.84rem;font-family:'DM Sans',sans-serif;outline:none;">
+            </div>
+          </div>
+
+          <!-- Nuits -->
+          <div class="yn-question" id="qk-yn-nights" style="margin-top:12px;">
+            <div class="yn-q-text">
+              <span class="yn-q-icon">🏨</span>
+              <div>
+                <div class="yn-q-label">Business overnight stays in Belgium this month?</div>
+                <div class="yn-q-sub"><strong>35 €/night</strong></div>
+              </div>
+            </div>
+            <div class="yn-btns">
+              <button class="yn-btn yn-no active-yn-pristine" id="qk-yn-nights-non" onclick="setYesNoQty('nights-be','non');syncQuick()">Non</button>
+              <button class="yn-btn yn-yes" id="qk-yn-nights-oui" onclick="setYesNoQty('nights-be','oui');syncQuick()">Yes — how many?</button>
+            </div>
+            <div class="yn-qty-input" id="qk-qty-nights" style="display:none;">
+              <div class="qty-row">
+                <span class="qty-label">Number of nights</span>
+                <div class="num-input-wrap">
+                  <input type="number" id="quick-nights" value="0" min="0" max="31" step="1" oninput="document.getElementById('nightsBelgique').value=this.value;recalc();updateQtyResult('nights-be',35,'nuit');">
+                  <span>nights</span>
+                </div>
+              </div>
+            </div>
+            <div class="yn-result" id="qk-result-nights" style="display:none;"></div>
+          </div>
+
+          <!-- Repas itinérant (salarié seulement) -->
+          <div id="qk-row-repas">
+            <div class="yn-question" id="qk-yn-repas" style="margin-top:12px;">
+              <div class="yn-q-text">
+                <span class="yn-q-icon">🍽️</span>
+                <div>
+                  <div class="yn-q-label">Lunch out during business trips ≥ 4h?</div>
+                  <div class="yn-q-sub"><strong>9 €/day</strong></div>
+                </div>
+              </div>
+              <div class="yn-btns">
+                <button class="yn-btn yn-no active-yn-pristine" id="qk-yn-repas-non" onclick="setYesNoQty('repas','non');syncQuick()">Non</button>
+                <button class="yn-btn yn-yes" id="qk-yn-repas-oui" onclick="setYesNoQty('repas','oui');syncQuick()">Yes — how many?</button>
+              </div>
+              <div class="yn-qty-input" id="qk-qty-repas" style="display:none;">
+                <div class="qty-row">
+                  <span class="qty-label">Days concerned</span>
+                  <div class="num-input-wrap">
+                    <input type="number" id="quick-repas" value="0" min="0" max="31" step="1" oninput="document.getElementById('daysRepas').value=this.value;recalc();updateQtyResult('repas',9,'jour');">
+                    <span>days</span>
+                  </div>
+                </div>
+              </div>
+              <div class="yn-result" id="qk-result-repas" style="display:none;"></div>
+            </div>
+          </div>
+
+          <!-- Représentation (montant variable) -->
+          <div id="qk-row-representation" style="display:none;">
+            <div class="yn-question yn-active-oui" style="margin-top:12px;">
+              <div class="yn-q-text">
+                <span class="yn-q-icon">🤝</span>
+                <div>
+                  <div class="yn-q-label">Representation expenses this month</div>
+                  <div class="yn-q-sub">Adjust if the amount varies (20 – 70 €/month depending on role)</div>
+                </div>
+              </div>
+              <div class="qty-row" style="margin-top:10px;">
+                <span class="qty-label" style="color:var(--green);">Amount this month</span>
+                <div class="num-input-wrap">
+                  <input type="number" id="quick-representation" value="50" min="0" max="200" step="5" oninput="document.getElementById('representationAmount').value=this.value;recalc();">
+                  <span>€/month</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:24px;padding-top:20px;border-top:1px solid var(--off);">
+            <button class="btn btn-success" onclick="quickGenerate()" style="font-size:.92rem;padding:13px;">⚡ Generate my expense report</button>
+            <button class="btn btn-secondary" onclick="editProfilee()">✎ Edit my full profile</button>
+          </div>
+
+          <!-- Utiliser sur un autre appareil -->
+          <div style="margin-top:16px;padding:12px 14px;background:var(--info-pale);border:1px solid #C5D8F0;border-radius:8px;">
+            <div style="font-size:.76rem;font-weight:700;color:var(--info);margin-bottom:4px;">📲 Use on another device?</div>
+            <div style="font-size:.74rem;color:var(--info);margin-bottom:8px;line-height:1.5;">Copy the link below and open it on your phone or computer — your profile will be automatically loaded.</div>
+            <div id="share-url-block">
+              <div style="display:flex;gap:8px;align-items:center;">
+                <input id="share-url" type="text" readonly style="flex:1;font-size:.72rem;padding:6px 10px;border:1px solid var(--border);border-radius:6px;background:var(--off);color:var(--text-mid);outline:none;">
+                <button onclick="copyShareUrl()" style="font-size:.75rem;font-weight:600;padding:6px 12px;background:var(--teal);color:white;border:none;border-radius:6px;cursor:pointer;white-space:nowrap;">📋 Copy</button>
+              </div>
+              <div id="copy-confirm" style="display:none;font-size:.72rem;color:var(--green);margin-top:4px;">✅ Link copied — paste it in your browser on the other device.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="wizard-header" id="wizard-main-header">
+        <div class="wizard-header-icon">📝</div>
+        <div>
+          <div class="wizard-title">Own business expenses — step by step</div>
+          <div class="wizard-subtitle" id="wizSubtitle">Start by filling in your profile</div>
+        </div>
+      </div>
+
+      <!-- Step progress -->
+      <div class="step-progress" id="stepProgressWrap">
+        <div class="step-dots" id="stepDots">
+          <!-- JS generated -->
+        </div>
+        <div class="step-labels" id="stepLabels">
+          <!-- JS generated -->
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════
+           ÉTAPE 1 — Profile & identité
+      ═══════════════════════════════════════════ -->
+      <div class="step-screen active" id="step-1">
+        <div class="step-title"><span>👤</span> Your profile</div>
+        <p class="step-intro">This information will appear on your expense report. It is saved exclusively in your browser.</p>
+
+        <!-- Profile salarié / dirigeant -->
+        <div class="profile-toggle" style="margin-bottom:20px;">
+          <label class="profile-card selected" id="card-salarie">
+            <input type="radio" name="profil" value="salarie" checked onchange="setProfile('salarie')">
+            <div class="profile-card-icon">👔</div>
+            <div class="profile-card-label">Employee</div>
+            <div class="profile-card-sub">Employment contract</div>
+          </label>
+          <label class="profile-card" id="card-dirigeant">
+            <input type="radio" name="profil" value="dirigeant" onchange="setProfile('dirigeant')">
+            <div class="profile-card-icon">🏢</div>
+            <div class="profile-card-label">Director</div>
+            <div class="profile-card-sub">Director / Manager</div>
+          </label>
+        </div>
+
+        <div id="notice-dirigeant" class="notice notice-dirigeant" style="display:none;margin-bottom:16px;">
+          <span class="notice-icon">⚠️</span>
+          <div>
+            <strong>Note — you are a company director</strong><br>
+            <span style="font-size:.74rem;line-height:1.6;">
+              • Clothing, tools and travelling employee allowances: <strong>do not apply</strong> (linked to the employment contract)<br>
+              • Home office, internet, personal mobile: prior <strong>tax authority approval is required</strong> before reimbursement<br>
+              • Parking, car wash, representation: OK, but prior approval recommended<br>
+              • Tax slip: <strong>281.20</strong>
+            </span>
+              <div class="yn-q-sub" style="margin-top:4px;font-style:italic;">The tax authority pays closer attention to directors' reimbursements. Always keep supporting documents and, for home office and personal device allowances, a prior SDA ruling is strongly recommended.</div>
+          </div>
+        </div>
+
+        <!-- Bloc : My details personnelles -->
+        <div class="info-block" id="bloc-personne">
+          <div class="info-block-header">
+            <div class="info-block-title"><span>👤</span> My details <span class="info-saved-badge" id="badge-personne" style="display:none;">✅ Saved</span></div>
+            <button class="info-block-save" onclick="savePersonne()">💾 Save</button>
+          </div>
+          <div class="info-block-body">
+            <div class="info-grid-2">
+              <div class="info-field">
+                <label>First name</label>
+                <input type="text" id="prenom" placeholder="Jean" oninput="syncSurnamePrenom()">
+              </div>
+              <div class="info-field">
+                <label>Surname</label>
+                <input type="text" id="nom" placeholder="Dupont" oninput="syncSurnamePrenom()">
+              </div>
+            </div>
+            <div class="info-field">
+              <label>Street and number</label>
+              <input type="text" id="adresse" placeholder="Rue de la Loi 12">
+            </div>
+            <div class="info-grid-2">
+              <div class="info-field">
+                <label>Postcode</label>
+                <input type="text" id="codePostal" placeholder="1000" maxlength="4">
+              </div>
+              <div class="info-field">
+                <label>City</label>
+                <input type="text" id="localite" placeholder="Bruxelles">
+              </div>
+            </div>
+            <div class="info-grid-2">
+              <div class="info-field">
+                <label>National register number <span style="font-weight:400;color:var(--text-light);">(optional)</span></label>
+                <input type="text" id="numNational" placeholder="XX.XX.XX-XXX.XX" maxlength="15">
+              </div>
+              <div class="info-field">
+                <label>Period</label>
+                <input type="month" id="periode">
+              </div>
+            </div>
+          </div>
+          <button class="info-block-clear" onclick="clearPersonne()">✕ Clear</button>
+        </div>
+
+        <!-- Bloc : Company / Employer -->
+        <div class="info-block" id="bloc-societe" style="margin-top:16px;">
+          <div class="info-block-header">
+            <div class="info-block-title"><span>🏢</span> Company / Employer <span class="info-saved-badge" id="badge-societe" style="display:none;">✅ Saved</span></div>
+            <button class="info-block-save" onclick="saveSociete()">💾 Save</button>
+          </div>
+          <div class="info-block-body">
+            <div class="info-field">
+              <label>Company number (CBE)</label>
+              <div style="display:flex;gap:8px;">
+                <input type="text" id="bce" placeholder="0XXX.XXX.XXX" maxlength="12" style="flex:1;">
+                <button onclick="searchBCE()" style="padding:8px 14px;background:var(--teal);color:white;border:none;border-radius:8px;font-size:.78rem;font-weight:600;cursor:pointer;white-space:nowrap;">🔍 Search</button>
+              </div>
+              <div id="bce-status" style="font-size:.74rem;color:var(--text-light);margin-top:4px;"></div>
+            </div>
+            <div class="info-field">
+              <label>Company name</label>
+              <input type="text" id="nomSociete" placeholder="Ma Société SA">
+            </div>
+            <div class="info-field">
+              <label>Street and number</label>
+              <input type="text" id="adresseSociete" placeholder="Avenue Louise 54">
+            </div>
+            <div class="info-grid-2">
+              <div class="info-field">
+                <label>Postcode</label>
+                <input type="text" id="cpSociete" placeholder="1050" maxlength="4">
+              </div>
+              <div class="info-field">
+                <label>City</label>
+                <input type="text" id="localiteSociete" placeholder="Ixelles">
+              </div>
+            </div>
+          </div>
+          <button class="info-block-clear" onclick="clearSociete()">✕ Clear</button>
+        </div>
+
+        <!-- Notice RGPD -->
+        <input type="hidden" id="nomPrenom">
+        <div class="notice" style="margin-top:16px;font-size:.74rem;">
+          <span class="notice-icon">🔒</span>
+          <span><strong>Your data stays on your device.</strong> No information entered here is transmitted to a server. Everything is stored exclusively in your browser (localStorage). Le <strong>national register number</strong> is sensitive data (Belgian law of 8 August 1983) — only enter it if your employer explicitly requires it.</span>
+        </div>
+
+        <div class="step-nav" style="margin-top:20px;">
+          <button class="btn btn-primary" style="margin-left:auto;" onclick="goStep(2)">Next — Office & devices →</button>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════
+           ÉTAPE 2 — Bureau domicile & Appareils
+      ═══════════════════════════════════════════ -->
+      <div class="step-screen" id="step-2">
+        <div class="step-title"><span>🏠</span> Home office, Internet & Devices</div>
+        <p class="step-intro">For each question: are <strong>vous</strong> you the one paying the bill → you can be reimbursed. Does the <strong>société</strong> company pay → it is a taxable benefit.</p>
+
+        <!-- Bureau domicile -->
+        <div class="yn-question" id="yn-bureau">
+          <div class="yn-q-text">
+            <span class="yn-q-icon">🏠</span>
+            <div>
+              <div class="yn-q-label">Do you regularly work from home, at least once a week, in a space that belongs to you?</div>
+              <div class="yn-q-sub">Flat-rate reimbursement: <strong>160,99 €/month</strong></div>
+              <div class="yn-q-sub" style="margin-top:4px;font-style:italic;">Condition: at least 1 day of teleworking per week on a regular basis. All colleagues who telework as much must receive the same amount.</div>
+            </div>
+          </div>
+          <div class="yn-btns">
+            <button class="yn-btn yn-no active-yn-pristine" id="yn-bureau-non" onclick="setYesNo('bureau','non')">Non</button>
+            <button class="yn-btn yn-yes" id="yn-bureau-oui" onclick="setYesNo('bureau','oui')">Yes — €160.99/month</button>
+          </div>
+          <div class="yn-result" id="yn-result-bureau" style="display:none;"></div>
+        </div>
+
+        <div id="notice-bureau-dirigeant" style="display:none;" class="notice notice-warn">
+          <span class="notice-icon">⚠️</span>
+          <span><strong>Director:</strong> This allowance applies exclusively to employees. For a director, prior tax authority approval is required before applying it.</span>
+        </div>
+
+        <!-- Internet -->
+        <div class="yn-question" id="yn-internet">
+          <div class="yn-q-text">
+            <span class="yn-q-icon">📶</span>
+            <div>
+              <div class="yn-q-label">Do you pay for your own internet subscription and use it for work?</div>
+              <div class="yn-q-sub">Flat-rate reimbursement: <strong>20 €/month</strong></div>
+              <div class="yn-q-sub" style="margin-top:4px;font-style:italic;">If the company pays for your internet, it is not a reimbursement — it is a benefit you declare on your payslip.</div>
+            </div>
+          </div>
+          <div class="yn-btns">
+            <button class="yn-btn yn-no active-yn-pristine" id="yn-internet-non" onclick="setYesNo('internet','non')">No / The company pays</button>
+            <button class="yn-btn yn-yes" id="yn-internet-oui" onclick="setYesNo('internet','oui')">Yes, it's my bill — €20/month</button>
+          </div>
+          <div class="yn-result" id="yn-result-internet" style="display:none;"></div>
+        </div>
+
+        <!-- Téléphone -->
+        <div class="yn-question" id="yn-telephone">
+          <div class="yn-q-text">
+            <span class="yn-q-icon">📱</span>
+            <div>
+              <div class="yn-q-label">Do you pay for your own phone subscription and use it for work?</div>
+              <div class="yn-q-sub">Flat-rate reimbursement: <strong>20 €/month</strong></div>
+              <div class="yn-q-sub" style="margin-top:4px;font-style:italic;">If the company pays for your subscription, it is not a reimbursement — it is a benefit you declare on your payslip.</div>
+            </div>
+          </div>
+          <div class="yn-btns">
+            <button class="yn-btn yn-no active-yn-pristine" id="yn-telephone-non" onclick="setYesNo('telephone','non')">No / The company pays</button>
+            <button class="yn-btn yn-yes" id="yn-telephone-oui" onclick="setYesNo('telephone','oui')">Yes, it's my bill — €20/month</button>
+          </div>
+          <div class="yn-result" id="yn-result-telephone" style="display:none;"></div>
+        </div>
+
+        <!-- PC -->
+        <div class="yn-question" id="yn-pc">
+          <div class="yn-q-text">
+            <span class="yn-q-icon">💻</span>
+            <div>
+              <div class="yn-q-label">Do you use your own computer for work — not the company's?</div>
+              <div class="yn-q-sub">Flat-rate reimbursement: <strong>20 €/month</strong></div>
+              <div class="yn-q-sub" style="margin-top:4px;font-style:italic;">If you use the company's computer privately too, it is not a reimbursement — it is a benefit you must declare on your payslip.</div>
+            </div>
+          </div>
+          <div class="yn-btns">
+            <button class="yn-btn yn-no active-yn-pristine" id="yn-pc-non" onclick="setYesNo('pc','non')">No / It's the company's computer</button>
+            <button class="yn-btn yn-yes" id="yn-pc-oui" onclick="setYesNo('pc','oui')">Yes, it's my own computer — €20/month</button>
+          </div>
+          <div class="yn-result" id="yn-result-pc" style="display:none;"></div>
+        </div>
+
+        <!-- Smartphone -->
+        <div class="yn-question" id="yn-smartphone">
+          <div class="yn-q-text">
+            <span class="yn-q-icon">📲</span>
+            <div>
+              <div class="yn-q-label">Do you use your own mobile phone for work — not the company's?</div>
+              <div class="yn-q-sub">Common practice: <strong>10 €/month</strong> <span style="color:#B45309;font-size:.7rem;">(⚠️ not listed in official ONSS allowances — must be justified)</span></div>
+              <div class="yn-q-sub" style="margin-top:4px;font-style:italic;">This reimbursement applies as long as you use the same phone (generally 2 to 3 years). If you use the company's phone privately too, it is not a reimbursement — it is a benefit to declare.</div>
+            </div>
+          </div>
+          <div class="yn-btns">
+            <button class="yn-btn yn-no active-yn-pristine" id="yn-smartphone-non" onclick="setYesNo('smartphone','non')">No / It's the company's phone</button>
+            <button class="yn-btn yn-yes" id="yn-smartphone-oui" onclick="setYesNo('smartphone','oui')">Yes, it's my own phone — ~€10/month</button>
+          </div>
+          <div class="yn-result" id="yn-result-smartphone" style="display:none;"></div>
+        </div>
+
+        <div id="notice-pc-dirigeant" style="display:none;" class="notice notice-warn">
+          <span class="notice-icon">⚠️</span>
+          <span><strong>Director:</strong> These reimbursements for internet, PC and personal mobile require prior tax authority approval to be fully fiscally secure.</span>
+        </div>
+
+        <div class="notice">
+          <span class="notice-icon">💡</span>
+          <span>If the company already provides the equipment (internet, PC, phone), select "No" — you cannot be additionally reimbursed for the same item.</span>
+        </div>
+
+        <div class="step-nav">
+          <button class="btn btn-secondary" onclick="goStep(1)">← Back</button>
+          <button class="btn btn-primary" style="margin-left:auto;" onclick="goStep(3)">Next — Vehicle →</button>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════
+           ÉTAPE 3 — Vehicle expenses
+      ═══════════════════════════════════════════ -->
+      <div class="step-screen" id="step-3">
+        <div class="step-title"><span>🚗</span> Vehicle expenses</div>
+        <p class="step-intro">These allowances apply when you have a <strong>company car</strong> and certain costs remain your personal responsibility.</p>
+
+        <div class="notice notice-km">
+          <span class="notice-icon">🛣️</span>
+          <span><strong>Mileage allowance:</strong> this calculation is on a dedicated page. <a href="/en/remboursement-frais/" style="font-weight:700;color:var(--teal);">→ Calculate my mileage allowance</a></span>
+        </div>
+
+        <!-- Garage -->
+        <div class="yn-question" id="yn-garage">
+          <div class="yn-q-text">
+            <span class="yn-q-icon">🏠</span>
+            <div>
+              <div class="yn-q-label">Do you park your company car in your own closed garage at home?</div>
+              <div class="yn-q-sub">Flat-rate reimbursement: <strong>50 €/month</strong></div>
+              <div class="yn-q-sub" style="margin-top:4px;font-style:italic;">Two conditions: your car contract must mention this reimbursement, and you must have a real closed garage at home — not just a parking space.</div>
+            </div>
+          </div>
+          <div class="yn-btns">
+            <button class="yn-btn yn-no active-yn-pristine" id="yn-garage-non" onclick="setYesNo('garage','non')">Non</button>
+            <button class="yn-btn yn-yes" id="yn-garage-oui" onclick="setYesNo('garage','oui')">Yes — €50/month</button>
+          </div>
+          <div class="yn-result" id="yn-result-garage" style="display:none;"></div>
+        </div>
+
+        <!-- Parking -->
+        <div class="yn-question" id="yn-parking">
+          <div class="yn-q-text">
+            <span class="yn-q-icon">🅿️</span>
+            <div>
+              <div class="yn-q-label">Do you regularly pay for parking during your business trips?</div>
+              <div class="yn-q-sub">Flat-rate reimbursement: <strong>15 €/month</strong></div>
+              <div class="yn-q-sub" style="margin-top:4px;font-style:italic;">For occasional parking at business appointments. For large parking expenses, it's better to keep your tickets and reimburse at actual cost.</div>
+            </div>
+          </div>
+          <div class="yn-btns">
+            <button class="yn-btn yn-no active-yn-pristine" id="yn-parking-non" onclick="setYesNo('parking','non')">Non</button>
+            <button class="yn-btn yn-yes" id="yn-parking-oui" onclick="setYesNo('parking','oui')">Yes — €15/month</button>
+          </div>
+          <div class="yn-result" id="yn-result-parking" style="display:none;"></div>
+        </div>
+
+        <!-- Car-wash -->
+        <div class="yn-question" id="yn-carwash">
+          <div class="yn-q-text">
+            <span class="yn-q-icon">🚿</span>
+            <div>
+              <div class="yn-q-label">Do you pay for your company car wash yourself because your role requires it (client visits, representation)?</div>
+              <div class="yn-q-sub">Flat-rate reimbursement: <strong>15 €/month</strong></div>
+            </div>
+          </div>
+          <div class="yn-btns">
+            <button class="yn-btn yn-no active-yn-pristine" id="yn-carwash-non" onclick="setYesNo('carwash','non')">Non</button>
+            <button class="yn-btn yn-yes" id="yn-carwash-oui" onclick="setYesNo('carwash','oui')">Yes — €15/month</button>
+          </div>
+          <div class="yn-result" id="yn-result-carwash" style="display:none;"></div>
+        </div>
+
+        <!-- Representation expenses -->
+        <div class="yn-question yn-pristine" id="yn-representation">
+          <div class="yn-q-text">
+            <span class="yn-q-icon">🤝</span>
+            <div>
+              <div class="yn-q-label">Do you have representation expenses in the context of your role — business meals, client gifts, receptions?</div>
+              <div class="yn-q-sub">Amount depending on role: <strong>€20 to €70/month</strong></div>
+              <div class="yn-q-sub" style="margin-top:4px;font-style:italic;">All colleagues with the same role must receive the same amount. This reimbursement is not linked to a specific expense — it is a fixed monthly allowance based on your role.</div>
+            </div>
+          </div>
+          <div class="yn-btns">
+            <button class="yn-btn yn-no active-yn-pristine" id="yn-representation-non" onclick="setYesNoRepr('non')">Non</button>
+            <button class="yn-btn yn-yes" id="yn-representation-oui" onclick="setYesNoRepr('oui')">Yes — what amount?</button>
+          </div>
+          <div class="yn-qty-input" id="yn-qty-representation" style="display:none;">
+            <div class="qty-row">
+              <span class="qty-label" style="color:var(--green);">Monthly amount</span>
+              <div class="num-input-wrap">
+                <input type="number" id="representationAmount" value="50" min="0" max="200" step="5" oninput="recalc();updateReprResult()">
+                <span>€/month</span>
+              </div>
+            </div>
+            <div style="font-size:.72rem;color:var(--text-light);margin-top:6px;font-style:italic;">€20 (occasional contacts) · €50 (sales) · €70 (management)</div>
+          </div>
+          <div class="yn-result" id="yn-result-representation" style="display:none;"></div>
+        </div>
+
+        <div class="step-nav">
+          <button class="btn btn-secondary" onclick="goStep(2)">← Back</button>
+          <button class="btn btn-primary" style="margin-left:auto;" onclick="goStep(4)">Next — Stays & meals →</button>
+        </div>
+      </div><!-- end step-3 -->
+
+      <!-- ═══════════════════════════════════════════
+           ÉTAPE 4 — Stays & repas
+      ═══════════════════════════════════════════ -->
+      <div class="step-screen" id="step-4">
+        <div class="step-title"><span>🏨</span> Business stays & meals</div>
+        <p class="step-intro">Answer Yes or No first, then specify the quantity if needed. Amounts are calculated automatically.</p>
+
+        <!-- Nuits Belgique -->
+        <div class="yn-question" id="yn-nights-be">
+          <div class="yn-q-text">
+            <span class="yn-q-icon">🏨</span>
+            <div>
+              <div class="yn-q-label">Have you spent nights away from home in Belgium for professional reasons this month?</div>
+              <div class="yn-q-sub">Workplace too far to return in the evening → dinner + accommodation + breakfast → <strong>35 €/night</strong></div>
+            </div>
+          </div>
+          <div class="yn-btns">
+            <button class="yn-btn yn-no active-yn-pristine" id="yn-nights-be-non" onclick="setYesNoQty('nights-be','non')">Non</button>
+            <button class="yn-btn yn-yes" id="yn-nights-be-oui" onclick="setYesNoQty('nights-be','oui')">Yes — how many nights?</button>
+          </div>
+          <div class="yn-qty-input" id="yn-qty-nights-be" style="display:none;">
+            <div class="qty-row">
+              <span class="qty-label">Number of nights this month</span>
+              <div class="num-input-wrap">
+                <input type="number" id="nightsBelgique" value="0" min="0" max="31" step="1" oninput="recalc();updateQtyResult('nights-be',35,'nuit')">
+                <span>nights</span>
+              </div>
+            </div>
+          </div>
+          <div class="yn-result" id="yn-result-nights-be" style="display:none;"></div>
+        </div>
+
+        <!-- Repas itinérant -->
+        <div id="row-repas">
+          <div class="yn-question" id="yn-repas">
+            <div class="yn-q-text">
+              <span class="yn-q-icon">🍽️</span>
+              <div>
+                <div class="yn-q-label">Are you required to eat lunch out during business trips of ≥ 4h in a day? <span style="font-size:.7rem;background:var(--info-pale);color:var(--info);padding:2px 7px;border-radius:4px;font-weight:600;margin-left:4px;">Travelling employee</span></div>
+                <div class="yn-q-sub">Impossible to go home for lunch → <strong>9 €/day</strong></div>
+              </div>
+            </div>
+            <div class="yn-btns">
+              <button class="yn-btn yn-no active-yn-pristine" id="yn-repas-non" onclick="setYesNoQty('repas','non')">Non</button>
+              <button class="yn-btn yn-yes" id="yn-repas-oui" onclick="setYesNoQty('repas','oui')">Yes — how many days?</button>
+            </div>
+            <div class="yn-qty-input" id="yn-qty-repas" style="display:none;">
+              <div class="qty-row">
+                <span class="qty-label">Days concerned this month</span>
+                <div class="num-input-wrap">
+                  <input type="number" id="daysRepas" value="0" min="0" max="31" step="1" oninput="recalc();updateQtyResult('repas',9,'jour')">
+                  <span>days</span>
+                </div>
+              </div>
+            </div>
+            <div class="yn-result" id="yn-result-repas" style="display:none;"></div>
+          </div>
+        </div>
+
+        <!-- Absence commodités -->
+        <div id="row-commodites">
+          <div class="yn-question" id="yn-commodites">
+            <div class="yn-q-text">
+              <span class="yn-q-icon">🚻</span>
+              <div>
+                <div class="yn-q-label">Do you lack access to your employer's sanitary facilities or canteen during your trips? <span style="font-size:.7rem;background:var(--info-pale);color:var(--info);padding:2px 7px;border-radius:4px;font-weight:600;margin-left:4px;">Travelling employee</span></div>
+                <div class="yn-q-sub">Absence of usual facilities → <strong>10 €/day</strong></div>
+              </div>
+            </div>
+            <div class="yn-btns">
+              <button class="yn-btn yn-no active-yn-pristine" id="yn-commodites-non" onclick="setYesNoQty('commodites','non')">Non</button>
+              <button class="yn-btn yn-yes" id="yn-commodites-oui" onclick="setYesNoQty('commodites','oui')">Yes — how many days?</button>
+            </div>
+            <div class="yn-qty-input" id="yn-qty-commodites" style="display:none;">
+              <div class="qty-row">
+                <span class="qty-label">Days concerned this month</span>
+                <div class="num-input-wrap">
+                  <input type="number" id="daysCommodites" value="0" min="0" max="31" step="1" oninput="recalc();updateQtyResult('commodites',10,'jour')">
+                  <span>days</span>
+                </div>
+              </div>
+            </div>
+            <div class="yn-result" id="yn-result-commodites" style="display:none;"></div>
+          </div>
+        </div>
+
+        <div id="notice-itinerant-dirig" style="display:none;" class="notice notice-warn">
+          <span class="notice-icon">🔒</span>
+          <span>The meal and facilities allowances for travelling employees are reserved for <strong>employees</strong>. They do not apply to company directors.</span>
+        </div>
+
+        <div class="step-nav">
+          <button class="btn btn-secondary" onclick="goStep(3)">← Back</button>
+          <button class="btn btn-primary" style="margin-left:auto;" onclick="goStep(5)">Next — Clothing & tools →</button>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════
+           ÉTAPE 5 — Clothing & tools (salarié)
+      ═══════════════════════════════════════════ -->
+      <div class="step-screen" id="step-5">
+        <div class="step-title"><span>👷</span> Clothing & tools</div>
+
+        <div id="notice-vetements-dirig" style="display:none;" class="notice notice-warn">
+          <span class="notice-icon">🔒</span>
+          <span>These allowances are <strong>exclusively reserved for employees</strong>. As a director, they do not apply. Go directly to the summary.</span>
+        </div>
+
+        <div id="vetements-content">
+          <!-- Days worked — affiché ici car c'est le seul endroit qui l'utilise -->
+          <div class="form-row" style="background:var(--gold-pale);border-radius:10px;padding:14px 16px;margin-bottom:16px;border:1.5px solid #E8C96A;">
+            <div class="form-row-left">
+              <div class="form-row-label" style="color:#7A5500;">📅 How many days did you work this month?</div>
+              <div class="form-row-sub" style="color:#9A6500;">This number is only used to calculate the allowances below (clothing, tools). It does not affect monthly allowances.</div>
+            </div>
+            <div class="form-row-right">
+              <div class="num-input-wrap">
+                <input type="number" id="daysParMois" value="20" min="1" max="31" step="1" oninput="recalc();updateAllJoursRefs();">
+                <span>days</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="step-intro">These allowances apply if your role requires wearing specific clothing or using your own equipment.</p>
+
+          <!-- Clothing achat -->
+          <div class="yn-question" id="yn-vetements-achat">
+            <div class="yn-q-text">
+              <span class="yn-q-icon">🦺</span>
+              <div>
+                <div class="yn-q-label">Do you buy specific work clothing required by your role yourself?</div>
+                <div class="yn-q-sub">Overalls, safety shoes, uniform... → <strong>2,20 €/day × <span class="days-ref">20</span> j = <span class="calc-vetements-achat">44,00 €</span>/month</strong></div>
+              </div>
+            </div>
+            <div class="yn-btns">
+              <button class="yn-btn yn-no active-yn-pristine" id="yn-vetements-achat-non" onclick="setYesNo('vetements-achat','non')">Non</button>
+              <button class="yn-btn yn-yes" id="yn-vetements-achat-oui" onclick="setYesNo('vetements-achat','oui')">Yes — included</button>
+            </div>
+            <div class="yn-result" id="yn-result-vetements-achat" style="display:none;"></div>
+          </div>
+
+          <!-- Clothing entretien -->
+          <div class="yn-question" id="yn-vetements-entretien">
+            <div class="yn-q-text">
+              <span class="yn-q-icon">👔</span>
+              <div>
+                <div class="yn-q-label">Do you bear the cleaning costs of your mandatory work clothing yourself?</div>
+                <div class="yn-q-sub">Maintenance of professional clothing → <strong>2,20 €/day × <span class="days-ref">20</span> j = <span class="calc-vetements-entretien">44,00 €</span>/month</strong></div>
+              </div>
+            </div>
+            <div class="yn-btns">
+              <button class="yn-btn yn-no active-yn-pristine" id="yn-vetements-entretien-non" onclick="setYesNo('vetements-entretien','non')">Non</button>
+              <button class="yn-btn yn-yes" id="yn-vetements-entretien-oui" onclick="setYesNo('vetements-entretien','oui')">Yes — included</button>
+            </div>
+            <div class="yn-result" id="yn-result-vetements-entretien" style="display:none;"></div>
+          </div>
+
+          <!-- Clothing personnels -->
+          <div class="yn-question" id="yn-vetements-perso">
+            <div class="yn-q-text">
+              <span class="yn-q-icon">👕</span>
+              <div>
+                <div class="yn-q-label">Do you work in a very dirty environment that damages your personal clothing (jeans, t-shirts...)?</div>
+                <div class="yn-q-sub">Additional maintenance of personal clothing → <strong>1,10 €/day × <span class="days-ref">20</span> j = <span class="calc-vetements-perso">22,00 €</span>/month</strong></div>
+              </div>
+            </div>
+            <div class="yn-btns">
+              <button class="yn-btn yn-no active-yn-pristine" id="yn-vetements-perso-non" onclick="setYesNo('vetements-perso','non')">Non</button>
+              <button class="yn-btn yn-yes" id="yn-vetements-perso-oui" onclick="setYesNo('vetements-perso','oui')">Yes — included</button>
+            </div>
+            <div class="yn-result" id="yn-result-vetements-perso" style="display:none;"></div>
+          </div>
+
+          <!-- Outils -->
+          <div class="yn-question" id="yn-outils">
+            <div class="yn-q-text">
+              <span class="yn-q-icon">🔧</span>
+              <div>
+                <div class="yn-q-label">Do you use your own tools or personal equipment to perform your role?</div>
+                <div class="yn-q-sub">Personal tools made available to the employer → <strong>1,25 €/day × <span class="days-ref">20</span> j = <span class="calc-outils">25,00 €</span>/month</strong></div>
+              </div>
+            </div>
+            <div class="yn-btns">
+              <button class="yn-btn yn-no active-yn-pristine" id="yn-outils-non" onclick="setYesNo('outils','non')">Non</button>
+              <button class="yn-btn yn-yes" id="yn-outils-oui" onclick="setYesNo('outils','oui')">Yes — included</button>
+            </div>
+            <div class="yn-result" id="yn-result-outils" style="display:none;"></div>
+          </div>
+        </div>
+
+        <div class="step-nav">
+          <button class="btn btn-secondary" onclick="goStep(4)">← Back</button>
+          <button class="btn btn-primary" style="margin-left:auto;" onclick="goStep(6)">Go to summary →</button>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════
+           ÉTAPE 6 — Summary & expense report
+      ═══════════════════════════════════════════ -->
+      <div class="step-screen" id="step-6">
+        <div class="step-title"><span>📋</span> Summary & expense report</div>
+        <p class="step-intro">Check the details of your own expenses and identified BIK. Then generate your expense report.</p>
+
+        <div id="summary-content">
+          <!-- JS generated -->
+        </div>
+
+        <!-- Règles transversales -->
+        <div style="margin-top:20px;">
+          <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-light);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--off);">📌 General rules to follow</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;" id="regles-grid">
+            <div style="background:var(--info-pale);border:1px solid #C5D8F0;border-radius:8px;padding:12px 14px;">
+              <div style="font-size:.78rem;font-weight:700;color:var(--info);margin-bottom:5px;">📋 To declare on the payslip</div>
+              <div style="font-size:.74rem;color:var(--info);line-height:1.55;">These reimbursements must be mentioned on your <strong id="fiche-type">fiche 281.10</strong> each year. This has been mandatory since 2022.</div>
+            </div>
+            <div style="background:var(--orange-pale);border:1px solid #F5C87A;border-radius:8px;padding:12px 14px;">
+              <div style="font-size:.78rem;font-weight:700;color:var(--orange);margin-bottom:5px;">🚫 No double reimbursement</div>
+              <div style="font-size:.74rem;color:var(--orange);line-height:1.55;">The same expense cannot be reimbursed both as a flat-rate <strong>ET</strong> and on submission of invoices. One method must be chosen.</div>
+            </div>
+            <div style="background:var(--green-pale);border:1px solid #9ED4B2;border-radius:8px;padding:12px 14px;">
+              <div style="font-size:.78rem;font-weight:700;color:var(--green);margin-bottom:5px;">👥 Equal treatment for all</div>
+              <div style="font-size:.74rem;color:var(--green);line-height:1.55;">All colleagues with the same <strong>role</strong> must receive the same allowance — no favouritism.</div>
+            </div>
+            <div style="background:#F8F0FB;border:1px solid #D4A8E8;border-radius:8px;padding:12px 14px;">
+              <div style="font-size:.78rem;font-weight:700;color:#6A1A8A;margin-bottom:5px;">⏱️ Part-time or long absence</div>
+              <div style="font-size:.74rem;color:#6A1A8A;line-height:1.55;">Monthly allowances can be reduced pro rata if you work part-time or were absent for part of the month.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-nav">
+          <button class="btn btn-secondary" onclick="goStep(5)">← Edit</button>
+          <button class="btn btn-success" style="margin-left:auto;" onclick="genererNote()">📋 Generate expense report</button>
+        </div>
+
+        <div style="margin-top:16px;padding:14px 16px;background:var(--info-pale);border:1px solid #C5D8F0;border-radius:10px;">
+          <div style="font-size:.78rem;font-weight:700;color:var(--info);margin-bottom:8px;">💾 Save time next month</div>
+          <div style="font-size:.76rem;color:var(--info);margin-bottom:10px;line-height:1.5;">Save your profile on this device. Next time, you will go directly to a simplified screen — only the period and variable elements need to be filled in.</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button class="btn btn-primary" onclick="saveProfilee()" style="flex:1;">💾 Save on this device</button>
+            <button onclick="copyShareUrl()" style="flex:1;font-size:.82rem;font-weight:600;padding:10px 16px;background:var(--off);color:var(--teal);border:1.5px solid var(--teal);border-radius:9px;cursor:pointer;" title="Génère un lien à ouvrir sur un autre appareil (téléphone, autre PC)">📲 Use on another device</button>
+          </div>
+          <div id="save-confirm" style="display:none;font-size:.76rem;color:var(--green);margin-top:8px;">✅ Saved on this device! Next time you will go directly to the monthly screen.</div>
+        </div>
+      </div>
+
+    </div><!-- end wizard -->
+
+    <!-- NOTE DE FRAIS GÉNÉRÉE -->
+    <div id="noteDefrais" class="note-wrap">
+      <div class="note-header">
+        <div class="note-logo-area">
+          <h2>📋 Expense Report</h2>
+          <p>Own business expenses — ONSS allowances 2026</p>
+        </div>
+        <div class="note-meta">
+          <h3 id="note-periode-titre">—</h3>
+          <p id="note-nom">—</p>
+          <p id="note-profil-txt" style="font-size:.72rem;color:var(--text-light);margin-top:2px;"></p>
+        </div>
+      </div>
+      <div class="note-info-grid" style="grid-template-columns:1fr 1fr;">
+        <div class="note-info-item"><label>Beneficiary</label><span id="ni-nom">—</span></div>
+        <div class="note-info-item"><label>Profile</label><span id="ni-profil">—</span></div>
+        <div class="note-info-item"><label>Address</label><span id="ni-adresse" style="font-size:.82rem;">—</span></div>
+        <div class="note-info-item"><label>National register number</label><span id="ni-nn">—</span></div>
+        <div class="note-info-item"><label>Period</label><span id="ni-periode">—</span></div>
+        <div class="note-info-item"><label>Days worked</label><span id="ni-days">—</span></div>
+        <div class="note-info-item" style="grid-column:1/-1;"><label>Company / Employer</label><span id="ni-societe" style="font-size:.82rem;">—</span></div>
+      </div>
+      <table class="note-table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>ONSS flat-rate basis</th>
+            <th>Quantity</th>
+            <th style="text-align:right;">Amount</th>
+          </tr>
+        </thead>
+        <tbody id="noteTableBody"></tbody>
+      </table>
+      <div class="note-total-bar">
+        <span>Total own expenses for the month</span>
+        <span id="noteTotalAmount">0,00 €</span>
+      </div>
+      <div id="note-atn-section" style="display:none;margin-top:16px;padding:14px 16px;background:var(--red-pale);border:1px solid #F5B8B0;border-radius:8px;">
+        <div style="font-size:.78rem;font-weight:700;color:var(--red);margin-bottom:8px;">⚠️ Identified BIK — to be processed on the payslip</div>
+        <div id="note-atn-list" style="font-size:.78rem;color:#7A2020;line-height:1.8;"></div>
+        <div style="font-size:.72rem;color:#7A2020;margin-top:6px;font-style:italic;">These benefits must be declared as taxable income. Consult your social secretariat.</div>
+      </div>
+      <div class="note-disclaimer">
+        ⚠️ <strong>Warning:</strong> This expense report is generated based on the official ONSS allowances in force in Q1 2026. It does not constitute legal or tax advice. Verify the application of these allowances with your accountant or social secretariat. Source : <a href="https://www.socialsecurity.be/employer/instructions/dmfa/fr/latest/instructions/salary/particularcases/expensesreimbursement.html" target="_blank" style="color:var(--teal);">ONSS Instructions</a> — lacavernedelacompta.be
+      </div>
+      <div id="note-fiche-reminder" style="margin-top:12px;padding:11px 14px;background:var(--info-pale);border:1px solid #C5D8F0;border-radius:8px;font-size:.78rem;color:var(--info);line-height:1.55;">
+        📋 <strong>Important reminder:</strong> these reimbursements must be mentioned on the <strong id="note-fiche-num">fiche 281.10</strong> for the current year.
+              <div class="yn-q-sub" style="margin-top:4px;font-style:italic;">Your accountant or social secretariat must mention these reimbursements on your annual slip. And for each item, you choose either the flat rate or the actual supporting documents — not both.</div>
+      </div>
+      <div id="note-dirigeant-ruling" style="display:none;margin-top:10px;padding:11px 14px;background:var(--orange-pale);border:1px solid #F5C87A;border-radius:8px;font-size:.78rem;color:var(--orange);line-height:1.55;">
+        ⚠️ <strong>Director:</strong> Make sure you have obtained prior tax authority approval before applying the home office and personal device allowances. Sans cet accord, l'administration peut considérer ces montants comme une rémunération imposable.
+      </div>
+      <div class="note-actions">
+        <button class="btn btn-pdf" onclick="exportNotePdf()" id="btnNotePdf">📄 Download PDF</button>
+        <button class="btn btn-secondary" onclick="goStep(5)">✎ Edit</button>
+        <button class="btn btn-reset" onclick="resetAll()">↺ New questionnaire</button>
+      </div>
+    </div>
+
+  </div><!-- end left col -->
+
+  <!-- RESULT PANEL -->
+  <div class="result-panel">
+    <div class="result-card">
+      <div class="result-header">
+        <div class="result-header-title">💼 Real-time total</div>
+        <div class="result-header-sub">Updated with each selection</div>
+      </div>
+      <div class="result-total-wrap">
+        <div class="result-total-amount" id="totalAmount">0,00 €</div>
+        <div class="result-total-label">Own expenses / month (ONSS-exempt)</div>
+      </div>
+      <div class="result-breakdown">
+        <div class="result-breakdown-title">Own expenses breakdown</div>
+        <div id="breakdownLines">
+          <div class="result-line"><span class="result-line-label">No expenses selected</span><span class="result-line-value zero">—</span></div>
+        </div>
+      </div>
+      <div id="atn-section" style="display:none;padding:0 24px 12px;">
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--red);margin-bottom:8px;">⚠️ Identified BIK (taxable)</div>
+        <div id="atnLines"></div>
+      </div>
+      <div class="result-actions">
+        <button class="btn btn-success" onclick="goStep(6);setTimeout(genererNote,200);">📋 Generate expense report</button>
+        <button class="btn btn-reset" onclick="resetAll()">↺ Reset</button>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <div class="info-box-title">📖 BIK vs Own expenses</div>
+      <ul>
+        <li><strong>ATN</strong> = provided/paid by the company → taxable for the beneficiary</li>
+        <li><strong>Frais propres</strong> = you pay personally → ONSS-exempt reimbursable</li>
+        <li>BIK and own expenses cannot be combined for the same item</li>
+        <li>All employees with the same role = same allowance</li>
+        <li>ONSS can reclassify as disguised salary if conditions are not met</li>
+      </ul>
+    </div>
+
+    <div class="info-box" style="background:#F0FBF4;border-color:#9ED4B2;">
+      <div class="info-box-title" style="color:var(--green);">📋 Current allowances (2026)</div>
+      <ul>
+        <li>Home office: <strong>160,99 €/month</strong></li>
+        <li>Internet (your bill): <strong>20 €/month</strong></li>
+        <li>Phone (your bill): <strong>20 €/month</strong></li>
+        <li>Personal computer: <strong>20 €/month</strong></li>
+        <li>Personal mobile: <strong>10 €/month</strong> <span style="color:#B45309;font-size:.7rem;">(⚠️ common practice, not officially listed by ONSS)</span></li>
+        <li>Representation: <strong>€20 to €70/month</strong></li>
+        <li><strong>Director:</strong> tax authority approval required for office & devices</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <div class="info-box-title">🛣️ Mileage Allowance</div>
+      <ul>
+        <li>These allowances are on a <strong>dedicated page</strong> with per-trip calculation</li>
+        <li>Rate Q1 2026: <strong>€0.4326/km</strong> (business trips)</li>
+        <li>Home to work: <strong>€0.15/km</strong></li>
+        <li><a href="/en/remboursement-frais/" style="color:var(--teal);font-weight:600;">→ Calculate my km →</a></li>
+      </ul>
+    </div>
+
+    <div class="info-box" style="background:var(--teal-pale);border-color:#99D9E5;">
+      <div class="info-box-title" style="color:var(--teal);">📚 Official Source</div>
+      <ul>
+        <li>ONSS allowances updated March 2026</li>
+        <li><a href="https://www.socialsecurity.be/employer/instructions/dmfa/fr/latest/instructions/salary/particularcases/expensesreimbursement.html" target="_blank" rel="noopener" style="color:var(--teal);font-weight:600;">→ Official ONSS instructions</a></li>
+        <li>Other version: <a href="/fr/simulateur-frais-propres/" style="color:var(--teal);font-weight:600;">simulator table</a></li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- end main -->
+
+<!-- AdSense bottom -->
+<div style="max-width:1100px;margin:0 auto 40px;padding:0 24px;">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8043980001637749" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<footer>
+  <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
+  <div class="footer-links">
+    <a href="/en/mentions-legales/">Legal notices</a>
+    <a href="/en/mentions-legales/#rgpd">GDPR</a>
+    <a href="/en/mentions-legales/#cookies">Cookies</a>
+    <a href="#">Contact</a>
+  </div>
+</footer>
+
+<script>
+// ─── CONFIGURATION ─────────────────────────────────────────────────
+// ⚠️  Téléchargez jsPDF et déposez-le sur votre serveur (évite le blocage CSP).
+//     URL source : https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js
+//     Adaptez le chemin selon votre installation :
+//     Ex WordPress : '/wp-content/themes/votre-theme/js/jspdf.umd.min.js'
+//     Ex racine    : '/js/jspdf.umd.min.js'
+const JSPDF_LOCAL_PATH = '/js/jspdf.umd.min.js';
+
+// ─── CONSTANTS ────────────────────────────────────────────────────
+const FORFAITS = {
+  bureau:               { label:'Home office',              montant:160.99, unite:'mois',  parJour:false },
+  internet:             { label:'Internet (propre abonnement)',    montant:20.00,  unite:'mois',  parJour:false },
+  telephone:            { label:'Phone (own subscription)',   montant:20.00,  unite:'mois',  parJour:false },
+  pc:                   { label:'PC / Ordinateur (propre — BYOD)', montant:20.00,  unite:'mois',  parJour:false },
+  smartphone:           { label:'Smartphone personnel (BYOD)',     montant:10.00,  unite:'mois',  parJour:false },
+  garage:               { label:'Garage company vehicle',   montant:50.00,  unite:'mois',  parJour:false },
+  parking:              { label:'Regular parking',                montant:15.00,  unite:'mois',  parJour:false },
+  carwash:              { label:'Car-wash',                        montant:15.00,  unite:'mois',  parJour:false },
+  representation:       { label:'Representation expenses',         montant:50.00,  unite:'mois',  parJour:false, representationNote:true },
+  'vetements-achat':    { label:'Work clothing purchase',      montant:2.20,   unite:'jour',  parJour:true, salarieOnly:true },
+  'vetements-entretien':{ label:'Work clothing maintenance',  montant:2.20,   unite:'jour',  parJour:true, salarieOnly:true },
+  'vetements-perso':    { label:'Personal clothing maintenance',  montant:1.10,   unite:'jour',  parJour:true, salarieOnly:true },
+  outils:               { label:'Own tools',                  montant:1.25,   unite:'jour',  parJour:true, salarieOnly:true },
+};
+
+const STEP_META = [
+  { label:'Profile',         icon:'👤' },
+  { label:'Office & Devices', icon:'🏠' },
+  { label:'Vehicle & Rep.', icon:'🚗' },
+  { label:'Stays',        icon:'🏨' },
+  { label:'Clothing',      icon:'👷' },
+  { label:'Summary',          icon:'📋' },
+];
+
+let profil = 'salarie';
+let currentStep = 1;
+const TOTAL_STEPS = 6;
+let toggles = {};
+Object.keys(FORFAITS).forEach(k => toggles[k] = 'aucun');
+
+// ─── YES/NO STATE (tous les postes) ───────────────────────────────
+const yesNoItems = {
+  // step 2
+  bureau:               { label:'Home office',              montant:160.99, forfaitKey:'bureau' },
+  internet:             { label:'Internet (propre abonnement)',    montant:20.00,  forfaitKey:'internet' },
+  telephone:            { label:'Phone (own subscription)',   montant:20.00,  forfaitKey:'telephone' },
+  pc:                   { label:'PC / Ordinateur (BYOD)',          montant:20.00,  forfaitKey:'pc' },
+  smartphone:           { label:'Smartphone personnel (BYOD)',     montant:10.00,  forfaitKey:'smartphone' },
+  // step 3
+  garage:               { label:'Company car garage',      montant:50.00,  forfaitKey:'garage' },
+  parking:              { label:'Regular parking',                montant:15.00,  forfaitKey:'parking' },
+  carwash:              { label:'Car-wash',                        montant:15.00,  forfaitKey:'carwash' },
+  // step 5 — montant dynamique (par jour × days)
+  'vetements-achat':    { label:'Work clothing purchase',      montantParJour:2.20,  forfaitKey:'vetements-achat' },
+  'vetements-entretien':{ label:'Work clothing maintenance',  montantParJour:2.20,  forfaitKey:'vetements-entretien' },
+  'vetements-perso':    { label:'Personal clothing maintenance',  montantParJour:1.10,  forfaitKey:'vetements-perso' },
+  outils:               { label:'Own tools',                  montantParJour:1.25,  forfaitKey:'outils' },
+};
+
+let yesNoState = {};
+Object.keys(yesNoItems).forEach(k => yesNoState[k] = 'non');
+
+// Qty-based yn state (nights, repas, commodités)
+let yesNoQtyState = { 'nights-be':'non', repas:'non', commodites:'non' };
+
+function setYesNo(key, val) {
+  yesNoState[key] = val;
+  const item = yesNoItems[key];
+
+  const btnNon = document.getElementById('yn-'+key+'-non');
+  const btnOui = document.getElementById('yn-'+key+'-oui');
+  if (btnNon) btnNon.className = 'yn-btn yn-no' + (val==='non' ? ' active-yn-non' : ' active-yn-pristine');
+  if (btnOui) btnOui.className = 'yn-btn yn-yes' + (val==='oui' ? ' active-yn-oui' : '');
+
+  const card = document.getElementById('yn-'+key);
+  if (card) card.className = 'yn-question ' + (val==='oui' ? 'yn-active-oui' : 'yn-active-non');
+
+  const result = document.getElementById('yn-result-'+key);
+  if (result) {
+    if (val === 'oui') {
+      result.style.display = 'flex';
+      result.className = 'yn-result res-oui';
+      const days = parseInt(document.getElementById('daysParMois').value) || 20;
+      const montant = item.montantParJour ? item.montantParJour * days : item.montant;
+      result.innerHTML = '✅ <span>Own expenses included — <strong>' + fmt(montant) + '/month</strong> ONSS-exempt reimbursable</span>';
+    } else {
+      result.style.display = 'none';
+    }
+  }
+
+  toggles[item.forfaitKey] = val === 'oui' ? 'propres' : 'aucun';
+  recalc();
+}
+
+function setYesNoQty(key, val) {
+  yesNoQtyState[key] = val;
+
+  const btnNon = document.getElementById('yn-'+key+'-non');
+  const btnOui = document.getElementById('yn-'+key+'-oui');
+  if (btnNon) btnNon.className = 'yn-btn yn-no' + (val==='non' ? ' active-yn-non' : ' active-yn-pristine');
+  if (btnOui) btnOui.className = 'yn-btn yn-yes' + (val==='oui' ? ' active-yn-oui' : '');
+
+  const card = document.getElementById('yn-'+key);
+  if (card) card.className = 'yn-question ' + (val==='oui' ? 'yn-active-oui' : 'yn-active-non');
+
+  const qtyBox = document.getElementById('yn-qty-'+key);
+  if (qtyBox) qtyBox.style.display = val==='oui' ? 'block' : 'none';
+
+  const result = document.getElementById('yn-result-'+key);
+  if (result) result.style.display = 'none';
+
+  // Map key to actual input id
+  const inputMap = { 'nights-be':'nightsBelgique', repas:'daysRepas', commodites:'daysCommodites' };
+  const rateMap  = { 'nights-be':35, repas:9, commodites:10 };
+  const unitMap  = { 'nights-be':'nuit', repas:'jour', commodites:'jour' };
+
+  if (val === 'non') {
+    const inputEl = document.getElementById(inputMap[key]);
+    if (inputEl) inputEl.value = 0;
+  } else {
+    const inputEl = document.getElementById(inputMap[key]);
+    if (inputEl && parseInt(inputEl.value) < 1) inputEl.value = 1;
+    updateQtyResult(key, rateMap[key], unitMap[key]);
+  }
+  recalc();
+}
+
+function updateQtyResult(key, ratePerUnit, unitLabel) {
+  const inputMap = { 'nights-be':'nightsBelgique', repas:'daysRepas', commodites:'daysCommodites' };
+  const inputEl = document.getElementById(inputMap[key]);
+  if (!inputEl) return;
+  const qty = parseInt(inputEl.value) || 0;
+  const result = document.getElementById('yn-result-'+key);
+  if (!result) return;
+  if (qty > 0 && yesNoQtyState[key] === 'oui') {
+    result.style.display = 'flex';
+    result.className = 'yn-result res-oui';
+    const total = qty * ratePerUnit;
+    const plural = qty > 1 ? unitLabel+'s' : unitLabel;
+    result.innerHTML = '✅ <span>' + qty + ' ' + plural + ' × ' + fmt(ratePerUnit) + ' = <strong>' + fmt(total) + '</strong> ce mois</span>';
+  } else {
+    result.style.display = 'none';
+  }
+}
+
+
+
+// ─── INIT ──────────────────────────────────────────────────────────
+window.addEventListener('load', function() {
+  const now = new Date();
+  document.getElementById('periode').value = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0');
+  loadPersonne();
+  loadSociete();
+  buildProgress();
+  updateProgress();
+  recalc();
+  checkSavedProfilee();
+});
+
+// ─── PROGRESS ──────────────────────────────────────────────────────
+function buildProgress() {
+  const dotsEl = document.getElementById('stepDots');
+  const labelsEl = document.getElementById('stepLabels');
+  let dotsHtml = '';
+  let labelsHtml = '';
+  for (let i = 1; i <= TOTAL_STEPS; i++) {
+    const m = STEP_META[i-1];
+    dotsHtml += `<div class="step-dot pending" id="sdot-${i}" onclick="jumpToStep(${i})">${i}</div>`;
+    if (i < TOTAL_STEPS) dotsHtml += `<div class="step-connector" id="sconn-${i}"></div>`;
+    labelsHtml += `<div class="step-label" id="slbl-${i}" onclick="jumpToStep(${i})">${m.icon} ${m.label}</div>`;
+  }
+  dotsEl.innerHTML = dotsHtml;
+  labelsEl.innerHTML = labelsHtml;
+}
+
+function updateProgress() {
+  for (let i = 1; i <= TOTAL_STEPS; i++) {
+    const dot = document.getElementById('sdot-'+i);
+    const lbl = document.getElementById('slbl-'+i);
+    const conn = document.getElementById('sconn-'+i);
+    dot.className = 'step-dot ' + (i < currentStep ? 'done' : i === currentStep ? 'active' : 'pending') + ' clickable';
+    dot.textContent = i < currentStep ? '✓' : i;
+    lbl.className = 'step-label ' + (i < currentStep ? 'done' : i === currentStep ? 'active' : '') + ' clickable';
+    if (conn) conn.className = 'step-connector ' + (i < currentStep ? 'done' : '');
+  }
+  const subtitles = [
+    'Fill in your profile and information',
+    'Home office, internet, phone and devices',
+    'Costs related to your vehicle and representation',
+    'Business stays and meals',
+    'Work clothing and tools',
+    'Check and generate your expense report',
+  ];
+  document.getElementById('wizSubtitle').textContent = 'Step ' + currentStep + '/'+TOTAL_STEPS+' — ' + subtitles[currentStep-1];
+}
+
+function jumpToStep(n) {
+  if (n !== currentStep) goStep(n);
+}
+
+// ─── NAVIGATION ────────────────────────────────────────────────────
+function goStep(n) {
+  document.getElementById('step-'+currentStep).classList.remove('active');
+  currentStep = n;
+  document.getElementById('step-'+currentStep).classList.add('active');
+  updateProgress();
+  if (n === 6) buildSummary();
+  document.querySelector('.wizard').scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+// ─── PROFIL ────────────────────────────────────────────────────────
+function setProfile(p) {
+  profil = p;
+  document.getElementById('card-salarie').classList.toggle('selected', p==='salarie');
+  document.getElementById('card-dirigeant').classList.toggle('selected', p==='dirigeant');
+  document.getElementById('notice-dirigeant').style.display = p==='dirigeant' ? 'flex' : 'none';
+
+  const locked = p === 'dirigeant';
+
+  // Director notices for bureau & PC/internet
+  const nb = document.getElementById('notice-bureau-dirigeant');
+  const npc = document.getElementById('notice-pc-dirigeant');
+  if (nb) nb.style.display = locked ? 'flex' : 'none';
+  if (npc) npc.style.display = locked ? 'flex' : 'none';
+
+  // Itinérant rows
+  const rowRepas = document.getElementById('row-repas');
+  const rowCom = document.getElementById('row-commodites');
+  const noticeItinDirig = document.getElementById('notice-itinerant-dirig');
+  rowRepas.style.opacity = locked ? '.35' : '1';
+  rowRepas.style.pointerEvents = locked ? 'none' : 'auto';
+  rowCom.style.opacity = locked ? '.35' : '1';
+  rowCom.style.pointerEvents = locked ? 'none' : 'auto';
+  noticeItinDirig.style.display = locked ? 'flex' : 'none';
+
+  // Clothing section
+  document.getElementById('vetements-content').style.opacity = locked ? '.35' : '1';
+  document.getElementById('vetements-content').style.pointerEvents = locked ? 'none' : 'auto';
+  document.getElementById('notice-vetements-dirig').style.display = locked ? 'flex' : 'none';
+
+  if (locked) {
+    ['vetements-achat','vetements-entretien','vetements-perso','outils'].forEach(k => setToggle(k,'aucun'));
+    document.getElementById('daysRepas').value = 0;
+    document.getElementById('daysCommodites').value = 0;
+  }
+  recalc();
+}
+
+// ─── TOGGLE ────────────────────────────────────────────────────────
+function setToggle(key, val) {
+  toggles[key] = val;
+  const wrap = document.getElementById('toggle-' + key);
+  if (!wrap) return;
+  const btns = wrap.querySelectorAll('button');
+  btns.forEach(b => b.className = '');
+  if (val === 'aucun')   btns[0].className = 'active-none';
+  if (val === 'atn')     { if(btns[1]) btns[1].className = 'active-atn'; }
+  if (val === 'propres') btns[btns.length-1].className = 'active-propres';
+
+  const badge = document.getElementById('badge-' + key);
+  if (badge) {
+    if (val === 'atn') {
+      badge.innerHTML = '<span class="atn-badge">🔴 ATN — Imposable dans votre chef</span>';
+    } else if (val === 'propres') {
+      badge.innerHTML = '<span class="propres-badge">✅ Own expenses — ONSS-exempt reimbursable</span>';
+    } else {
+      badge.innerHTML = '';
+    }
+  }
+
+  recalc();
+  updateJoursRefs();
+}
+
+function updateJoursRefs() {
+  const j = parseInt(document.getElementById('daysParMois').value) || 20;
+  document.querySelectorAll('.days-ref').forEach(el => el.textContent = j);
+  const calcs = {
+    'vetements-achat': 2.20*j,
+    'vetements-entretien': 2.20*j,
+    'vetements-perso': 1.10*j,
+    'outils': 1.25*j,
+  };
+  Object.entries(calcs).forEach(([k,v]) => {
+    const el = document.querySelector('.calc-'+k);
+    if (el) el.textContent = v.toFixed(2).replace('.',',') + ' €';
+  });
+}
+
+function setYesNoRepr(val) {
+  const btnNon = document.getElementById('yn-representation-non');
+  const btnOui = document.getElementById('yn-representation-oui');
+  const card   = document.getElementById('yn-representation');
+  const qtyBox = document.getElementById('yn-qty-representation');
+
+  if (btnNon) btnNon.className = 'yn-btn yn-no' + (val==='non' ? ' active-yn-non' : ' active-yn-pristine');
+  if (btnOui) btnOui.className = 'yn-btn yn-yes' + (val==='oui' ? ' active-yn-oui' : '');
+  if (card)   card.className   = 'yn-question ' + (val==='oui' ? 'yn-active-oui' : 'yn-active-non');
+  if (qtyBox) qtyBox.style.display = val==='oui' ? 'block' : 'none';
+
+  toggles['representation'] = val==='oui' ? 'propres' : 'aucun';
+
+  if (val==='non') {
+    const r = document.getElementById('yn-result-representation');
+    if (r) r.style.display = 'none';
+  } else {
+    updateReprResult();
+  }
+  recalc();
+}
+
+function updateReprResult() {
+  const mt = parseFloat(document.getElementById('representationAmount').value) || 50;
+  const r = document.getElementById('yn-result-representation');
+  if (r && toggles['representation']==='propres') {
+    r.style.display = 'flex';
+    r.className = 'yn-result res-oui';
+    r.innerHTML = '✅ <span>Representation expenses — <strong>' + fmt(mt) + '/month</strong> ONSS-exempt reimbursable</span>';
+  }
+}
+
+
+function updateAllJoursRefs() {
+  updateJoursRefs();
+  // Also refresh yn-result badges for day-rate items
+  Object.keys(yesNoItems).forEach(k => {
+    if (yesNoItems[k].montantParJour && yesNoState[k] === 'oui') setYesNo(k, 'oui');
+  });
+}
+
+
+// ─── CALC ──────────────────────────────────────────────────────────
+function fmt(n) { return n.toFixed(2).replace('.',',') + ' €'; }
+
+function recalc() {
+  updateJoursRefs();
+  const days = parseInt(document.getElementById('daysParMois').value) || 20;
+  let total = 0;
+  let lines = [];
+  let atnLines = [];
+
+  Object.entries(FORFAITS).forEach(([key, f]) => {
+    const v = toggles[key];
+    if (f.salarieOnly && profil === 'dirigeant') return;
+    if (v === 'propres') {
+      let mt;
+      if (f.representationNote) {
+        mt = parseFloat(document.getElementById('representationAmount').value) || f.montant;
+      } else {
+        mt = f.parJour ? f.montant * days : f.montant;
+      }
+      total += mt;
+      lines.push({ label:f.label, montant:mt, forfait: f.representationNote ? (mt.toFixed(2).replace('.',',')+' €/month (variable)') : fmt(f.montant)+'/'+f.unite, qty: f.parJour ? days+' j' : '1 month' });
+    } else if (v === 'atn') {
+      atnLines.push({ label: f.label });
+    }
+  });
+
+  const nightsBe = parseInt(document.getElementById('nightsBelgique').value) || 0;
+  if (nightsBe > 0) {
+    const mt = nightsBe * 35;
+    total += mt;
+    lines.push({ label:'Business stay Belgium', montant:mt, forfait:'35,00 €/night', qty:nightsBe+' nights' });
+  }
+
+  if (profil === 'salarie') {
+    const daysRepas = parseInt(document.getElementById('daysRepas').value) || 0;
+    if (daysRepas > 0) {
+      const mt = daysRepas * 9;
+      total += mt;
+      lines.push({ label:'Lunch (travelling employee)', montant:mt, forfait:'9,00 €/day', qty:daysRepas+' j' });
+    }
+    const daysCom = parseInt(document.getElementById('daysCommodites').value) || 0;
+    if (daysCom > 0) {
+      const mt = daysCom * 10;
+      total += mt;
+      lines.push({ label:'Missing facilities (travelling)', montant:mt, forfait:'10,00 €/day', qty:daysCom+' j' });
+    }
+  }
+
+  document.getElementById('totalAmount').textContent = fmt(total);
+
+  const bl = document.getElementById('breakdownLines');
+  if (lines.length === 0) {
+    bl.innerHTML = '<div class="result-line"><span class="result-line-label">No expenses selected</span><span class="result-line-value zero">—</span></div>';
+  } else {
+    bl.innerHTML = lines.map(l =>
+      `<div class="result-line"><span class="result-line-label">${l.label}</span><span class="result-line-value">${fmt(l.montant)}</span></div>`
+    ).join('');
+  }
+
+  const atnSection = document.getElementById('atn-section');
+  if (atnLines.length > 0) {
+    atnSection.style.display = 'block';
+    document.getElementById('atnLines').innerHTML = atnLines.map(a =>
+      `<div class="result-line atn-line"><span class="result-line-label">⚠️ ATN : ${a.label}</span><span class="result-line-value">Fiche de paie</span></div>`
+    ).join('');
+  } else {
+    atnSection.style.display = 'none';
+  }
+}
+
+// ─── BUILD SUMMARY ─────────────────────────────────────────────────
+function buildSummary() {
+  recalc();
+  const days = parseInt(document.getElementById('daysParMois').value) || 20;
+  const nom = document.getElementById('nomPrenom').value || 'Not provided';
+  const periodeVal = document.getElementById('periode').value;
+  let periodeTxt = 'Not provided';
+  if (periodeVal) {
+    const d = new Date(periodeVal + '-01');
+    periodeTxt = d.toLocaleDateString('en-GB', { month:'long', year:'numeric' });
+    periodeTxt = periodeTxt.charAt(0).toUpperCase() + periodeTxt.slice(1);
+  }
+
+  // Update fiche type label
+  const ficheEl = document.getElementById('fiche-type');
+  if (ficheEl) ficheEl.textContent = profil === 'salarie' ? 'fiche 281.10' : 'fiche 281.20';
+
+  let propresRows = [];
+  let atnRows = [];
+  let total = 0;
+
+  Object.entries(FORFAITS).forEach(([key, f]) => {
+    const v = toggles[key];
+    if (f.salarieOnly && profil === 'dirigeant') return;
+    if (v === 'propres') {
+      let mt;
+      if (f.representationNote) {
+        mt = parseFloat(document.getElementById('representationAmount').value) || f.montant;
+      } else {
+        mt = f.parJour ? f.montant * days : f.montant;
+      }
+      total += mt;
+      const qty = f.parJour ? days+' days' : '1 month';
+      propresRows.push({ label:f.label, qty, montant:mt });
+    } else if (v === 'atn') {
+      atnRows.push({ label:f.label });
+    }
+  });
+
+  const nightsBe = parseInt(document.getElementById('nightsBelgique').value) || 0;
+  if (nightsBe > 0) {
+    const mt = nightsBe * 35;
+    total += mt;
+    propresRows.push({ label:'Business stay Belgium', qty:nightsBe+' nights', montant:mt });
+  }
+  if (profil === 'salarie') {
+    const jr = parseInt(document.getElementById('daysRepas').value) || 0;
+    if (jr > 0) { const mt=jr*9; total+=mt; propresRows.push({ label:'Lunch (travelling employee)', qty:jr+' j', montant:mt }); }
+    const jc = parseInt(document.getElementById('daysCommodites').value) || 0;
+    if (jc > 0) { const mt=jc*10; total+=mt; propresRows.push({ label:'Missing facilities (travelling)', qty:jc+' j', montant:mt }); }
+  }
+
+  let html = '';
+
+  // Info bloc
+  html += `<div class="notice notice-success" style="margin-bottom:16px;">
+    <span class="notice-icon">✅</span>
+    <span><strong>${nom}</strong> — ${profil==='salarie'?'Employee':'Director'} — ${periodeTxt} — ${days} days travaillés</span>
+  </div>`;
+
+  // Frais propres
+  html += '<div class="summary-section">';
+  html += '<div class="summary-section-title">✅ Reimbursable own expenses (ONSS-exempt)</div>';
+  if (propresRows.length === 0) {
+    html += '<div class="summary-row"><span class="lbl">No own expenses selected</span><span class="val zero">—</span></div>';
+  } else {
+    propresRows.forEach(r => {
+      html += `<div class="summary-row"><span class="lbl">${r.label} <small style="color:var(--text-light);">(${r.qty})</small></span><span class="val propres">${fmt(r.montant)}</span></div>`;
+    });
+  }
+  html += '</div>';
+
+  // ATN
+  if (atnRows.length > 0) {
+    html += '<div class="summary-section">';
+    html += '<div class="summary-section-title">🔴 Identified BIK — taxable in your hands</div>';
+    atnRows.forEach(r => {
+      html += `<div class="summary-row"><span class="lbl">⚠️ ${r.label}</span><span class="val atn">See payslip</span></div>`;
+    });
+    html += '<div style="font-size:.74rem;color:var(--red);margin-top:8px;font-style:italic;">These benefits must appear on your payslip and will be subject to withholding tax and ONSS contributions.</div>';
+    html += '</div>';
+  }
+
+  // Total
+  html += `<div class="summary-total"><span class="summary-total-label">Total own expenses for the month</span><span class="summary-total-amount">${fmt(total)}</span></div>`;
+
+  document.getElementById('summary-content').innerHTML = html;
+}
+
+// ─── GENERATE NOTE ─────────────────────────────────────────────────
+function genererNote() {
+  const days = parseInt(document.getElementById('daysParMois').value) || 20;
+  const nom = document.getElementById('nomPrenom').value || 'Not provided';
+  const periodeVal = document.getElementById('periode').value;
+  let periodeTxt = 'Not provided';
+  if (periodeVal) {
+    const d = new Date(periodeVal + '-01');
+    periodeTxt = d.toLocaleDateString('en-GB', { month:'long', year:'numeric' });
+    periodeTxt = periodeTxt.charAt(0).toUpperCase() + periodeTxt.slice(1);
+  }
+  const profilTxt = profil === 'salarie' ? 'Employee' : 'Directorentreprise';
+
+  document.getElementById('note-periode-titre').textContent = periodeTxt;
+  document.getElementById('note-nom').textContent = nom;
+  document.getElementById('note-profil-txt').textContent = profilTxt;
+  document.getElementById('ni-nom').textContent = nom;
+  document.getElementById('ni-profil').textContent = profilTxt;
+  document.getElementById('ni-periode').textContent = periodeTxt;
+  document.getElementById('ni-days').textContent = days + ' days';
+
+  // Address bénéficiaire
+  const adresse   = document.getElementById('adresse').value;
+  const cp        = document.getElementById('codePostal').value;
+  const loc       = document.getElementById('localite').value;
+  const nn        = document.getElementById('numNational').value;
+  const adresseFull = [adresse, [cp, loc].filter(Boolean).join(' ')].filter(Boolean).join(', ');
+  document.getElementById('ni-adresse').textContent = adresseFull || '—';
+  document.getElementById('ni-nn').textContent = nn || '—';
+
+  // Société
+  const nomSoc  = document.getElementById('nomSociete').value;
+  const bce     = document.getElementById('bce').value;
+  const adrSoc  = document.getElementById('adresseSociete').value;
+  const cpSoc   = document.getElementById('cpSociete').value;
+  const locSoc  = document.getElementById('localiteSociete').value;
+  const socParts = [nomSoc, bce ? '(BCE ' + bce + ')' : '', adrSoc, [cpSoc, locSoc].filter(Boolean).join(' ')].filter(Boolean);
+  document.getElementById('ni-societe').textContent = socParts.join(' · ') || '—';
+
+  let rows = [];
+  let total = 0;
+  let atnItems = [];
+
+  Object.entries(FORFAITS).forEach(([key, f]) => {
+    const v = toggles[key];
+    if (f.salarieOnly && profil === 'dirigeant') return;
+    if (v === 'propres') {
+      let mt;
+      if (f.representationNote) {
+        mt = parseFloat(document.getElementById('representationAmount').value) || f.montant;
+      } else {
+        mt = f.parJour ? f.montant * days : f.montant;
+      }
+      total += mt;
+      const base = f.representationNote ? (fmt(mt)+' / mois (variable)') : (fmt(f.montant) + ' / ' + f.unite);
+      const qty = f.parJour ? days + ' days' : '1 month';
+      rows.push(`<tr><td>${f.label}</td><td>${base}</td><td>${qty}</td><td class="amount">${fmt(mt)}</td></tr>`);
+    } else if (v === 'atn') {
+      atnItems.push(f.label);
+    }
+  });
+
+  const nightsBe = parseInt(document.getElementById('nightsBelgique').value) || 0;
+  if (nightsBe > 0) {
+    const mt = nightsBe * 35;
+    total += mt;
+    rows.push(`<tr><td>Business stay Belgium</td><td>€35.00 / night</td><td>${nightsBe} nights</td><td class="amount">${fmt(mt)}</td></tr>`);
+  }
+  if (profil === 'salarie') {
+    const jr = parseInt(document.getElementById('daysRepas').value) || 0;
+    if (jr > 0) { const mt=jr*9; total+=mt; rows.push(`<tr><td>Lunch (travelling employee)</td><td>€9.00 / day</td><td>${jr} days</td><td class="amount">${fmt(mt)}</td></tr>`); }
+    const jc = parseInt(document.getElementById('daysCommodites').value) || 0;
+    if (jc > 0) { const mt=jc*10; total+=mt; rows.push(`<tr><td>Missing facilities (travelling)</td><td>€10.00 / day</td><td>${jc} days</td><td class="amount">${fmt(mt)}</td></tr>`); }
+  }
+
+  if (rows.length === 0) {
+    rows.push('<tr><td colspan="4" style="text-align:center;color:var(--text-light);font-style:italic;">No own expenses selected</td></tr>');
+  }
+
+  document.getElementById('noteTableBody').innerHTML = rows.join('');
+  document.getElementById('noteTotalAmount').textContent = fmt(total);
+
+  // ATN section dans la note
+  const noteAtnSection = document.getElementById('note-atn-section');
+  if (atnItems.length > 0) {
+    noteAtnSection.style.display = 'block';
+    document.getElementById('note-atn-list').innerHTML = atnItems.map(a => `• ${a}`).join('<br>');
+  } else {
+    noteAtnSection.style.display = 'none';
+  }
+
+  // Fiche 281 type
+  const noteFicheNum = document.getElementById('note-fiche-num');
+  if (noteFicheNum) noteFicheNum.textContent = profil === 'salarie' ? 'fiche 281.10' : 'fiche 281.20';
+  const noteDirigRuling = document.getElementById('note-dirigeant-ruling');
+  if (noteDirigRuling) noteDirigRuling.style.display = profil === 'dirigeant' ? 'block' : 'none';
+
+  document.getElementById('noteDefrais').style.display = 'block';
+  document.getElementById('noteDefrais').scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+// ─── PDF EXPORT ────────────────────────────────────────────────────
+function exportNotePdf() {
+  const btn = document.getElementById('btnNotePdf');
+  btn.disabled = true;
+  btn.textContent = 'Generating…';
+  if (typeof window.jspdf !== 'undefined') {
+    doNotePdf(btn);
+    return;
+  }
+  // jsPDF not loaded yet — try local file first, then CDN fallback
+  const s = document.createElement('script');
+  s.src = JSPDF_LOCAL_PATH;
+  s.onload = () => doNotePdf(btn);
+  s.onerror = () => {
+    // Local failed — try CDN as last resort
+    const cdn = document.createElement('script');
+    cdn.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+    cdn.onload = () => doNotePdf(btn);
+    cdn.onerror = () => {
+      btn.disabled = false;
+      btn.textContent = '📄 Download PDF';
+      alert('Unable to load jsPDF. Check that the file is correctly placed on your server: ' + JSPDF_LOCAL_PATH);
+    };
+    document.head.appendChild(cdn);
+  };
+  document.head.appendChild(s);
+}
+
+function doNotePdf(btn) {
+  try {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF({ orientation:'portrait', unit:'mm', format:'a4' });
+    const pl=16, pr=194, pw=210;
+    let y=0;
+
+    // Header
+    doc.setFillColor(13,27,42); doc.rect(0,0,pw,32,'F');
+    doc.setFont('helvetica','bold'); doc.setFontSize(16); doc.setTextColor(255,255,255);
+    doc.text('Own Business Expense Report', pl, 13);
+    doc.setFontSize(8); doc.setFont('helvetica','normal'); doc.setTextColor(180,210,220);
+    doc.text('Official ONSS allowances 2026 — lacavernedelacompta.be', pl, 20);
+    doc.setTextColor(120,160,180);
+    doc.text('Source: ONSS Instructions — socialsecurity.be', pl, 26);
+    y = 40;
+
+    // Info grid — bénéficiaire
+    const nom       = document.getElementById('nomPrenom').value || '—';
+    const profTxt   = profil==='salarie' ? 'Employee' : 'Directorentreprise';
+    const perVal    = document.getElementById('periode').value;
+    let perTxt = '—';
+    if (perVal) { const d=new Date(perVal+'-01'); perTxt=d.toLocaleDateString('en-GB',{month:'long',year:'numeric'}); }
+    const days     = parseInt(document.getElementById('daysParMois').value)||20;
+    const adresse   = document.getElementById('adresse').value;
+    const cp        = document.getElementById('codePostal').value;
+    const loc       = document.getElementById('localite').value;
+    const nn        = document.getElementById('numNational').value;
+    const adrFull   = [adresse, [cp,loc].filter(Boolean).join(' ')].filter(Boolean).join(', ') || '—';
+    const nomSoc    = document.getElementById('nomSociete').value || '—';
+    const bce       = document.getElementById('bce').value;
+    const adrSoc    = document.getElementById('adresseSociete').value;
+    const cpSoc     = document.getElementById('cpSociete').value;
+    const locSoc    = document.getElementById('localiteSociete').value;
+    const adrSocFull= [adrSoc, [cpSoc,locSoc].filter(Boolean).join(' ')].filter(Boolean).join(', ') || '—';
+
+    // Two-column info grid (bénéficiaire left, société right)
+    const colW = (pr-pl)/2;
+
+    // Left column — bénéficiaire
+    const leftItems = [['BENEFICIARY',nom],['ADRESSE',adrFull],['PROFIL',profTxt],['N° NATIONAL',nn||'—'],['PERIOD',perTxt],['DAYS WORKED',days+' days']];
+    leftItems.forEach((item,i) => {
+      const iy = y + i*13;
+      doc.setFillColor(244,247,250); doc.rect(pl-2,iy-4,colW-6,11,'F');
+      doc.setFont('helvetica','bold'); doc.setFontSize(6.5); doc.setTextColor(138,155,176);
+      doc.text(item[0], pl, iy+0.5);
+      doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(26,37,53);
+      const txt = doc.splitTextToSize(item[1], colW-14);
+      doc.text(txt[0], pl, iy+6);
+    });
+
+    // Right column — société
+    const rx = pl + colW + 2;
+    const socItems = [['COMPANY / EMPLOYER',nomSoc],['BCE',bce||'—'],['COMPANY ADDRESS',adrSocFull]];
+    socItems.forEach((item,i) => {
+      const iy = y + i*18;
+      doc.setFillColor(232,240,251); doc.rect(rx-2,iy-4,colW-6,16,'F');
+      doc.setFont('helvetica','bold'); doc.setFontSize(6.5); doc.setTextColor(26,74,122);
+      doc.text(item[0], rx, iy+0.5);
+      doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(26,37,53);
+      const lines = doc.splitTextToSize(item[1], colW-14);
+      lines.slice(0,2).forEach((l,li) => doc.text(l, rx, iy+6+li*5));
+    });
+
+    y += Math.max(leftItems.length*13, socItems.length*18) + 6;
+
+    // Table header
+    doc.setFillColor(13,27,42); doc.rect(pl-2,y,pr-pl+4,8,'F');
+    doc.setFont('helvetica','bold'); doc.setFontSize(7); doc.setTextColor(200,220,230);
+    doc.text('RUBRIQUE', pl, y+5.5);
+    doc.text('BASE FORFAITAIRE', pl+80, y+5.5);
+    doc.text('QUANTITY', pl+130, y+5.5);
+    doc.text('MONTANT', pr-2, y+5.5, {align:'right'});
+    y += 10;
+
+    let total=0, ri=0;
+    const addRow=(label,base,qty,mt)=>{
+      if(y>265){doc.addPage();y=14;}
+      if(ri%2===0){doc.setFillColor(248,250,252);doc.rect(pl-2,y-2,pr-pl+4,8,'F');}
+      doc.setFont('helvetica','normal');doc.setFontSize(8);doc.setTextColor(26,37,53);
+      doc.text(label,pl,y+3.5);
+      doc.setTextColor(74,98,121);doc.text(base,pl+80,y+3.5);doc.text(qty,pl+130,y+3.5);
+      doc.setFont('helvetica','bold');doc.setTextColor(26,37,53);doc.text(fmt(mt),pr-2,y+3.5,{align:'right'});
+      y+=8;ri++;
+    };
+
+    Object.entries(FORFAITS).forEach(([key,f])=>{
+      const v=toggles[key];
+      if(f.salarieOnly&&profil==='dirigeant') return;
+      if(v==='propres'){
+        let mt;
+        if(f.representationNote){mt=parseFloat(document.getElementById('representationAmount').value)||f.montant;}
+        else{mt=f.parJour?f.montant*days:f.montant;}
+        total+=mt;
+        addRow(f.label, f.representationNote?fmt(mt)+'/month':fmt(f.montant)+'/'+f.unite, f.parJour?days+' j':'1 month', mt);
+      }
+    });
+
+    const nightsBe=parseInt(document.getElementById('nightsBelgique').value)||0;
+    if(nightsBe>0){const mt=nightsBe*35;total+=mt;addRow('Business stay Belgium','35,00 €/night',nightsBe+' nights',mt);}
+    if(profil==='salarie'){
+      const jr=parseInt(document.getElementById('daysRepas').value)||0;
+      if(jr>0){const mt=jr*9;total+=mt;addRow('Lunch (travelling employee)','9,00 €/day',jr+' j',mt);}
+      const jc=parseInt(document.getElementById('daysCommodites').value)||0;
+      if(jc>0){const mt=jc*10;total+=mt;addRow('Missing facilities (travelling)','10,00 €/day',jc+' j',mt);}
+    }
+
+    if(ri===0){
+      doc.setFont('helvetica','italic');doc.setFontSize(8);doc.setTextColor(138,155,176);
+      doc.text('No own expenses selected',pl,y+4);y+=10;
+    }
+
+    // ATN section in PDF
+    const atnInPdf = Object.entries(FORFAITS).filter(([k,f])=>toggles[k]==='atn'&&!(f.salarieOnly&&profil==='dirigeant'));
+    if(atnInPdf.length>0){
+      y+=4;
+      doc.setFillColor(254,232,230);doc.rect(pl-2,y,pr-pl+4,atnInPdf.length*8+12,'F');
+      doc.setFont('helvetica','bold');doc.setFontSize(8);doc.setTextColor(192,57,43);
+      doc.text('⚠ Identified BIK — taxable in your hands (to be processed on payslip)',pl,y+6);
+      y+=10;
+      atnInPdf.forEach(([k,f])=>{
+        doc.setFont('helvetica','normal');doc.setFontSize(7.5);doc.setTextColor(120,30,20);
+        doc.text('• '+f.label,pl+4,y+3);y+=8;
+      });
+    }
+
+    y+=4;
+    // Total
+    doc.setFillColor(13,27,42);doc.rect(pl-2,y,pr-pl+4,12,'F');
+    doc.setFont('helvetica','bold');doc.setFontSize(9);doc.setTextColor(255,255,255);
+    doc.text('TOTAL FRAIS PROPRES DU MOIS',pl,y+8);
+    doc.setFontSize(12);doc.setTextColor(34,163,184);
+    doc.text(fmt(total),pr-2,y+8,{align:'right'});
+    y+=20;
+
+    // Disclaimer
+    doc.setFillColor(251,245,230);doc.rect(pl-2,y,pr-pl+4,20,'F');
+    doc.setFont('helvetica','bold');doc.setFontSize(7);doc.setTextColor(122,85,0);
+    doc.text('⚠ AVERTISSEMENT',pl,y+5);
+    doc.setFont('helvetica','normal');doc.setFontSize(6.5);doc.setTextColor(122,85,0);
+    const disc=doc.splitTextToSize('This expense report is generated based on the official ONSS allowances 2026. It does not constitute legal or tax advice. Verify with your accountant.',pr-pl);
+    doc.text(disc,pl,y+10);
+    y+=24;
+
+    // Fiche 281 reminder
+    const ficheNum = profil === 'salarie' ? '281.10' : '281.20';
+    doc.setFillColor(232,240,251);doc.rect(pl-2,y,pr-pl+4,14,'F');
+    doc.setFont('helvetica','bold');doc.setFontSize(7);doc.setTextColor(26,74,122);
+    doc.text('DECLARATION OBLIGATION — SLIP '+ficheNum,pl,y+5);
+    doc.setFont('helvetica','normal');doc.setFontSize(6.5);doc.setTextColor(26,74,122);
+    doc.text('These reimbursements must appear on slip '+ficheNum+' avec la mention "OUI – normes sérieuses" (obligation depuis 2022).',pl,y+10);
+    y+=18;
+
+    // Director ruling reminder
+    if(profil==='dirigeant'){
+      doc.setFillColor(255,243,224);doc.rect(pl-2,y,pr-pl+4,16,'F');
+      doc.setFont('helvetica','bold');doc.setFontSize(7);doc.setTextColor(192,92,0);
+      doc.text('DIRECTOR: SDA RULING RECOMMENDED',pl,y+5);
+      doc.setFont('helvetica','normal');doc.setFontSize(6.5);doc.setTextColor(192,92,0);
+      const rulingText=doc.splitTextToSize('For home office and BYOD devices, a prior SDA ruling is required. Without a ruling, theadministration peut requalifier en rémunération imposable.',pr-pl);
+      doc.text(rulingText,pl,y+10);
+      y+=20;
+    }
+
+    // Footer
+    const pages=doc.internal.getNumberOfPages();
+    for(let i=1;i<=pages;i++){
+      doc.setPage(i);
+      doc.setFillColor(244,247,250);doc.rect(0,287,pw,10,'F');
+      doc.setFont('helvetica','normal');doc.setFontSize(6.5);doc.setTextColor(138,155,176);
+      doc.text('lacavernedelacompta.be — Own Business Expenses ONSS 2026 — Generated on '+new Date().toLocaleDateString('en-GB'),pl,293);
+      doc.text('Page '+i+'/'+pages,pr,293,{align:'right'});
+    }
+
+    const filename='note-frais-'+(nom.replace(/\s/g,'-').toLowerCase()||'inconnu')+'-'+(document.getElementById('periode').value||new Date().toISOString().slice(0,7))+'.pdf';
+    doc.save(filename);
+    btn.disabled=false; btn.textContent='📄 Download PDF';
+  } catch(e) {
+    console.error(e);
+    btn.disabled=false; btn.textContent='📄 Download PDF';
+    alert('Erreur PDF : '+e.message);
+  }
+}
+
+// ─── INFOS PERSONNE & SOCIÉTÉ ──────────────────────────────────────
+const STORAGE_PERSONNE = 'lcdc_frais_personne_v1';
+const STORAGE_SOCIETE  = 'lcdc_frais_societe_v1';
+
+function syncSurnamePrenom() {
+  const p = document.getElementById('prenom').value.trim();
+  const n = document.getElementById('nom').value.trim();
+  const full = [p, n].filter(Boolean).join(' ');
+  const np = document.getElementById('nomPrenom');
+  if (np) np.value = full;
+}
+
+function getPersonneData() {
+  return {
+    prenom:     document.getElementById('prenom').value,
+    nom:        document.getElementById('nom').value,
+    adresse:    document.getElementById('adresse').value,
+    codePostal: document.getElementById('codePostal').value,
+    localite:   document.getElementById('localite').value,
+    numNational:document.getElementById('numNational').value,
+  };
+}
+
+function getSocieteData() {
+  return {
+    bce:           document.getElementById('bce').value,
+    nomSociete:    document.getElementById('nomSociete').value,
+    adresse:       document.getElementById('adresseSociete').value,
+    codePostal:    document.getElementById('cpSociete').value,
+    localite:      document.getElementById('localiteSociete').value,
+  };
+}
+
+function savePersonne() {
+  try { localStorage.setItem(STORAGE_PERSONNE, JSON.stringify(getPersonneData())); } catch(e){}
+  const b = document.getElementById('badge-personne');
+  if (b) b.style.display = 'inline-flex';
+}
+
+function saveSociete() {
+  try { localStorage.setItem(STORAGE_SOCIETE, JSON.stringify(getSocieteData())); } catch(e){}
+  const b = document.getElementById('badge-societe');
+  if (b) b.style.display = 'inline-flex';
+}
+
+function loadPersonne() {
+  try {
+    const raw = localStorage.getItem(STORAGE_PERSONNE);
+    if (!raw) return;
+    const d = JSON.parse(raw);
+    if (d.prenom)      document.getElementById('prenom').value      = d.prenom;
+    if (d.nom)         document.getElementById('nom').value         = d.nom;
+    if (d.adresse)     document.getElementById('adresse').value     = d.adresse;
+    if (d.codePostal)  document.getElementById('codePostal').value  = d.codePostal;
+    if (d.localite)    document.getElementById('localite').value    = d.localite;
+    if (d.numNational) document.getElementById('numNational').value = d.numNational;
+    syncSurnamePrenom();
+    const b = document.getElementById('badge-personne');
+    if (b) b.style.display = 'inline-flex';
+  } catch(e){}
+}
+
+function loadSociete() {
+  try {
+    const raw = localStorage.getItem(STORAGE_SOCIETE);
+    if (!raw) return;
+    const d = JSON.parse(raw);
+    if (d.bce)        document.getElementById('bce').value           = d.bce;
+    if (d.nomSociete) document.getElementById('nomSociete').value    = d.nomSociete;
+    if (d.adresse)    document.getElementById('adresseSociete').value= d.adresse;
+    if (d.codePostal) document.getElementById('cpSociete').value     = d.codePostal;
+    if (d.localite)   document.getElementById('localiteSociete').value = d.localite;
+    const b = document.getElementById('badge-societe');
+    if (b) b.style.display = 'inline-flex';
+  } catch(e){}
+}
+
+function clearPersonne() {
+  ['prenom','nom','adresse','codePostal','localite','numNational'].forEach(id => {
+    const el = document.getElementById(id); if (el) el.value = '';
+  });
+  syncSurnamePrenom();
+  try { localStorage.removeItem(STORAGE_PERSONNE); } catch(e){}
+  const b = document.getElementById('badge-personne');
+  if (b) b.style.display = 'none';
+}
+
+function clearSociete() {
+  ['bce','nomSociete','adresseSociete','cpSociete','localiteSociete'].forEach(id => {
+    const el = document.getElementById(id); if (el) el.value = '';
+  });
+  try { localStorage.removeItem(STORAGE_SOCIETE); } catch(e){}
+  const b = document.getElementById('badge-societe');
+  if (b) b.style.display = 'none';
+  const st = document.getElementById('bce-status');
+  if (st) st.textContent = '';
+}
+
+async function searchBCE() {
+  const bce = document.getElementById('bce').value.replace(/[.\s-]/g,'');
+  const status = document.getElementById('bce-status');
+  if (!bce || bce.length < 9) { status.textContent = '⚠️ Enter a valid CBE number (10 digits)'; return; }
+  status.textContent = '🔍 Recherche en cours…';
+  try {
+    const url = `https://api.cbe.fgov.be/cbe/organisation/${bce}`;
+    const r = await fetch(url);
+    if (!r.ok) throw new Error('not found');
+    const d = await r.json();
+    const name = d.denominations?.[0]?.denomination || '';
+    const addr = d.addresses?.[0];
+    if (name) document.getElementById('nomSociete').value = name;
+    if (addr) {
+      document.getElementById('adresseSociete').value = (addr.street||'') + (addr.houseNumber ? ' ' + addr.houseNumber : '');
+      document.getElementById('cpSociete').value      = addr.zipcode || '';
+      document.getElementById('localiteSociete').value = addr.cityFR || addr.city || '';
+    }
+    status.innerHTML = '✅ <strong>' + (name || 'Company found') + '</strong>';
+  } catch(e) {
+    status.textContent = '❌ Company not found — fill in manually';
+  }
+}
+
+
+const STORAGE_KEY = 'lcdc_frais_propres_profil_v1';
+
+// Champs fixes (profil) — tout sauf les variables mensuelles
+const FIXED_FIELDS = [
+  'profil', 'nomPrenom', 'daysParMois',
+  // yn booleans
+  ...Object.keys(yesNoItems),
+  // représentation activée ou non
+  'representation_active',
+];
+
+function getProfileeData() {
+  const d = {
+    profil,
+    nomPrenom: document.getElementById('nomPrenom').value,
+    daysParMois: document.getElementById('daysParMois').value,
+    yesNoState: { ...yesNoState },
+    representationActive: toggles['representation'] === 'propres',
+    representationAmount: document.getElementById('representationAmount').value,
+  };
+  return d;
+}
+
+function saveProfilee() {
+  const d = getProfileeData();
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(d));
+  } catch(e) {}
+  // Show confirm
+  const el = document.getElementById('save-confirm');
+  if (el) { el.style.display = 'block'; setTimeout(() => el.style.display = 'none', 3000); }
+  // Update share URL
+  buildShareUrl();
+}
+
+function loadProfilee(d) {
+  if (!d) return false;
+  // Profile
+  setProfile(d.profil || 'salarie');
+  const nomEl = document.getElementById('nomPrenom');
+  if (nomEl && d.nomPrenom) nomEl.value = d.nomPrenom;
+  const daysEl = document.getElementById('daysParMois');
+  if (daysEl && d.daysParMois) { daysEl.value = d.daysParMois; recalc(); }
+  // YesNo states
+  if (d.yesNoState) {
+    Object.entries(d.yesNoState).forEach(([k, v]) => {
+      if (yesNoItems[k]) setYesNo(k, v);
+    });
+  }
+  // Représentation
+  if (d.representationActive) {
+    setYesNoRepr('oui');
+    const repEl = document.getElementById('representationAmount');
+    if (repEl && d.representationAmount) { repEl.value = d.representationAmount; updateReprResult(); }
+  }
+  return true;
+}
+
+function checkSavedProfilee() {
+  // 1. Try URL params first
+  const params = new URLSearchParams(window.location.search);
+  const encoded = params.get('p');
+  if (encoded) {
+    try {
+      const d = JSON.parse(atob(encoded));
+      if (loadProfilee(d)) { showQuickScreen(d); return; }
+    } catch(e) {}
+  }
+  // 2. Try localStorage
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) {
+      const d = JSON.parse(raw);
+      if (loadProfilee(d)) { showQuickScreen(d); return; }
+    }
+  } catch(e) {}
+  // 3. No saved profile → normal wizard
+  showWizard();
+}
+
+function showQuickScreen(profileData) {
+  document.getElementById('quick-screen').style.display = 'block';
+  document.getElementById('wizard-main-header').style.display = 'none';
+  document.getElementById('stepProgressWrap').style.display = 'none';
+  // Clear all step active states and inline styles so they don't interfere when returning to wizard
+  for (let i = 1; i <= TOTAL_STEPS; i++) {
+    const s = document.getElementById('step-'+i);
+    if (s) { s.classList.remove('active'); s.style.display = ''; }
+  }
+
+  // Build saved profile summary
+  const lines = [];
+  lines.push('<strong>' + (profileData.nomPrenom || '—') + '</strong> · ' + (profileData.profil === 'salarie' ? 'Employee' : 'Director') + ' · ' + (profileData.daysParMois || 20) + ' j/month');
+
+  const actifs = Object.entries(profileData.yesNoState || {})
+    .filter(([k, v]) => v === 'oui' && yesNoItems[k])
+    .map(([k]) => yesNoItems[k].label);
+  if (profileData.representationActive) actifs.push('Representation expenses');
+  if (actifs.length) lines.push(actifs.map(l => '✅ ' + l).join(' · '));
+  else lines.push('<em style="color:var(--text-light)">No monthly allowance selected</em>');
+
+  document.getElementById('saved-items-list').innerHTML = lines.join('<br>');
+
+  // Show/hide repas (salarié only)
+  const qkRepas = document.getElementById('qk-row-repas');
+  if (qkRepas) qkRepas.style.display = profileData.profil === 'dirigeant' ? 'none' : 'block';
+
+  // Show representation if active
+  const qkRepr = document.getElementById('qk-row-representation');
+  if (qkRepr) qkRepr.style.display = profileData.representationActive ? 'block' : 'none';
+  if (profileData.representationActive && profileData.representationAmount) {
+    const qkReprInput = document.getElementById('quick-representation');
+    if (qkReprInput) qkReprInput.value = profileData.representationAmount;
+  }
+
+  // Set period to current month
+  const now = new Date();
+  const periodeVal = now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0');
+  const qkPer = document.getElementById('quick-periode');
+  if (qkPer) qkPer.value = periodeVal;
+  document.getElementById('periode').value = periodeVal;
+
+  // Init days with saved value (default 20)
+  const savedJours = profileData.daysParMois || 20;
+  document.getElementById('daysParMois').value = savedJours;
+
+  buildShareUrl();
+  recalc();
+}
+
+function showWizard() {
+  document.getElementById('quick-screen').style.display = 'none';
+  document.getElementById('wizard-main-header').style.display = 'flex';
+  document.getElementById('stepProgressWrap').style.display = 'block';
+  // Use classList to stay consistent with goStep
+  for (let i = 1; i <= TOTAL_STEPS; i++) {
+    const s = document.getElementById('step-'+i);
+    if (s) {
+      s.classList.remove('active');
+      s.style.display = '';       // reset any inline display so CSS takes over
+    }
+  }
+  const active = document.getElementById('step-'+currentStep);
+  if (active) active.classList.add('active');
+}
+
+function editProfilee() {
+  document.getElementById('quick-screen').style.display = 'none';
+  document.getElementById('wizard-main-header').style.display = 'flex';
+  document.getElementById('stepProgressWrap').style.display = 'block';
+  goStep(1);
+}
+
+function syncQuick() {
+  // Sync quick-screen qty inputs to their hidden counterparts
+  const nuitInput = document.getElementById('quick-nights');
+  if (nuitInput && yesNoQtyState['nights-be'] === 'oui') {
+    document.getElementById('nightsBelgique').value = nuitInput.value;
+    const r = document.getElementById('qk-result-nights');
+    const qty = parseInt(nuitInput.value)||0;
+    if (r && qty > 0) { r.style.display='flex'; r.className='yn-result res-oui'; r.innerHTML='✅ <span>'+qty+' nuit'+(qty>1?'s':'')+' × 35,00 € = <strong>'+fmt(qty*35)+'</strong></span>'; }
+  }
+  // Sync quick yn nights display
+  const qkNonN = document.getElementById('qk-yn-nights-non');
+  const qkOuiN = document.getElementById('qk-yn-nights-oui');
+  const qkQtyN = document.getElementById('qk-qty-nights');
+  if(qkNonN) qkNonN.className = 'yn-btn yn-no'+(yesNoQtyState['nights-be']==='non'?' active-yn-non':'');
+  if(qkOuiN) qkOuiN.className = 'yn-btn yn-yes'+(yesNoQtyState['nights-be']==='oui'?' active-yn-oui':'');
+  if(qkQtyN) qkQtyN.style.display = yesNoQtyState['nights-be']==='oui' ? 'block' : 'none';
+  const qkCardN = document.getElementById('qk-yn-nights');
+  if(qkCardN) qkCardN.className = 'yn-question '+(yesNoQtyState['nights-be']==='oui'?'yn-active-oui':'yn-active-non');
+
+  // Same for repas
+  const qkNonR = document.getElementById('qk-yn-repas-non');
+  const qkOuiR = document.getElementById('qk-yn-repas-oui');
+  const qkQtyR = document.getElementById('qk-qty-repas');
+  if(qkNonR) qkNonR.className = 'yn-btn yn-no'+(yesNoQtyState['repas']==='non'?' active-yn-non':'');
+  if(qkOuiR) qkOuiR.className = 'yn-btn yn-yes'+(yesNoQtyState['repas']==='oui'?' active-yn-oui':'');
+  if(qkQtyR) qkQtyR.style.display = yesNoQtyState['repas']==='oui' ? 'block' : 'none';
+  const qkCardR = document.getElementById('qk-yn-repas');
+  if(qkCardR) qkCardR.className = 'yn-question '+(yesNoQtyState['repas']==='oui'?'yn-active-oui':'yn-active-non');
+
+  recalc();
+}
+
+function quickGenerate() {
+  // Sync période
+  const qkPer = document.getElementById('quick-periode');
+  if (qkPer) document.getElementById('periode').value = qkPer.value;
+  // Sync représentation
+  const qkRepr = document.getElementById('quick-representation');
+  if (qkRepr) document.getElementById('representationAmount').value = qkRepr.value;
+  // Jump to step 6 and generate
+  showWizard();
+  goStep(6);
+  setTimeout(() => genererNote(), 100);
+}
+
+function buildShareUrl() {
+  const d = getProfileeData();
+  const encoded = btoa(JSON.stringify(d));
+  const url = window.location.origin + window.location.pathname + '?p=' + encoded;
+  const shareInput = document.getElementById('share-url');
+  if (shareInput) shareInput.value = url;
+}
+
+function copyShareUrl() {
+  buildShareUrl();
+  // Show the URL block in quick-screen so the user can see what they're copying
+  const urlBlock = document.getElementById('share-url-block');
+  if (urlBlock) urlBlock.style.display = 'block';
+  const shareInput = document.getElementById('share-url');
+  if (!shareInput) return;
+  shareInput.select();
+  try { document.execCommand('copy'); } catch(e) {
+    navigator.clipboard && navigator.clipboard.writeText(shareInput.value);
+  }
+  const confirm = document.getElementById('copy-confirm');
+  if (confirm) { confirm.style.display = 'block'; setTimeout(() => confirm.style.display = 'none', 3000); }
+}
+
+
+function resetAll() {
+  try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
+  Object.keys(toggles).forEach(k => { if (k !== 'representation') setToggle(k,'aucun'); });
+  setYesNoRepr('non');
+  document.getElementById('representationAmount').value = 50;
+  Object.keys(yesNoState).forEach(k => setYesNo(k, 'non'));
+  Object.keys(yesNoQtyState).forEach(k => setYesNoQty(k, 'non'));
+  document.getElementById('daysParMois').value = 20;
+  document.getElementById('nightsBelgique').value = 0;
+  document.getElementById('daysRepas').value = 0;
+  document.getElementById('daysCommodites').value = 0;
+  document.getElementById('nomPrenom').value = '';
+  const now = new Date();
+  document.getElementById('periode').value = now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0');
+  document.getElementById('noteDefrais').style.display = 'none';
+  // Clear URL params
+  if (window.history.replaceState) window.history.replaceState({}, '', window.location.pathname);
+  setProfile('salarie');
+  showWizard();
+  goStep(1);
+}
+
+// ─── NAV ───────────────────────────────────────────────────────────
+function toggleDD(e) { e.stopPropagation(); document.getElementById('ddWrap').classList.toggle('dd-open'); }
+function toggleLangMenu(e) { e.stopPropagation(); document.getElementById('langSwitcher').classList.toggle('open'); }
+function toggleMobileMenu(e) { e.stopPropagation(); document.querySelector('.nav-links').classList.toggle('mobile-open'); }
+document.addEventListener('click', function(e) {
+  var w=document.getElementById('ddWrap'); if(w&&!w.contains(e.target)) w.classList.remove('dd-open');
+  var l=document.getElementById('langSwitcher'); if(l&&!l.contains(e.target)) l.classList.remove('open');
+});
+</script>
+
+<!-- Cookie banner -->
+<style>
+#cookieOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:1000000;backdrop-filter:blur(3px);}
+#cookieBanner{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1000001;background:#fff;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.3);width:min(560px,94vw);max-height:88vh;overflow-y:auto;font-family:'DM Sans',sans-serif;}
+#cbMain{padding:28px 32px;}
+#cbMain .cb-title{font-size:1.1rem;font-weight:700;color:#1A2535;text-align:center;margin:0 0 16px;}
+#cbMain .cb-text{font-size:.8rem;color:#4A5568;line-height:1.7;margin:0 0 12px;}
+#cbMain .cb-text a{color:#1A7A8A;text-decoration:underline;}
+#cbMain .cb-btns{display:flex;flex-direction:column;gap:10px;margin-top:20px;}
+#cbMain .cb-btn-agree{padding:12px;border-radius:8px;background:#F5A623;color:#fff;font-size:.9rem;font-weight:700;border:none;cursor:pointer;width:100%;}
+#cbMain .cb-btn-modify{padding:10px;border-radius:8px;background:#fff;color:#1A2535;font-size:.84rem;font-weight:600;border:2px solid #DDE5EF;cursor:pointer;width:100%;}
+</style>
+<div id="cookieOverlay"></div>
+<div id="cookieBanner" role="dialog" aria-modal="true">
+  <div id="cbMain">
+    <h2 class="cb-title">Your Privacy Settings</h2>
+    <p class="cb-text">La Caverne de la Compta uses cookies for Google Analytics and Google AdSense. By clicking "Agree", you give your consent. See our <a href="/en/mentions-legales/#cookies">cookie policy</a>.</p>
+    <div class="cb-btns">
+      <button class="cb-btn-agree" onclick="cookieAcceptAll()">Agree</button>
+      <button class="cb-btn-modify" onclick="cookieRefuseAll()">Refuse</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  function cookieAcceptAll(){document.getElementById('cookieBanner').style.display='none';document.getElementById('cookieOverlay').style.display='none';localStorage.setItem('cookieConsent','all');}
+  function cookieRefuseAll(){document.getElementById('cookieBanner').style.display='none';document.getElementById('cookieOverlay').style.display='none';localStorage.setItem('cookieConsent','none');}
+  window.cookieAcceptAll=cookieAcceptAll; window.cookieRefuseAll=cookieRefuseAll;
+  const consent=localStorage.getItem('cookieConsent');
+  if(!consent){setTimeout(()=>{document.getElementById('cookieBanner').style.display='block';document.getElementById('cookieOverlay').style.display='block';},800);}
+})();
+</script>
+
+</body>
+</html>

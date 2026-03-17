@@ -26,8 +26,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<!-- ════ GOOGLE ADSENSE — remplace ca-pub-XXXXXXXXXXXXXXXX par ton ID ════ -->
-<!--  -->
 <style>
   :root {
     --navy: #0D1B2A;
@@ -781,6 +779,7 @@ gtag('config', 'G-WNHZDLVPEL');
         <a href="/en/simulateur-retenue/"><span class="dd-icon">🧾</span>Invoice Withholding</a>
         <a href="/en/quick-memento-fiscal/"><span class="dd-icon">📌</span>Quick Tax Memo</a>
         <a href="/en/remboursement-frais/"><span class="dd-icon">🚗</span>Mileage Allowance</a>
+        <a href="/en/questionnaire-frais-propres/"><span class="dd-icon">💼</span>Own Expenses</a>
       </div>
     </li>
   </ul>
@@ -822,10 +821,7 @@ gtag('config', 'G-WNHZDLVPEL');
 </div>
 
 <!-- ADSENSE SLOT (décommenter après validation) -->
-<!-- <div class="ad-slot">
-  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div> -->
+
 
 <nav class="steps-nav">
   <button class="step-tab active" onclick="goStep(1)"><span class="step-num">1</span> Property</button>
@@ -2499,52 +2495,6 @@ calc();
   if(ca===null){showBanner();}
   else{updateConsentMode(ca==='1',localStorage.getItem('cb_ads')==='1');}
 })();
-</script>
-<!-- END COOKIE BANNER -->
-
-
-
-<script>
-function toggleDD(e){
-  e.stopPropagation();
-  document.getElementById('ddWrap').classList.toggle('dd-open');
-}
-document.addEventListener('click',function(e){
-  var w=document.getElementById('ddWrap');
-  if(w && !w.contains(e.target)) w.classList.remove('dd-open');
-});
-
-  
-
-
-  // ── HAMBURGER MENU ──
-  function toggleMobileMenu(e) {
-    e.stopPropagation();
-    var nav = document.querySelector('.nav-links');
-    var btn = document.querySelector('.hamburger');
-    if (nav) nav.classList.toggle('mobile-open');
-    if (btn) btn.classList.toggle('open');
-  }
-  document.addEventListener('click', function(e) {
-    var nav = document.querySelector('.nav-links');
-    var btn = document.querySelector('.hamburger');
-    var wrap = document.querySelector('.main-nav');
-    if (wrap && !wrap.contains(e.target)) {
-      if (nav) nav.classList.remove('mobile-open');
-      if (btn) btn.classList.remove('open');
-    }
-  });
-
-
-function toggleLangMenu(e) {
-  e.stopPropagation();
-  var ld = document.getElementById('langSwitcher');
-  if (ld) ld.classList.toggle('open');
-}
-document.addEventListener('click', function(e) {
-  var ld = document.getElementById('langSwitcher');
-  if (ld && !ld.contains(e.target)) ld.classList.remove('open');
-});
 </script>
 </body>
 </html>

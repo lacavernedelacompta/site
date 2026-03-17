@@ -441,4 +441,34 @@
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/remboursement-frais/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/remboursement-frais/"/>
   </url>
+  <url>
+    <loc>https://lacavernedelacompta.be/fr/simulateur-frais-propres/</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lacavernedelacompta.be/fr/questionnaire-frais-propres/</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lacavernedelacompta.be/nl/questionnaire-frais-propres/</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lacavernedelacompta.be/de/questionnaire-frais-propres/</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lacavernedelacompta.be/en/questionnaire-frais-propres/</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

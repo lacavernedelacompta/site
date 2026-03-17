@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frais Propres Belgique 2026 — Simulateur & Note de Frais</title>
+<meta name="description" content="Simulateur frais propres ONSS 2026 : bureau domicile 160,99 €, internet, PC, voiture. Distinguez ATN et frais remboursables. Note de frais PDF. Gratuit.">>
+<meta name="keywords" content="frais propres belgique, note de frais belgique, forfaits ONSS 2026, remboursement frais dirigeant, indemnité bureau domicile belgique, frais propres employeur">
+<meta name="author" content="La Caverne de la Compta">
+<meta name="robots" content="index, follow">
+<link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-frais-propres/">
+<link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-frais-propres/">
+<link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-frais-propres/">
+<link rel="canonical" href="https://lacavernedelacompta.be/fr/simulateur-frais-propres/">
+<meta property="og:title" content="Simulateur Frais Propres Belgique 2026 — Note de Frais">
+<meta property="og:description" content="Calculez vos frais propres ONSS 2026 et générez une note de frais PDF. Bureau domicile, internet, voiture, vêtements de travail.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lacavernedelacompta.be/fr/simulateur-frais-propres/">
+<meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
+<meta property="og:locale" content="fr_BE">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
+
+<style>
+:root {
+  --navy:#0D1B2A; --navy-mid:#1B2E44; --teal:#1A7A8A; --teal-light:#22A3B8; --teal-pale:#E8F6F8;
+  --gold:#C9A84C; --gold-pale:#FBF5E6;
+  --white:#FFFFFF; --off:#F4F7FA; --text:#1A2535; --text-mid:#4A6279; --text-light:#8A9BB0;
+  --border:#DDE5EF; --shadow:rgba(13,27,42,.10);
+  --green:#1B7A3E; --green-pale:#EBF7ED;
+  --orange:#C05C00; --orange-pale:#FFF3E0;
+  --red:#C0392B; --red-pale:#FEE8E6;
+  --info:#1A4A7A; --info-pale:#E8F0FB;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',sans-serif;background:var(--off);color:var(--text);min-height:100vh;}
+
+/* ── TOPBAR ── */
+.topbar{background:var(--navy-mid);padding:7px 40px;display:flex;justify-content:space-between;align-items:center;}
+.topbar-left{font-size:.75rem;color:var(--text-light);letter-spacing:.05em;}
+.topbar-right{display:flex;gap:20px;}
+.topbar-right a{font-size:.75rem;color:var(--text-light);text-decoration:none;transition:color .2s;}
+.topbar-right a:hover{color:var(--white);}
+
+/* ── NAV ── */
+nav.main-nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:0;z-index:1000;box-shadow:0 2px 12px var(--shadow);}
+.nav-links{display:flex;list-style:none;gap:4px;align-items:center;}
+.nav-links a{padding:8px 14px;font-size:.83rem;font-weight:500;color:var(--text-mid);text-decoration:none;border-radius:6px;transition:all .15s;}
+.nav-links a:hover{background:var(--teal-pale);color:var(--teal);}
+.nav-links a.active{background:var(--teal-pale);color:var(--teal);font-weight:600;}
+.dd-wrap{position:relative;list-style:none;}
+.dd-btn{padding:8px 14px;font-size:.83rem;font-weight:500;color:var(--text-mid);background:none;border:none;cursor:pointer;border-radius:6px;display:flex;align-items:center;gap:6px;transition:all .15s;}
+.dd-btn:hover,.dd-wrap.dd-open .dd-btn{background:var(--teal-pale);color:var(--teal);}
+.dd-chevron{font-size:.7rem;transition:transform .2s;}
+.dd-wrap.dd-open .dd-chevron{transform:rotate(180deg);}
+.dd-menu{display:none;position:absolute;top:calc(100% + 4px);left:0;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:6px;box-shadow:0 8px 32px rgba(13,27,42,.12);min-width:230px;z-index:300;}
+.dd-wrap.dd-open .dd-menu{display:block;}
+.dd-menu a{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:8px;font-size:.82rem;color:var(--text-mid);text-decoration:none;transition:all .12s;}
+.dd-menu a:hover{background:var(--teal-pale);color:var(--teal);}
+.dd-icon{font-size:1rem;width:22px;text-align:center;}
+.lang-dropdown{position:relative;display:inline-block;}
+.lang-current{display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:6px;background:var(--teal);color:#fff;font-size:.78rem;font-weight:700;cursor:pointer;border:none;letter-spacing:.05em;}
+.lang-current:after{content:' ▾';font-size:.7rem;}
+.lang-menu{display:none;position:absolute;top:calc(100% + 4px);right:0;background:#fff;border:1px solid var(--border);border-radius:8px;box-shadow:0 8px 24px rgba(13,27,42,.12);min-width:120px;z-index:9000;overflow:hidden;}
+.lang-dropdown.open .lang-menu{display:block;}
+.lang-menu a{display:flex;align-items:center;gap:8px;padding:10px 14px;font-size:.82rem;font-weight:500;color:var(--text);text-decoration:none;border-bottom:1px solid var(--off);transition:background .15s;}
+.lang-menu a:last-child{border-bottom:none;}
+.lang-menu a:hover{background:var(--teal-pale);color:var(--teal);}
+.lang-menu a.active{font-weight:700;color:var(--teal);}
+.hamburger{display:none;}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#1A3A4A 60%,var(--teal) 100%);color:white;padding:48px 32px 60px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(26,122,138,.2) 0%,transparent 60%);pointer-events:none;}
+.hero-bread{font-size:.75rem;color:rgba(255,255,255,.45);margin-bottom:14px;}
+.hero-bread a{color:rgba(255,255,255,.5);text-decoration:none;}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:5px 16px;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:16px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1.2;margin-bottom:12px;}
+.hero h1 em{font-style:italic;color:var(--teal-light);}
+.hero p{font-size:.9rem;color:rgba(255,255,255,.65);max-width:520px;margin:0 auto;line-height:1.6;}
+.hero p strong{color:white;}
+
+/* ── MAIN LAYOUT ── */
+.main{max-width:1100px;margin:0 auto;padding:32px 24px 80px;display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:start;}
+
+/* ── QUESTIONNAIRE ── */
+.wizard{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 2px 16px var(--shadow);}
+.wizard-header{background:var(--navy);color:white;padding:20px 28px;display:flex;align-items:center;gap:12px;}
+.wizard-header-icon{width:40px;height:40px;background:rgba(255,255,255,.12);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;}
+.wizard-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;}
+.wizard-subtitle{font-size:.78rem;color:rgba(255,255,255,.55);margin-top:2px;}
+
+/* Progress bar */
+.progress-wrap{padding:16px 28px 0;background:var(--white);}
+.progress-steps{display:flex;gap:4px;margin-bottom:8px;}
+.progress-step{flex:1;height:4px;background:var(--border);border-radius:2px;transition:background .3s;}
+.progress-step.done{background:var(--teal);}
+.progress-step.active{background:var(--teal-light);}
+.progress-label{font-size:.72rem;color:var(--text-light);text-align:right;}
+
+/* Section */
+.wizard-section{padding:24px 28px;border-bottom:1px solid var(--off);}
+.wizard-section:last-of-type{border-bottom:none;}
+.section-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.section-icon{width:28px;height:28px;background:var(--teal-pale);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;}
+
+/* Profile toggle */
+.profile-toggle{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:4px;}
+.profile-card{border:2px solid var(--border);border-radius:12px;padding:16px;cursor:pointer;transition:all .2s;text-align:center;background:var(--white);}
+.profile-card:hover{border-color:var(--teal);background:var(--teal-pale);}
+.profile-card.selected{border-color:var(--teal);background:var(--teal-pale);}
+.profile-card input[type=radio]{display:none;}
+.profile-card-icon{font-size:1.8rem;margin-bottom:6px;}
+.profile-card-label{font-size:.85rem;font-weight:600;color:var(--navy);}
+.profile-card-sub{font-size:.72rem;color:var(--text-light);margin-top:2px;}
+
+/* Form rows */
+.form-row{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--off);}
+.form-row:last-child{border-bottom:none;}
+.form-row-left{flex:1;}
+.form-row-label{font-size:.88rem;font-weight:600;color:var(--text);line-height:1.4;}
+.form-row-sub{font-size:.74rem;color:var(--text-light);margin-top:3px;line-height:1.4;}
+.form-row-right{flex-shrink:0;display:flex;align-items:center;gap:8px;}
+
+/* ATN / Propres toggle */
+.tri-toggle{display:flex;border:1.5px solid var(--border);border-radius:8px;overflow:hidden;background:var(--white);}
+.tri-toggle button{padding:6px 12px;border:none;background:none;cursor:pointer;font-size:.76rem;font-weight:600;color:var(--text-light);transition:all .15s;white-space:nowrap;}
+.tri-toggle button.active-none{background:var(--off);color:var(--text-mid);}
+.tri-toggle button.active-atn{background:#FEE8E6;color:var(--red);}
+.tri-toggle button.active-propres{background:var(--green-pale);color:var(--green);}
+.tri-toggle button + button{border-left:1px solid var(--border);}
+
+/* Number input */
+.num-input-wrap{display:flex;align-items:center;border:1.5px solid var(--border);border-radius:8px;overflow:hidden;background:var(--white);}
+.num-input-wrap input{width:64px;border:none;outline:none;padding:7px 10px;font-size:.88rem;font-family:'DM Sans',sans-serif;color:var(--text);text-align:right;background:transparent;}
+.num-input-wrap span{padding:7px 10px 7px 4px;font-size:.78rem;color:var(--text-light);background:transparent;}
+
+/* ATN badge */
+.atn-badge{display:inline-flex;align-items:center;gap:5px;background:var(--red-pale);color:var(--red);font-size:.72rem;font-weight:600;padding:3px 8px;border-radius:5px;margin-top:4px;}
+.propres-badge{display:inline-flex;align-items:center;gap:5px;background:var(--green-pale);color:var(--green);font-size:.72rem;font-weight:600;padding:3px 8px;border-radius:5px;margin-top:4px;}
+
+/* Info notice */
+.notice{background:var(--info-pale);border:1px solid #C5D8F0;border-radius:8px;padding:10px 14px;font-size:.78rem;color:var(--info);line-height:1.5;margin-top:8px;display:flex;gap:8px;}
+.notice-icon{flex-shrink:0;font-size:1rem;}
+.notice a{color:var(--teal);font-weight:600;}
+.notice-warn{background:var(--orange-pale);border-color:#F5C87A;color:var(--orange);}
+.notice-dirigeant{background:#FBF5E6;border-color:#E8C96A;color:#7A5500;}
+
+/* Disabled section */
+.section-disabled{opacity:.45;pointer-events:none;position:relative;}
+.section-disabled-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2;}
+.section-locked-msg{background:var(--navy);color:white;font-size:.78rem;font-weight:600;padding:6px 14px;border-radius:6px;}
+
+/* ── RESULT PANEL ── */
+.result-panel{position:sticky;top:88px;}
+.result-card{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 2px 16px var(--shadow);}
+.result-header{background:var(--navy);padding:20px 24px;color:white;}
+.result-header-title{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;margin-bottom:2px;}
+.result-header-sub{font-size:.74rem;color:rgba(255,255,255,.5);}
+.result-total-wrap{padding:20px 24px;border-bottom:1px solid var(--border);}
+.result-total-amount{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;color:var(--teal);line-height:1;}
+.result-total-label{font-size:.76rem;color:var(--text-light);margin-top:4px;}
+.result-breakdown{padding:16px 24px;}
+.result-breakdown-title{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-light);margin-bottom:12px;}
+.result-line{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--off);font-size:.82rem;}
+.result-line:last-child{border-bottom:none;}
+.result-line-label{color:var(--text-mid);}
+.result-line-value{font-weight:600;color:var(--text);font-family:'DM Mono',monospace;font-size:.8rem;}
+.result-line-value.zero{color:var(--text-light);font-weight:400;}
+.result-line.atn-line .result-line-label{color:var(--red);}
+.result-line.atn-line .result-line-value{color:var(--red);}
+
+.result-actions{padding:16px 24px;display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--border);}
+.btn{padding:10px 18px;border-radius:8px;font-size:.84rem;font-weight:600;cursor:pointer;border:none;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .15s;font-family:'DM Sans',sans-serif;width:100%;}
+.btn-pdf{background:#e63946;color:white;}
+.btn-pdf:hover{background:#c1121f;}
+.btn-reset{background:var(--off);color:var(--text-mid);border:1.5px solid var(--border);}
+.btn-reset:hover{background:var(--border);}
+.btn-pdf:disabled{opacity:.5;cursor:not-allowed;}
+
+/* Info sidebar boxes */
+.info-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px;box-shadow:0 2px 8px var(--shadow);margin-top:16px;}
+.info-box-title{font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.info-box ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.info-box li{font-size:.78rem;color:var(--text-mid);padding-left:14px;position:relative;line-height:1.5;}
+.info-box li::before{content:'→';position:absolute;left:0;color:var(--teal);font-weight:700;}
+
+/* ── NOTE DE FRAIS (print view) ── */
+#noteDefrais{display:none;}
+.note-wrap{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:40px;box-shadow:0 4px 24px var(--shadow);margin-top:24px;}
+.note-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:32px;padding-bottom:24px;border-bottom:2px solid var(--border);}
+.note-logo-area h2{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--navy);}
+.note-logo-area p{font-size:.8rem;color:var(--text-light);margin-top:4px;}
+.note-meta{text-align:right;}
+.note-meta h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--teal);}
+.note-meta p{font-size:.78rem;color:var(--text-mid);margin-top:4px;}
+.note-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px;}
+.note-info-item{background:var(--off);border-radius:8px;padding:12px 16px;}
+.note-info-item label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-light);display:block;margin-bottom:4px;}
+.note-info-item span{font-size:.88rem;color:var(--text);font-weight:500;}
+.note-table{width:100%;border-collapse:collapse;margin-bottom:24px;}
+.note-table th{background:var(--navy);color:rgba(255,255,255,.85);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;padding:10px 14px;text-align:left;font-weight:600;}
+.note-table td{padding:10px 14px;font-size:.84rem;border-bottom:1px solid var(--border);}
+.note-table tr:last-child td{border-bottom:none;}
+.note-table tr:nth-child(even) td{background:var(--off);}
+.note-table .amount{font-family:'DM Mono',monospace;font-size:.82rem;text-align:right;}
+.note-total-bar{background:var(--navy);color:white;padding:14px 20px;border-radius:8px;display:flex;justify-content:space-between;align-items:center;}
+.note-total-bar span:first-child{font-size:.85rem;font-weight:600;}
+.note-total-bar span:last-child{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:var(--teal-light);}
+.note-disclaimer{margin-top:20px;padding:12px 16px;background:var(--gold-pale);border:1px solid #E8C96A;border-radius:8px;font-size:.74rem;color:#7A5500;line-height:1.5;}
+.note-actions{display:flex;gap:10px;margin-top:20px;}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);color:rgba(255,255,255,.5);padding:30px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.8rem;margin-top:60px;}
+footer a{color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s;}
+footer a:hover{color:var(--white);}
+.footer-links{display:flex;gap:20px;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .main{grid-template-columns:1fr;}
+  .result-panel{position:static;}
+}
+@media(max-width:768px){
+  nav.main-nav{padding:0 16px;height:56px;}
+  .nav-links{display:none;}
+  .hero{padding:40px 20px 50px;}
+  .hero h1{font-size:1.6rem;}
+  .main{padding:20px 16px 60px;}
+  .topbar{display:none;}
+  footer{flex-direction:column;text-align:center;}
+  .hamburger{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:all .3s;}
+}
+@media(max-width:480px){
+  .tri-toggle button{padding:5px 8px;font-size:.7rem;}
+  .profile-toggle{grid-template-columns:1fr 1fr;}
+}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNHZDLVPEL"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WNHZDLVPEL');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Simulateur Frais Propres Belgique 2026","url":"https://lacavernedelacompta.be/fr/simulateur-frais-propres/","description":"Simulateur frais propres ONSS 2026 en Belgique. Distingue ATN et frais remboursables. Génère une note de frais PDF.","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"inLanguage":"fr-BE","publisher":{"@type":"Organization","name":"La Caverne de la Compta","url":"https://lacavernedelacompta.be"}}
+</script>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <span class="topbar-left">🇧🇪 Outils comptables et financiers pour la Belgique</span>
+  <div class="topbar-right">
+    <a href="#">Contact</a>
+    <a href="#">À propos</a>
+    <a href="/fr/mentions-legales/">Mentions légales</a>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="main-nav">
+  <a href="/fr/" class="logo" style="text-decoration:none;display:flex;align-items:center;">
+    <svg width="148" height="38" viewBox="0 0 148 38" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <defs><linearGradient id="hGn" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0D1B2A"/><stop offset="100%" style="stop-color:#1A3A5C"/></linearGradient></defs>
+      <polygon points="19,2 31,9 31,23 19,30 7,23 7,9" fill="url(#hGn)"/>
+      <polygon points="19,2 31,9 25,9 19,5 13,9 7,9" fill="rgba(255,255,255,.07)"/>
+      <line x1="9" y1="15" x2="29" y2="15" stroke="rgba(255,255,255,.5)" stroke-width="1.8" stroke-linecap="round"/>
+      <rect x="17.5" y="15" width="2.5" height="11" rx="1.2" fill="rgba(255,255,255,.35)"/>
+      <circle cx="18.8" cy="15" r="3.2" fill="#C9A84C"/><circle cx="18.8" cy="15" r="1.4" fill="white" opacity=".9"/>
+      <rect x="13" y="27" width="12" height="2.5" rx="1.2" fill="rgba(255,255,255,.2)"/>
+      <line x1="9" y1="15" x2="7" y2="21.5" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="7" cy="24" rx="6.5" ry="2.5" fill="#1A7A8A"/>
+      <line x1="29" y1="15" x2="31" y2="20" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="31" cy="22.5" rx="6.5" ry="2.5" fill="#22A3B8"/>
+      <circle cx="27" cy="7" r="2.5" fill="#C9A84C" opacity=".85"/>
+      <text x="42" y="15.5" font-family="'Playfair Display',serif" font-size="12.5" font-weight="900" fill="#0D1B2A" letter-spacing="-.2">La Caverne</text>
+      <rect x="42" y="18.5" width="104" height="1" rx=".5" fill="#DDE5EF"/>
+      <rect x="42" y="18.5" width="18" height="1" rx=".5" fill="#C9A84C"/>
+      <text x="42" y="30" font-family="'Playfair Display',serif" font-size="10.5" font-weight="700" font-style="italic" fill="#1A7A8A" letter-spacing="-.1">de la Compta</text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/fr/">🏠 Accueil</a></li>
+    <li class="dd-wrap" id="ddWrap">
+      <button class="dd-btn" onclick="toggleDD(event)">🧰 Nos outils <span class="dd-chevron">▼</span></button>
+      <div class="dd-menu" id="ddMenu">
+        <a href="/fr/simulateur-immobilier/"><span class="dd-icon">🏠</span>Simulateur Immobilier</a>
+        <a href="/fr/simulateur-credit/"><span class="dd-icon">💳</span>Simulateur de Crédit</a>
+        <a href="/fr/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Requalification Loyer</a>
+        <a href="/fr/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Plan Comptable PCMN</a>
+        <a href="/fr/simulateur-interets-composes/"><span class="dd-icon">📈</span>Intérêts Composés</a>
+        <a href="/fr/simulateur-retenue/"><span class="dd-icon">🧾</span>Retenue sur Facture</a>
+        <a href="/fr/quick-memento-fiscal/"><span class="dd-icon">📌</span>Quick-Mémo Fiscal</a>
+        <a href="/fr/remboursement-frais/"><span class="dd-icon">🚗</span>Indemnité Kilométrique</a>
+        <a href="/fr/simulateur-frais-propres/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">💼</span>Frais Propres</a>
+        <a href="/fr/questionnaire-frais-propres/"><span class="dd-icon">📝</span>Questionnaire Frais Propres</a>
+      </div>
+    </li>
+  </ul>
+  <div class="lang-dropdown" id="langSwitcher">
+    <button class="lang-current" onclick="toggleLangMenu(event)">🇫🇷 FR</button>
+    <div class="lang-menu">
+      <a href="/fr/simulateur-frais-propres/" class="active">🇫🇷 Français</a>
+      <a href="/nl/">🇧🇪 Nederlands</a>
+      <a href="/en/">🇬🇧 English</a>
+      <a href="/de/">🇩🇪 Deutsch</a>
+    </div>
+  </div>
+  <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div style="text-align:right;font-size:.72rem;color:var(--text-light);padding:6px 40px 0;font-style:italic;">
+  🕐 Mis à jour : Mars 2026 — Forfaits ONSS officiels — <a href="https://www.socialsecurity.be/employer/instructions/dmfa/fr/latest/instructions/salary/particularcases/expensesreimbursement.html" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-weight:600;">Source : ONSS</a>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bread"><a href="/fr/">Accueil</a> › Frais Propres</div>
+  <div class="hero-badge">✦ Forfaits ONSS 2026 — Mis à jour mars 2026</div>
+  <h1>Simulateur Frais Propres<br><em>Belgique 2026</em></h1>
+  <p>Répondez aux questions et obtenez votre <strong>note de frais mensuelle</strong> basée sur les forfaits officiels ONSS. Attention : si un avantage est fourni par la société, c'est un <strong>ATN</strong> — pas des frais propres.</p>
+</section>
+
+<!-- AdSense -->
+<div style="max-width:1100px;margin:20px auto 0;padding:0 24px;">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8043980001637749" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- Main -->
+<div class="main">
+
+  <!-- QUESTIONNAIRE -->
+  <div>
+    <div class="wizard">
+      <div class="wizard-header">
+        <div class="wizard-header-icon">💼</div>
+        <div>
+          <div class="wizard-title">Questionnaire frais propres</div>
+          <div class="wizard-subtitle">Répondez à chaque rubrique — le calcul se met à jour en temps réel</div>
+        </div>
+      </div>
+
+      <!-- SECTION 1 : Profil -->
+      <div class="wizard-section">
+        <div class="section-title"><div class="section-icon">👤</div> Étape 1 — Votre profil</div>
+        <div class="profile-toggle">
+          <label class="profile-card selected" id="card-salarie">
+            <input type="radio" name="profil" value="salarie" checked onchange="setProfil('salarie')">
+            <div class="profile-card-icon">👔</div>
+            <div class="profile-card-label">Salarié</div>
+            <div class="profile-card-sub">Contrat de travail</div>
+          </label>
+          <label class="profile-card" id="card-dirigeant">
+            <input type="radio" name="profil" value="dirigeant" onchange="setProfil('dirigeant')">
+            <div class="profile-card-icon">🏢</div>
+            <div class="profile-card-label">Dirigeant</div>
+            <div class="profile-card-sub">Administrateur / Gérant</div>
+          </label>
+        </div>
+        <div id="notice-dirigeant" class="notice notice-dirigeant" style="display:none;margin-top:12px;">
+          <span class="notice-icon">⚠️</span>
+          <span>En tant que <strong>dirigeant d'entreprise</strong>, certains frais forfaitaires (itinérant, vêtements, outils) ne s'appliquent pas car liés à un contrat de travail. L'indemnité bureau domicile est applicable mais nécessite une justification renforcée.</span>
+        </div>
+
+        <div style="margin-top:16px;">
+          <div class="form-row">
+            <div class="form-row-left">
+              <div class="form-row-label">Jours travaillés par mois</div>
+              <div class="form-row-sub">Nombre de jours prestés en moyenne</div>
+            </div>
+            <div class="form-row-right">
+              <div class="num-input-wrap">
+                <input type="number" id="joursParMois" value="20" min="1" max="31" step="1" oninput="recalc()">
+                <span>jours</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-row-left">
+              <div class="form-row-label">Nom / Prénom <span style="font-weight:400;color:var(--text-light);">(pour la note de frais)</span></div>
+            </div>
+            <div class="form-row-right">
+              <input type="text" id="nomPrenom" placeholder="Ex: Jean Dupont" oninput="recalc()"
+                style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:.84rem;font-family:'DM Sans',sans-serif;outline:none;width:180px;">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-row-left">
+              <div class="form-row-label">Période (mois/année)</div>
+            </div>
+            <div class="form-row-right">
+              <input type="month" id="periode" oninput="recalc()"
+                style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:.84rem;font-family:'DM Sans',sans-serif;outline:none;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 2 : Bureau domicile -->
+      <div class="wizard-section">
+        <div class="section-title"><div class="section-icon">🏠</div> Étape 2 — Bureau à domicile</div>
+
+        <!-- Bureau domicile -->
+        <div class="form-row">
+          <div class="form-row-left">
+            <div class="form-row-label">Forfait bureau domicile</div>
+            <div class="form-row-sub" id="sub-bureau">Travail à domicile ≥ 1 jour/semaine (structurel) → <strong>160,99 €/mois</strong></div>
+            <div id="badge-bureau"></div>
+          </div>
+          <div class="form-row-right">
+            <div class="tri-toggle" id="toggle-bureau">
+              <button class="active-none" onclick="setToggle('bureau','aucun')">Aucun</button>
+              <button onclick="setToggle('bureau','atn')">🔴 ATN</button>
+              <button onclick="setToggle('bureau','propres')">✅ Frais propres</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 3 : Internet & PC -->
+      <div class="wizard-section">
+        <div class="section-title"><div class="section-icon">💻</div> Étape 3 — Internet & PC</div>
+
+        <div class="notice" style="margin-bottom:14px;">
+          <span class="notice-icon">ℹ️</span>
+          <span><strong>Important :</strong> Si la société fournit internet ou un PC, c'est un <strong>ATN</strong> imposable — il n'y a pas de frais propres à rembourser sur ce poste. Les frais propres ne s'appliquent que si vous utilisez votre propre connexion/matériel.</span>
+        </div>
+
+        <!-- Internet -->
+        <div class="form-row">
+          <div class="form-row-left">
+            <div class="form-row-label">Connexion internet</div>
+            <div class="form-row-sub">Usage professionnel régulier de votre propre abonnement internet → <strong>20 €/mois</strong></div>
+            <div id="badge-internet"></div>
+          </div>
+          <div class="form-row-right">
+            <div class="tri-toggle" id="toggle-internet">
+              <button class="active-none" onclick="setToggle('internet','aucun')">Aucun</button>
+              <button onclick="setToggle('internet','atn')">🔴 ATN société</button>
+              <button onclick="setToggle('internet','propres')">✅ Frais propres</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PC -->
+        <div class="form-row">
+          <div class="form-row-left">
+            <div class="form-row-label">PC / Ordinateur</div>
+            <div class="form-row-sub">Usage professionnel régulier de votre propre PC → <strong>20 €/mois</strong></div>
+            <div id="badge-pc"></div>
+          </div>
+          <div class="form-row-right">
+            <div class="tri-toggle" id="toggle-pc">
+              <button class="active-none" onclick="setToggle('pc','aucun')">Aucun</button>
+              <button onclick="setToggle('pc','atn')">🔴 ATN société</button>
+              <button onclick="setToggle('pc','propres')">✅ Frais propres</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 4 : Voiture -->
+      <div class="wizard-section">
+        <div class="section-title"><div class="section-icon">🚗</div> Étape 4 — Frais de voiture</div>
+
+        <div class="notice" style="margin-bottom:14px;">
+          <span class="notice-icon">ℹ️</span>
+          <span>Ces forfaits s'appliquent si le véhicule est utilisé <strong>principalement à des fins professionnelles</strong> et n'appartient pas à la société. Pour les <strong>indemnités kilométriques</strong>, utilisez notre <a href="/fr/remboursement-frais/">page dédiée →</a></span>
+        </div>
+
+        <!-- Garage -->
+        <div class="form-row">
+          <div class="form-row-left">
+            <div class="form-row-label">Garage</div>
+            <div class="form-row-sub">Obligatoire pour la sécurité du véhicule professionnel → <strong>50 €/mois</strong></div>
+            <div id="badge-garage"></div>
+          </div>
+          <div class="form-row-right">
+            <div class="tri-toggle" id="toggle-garage">
+              <button class="active-none" onclick="setToggle('garage','aucun')">Aucun</button>
+              <button onclick="setToggle('garage','atn')">🔴 ATN société</button>
+              <button onclick="setToggle('garage','propres')">✅ Frais propres</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parking -->
+        <div class="form-row">
+          <div class="form-row-left">
+            <div class="form-row-label">Parking régulier</div>
+            <div class="form-row-sub">Petits frais de parking réguliers liés aux déplacements pro → <strong>15 €/mois</strong></div>
+            <div id="badge-parking"></div>
+          </div>
+          <div class="form-row-right">
+            <div class="tri-toggle" id="toggle-parking">
+              <button class="active-none" onclick="setToggle('parking','aucun')">Aucun</button>
+              <button onclick="setToggle('parking','atn')">🔴 ATN société</button>
+              <button onclick="setToggle('parking','propres')">✅ Frais propres</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car-wash -->
+        <div class="form-row">
+          <div class="form-row-left">
+            <div class="form-row-label">Car-wash</div>
+            <div class="form-row-sub">Fonction exigeant un véhicule impeccable → <strong>15 €/mois</strong></div>
+            <div id="badge-carwash"></div>
+          </div>
+          <div class="form-row-right">
+            <div class="tri-toggle" id="toggle-carwash">
+              <button class="active-none" onclick="setToggle('carwash','aucun')">Aucun</button>
+              <button onclick="setToggle('carwash','atn')">🔴 ATN société</button>
+              <button onclick="setToggle('carwash','propres')">✅ Frais propres</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 5 : Séjours -->
+      <div class="wizard-section">
+        <div class="section-title"><div class="section-icon">🏨</div> Étape 5 — Séjours professionnels</div>
+
+        <!-- Séjour Belgique -->
+        <div class="form-row">
+          <div class="form-row-left">
+            <div class="form-row-label">Nuits en Belgique</div>
+            <div class="form-row-sub">Lieu de travail trop éloigné pour rentrer — repas soir + logement + petit-déj → <strong>35 €/nuit</strong></div>
+            <div id="badge-sejour-be"></div>
+          </div>
+          <div class="form-row-right">
+            <div class="num-input-wrap">
+              <input type="number" id="nuitsBelgique" value="0" min="0" max="31" step="1" oninput="recalc()">
+              <span>nuits</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repas midi itinérant -->
+        <div class="form-row" id="row-repas">
+          <div class="form-row-left">
+            <div class="form-row-label">Repas midi (travailleur itinérant)</div>
+            <div class="form-row-sub">≥ 4h de déplacement/jour, obligé de manger à l'extérieur → <strong>9 €/jour</strong></div>
+            <div id="badge-repas"></div>
+          </div>
+          <div class="form-row-right">
+            <div class="num-input-wrap">
+              <input type="number" id="joursRepas" value="0" min="0" max="31" step="1" oninput="recalc()">
+              <span>jours</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Absence commodités -->
+        <div class="form-row" id="row-commodites">
+          <div class="form-row-left">
+            <div class="form-row-label">Absence commodités (travailleur itinérant)</div>
+            <div class="form-row-sub">Pas accès aux sanitaires/réfectoire de l'entreprise → <strong>10 €/jour</strong></div>
+            <div id="badge-commodites"></div>
+          </div>
+          <div class="form-row-right">
+            <div class="num-input-wrap">
+              <input type="number" id="joursCommodites" value="0" min="0" max="31" step="1" oninput="recalc()">
+              <span>jours</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 6 : Vêtements & outils (salarié uniquement) -->
+      <div class="wizard-section" id="section-vetements" style="position:relative;">
+        <div class="section-title"><div class="section-icon">👷</div> Étape 6 — Vêtements & outils <span id="badge-salarie-only" style="font-size:.7rem;font-weight:600;background:var(--info-pale);color:var(--info);padding:3px 8px;border-radius:5px;margin-left:4px;">Salarié uniquement</span></div>
+
+        <div id="locked-overlay" style="display:none;" class="notice notice-warn" >
+          <span class="notice-icon">🔒</span>
+          <span>Ces forfaits sont réservés aux <strong>salariés</strong> (liés au contrat de travail). En tant que dirigeant d'entreprise, ils ne s'appliquent pas.</span>
+        </div>
+
+        <div id="vetements-content">
+          <!-- Vêtements achat -->
+          <div class="form-row">
+            <div class="form-row-left">
+              <div class="form-row-label">Achat vêtements de travail</div>
+              <div class="form-row-sub">Salopettes, chaussures sécurité, uniforme... → <strong>2,20 €/jour</strong></div>
+            </div>
+            <div class="form-row-right">
+              <div class="tri-toggle" id="toggle-vetements-achat">
+                <button class="active-none" onclick="setToggle('vetements-achat','aucun')">Aucun</button>
+                <button onclick="setToggle('vetements-achat','atn')">🔴 ATN société</button>
+                <button onclick="setToggle('vetements-achat','propres')">✅ Frais propres</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vêtements entretien -->
+          <div class="form-row">
+            <div class="form-row-left">
+              <div class="form-row-label">Entretien vêtements de travail</div>
+              <div class="form-row-sub">Nettoyage des vêtements imposés → <strong>2,20 €/jour</strong></div>
+            </div>
+            <div class="form-row-right">
+              <div class="tri-toggle" id="toggle-vetements-entretien">
+                <button class="active-none" onclick="setToggle('vetements-entretien','aucun')">Aucun</button>
+                <button onclick="setToggle('vetements-entretien','atn')">🔴 ATN société</button>
+                <button onclick="setToggle('vetements-entretien','propres')">✅ Frais propres</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vêtements personnels -->
+          <div class="form-row">
+            <div class="form-row-left">
+              <div class="form-row-label">Entretien vêtements personnels</div>
+              <div class="form-row-sub">Environnement très sale (jeans, t-shirts...) → <strong>1,10 €/jour</strong></div>
+            </div>
+            <div class="form-row-right">
+              <div class="tri-toggle" id="toggle-vetements-perso">
+                <button class="active-none" onclick="setToggle('vetements-perso','aucun')">Aucun</button>
+                <button onclick="setToggle('vetements-perso','propres')">✅ Frais propres</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Outils -->
+          <div class="form-row">
+            <div class="form-row-left">
+              <div class="form-row-label">Outils propres</div>
+              <div class="form-row-sub">Utilisation de votre propre matériel → <strong>1,25 €/jour</strong></div>
+            </div>
+            <div class="form-row-right">
+              <div class="tri-toggle" id="toggle-outils">
+                <button class="active-none" onclick="setToggle('outils','aucun')">Aucun</button>
+                <button onclick="setToggle('outils','propres')">✅ Frais propres</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 7 : Kilométrique -->
+      <div class="wizard-section">
+        <div class="section-title"><div class="section-icon">🛣️</div> Étape 7 — Indemnités kilométriques</div>
+        <div class="notice">
+          <span class="notice-icon">🔗</span>
+          <span>Les indemnités kilométriques font l'objet d'une <strong>page dédiée</strong> avec calcul détaillé par trajet et export PDF. <a href="/fr/remboursement-frais/" style="font-weight:700;">→ Calculer mes indemnités kilométriques</a><br><br>Rappel des taux 2026 : <strong>0,4326 €/km</strong> (déplacements pro, T1 2026) · <strong>0,15 €/km</strong> (domicile-lieu de travail)</span>
+        </div>
+      </div>
+
+    </div><!-- end wizard -->
+
+    <!-- NOTE DE FRAIS GÉNÉRÉE -->
+    <div id="noteDefrais" class="note-wrap">
+      <div class="note-header">
+        <div class="note-logo-area">
+          <h2>📋 Note de Frais</h2>
+          <p>Frais propres à l'employeur — Forfaits ONSS 2026</p>
+        </div>
+        <div class="note-meta">
+          <h3 id="note-periode-titre">—</h3>
+          <p id="note-nom">—</p>
+          <p id="note-profil-txt" style="font-size:.72rem;color:var(--text-light);margin-top:2px;"></p>
+        </div>
+      </div>
+      <div class="note-info-grid">
+        <div class="note-info-item"><label>Bénéficiaire</label><span id="ni-nom">—</span></div>
+        <div class="note-info-item"><label>Profil</label><span id="ni-profil">—</span></div>
+        <div class="note-info-item"><label>Période</label><span id="ni-periode">—</span></div>
+        <div class="note-info-item"><label>Jours travaillés</label><span id="ni-jours">—</span></div>
+      </div>
+      <table class="note-table">
+        <thead>
+          <tr>
+            <th>Rubrique</th>
+            <th>Base forfaitaire ONSS</th>
+            <th>Quantité</th>
+            <th style="text-align:right;">Montant</th>
+          </tr>
+        </thead>
+        <tbody id="noteTableBody"></tbody>
+      </table>
+      <div class="note-total-bar">
+        <span>Total frais propres du mois</span>
+        <span id="noteTotalAmount">0,00 €</span>
+      </div>
+      <div class="note-disclaimer">
+        ⚠️ <strong>Avertissement :</strong> Cette note de frais est générée sur base des forfaits ONSS officiels en vigueur au 1er trimestre 2026. Elle ne constitue pas un avis juridique ou fiscal. Vérifiez l'application de ces forfaits avec votre comptable ou secrétariat social. Source : <a href="https://www.socialsecurity.be/employer/instructions/dmfa/fr/latest/instructions/salary/particularcases/expensesreimbursement.html" target="_blank" style="color:var(--teal);">Instructions ONSS</a> — lacavernedelacompta.be
+      </div>
+      <div class="note-actions">
+        <button class="btn btn-pdf" onclick="exportNotePdf()" id="btnNotePdf">📄 Télécharger PDF</button>
+        <button class="btn btn-reset" onclick="document.getElementById('noteDefrais').style.display='none'">✕ Fermer</button>
+      </div>
+    </div>
+
+  </div><!-- end left col -->
+
+  <!-- RESULT PANEL -->
+  <div class="result-panel">
+    <div class="result-card">
+      <div class="result-header">
+        <div class="result-header-title">💼 Frais propres mensuels</div>
+        <div class="result-header-sub">Mise à jour en temps réel</div>
+      </div>
+      <div class="result-total-wrap">
+        <div class="result-total-amount" id="totalMontant">0,00 €</div>
+        <div class="result-total-label">Total frais propres / mois (exonéré ONSS)</div>
+      </div>
+      <div class="result-breakdown">
+        <div class="result-breakdown-title">Détail par rubrique</div>
+        <div id="breakdownLines">
+          <div class="result-line"><span class="result-line-label">Aucun frais sélectionné</span><span class="result-line-value zero">—</span></div>
+        </div>
+      </div>
+      <div id="atn-section" style="display:none;padding:0 24px 12px;">
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--red);margin-bottom:8px;">⚠️ ATN identifiés (imposables)</div>
+        <div id="atnLines"></div>
+      </div>
+      <div class="result-actions">
+        <button class="btn btn-pdf" id="btnGenererNote" onclick="genererNote()">📋 Générer la note de frais</button>
+        <button class="btn btn-reset" onclick="resetAll()">↺ Réinitialiser</button>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <div class="info-box-title">📖 Rappel ATN vs Frais propres</div>
+      <ul>
+        <li><strong>ATN</strong> = fourni par la société → imposable dans le chef du bénéficiaire</li>
+        <li><strong>Frais propres</strong> = vous payez avec votre argent personnel pour des besoins professionnels → remboursable exonéré</li>
+        <li>Impossible de cumuler ATN + frais propres sur le même poste</li>
+        <li>L'ONSS peut requalifier en salaire déguisé si les conditions ne sont pas remplies</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <div class="info-box-title">🚗 Indemnités kilométriques</div>
+      <ul>
+        <li>Taux T1 2026 : <strong>0,4326 €/km</strong> (déplacements pro)</li>
+        <li>Domicile → travail : <strong>0,15 €/km</strong></li>
+        <li>Max 24.000 km/an pour les déplacements pro</li>
+        <li><a href="/fr/remboursement-frais/" style="color:var(--teal);font-weight:600;">→ Calculer mes km →</a></li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- end main -->
+
+<!-- AdSense bottom -->
+<div style="max-width:1100px;margin:0 auto 40px;padding:0 24px;">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8043980001637749" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<footer>
+  <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
+  <div class="footer-links">
+    <a href="/fr/mentions-legales/">Mentions légales</a>
+    <a href="/fr/mentions-legales/#rgpd">RGPD</a>
+    <a href="/fr/mentions-legales/#cookies">Cookies</a>
+    <a href="#">Contact</a>
+  </div>
+</footer>
+
+<script>
+// ─── STATE ───────────────────────────────────────────────────────
+const FORFAITS = {
+  bureau:    { label:'Bureau domicile',              montant:160.99, unite:'mois',  parJour:false },
+  internet:  { label:'Internet (propre)',             montant:20.00,  unite:'mois',  parJour:false },
+  pc:        { label:'PC / Ordinateur (propre)',      montant:20.00,  unite:'mois',  parJour:false },
+  garage:    { label:'Garage',                        montant:50.00,  unite:'mois',  parJour:false },
+  parking:   { label:'Parking régulier',              montant:15.00,  unite:'mois',  parJour:false },
+  carwash:   { label:'Car-wash',                      montant:15.00,  unite:'mois',  parJour:false },
+  'vetements-achat':    { label:'Achat vêtements travail',   montant:2.20,  unite:'jour', parJour:true, salarieOnly:true },
+  'vetements-entretien':{ label:'Entretien vêtements travail',montant:2.20, unite:'jour', parJour:true, salarieOnly:true },
+  'vetements-perso':    { label:'Entretien vêtements perso', montant:1.10,  unite:'jour', parJour:true, salarieOnly:true },
+  outils:    { label:'Outils propres',               montant:1.25,  unite:'jour',  parJour:true, salarieOnly:true },
+};
+
+// ATN forfaits indicatifs (pour information)
+const ATN_INFOS = {
+  bureau:   'ATN Bureau domicile (fourni par société)',
+  internet: 'ATN Internet (fourni par société)',
+  pc:       'ATN PC / Ordinateur (fourni par société)',
+  garage:   'ATN Garage (fourni par société)',
+  parking:  'ATN Parking (fourni par société)',
+  carwash:  'ATN Car-wash (fourni par société)',
+  'vetements-achat': 'ATN Vêtements travail (fourni par société)',
+  'vetements-entretien': 'ATN Entretien vêtements (fourni par société)',
+};
+
+let profil = 'salarie';
+let toggles = {};
+Object.keys(FORFAITS).forEach(k => toggles[k] = 'aucun');
+
+// ─── PROFIL ──────────────────────────────────────────────────────
+function setProfil(p) {
+  profil = p;
+  document.getElementById('card-salarie').classList.toggle('selected', p==='salarie');
+  document.getElementById('card-dirigeant').classList.toggle('selected', p==='dirigeant');
+  document.getElementById('notice-dirigeant').style.display = p==='dirigeant' ? 'flex' : 'none';
+
+  // Lock section vêtements si dirigeant
+  const locked = p === 'dirigeant';
+  document.getElementById('locked-overlay').style.display = locked ? 'flex' : 'none';
+  document.getElementById('vetements-content').style.opacity = locked ? '.35' : '1';
+  document.getElementById('vetements-content').style.pointerEvents = locked ? 'none' : 'auto';
+
+  // Lock section itinérant (repas + commodités)
+  document.getElementById('row-repas').style.opacity = locked ? '.35' : '1';
+  document.getElementById('row-repas').style.pointerEvents = locked ? 'none' : 'auto';
+  document.getElementById('row-commodites').style.opacity = locked ? '.35' : '1';
+  document.getElementById('row-commodites').style.pointerEvents = locked ? 'none' : 'auto';
+
+  if (locked) {
+    // Reset salarié-only fields
+    ['vetements-achat','vetements-entretien','vetements-perso','outils'].forEach(k => setToggle(k,'aucun'));
+    document.getElementById('joursRepas').value = 0;
+    document.getElementById('joursCommodites').value = 0;
+  }
+  recalc();
+}
+
+// ─── TOGGLE ──────────────────────────────────────────────────────
+function setToggle(key, val) {
+  toggles[key] = val;
+  const wrap = document.getElementById('toggle-' + key);
+  if (!wrap) return;
+  const btns = wrap.querySelectorAll('button');
+  btns.forEach(b => b.className = '');
+  if (val === 'aucun')   { btns[0].className = 'active-none'; }
+  if (val === 'atn')     { btns[1] && (btns[1].className = 'active-atn'); }
+  if (val === 'propres') { btns[btns.length-1].className = 'active-propres'; }
+  // Update badge
+  const badge = document.getElementById('badge-' + key);
+  if (badge) {
+    if (val === 'atn') {
+      badge.innerHTML = '<span class="atn-badge">🔴 ATN — Imposable dans votre chef</span>';
+    } else if (val === 'propres') {
+      badge.innerHTML = '<span class="propres-badge">✅ Frais propres — Remboursable exonéré ONSS</span>';
+    } else {
+      badge.innerHTML = '';
+    }
+  }
+  recalc();
+}
+
+// ─── CALC ─────────────────────────────────────────────────────────
+function fmt(n) {
+  return n.toFixed(2).replace('.',',') + ' €';
+}
+
+function recalc() {
+  const jours = parseInt(document.getElementById('joursParMois').value) || 20;
+  let total = 0;
+  let lines = [];
+  let atnLines = [];
+
+  // Forfaits mensuels (toggle)
+  Object.entries(FORFAITS).forEach(([key, f]) => {
+    const v = toggles[key];
+    if (f.salarieOnly && profil === 'dirigeant') return;
+    if (v === 'propres') {
+      const mt = f.parJour ? f.montant * jours : f.montant;
+      total += mt;
+      const qty = f.parJour ? jours + ' j' : '1 mois';
+      lines.push({ label:f.label, montant:mt, forfait:fmt(f.montant)+'/'+f.unite, qty });
+    } else if (v === 'atn') {
+      atnLines.push({ label: ATN_INFOS[key] || f.label });
+    }
+  });
+
+  // Séjour Belgique
+  const nuitsBe = parseInt(document.getElementById('nuitsBelgique').value) || 0;
+  if (nuitsBe > 0) {
+    const mt = nuitsBe * 35;
+    total += mt;
+    lines.push({ label:'Séjour Belgique', montant:mt, forfait:'35,00 €/nuit', qty:nuitsBe+' nuits' });
+  }
+
+  // Repas itinérant (salarié)
+  if (profil === 'salarie') {
+    const joursRepas = parseInt(document.getElementById('joursRepas').value) || 0;
+    if (joursRepas > 0) {
+      const mt = joursRepas * 9;
+      total += mt;
+      lines.push({ label:'Repas midi (itinérant)', montant:mt, forfait:'9,00 €/jour', qty:joursRepas+' j' });
+    }
+    const joursCom = parseInt(document.getElementById('joursCommodites').value) || 0;
+    if (joursCom > 0) {
+      const mt = joursCom * 10;
+      total += mt;
+      lines.push({ label:'Absence commodités (itinérant)', montant:mt, forfait:'10,00 €/jour', qty:joursCom+' j' });
+    }
+  }
+
+  // Update total
+  document.getElementById('totalMontant').textContent = fmt(total);
+
+  // Breakdown
+  const bl = document.getElementById('breakdownLines');
+  if (lines.length === 0) {
+    bl.innerHTML = '<div class="result-line"><span class="result-line-label">Aucun frais sélectionné</span><span class="result-line-value zero">—</span></div>';
+  } else {
+    bl.innerHTML = lines.map(l =>
+      `<div class="result-line">
+        <span class="result-line-label">${l.label}</span>
+        <span class="result-line-value">${fmt(l.montant)}</span>
+      </div>`
+    ).join('');
+  }
+
+  // ATN section
+  const atnSection = document.getElementById('atn-section');
+  if (atnLines.length > 0) {
+    atnSection.style.display = 'block';
+    document.getElementById('atnLines').innerHTML = atnLines.map(a =>
+      `<div class="result-line atn-line"><span class="result-line-label">⚠️ ${a.label}</span><span class="result-line-value">Voir fiche de paie</span></div>`
+    ).join('');
+  } else {
+    atnSection.style.display = 'none';
+  }
+}
+
+// ─── NOTE DE FRAIS ────────────────────────────────────────────────
+function genererNote() {
+  const jours = parseInt(document.getElementById('joursParMois').value) || 20;
+  const nom = document.getElementById('nomPrenom').value || 'Non renseigné';
+  const periodeVal = document.getElementById('periode').value;
+  let periodeTxt = 'Non renseignée';
+  if (periodeVal) {
+    const d = new Date(periodeVal + '-01');
+    periodeTxt = d.toLocaleDateString('fr-BE', { month:'long', year:'numeric' });
+    periodeTxt = periodeTxt.charAt(0).toUpperCase() + periodeTxt.slice(1);
+  }
+  const profilTxt = profil === 'salarie' ? 'Salarié' : 'Dirigeant d\'entreprise';
+
+  document.getElementById('note-periode-titre').textContent = periodeTxt;
+  document.getElementById('note-nom').textContent = nom;
+  document.getElementById('note-profil-txt').textContent = profilTxt;
+  document.getElementById('ni-nom').textContent = nom;
+  document.getElementById('ni-profil').textContent = profilTxt;
+  document.getElementById('ni-periode').textContent = periodeTxt;
+  document.getElementById('ni-jours').textContent = jours + ' jours';
+
+  let rows = [];
+  let total = 0;
+
+  Object.entries(FORFAITS).forEach(([key, f]) => {
+    const v = toggles[key];
+    if (f.salarieOnly && profil === 'dirigeant') return;
+    if (v === 'propres') {
+      const mt = f.parJour ? f.montant * jours : f.montant;
+      total += mt;
+      const base = fmt(f.montant) + ' / ' + f.unite;
+      const qty = f.parJour ? jours + ' jours' : '1 mois';
+      rows.push(`<tr><td>${f.label}</td><td>${base}</td><td>${qty}</td><td class="amount">${fmt(mt)}</td></tr>`);
+    }
+  });
+
+  const nuitsBe = parseInt(document.getElementById('nuitsBelgique').value) || 0;
+  if (nuitsBe > 0) {
+    const mt = nuitsBe * 35;
+    total += mt;
+    rows.push(`<tr><td>Séjour professionnel Belgique</td><td>35,00 € / nuit</td><td>${nuitsBe} nuits</td><td class="amount">${fmt(mt)}</td></tr>`);
+  }
+
+  if (profil === 'salarie') {
+    const joursRepas = parseInt(document.getElementById('joursRepas').value) || 0;
+    if (joursRepas > 0) {
+      const mt = joursRepas * 9;
+      total += mt;
+      rows.push(`<tr><td>Repas midi (travailleur itinérant)</td><td>9,00 € / jour</td><td>${joursRepas} jours</td><td class="amount">${fmt(mt)}</td></tr>`);
+    }
+    const joursCom = parseInt(document.getElementById('joursCommodites').value) || 0;
+    if (joursCom > 0) {
+      const mt = joursCom * 10;
+      total += mt;
+      rows.push(`<tr><td>Absence commodités (travailleur itinérant)</td><td>10,00 € / jour</td><td>${joursCom} jours</td><td class="amount">${fmt(mt)}</td></tr>`);
+    }
+  }
+
+  if (rows.length === 0) {
+    rows.push('<tr><td colspan="4" style="text-align:center;color:var(--text-light);font-style:italic;">Aucun frais propre sélectionné</td></tr>');
+  }
+
+  document.getElementById('noteTableBody').innerHTML = rows.join('');
+  document.getElementById('noteTotalAmount').textContent = fmt(total);
+  document.getElementById('noteDefrais').style.display = 'block';
+  document.getElementById('noteDefrais').scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+// ─── EXPORT PDF ────────────────────────────────────────────────────
+function exportNotePdf() {
+  const btn = document.getElementById('btnNotePdf');
+  btn.disabled = true;
+  btn.textContent = 'Génération…';
+
+  if (typeof window.jspdf === 'undefined') {
+    const s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+    s.onload = () => doNotePdf(btn);
+    s.onerror = () => { btn.disabled=false; btn.textContent='📄 Télécharger PDF'; alert('Erreur chargement jsPDF'); };
+    document.head.appendChild(s);
+  } else {
+    doNotePdf(btn);
+  }
+}
+
+function doNotePdf(btn) {
+  try {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF({ orientation:'portrait', unit:'mm', format:'a4' });
+    const pl = 16, pr = 194, pw = 210;
+    let y = 0;
+
+    // Header
+    doc.setFillColor(13,27,42);
+    doc.rect(0,0,pw,32,'F');
+    doc.setFont('helvetica','bold'); doc.setFontSize(16); doc.setTextColor(255,255,255);
+    doc.text('Note de Frais Propres', pl, 13);
+    doc.setFontSize(8); doc.setFont('helvetica','normal'); doc.setTextColor(180,210,220);
+    doc.text('Forfaits ONSS officiels 2026 — lacavernedelacompta.be', pl, 20);
+    doc.setTextColor(120,160,180);
+    doc.text('Source : Instructions ONSS — socialsecurity.be', pl, 26);
+    y = 40;
+
+    // Info grid
+    const nom = document.getElementById('nomPrenom').value || '—';
+    const profTxt = profil === 'salarie' ? 'Salarié' : 'Dirigeant d\'entreprise';
+    const perVal = document.getElementById('periode').value;
+    let perTxt = '—';
+    if (perVal) {
+      const d = new Date(perVal+'-01');
+      perTxt = d.toLocaleDateString('fr-BE',{month:'long',year:'numeric'});
+    }
+    const jours = parseInt(document.getElementById('joursParMois').value)||20;
+
+    const infoItems = [
+      ['Bénéficiaire', nom], ['Profil', profTxt],
+      ['Période', perTxt], ['Jours travaillés', jours+' jours']
+    ];
+    const colW = (pr-pl)/2;
+    infoItems.forEach((item,i) => {
+      const x = pl + (i%2)*colW;
+      const iy = y + Math.floor(i/2)*14;
+      doc.setFillColor(244,247,250);
+      doc.rect(x, iy-4, colW-4, 12, 'F');
+      doc.setFont('helvetica','bold'); doc.setFontSize(7); doc.setTextColor(138,155,176);
+      doc.text(item[0].toUpperCase(), x+4, iy+1);
+      doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(26,37,53);
+      doc.text(item[1], x+4, iy+7);
+    });
+    y += 32;
+
+    // Table header
+    doc.setFillColor(13,27,42);
+    doc.rect(pl-2, y, pr-pl+4, 8, 'F');
+    doc.setFont('helvetica','bold'); doc.setFontSize(7); doc.setTextColor(200,220,230);
+    doc.text('RUBRIQUE', pl, y+5.5);
+    doc.text('BASE FORFAITAIRE', pl+80, y+5.5);
+    doc.text('QUANTITÉ', pl+130, y+5.5);
+    doc.text('MONTANT', pr-2, y+5.5, {align:'right'});
+    y += 10;
+
+    let total = 0;
+    let ri = 0;
+
+    const addRow = (label, base, qty, mt) => {
+      if (y > 265) { doc.addPage(); y = 14; }
+      if (ri%2===0) { doc.setFillColor(248,250,252); doc.rect(pl-2,y-2,pr-pl+4,8,'F'); }
+      doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(26,37,53);
+      doc.text(label, pl, y+3.5);
+      doc.setTextColor(74,98,121);
+      doc.text(base, pl+80, y+3.5);
+      doc.text(qty, pl+130, y+3.5);
+      doc.setFont('helvetica','bold'); doc.setTextColor(26,37,53);
+      doc.text(fmt(mt), pr-2, y+3.5, {align:'right'});
+      y += 8; ri++;
+    };
+
+    Object.entries(FORFAITS).forEach(([key, f]) => {
+      const v = toggles[key];
+      if (f.salarieOnly && profil==='dirigeant') return;
+      if (v==='propres') {
+        const mt = f.parJour ? f.montant*jours : f.montant;
+        total += mt;
+        addRow(f.label, fmt(f.montant)+'/'+f.unite, f.parJour?jours+' j':'1 mois', mt);
+      }
+    });
+
+    const nuitsBe = parseInt(document.getElementById('nuitsBelgique').value)||0;
+    if (nuitsBe>0) { const mt=nuitsBe*35; total+=mt; addRow('Séjour professionnel Belgique','35,00 €/nuit',nuitsBe+' nuits',mt); }
+
+    if (profil==='salarie') {
+      const jr = parseInt(document.getElementById('joursRepas').value)||0;
+      if (jr>0) { const mt=jr*9; total+=mt; addRow('Repas midi (itinérant)','9,00 €/jour',jr+' j',mt); }
+      const jc = parseInt(document.getElementById('joursCommodites').value)||0;
+      if (jc>0) { const mt=jc*10; total+=mt; addRow('Absence commodités (itinérant)','10,00 €/jour',jc+' j',mt); }
+    }
+
+    if (ri===0) {
+      doc.setFont('helvetica','italic'); doc.setFontSize(8); doc.setTextColor(138,155,176);
+      doc.text('Aucun frais propre sélectionné', pl, y+4);
+      y += 10;
+    }
+
+    y += 4;
+    // Total bar
+    doc.setFillColor(13,27,42);
+    doc.rect(pl-2, y, pr-pl+4, 12, 'F');
+    doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor(255,255,255);
+    doc.text('TOTAL FRAIS PROPRES DU MOIS', pl, y+8);
+    doc.setFont('helvetica','bold'); doc.setFontSize(12); doc.setTextColor(34,163,184);
+    doc.text(fmt(total), pr-2, y+8, {align:'right'});
+    y += 20;
+
+    // Disclaimer
+    doc.setFillColor(251,245,230); doc.rect(pl-2,y,pr-pl+4,20,'F');
+    doc.setFont('helvetica','bold'); doc.setFontSize(7); doc.setTextColor(122,85,0);
+    doc.text('⚠ AVERTISSEMENT', pl, y+5);
+    doc.setFont('helvetica','normal'); doc.setFontSize(6.5); doc.setTextColor(122,85,0);
+    const disclaimerLines = doc.splitTextToSize('Cette note de frais est générée sur base des forfaits ONSS officiels 2026. Elle ne constitue pas un avis juridique ou fiscal. Vérifiez avec votre comptable.', pr-pl);
+    doc.text(disclaimerLines, pl, y+10);
+
+    // Footer
+    const pages = doc.internal.getNumberOfPages();
+    for(let i=1;i<=pages;i++) {
+      doc.setPage(i);
+      doc.setFillColor(244,247,250); doc.rect(0,287,pw,10,'F');
+      doc.setFont('helvetica','normal'); doc.setFontSize(6.5); doc.setTextColor(138,155,176);
+      doc.text('lacavernedelacompta.be — Frais propres ONSS 2026 — Généré le '+new Date().toLocaleDateString('fr-BE'), pl, 293);
+      doc.text('Page '+i+'/'+pages, pr, 293, {align:'right'});
+    }
+
+    const filename = 'note-frais-'+nom.replace(/\s/g,'-').toLowerCase()+'-'+(document.getElementById('periode').value||new Date().toISOString().slice(0,7))+'.pdf';
+    doc.save(filename);
+    btn.disabled=false; btn.textContent='📄 Télécharger PDF';
+  } catch(e) {
+    console.error(e);
+    btn.disabled=false; btn.textContent='📄 Télécharger PDF';
+    alert('Erreur PDF : '+e.message);
+  }
+}
+
+// ─── RESET ────────────────────────────────────────────────────────
+function resetAll() {
+  Object.keys(toggles).forEach(k => setToggle(k,'aucun'));
+  document.getElementById('joursParMois').value = 20;
+  document.getElementById('nuitsBelgique').value = 0;
+  document.getElementById('joursRepas').value = 0;
+  document.getElementById('joursCommodites').value = 0;
+  document.getElementById('nomPrenom').value = '';
+  document.getElementById('periode').value = '';
+  document.getElementById('noteDefrais').style.display = 'none';
+  recalc();
+}
+
+// ─── NAV ──────────────────────────────────────────────────────────
+function toggleDD(e) { e.stopPropagation(); document.getElementById('ddWrap').classList.toggle('dd-open'); }
+function toggleLangMenu(e) { e.stopPropagation(); document.getElementById('langSwitcher').classList.toggle('open'); }
+function toggleMobileMenu(e) { e.stopPropagation(); document.querySelector('.nav-links').classList.toggle('mobile-open'); }
+document.addEventListener('click', function(e) {
+  var w=document.getElementById('ddWrap'); if(w&&!w.contains(e.target)) w.classList.remove('dd-open');
+  var l=document.getElementById('langSwitcher'); if(l&&!l.contains(e.target)) l.classList.remove('open');
+});
+
+// ─── INIT ─────────────────────────────────────────────────────────
+window.addEventListener('load', function() {
+  // Set current month as default
+  const now = new Date();
+  const y = now.getFullYear(), m = String(now.getMonth()+1).padStart(2,'0');
+  document.getElementById('periode').value = y+'-'+m;
+  recalc();
+});
+</script>
+
+<!-- Cookie banner (same as other pages) -->
+<style>
+#cookieOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:1000000;backdrop-filter:blur(3px);}
+#cookieBanner{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1000001;background:#fff;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.3);width:min(560px,94vw);max-height:88vh;overflow-y:auto;font-family:'DM Sans',sans-serif;}
+#cbMain{padding:28px 32px;}
+#cbMain .cb-title{font-size:1.1rem;font-weight:700;color:#1A2535;text-align:center;margin:0 0 16px;}
+#cbMain .cb-text{font-size:.8rem;color:#4A5568;line-height:1.7;margin:0 0 12px;}
+#cbMain .cb-text a{color:#1A7A8A;text-decoration:underline;}
+#cbMain .cb-btns{display:flex;flex-direction:column;gap:10px;margin-top:20px;}
+#cbMain .cb-btn-agree{padding:12px;border-radius:8px;background:#F5A623;color:#fff;font-size:.9rem;font-weight:700;border:none;cursor:pointer;width:100%;}
+#cbMain .cb-btn-modify{padding:10px;border-radius:8px;background:#fff;color:#1A2535;font-size:.84rem;font-weight:600;border:2px solid #DDE5EF;cursor:pointer;width:100%;}
+</style>
+<div id="cookieOverlay"></div>
+<div id="cookieBanner" role="dialog" aria-modal="true">
+  <div id="cbMain">
+    <h2 class="cb-title">Vos paramètres de confidentialité</h2>
+    <p class="cb-text">La Caverne de la Compta utilise des cookies pour Google Analytics et Google AdSense. En cliquant sur « D'accord », vous acceptez leur utilisation. Consultez notre <a href="/fr/mentions-legales/#cookies">politique de cookies</a>.</p>
+    <div class="cb-btns">
+      <button class="cb-btn-agree" onclick="cookieAcceptAll()">D'accord</button>
+      <button class="cb-btn-modify" onclick="cookieRefuseAll()">Refuser</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  function cookieAcceptAll(){document.getElementById('cookieBanner').style.display='none';document.getElementById('cookieOverlay').style.display='none';localStorage.setItem('cookieConsent','all');}
+  function cookieRefuseAll(){document.getElementById('cookieBanner').style.display='none';document.getElementById('cookieOverlay').style.display='none';localStorage.setItem('cookieConsent','none');}
+  window.cookieAcceptAll=cookieAcceptAll; window.cookieRefuseAll=cookieRefuseAll;
+  const consent=localStorage.getItem('cookieConsent');
+  if(!consent){setTimeout(()=>{document.getElementById('cookieBanner').style.display='block';document.getElementById('cookieOverlay').style.display='block';},800);}
+})();
+</script>
+
+</body>
+</html>
