@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Frais Propres Belgique 2026 — Questionnaire & Note de Frais</title>
-<meta name="description" content="Calculez vos frais propres ONSS 2026 : bureau domicile, PC, voiture. Distinguez ATN et frais remboursables. Note de frais PDF. Gratuit.">>
+<meta name="description" content="Calculez vos frais propres ONSS 2026 : bureau domicile, PC, voiture. Distinguez ATN et frais remboursables. Note de frais PDF. Gratuit.">
 <meta name="keywords" content="questionnaire frais propres belgique, note de frais belgique 2026, forfaits ONSS, ATN avantage toute nature, remboursement frais dirigeant">
 <meta name="author" content="La Caverne de la Compta">
 <meta name="robots" content="index, follow">
@@ -41,7 +41,7 @@
   --info:#1A4A7A; --info-pale:#E8F0FB;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'DM Sans',sans-serif;background:var(--off);color:var(--text);min-height:100vh;}
+body{overflow-x:hidden;font-family:'DM Sans',sans-serif;background:var(--off);color:var(--text);min-height:100vh;}
 
 /* ── TOPBAR ── */
 .topbar{background:var(--navy-mid);padding:7px 40px;display:flex;justify-content:space-between;align-items:center;}
@@ -355,6 +355,18 @@ footer a:hover{color:var(--white);}
   .step-screen{padding:20px 18px;}
   .note-wrap{padding:24px 20px;}
 }
+
+/* ── FAQ ACCORDÉON ── */
+.faq-section{max-width:860px;margin:48px auto 0;padding:0 30px 48px;}
+.faq-section>h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:22px;}
+.faq-item{border:1px solid #DDE5EF;border-radius:10px;margin-bottom:8px;overflow:hidden;background:#fff;}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;cursor:pointer;font-weight:600;font-size:0.92rem;color:var(--navy);gap:12px;transition:background 0.15s;}
+.faq-question:hover{background:#F4F7FA;}
+.faq-chev{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;transition:transform 0.25s;line-height:1;}
+.faq-item.faq-open .faq-chev{transform:rotate(180deg);}
+.faq-answer{display:none;padding:4px 18px 15px;font-size:0.87rem;color:#4A6279;line-height:1.75;border-top:1px solid #F0F4F8;}
+.faq-item.faq-open .faq-answer{display:block;}
+
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNHZDLVPEL"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WNHZDLVPEL');</script>
@@ -465,7 +477,7 @@ footer a:hover{color:var(--white);}
         <a href="/fr/simulateur-retenue/"><span class="dd-icon">🧾</span>Retenue sur Facture</a>
         <a href="/fr/quick-memento-fiscal/"><span class="dd-icon">📌</span>Quick-Mémo Fiscal</a>
         <a href="/fr/remboursement-frais/"><span class="dd-icon">🚗</span>Indemnité Kilométrique</a>
-        <a href="/fr/simulateur-frais-propres/"><span class="dd-icon">💼</span>Frais Propres (tableau)</a>
+        <a href="/fr/questionnaire-frais-propres/"><span class="dd-icon">💼</span>Frais Propres</a>
         <a href="/fr/questionnaire-frais-propres/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">📝</span>Questionnaire Frais Propres</a>
       </div>
     </li>
@@ -488,7 +500,7 @@ footer a:hover{color:var(--white);}
 
 <!-- Hero -->
 <section class="hero">
-  <div class="hero-bread"><a href="/fr/">Accueil</a> › <a href="/fr/simulateur-frais-propres/">Frais Propres</a> › Questionnaire</div>
+  <div class="hero-bread"><a href="/fr/">Accueil</a> › Frais Propres</div>
   <div class="hero-badge">✦ Questionnaire guidé — Forfaits ONSS 2026</div>
   <h1>Questionnaire <br><em>Frais Propres</em></h1>
   <p>Répondez étape par étape. Chaque poste vous demande si c'est un <strong>ATN</strong> (fourni par la société) ou des <strong>frais propres</strong> (payés personnellement). La note de frais est générée automatiquement. <strong>Indemnités kilométriques → page dédiée.</strong></p>
@@ -1368,8 +1380,7 @@ footer a:hover{color:var(--white);}
       <ul>
         <li>Forfaits ONSS mis à jour mars 2026</li>
         <li><a href="https://www.socialsecurity.be/employer/instructions/dmfa/fr/latest/instructions/salary/particularcases/expensesreimbursement.html" target="_blank" rel="noopener" style="color:var(--teal);font-weight:600;">→ Instructions ONSS officielles</a></li>
-        <li>Ancienne version complète : <a href="/fr/simulateur-frais-propres/" style="color:var(--teal);font-weight:600;">simulateur tableau</a></li>
-      </ul>
+        </ul>
     </div>
   </div>
 
@@ -1379,6 +1390,16 @@ footer a:hover{color:var(--white);}
 <div style="max-width:1100px;margin:0 auto 40px;padding:0 24px;">
   <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8043980001637749" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+
+<div class="faq-section">
+  <h2>❓ Questions fréquentes sur les frais propres en Belgique 2026</h2>
+  <div class="faq-item"><div class="faq-question">Peut-on cumuler le bureau à domicile et le loyer requalifié comme dirigeant ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Non, ces deux mécanismes sont alternatifs. Si vous bénéficiez de la déduction bureau à domicile (forfait ONSS : 160,99 €/mois en 2026), vous ne pouvez pas simultanément percevoir un loyer de votre société pour ce même espace.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Quelle est la différence entre frais propres et avantages de toute nature (ATN) ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Les frais propres sont des remboursements de dépenses que le dirigeant engage pour la société (bureau, internet, voiture). Les ATN sont des avantages accordés par la société (voiture de société, GSM fourni). Les frais propres ne sont pas imposables ; les ATN le sont.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Quel est le forfait ONSS pour le bureau à domicile en 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Le forfait ONSS pour le bureau à domicile s'élève à 160,99 €/mois en 2026 (T1). Ce montant est indexé chaque trimestre et couvre chauffage, électricité, eau, assurance et entretien de l'espace professionnel.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Les frais propres doivent-ils figurer sur la fiche fiscale 281.10 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Oui, les frais propres versés aux dirigeants et travailleurs doivent être mentionnés sur les fiches fiscales (281.10 pour les travailleurs, 281.20 pour les dirigeants). En cas d'omission, l'ONSS peut requalifier ces montants en rémunérations.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Peut-on cumuler plusieurs frais propres (bureau + internet + téléphone) ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Oui, les forfaits ONSS peuvent se cumuler : bureau (160,99 €), internet (20 €), téléphone fixe (20 €), GSM (20 €), PC (20 €). Le total couramment accepté avoisine 250-300 €/mois pour un dirigeant.</p></div></div>
 </div>
 
 <footer>
@@ -2576,35 +2597,170 @@ document.addEventListener('click', function(e) {
 <!-- Cookie banner -->
 <style>
 #cookieOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:1000000;backdrop-filter:blur(3px);}
-#cookieBanner{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1000001;background:#fff;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.3);width:min(560px,94vw);max-height:88vh;overflow-y:auto;font-family:'DM Sans',sans-serif;}
-#cbMain{padding:28px 32px;}
-#cbMain .cb-title{font-size:1.1rem;font-weight:700;color:#1A2535;text-align:center;margin:0 0 16px;}
-#cbMain .cb-text{font-size:.8rem;color:#4A5568;line-height:1.7;margin:0 0 12px;}
+#cookieBanner{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1000001;
+  background:#fff;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.3);
+  width:min(580px,94vw);max-height:88vh;overflow-y:auto;font-family:'Inter',sans-serif;}
+/* Main view */
+#cbMain{padding:32px 36px;}
+#cbMain .cb-title{font-size:1.25rem;font-weight:700;color:#1A2535;text-align:center;margin:0 0 20px;}
+#cbMain .cb-text{font-size:0.82rem;color:#4A5568;line-height:1.7;margin:0 0 14px;}
 #cbMain .cb-text a{color:#1A7A8A;text-decoration:underline;}
-#cbMain .cb-btns{display:flex;flex-direction:column;gap:10px;margin-top:20px;}
-#cbMain .cb-btn-agree{padding:12px;border-radius:8px;background:#F5A623;color:#fff;font-size:.9rem;font-weight:700;border:none;cursor:pointer;width:100%;}
-#cbMain .cb-btn-modify{padding:10px;border-radius:8px;background:#fff;color:#1A2535;font-size:.84rem;font-weight:600;border:2px solid #DDE5EF;cursor:pointer;width:100%;}
+#cbMain .cb-text strong{color:#1A2535;}
+#cbMain .cb-btns{display:flex;flex-direction:column;gap:10px;margin-top:24px;}
+#cbMain .cb-btn-agree{padding:14px;border-radius:8px;background:#F5A623;color:#fff;font-size:0.95rem;font-weight:700;border:none;cursor:pointer;transition:background 0.2s;font-family:'Inter',sans-serif;width:100%;}
+#cbMain .cb-btn-agree:hover{background:#e8961a;}
+#cbMain .cb-btn-modify{padding:12px;border-radius:8px;background:#fff;color:#1A2535;font-size:0.88rem;font-weight:600;border:2px solid #DDE5EF;cursor:pointer;transition:all 0.2s;font-family:'Inter',sans-serif;width:100%;}
+#cbMain .cb-btn-modify:hover{border-color:#1A2535;}
+/* Detail view */
+#cbDetail{display:none;padding:28px 36px;}
+#cbDetail .cb-back{background:none;border:none;color:#1A7A8A;font-size:0.82rem;cursor:pointer;padding:0 0 16px;display:flex;align-items:center;gap:6px;font-family:'Inter',sans-serif;}
+#cbDetail .cb-back:hover{text-decoration:underline;}
+#cbDetail .cb-title{font-size:1.1rem;font-weight:700;color:#1A2535;margin:0 0 16px;}
+#cbDetail .cb-cat{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:16px;border-radius:10px;border:1px solid #EEF2F7;margin-bottom:10px;}
+#cbDetail .cb-cat-name{font-size:0.88rem;font-weight:700;color:#1A2535;margin-bottom:4px;}
+#cbDetail .cb-cat-desc{font-size:0.78rem;color:#718096;line-height:1.55;}
+#cbDetail .cb-toggle{position:relative;width:48px;height:26px;flex-shrink:0;margin-top:2px;}
+#cbDetail .cb-toggle input{opacity:0;width:0;height:0;position:absolute;}
+#cbDetail .cb-toggle-slider{position:absolute;inset:0;border-radius:26px;background:#DDE5EF;cursor:pointer;transition:background 0.2s;}
+#cbDetail .cb-toggle input:checked + .cb-toggle-slider{background:#F5A623;}
+#cbDetail .cb-toggle-slider:before{content:'';position:absolute;width:20px;height:20px;left:3px;top:3px;border-radius:50%;background:#fff;transition:transform 0.2s;box-shadow:0 1px 4px rgba(0,0,0,0.2);}
+#cbDetail .cb-toggle input:checked + .cb-toggle-slider:before{transform:translateX(22px);}
+#cbDetail .cb-toggle.required .cb-toggle-slider{background:#F5A623;cursor:not-allowed;opacity:0.7;}
+#cbDetail .cb-detail-btns{display:flex;flex-direction:column;gap:10px;margin-top:20px;}
+#cbDetail .cb-btn-saveall{padding:13px;border-radius:8px;background:#F5A623;color:#fff;font-size:0.92rem;font-weight:700;border:none;cursor:pointer;font-family:'Inter',sans-serif;width:100%;}
+#cbDetail .cb-btn-saveall:hover{background:#e8961a;}
+#cbDetail .cb-btn-saveprefs{padding:11px;border-radius:8px;background:#fff;color:#1A2535;font-size:0.85rem;font-weight:600;border:2px solid #DDE5EF;cursor:pointer;font-family:'Inter',sans-serif;width:100%;}
+#cbDetail .cb-btn-saveprefs:hover{border-color:#1A2535;}
+#cbDetail .cb-btn-refuseall{background:none;border:none;color:#A0AEC0;font-size:0.78rem;cursor:pointer;text-decoration:underline;padding:6px 0;font-family:'Inter',sans-serif;text-align:center;}
+#cbDetail .cb-btn-refuseall:hover{color:#4A5568;}
+@media(max-width:480px){
+  #cbMain,#cbDetail{padding:24px 20px;}
+}
 </style>
 <div id="cookieOverlay"></div>
 <div id="cookieBanner" role="dialog" aria-modal="true">
+  <!-- Vue principale -->
   <div id="cbMain">
     <h2 class="cb-title">Vos paramètres de confidentialité</h2>
-    <p class="cb-text">La Caverne de la Compta utilise des cookies pour Google Analytics et Google AdSense. En cliquant sur « D'accord », vous acceptez leur utilisation. Consultez notre <a href="/fr/mentions-legales/#cookies">politique de cookies</a>.</p>
+    <p class="cb-text">La Caverne de la Compta utilise des cookies pour collecter des informations à propos de votre appareil, votre navigateur et votre comportement de navigation.</p>
+    <p class="cb-text">En outre, si vous nous en donnez l'autorisation, nous pouvons utiliser vos données pour <strong>personnaliser le contenu</strong> et <strong>afficher des publicités pertinentes</strong> via Google AdSense. Nous mesurons également l'audience avec <strong>Google Analytics</strong> pour améliorer le site.</p>
+    <p class="cb-text">En cliquant sur « D'accord », vous donnez votre consentement. Si vous ne souhaitez pas tout autoriser, cliquez sur « Modifier manuellement ». Vous pouvez modifier vos choix à tout moment via le lien <strong>Gestion des cookies</strong> en bas de page. Pour en savoir plus, consultez notre <a href="/fr/mentions-legales/#cookies">politique de cookies</a>.</p>
     <div class="cb-btns">
       <button class="cb-btn-agree" onclick="cookieAcceptAll()">D'accord</button>
-      <button class="cb-btn-modify" onclick="cookieRefuseAll()">Refuser</button>
+      <button class="cb-btn-modify" onclick="cbShowDetail()">Modifier manuellement</button>
+    </div>
+  </div>
+  <!-- Vue détaillée -->
+  <div id="cbDetail">
+    <button class="cb-back" onclick="cbShowMain()">← Retour</button>
+    <h2 class="cb-title">Définir vos préférences</h2>
+    <div class="cb-cat">
+      <div>
+        <div class="cb-cat-name">🔒 Nécessaires <span style="font-size:0.7rem;color:#F5A623;">(toujours actifs)</span></div>
+        <div class="cb-cat-desc">Indispensables au fonctionnement du site : navigation, sécurité, préférences de langue. Ne peuvent pas être désactivés.</div>
+      </div>
+      <label class="cb-toggle required"><input type="checkbox" checked disabled><span class="cb-toggle-slider"></span></label>
+    </div>
+    <div class="cb-cat">
+      <div>
+        <div class="cb-cat-name">📊 Analytiques <span style="font-size:0.7rem;color:#8A9BB0;">(Google Analytics)</span></div>
+        <div class="cb-cat-desc">Nous permettent de comprendre comment vous utilisez le site pour l'améliorer continuellement.</div>
+      </div>
+      <label class="cb-toggle"><input type="checkbox" id="cbAnalytics" checked><span class="cb-toggle-slider"></span></label>
+    </div>
+    <div class="cb-cat">
+      <div>
+        <div class="cb-cat-name">📢 Publicitaires <span style="font-size:0.7rem;color:#8A9BB0;">(Google AdSense)</span></div>
+        <div class="cb-cat-desc">Permettent d'afficher des publicités pour financer le site gratuitement pour vous.</div>
+      </div>
+      <label class="cb-toggle"><input type="checkbox" id="cbAds" checked><span class="cb-toggle-slider"></span></label>
+    </div>
+    <div class="cb-detail-btns">
+      <button class="cb-btn-saveall" onclick="cookieAcceptAll()">Tout accepter</button>
+      <button class="cb-btn-saveprefs" onclick="cookieSavePrefs()">Enregistrer mes choix</button>
+      <button class="cb-btn-refuseall" onclick="cookieRefuseAll()">Tout refuser</button>
     </div>
   </div>
 </div>
 <script>
 (function(){
-  function cookieAcceptAll(){document.getElementById('cookieBanner').style.display='none';document.getElementById('cookieOverlay').style.display='none';localStorage.setItem('cookieConsent','all');}
-  function cookieRefuseAll(){document.getElementById('cookieBanner').style.display='none';document.getElementById('cookieOverlay').style.display='none';localStorage.setItem('cookieConsent','none');}
-  window.cookieAcceptAll=cookieAcceptAll; window.cookieRefuseAll=cookieRefuseAll;
-  const consent=localStorage.getItem('cookieConsent');
-  if(!consent){setTimeout(()=>{document.getElementById('cookieBanner').style.display='block';document.getElementById('cookieOverlay').style.display='block';},800);}
+  function showBanner(){
+    document.getElementById('cookieBanner').style.display='block';
+    document.getElementById('cookieOverlay').style.display='block';
+    document.body.style.overflow='hidden';
+  }
+  function hideBanner(){
+    document.getElementById('cookieBanner').style.display='none';
+    document.getElementById('cookieOverlay').style.display='none';
+    document.body.style.overflow='';
+  }
+  window.cbShowDetail=function(){
+    document.getElementById('cbMain').style.display='none';
+    document.getElementById('cbDetail').style.display='block';
+  };
+  window.cbShowMain=function(){
+    document.getElementById('cbDetail').style.display='none';
+    document.getElementById('cbMain').style.display='block';
+  };
+  function updateConsentMode(analytics,ads){
+    if(typeof gtag==='function'){
+      gtag('consent','update',{
+        analytics_storage:analytics?'granted':'denied',
+        ad_storage:ads?'granted':'denied',
+        ad_user_data:ads?'granted':'denied',
+        ad_personalization:ads?'granted':'denied'
+      });
+    }
+    if(ads&&!window._adsenseLoaded){
+      window._adsenseLoaded=true;
+      var s=document.createElement('script');
+      s.async=true;s.crossOrigin='anonymous';
+      s.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749';
+      document.head.appendChild(s);
+    }
+  }
+  window.cookieAcceptAll=function(){
+    localStorage.setItem('cb_analytics','1');
+    localStorage.setItem('cb_ads','1');
+    updateConsentMode(true,true);
+    hideBanner();
+  };
+  window.cookieSavePrefs=function(){
+    var ca=document.getElementById('cbAnalytics').checked?'1':'0';
+    var cd=document.getElementById('cbAds').checked?'1':'0';
+    localStorage.setItem('cb_analytics',ca);
+    localStorage.setItem('cb_ads',cd);
+    updateConsentMode(ca==='1',cd==='1');
+    hideBanner();
+  };
+  window.cookieRefuseAll=function(){
+    localStorage.setItem('cb_analytics','0');
+    localStorage.setItem('cb_ads','0');
+    updateConsentMode(false,false);
+    hideBanner();
+  };
+  window.openCookieSettings=function(){
+    var ca=localStorage.getItem('cb_analytics');
+    var cd=localStorage.getItem('cb_ads');
+    if(ca!==null)document.getElementById('cbAnalytics').checked=(ca==='1');
+    if(cd!==null)document.getElementById('cbAds').checked=(cd==='1');
+    cbShowMain();
+    showBanner();
+  };
+  var ca=localStorage.getItem('cb_analytics');
+  if(ca===null){showBanner();}
+  else{updateConsentMode(ca==='1',localStorage.getItem('cb_ads')==='1');}
 })();
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      this.closest('.faq-item').classList.toggle('faq-open');
+    });
+  });
+});
+</script>
 </body>
 </html>

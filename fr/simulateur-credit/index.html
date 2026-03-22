@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Simulateur Crédit Belgique 2026 — Tableau Amortissement</title>
-<meta name="description" content="Simulateur crédit belge 2026 : mensualités, amortissement, annuité constante ou capital constant. Immobilier, personnel, professionnel. Gratuit.">amortissement mensuel, trimestriel ou annuel. Calcul des intérêts, capital remboursé et solde restant dû.">
+<meta name="description" content="Simulateur crédit belge 2026 : mensualités, amortissement, annuité constante ou capital constant. Immobilier, personnel, professionnel. Gratuit.">
 <meta name="keywords" content="simulateur crédit belgique, tableau amortissement, calcul prêt immobilier, mensualité crédit, intérêts emprunt">
 <meta name="author" content="La Caverne de la Compta">
 <meta name="robots" content="index, follow">
@@ -481,6 +481,18 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
   .form-label .tooltip-icon.tt-open .tooltip-bubble { display: block; }
 
   .form-body, .panel, .panel > *, aside.panel { overflow: visible !important; }
+
+/* ── FAQ ACCORDÉON ── */
+.faq-section{max-width:860px;margin:48px auto 0;padding:0 30px 48px;}
+.faq-section>h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:22px;}
+.faq-item{border:1px solid #DDE5EF;border-radius:10px;margin-bottom:8px;overflow:hidden;background:#fff;}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;cursor:pointer;font-weight:600;font-size:0.92rem;color:var(--navy);gap:12px;transition:background 0.15s;}
+.faq-question:hover{background:#F4F7FA;}
+.faq-chev{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;transition:transform 0.25s;line-height:1;}
+.faq-item.faq-open .faq-chev{transform:rotate(180deg);}
+.faq-answer{display:none;padding:4px 18px 15px;font-size:0.87rem;color:#4A6279;line-height:1.75;border-top:1px solid #F0F4F8;}
+.faq-item.faq-open .faq-answer{display:block;}
+
 </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
@@ -546,6 +558,54 @@ gtag('config', 'G-WNHZDLVPEL');
     "name": "La Caverne de la Compta",
     "url": "https://lacavernedelacompta.be"
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quelle est la différence entre annuité constante et capital constant ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Avec l'annuité constante, vous payez la même mensualité tout au long du crédit, mais la part d'intérêts diminue progressivement. Avec le capital constant, le remboursement du capital reste fixe, mais les mensualités diminuent au fil du temps. L'annuité constante est plus courante pour les crédits hypothécaires en Belgique."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment est calculé le tableau d'amortissement d'un crédit belge ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le tableau d'amortissement décompose chaque mensualité en capital remboursé et intérêts payés. Pour un crédit de 200 000 € à 3,5% sur 25 ans, la mensualité s'élève à environ 1 001 €. Notre simulateur calcule automatiquement le tableau complet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quel est le taux d'intérêt moyen pour un crédit immobilier belge en 2026 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En 2026, les taux fixes pour un crédit hypothécaire sur 20 ans oscillent généralement entre 3% et 4,5% selon les banques et le profil de l'emprunteur. Comparez toujours le TAEG (Taux Annuel Effectif Global) pour une comparaison juste."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles sont les conditions d'octroi d'un crédit hypothécaire en Belgique ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les banques analysent : la capacité de remboursement (mensualités ≤ 40-45% des revenus nets), l'apport personnel (idéalement 10-20%), la stabilité professionnelle (CDI ou indépendant depuis 3 ans min.) et la valeur du bien. La quotité maximale est généralement de 90% de la valeur vénale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on rembourser un crédit hypothécaire belge par anticipation ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, le remboursement anticipé est légalement possible. Pour les crédits à taux fixe, une indemnité de remploi peut être due, plafonnée à 3 mois d'intérêts sur le montant remboursé. Pour les crédits à taux variable, les conditions varient selon le contrat."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -832,6 +892,16 @@ gtag('config', 'G-WNHZDLVPEL');
      data-ad-slot="9017409611"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
+
+<div class="faq-section">
+  <h2>❓ Questions fréquentes sur le crédit immobilier en Belgique</h2>
+  <div class="faq-item"><div class="faq-question">Quelle est la différence entre annuité constante et capital constant ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Avec l'annuité constante, vous payez la même mensualité tout au long du crédit, mais la part d'intérêts diminue progressivement. Avec le capital constant, le remboursement du capital reste fixe, mais les mensualités diminuent au fil du temps. L'annuité constante est plus courante pour les crédits hypothécaires en Belgique.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Comment est calculé le tableau d'amortissement d'un crédit belge ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Le tableau d'amortissement décompose chaque mensualité en capital remboursé et intérêts payés. Pour un crédit de 200 000 € à 3,5% sur 25 ans, la mensualité s'élève à environ 1 001 €. Notre simulateur calcule automatiquement le tableau complet.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Quel est le taux d'intérêt moyen pour un crédit immobilier belge en 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>En 2026, les taux fixes pour un crédit hypothécaire sur 20 ans oscillent généralement entre 3% et 4,5% selon les banques et le profil de l'emprunteur. Comparez toujours le TAEG (Taux Annuel Effectif Global) pour une comparaison juste.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Quelles sont les conditions d'octroi d'un crédit hypothécaire en Belgique ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Les banques analysent : la capacité de remboursement (mensualités ≤ 40-45% des revenus nets), l'apport personnel (idéalement 10-20%), la stabilité professionnelle (CDI ou indépendant depuis 3 ans min.) et la valeur du bien. La quotité maximale est généralement de 90% de la valeur vénale.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Peut-on rembourser un crédit hypothécaire belge par anticipation ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Oui, le remboursement anticipé est légalement possible. Pour les crédits à taux fixe, une indemnité de remploi peut être due, plafonnée à 3 mois d'intérêts sur le montant remboursé. Pour les crédits à taux variable, les conditions varient selon le contrat.</p></div></div>
+</div>
+
 <footer>
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
   <div class="footer-links">
@@ -1346,6 +1416,15 @@ function toggleLangMenu(e) {
 document.addEventListener('click', function(e) {
   var ld = document.getElementById('langSwitcher');
   if (ld && !ld.contains(e.target)) ld.classList.remove('open');
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      this.closest('.faq-item').classList.toggle('faq-open');
+    });
+  });
 });
 </script>
 </body>

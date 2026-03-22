@@ -851,9 +851,15 @@ function toggleLangMenu(e) {
   var ld = document.getElementById('langSwitcher');
   if (ld) ld.classList.toggle('open');
 }
+function toggleDD(e) {
+  e.stopPropagation();
+  document.getElementById('ddWrap').classList.toggle('dd-open');
+}
 document.addEventListener('click', function(e) {
   var ld = document.getElementById('langSwitcher');
   if (ld && !ld.contains(e.target)) ld.classList.remove('open');
+  var dd = document.getElementById('ddWrap');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('dd-open');
 });
 </script>
 </body>

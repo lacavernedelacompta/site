@@ -483,6 +483,18 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
   .form-label .tooltip-icon.tt-open .tooltip-bubble { display: block; }
 
   .form-body, .panel, .panel > *, aside.panel { overflow: visible !important; }
+
+/* ── FAQ ACCORDÉON ── */
+.faq-section{max-width:860px;margin:48px auto 0;padding:0 30px 48px;}
+.faq-section>h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:22px;}
+.faq-item{border:1px solid #DDE5EF;border-radius:10px;margin-bottom:8px;overflow:hidden;background:#fff;}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;cursor:pointer;font-weight:600;font-size:0.92rem;color:var(--navy);gap:12px;transition:background 0.15s;}
+.faq-question:hover{background:#F4F7FA;}
+.faq-chev{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;transition:transform 0.25s;line-height:1;}
+.faq-item.faq-open .faq-chev{transform:rotate(180deg);}
+.faq-answer{display:none;padding:4px 18px 15px;font-size:0.87rem;color:#4A6279;line-height:1.75;border-top:1px solid #F0F4F8;}
+.faq-item.faq-open .faq-answer{display:block;}
+
 </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
@@ -548,6 +560,46 @@ gtag('config', 'G-WNHZDLVPEL');
     "name": "La Caverne de la Compta",
     "url": "https://lacavernedelacompta.be"
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between constant annuity and constant capital repayment ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With constant annuity, you pay the same monthly instalment throughout the loan, but the interest portion decreases progressively. With constant capital, the capital repayment stays fixed, but monthly payments decrease over time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is a Belgian loan amortisation table calculated ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The amortisation table breaks down each monthly payment into capital repaid and interest paid. For a €200,000 loan at 3.5% over 25 years, the monthly payment is approximately €1,001."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the average interest rate for a Belgian mortgage in 2026 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In 2026, fixed rates for a 20-year mortgage generally range between 3% and 4.5% depending on the bank and borrower profile. Always compare the APR for a fair comparison."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you make early repayment on a Belgian mortgage ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, early repayment is legally possible. For fixed-rate loans, a reinvestment fee may apply, capped at 3 months' interest on the repaid amount."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -839,6 +891,15 @@ gtag('config', 'G-WNHZDLVPEL');
      data-ad-slot="9017409611"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
+
+<div class="faq-section">
+  <h2>❓ Frequently asked questions about Belgian mortgage loans</h2>
+  <div class="faq-item"><div class="faq-question">What is the difference between constant annuity and constant capital repayment ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>With constant annuity, you pay the same monthly instalment throughout the loan, but the interest portion decreases progressively. With constant capital, the capital repayment stays fixed, but monthly payments decrease over time.</p></div></div>
+  <div class="faq-item"><div class="faq-question">How is a Belgian loan amortisation table calculated ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>The amortisation table breaks down each monthly payment into capital repaid and interest paid. For a €200,000 loan at 3.5% over 25 years, the monthly payment is approximately €1,001.</p></div></div>
+  <div class="faq-item"><div class="faq-question">What is the average interest rate for a Belgian mortgage in 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>In 2026, fixed rates for a 20-year mortgage generally range between 3% and 4.5% depending on the bank and borrower profile. Always compare the APR for a fair comparison.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Can you make early repayment on a Belgian mortgage ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Yes, early repayment is legally possible. For fixed-rate loans, a reinvestment fee may apply, capped at 3 months' interest on the repaid amount.</p></div></div>
+</div>
+
 <footer>
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
   <div class="footer-links">
@@ -1355,6 +1416,15 @@ function toggleLangMenu(e) {
 document.addEventListener('click', function(e) {
   var ld = document.getElementById('langSwitcher');
   if (ld && !ld.contains(e.target)) ld.classList.remove('open');
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      this.closest('.faq-item').classList.toggle('faq-open');
+    });
+  });
 });
 </script>
 </body>

@@ -483,6 +483,18 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
   .form-label .tooltip-icon.tt-open .tooltip-bubble { display: block; }
 
   .form-body, .panel, .panel > *, aside.panel { overflow: visible !important; }
+
+/* ── FAQ ACCORDÉON ── */
+.faq-section{max-width:860px;margin:48px auto 0;padding:0 30px 48px;}
+.faq-section>h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:22px;}
+.faq-item{border:1px solid #DDE5EF;border-radius:10px;margin-bottom:8px;overflow:hidden;background:#fff;}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;cursor:pointer;font-weight:600;font-size:0.92rem;color:var(--navy);gap:12px;transition:background 0.15s;}
+.faq-question:hover{background:#F4F7FA;}
+.faq-chev{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;transition:transform 0.25s;line-height:1;}
+.faq-item.faq-open .faq-chev{transform:rotate(180deg);}
+.faq-answer{display:none;padding:4px 18px 15px;font-size:0.87rem;color:#4A6279;line-height:1.75;border-top:1px solid #F0F4F8;}
+.faq-item.faq-open .faq-answer{display:block;}
+
 </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
@@ -548,6 +560,38 @@ gtag('config', 'G-WNHZDLVPEL');
     "name": "La Caverne de la Compta",
     "url": "https://lacavernedelacompta.be"
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wat is het verschil tussen constante annuïteit en constant kapitaal ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bij een constante annuïteit betaalt u dezelfde maandelijkse aflossing, maar het intrestenandeel daalt geleidelijk. Bij constant kapitaal blijft de kapitaalaflossing vast, maar dalen de maandelijkse termijnen. Constante annuïteit is het meest gebruikelijk voor hypothecaire kredieten in België."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hoe wordt de aflossingstabel van een Belgisch krediet berekend ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De aflossingstabel verdeelt elke maandelijkse betaling in afgelost kapitaal en betaalde intresten. Voor een krediet van 200.000 € aan 3,5% op 25 jaar bedraagt de maandlast ongeveer 1.001 €."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan men een Belgisch hypothecair krediet vervroegd terugbetalen ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, vervroegde terugbetaling is wettelijk mogelijk. Voor kredieten met vaste rentevoet kan een wederbeleggingsvergoeding verschuldigd zijn, begrensd tot 3 maanden intresten op het terugbetaalde bedrag."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -839,6 +883,14 @@ gtag('config', 'G-WNHZDLVPEL');
      data-ad-slot="9017409611"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
+
+<div class="faq-section">
+  <h2>❓ Veelgestelde vragen over hypothecair krediet in België</h2>
+  <div class="faq-item"><div class="faq-question">Wat is het verschil tussen constante annuïteit en constant kapitaal ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Bij een constante annuïteit betaalt u dezelfde maandelijkse aflossing, maar het intrestenandeel daalt geleidelijk. Bij constant kapitaal blijft de kapitaalaflossing vast, maar dalen de maandelijkse termijnen. Constante annuïteit is het meest gebruikelijk voor hypothecaire kredieten in België.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Hoe wordt de aflossingstabel van een Belgisch krediet berekend ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>De aflossingstabel verdeelt elke maandelijkse betaling in afgelost kapitaal en betaalde intresten. Voor een krediet van 200.000 € aan 3,5% op 25 jaar bedraagt de maandlast ongeveer 1.001 €.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Kan men een Belgisch hypothecair krediet vervroegd terugbetalen ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Ja, vervroegde terugbetaling is wettelijk mogelijk. Voor kredieten met vaste rentevoet kan een wederbeleggingsvergoeding verschuldigd zijn, begrensd tot 3 maanden intresten op het terugbetaalde bedrag.</p></div></div>
+</div>
+
 <footer>
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
   <div class="footer-links">
@@ -1355,6 +1407,15 @@ function toggleLangMenu(e) {
 document.addEventListener('click', function(e) {
   var ld = document.getElementById('langSwitcher');
   if (ld && !ld.contains(e.target)) ld.classList.remove('open');
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      this.closest('.faq-item').classList.toggle('faq-open');
+    });
+  });
 });
 </script>
 </body>

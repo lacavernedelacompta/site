@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quick-Mémo Fiscal Belgique 2026 — Taux, ATN & DNA</title>
-<meta name="description" content="Mémo fiscal belge 2026 : taux d'intérêt légaux, ATN voiture/PC/GSM, DNA véhicules 2026, versements anticipés (VAI), DPI. Tous les taux en un coup d'œil. Gratuit.">
+<meta name="description" content="Mémo fiscal belge 2026 : taux d'intérêt légaux, ATN voiture/PC/GSM, DNA véhicules 2026, versements anticipés (VAI), DPI. Tous les taux en un coup d'œil..">
 <meta name="keywords" content="mémo fiscal belgique 2026, ATN belgique, avantages toutes nature 2026, versements anticipés impôt belgique, déduction investissement belgique, DNA véhicules belgique, taux intérêt légal belgique">
 <meta name="author" content="La Caverne de la Compta">
 <meta name="robots" content="index, follow">
@@ -128,6 +128,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
 .footer-links a{color:rgba(255,255,255,.35);text-decoration:none;}
 .footer-links a:hover{color:#fff;}
 
+@media(max-width:900px){.main{grid-template-columns:1fr;}.result-panel{position:static;}}
 @media(max-width:768px){
   .topbar,nav,.hero,.search-bar,.wrap,.disclaimer,footer{padding-left:14px;padding-right:14px;}
   .hero h1{font-size:1.4rem;}
@@ -222,6 +223,18 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
     background: var(--teal);
     color: var(--white);
   }
+
+/* ── FAQ ACCORDÉON ── */
+.faq-section{max-width:860px;margin:48px auto 0;padding:0 30px 48px;}
+.faq-section>h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:22px;}
+.faq-item{border:1px solid #DDE5EF;border-radius:10px;margin-bottom:8px;overflow:hidden;background:#fff;}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;cursor:pointer;font-weight:600;font-size:0.92rem;color:var(--navy);gap:12px;transition:background 0.15s;}
+.faq-question:hover{background:#F4F7FA;}
+.faq-chev{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;transition:transform 0.25s;line-height:1;}
+.faq-item.faq-open .faq-chev{transform:rotate(180deg);}
+.faq-answer{display:none;padding:4px 18px 15px;font-size:0.87rem;color:#4A6279;line-height:1.75;border-top:1px solid #F0F4F8;}
+.faq-item.faq-open .faq-answer{display:block;}
+
 </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
@@ -287,6 +300,62 @@ gtag('config', 'G-WNHZDLVPEL');
     "name": "La Caverne de la Compta",
     "url": "https://lacavernedelacompta.be"
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quels sont les taux de TVA en Belgique en 2026 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La Belgique applique 4 taux de TVA : 21% (taux normal), 12% (restauration, certains produits), 6% (biens de première nécessité, logements sociaux, travaux immobiliers sous conditions) et 0% (médicaments remboursables, presse). Depuis 2024, la démolition-reconstruction bénéficie du 6% sous conditions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce que l'avantage de toute nature (ATN) en Belgique ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un ATN est un avantage accordé par la société à son dirigeant ou employé, imposable comme revenu professionnel. Les ATN les plus courants : voiture de société (forfait CO2), mise à disposition d'un immeuble (RC × 100/60 × coefficient), PC, GSM et internet. Notre quick-mémo reprend tous les forfaits 2026."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quel est le taux de l'impôt des sociétés en Belgique en 2026 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le taux standard ISOC est de 25%. Les PME bénéficient d'un taux réduit de 20% sur les premiers 100 000 € de bénéfice, sous conditions : capital libéré ≥ 2.500 €, rémunération dirigeant ≥ 45.000 €, pas de participation dans une société d'investissement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce que la cotisation distincte sur les dépenses non admises (DNA) ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les DNA sont des dépenses non déductibles fiscalement : frais de représentation excessifs, avantages en nature non déclarés, amendes. Elles sont soumises à une cotisation distincte de 5,1% ou imposées normalement selon leur nature."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment fonctionne le précompte professionnel en Belgique ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le précompte professionnel est une retenue à la source effectuée par l'employeur sur les rémunérations. Son taux varie selon le revenu, la situation familiale et les avantages fiscaux applicables. Pour les dirigeants d'entreprise, il est calculé sur les barèmes IPP."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce que le précompte mobilier sur les dividendes en Belgique ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le précompte mobilier (PM) sur les dividendes est de 30% en principe. Un taux réduit de 15% s'applique aux dividendes VVPR (Verlaagde Voorheffing - Précompte Réduit) pour les PME, sous conditions de distribution en 3e ou 4e exercice suivant un apport en numéraire."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -608,6 +677,17 @@ gtag('config', 'G-WNHZDLVPEL');
      data-ad-slot="9017409611"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
+
+<div class="faq-section">
+  <h2>❓ Questions fréquentes sur la fiscalité belge 2026</h2>
+  <div class="faq-item"><div class="faq-question">Quels sont les taux de TVA en Belgique en 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>La Belgique applique 4 taux de TVA : 21% (taux normal), 12% (restauration, certains produits), 6% (biens de première nécessité, logements sociaux, travaux immobiliers sous conditions) et 0% (médicaments remboursables, presse). Depuis 2024, la démolition-reconstruction bénéficie du 6% sous conditions.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Qu'est-ce que l'avantage de toute nature (ATN) en Belgique ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Un ATN est un avantage accordé par la société à son dirigeant ou employé, imposable comme revenu professionnel. Les ATN les plus courants : voiture de société (forfait CO2), mise à disposition d'un immeuble (RC × 100/60 × coefficient), PC, GSM et internet. Notre quick-mémo reprend tous les forfaits 2026.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Quel est le taux de l'impôt des sociétés en Belgique en 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Le taux standard ISOC est de 25%. Les PME bénéficient d'un taux réduit de 20% sur les premiers 100 000 € de bénéfice, sous conditions : capital libéré ≥ 2.500 €, rémunération dirigeant ≥ 45.000 €, pas de participation dans une société d'investissement.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Qu'est-ce que la cotisation distincte sur les dépenses non admises (DNA) ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Les DNA sont des dépenses non déductibles fiscalement : frais de représentation excessifs, avantages en nature non déclarés, amendes. Elles sont soumises à une cotisation distincte de 5,1% ou imposées normalement selon leur nature.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Comment fonctionne le précompte professionnel en Belgique ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Le précompte professionnel est une retenue à la source effectuée par l'employeur sur les rémunérations. Son taux varie selon le revenu, la situation familiale et les avantages fiscaux applicables. Pour les dirigeants d'entreprise, il est calculé sur les barèmes IPP.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Qu'est-ce que le précompte mobilier sur les dividendes en Belgique ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Le précompte mobilier (PM) sur les dividendes est de 30% en principe. Un taux réduit de 15% s'applique aux dividendes VVPR (Verlaagde Voorheffing - Précompte Réduit) pour les PME, sous conditions de distribution en 3e ou 4e exercice suivant un apport en numéraire.</p></div></div>
+</div>
+
 <footer>
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
   <div class="footer-links">
@@ -1011,6 +1091,15 @@ function toggleLangMenu(e) {
 document.addEventListener('click', function(e) {
   var ld = document.getElementById('langSwitcher');
   if (ld && !ld.contains(e.target)) ld.classList.remove('open');
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      this.closest('.faq-item').classList.toggle('faq-open');
+    });
+  });
 });
 </script>
 </body>

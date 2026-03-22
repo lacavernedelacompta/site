@@ -128,6 +128,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
 .footer-links a{color:rgba(255,255,255,.35);text-decoration:none;}
 .footer-links a:hover{color:#fff;}
 
+@media(max-width:900px){.main{grid-template-columns:1fr;}.result-panel{position:static;}}
 @media(max-width:768px){
   .topbar,nav,.hero,.search-bar,.wrap,.disclaimer,footer{padding-left:14px;padding-right:14px;}
   .hero h1{font-size:1.4rem;}
@@ -222,6 +223,18 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
     background: var(--teal);
     color: var(--white);
   }
+
+/* ── FAQ ACCORDÉON ── */
+.faq-section{max-width:860px;margin:48px auto 0;padding:0 30px 48px;}
+.faq-section>h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:22px;}
+.faq-item{border:1px solid #DDE5EF;border-radius:10px;margin-bottom:8px;overflow:hidden;background:#fff;}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;cursor:pointer;font-weight:600;font-size:0.92rem;color:var(--navy);gap:12px;transition:background 0.15s;}
+.faq-question:hover{background:#F4F7FA;}
+.faq-chev{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;transition:transform 0.25s;line-height:1;}
+.faq-item.faq-open .faq-chev{transform:rotate(180deg);}
+.faq-answer{display:none;padding:4px 18px 15px;font-size:0.87rem;color:#4A6279;line-height:1.75;border-top:1px solid #F0F4F8;}
+.faq-item.faq-open .faq-answer{display:block;}
+
 </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
@@ -287,6 +300,46 @@ gtag('config', 'G-WNHZDLVPEL');
     "name": "La Caverne de la Compta",
     "url": "https://lacavernedelacompta.be"
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wat zijn de btw-tarieven in België in 2026 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "België kent 4 btw-tarieven: 21% (normaal tarief), 12% (restauratie, bepaalde producten), 6% (levensnoodzakelijke goederen, sociale woningen, onroerende werken onder voorwaarden) en 0% (terugbetaalbare geneesmiddelen, pers). Sloop-heropbouw geniet vanaf 2024 van 6% onder voorwaarden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wat is een voordeel van alle aard (VAA) in België ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Een VAA is een voordeel dat de vennootschap toekent aan haar bestuurder of werknemer, belastbaar als beroepsinkomen. De meest voorkomende VAA: bedrijfswagen (forfait op basis van CO2), ter beschikking gestelde woning (KI × 100/60 × coëfficiënt), pc, gsm en internet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wat is het vennootschapsbelastingtarief in België in 2026 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Het standaardtarief VenB is 25%. KMO's genieten een verlaagd tarief van 20% op de eerste 100.000 € winst, onder voorwaarden: volgestort kapitaal ≥ 2.500 €, bezoldiging bestuurder ≥ 45.000 €, geen participatie in een beleggingsvennootschap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wat is de roerende voorheffing op dividenden in België ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De roerende voorheffing (RV) op dividenden bedraagt in principe 30%. Een verlaagd tarief van 15% geldt voor VVPR-dividenden (Verlaagde Voorheffing Précompte Réduit) voor KMO's, onder voorwaarden van uitkering in het 3e of 4e boekjaar na een inbreng in geld."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -358,11 +411,11 @@ gtag('config', 'G-WNHZDLVPEL');
   <div class="lang-dropdown" style="position:relative;display:inline-block;" id="langSwitcher">
     <button class="lang-current" onclick="toggleLangMenu(event)">🇧🇪 NL</button>
     <div class="lang-menu">
-<a href="https://lacavernedelacompta.be/nl/quick-memento-fiscal/" class="active">🇫🇷 Français</a>
+<a href="https://lacavernedelacompta.be/fr/quick-memento-fiscal/" class="">🇫🇷 Français</a>
 <a href="https://lacavernedelacompta.be/nl/quick-memento-fiscal/" class="active">🇧🇪 Nederlands</a>
-<a href="https://lacavernedelacompta.be/en/quick-memento-fiscal/" class="">🇬🇧 English</a>
 <a href="https://lacavernedelacompta.be/de/quick-memento-fiscal/" class="">🇩🇪 Deutsch</a>
-    </div>
+<a href="https://lacavernedelacompta.be/en/quick-memento-fiscal/" class="">🇬🇧 English</a>
+</div>
   </div>
   <!-- ══════════════════════ -->
 
@@ -608,6 +661,15 @@ gtag('config', 'G-WNHZDLVPEL');
      data-ad-slot="9017409611"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
+
+<div class="faq-section">
+  <h2>❓ Veelgestelde vragen over Belgische fiscaliteit 2026</h2>
+  <div class="faq-item"><div class="faq-question">Wat zijn de btw-tarieven in België in 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>België kent 4 btw-tarieven: 21% (normaal tarief), 12% (restauratie, bepaalde producten), 6% (levensnoodzakelijke goederen, sociale woningen, onroerende werken onder voorwaarden) en 0% (terugbetaalbare geneesmiddelen, pers). Sloop-heropbouw geniet vanaf 2024 van 6% onder voorwaarden.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Wat is een voordeel van alle aard (VAA) in België ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Een VAA is een voordeel dat de vennootschap toekent aan haar bestuurder of werknemer, belastbaar als beroepsinkomen. De meest voorkomende VAA: bedrijfswagen (forfait op basis van CO2), ter beschikking gestelde woning (KI × 100/60 × coëfficiënt), pc, gsm en internet.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Wat is het vennootschapsbelastingtarief in België in 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Het standaardtarief VenB is 25%. KMO's genieten een verlaagd tarief van 20% op de eerste 100.000 € winst, onder voorwaarden: volgestort kapitaal ≥ 2.500 €, bezoldiging bestuurder ≥ 45.000 €, geen participatie in een beleggingsvennootschap.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Wat is de roerende voorheffing op dividenden in België ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>De roerende voorheffing (RV) op dividenden bedraagt in principe 30%. Een verlaagd tarief van 15% geldt voor VVPR-dividenden (Verlaagde Voorheffing Précompte Réduit) voor KMO's, onder voorwaarden van uitkering in het 3e of 4e boekjaar na een inbreng in geld.</p></div></div>
+</div>
+
 <footer>
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
   <div class="footer-links">
@@ -1011,6 +1073,15 @@ function toggleLangMenu(e) {
 document.addEventListener('click', function(e) {
   var ld = document.getElementById('langSwitcher');
   if (ld && !ld.contains(e.target)) ld.classList.remove('open');
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      this.closest('.faq-item').classList.toggle('faq-open');
+    });
+  });
 });
 </script>
 </body>

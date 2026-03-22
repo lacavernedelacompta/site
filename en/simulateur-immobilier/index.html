@@ -648,6 +648,18 @@
     background: var(--teal);
     color: var(--white);
   }
+
+/* ── FAQ ACCORDÉON ── */
+.faq-section{max-width:860px;margin:48px auto 0;padding:0 30px 48px;}
+.faq-section>h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:22px;}
+.faq-item{border:1px solid #DDE5EF;border-radius:10px;margin-bottom:8px;overflow:hidden;background:#fff;}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;cursor:pointer;font-weight:600;font-size:0.92rem;color:var(--navy);gap:12px;transition:background 0.15s;}
+.faq-question:hover{background:#F4F7FA;}
+.faq-chev{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;transition:transform 0.25s;line-height:1;}
+.faq-item.faq-open .faq-chev{transform:rotate(180deg);}
+.faq-answer{display:none;padding:4px 18px 15px;font-size:0.87rem;color:#4A6279;line-height:1.75;border-top:1px solid #F0F4F8;}
+.faq-item.faq-open .faq-answer{display:block;}
+
 </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
@@ -713,6 +725,46 @@ gtag('config', 'G-WNHZDLVPEL');
     "name": "La Caverne de la Compta",
     "url": "https://lacavernedelacompta.be"
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the registration fee rate in Wallonia in 2026 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Wallonia, the standard registration fee rate is 12.5% for most properties. A reduced rate of 3% applies to a modest dwelling as the buyer's primary residence, subject to conditions on cadastral income and purchase price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the Brussels reduction on registration fees work ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Brussels, a €200,000 reduction on the taxable base is granted for the purchase of a sole and own home, if the buyer registers their domicile there within 2 years. For a property worth €350,000, fees are calculated only on €150,000, saving €25,000 at the 12.5% rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the rate in Flanders for a sole and own dwelling ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Flanders, the standard rate is 3% for a sole and own dwelling. This reduced rate replaces the standard 12.5% applicable to other properties. For non-residential buildings or second homes, the 12.5% rate still applies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do Belgian notary fees include ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Belgian notary fees include notary fees (legal degressive scale), registration fees (regional rate), deed costs (mortgage registration, administrative fees) and VAT on fees. For a €300,000 property, total costs range between €30,000 and €45,000 depending on the region."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -2327,6 +2379,15 @@ calc();
      data-ad-slot="9017409611"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
+
+<div class="faq-section">
+  <h2>❓ Frequently asked questions about Belgian registration fees</h2>
+  <div class="faq-item"><div class="faq-question">What is the registration fee rate in Wallonia in 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>In Wallonia, the standard registration fee rate is 12.5% for most properties. A reduced rate of 3% applies to a modest dwelling as the buyer's primary residence, subject to conditions on cadastral income and purchase price.</p></div></div>
+  <div class="faq-item"><div class="faq-question">How does the Brussels reduction on registration fees work ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>In Brussels, a €200,000 reduction on the taxable base is granted for the purchase of a sole and own home, if the buyer registers their domicile there within 2 years. For a property worth €350,000, fees are calculated only on €150,000, saving €25,000 at the 12.5% rate.</p></div></div>
+  <div class="faq-item"><div class="faq-question">What is the rate in Flanders for a sole and own dwelling ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>In Flanders, the standard rate is 3% for a sole and own dwelling. This reduced rate replaces the standard 12.5% applicable to other properties. For non-residential buildings or second homes, the 12.5% rate still applies.</p></div></div>
+  <div class="faq-item"><div class="faq-question">What do Belgian notary fees include ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Belgian notary fees include notary fees (legal degressive scale), registration fees (regional rate), deed costs (mortgage registration, administrative fees) and VAT on fees. For a €300,000 property, total costs range between €30,000 and €45,000 depending on the region.</p></div></div>
+</div>
+
 <footer>
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
   <div class="footer-links">
@@ -2495,6 +2556,34 @@ calc();
   if(ca===null){showBanner();}
   else{updateConsentMode(ca==='1',localStorage.getItem('cb_ads')==='1');}
 })();
+</script>
+<script>
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  var ld = document.getElementById('langSwitcher');
+  if (ld) ld.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var ld = document.getElementById('langSwitcher');
+  if (ld && !ld.contains(e.target)) ld.classList.remove('open');
+});
+function toggleDD(e) {
+  e.stopPropagation();
+  document.getElementById('ddWrap').classList.toggle('dd-open');
+}
+document.addEventListener('click', function(e) {
+  var dd = document.getElementById('ddWrap');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('dd-open');
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      this.closest('.faq-item').classList.toggle('faq-open');
+    });
+  });
+});
 </script>
 </body>
 </html>

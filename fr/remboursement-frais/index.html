@@ -29,6 +29,8 @@
     --navy: #0D1B2A; --blue: #1A3A5C; --accent: #C9A84C; --gold-light: #e8d5a3;
     --cream: #faf8f3; --white: #ffffff; --gray: #8a8f99; --light: #f0ede6;
     --red: #c0392b; --green: #1A6640; --border: #d9d3c7;
+    --teal: #1A7A8A; --teal-light: #22A3B8; --teal-pale: #E8F6F8;
+    --off: #F4F7FA; --text: #1A2535; --text-light: #8A9BB0;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); min-height: 100vh; }
@@ -545,6 +547,18 @@ nav {
     background: var(--teal);
     color: var(--white);
   }
+
+/* ── FAQ ACCORDÉON ── */
+.faq-section{max-width:860px;margin:48px auto 0;padding:0 30px 48px;}
+.faq-section>h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:22px;}
+.faq-item{border:1px solid #DDE5EF;border-radius:10px;margin-bottom:8px;overflow:hidden;background:#fff;}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;cursor:pointer;font-weight:600;font-size:0.92rem;color:var(--navy);gap:12px;transition:background 0.15s;}
+.faq-question:hover{background:#F4F7FA;}
+.faq-chev{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;transition:transform 0.25s;line-height:1;}
+.faq-item.faq-open .faq-chev{transform:rotate(180deg);}
+.faq-answer{display:none;padding:4px 18px 15px;font-size:0.87rem;color:#4A6279;line-height:1.75;border-top:1px solid #F0F4F8;}
+.faq-item.faq-open .faq-answer{display:block;}
+
 </style>
 <script>function toggleDD(e){
   e.stopPropagation();
@@ -616,6 +630,46 @@ gtag('config', 'G-WNHZDLVPEL');
     "name": "La Caverne de la Compta",
     "url": "https://lacavernedelacompta.be"
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quel est le taux kilométrique officiel pour les déplacements domicile-travail en 2026 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pour 2026, le taux kilométrique de référence ONSS s'élève à 0,4415 €/km. Ce taux est exonéré de cotisations ONSS et d'impôt dans les limites légales. Il est régulièrement révisé et publié au Moniteur belge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle est la différence entre l'indemnité kilométrique fiscale et l'indemnité ONSS ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'indemnité kilométrique fiscale (SPF Finances) est exonérée d'impôt dans la limite d'un plafond annuel. L'indemnité ONSS est exonérée de cotisations sociales dans la limite du taux officiel. Un remboursement supérieur au taux officiel est partiellement imposable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on cumuler l'indemnité vélo et l'indemnité voiture ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non, en général il n'est pas possible de cumuler les deux pour le même trajet. Si une partie est en vélo et l'autre en voiture (ex: vélo jusqu'à la gare puis train), un cumul est envisageable. L'indemnité vélo est de 0,35 €/km en 2026, exonérée d'impôt et de cotisations ONSS."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment calculer l'indemnité kilométrique pour les déplacements professionnels ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pour les déplacements professionnels, le remboursement est basé sur le taux ONSS officiel ou la CCT applicable. La formule est : distance (km) × taux (€/km) = indemnité. Notre calculateur intègre automatiquement les taux officiels 2026."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -1721,6 +1775,15 @@ updateBanner(null);
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 <div style="margin:24px auto;text-align:center;max-width:100%;padding:0 16px;">
+
+<div class="faq-section">
+  <h2>❓ Questions fréquentes sur le remboursement kilométrique en Belgique</h2>
+  <div class="faq-item"><div class="faq-question">Quel est le taux kilométrique officiel pour les déplacements domicile-travail en 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Pour 2026, le taux kilométrique de référence ONSS s'élève à 0,4415 €/km. Ce taux est exonéré de cotisations ONSS et d'impôt dans les limites légales. Il est régulièrement révisé et publié au Moniteur belge.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Quelle est la différence entre l'indemnité kilométrique fiscale et l'indemnité ONSS ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>L'indemnité kilométrique fiscale (SPF Finances) est exonérée d'impôt dans la limite d'un plafond annuel. L'indemnité ONSS est exonérée de cotisations sociales dans la limite du taux officiel. Un remboursement supérieur au taux officiel est partiellement imposable.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Peut-on cumuler l'indemnité vélo et l'indemnité voiture ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Non, en général il n'est pas possible de cumuler les deux pour le même trajet. Si une partie est en vélo et l'autre en voiture (ex: vélo jusqu'à la gare puis train), un cumul est envisageable. L'indemnité vélo est de 0,35 €/km en 2026, exonérée d'impôt et de cotisations ONSS.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Comment calculer l'indemnité kilométrique pour les déplacements professionnels ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Pour les déplacements professionnels, le remboursement est basé sur le taux ONSS officiel ou la CCT applicable. La formule est : distance (km) × taux (€/km) = indemnité. Notre calculateur intègre automatiquement les taux officiels 2026.</p></div></div>
+</div>
+
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-8043980001637749"
@@ -1947,5 +2010,14 @@ document.addEventListener('click', function(e) {
 })();
 </script>
 <!-- END COOKIE BANNER -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      this.closest('.faq-item').classList.toggle('faq-open');
+    });
+  });
+});
+</script>
 </body>
 </html>

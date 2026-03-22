@@ -29,6 +29,8 @@
     --navy: #0D1B2A; --blue: #1A3A5C; --accent: #C9A84C; --gold-light: #e8d5a3;
     --cream: #faf8f3; --white: #ffffff; --gray: #8a8f99; --light: #f0ede6;
     --red: #c0392b; --green: #1A6640; --border: #d9d3c7;
+    --teal: #1A7A8A; --teal-light: #22A3B8; --teal-pale: #E8F6F8;
+    --off: #F4F7FA; --text: #1A2535; --text-light: #8A9BB0;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); min-height: 100vh; }
@@ -668,6 +670,18 @@ nav {
     background: var(--teal);
     color: var(--white);
   }
+
+/* ── FAQ ACCORDÉON ── */
+.faq-section{max-width:860px;margin:48px auto 0;padding:0 30px 48px;}
+.faq-section>h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:22px;}
+.faq-item{border:1px solid #DDE5EF;border-radius:10px;margin-bottom:8px;overflow:hidden;background:#fff;}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;cursor:pointer;font-weight:600;font-size:0.92rem;color:var(--navy);gap:12px;transition:background 0.15s;}
+.faq-question:hover{background:#F4F7FA;}
+.faq-chev{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;transition:transform 0.25s;line-height:1;}
+.faq-item.faq-open .faq-chev{transform:rotate(180deg);}
+.faq-answer{display:none;padding:4px 18px 15px;font-size:0.87rem;color:#4A6279;line-height:1.75;border-top:1px solid #F0F4F8;}
+.faq-item.faq-open .faq-answer{display:block;}
+
 </style>
 <script>function toggleDD(e){
   e.stopPropagation();
@@ -739,6 +753,38 @@ gtag('config', 'G-WNHZDLVPEL');
     "name": "La Caverne de la Compta",
     "url": "https://lacavernedelacompta.be"
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wat is het officiële kilometertarief voor woon-werkverkeer in 2026 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Voor 2026 bedraagt het RSZ-referentiekometartarief 0,4415 €/km. Dit tarief is vrijgesteld van RSZ-bijdragen en belastingen binnen de wettelijke grenzen en wordt regelmatig herzien en gepubliceerd in het Belgisch Staatsblad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan men de fietsvergoeding en de autovergoeding combineren ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nee, in het algemeen is het niet mogelijk om beide te combineren voor hetzelfde traject. Als een deel per fiets en een ander deel per auto wordt afgelegd, is een combinatie denkbaar. De fietsvergoeding bedraagt 0,35 €/km in 2026."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hoe berekent men de kilometervergoeding voor beroepsverplaatsingen ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Voor beroepsverplaatsingen is de vergoeding gebaseerd op het officiële RSZ-tarief. De formule is: afstand (km) × tarief (€/km) = vergoeding. Onze calculator integreert automatisch de officiële tarieven van 2026."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -1844,6 +1890,14 @@ updateBanner(null);
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 <div style="margin:24px auto;text-align:center;max-width:100%;padding:0 16px;">
+
+<div class="faq-section">
+  <h2>❓ Veelgestelde vragen over kilometervergoeding in België</h2>
+  <div class="faq-item"><div class="faq-question">Wat is het officiële kilometertarief voor woon-werkverkeer in 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Voor 2026 bedraagt het RSZ-referentiekometartarief 0,4415 €/km. Dit tarief is vrijgesteld van RSZ-bijdragen en belastingen binnen de wettelijke grenzen en wordt regelmatig herzien en gepubliceerd in het Belgisch Staatsblad.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Kan men de fietsvergoeding en de autovergoeding combineren ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Nee, in het algemeen is het niet mogelijk om beide te combineren voor hetzelfde traject. Als een deel per fiets en een ander deel per auto wordt afgelegd, is een combinatie denkbaar. De fietsvergoeding bedraagt 0,35 €/km in 2026.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Hoe berekent men de kilometervergoeding voor beroepsverplaatsingen ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Voor beroepsverplaatsingen is de vergoeding gebaseerd op het officiële RSZ-tarief. De formule is: afstand (km) × tarief (€/km) = vergoeding. Onze calculator integreert automatisch de officiële tarieven van 2026.</p></div></div>
+</div>
+
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-8043980001637749"
@@ -2072,5 +2126,14 @@ document.addEventListener('click', function(e) {
 })();
 </script>
 <!-- END COOKIE BANNER -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      this.closest('.faq-item').classList.toggle('faq-open');
+    });
+  });
+});
+</script>
 </body>
 </html>

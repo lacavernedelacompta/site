@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Droits d'Enregistrement Belgique 2026 — Simulateur</title>
-  <meta name="description" content="Calculez droits d'enregistrement, notaire et ABEX Belgique 2026. Simulateur immobilier gratuit : achat, vente, hypothèque. Résultats précis au centime.">enregistrement en Belgique 2026. Taux 3% Wallonie, abattement Bruxelles, 2% Flandre. Crédit hypothécaire inclus. Outil gratuit.">
+  <meta name="description" content="Calculez droits d'enregistrement, notaire et ABEX Belgique 2026. Simulateur immobilier gratuit : achat, vente, hypothèque. Résultats précis au centime.">
   <meta name="keywords" content="droits enregistrement belgique 2026, simulateur immobilier belgique, frais achat maison belgique, taux 3% wallonie, abattement bruxelles immobilier, 2% flandre enregistrement">
   <meta name="author" content="La Caverne de la Compta">
   <meta name="robots" content="index, follow">
@@ -648,6 +648,18 @@
     background: var(--teal);
     color: var(--white);
   }
+
+/* ── FAQ ACCORDÉON ── */
+.faq-section{max-width:860px;margin:48px auto 0;padding:0 30px 48px;}
+.faq-section>h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:22px;}
+.faq-item{border:1px solid #DDE5EF;border-radius:10px;margin-bottom:8px;overflow:hidden;background:#fff;}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;cursor:pointer;font-weight:600;font-size:0.92rem;color:var(--navy);gap:12px;transition:background 0.15s;}
+.faq-question:hover{background:#F4F7FA;}
+.faq-chev{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;transition:transform 0.25s;line-height:1;}
+.faq-item.faq-open .faq-chev{transform:rotate(180deg);}
+.faq-answer{display:none;padding:4px 18px 15px;font-size:0.87rem;color:#4A6279;line-height:1.75;border-top:1px solid #F0F4F8;}
+.faq-item.faq-open .faq-answer{display:block;}
+
 </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
@@ -713,6 +725,62 @@ gtag('config', 'G-WNHZDLVPEL');
     "name": "La Caverne de la Compta",
     "url": "https://lacavernedelacompta.be"
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quel est le taux des droits d'enregistrement en Wallonie en 2026 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En Wallonie, le taux standard des droits d'enregistrement est de 12,5% pour la plupart des biens. Un taux réduit de 3% s'applique pour une habitation modeste constituant la résidence principale de l'acquéreur, sous conditions de revenus cadastraux et de prix d'achat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment fonctionne l'abattement bruxellois sur les droits d'enregistrement ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "À Bruxelles, un abattement de 200 000 € sur la base imposable est accordé pour l'achat d'une habitation propre et unique, si l'acquéreur s'y domicilie dans les 2 ans. Pour un bien de 350 000 €, les droits ne sont calculés que sur 150 000 €, soit une économie de 25 000 € au taux de 12,5%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quel est le taux en Flandre pour une habitation propre et unique ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En Flandre, le taux standard est de 3% pour une habitation propre et unique (habitation familiale). Ce taux réduit remplace le taux de 12,5% applicable aux autres biens. Pour les immeubles non résidentiels ou les résidences secondaires, le taux de 12,5% reste applicable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que comprennent les frais de notaire en Belgique ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les frais de notaire comprennent les honoraires du notaire (barème légal dégressif), les droits d'enregistrement (taux régional), les frais d'acte (inscription hypothécaire, frais administratifs) et la TVA sur honoraires. Pour un bien de 300 000 €, les frais totaux varient entre 30 000 et 45 000 € selon la région."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on déduire les droits d'enregistrement des impôts ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les droits d'enregistrement ne sont généralement pas déductibles pour les particuliers achetant leur habitation propre. Pour un bien immobilier professionnel ou un investissement locatif, une partie des frais d'acquisition peut être déduite fiscalement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce que la valeur ABEX ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'indice ABEX (Association Belge des Experts) est utilisé pour calculer la valeur de reconstruction d'un bâtiment à des fins d'assurance incendie. Il est publié deux fois par an. Au 1er janvier 2026, l'indice ABEX s'établit à 1.062 (base 100 en 1980)."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -2327,6 +2395,17 @@ calc();
      data-ad-slot="9017409611"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
+
+<div class="faq-section">
+  <h2>❓ Questions fréquentes sur les droits d'enregistrement en Belgique</h2>
+  <div class="faq-item"><div class="faq-question">Quel est le taux des droits d'enregistrement en Wallonie en 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>En Wallonie, le taux standard des droits d'enregistrement est de 12,5% pour la plupart des biens. Un taux réduit de 3% s'applique pour une habitation modeste constituant la résidence principale de l'acquéreur, sous conditions de revenus cadastraux et de prix d'achat.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Comment fonctionne l'abattement bruxellois sur les droits d'enregistrement ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>À Bruxelles, un abattement de 200 000 € sur la base imposable est accordé pour l'achat d'une habitation propre et unique, si l'acquéreur s'y domicilie dans les 2 ans. Pour un bien de 350 000 €, les droits ne sont calculés que sur 150 000 €, soit une économie de 25 000 € au taux de 12,5%.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Quel est le taux en Flandre pour une habitation propre et unique ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>En Flandre, le taux standard est de 3% pour une habitation propre et unique (habitation familiale). Ce taux réduit remplace le taux de 12,5% applicable aux autres biens. Pour les immeubles non résidentiels ou les résidences secondaires, le taux de 12,5% reste applicable.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Que comprennent les frais de notaire en Belgique ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Les frais de notaire comprennent les honoraires du notaire (barème légal dégressif), les droits d'enregistrement (taux régional), les frais d'acte (inscription hypothécaire, frais administratifs) et la TVA sur honoraires. Pour un bien de 300 000 €, les frais totaux varient entre 30 000 et 45 000 € selon la région.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Peut-on déduire les droits d'enregistrement des impôts ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Les droits d'enregistrement ne sont généralement pas déductibles pour les particuliers achetant leur habitation propre. Pour un bien immobilier professionnel ou un investissement locatif, une partie des frais d'acquisition peut être déduite fiscalement.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Qu'est-ce que la valeur ABEX ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>L'indice ABEX (Association Belge des Experts) est utilisé pour calculer la valeur de reconstruction d'un bâtiment à des fins d'assurance incendie. Il est publié deux fois par an. Au 1er janvier 2026, l'indice ABEX s'établit à 1.062 (base 100 en 1980).</p></div></div>
+</div>
+
 <footer>
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
   <div class="footer-links">
@@ -2495,6 +2574,34 @@ calc();
   if(ca===null){showBanner();}
   else{updateConsentMode(ca==='1',localStorage.getItem('cb_ads')==='1');}
 })();
+</script>
+<script>
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  var ld = document.getElementById('langSwitcher');
+  if (ld) ld.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var ld = document.getElementById('langSwitcher');
+  if (ld && !ld.contains(e.target)) ld.classList.remove('open');
+});
+function toggleDD(e) {
+  e.stopPropagation();
+  document.getElementById('ddWrap').classList.toggle('dd-open');
+}
+document.addEventListener('click', function(e) {
+  var dd = document.getElementById('ddWrap');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('dd-open');
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      this.closest('.faq-item').classList.toggle('faq-open');
+    });
+  });
+});
 </script>
 </body>
 </html>

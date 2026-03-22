@@ -483,6 +483,18 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
   .form-label .tooltip-icon.tt-open .tooltip-bubble { display: block; }
 
   .form-body, .panel, .panel > *, aside.panel { overflow: visible !important; }
+
+/* ── FAQ ACCORDÉON ── */
+.faq-section{max-width:860px;margin:48px auto 0;padding:0 30px 48px;}
+.faq-section>h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:22px;}
+.faq-item{border:1px solid #DDE5EF;border-radius:10px;margin-bottom:8px;overflow:hidden;background:#fff;}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;cursor:pointer;font-weight:600;font-size:0.92rem;color:var(--navy);gap:12px;transition:background 0.15s;}
+.faq-question:hover{background:#F4F7FA;}
+.faq-chev{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;transition:transform 0.25s;line-height:1;}
+.faq-item.faq-open .faq-chev{transform:rotate(180deg);}
+.faq-answer{display:none;padding:4px 18px 15px;font-size:0.87rem;color:#4A6279;line-height:1.75;border-top:1px solid #F0F4F8;}
+.faq-item.faq-open .faq-answer{display:block;}
+
 </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
@@ -548,6 +560,38 @@ gtag('config', 'G-WNHZDLVPEL');
     "name": "La Caverne de la Compta",
     "url": "https://lacavernedelacompta.be"
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was ist der Unterschied zwischen konstanter Annuität und konstantem Kapital ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bei einer konstanten Annuität zahlen Sie die gleiche monatliche Rate, aber der Zinsanteil sinkt schrittweise. Bei konstantem Kapital bleibt die Kapitalrückzahlung fest, aber die monatlichen Raten sinken im Laufe der Zeit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie wird der Tilgungsplan eines belgischen Kredits berechnet ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Der Tilgungsplan teilt jede monatliche Zahlung in zurückgezahltes Kapital und gezahlte Zinsen auf. Für einen Kredit von 200.000 € zu 3,5% auf 25 Jahre beträgt die Monatsrate etwa 1.001 €."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann man einen belgischen Hypothekarkredit vorzeitig zurückzahlen ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, die vorzeitige Rückzahlung ist gesetzlich möglich. Bei Krediten mit festem Zinssatz kann eine Wiederanlageentschädigung fällig werden, begrenzt auf 3 Monatszinsen auf den zurückgezahlten Betrag."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -845,6 +889,14 @@ gtag('config', 'G-WNHZDLVPEL');
     <strong style="color:#4A6279;">⚠️ Hinweis — Nur indikativer Wert :</strong>
     Dieser Simulator dient nur zu Informationszwecken. Die Ergebnisse stellen kein Kreditangebot dar. <strong style="color:#4A6279;">Wenden Sie sich an Ihre Bank, einen Kreditvermittler oder Finanzberater</strong> vor jeder Verpflichtung. — <a href="/de/mentions-legales/" style="color:#1A7A8A;text-decoration:none;">Vollständige rechtliche Hinweise</a>
   </div>
+</div>
+
+
+<div class="faq-section">
+  <h2>❓ Häufige Fragen zum Hypothekarkredit in Belgien</h2>
+  <div class="faq-item"><div class="faq-question">Was ist der Unterschied zwischen konstanter Annuität und konstantem Kapital ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Bei einer konstanten Annuität zahlen Sie die gleiche monatliche Rate, aber der Zinsanteil sinkt schrittweise. Bei konstantem Kapital bleibt die Kapitalrückzahlung fest, aber die monatlichen Raten sinken im Laufe der Zeit.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Wie wird der Tilgungsplan eines belgischen Kredits berechnet ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Der Tilgungsplan teilt jede monatliche Zahlung in zurückgezahltes Kapital und gezahlte Zinsen auf. Für einen Kredit von 200.000 € zu 3,5% auf 25 Jahre beträgt die Monatsrate etwa 1.001 €.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Kann man einen belgischen Hypothekarkredit vorzeitig zurückzahlen ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Ja, die vorzeitige Rückzahlung ist gesetzlich möglich. Bei Krediten mit festem Zinssatz kann eine Wiederanlageentschädigung fällig werden, begrenzt auf 3 Monatszinsen auf den zurückgezahlten Betrag.</p></div></div>
 </div>
 
 <footer>
@@ -1363,6 +1415,15 @@ function toggleLangMenu(e) {
 document.addEventListener('click', function(e) {
   var ld = document.getElementById('langSwitcher');
   if (ld && !ld.contains(e.target)) ld.classList.remove('open');
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      this.closest('.faq-item').classList.toggle('faq-open');
+    });
+  });
 });
 </script>
 </body>

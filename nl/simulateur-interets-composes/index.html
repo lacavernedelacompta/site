@@ -1267,18 +1267,19 @@ gtag('config', 'G-WNHZDLVPEL');
       </ul>
     </div>
 
-  </section>
+    <div id="renteResultBox" class="rente-result-box" style="display:none;">
+        <div class="rente-hero-card">
+          <div class="rente-hero-label">Benodigd kapitaal</div>
+          <div class="rente-capital" id="renteCapital">—</div>
+          <div class="rente-caption" id="renteCapitalSub">—</div>
+        </div>
+        <div class="rente-formula">
+          <strong>📐 Formule :</strong>&nbsp;<span id="renteFormula">—</span>
+        </div>
+      </div>
 
-  <div id="renteResultBox" class="rente-result-box" style="display:none;">
-    <div class="rente-hero-card">
-      <div class="rente-hero-label">Benodigd kapitaal</div>
-      <div class="rente-capital" id="renteCapital">—</div>
-      <div class="rente-caption" id="renteCapitalSub">—</div>
-    </div>
-    <div class="rente-formula">
-      <strong>📐 Formule :</strong>&nbsp;<span id="renteFormula">—</span>
-    </div>
-  </div>
+    </section>
+
 </div>
 
 <!-- Footer -->
@@ -1581,7 +1582,12 @@ gtag('config', 'G-WNHZDLVPEL');
     const isRente = mode === 'rente';
     document.getElementById('panelEpargne').style.display = isRente ? 'none' : 'flex';
     document.getElementById('panelRente').style.display   = isRente ? 'flex' : 'none';
-    document.getElementById('results').style.display      = isRente ? 'none' : 'flex';
+    // Hide epargne result elements individually (not the container)
+    ['kpiGrid','chartCard','tableCard','infoStrip','placeholder'].forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) el.style.display = isRente ? 'none' : '';
+    });
+    // Show/hide rente result box
     const box = document.getElementById('renteResultBox');
     if (box) box.style.display = isRente ? 'flex' : 'none';
     document.getElementById('tabEpargne').classList.toggle('active', !isRente);
@@ -1628,7 +1634,7 @@ gtag('config', 'G-WNHZDLVPEL');
     const fmtN = n => new Intl.NumberFormat('nl-BE').format(Math.round(n));
     const box = document.getElementById('renteResultBox');
     if (!box) return;
-    box.style.display = 'flex';
+    if (document.getElementById('tabRente') && document.getElementById('tabRente').classList.contains('active')) box.style.display = 'flex';
     document.getElementById('renteCapital').textContent    = fmtN(capital) + ' €';
     document.getElementById('renteCapitalSub').textContent = fmtN(renteM) + ' €/maand';
     document.getElementById('renteFormula').innerHTML =
@@ -1688,7 +1694,7 @@ gtag('config', 'G-WNHZDLVPEL');
   }
 
   // Auto-calculate on load
-  window.addEventListener('load', function(){ calculate(); calculateRente(); });
+  window.addEventListener('load', function(){ calculate(); });
 </script>
 
 <!-- ── BANNIÈRE COOKIES APD-CONFORME ── -->
