@@ -11,45 +11,45 @@
 /de/la-caverne-de-la-compta      /de/  301!
 /de/la-caverne-de-la-compta.html /de/  301!
 
-/fr/simulateur-immobilier.html  /fr/simulateur-immobilier/  301
-/nl/simulateur-immobilier.html  /nl/simulateur-immobilier/  301
-/en/simulateur-immobilier.html  /en/simulateur-immobilier/  301
-/de/simulateur-immobilier.html  /de/simulateur-immobilier/  301
+/fr/simulateur-immobilier.html  /fr/simulateur-immobilier/  301!
+/nl/simulateur-immobilier.html  /nl/simulateur-immobilier/  301!
+/en/simulateur-immobilier.html  /en/simulateur-immobilier/  301!
+/de/simulateur-immobilier.html  /de/simulateur-immobilier/  301!
 
-/fr/simulateur-credit.html  /fr/simulateur-credit/  301
-/nl/simulateur-credit.html  /nl/simulateur-credit/  301
-/en/simulateur-credit.html  /en/simulateur-credit/  301
-/de/simulateur-credit.html  /de/simulateur-credit/  301
+/fr/simulateur-credit.html  /fr/simulateur-credit/  301!
+/nl/simulateur-credit.html  /nl/simulateur-credit/  301!
+/en/simulateur-credit.html  /en/simulateur-credit/  301!
+/de/simulateur-credit.html  /de/simulateur-credit/  301!
 
-/fr/simulateur-requalification-loyer.html  /fr/simulateur-requalification-loyer/  301
-/nl/simulateur-requalification-loyer.html  /nl/simulateur-requalification-loyer/  301
-/en/simulateur-requalification-loyer.html  /en/simulateur-requalification-loyer/  301
-/de/simulateur-requalification-loyer.html  /de/simulateur-requalification-loyer/  301
+/fr/simulateur-requalification-loyer.html  /fr/simulateur-requalification-loyer/  301!
+/nl/simulateur-requalification-loyer.html  /nl/simulateur-requalification-loyer/  301!
+/en/simulateur-requalification-loyer.html  /en/simulateur-requalification-loyer/  301!
+/de/simulateur-requalification-loyer.html  /de/simulateur-requalification-loyer/  301!
 
-/fr/simulateur-interets-composes.html  /fr/simulateur-interets-composes/  301
-/nl/simulateur-interets-composes.html  /nl/simulateur-interets-composes/  301
-/en/simulateur-interets-composes.html  /en/simulateur-interets-composes/  301
-/de/simulateur-interets-composes.html  /de/simulateur-interets-composes/  301
+/fr/simulateur-interets-composes.html  /fr/simulateur-interets-composes/  301!
+/nl/simulateur-interets-composes.html  /nl/simulateur-interets-composes/  301!
+/en/simulateur-interets-composes.html  /en/simulateur-interets-composes/  301!
+/de/simulateur-interets-composes.html  /de/simulateur-interets-composes/  301!
 
-/fr/simulateur-retenue.html  /fr/simulateur-retenue/  301
-/nl/simulateur-retenue.html  /nl/simulateur-retenue/  301
-/en/simulateur-retenue.html  /en/simulateur-retenue/  301
-/de/simulateur-retenue.html  /de/simulateur-retenue/  301
+/fr/simulateur-retenue.html  /fr/simulateur-retenue/  301!
+/nl/simulateur-retenue.html  /nl/simulateur-retenue/  301!
+/en/simulateur-retenue.html  /en/simulateur-retenue/  301!
+/de/simulateur-retenue.html  /de/simulateur-retenue/  301!
 
-/fr/pcmn-complet-societe-et-asbl.html  /fr/pcmn-complet-societe-et-asbl/  301
-/nl/pcmn-complet-societe-et-asbl.html  /nl/pcmn-complet-societe-et-asbl/  301
-/en/pcmn-complet-societe-et-asbl.html  /en/pcmn-complet-societe-et-asbl/  301
-/de/pcmn-complet-societe-et-asbl.html  /de/pcmn-complet-societe-et-asbl/  301
+/fr/pcmn-complet-societe-et-asbl.html  /fr/pcmn-complet-societe-et-asbl/  301!
+/nl/pcmn-complet-societe-et-asbl.html  /nl/pcmn-complet-societe-et-asbl/  301!
+/en/pcmn-complet-societe-et-asbl.html  /en/pcmn-complet-societe-et-asbl/  301!
+/de/pcmn-complet-societe-et-asbl.html  /de/pcmn-complet-societe-et-asbl/  301!
 
-/fr/quick-memento-fiscal.html  /fr/quick-memento-fiscal/  301
-/nl/quick-memento-fiscal.html  /nl/quick-memento-fiscal/  301
-/en/quick-memento-fiscal.html  /en/quick-memento-fiscal/  301
-/de/quick-memento-fiscal.html  /de/quick-memento-fiscal/  301
+/fr/quick-memento-fiscal.html  /fr/quick-memento-fiscal/  301!
+/nl/quick-memento-fiscal.html  /nl/quick-memento-fiscal/  301!
+/en/quick-memento-fiscal.html  /en/quick-memento-fiscal/  301!
+/de/quick-memento-fiscal.html  /de/quick-memento-fiscal/  301!
 
-/fr/mentions-legales.html  /fr/mentions-legales/  301
-/nl/mentions-legales.html  /nl/mentions-legales/  301
-/en/mentions-legales.html  /en/mentions-legales/  301
-/de/mentions-legales.html  /de/mentions-legales/  301
+/fr/mentions-legales.html  /fr/mentions-legales/  301!
+/nl/mentions-legales.html  /nl/mentions-legales/  301!
+/en/mentions-legales.html  /en/mentions-legales/  301!
+/de/mentions-legales.html  /de/mentions-legales/  301!
 
 # .com → .be redirect (SEO canonical)
 https://lacavernedelacompta.com/*  https://lacavernedelacompta.be/:splat  301!
@@ -62,3 +62,15 @@ https://www.lacavernedelacompta.be/*  https://lacavernedelacompta.be/:splat  301
 /nl/remboursement-frais.html  /nl/remboursement-frais/  301
 /en/remboursement-frais.html  /en/remboursement-frais/  301
 /de/remboursement-frais.html  /de/remboursement-frais/  301
+
+# Ancien simulateur-frais-propres → questionnaire-frais-propres (v153)
+/fr/simulateur-frais-propres/  /fr/questionnaire-frais-propres/  301!
+/nl/simulateur-frais-propres/  /nl/questionnaire-frais-propres/  301!
+/de/simulateur-frais-propres/  /de/questionnaire-frais-propres/  301!
+/en/simulateur-frais-propres/  /en/questionnaire-frais-propres/  301!
+
+# bordereau-commission → new slugs (v153)
+/fr/bordereau-commission/  /fr/commission-assurance/  301!
+/nl/bordereau-commission/  /nl/commissie-verzekeringen/  301!
+/de/bordereau-commission/  /de/provisionsnachweis-versicherungen/  301!
+/en/bordereau-commission/  /en/insurance-commission/  301!

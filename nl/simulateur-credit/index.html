@@ -21,7 +21,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lacavernedelacompta.be/simulateur-credit.html">
 <meta property="og:site_name" content="La Caverne de la Compta">
-<meta property="og:locale" content="fr_BE">
+<meta property="og:locale" content="nl_BE">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -85,16 +85,16 @@ nav {
 .dd-new{margin-left:auto;background:var(--teal);color:#fff;font-size:.6rem;font-weight:700;padding:2px 7px;border-radius:20px;}
 
 /* ── Hero ── */
-.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);padding:38px 40px 32px;position:relative;overflow:hidden;}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);padding:38px 40px 32px;position:relative;overflow:hidden;text-align:center;}
 .hero::before{content:'';position:absolute;top:-60px;right:-60px;width:320px;height:320px;background:radial-gradient(circle,rgba(26,122,138,.18) 0%,transparent 70%);pointer-events:none;}
-.hero-inner{max-width:1200px;margin:0 auto;}
+.hero-inner{max-width:1200px;margin:0 auto;text-align:center;}
 .hero-bread{font-size:.73rem;color:rgba(255,255,255,.45);margin-bottom:10px;}
 .hero-bread a{color:rgba(255,255,255,.45);text-decoration:none;}
 .hero-bread a:hover{color:#fff;}
 .hero-badge{display:inline-block;background:rgba(26,122,138,.3);color:var(--teal-light);font-size:.7rem;font-weight:600;padding:4px 12px;border-radius:20px;letter-spacing:.08em;margin-bottom:12px;}
 .hero h1{font-family:'Lora',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;color:#fff;margin-bottom:8px;line-height:1.25;}
 .hero h1 span{color:var(--teal-light);}
-.hero p{font-size:.9rem;color:rgba(255,255,255,.65);max-width:520px;}
+.hero p{font-size:.9rem;color:rgba(255,255,255,.65);max-width:520px;margin:0 auto;}
 
 /* ── Update badge ── */
 .update-bar{text-align:right;font-size:.7rem;color:var(--text-light);padding:5px 40px 0;font-style:italic;}
@@ -601,7 +601,7 @@ gtag('config', 'G-WNHZDLVPEL');
   <span class="topbar-left">🇧🇪 La Caverne de la Compta</span>
   <div class="topbar-right">
     <a href="/nl/mentions-legales/">Wettelijke vermeldingen</a>
-    <a href="mentions-legales.html#rgpd">GDPR</a>
+    <a href="/nl/mentions-legales/#rgpd">GDPR</a>
   </div>
 </div>
 
@@ -656,6 +656,8 @@ gtag('config', 'G-WNHZDLVPEL');
         <a href="/nl/quick-memento-fiscal/"><span class="dd-icon">📌</span>Fiscale memo</a>
         <a href="/nl/remboursement-frais/"><span class="dd-icon">🚗</span>Kilometervergoeding</a>
         <a href="/nl/questionnaire-frais-propres/"><span class="dd-icon">💼</span>Eigen Kosten</a>
+        <a href="/nl/simulateur-plus-value-immobiliere/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">🏡</span>Meerwaarde Vastgoed</a>
+        <a href="/nl/commissie-verzekeringen/"><span class="dd-icon">📑</span>Commissieborderel</a>
       </div>
     </li>
   </ul>
@@ -663,10 +665,10 @@ gtag('config', 'G-WNHZDLVPEL');
   <div class="lang-dropdown" style="position:relative;display:inline-block;" id="langSwitcher">
     <button class="lang-current" onclick="toggleLangMenu(event)">🇧🇪 NL</button>
     <div class="lang-menu">
-<a href="https://lacavernedelacompta.be/nl/simulateur-credit/" class="active">🇫🇷 Français</a>
+<a href="https://lacavernedelacompta.be/fr/simulateur-credit/" class="">🇫🇷 Français</a>
 <a href="https://lacavernedelacompta.be/nl/simulateur-credit/" class="active">🇧🇪 Nederlands</a>
-<a href="https://lacavernedelacompta.be/en/simulateur-credit/" class="">🇬🇧 English</a>
 <a href="https://lacavernedelacompta.be/de/simulateur-credit/" class="">🇩🇪 Deutsch</a>
+<a href="https://lacavernedelacompta.be/en/simulateur-credit/" class="">🇬🇧 English</a>
     </div>
   </div>
   <!-- ══════════════════════ -->
@@ -859,7 +861,7 @@ gtag('config', 'G-WNHZDLVPEL');
     <strong style="color:#4A6279;">⚠️ Louter indicatief:</strong>
     Deze simulator is alleen ter indicatie. De resultats vormen geen kredietaanbod.
     <strong style="color:#4A6279;">Consultez votre banque, courtier ou conseiller financier</strong> avant tout engagement.
-    — <a href="mentions-legales.html#disclaimer" style="color:#1A7A8A;text-decoration:none;">Volledige wettelijke vermeldingen</a>
+    — <a href="/nl/mentions-legales/#disclaimer" style="color:#1A7A8A;text-decoration:none;">Volledige wettelijke vermeldingen</a>
   </div>
 </div>
 <div class="expert-section">
@@ -1224,7 +1226,7 @@ calculate();
 </style>
 <div id="cb">
   <div class="cbt">
-    <p>🍪 <strong style="color:#fff">Deze website gebruikt cookies.</strong> De noodzakelijke cookies zorgen voor het functioneren van de site. <a href="mentions-legales.html#cookies">Meer weten</a></p>
+    <p>🍪 <strong style="color:#fff">Deze website gebruikt cookies.</strong> De noodzakelijke cookies zorgen voor het functioneren van de site. <a href="/nl/mentions-legales/#cookies">Meer weten</a></p>
     <div class="cbb">
       <button class="cba" onclick="ca()">Alles accepteren</button>
       <button class="cbs" onclick="cs()">Enregistrer</button>

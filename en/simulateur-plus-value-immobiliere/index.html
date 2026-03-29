@@ -1,0 +1,3048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capital Gains Tax Simulator Belgium 2026 | La Caverne de la Compta</title>
+<meta name="description" content="Free calculator for capital gains tax on Belgian real estate. Built, unbuilt, gift, inheritance. Compliant with art. 90 CIR92.">
+<meta name="author" content="La Caverne de la Compta">
+<meta name="robots" content="index, follow">
+<link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-plus-value-immobiliere/">
+<link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-plus-value-immobiliere/">
+<link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-plus-value-immobiliere/">
+<link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-plus-value-immobiliere/">
+<link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-plus-value-immobiliere/">
+<link rel="canonical" href="https://lacavernedelacompta.be/en/simulateur-plus-value-immobiliere/">
+<meta property="og:title" content="Capital Gains Tax Simulator Belgium 2026">
+<meta property="og:description" content="Free calculator for capital gains tax on Belgian real estate. Built, unbuilt, gift, inheritance. Compliant with art. 90 CIR92.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lacavernedelacompta.be/en/simulateur-plus-value-immobiliere/">
+<meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:locale" content="en_BE">
+<meta property="og:site_name" content="La Caverne de la Compta">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Capital Gains Tax Simulator Belgium 2026",
+  "url": "https://lacavernedelacompta.be/en/simulateur-plus-value-immobiliere/",
+  "description": "Free simulator to calculate capital gains tax on real estate in Belgium (art. 90 CIR92)",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+  "publisher": {"@type": "Organization", "name": "La Caverne de la Compta", "url": "https://lacavernedelacompta.be"}
+}
+</script>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="shortcut icon" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNHZDLVPEL"></script>
+<script>gtag('js', new Date());gtag('config', 'G-WNHZDLVPEL');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
+<style>
+:root{
+  --navy:#0D1B2A; --navy-mid:#1B2E44; --navy-light:#243B55;
+  --teal:#1A7A8A; --teal-light:#22A3B8; --teal-pale:#E8F6F8; --teal-ultra:#F0FAFB;
+  --white:#FFFFFF; --bg:#F4F7FA;
+  --text:#1A2535; --text-mid:#4A6279; --text-light:#8A9BB0;
+  --border:#DDE5EF; --shadow:rgba(13,27,42,0.10); --shadow-sm:rgba(13,27,42,0.06);
+  --green:#2E7D32; --green-pale:#EBF7ED;
+  --orange:#E65100; --orange-pale:#FFF3E0;
+  --red:#C62828; --red-pale:#FFEBEE;
+  --gold:#C9A84C;
+  --radius:12px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh;font-size:14px;}
+.topbar{background:var(--navy);padding:9px 40px;display:flex;justify-content:space-between;align-items:center;}
+.topbar-left{font-size:.73rem;color:var(--text-light);letter-spacing:.05em;}
+.topbar-right{display:flex;gap:20px;}
+.topbar-right a{font-size:.73rem;color:var(--text-light);text-decoration:none;}
+.topbar-right a:hover{color:#fff;}
+nav{background:#ffffff;border-bottom:2px solid #22A3B8;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:70px;box-shadow:0 2px 12px rgba(13,27,42,0.08);overflow:visible;position:sticky;top:0;z-index:1000;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-links{display:flex;gap:4px;list-style:none;align-items:center;}
+.nav-links>li{list-style:none;}
+.nav-links a{padding:7px 14px;font-size:.84rem;font-weight:500;color:var(--text-mid);text-decoration:none;border-radius:6px;transition:all .2s;display:block;white-space:nowrap;}
+.nav-links a:hover,.nav-links a.active{background:var(--teal-pale);color:var(--teal);}
+.dd-wrap{position:relative;}
+.dd-btn{display:flex;align-items:center;gap:6px;padding:7px 14px;font-size:.84rem;font-weight:500;color:var(--text-mid);background:none;border:none;cursor:pointer;border-radius:6px;font-family:'DM Sans',sans-serif;transition:all .2s;white-space:nowrap;}
+.dd-btn:hover,.dd-wrap.dd-open .dd-btn{background:var(--teal-pale);color:var(--teal);}
+.dd-chevron{font-size:.52rem;transition:transform .2s;}
+.dd-wrap.dd-open .dd-chevron{transform:rotate(180deg);}
+.dd-menu{display:none;position:absolute;top:calc(100% + 8px);right:0;left:auto;min-width:240px;background:var(--white);border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 32px var(--shadow);z-index:9999;}
+.dd-wrap.dd-open .dd-menu{display:block;}
+.dd-menu a{display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:.83rem;color:var(--text-mid);text-decoration:none;transition:background .15s;}
+.dd-menu a:hover{background:var(--teal-pale);color:var(--teal);}
+.dd-icon{font-size:.95rem;width:20px;text-align:center;}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);padding:38px 40px 32px;position:relative;overflow:hidden;text-align:center;}
+.hero::before{content:'';position:absolute;top:-60px;right:-60px;width:320px;height:320px;background:radial-gradient(circle,rgba(26,122,138,.18) 0%,transparent 70%);pointer-events:none;}
+.hero-inner{max-width:1200px;margin:0 auto;text-align:center;}
+.hero-bread{font-size:.73rem;color:rgba(255,255,255,.45);margin-bottom:10px;}
+.hero-bread a{color:rgba(255,255,255,.45);text-decoration:none;}
+.hero-bread a:hover{color:#fff;}
+.hero-badge{display:inline-block;background:rgba(26,122,138,.3);color:var(--teal-light);font-size:.7rem;font-weight:600;padding:4px 12px;border-radius:20px;letter-spacing:.08em;margin-bottom:12px;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;color:#fff;margin-bottom:8px;line-height:1.25;}
+.hero h1 span{color:var(--teal-light);}
+.hero p{font-size:.9rem;color:rgba(255,255,255,.65);max-width:520px;margin:0 auto;}
+footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:.76rem;}
+.footer-links{display:flex;gap:18px;}
+.footer-links a{color:rgba(255,255,255,.35);text-decoration:none;}
+.footer-links a:hover{color:#fff;}
+.lang-dropdown{position:relative;display:inline-block;}
+.lang-current{display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:6px;background:#1A7A8A;color:#fff;font-size:0.78rem;font-weight:700;cursor:pointer;border:none;letter-spacing:0.05em;white-space:nowrap;}
+.lang-current:after{content:' ▾';font-size:0.7rem;}
+.lang-menu{display:none;position:absolute;top:calc(100% + 4px);right:0;background:#fff;border:1px solid #DDE5EF;border-radius:8px;box-shadow:0 8px 24px rgba(13,27,42,0.12);min-width:120px;z-index:999999;overflow:hidden;}
+.lang-dropdown.open .lang-menu{display:block;}
+.lang-menu a{display:flex;align-items:center;gap:8px;padding:10px 14px;font-size:0.82rem;font-weight:500;color:#1A2535;text-decoration:none;border-bottom:1px solid #F4F7FA;transition:background 0.15s;}
+.lang-menu a:last-child{border-bottom:none;}
+.lang-menu a:hover{background:#E8F5F7;color:#1A7A8A;}
+.lang-menu a.active{font-weight:700;color:#1A7A8A;}
+.hamburger{display:none;}
+@media(max-width:768px){
+  nav{padding:0 16px!important;height:56px!important;}
+  .nav-links{display:none!important;}
+  .nav-links.mobile-open{display:flex!important;flex-direction:column;position:fixed;top:56px;left:0;right:0;background:#fff;border-bottom:2px solid #22A3B8;box-shadow:0 8px 32px rgba(13,27,42,0.15);z-index:9998;padding:8px 0;max-height:calc(100vh - 56px);overflow-y:auto;}
+  .nav-links.mobile-open>li>a{display:block!important;padding:14px 20px;font-size:1rem;border-bottom:1px solid #DDE5EF;color:#1A2535!important;text-align:center;}
+  .dd-wrap{width:100%;}
+  .dd-btn{width:100%!important;text-align:center;padding:14px 20px;font-size:1rem;border-bottom:1px solid #DDE5EF;background:none;border-left:none;border-right:none;border-top:none;border-radius:0;color:#1A2535;}
+  .dd-menu{position:static!important;box-shadow:none!important;border:none!important;border-radius:0!important;background:#F4F7FA!important;min-width:unset!important;display:none!important;}
+  .dd-wrap.dd-open .dd-menu{display:block!important;}
+  .dd-menu a{padding:12px 20px 12px 40px!important;border-bottom:1px solid #DDE5EF!important;font-size:0.9rem!important;display:block!important;}
+  .hamburger{display:flex!important;flex-direction:column;gap:5px;cursor:pointer;padding:8px;margin-left:auto;background:none;border:none;z-index:9999;flex-shrink:0;}
+  .hamburger span{display:block;width:24px;height:2px;background:#1A2535;border-radius:2px;transition:all 0.3s;}
+  .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+  .hamburger.open span:nth-child(2){opacity:0;}
+  .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+  #langSwitcher{margin-left:8px;}
+  .topbar,.hero,footer{padding-left:16px;padding-right:16px;}
+}
+html,body{max-width:100vw;overflow-x:hidden;}
+  :root {
+    --bg: #F4F7FA;
+    --surface: #ffffff;
+    --surface2: #EBF3F5;
+    --border: #DDE5EF;
+    --accent: #0D1B2A;
+    --accent2: #C9A84C;
+    --accent-light: #E8F6F8;
+    --text: #1A2535;
+    --text-muted: #4A6279;
+    --danger: #C62828;
+    --danger-light: #fdf0f0;
+    --success: #2E7D32;
+    --success-light: #eaf4ee;
+    --warning: #E65100;
+    --warning-light: #fdf6ee;
+    --radius: 12px;
+    --radius-sm: 6px;
+    --shadow: 0 2px 12px rgba(13,27,42,0.10);
+    --shadow-lg: 0 8px 32px rgba(13,27,42,0.18);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* HEADER */
+  /* hero styles handled by site CSS above */
+  .hero-badge {
+    display: inline-block;
+    background: rgba(26,122,138,0.3);
+    color: #22A3B8;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: 'Lora', serif;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .hero p {
+    color: rgba(255,255,255,0.65);
+    font-size: 0.9rem;
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* LAYOUT */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 16px 60px;
+  }
+
+  /* STEP TABS */
+  .tabs {
+    display: flex;
+    gap: 4px;
+    background: var(--surface2);
+    border-radius: var(--radius);
+    padding: 4px;
+    margin-bottom: 28px;
+    border: 1px solid var(--border);
+  }
+  .tab-btn {
+    flex: 1;
+    padding: 10px 8px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .tab-btn.active {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(26,61,43,0.3);
+  }
+  .tab-btn .tab-icon { font-size: 16px; }
+
+  /* SECTIONS */
+  .section { display: none; }
+  .section.active { display: block; }
+
+  /* CARDS */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+  }
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card-title .icon { font-size: 20px; }
+
+  /* FORM ELEMENTS */
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .form-row.single { grid-template-columns: 1fr; }
+  .form-row
+
+  @media (max-width: 600px) {
+    .form-row, .form-row
+  }
+
+  .field { display: flex; flex-direction: column; gap: 5px; }
+  .field label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .field input, .field select {
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--text);
+    background: var(--surface);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    width: 100%;
+  }
+  .field input:focus, .field select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(26,61,43,0.1);
+  }
+  .field .hint {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .field input.euro { padding-right: 36px; }
+
+  /* TOOLTIPS */
+  .label-wrap {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative; /* anchor for tooltip */
+  }
+  .tip-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    background: var(--border);
+    color: var(--text-muted);
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    flex-shrink: 0;
+    transition: background 0.15s, color 0.15s;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1;
+  }
+  .tip-btn:hover, .tip-btn.active { background: var(--accent); color: #fff; }
+  .tooltip-box {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 999;
+    width: 340px;
+    max-width: calc(100vw - 32px);
+    background: #1c2e24;
+    color: #E8F6F8;
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    font-size: 12.5px;
+    line-height: 1.6;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  }
+  .tooltip-box::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 10px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #1c2e24;
+  }
+  .tooltip-box.visible { display: block; animation: tipIn 0.15s ease; }
+  @keyframes tipIn { from { opacity:0; transform:translateY(-4px); } to { opacity:1; transform:translateY(0); } }
+  .tooltip-box strong { color: #e8b76a; }
+  .tooltip-box .tip-example {
+    margin-top: 8px;
+    padding: 8px 10px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 4px;
+    border-left: 2px solid var(--accent2);
+    font-size: 12px;
+  }
+  .tooltip-box .tip-example em { color: #aad4b8; font-style: normal; }
+  .tip-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 12px; }
+  .tip-table th { text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: #aad4b8; padding: 0 0 4px 0; border-bottom: 1px solid rgba(255,255,255,0.12); }
+  .tip-table th:last-child { text-align: center; }
+  .tip-table td { padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.06); vertical-align: top; line-height: 1.4; }
+  .tip-table td:last-child { text-align: center; white-space: nowrap; padding-left: 8px; }
+  .tip-table tr:last-child td { border-bottom: none; }
+  .tip-table .dim { color: rgba(232,240,235,0.5); font-size: 11px; }
+  .tip-warn { margin-top: 8px; padding: 7px 9px; background: rgba(200,131,42,0.18); border-left: 2px solid var(--accent2); border-radius: 3px; font-size: 11.5px; color: #e8c87a; line-height: 1.5; }
+
+  /* SECTION COMMENT ÇA MARCHE */
+  .explainer-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    background: linear-gradient(135deg, #0D1B2A 0%, #2d6a4f 100%);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    color: #fff;
+    margin-bottom: 4px;
+    transition: all 0.25s;
+    box-shadow: 0 4px 16px rgba(26,61,43,0.25);
+    position: relative;
+    overflow: hidden;
+  }
+  .explainer-toggle::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg, transparent, transparent 30px,
+      rgba(255,255,255,0.03) 30px, rgba(255,255,255,0.03) 60px
+    );
+  }
+  .explainer-toggle:hover {
+    background: linear-gradient(135deg, #142e20 0%, #245a40 100%);
+    box-shadow: 0 6px 24px rgba(26,61,43,0.35);
+    transform: translateY(-1px);
+  }
+  .explainer-toggle.open {
+    border-radius: var(--radius) var(--radius) 0 0;
+    box-shadow: 0 2px 8px rgba(26,61,43,0.2);
+  }
+  .explainer-toggle-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+  }
+  .explainer-toggle-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .explainer-toggle-text { text-align: left; }
+  .explainer-toggle-title {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+  .explainer-toggle-sub {
+    font-size: 11.5px;
+    opacity: 0.7;
+    margin-top: 2px;
+    font-weight: 400;
+  }
+  .explainer-toggle-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    position: relative;
+  }
+  .explainer-toggle-badge {
+    background: rgba(200,131,42,0.35);
+    border: 1px solid rgba(200,131,42,0.5);
+    color: #e8c87a;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 100px;
+  }
+  .explainer-toggle .arrow {
+    width: 28px;
+    height: 28px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+  }
+  .explainer-toggle.open .arrow { transform: rotate(180deg); }
+  .explainer-body {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 var(--radius) var(--radius);
+    margin-bottom: 20px;
+  }
+  .explainer-body.open { max-height: 4000px; }
+  .explainer-inner { padding: 24px; }
+  .explainer-section { margin-bottom: 28px; }
+  .explainer-section:last-child { margin-bottom: 0; }
+  .explainer-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--accent);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .explainer-section p { font-size: 13.5px; color: var(--text); line-height: 1.7; margin-bottom: 8px; }
+  .explainer-section p:last-child { margin-bottom: 0; }
+  .explainer-section ul { padding-left: 18px; font-size: 13.5px; line-height: 1.8; color: var(--text); }
+  .explainer-formula {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent2);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    font-size: 13px;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    margin: 10px 0;
+    line-height: 1.8;
+  }
+  .explainer-formula .formula-title { font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-muted); margin-bottom: 4px; }
+  .explainer-example {
+    background: #fffdf5;
+    border: 1px solid #e8d8a8;
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    font-size: 13px;
+    margin: 10px 0;
+    line-height: 1.7;
+  }
+  .explainer-example .ex-title { font-weight: 700; color: var(--accent2); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+  .explainer-example table { width: 100%; border-collapse: collapse; margin-top: 6px; }
+  .explainer-example td { padding: 3px 0; font-size: 12.5px; }
+  .explainer-example td:last-child { text-align: right; font-weight: 500; }
+  .explainer-example tr.ex-total td { border-top: 1px solid #d8c888; font-weight: 700; padding-top: 5px; color: var(--accent); }
+  .synop-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
+  .synop-table th { background: var(--accent); color: #fff; padding: 8px 12px; text-align: left; font-size: 12px; font-weight: 600; }
+  .synop-table td { padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+  .synop-table tr:last-child td { border-bottom: none; }
+  .synop-table td:first-child { font-size: 12.5px; white-space: nowrap; color: var(--text-muted); width: 160px; }
+  .synop-rate { display: inline-block; margin-top: 3px; font-size: 11.5px; color: var(--danger); font-weight: 600; }
+  .synop-exempt { color: var(--success); font-weight: 500; background: var(--success-light); }
+  @media (max-width: 500px) { .synop-table td:first-child { white-space: normal; width: auto; } }
+  .taux-card { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px 14px; }
+  .taux-card .tc-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 4px; }
+  .taux-card .tc-rate { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--accent); }
+  .taux-card .tc-cond { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  @media (max-width: 500px) { }
+
+  .input-wrap { position: relative; }
+  .input-wrap .unit {
+    position: absolute;
+    right: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    color: var(--text-muted);
+    pointer-events: none;
+    font-weight: 500;
+  }
+
+  /* TOGGLE / CHECKBOX */
+  .toggle-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    cursor: pointer;
+  }
+  .toggle-row input[type=checkbox] { display: none; }
+  .toggle {
+    width: 40px;
+    height: 22px;
+    background: var(--border);
+    border-radius: 100px;
+    position: relative;
+    flex-shrink: 0;
+    transition: background 0.2s;
+  }
+  .toggle::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.2s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  }
+  .toggle-row input:checked ~ .toggle { background: var(--accent); }
+  .toggle-row input:checked ~ .toggle::after { transform: translateX(18px); }
+  .toggle-label { font-size: 13px; font-weight: 500; color: var(--text); }
+
+  /* COLLAPSIBLE */
+  .collapsible { overflow: hidden; max-height: 0; transition: max-height 0.35s ease; }
+  .collapsible.open { max-height: 1000px; }
+
+  /* SEPARATOR */
+  .sep {
+    border: none;
+    border-top: 1px dashed var(--border);
+    margin: 16px 0;
+  }
+
+  /* INFO BOX */
+  .info-box {
+    background: var(--accent-light);
+    border: 1px solid #b8d4bf;
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius-sm);
+    padding: 11px 14px;
+    font-size: 13px;
+    color: var(--accent);
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+  .info-box strong { display: block; margin-bottom: 2px; font-weight: 600; }
+
+  /* WARNING BOX */
+  .warn-box {
+    background: var(--warning-light);
+    border: 1px solid #e8c89a;
+    border-left: 3px solid var(--warning);
+    border-radius: var(--radius-sm);
+    padding: 11px 14px;
+    font-size: 13px;
+    color: #7a4a15;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+
+  /* RADIO PILLS */
+  .radio-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .radio-pills input[type=radio] { display: none; }
+  .radio-pills label {
+    padding: 7px 16px;
+    border: 1.5px solid var(--border);
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .radio-pills input:checked + label {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+
+  /* BUTTON */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 28px;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+  }
+  .btn-primary:hover { background: #142e20; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(26,61,43,0.3); }
+  .btn-secondary {
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .btn-secondary:hover { background: var(--border); }
+  .btn-full { width: 100%; justify-content: center; }
+  .btn-row { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; }
+
+  /* RESULTS */
+  #results-section { animation: fadeIn 0.4s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+  .result-hero {
+    background: var(--accent);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .result-hero-label { font-size: 13px; opacity: 0.7; margin-bottom: 4px; }
+  .result-hero-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 700;
+    color: #fff;
+  }
+  .result-hero-tax {
+    text-align: right;
+  }
+  .result-hero-tax-label { font-size: 13px; opacity: 0.7; margin-bottom: 4px; }
+  .result-hero-tax-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 700;
+    color: #e8b76a;
+  }
+  .result-hero.exempt {
+    background: var(--success);
+  }
+  .result-hero.no-pv {
+    background: #555;
+  }
+
+  .result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 500px) { .result-grid { grid-template-columns: 1fr; } }
+
+  .result-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px;
+  }
+  .result-card-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 6px; }
+  .result-card-value { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 600; color: var(--text); }
+  .result-card-value
+  .result-card-value.negative { color: var(--danger); }
+
+  /* BREAKDOWN TABLE */
+  .breakdown {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .breakdown-title {
+    padding: 14px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    background: var(--surface2);
+    border-bottom: 1px solid var(--border);
+  }
+  .breakdown table { width: 100%; border-collapse: collapse; }
+  .breakdown tr { border-bottom: 1px solid var(--border); }
+  .breakdown tr:last-child { border-bottom: none; }
+  .breakdown td { padding: 11px 18px; font-size: 14px; }
+  .breakdown td:last-child { text-align: right; font-weight: 500; font-variant-numeric: tabular-nums; }
+  .breakdown tr.subtotal td { background: var(--surface2); font-weight: 600; }
+  .breakdown tr.total td { background: var(--accent); color: #fff; font-weight: 700; font-size: 15px; }
+  .breakdown tr.deduct td:last-child { color: var(--danger); }
+  .breakdown tr.add td:last-child { color: var(--success); }
+  .ipp-letter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-right: 6px;
+    flex-shrink: 0;
+  }
+  .breakdown td:first-child { display: flex; align-items: flex-start; }
+  .ipp-code-row { font-size: 12px !important; padding: 9px 18px !important; background: rgba(26,61,43,0.06) !important; color: var(--accent) !important; font-weight: 500; }
+
+  /* REGIME BADGE */
+  .regime-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .regime-33 { background: #fdecea; color: #b84040; }
+  .regime-165 { background: #fff8e1; color: #b87333; }
+  .regime-0 { background: #f0f0f0; color: #555; }
+
+  /* NOTE FISCALE */
+  .fiscal-note {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    font-size: 12.5px;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+  .fiscal-note strong { color: var(--text); }
+
+  /* PRINT */
+  @media print {
+    .hero, .tabs, .btn-row, .form-section { display: none !important; }
+    #results-section { display: block !important; }
+    body { background: #fff; }
+  }
+
+  /* LOADER DOTS */
+  .field-error input, .field-error select {
+    border-color: #b84040 !important;
+    box-shadow: 0 0 0 3px rgba(184,64,64,0.15) !important;
+    animation: errorPulse 0.4s ease;
+  }
+  @keyframes errorPulse {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+    100% { transform: translateX(0); }
+  }
+    margin-top: 7px;
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 12.5px;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+  .optim-badge.forfait-mieux {
+    background: var(--success-light);
+    border: 1px solid #a8d4b8;
+    border-left: 3px solid var(--success);
+    color: var(--success);
+  }
+  .optim-badge.reels-mieux {
+    background: var(--warning-light);
+    border: 1px solid #e8c89a;
+    border-left: 3px solid var(--warning);
+    color: #7a4a15;
+  }
+  .optim-badge.egal {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+  }
+    text-align: center;
+    font-size: 11.5px;
+    color: var(--text-muted);
+    margin-top: 24px;
+    padding: 0 12px;
+    line-height: 1.6;
+  }
+
+
+/* ═══════════════════════════════════════════════════════════
+   PALETTE OVERRIDE — La Caverne de la Compta
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Hero: force proper stacking so body bg doesn't bleed ── */
+.hero { position: relative; z-index: 1; }
+.hero-inner { position: relative; z-index: 2; text-align: center; }
+.hero h1 {
+  font-family: 'Lora', serif !important;
+  font-size: clamp(1.6rem, 3vw, 2.4rem) !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  background: none !important;
+  text-shadow: none !important;
+  line-height: 1.25 !important;
+  margin-bottom: 8px !important;
+}
+.hero h1 span { color: #22A3B8 !important; background: none !important; }
+.hero p {
+  color: rgba(255,255,255,0.65) !important;
+  background: none !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+/* ── Tabs ── */
+.tabs { background: #EBF3F5 !important; border-color: #DDE5EF !important; }
+.tab-btn { color: #4A6279 !important; }
+.tab-btn.active {
+  background: linear-gradient(135deg, #0D1B2A, #1B2E44) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(13,27,42,0.25) !important;
+}
+.tab-btn:not(.active):hover { background: #E8F6F8 !important; color: #1A7A8A !important; }
+
+/* ── Cards ── */
+.card {
+  background: #fff !important;
+  border-color: #DDE5EF !important;
+  box-shadow: 0 2px 12px rgba(13,27,42,0.07) !important;
+}
+.card-title {
+  font-family: 'Lora', serif !important;
+  color: #0D1B2A !important;
+  border-bottom-color: #DDE5EF !important;
+}
+
+/* ── Form fields ── */
+.field label { color: #4A6279 !important; }
+.field input, .field select {
+  border-color: #DDE5EF !important;
+  background: #fff !important;
+  color: #1A2535 !important;
+}
+.field input:focus, .field select:focus {
+  border-color: #1A7A8A !important;
+  box-shadow: 0 0 0 3px rgba(26,122,138,0.12) !important;
+}
+
+/* ── Tooltips ── */
+.tip-btn { background: #E8F6F8 !important; color: #1A7A8A !important; border: none !important; }
+.tip-btn:hover, .tip-btn.active { background: #1A7A8A !important; color: #fff !important; }
+.tooltip-box { background: #0D1B2A !important; color: #E8F6F8 !important; }
+.tooltip-box::before { border-bottom-color: #0D1B2A !important; }
+.tooltip-box strong { color: #22A3B8 !important; }
+.tooltip-box .tip-example { border-left-color: #C9A84C !important; }
+.tip-warn { background: rgba(201,168,76,0.12) !important; border-left-color: #C9A84C !important; color: #7A5C10 !important; }
+
+/* ── Explainer banner ── */
+.explainer-toggle {
+  background: linear-gradient(135deg, #0D1B2A 0%, #1B2E44 100%) !important;
+  box-shadow: 0 4px 16px rgba(13,27,42,0.25) !important;
+}
+.explainer-toggle:hover { background: linear-gradient(135deg, #0a1520 0%, #243B55 100%) !important; }
+.explainer-toggle-badge {
+  background: rgba(201,168,76,0.3) !important;
+  border-color: rgba(201,168,76,0.5) !important;
+  color: #C9A84C !important;
+}
+.explainer-section h3 {
+  font-family: 'Lora', serif !important;
+  color: #0D1B2A !important;
+}
+.explainer-formula { border-left-color: #C9A84C !important; }
+.explainer-example .ex-title { color: #1A7A8A !important; }
+.explainer-example tr.ex-total td { color: #0D1B2A !important; }
+.synop-table th { background: #0D1B2A !important; }
+.synop-table .synop-exempt { color: #2E7D32 !important; background: #EBF7ED !important; }
+.taux-card .tc-rate { color: #0D1B2A !important; }
+
+/* ── Result hero box (the big KPI at top of results) ── */
+.result-hero {
+  background: #ffffff !important;
+  border: 1px solid #DDE5EF !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(13,27,42,0.10) !important;
+}
+.result-hero-label {
+  color: #4A6279 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+}
+.result-hero-amount {
+  color: #1A7A8A !important;
+  font-family: 'Lora', serif !important;
+  font-size: clamp(28px, 5vw, 44px) !important;
+  font-weight: 700 !important;
+}
+.result-hero-tax-label {
+  color: #4A6279 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+}
+.result-hero-tax-amount {
+  color: #0D1B2A !important;
+  font-family: 'Lora', serif !important;
+  font-size: clamp(22px, 4vw, 34px) !important;
+  font-weight: 700 !important;
+}
+.result-hero > div > div[style] {
+  color: #8A9BB0 !important;
+}
+.result-hero.exempt {
+  background: #EBF7ED !important;
+  border-color: #A5D6A7 !important;
+}
+.result-hero.exempt .result-hero-label { color: #2E7D32 !important; }
+.result-hero.exempt .result-hero-amount { color: #2E7D32 !important; }
+.result-hero.no-pv {
+  background: #F4F7FA !important;
+  border-color: #DDE5EF !important;
+}
+.result-hero.no-pv .result-hero-amount { color: #8A9BB0 !important; }
+
+/* ── Result cards (the 2-col grid) ── */
+.result-card {
+  background: #fff !important;
+  border: 1px solid #DDE5EF !important;
+  box-shadow: 0 1px 6px rgba(13,27,42,0.06) !important;
+}
+.result-card-label { color: #4A6279 !important; }
+.result-card-value {
+  font-family: 'Lora', serif !important;
+  color: #0D1B2A !important;
+}
+.result-card-value.negative { color: #C62828 !important; }
+
+/* ── Breakdown table ── */
+.breakdown { border-color: #DDE5EF !important; }
+.breakdown-title { color: #0D1B2A !important; border-bottom-color: #DDE5EF !important; }
+.breakdown-row td { border-bottom-color: #DDE5EF !important; color: #1A2535 !important; }
+.breakdown-row.total td {
+  background: #F4F7FA !important;
+  color: #0D1B2A !important;
+  font-weight: 700 !important;
+}
+.breakdown-row.total-pv td {
+  background: linear-gradient(135deg, #0D1B2A, #1B2E44) !important;
+  color: #fff !important;
+}
+.breakdown-row.tax-row td { color: #C62828 !important; }
+
+/* ── Regime badge ── */
+.regime-badge, [class*="regime"] {
+  background: #FFEBEE !important;
+  color: #C62828 !important;
+  border-color: #FFCDD2 !important;
+}
+
+/* ── Toggle switches ── */
+.toggle { background: #DDE5EF !important; }
+input[type=checkbox]:checked + .toggle { background: #1A7A8A !important; }
+
+/* ── Buttons ── */
+.btn-primary, button.btn-calc, .btn-submit {
+  background: linear-gradient(135deg, #1A7A8A, #22A3B8) !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+/* ── Misc ── */
+.container { background: transparent !important; }
+
+</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Capital Gains Tax Simulator Belgium 2026">
+<meta name="twitter:description" content="Calculate your capital gains tax on Belgian real estate. Compliant with art. 90 CIR92.">
+<meta name="twitter:image" content="https://lacavernedelacompta.be/logo.svg">
+</head>
+<body>
+<div class="topbar">
+  <span class="topbar-left">🇧🇪 La Caverne de la Compta</span>
+  <div class="topbar-right">
+    <a href="/en/mentions-legales/">Legal notice</a>
+    <a href="/en/mentions-legales/#rgpd">GDPR</a>
+  </div>
+</div>
+
+<nav class="main-nav">
+<a href="/en/" class="logo" style="text-decoration:none;display:flex;align-items:center;">
+    <svg width="148" height="38" viewBox="0 0 148 38" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <defs>
+        <linearGradient id="hGn" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0D1B2A"/>
+          <stop offset="100%" style="stop-color:#1A3A5C"/>
+        </linearGradient>
+      </defs>
+      <!-- Hexagone -->
+      <polygon points="19,2 31,9 31,23 19,30 7,23 7,9" fill="url(#hGn)"/>
+      <!-- Reflet top -->
+      <polygon points="19,2 31,9 25,9 19,5 13,9 7,9" fill="rgba(255,255,255,.07)"/>
+      <!-- Bras balance -->
+      <line x1="9" y1="15" x2="29" y2="15" stroke="rgba(255,255,255,.5)" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Tige -->
+      <rect x="17.5" y="15" width="2.5" height="11" rx="1.2" fill="rgba(255,255,255,.35)"/>
+      <!-- Pivot gold -->
+      <circle cx="18.8" cy="15" r="3.2" fill="#C9A84C"/>
+      <circle cx="18.8" cy="15" r="1.4" fill="white" opacity=".9"/>
+      <!-- Socle -->
+      <rect x="13" y="27" width="12" height="2.5" rx="1.2" fill="rgba(255,255,255,.2)"/>
+      <!-- Plateau gauche -->
+      <line x1="9" y1="15" x2="7" y2="21.5" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="7" cy="24" rx="6.5" ry="2.5" fill="#1A7A8A"/>
+      <!-- Plateau droit -->
+      <line x1="29" y1="15" x2="31" y2="20" stroke="rgba(255,255,255,.4)" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="31" cy="22.5" rx="6.5" ry="2.5" fill="#22A3B8"/>
+      <!-- Étoile -->
+      <circle cx="27" cy="7" r="2.5" fill="#C9A84C" opacity=".85"/>
+      <!-- Texte -->
+      <text x="42" y="15.5" font-family="'Playfair Display',serif" font-size="12.5" font-weight="900" fill="#0D1B2A" letter-spacing="-.2">La Caverne</text>
+      <rect x="42" y="18.5" width="104" height="1" rx=".5" fill="#DDE5EF"/>
+      <rect x="42" y="18.5" width="18" height="1" rx=".5" fill="#C9A84C"/>
+      <text x="42" y="30" font-family="'Playfair Display',serif" font-size="10.5" font-weight="700" font-style="italic" fill="#1A7A8A" letter-spacing="-.1">de la Compta</text>
+    </svg>
+  </a>
+        <ul class="nav-links">
+    <li><a href="https://lacavernedelacompta.be/en/">🏠 Home</a></li>
+    <li class="dd-wrap" id="ddWrap">
+      <button class="dd-btn" onclick="toggleDD(event)">🧰 Our tools <span class="dd-chevron">▼</span></button>
+      <div class="dd-menu" id="ddMenu">
+        <a href="/en/simulateur-immobilier/"><span class="dd-icon">🏠</span>Property Simulator</a>
+        <a href="/en/simulateur-credit/"><span class="dd-icon">💳</span>Credit Simulator</a>
+        <a href="/en/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Rent Requalification</a>
+        <a href="/en/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Chart of Accounts</a>
+        <a href="/en/simulateur-interets-composes/"><span class="dd-icon">📈</span>Compound Interest</a>
+        <a href="/en/simulateur-retenue/"><span class="dd-icon">🧾</span>Invoice Withholding</a>
+        <a href="/en/quick-memento-fiscal/"><span class="dd-icon">📌</span>Tax Quick Reference</a>
+        <a href="/en/remboursement-frais/"><span class="dd-icon">🚗</span>Mileage Allowance</a>
+        <a href="/en/questionnaire-frais-propres/"><span class="dd-icon">💼</span>Own Expenses</a>
+        <a href="/en/simulateur-plus-value-immobiliere/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">🏡</span>Real Estate Capital Gains</a>
+        <a href="/en/insurance-commission/"><span class="dd-icon">📑</span>Commission Statement</a>
+      </div>
+    </li>
+  </ul>
+  <!-- ══ SWITCHER LANGUE ══ -->
+  <div class="lang-dropdown" style="position:relative;display:inline-block;" id="langSwitcher">
+    <button class="lang-current" onclick="toggleLangMenu(event)">🇬🇧 EN</button>
+    <div class="lang-menu">
+<a href="https://lacavernedelacompta.be/en/simulateur-plus-value-immobiliere/" class="active">🇫🇷 Français</a>
+<a href="https://lacavernedelacompta.be/nl/simulateur-plus-value-immobiliere/" class="">🇧🇪 Nederlands</a>
+<a href="https://lacavernedelacompta.be/en/simulateur-plus-value-immobiliere/" class="active">🇬🇧 English</a>
+<a href="https://lacavernedelacompta.be/de/simulateur-plus-value-immobiliere/" class="">🇩🇪 Deutsch</a>
+    </div>
+  </div>
+  <!-- ══════════════════════ -->
+
+  
+  <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-bread"><a href="/en/">Home</a> &rsaquo; <a href="#">Tools</a> &rsaquo; Real Estate Capital Gains</div>
+    <div class="hero-badge">🇧🇪 Belgian tax law 2026</div>
+    <h1>Capital Gains Tax <span>Simulator</span></h1>
+    <p>Calculate your tax on capital gains from the sale of a property in Belgium (built or unbuilt). Compliant with art. 90 CIR92.</p>
+  </div>
+</div>
+
+<div style="margin:24px auto;text-align:center;max-width:100%;padding:0 16px;">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8043980001637749"
+     data-ad-slot="8050648588"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="container">
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab-btn active" id="tab-form" onclick="showSection('form-section')">
+      <span class="tab-icon">📝</span> Data
+    </button>
+    <button class="tab-btn" id="tab-results" onclick="showSection('results-section')">
+      <span class="tab-icon">📊</span> Results
+    </button>
+    <button class="tab-btn" id="tab-explication" onclick="showSection('explication-section')">
+      <span class="tab-icon">📖</span> Explanation
+    </button>
+  </div>
+
+  <!-- EXPLICATION SECTION -->
+  <div class="section" id="explication-section">
+
+    <!-- CONTENU EXPLICATIF -->
+    <div class="explainer-inner" style="padding:0">
+
+      <!-- PRINCIPE GÉNÉRAL -->
+      <div class="explainer-section">
+        <h3>🏗️ General principle</h3>
+        <p>In Belgium, the capital gain realised from the <strong>disposal of a private property</strong> is only taxable if realised within a certain period after acquisition. After this period, the capital gain is <strong>totally exempt</strong>, quel que soit son montant.</p>
+        <p>The tax only applies to <strong>disposals for consideration</strong> (sale, contribution to a company, exchange with payment…). An inheritance or gift does not generate <em>pas</em> direct tax on the capital gain — but specific rules apply depending on the mode of acquisition (see table below).</p>
+        <p>Legal basis: <strong>art. 90, 8° and 10° of the Income Tax Code 1992 (ITC 92)</strong>, declared in <strong>Frame XV</strong> of the personal income tax return.</p>
+      </div>
+
+      <!-- TABLEAU SYNOPTIQUE -->
+      <div class="explainer-section">
+        <h3>🗺️ Am I taxable? — Summary table</h3>
+
+        <div class="info-box" style="margin-bottom:14px">
+          <strong>Fundamental rule</strong> — Art. 90 ITC92 only taxes property acquired <em>for consideration</em>. An inheritance or gift of a building is a gratuitous acquisition → never taxable. Exception: the gift of <em>terrain</em>, subject to a double condition.
+        </div>
+
+        <table class="synop-table">
+          <thead>
+            <tr>
+              <th style="width:22%">Mode of acquisition</th>
+              <th style="width:38%">Unbuilt land</th>
+              <th style="width:40%">Built property</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Purchase / exchange</strong></td>
+              <td>
+                Taxable if disposed of within <strong>8 ans</strong> after purchase<br>
+                <span class="synop-rate">33% if &lt; 5 years</span><br>
+                <span class="synop-rate">16.5% between 5 and 8 years</span>
+              </td>
+              <td>
+                Taxable if disposed of within <strong>5 ans</strong> after purchase<br>
+                <span class="synop-rate">16,5 %</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Inheritance (succession)</strong></td>
+              <td class="synop-exempt">✅ Always exempt<br><small>art. 90 ITC92 — gratuitous acquisition</small></td>
+              <td class="synop-exempt">✅ Always exempt<br><small>art. 90 ITC92 — gratuitous acquisition</small></td>
+            </tr>
+            <tr>
+              <td><strong>Gift — building</strong></td>
+              <td>—</td>
+              <td class="synop-exempt">✅ Always exempt<br><small>art. 90, 10° WIB92</small></td>
+            </tr>
+            <tr>
+              <td><strong>Gift — land</strong></td>
+              <td>
+                Taxable si <strong>both conditions are met</strong> :<br>
+                1. Sold within <strong>3 ans</strong> after the gift<br>
+                2. AND within <strong>5 ans</strong> after the donor's purchase<br>
+                <span class="synop-rate">33 % si imposable</span><br>
+                <small>Source: notaire.be</small>
+              </td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td><strong>Land purchase + new construction</strong></td>
+              <td colspan="2">
+                Taxable si <strong>both conditions are met</strong> :<br>
+                1. Construction completed within <strong>5 ans</strong> after the land purchase<br>
+                2. AND the whole sold within <strong>5 ans</strong> after first occupation<br>
+                <span class="synop-rate">16.5% — land and building calculated separately</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Own home</strong></td>
+              <td>—</td>
+              <td class="synop-exempt">✅ Exempt if uninterrupted main residence &gt; 12 months before sale (tolerance 6 months vacancy)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- FORMULE -->
+      <div class="explainer-section">
+        <h3>🧮 How is the capital gain calculated?</h3>
+        <p>The taxable capital gain is the difference between <strong>two terms</strong>. If the result is negative (loss), there is no tax.</p>
+        <table style="width:100%;border-collapse:separate;border-spacing:10px;margin:10px 0">
+          <tr>
+            <td style="width:50%;vertical-align:top">
+              <div class="explainer-formula">
+                <div class="formula-title">1st term — Disposal price</div>
+                <strong>A.</strong> Sale price (or market value if the receiver deems it higher)<br>
+                <strong>B.</strong> – Justified disposal costs (agency fees, advertising, commissions…)<br>
+                <strong>C.</strong> = Difference A – B = <em>net sale price</em>
+              </div>
+            </td>
+            <td style="width:50%;vertical-align:top">
+              <div class="explainer-formula">
+                <div class="formula-title">2nd term — Corrected acquisition price</div>
+                <strong>D.</strong> Purchase price (notarial deed)<br>
+                <strong>E.</strong> + Actual acquisition costs or <strong>legal flat rate minimum 25%</strong><br>
+                <strong>F.</strong> = Total D + E<br>
+                <strong>G.</strong> + <strong>5% of amount F</strong> × nombre d'<strong>full years</strong> elapsed<br>
+                <strong>H.</strong> = Total F + G<br>
+                <em>For built property: + works by registered contractor</em><br>
+                <em>For built property: – compensation for damage received</em>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="explainer-formula" style="text-align:center;font-size:14px;margin-top:0">
+          <strong>Taxable capital gain = C – H</strong> &nbsp;(si positif — sinon 0)
+        </div>
+        <div class="warn-box" style="margin-top:12px">
+          ⚠️ <strong>Only complete years count</strong> for the supplement G. A sale 2 years and 11 months after purchase = 2 full years, not 3. The supplement is calculated on <strong>F = D + E</strong> (not on D alone).
+        </div>
+      </div>
+
+      <!-- LETTRES A→K -->
+      <div class="explainer-section">
+        <h3>🔤 Meaning of letters A → K/L in the personal income tax declaration schema</h3>
+        <p style="font-size:13px;color:var(--text-muted);margin-bottom:10px">These letters correspond exactly to the official schema of Frame XV of the Belgian personal income tax return (annual form).</p>
+        <table class="synop-table">
+          <tbody>
+            <tr>
+              <td style="width:60px"><span class="ipp-letter" style="background:var(--accent)">A</span></td>
+              <td><strong>Sale price</strong> — actual price of the notarial deed, or value retained by the registration receiver if this is higher than the declared price</td>
+            </tr>
+            <tr>
+              <td><span class="ipp-letter" style="background:var(--accent)">B</span></td>
+              <td><strong>Disposal costs</strong> — agency fees (VAT included), advertising costs, commissions. To be proven by invoices. ⚠️ Property withholding tax is <em>pas</em> deductible.</td>
+            </tr>
+            <tr>
+              <td><span class="ipp-letter" style="background:var(--accent)">C</span></td>
+              <td><strong>Net sale price</strong> = A – B</td>
+            </tr>
+            <tr>
+              <td><span class="ipp-letter" style="background:var(--accent)">D</span></td>
+              <td><strong>Purchase price</strong> — price paid at purchase, as recorded in the deed, or value retained by the receiver if higher</td>
+            </tr>
+            <tr>
+              <td><span class="ipp-letter" style="background:var(--accent)">E</span></td>
+              <td><strong>Acquisition ancillary costs</strong> — registration duties, notary fees, deed costs, mortgage registration. If the actual costs are less than 25% of D, it is the <strong>legal flat rate of 25%</strong> qui s'applique.</td>
+            </tr>
+            <tr>
+              <td><span class="ipp-letter" style="background:var(--accent)">F</span></td>
+              <td><strong>Total D + E</strong> — it is on this amount (and not on D alone) that the 5%/year supplement is calculated</td>
+            </tr>
+            <tr>
+              <td><span class="ipp-letter" style="background:var(--accent)">G</span></td>
+              <td><strong>Revalorisation 5 %/an</strong> = 5% × F × number of years <em>complete</em> elapsed between the acquisition date and the disposal date. For a new building, calculated separately: from first occupation for the construction, from the purchase for the land.</td>
+            </tr>
+            <tr>
+              <td><span class="ipp-letter" style="background:var(--accent)">H</span></td>
+              <td><strong>Total F + G</strong> — deduction base for the land. For the building, the works (I) are added and the compensations (J) are deducted to obtain K.</td>
+            </tr>
+            <tr>
+              <td><span class="ipp-letter" style="background:var(--accent)">K / L</span></td>
+              <td><strong>Net taxable capital gain</strong> = C – H for the land (K) or C – K for the building (L). This is the amount multiplied by the tax rate.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- EXEMPLES -->
+      <div class="explainer-section">
+        <h3>📋 Complete numerical examples</h3>
+
+        <div class="explainer-example">
+          <div class="ex-title">Example 1 — Land sold after 3 years (rate 33%)</div>
+          Land purchased on <strong>18/09/2020</strong> pour <strong>48.000 €</strong>. Costs not proven → flat rate 25%. Sold on <strong>16/03/2024</strong>, reassessed value at <strong>78.000 €</strong> by the receiver. Agency fees: €1,250. Duration: <strong>3 full years</strong>.
+          <table>
+            <tr><td>A — Market value retained</td><td>78.000 €</td></tr>
+            <tr><td>B — Disposal costs</td><td>– 1.250 €</td></tr>
+            <tr><td><strong>C — Net sale price</strong></td><td><strong>76.750 €</strong></td></tr>
+            <tr><td>D — Purchase price</td><td>48.000 €</td></tr>
+            <tr><td>E — Ancillary costs (flat rate 25% of D)</td><td>+ 12.000 €</td></tr>
+            <tr><td>F — Total D + E</td><td>60.000 €</td></tr>
+            <tr><td>G — 5 % × 60.000 × 3 ans</td><td>+ 9.000 €</td></tr>
+            <tr><td><strong>H — Total F + G (2nd term)</strong></td><td><strong>69.000 €</strong></td></tr>
+            <tr class="ex-total"><td>K — Taxable capital gain (C – H)</td><td>7.750 €</td></tr>
+            <tr class="ex-total"><td>Tax 33% (land &lt; 5 years)</td><td>2.557,50 €</td></tr>
+          </table>
+        </div>
+
+        <div class="explainer-example" style="margin-top:12px">
+          <div class="ex-title">Example 2 — Built property sold after 4 years (rate 16.5%)</div>
+          House purchased on <strong>12/05/2020</strong> pour <strong>175.000 €</strong>. Works invoiced by contractor: 22,500 €. Sold on <strong>16/06/2024</strong> pour <strong>300.000 €</strong>. Agency fees: 7,500 €. Duration: <strong>4 full years</strong>.
+          <table>
+            <tr><td>A — Sale price</td><td>300.000 €</td></tr>
+            <tr><td>B — Disposal costs</td><td>– 7.500 €</td></tr>
+            <tr><td><strong>C — Net sale price</strong></td><td><strong>292.500 €</strong></td></tr>
+            <tr><td>D — Purchase price</td><td>175.000 €</td></tr>
+            <tr><td>E — Ancillary costs (flat rate 25% of D)</td><td>+ 43.750 €</td></tr>
+            <tr><td>F — Total D + E</td><td>218.750 €</td></tr>
+            <tr><td>G — 5 % × 218.750 × 4 ans</td><td>+ 43.750 €</td></tr>
+            <tr><td>H — Total F + G</td><td>262.500 €</td></tr>
+            <tr><td>Travaux entrepreneur (factures)</td><td>+ 22.500 €</td></tr>
+            <tr><td><strong>I — Total (2nd term)</strong></td><td><strong>285.000 €</strong></td></tr>
+            <tr class="ex-total"><td>L — Taxable capital gain (C – I)</td><td>7.500 €</td></tr>
+            <tr class="ex-total"><td>Tax 16.5%</td><td>1.237,50 €</td></tr>
+          </table>
+        </div>
+
+        <div class="explainer-example" style="margin-top:12px">
+          <div class="ex-title">Example 3 — Land + New construction (rate 16.5% — two separate calculations)</div>
+          Land purchased on <strong>19/03/2026</strong> pour <strong>80.000 €</strong>. Construction : <strong>200.000 €</strong>, first occupation on <strong>01/02/2027</strong>. Sold on <strong>01/06/2029</strong> — land: €120,000 / building: €300,000.
+          <table>
+            <tr><td colspan="2" style="font-weight:600;color:var(--accent);padding-top:6px">Land — 3 full years since purchase</td></tr>
+            <tr><td>C — Land sale price</td><td>120.000 €</td></tr>
+            <tr><td>F — 80.000 + 20.000 (25 %)</td><td>100.000 €</td></tr>
+            <tr><td>G — 5 % × 100.000 × 3 ans</td><td>+ 15.000 €</td></tr>
+            <tr><td>H — Total 2nd term land</td><td>115.000 €</td></tr>
+            <tr class="ex-total"><td>K — Land capital gain</td><td>5.000 €</td></tr>
+            <tr><td colspan="2" style="font-weight:600;color:var(--accent);padding-top:10px">Building — 2 full years since first occupation</td></tr>
+            <tr><td>C — Building sale price</td><td>300.000 €</td></tr>
+            <tr><td>F — 200.000 + 50.000 (25 %)</td><td>250.000 €</td></tr>
+            <tr><td>G — 5 % × 250.000 × 2 ans</td><td>+ 25.000 €</td></tr>
+            <tr><td>I — Total 2nd term building</td><td>275.000 €</td></tr>
+            <tr class="ex-total"><td>L — Building capital gain</td><td>25.000 €</td></tr>
+            <tr class="ex-total"><td><strong>Total tax 16.5% × (5,000 + 25,000)</strong></td><td><strong>4.950 €</strong></td></tr>
+          </table>
+        </div>
+
+        <div class="explainer-example" style="margin-top:12px">
+          <div class="ex-title">Example 4 — Land received as gift (taxable — double condition met)</div>
+          Your mother purchased a plot of land on <strong>01/03/2021</strong> pour <strong>60.000 €</strong>. She gives it to you on <strong>15/06/2023</strong> (market value at the time of the gift: <strong>70.000 €</strong>). You sell on <strong>01/04/2025</strong> pour <strong>90.000 €</strong>.
+          <br><br>
+          <strong>Verification of the two conditions:</strong><br>
+          ✗ Condition 1: 1 year 9 months since the gift → <strong>&lt; 3 ans</strong> ✗<br>
+          ✗ Condition 2: 4 years since the donor's purchase → <strong>&lt; 5 ans</strong> ✗<br>
+          → Both conditions are met → <strong>taxable at 33%</strong>
+          <table style="margin-top:8px">
+            <tr><td>A — Sale price</td><td>90.000 €</td></tr>
+            <tr><td>B — Frais (aucun)</td><td>0 €</td></tr>
+            <tr><td><strong>C — Net sale price</strong></td><td><strong>90.000 €</strong></td></tr>
+            <tr><td>D — Market value at the gift</td><td>70.000 €</td></tr>
+            <tr><td>E — Ancillary costs (25% flat rate)</td><td>+ 17.500 €</td></tr>
+            <tr><td>F — Total D + E</td><td>87.500 €</td></tr>
+            <tr><td>G — 5% × 87,500 × 1 year (since the gift)</td><td>+ 4.375 €</td></tr>
+            <tr><td><strong>H — Total 2nd term</strong></td><td><strong>91.875 €</strong></td></tr>
+            <tr class="ex-total"><td>K — Capital gain (C – H)</td><td>0 € (loss → no tax)</td></tr>
+          </table>
+          <div style="margin-top:6px;font-size:11.5px;color:var(--text-muted)">ℹ️ Here the revaluation (G) absorbs the gross capital gain. Even if the conditions are met, the tax is 0 because C &lt; H.</div>
+        </div>
+
+        <div class="explainer-example" style="margin-top:12px">
+          <div class="ex-title">Example 5 — Own home (exempt)</div>
+          Apartment purchased on <strong>17/02/2019</strong> pour <strong>175.000 €</strong>. Occupied as main residence since purchase. Sold on <strong>20/01/2024</strong> pour <strong>300.000 €</strong> after 4 years 11 months of ownership.
+          <br><br>
+          <strong>Exemption conditions:</strong><br>
+          ✓ Built property occupied uninterruptedly as main residence during the <strong>12 months before the sale</strong> → <strong>total exemption</strong>, regardless of the amount of the capital gain.<br><br>
+          → <strong>Tax due: 0 €</strong> — the potential capital gain of €125,000 is entirely exempt.
+          <div style="margin-top:6px;font-size:11.5px;color:var(--text-muted)">⚠️ This exemption only applies to the building. If an adjacent plot of land is sold separately, its capital gain remains taxable under normal rules.</div>
+        </div>
+      </div>
+
+      <!-- TAUX -->
+      <div class="explainer-section">
+        <h3>📊 Tax rates and municipal additional centimes</h3>
+        <table style="width:100%;border-collapse:separate;border-spacing:10px;margin:10px 0">
+          <tr>
+            <td style="width:25%;vertical-align:top"><div class="taux-card"><div class="tc-label">Land — disposal &lt; 5 years</div><div class="tc-rate">33 %</div><div class="tc-cond">+ centimes additionnels communaux</div></div></td>
+            <td style="width:25%;vertical-align:top"><div class="taux-card"><div class="tc-label">Land — disposal 5 to 8 years</div><div class="tc-rate">16,5 %</div><div class="tc-cond">+ centimes additionnels communaux</div></div></td>
+            <td style="width:25%;vertical-align:top"><div class="taux-card"><div class="tc-label">Built property — always</div><div class="tc-rate">16,5 %</div><div class="tc-cond">+ centimes additionnels communaux</div></div></td>
+            <td style="width:25%;vertical-align:top"><div class="taux-card"><div class="tc-label">Centimes additionnels</div><div class="tc-rate" style="font-size:18px">7–9 %</div><div class="tc-cond">Variable by municipality — on the base tax</div></div></td>
+          </tr>
+        </table>
+        <p style="font-size:12.5px;color:var(--text-muted)">💡 If aggregation with your other income gives a more favourable marginal rate, the tax authority automatically applies the most advantageous rate for you.</p>
+      </div>
+
+    </div>
+  </div><!-- /explication-section -->
+
+
+
+  <!-- FORMULAIRE -->
+  <div class="section active" id="form-section">
+
+    <!-- BIEN -->
+    <div class="card">
+      <div class="card-title"><span class="icon">🏗️</span> Type of property sold</div>
+
+      <div class="form-row single">
+        <div class="field">
+          <div class="label-wrap"><label>Nature of the property</label><button class="tip-btn" type="button" onclick="toggleTip('tip_type_bien',this)">?</button>
+          <div class="tooltip-box" id="tip_type_bien">
+            <strong>Which option to choose?</strong><br>
+            • <strong>Land:</strong> bare land, without a valuable building (or building worth less than 30% of the whole).<br>
+            • <strong>Built property:</strong> house, apartment, building — you have a single overall purchase price.<br>
+            • <strong>Land + Building (split):</strong> use this mode if the deed separately states the value of the land and the building, or if the building is new (constructed after the land purchase). The 5%/year supplement is then calculated separately with different reference dates.
+          </div></div>
+          <div class="radio-pills">
+            <input type="radio" name="type_bien" id="t_terrain" value="terrain" checked onchange="onTypeBienChange()">
+            <label for="t_terrain">Land (unbuilt)</label>
+            <input type="radio" name="type_bien" id="t_bati" value="bati" onchange="onTypeBienChange()">
+            <label for="t_bati">Built property</label>
+            <input type="radio" name="type_bien" id="t_mixte" value="mixte" onchange="onTypeBienChange()">
+            <label for="t_mixte">Land + Building (split)</label>
+          </div>
+        </div>
+      </div>
+
+      <div id="warn-bati-professionnel" class="warn-box" style="display:none">
+        ⚠️ <strong>Note:</strong> This simulator does not cover properties used for professional activities (except agriculture/horticulture). Such capital gains fall under the professional income regime.
+      </div>
+
+      <!-- Exonération habitation propre (bâti uniquement) -->
+      <div id="bloc_habitation_propre" class="collapsible">
+        <div class="sep"></div>
+        <div class="info-box">
+          <strong>🏡 Own home exemption</strong>
+          The capital gain is exempt if the property was your main residence on an uninterrupted basis during the 12 months preceding the sale (tolerance: max. 6 months without occupation during this period).
+        </div>
+        <label class="toggle-row" for="chk_habitation_propre">
+          <input type="checkbox" id="chk_habitation_propre" onchange="onHabitationPropreChange()">
+          <span class="toggle"></span>
+          <span class="toggle-label">This property was my own home (main residence)</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- ACQUISITION -->
+    <div class="card">
+      <div class="card-title"><span class="icon">📅</span> Acquisition</div>
+
+      <div class="form-row">
+        <div class="field">
+          <div class="label-wrap"><label>Mode of acquisition</label><button class="tip-btn" type="button" onclick="toggleTip('tip_mode_acq',this)">?</button>
+          <div class="tooltip-box" id="tip_mode_acq">
+            <strong>How did you acquire this property?</strong>
+            <table class="tip-table">
+              <tr><th>Mode</th><th>Building</th><th>Land</th></tr>
+              <tr><td><strong>Purchase</strong></td><td>16.5% if &lt; 5 years</td><td>33% if &lt; 8 years</td></tr>
+              <tr><td><strong>Inheritance</strong></td><td>✅ Exempt</td><td>✅ Exempt</td></tr>
+              <tr><td><strong>Gift</strong></td><td>✅ Exempt</td><td>⚠️ 33% if &lt; 3 years from gift AND &lt; 5 years from donor's purchase</td></tr>
+            </table>
+            <div class="tip-warn">Legal basis: art. 90, 8° and 10° ITC92 — only property acquired <em>for consideration</em> is taxable.</div>
+          </div></div>
+          <select id="mode_acquisition" onchange="onModeAcquisitionChange()">
+            <option value="onereux">For consideration (purchase, contribution…)</option>
+            <option value="donation">Gift inter vivos</option>
+            <option value="heritage">Inheritance (succession)</option>
+          </select>
+        </div>
+        <div class="field">
+          <div class="label-wrap"><label>Acquisition date (notarial deed)</label><button class="tip-btn" type="button" onclick="toggleTip('tip_date_acq',this)">?</button>
+          <div class="tooltip-box" id="tip_date_acq">
+            <strong>Which date to use?</strong><br>
+            It is the date of the <strong>notarial deed</strong> (passed before a notary), or failing that the date of any other deed or document evidencing the acquisition. For a gift, this is the date of the gift deed.
+          </div></div>
+          <input type="date" id="date_acquisition" onchange="calculerDuree()">
+        </div>
+      </div>
+
+      <!-- Si donation -->
+      <div id="bloc_donation" class="collapsible">
+        <div id="bloc_donation_terrain">
+          <div class="form-row">
+            <div class="field">
+              <label>Date of the donor's acquisition for consideration</label>
+              <input type="date" id="date_acq_donateur" onchange="calculerDuree()">
+              <span class="hint">Date on which the donor acquired the land for consideration</span>
+            </div>
+            <div class="field">
+              <label>Market value of the land at the date of the gift (€)</label>
+              <div class="input-wrap">
+                <input type="number" id="valeur_venale_donation" min="0" step="100" placeholder="0" oninput="onInputChange()" class="euro">
+                <span class="unit">€</span>
+              </div>
+              <span class="hint">Value declared in the gift deed — serves as acquisition price for the calculation</span>
+            </div>
+          </div>
+          <div class="info-box" style="margin-top:8px">
+            <strong>⚠️ Gifted land — double condition (art. 90, 8° ITC92)</strong>
+            <p style="margin-top:6px;margin-bottom:4px">The capital gain is taxable only if <strong>both conditions are met simultaneously</strong> :</p>
+            <p style="margin:3px 0">1. You sell within <strong>3 ans</strong> after the date of the gift</p>
+            <p style="margin:3px 0">2. The sale takes place within <strong>5 ans</strong> since the donor's land purchase date</p>
+            <p style="margin-top:6px 0 0 0">If one of the two conditions is not met → <strong>exempt</strong>.</p>
+          </div>
+        </div>
+        <div id="bloc_donation_bati" class="info-box" style="margin-top:8px;display:none">
+          <strong>✅ Building received as gift — always exempt</strong><br>
+          Art. 90, 10° ITC92 only taxes property acquired <em>for consideration</em>. A building received as a gift can be resold immediately with no taxable capital gain, regardless of the sale price.
+        </div>
+      </div>
+
+      <!-- Si héritage -->
+      <div id="bloc_heritage" class="collapsible">
+        <div class="info-box">
+          <strong>✅ Inheritance — always exempt</strong><br>
+          Art. 90 ITC92 only taxes property acquired <em>for consideration</em>. An inherited property (land or building) can be resold immediately with no taxable capital gain, regardless of the gain realised.
+        </div>
+      </div>
+
+      <div class="sep"></div>
+
+      <!-- TERRAIN -->
+      <div id="bloc_terrain_acq">
+        <div id="lbl_terrain_titre" class="form-row single">
+          <div class="field">
+            <label id="lbl_prix_achat_terrain">Land purchase price (notarial deed or receiver's estimate)</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <div class="label-wrap"><label id="lbl_px_terrain">Land purchase price (€)</label><button class="tip-btn" type="button" onclick="toggleTip('tip_px_terrain',this)">?</button>
+            <div class="tooltip-box" id="tip_px_terrain">
+              <strong>Which amount to enter?</strong><br>
+              The price at which you acquired the property, as stated in the deed. If the registration receiver retained a higher value as the basis for duties, that value serves as the reference.
+              <div class="tip-example"><em>Ex. :</em> Deed signed for €48,000, but the receiver reassessed to €52,000 → use €52,000.</div>
+            </div></div>
+            <div class="input-wrap">
+              <input type="number" id="prix_achat_terrain" min="0" step="100" placeholder="0" oninput="onInputChange();optimisationFrais('terrain')" class="euro">
+              <span class="unit">€</span>
+            </div>
+          </div>
+          <div class="field">
+            <div class="label-wrap"><label>Land ancillary costs (€)</label><button class="tip-btn" type="button" onclick="toggleTip('tip_frais_terrain',this)">?</button>
+            <div class="tooltip-box" id="tip_frais_terrain">
+              <strong>Acquisition ancillary costs</strong><br>
+              Increase the purchase price. If you cannot justify them, the simulator applies the <strong>legal flat rate of 25%</strong> — guaranteed minimum even if your actual costs are lower. For actual costs, they must be proven (invoices) and exceed 25% to be advantageous.
+              <table class="tip-table">
+                <tr><th>Frais</th><th>Ded. ?</th></tr>
+                <tr><td>Registration duties (12.5% Wall./Bxl · 10% Flanders)</td><td>✅</td></tr>
+                <tr><td>Notary's fees at purchase</td><td>✅</td></tr>
+                <tr><td>Notarial file costs</td><td>✅</td></tr>
+                <tr><td>Mortgage registration costs</td><td>✅</td></tr>
+                <tr><td>Surveyor's/expert's fees at purchase</td><td>✅</td></tr>
+                <tr><td>Bank file costs (credit)</td><td>✅ <span class="dim">jurisprudence</span></td></tr>
+                <tr><td>VAT paid if not recoverable</td><td>✅</td></tr>
+                <tr><td>Fire insurance during the holding period</td><td>❌</td></tr>
+                <tr><td>Expert appraisal during the holding period</td><td>❌</td></tr>
+                <tr><td>Loan interest</td><td>❌</td></tr>
+              </table>
+              <div class="tip-warn">⚠️ In practice, the 25% flat rate is almost always more advantageous — it is rarely worthwhile to opt for actual costs.</div>
+              <div class="tip-example">
+                <strong>Ex. flat rate:</strong> purchase €48,000 → €12,000 deducted automatically.<br>
+                <strong>Ex. actual costs:</strong> reg. duties 6,000 + notary 2,200 + deed 800 = <em>€9,000</em> &lt; flat rate → simulator keeps €12,000.
+              </div>
+            </div></div>
+            <div class="input-wrap">
+              <input type="number" id="frais_achat_terrain" min="0" step="100" placeholder="Leave empty = flat rate 25%" oninput="optimisationFrais('terrain')" class="euro">
+              <span class="unit">€</span>
+            </div>
+            <span class="hint">Empty = legal flat rate of 25% applied automatically</span>
+            <div id="optim_terrain" class="optim-badge" style="display:none"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BÂTIMENT (si bâti ou mixte) -->
+      <div id="bloc_bati_acq" class="collapsible">
+        <div class="sep"></div>
+        <div class="form-row">
+          <div class="field">
+            <div class="label-wrap"><label id="lbl_px_bati">Building purchase price (€)</label><button class="tip-btn" type="button" onclick="toggleTip('tip_px_bati',this)">?</button>
+            <div class="tooltip-box" id="tip_px_bati">
+              <strong>In "built-only" mode:</strong> it is your total purchase price (land + construction together).<br><br>
+              <strong>In "Land + Building split" mode:</strong> it is only the share of the price attributed to the construction, as split in the notarial deed. For a new building that you had constructed, it is the total of the construction invoices including VAT.
+            </div></div>
+            <div class="input-wrap">
+              <input type="number" id="prix_achat_bati" min="0" step="100" placeholder="0" oninput="onInputChange();optimisationFrais('bati')" class="euro">
+              <span class="unit">€</span>
+            </div>
+            <span class="hint" id="hint_bati_neuf">For new building: construction price including VAT</span>
+          </div>
+          <div class="field">
+            <div class="label-wrap"><label>Building ancillary costs (€)</label><button class="tip-btn" type="button" onclick="toggleTip('tip_frais_bati',this)">?</button>
+            <div class="tooltip-box" id="tip_frais_bati">
+              <strong>Building acquisition ancillary costs</strong><br>
+              En <strong>built-only mode</strong> : costs paid during the overall purchase (registration duties, notary, deed).<br>
+              En <strong>split mode</strong> : costs specifically related to construction (VAT on architect's fees, notarised construction costs…).<br><br>
+              If the field is empty, the simulator applies the <strong>legal flat rate of 25%</strong> of the building purchase price.
+              <table class="tip-table">
+                <tr><th>Frais</th><th>Ded. ?</th></tr>
+                <tr><td>Registration duties / VAT at purchase</td><td>✅</td></tr>
+                <tr><td>Notary's fees at purchase</td><td>✅</td></tr>
+                <tr><td>Notarial file costs</td><td>✅</td></tr>
+                <tr><td>Mortgage registration costs</td><td>✅</td></tr>
+                <tr><td>Surveyor's/expert's fees at purchase</td><td>✅</td></tr>
+                <tr><td>Bank file costs</td><td>✅ <span class="dim">jurisprudence</span></td></tr>
+                <tr><td>Fire insurance / loan interest</td><td>❌</td></tr>
+              </table>
+              <div class="tip-warn">⚠️ The 25% flat rate is almost always more advantageous than actual costs.</div>
+            </div></div>
+            <div class="input-wrap">
+              <input type="number" id="frais_achat_bati" min="0" step="100" placeholder="Leave empty = flat rate 25%" oninput="optimisationFrais('bati')" class="euro">
+              <span class="unit">€</span>
+            </div>
+            <span class="hint">Empty = legal flat rate of 25% applied</span>
+            <div id="optim_bati" class="optim-badge" style="display:none"></div>
+          </div>
+        </div>
+
+        <div class="field" style="margin-top:4px">
+          <div class="label-wrap"><label>Date of first occupation of the building</label><button class="tip-btn" type="button" onclick="toggleTip('tip_mise_service',this)">?</button>
+          <div class="tooltip-box" id="tip_mise_service">
+            <strong>When should this field be filled in?</strong><br>
+            Only if you have <strong>purchased land</strong> and then <strong>had a building constructed on it</strong>. In this case, the 5%/year supplement is calculated with two separate periods:<br><br>
+            • <strong>Land</strong> → from the land purchase date<br>
+            • <strong>Building</strong> → from the date of <strong>first occupation</strong> (= first occupation or first rental of the new building)<br><br>
+            In all other cases (purchase of an existing house or apartment), <strong>leave this field empty</strong> — the acquisition date serves as reference for everything.
+            <div class="tip-example">
+              <strong>Ex.:</strong> Land purchased Nov. 2020. Construction completed, first occupation May 2021. Sale Aug. 2024.<br>
+              → Land: <em>3 full years</em> since Nov. 2020<br>
+              → Building: <em>3 full years</em> since May 2021<br><br>
+              If first occupation had been in Jan. 2022:<br>
+              → Building: only <em>2 full years</em> → less than 5%/year deducted → higher capital gain.
+            </div>
+          </div></div>
+          <input type="date" id="date_mise_service" onchange="onInputChange()">
+          <span class="hint">Fill in only if land purchased + new construction. Otherwise leave empty.</span>
+        </div>
+
+        <!-- Travaux -->
+        <div class="sep"></div>
+        <div class="form-row single">
+          <div class="field">
+            <div class="label-wrap"><label>Works carried out by a contractor (invoices)</label><button class="tip-btn" type="button" onclick="toggleTip('tip_travaux',this)">?</button>
+            <div class="tooltip-box" id="tip_travaux">
+              <strong>Which works are deductible?</strong><br>
+              Only the works <strong>invoiced by a contractor</strong> and carried out between the first occupation (or acquisition) and the disposal. Materials purchased and installed oneself do not count.
+              <div class="tip-example">✅ Contractor invoice = deductible<br>❌ Materials purchased in a shop = not deductible<br>❌ Your own labour = not deductible</div>
+            </div></div>
+            <div class="input-wrap">
+              <input type="number" id="montant_travaux" min="0" step="100" placeholder="0" oninput="onInputChange()" class="euro">
+              <span class="unit">€</span>
+            </div>
+            <span class="hint">Only works invoiced by a contractor. Self-purchased materials excluded.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ALIÉNATION -->
+    <div class="card">
+      <div class="card-title"><span class="icon">💰</span> Sale / Disposal</div>
+
+      <div class="form-row">
+        <div class="field">
+          <label>Disposal date (notarial deed)</label>
+          <input type="date" id="date_alienation" onchange="calculerDuree()">
+        </div>
+        <!-- Sale price : champ unique (terrain seul ou bâti seul) -->
+        <div class="field" id="bloc_prix_vente_unique">
+          <div class="label-wrap"><label id="lbl_prix_vente_total">Sale price (€)</label><button class="tip-btn" type="button" onclick="toggleTip('tip_prix_vente',this)">?</button>
+          <div class="tooltip-box" id="tip_prix_vente">
+            <strong>Which amount to enter?</strong><br>
+            The sale price stated in the notarial deed. If the registration receiver considers that the market value is higher than the declared price, their reassessed value will serve as the basis — use that higher amount.
+            <div class="tip-example"><em>Ex. :</em> Sale concluded at €71,000, but the receiver reassesses to €78,000 → enter €78,000.</div>
+          </div></div>
+          <div class="input-wrap">
+            <input type="number" id="prix_vente" min="0" step="100" placeholder="0" oninput="onInputChange()" class="euro">
+            <span class="unit">€</span>
+          </div>
+          <span class="hint">Or value reassessed by the receiver if higher</span>
+        </div>
+      </div>
+
+      <!-- Sale price scindé : mode Terrain + Building uniquement -->
+      <div id="bloc_prix_vente_mixte" style="display:none">
+        <div class="info-box" style="margin-bottom:12px">
+          <strong>Land + Building split mode</strong><br>
+          Indicate separately the sale price attributed to the land and the building, as split in the notarial deed or estimated by the registration receiver. The sum must correspond to the total price in the deed.
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label>Sale price — Land (€)</label>
+            <div class="input-wrap">
+              <input type="number" id="prix_vente_terrain" min="0" step="100" placeholder="0" oninput="updateTotalMixte()" class="euro">
+              <span class="unit">€</span>
+            </div>
+            <span class="hint">Land share in the deed or receiver's estimate</span>
+          </div>
+          <div class="field">
+            <label>Sale price — Building (€)</label>
+            <div class="input-wrap">
+              <input type="number" id="prix_vente_bati" min="0" step="100" placeholder="0" oninput="updateTotalMixte()" class="euro">
+              <span class="unit">€</span>
+            </div>
+            <span class="hint">Building share in the deed or receiver's estimate</span>
+          </div>
+        </div>
+        <div id="total_mixte_display" style="display:none;font-size:13px;padding:8px 12px;background:var(--surface2);border-radius:6px;border:1px solid var(--border);margin-top:-6px;margin-bottom:4px">
+          Total sale price: <strong id="total_mixte_val">0 €</strong>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <div class="label-wrap"><label>Disposal costs (€)</label><button class="tip-btn" type="button" onclick="toggleTip('tip_frais_ali',this)">?</button>
+          <div class="tooltip-box" id="tip_frais_ali">
+            <strong>Disposal costs</strong><br>
+            Deducted from the sale price. Must be proven by invoices.
+            <table class="tip-table">
+              <tr><th>Frais</th><th>Ded. ?</th></tr>
+              <tr><td>Real estate agent's commission</td><td>✅</td></tr>
+              <tr><td>Notary's fees at sale (seller's share)</td><td>✅</td></tr>
+              <tr><td>Advertising costs / property listings</td><td>✅</td></tr>
+              <tr><td>Mortgage discharge costs</td><td>✅ <span class="dim">if related to the sale</span></td></tr>
+              <tr><td>Soil decontamination costs required for the sale</td><td>✅</td></tr>
+              <tr><td>Frais administratifs (permis, certificats obligatoires)</td><td>✅ <span class="dim">if required for the sale</span></td></tr>
+              <tr><td>Expert appraisal requested by the buyer</td><td>⚠️ <span class="dim">disputed if borne by the seller</span></td></tr>
+              <tr><td>Property withholding tax</td><td>❌</td></tr>
+              <tr><td>Early loan repayment costs</td><td>❌</td></tr>
+              <tr><td>Notary costs borne by the buyer</td><td>❌</td></tr>
+            </table>
+          </div></div>
+          <div class="input-wrap">
+            <input type="number" id="frais_alienation" min="0" step="100" placeholder="0" oninput="onInputChange()" class="euro">
+            <span class="unit">€</span>
+          </div>
+          <span class="hint">Agency fees, advertising costs, commissions…</span>
+        </div>
+        <div class="field">
+          <div class="label-wrap"><label>Compensation for reduction in value (€)</label><button class="tip-btn" type="button" onclick="toggleTip('tip_indemnite',this)">?</button>
+          <div class="tooltip-box" id="tip_indemnite">
+            <strong>Special case — State or Region compensation</strong><br>
+            If the federal state or a Region has paid you compensation for the reduction in value of your plot (e.g.: road displacement, extension of a non-residential zone), this amount is added to the sale price to calculate any capital gain.
+            <div class="tip-example"><em>This field only covers compensation for reduction in value, not compensation for total expropriation (which is exempt).</em></div>
+          </div></div>
+          <div class="input-wrap">
+            <input type="number" id="indemnite_reduction" min="0" step="100" placeholder="0" oninput="onInputChange()" class="euro">
+            <span class="unit">€</span>
+          </div>
+          <span class="hint">State/Region compensation (e.g. road displacement)</span>
+        </div>
+      </div>
+
+      <!-- Pertes années antérieures -->
+      <div class="sep"></div>
+      <div class="form-row single">
+        <div class="field">
+          <div class="label-wrap"><label>Losses on similar assets (5 previous years) (€)</label><button class="tip-btn" type="button" onclick="toggleTip('tip_pertes',this)">?</button>
+          <div class="tooltip-box" id="tip_pertes">
+            <strong>Offset with previous losses</strong><br>
+            If you have incurred <strong>losses</strong> from disposals of assets of the same nature (land ↔ land, built ↔ built) during the 5 preceding tax years, and these losses have not yet been offset, they are deducted from the current capital gain.
+            <div class="tip-example"><em>Ex.:</em> In 2022, loss of –€5,000 on land. In 2024, capital gain of +€8,000 on other land → taxable basis = 8,000 – 5,000 = <strong>€3,000</strong>.</div>
+          </div></div>
+          <div class="input-wrap">
+            <input type="number" id="pertes_anterieures" min="0" step="100" placeholder="0" oninput="onInputChange()" class="euro">
+            <span class="unit">€</span>
+          </div>
+          <span class="hint">Losses from similar disposals in the 5 preceding tax years</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- taux communaux -->
+    <div class="sep"></div>
+    <div class="form-row single">
+      <div class="field">
+        <div class="label-wrap">
+          <label>Municipal surtax (%)</label>
+          <button class="tip-btn" type="button" onclick="toggleTip('tip_taux_com',this)">?</button>
+          <div class="tooltip-box" id="tip_taux_com">
+            <span class="tt-title">Municipal surtax</span>
+            Added to the base tax. Varies per Belgian municipality, generally between <strong>7 and 9 %</strong> of the base tax. E.g.: tax 1,000 € × 8 % = 1,080 € total.
+          </div>
+        </div>
+        <div class="input-wrap">
+          <input type="number" id="taux_communaux" min="0" max="15" step="0.5" value="8" oninput="onInputChange()" style="max-width:120px;">
+          <span class="unit">%</span>
+        </div>
+        <span class="hint">Varies by municipality — generally 7 to 9 % of the base tax. Check Tax-on-web or your municipality's website. Default: 8 %.</span>
+      </div>
+    </div>
+
+    <div id="display_duree" style="font-size:13px;color:var(--text-muted);margin-bottom:12px;min-height:20px;"></div>
+
+    <div class="btn-row">
+      <button class="btn btn-secondary" onclick="resetForm()">🔄 Reset</button>
+      <button class="btn btn-primary" onclick="calculer()">Calculate capital gain →</button>
+    </div>
+
+  </div><!-- /form-section -->
+
+
+  <!-- RÉSULTATS -->
+  <div class="section" id="results-section">
+
+    <div id="results-container"></div>
+
+    <div class="btn-row" style="margin-top:8px">
+      <button class="btn btn-secondary" onclick="showSection('form-section')">← Edit data</button>
+      <button class="btn btn-secondary" onclick="window.print()">🖨️ Print</button>
+    </div>
+
+    <div class="disclaimer">
+      This simulator is provided for informational purposes only. It does not replace the advice of a tax or accounting advisor. Based on current Belgian tax regulations (tax year 2025, income 2024). Municipal additional centimes vary by municipality.
+    </div>
+
+  </div><!-- /results-section -->
+
+<div style="margin:32px auto;text-align:center;max-width:100%;">
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8043980001637749"
+     data-ad-slot="9017409611"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div><!-- /container -->
+
+<script>
+// ===================== I18N =====================
+const i18n = {
+  lbl_px_terrain_mixte: 'Land purchase price (€)',
+  lbl_px_bati_mixte: 'Building purchase price (€)',
+  hint_bati_mixte: 'Share of the price attributed to the building in the deed. For new buildings: construction price including VAT.',
+  lbl_px_bati_seul: 'Purchase price (€)',
+  hint_bati_seul: 'Total purchase price of the property. For new buildings: construction price including VAT.',
+  lbl_px_terrain_seul: 'Purchase price (€)',
+  schema_terrain_title: '📐 Unbuilt land — Declaration schema (Frame XV, B.6)',
+  schema_terrain_A: 'Basis for registration duty on disposal',
+  schema_terrain_A_mixte: '(land share)',
+  schema_terrain_B: 'Costs caused by the disposal',
+  schema_terrain_C_noB: 'Net sale price (= A, no disposal costs)',
+  schema_terrain_C: 'Difference A – B',
+  schema_terrain_D: 'Basis for registration duty on acquisition for consideration',
+  schema_terrain_E_forfait: '(flat rate 25% of amount D)',
+  schema_terrain_E_reel: '(actual costs, at least 25% of amount D)',
+  schema_terrain_E: 'Acquisition or transfer costs',
+  schema_terrain_G: 'To add: 5% of amount F ×',
+  schema_terrain_G_an: 'full year',
+  schema_terrain_G_ans: 'full years',
+  schema_terrain_G_complet: '',
+  schema_terrain_G_complets: '',
+  schema_terrain_I: 'Compensation "for reduction in value"',
+  schema_terrain_J: 'Difference H – I',
+  schema_terrain_pertes: 'Losses on similar assets (5 preceding tax years)',
+  schema_terrain_K: 'Net amount of the capital gain or loss (C –',
+  schema_terrain_taux: 'Tax rate',
+  schema_terrain_impot_base: 'Base tax (',
+  schema_terrain_centimes: 'Municipal additional centimes',
+  schema_terrain_centimes_note: '(≈ 7–8%, depending on your municipality)',
+  schema_terrain_centimes_val: 'to be added',
+  schema_terrain_total: 'Estimated base tax',
+  schema_terrain_hors: '— excl. add. centimes',
+  schema_terrain_codes: '📋 PIT Codes — Frame XV, B.6:',
+  regime_33: '33% — disposal < 5 years',
+  regime_165_terrain: '16.5% — disposal 5–8 years',
+  schema_bati_title: '🏠 Built property — Declaration schema (Frame XV, B.7)',
+  schema_bati_A: 'Basis for registration duty or VAT on disposal',
+  schema_bati_A_mixte: '(building share)',
+  schema_bati_B: 'Costs caused by the disposal',
+  schema_bati_C_noB: 'Net sale price (= A, no disposal costs)',
+  schema_bati_C: 'Difference A – B',
+  schema_bati_D: 'Basis for registration duty or VAT on acquisition for consideration',
+  schema_bati_E: 'Acquisition or transfer costs',
+  schema_bati_E_forfait: '(flat rate 25% of amount D)',
+  schema_bati_E_reel: '(actual costs, at least 25% of amount D)',
+  schema_bati_travaux: 'Building works costs (contractor invoices)',
+  schema_bati_I: 'Total',
+  schema_bati_I_H: '(= H)',
+  schema_bati_I_travaux: 'H + works',
+  schema_bati_J: 'Compensation received for damage to the disposed building',
+  schema_bati_K: 'Difference I – J',
+  schema_bati_pertes: 'Losses on similar assets (5 preceding tax years)',
+  schema_bati_L: 'Net amount of the capital gain or loss (C –',
+  schema_bati_taux: 'Tax rate',
+  schema_bati_impot: 'Base tax (16.5% ×',
+  schema_bati_centimes: 'Municipal additional centimes',
+  schema_bati_centimes_note: '(≈ 7–8%, depending on your municipality)',
+  schema_bati_centimes_val: 'to be added',
+  schema_bati_total: 'Estimated base tax',
+  schema_bati_hors: '— excl. add. centimes',
+  schema_bati_codes: '📋 PIT Codes — Frame XV, B.7:',
+  regime_165_bati: '16.5%',
+  mixte_impot_terrain: 'Base tax — Land',
+  mixte_impot_bati: 'Base tax — Building',
+  note_title: '📋 Personal income tax return — Frame XV',
+  note_donation: 'Land gift:',
+  note_terrain_B6: 'Land (B.6): codes',
+  note_bati_B7: 'Building (B.7): codes',
+  note_annexe: 'Attach an <strong>annex</strong> detailing the calculation (purchase price, costs, 5%/year supplement, sale price) per disposed asset.',
+  note_centimes_title: '🏛️ Municipal additional centimes',
+  note_centimes_text: 'The base tax above must be increased by the additional centimes of your municipality (generally <strong>7 to 9%</strong> of the base tax). Check your exact rate on <strong>Tax-on-web</strong> or your municipality\'s website.',
+  note_centimes_ex: 'Ex.: base tax €1,000 × additional centimes 8% = €1,080 in total.',
+  note_voorheffing: '<strong>Property withholding tax:</strong> not deductible from the sale price.',
+  note_maries: '<strong>Married persons:</strong> the capital gain is attributed half to each spouse under the legal matrimonial regime.',
+  hero_pv_label: 'Total taxable capital gain',
+  hero_no_pv: 'No capital gain',
+  hero_duree: 'Reference period:',
+  hero_an: 'full year',
+  hero_ans: 'full years',
+  hero_depuis_defunt: '(since deceased\'s acquisition for consideration)',
+  hero_depuis_donation: '(since the gift)',
+  hero_tax_label: 'Estimated base tax (excl. additional centimes)',
+  motif_habitation_titre: 'Exemption – Own home',
+  motif_habitation_text: 'The capital gain is exempt because the property was your main residence on an uninterrupted basis during the 12 months preceding the sale.',
+  motif_heritage_titre: 'Exemption – Inheritance (art. 90 ITC92)',
+  motif_heritage_text: 'Art. 90 ITC92 only taxes capital gains on property acquired <em>for consideration</em>. An inherited property is a gratuitous acquisition — no capital gain is taxable.',
+  motif_donation_bati_titre: 'Exemption – Building received as gift (art. 90, 10° ITC92)',
+  motif_donation_bati_text: 'Only buildings acquired <em>for consideration</em> fall under art. 90, 10° ITC92. A building received as a gift can be resold immediately with no taxable capital gain.',
+  motif_donation_terrain_titre: 'Exemption – Gifted land: double condition not met',
+  motif_donation_terrain_intro: 'The capital gain is only taxable if <strong>both conditions are simultaneously met</strong>:',
+  motif_donation_c1_ok: '✗ Sold <strong>within</strong> 3 years after the gift',
+  motif_donation_c1_ko: '✓ Sold <strong>after</strong> 3 years since the gift',
+  motif_donation_c2_ok: '✗ Donor\'s purchase less than <strong>5 years</strong> ago',
+  motif_donation_c2_ko: '✓ Donor\'s purchase more than <strong>5 years</strong> ago',
+  motif_donation_c2_na: '— Donor\'s purchase date not entered',
+  motif_donation_conclusion: 'At least one condition is not met → <strong>not taxable</strong>.',
+  motif_mixte_5ans_titre: 'Exemption – Building occupied for more than 5 years (art. 90 ITC92)',
+  motif_mixte_5ans_text1: 'The building has been occupied for',
+  motif_mixte_5ans_text2: 'years at the time of disposal (> 5 years). No tax due.',
+  motif_mixte_hors_titre: 'Exemption – Land + Construction: conditions not met',
+  motif_mixte_hors_intro: 'The capital gain is only taxable if <strong>both conditions are simultaneously met</strong>:',
+  motif_mixte_c1_ok: '✗ Construction completed within 5 years after the land purchase',
+  motif_mixte_c1_ko: '✓ Construction completed <strong>more than 5 years</strong> after the land purchase',
+  motif_mixte_c2_ok: '✗ Sold within 5 years after first occupation',
+  motif_mixte_c2_ko: '✓ Sold <strong>more than 5 years</strong> after first occupation',
+  motif_mixte_conclusion: 'At least one condition is not met → <strong>no tax</strong>.',
+  motif_hors_delai_titre: 'Outside the taxable period',
+  motif_hors_delai_text1: 'The disposal takes place after',
+  motif_hors_delai_text2: 'years since the acquisition (',
+  motif_hors_delai_text3: 'full years elapsed). The capital gain is <strong>not taxable</strong>.',
+  exempt_pv_label: 'Taxable capital gain',
+  exempt_pv_amount: '✓ Not taxable',
+  exempt_tax_label: 'Tax due',
+  exempt_motif_title: '📋 Exemption reason',
+  exempt_prix_net: 'Net sale price:',
+};
+
+// ===================== OPTIMISATION FRAIS =====================
+function optimisationFrais(type) {
+  const pxId = type === 'terrain' ? 'prix_achat_terrain' : 'prix_achat_bati';
+  const fraisId = type === 'terrain' ? 'frais_achat_terrain' : 'frais_achat_bati';
+  const badgeId = type === 'terrain' ? 'optim_terrain' : 'optim_bati';
+
+  const px = parseFloat(document.getElementById(pxId)?.value) || 0;
+  const fraisReels = parseFloat(document.getElementById(fraisId)?.value) || 0;
+  const badge = document.getElementById(badgeId);
+  if (!badge) return;
+
+  if (px <= 0 || fraisReels <= 0) {
+    badge.style.display = 'none';
+    onInputChange(); return;
+  }
+
+  const forfait = px * 0.25;
+  const fmt2 = (n) => new Intl.NumberFormat('fr-BE', {minimumFractionDigits:0, maximumFractionDigits:0}).format(n) + ' €';
+
+  badge.style.display = 'block';
+
+  if (fraisReels < forfait) {
+    badge.className = 'optim-badge forfait-mieux';
+    badge.innerHTML = `✅ <strong>Flat rate 25% more advantageous</strong> — Your actual costs (${fmt2(fraisReels)}) are lower than the legal flat rate (${fmt2(forfait)}). Leave this field empty to deduct ${fmt2(forfait)} instead of ${fmt2(fraisReels)}. <strong>Gain: ${fmt2(forfait - fraisReels)}</strong>`;
+  } else if (fraisReels > forfait) {
+    badge.className = 'optim-badge reels-mieux';
+    badge.innerHTML = `💡 <strong>Actual costs more advantageous</strong> — Your actual costs (${fmt2(fraisReels)}) exceed the flat rate (${fmt2(forfait)}). Keep this amount to deduct more. <strong>Gain: ${fmt2(fraisReels - forfait)}</strong>`;
+  } else {
+    badge.className = 'optim-badge egal';
+    badge.innerHTML = `Actual costs = 25% flat rate (${fmt2(forfait)}). Both options are equivalent.`;
+  }
+  onInputChange();
+}
+
+function updateTotalMixte() {
+  const t = v('prix_vente_terrain');
+  const b = v('prix_vente_bati');
+  const total = t + b;
+  const display = document.getElementById('total_mixte_display');
+  const val = document.getElementById('total_mixte_val');
+  if (display && val && (t > 0 || b > 0)) {
+    display.style.display = 'block';
+    val.textContent = new Intl.NumberFormat('fr-BE', {minimumFractionDigits:2}).format(total) + ' €';
+  } else if (display) {
+    display.style.display = 'none';
+  }
+  onInputChange();
+}
+
+// ===================== VALIDATION & ERREURS =====================
+// mapping message → id du champ concerné
+const ERREUR_CHAMPS = {
+  'date_acquisition': ['date_acquisition'],
+  'date_alienation': ['date_alienation'],
+  'prix de vente du terrain': ['prix_vente_terrain'],
+  'prix de vente du bâtiment': ['prix_vente_bati'],
+  'prix_vente_terrain': ['prix_vente_terrain'],
+  'prix_vente_bati': ['prix_vente_bati'],
+  'prix d\'achat du terrain': ['prix_achat_terrain'],
+  'prix d\'achat du bâtiment': ['prix_achat_bati'],
+  'prix de vente': ['prix_vente'],
+  'prix d\'achat du bien': ['prix_achat_bati'],
+  'mise en service': ['date_mise_service'],
+};
+
+function afficherErreur(msg, champId) {
+  // Reste sur l'onglet Data, ne bascule pas sur Results
+  showSection('form-section');
+
+  // Enlever les highlights précédents
+  document.querySelectorAll('.field-error').forEach(el => {
+    el.classList.remove('field-error');
+    const prev = el.previousElementSibling;
+    if (prev && prev.classList.contains('inline-error')) prev.remove();
+  });
+
+  // Trouver le champ à highlighter
+  let targetId = champId;
+  if (!targetId) {
+    for (const [key, ids] of Object.entries(ERREUR_CHAMPS)) {
+      if (msg.toLowerCase().includes(key.toLowerCase())) {
+        targetId = ids[0]; break;
+      }
+    }
+  }
+
+  // Afficher le toast d'erreur en haut du formulaire
+  let toast = document.getElementById('error-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'error-toast';
+    const formSection = document.getElementById('form-section');
+    formSection.insertBefore(toast, formSection.firstChild);
+  }
+  toast.innerHTML = `
+    <div style="background:#fdf0f0;border:1px solid #e8c0c0;border-left:4px solid #b84040;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:12px;margin-bottom:16px;animation:fadeIn 0.2s ease">
+      <span style="font-size:20px;flex-shrink:0">⚠️</span>
+      <div style="flex:1">
+        <div style="font-weight:700;color:#b84040;font-size:13.5px">Missing data</div>
+        <div style="color:#7a2020;font-size:13px;margin-top:2px">${msg}</div>
+      </div>
+      <button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;cursor:pointer;font-size:18px;color:#b84040;padding:0 4px;line-height:1">×</button>
+    </div>`;
+
+  // Highlighter et scroller vers le champ
+  if (targetId) {
+    const el = document.getElementById(targetId);
+    if (el) {
+      const fieldEl = el.closest('.field') || el.parentElement;
+      if (fieldEl) {
+        fieldEl.classList.add('field-error');
+        setTimeout(() => fieldEl.classList.remove('field-error'), 4000);
+      }
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(() => el.focus(), 300);
+    }
+  } else {
+    // Pas de champ spécifique — scroll vers le haut du formulaire
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+// ===================== TOOLTIP & EXPLAINER =====================
+function toggleTip(id, btn) {
+  const box = document.getElementById(id);
+  if (!box) return;
+  const isVisible = box.classList.contains('visible');
+  // Fermer tous les tooltips ouverts
+  document.querySelectorAll('.tooltip-box.visible').forEach(b => b.classList.remove('visible'));
+  document.querySelectorAll('.tip-btn.active').forEach(b => b.classList.remove('active'));
+  if (!isVisible) {
+    box.classList.add('visible');
+    btn.classList.add('active');
+  }
+}
+
+function toggleExplainer() {
+  const body = document.getElementById('explainer-body');
+  const toggle = document.getElementById('explainer-toggle');
+  if (!body || !toggle) return;
+  body.classList.toggle('open');
+  toggle.classList.toggle('open');
+}
+
+// Fermer tooltip si clic ailleurs
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.field')) {
+    document.querySelectorAll('.tooltip-box.visible').forEach(b => b.classList.remove('visible'));
+    document.querySelectorAll('.tip-btn.active').forEach(b => b.classList.remove('active'));
+  }
+});
+
+// ===================== HELPERS =====================
+const fmt = (n) => n === null || n === undefined ? '–' : new Intl.NumberFormat('fr-BE', {minimumFractionDigits:2, maximumFractionDigits:2}).format(n) + ' €';
+const fmtN = (n) => new Intl.NumberFormat('fr-BE', {minimumFractionDigits:2, maximumFractionDigits:2}).format(n);
+const v = (id) => { const el = document.getElementById(id); return el ? parseFloat(el.value)||0 : 0; };
+const vStr = (id) => { const el = document.getElementById(id); return el ? el.value : ''; };
+const radio = (name) => { const r = document.querySelector(`input[name="${name}"]:checked`); return r ? r.value : null; };
+
+function anneeCompletes(d1, d2) {
+  if (!d1 || !d2) return 0;
+  const from = new Date(d1);
+  const to = new Date(d2);
+  if (isNaN(from) || isNaN(to) || to <= from) return 0;
+  let years = to.getFullYear() - from.getFullYear();
+  const mFrom = from.getMonth(), dFrom = from.getDate();
+  const mTo = to.getMonth(), dTo = to.getDate();
+  if (mTo < mFrom || (mTo === mFrom && dTo < dFrom)) years--;
+  return Math.max(0, years);
+}
+
+// ===================== UI EVENTS =====================
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  if (id === 'form-section') document.getElementById('tab-form').classList.add('active');
+  else if (id === 'results-section') document.getElementById('tab-results').classList.add('active');
+  else if (id === 'explication-section') document.getElementById('tab-explication').classList.add('active');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function onTypeBienChange() {
+  const type = radio('type_bien');
+  const isBati = type === 'bati' || type === 'mixte';
+  const isMixte = type === 'mixte';
+  const isBatiSeul = type === 'bati';
+  const isTerrainSeul = type === 'terrain';
+
+  // Bloc bâtiment (champs prix bâti, frais, travaux, mise en service)
+  toggle('bloc_bati_acq', isBati);
+  toggle('bloc_habitation_propre', isBati);
+  toggle('warn-bati-professionnel', isBati, true);
+
+  // In "built-only" mode: cacher le bloc terrain (prix d'achat terrain), 
+  // car le champ "prix_achat_bati" dans bloc_bati_acq sert de champ principal
+  const blocTerrainAcq = document.getElementById('bloc_terrain_acq');
+  if (blocTerrainAcq) blocTerrainAcq.style.display = isBatiSeul ? 'none' : '';
+
+  // Labels selon le contexte
+  if (isMixte) {
+    document.getElementById('lbl_px_terrain').textContent = 'Prix d\'achat terrain (€)';
+    document.getElementById('lbl_px_bati').textContent = 'Prix d\'achat bâtiment (€)';
+    document.getElementById('hint_bati_neuf').textContent = 'Part du prix attribuée au bâtiment dans l\'acte. For new building: construction price including VAT.';
+  } else if (isBatiSeul) {
+    document.getElementById('lbl_px_bati').textContent = 'Prix d\'achat (€)';
+    document.getElementById('hint_bati_neuf').textContent = 'Prix d\'achat total du bien. For new building: construction price including VAT.';
+  } else {
+    // terrain seul
+    document.getElementById('lbl_px_terrain').textContent = i18n.lbl_px_terrain_seul;
+  }
+
+  // Sale price : champ unique ou scindé
+  const blocUnique = document.getElementById('bloc_prix_vente_unique');
+  const blocMixte = document.getElementById('bloc_prix_vente_mixte');
+  if (blocUnique) blocUnique.style.display = isMixte ? 'none' : '';
+  if (blocMixte) blocMixte.style.display = isMixte ? 'block' : 'none';
+
+  if (!isBati) {
+    document.getElementById('chk_habitation_propre').checked = false;
+    onHabitationPropreChange();
+  }
+  updateDonationBloc();
+  calculerDuree(); // recalcule le feedback durée si les dates sont déjà saisies
+}
+
+function toggle(id, show, useBlock = false) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  if (el.classList.contains('collapsible')) {
+    el.classList.toggle('open', show);
+  } else {
+    el.style.display = show ? (useBlock ? 'block' : '') : 'none';
+  }
+}
+
+function onHabitationPropreChange() {
+  onInputChange();
+}
+
+function onModeAcquisitionChange() {
+  const mode = document.getElementById('mode_acquisition').value;
+  const isDonation = mode === 'donation';
+  const isHeritage = mode === 'heritage';
+  toggle('bloc_donation', isDonation);
+  toggle('bloc_heritage', isHeritage);
+  // Dans le bloc donation, afficher terrain ou bâti selon le type
+  updateDonationBloc();
+  calculerDuree();
+}
+
+function updateDonationBloc() {
+  const mode = document.getElementById('mode_acquisition').value;
+  if (mode !== 'donation') return;
+  const type = radio('type_bien');
+  const isBatiSeul = type === 'bati';
+  const terrainBloc = document.getElementById('bloc_donation_terrain');
+  const batiBloc = document.getElementById('bloc_donation_bati');
+  if (terrainBloc) terrainBloc.style.display = isBatiSeul ? 'none' : '';
+  if (batiBloc) batiBloc.style.display = isBatiSeul ? 'block' : 'none';
+}
+
+function calculerDuree() {
+  const dAcq = vStr('date_acquisition');
+  const dAli = vStr('date_alienation');
+  const mode = document.getElementById('mode_acquisition').value;
+  const isDonation = mode === 'donation';
+  const isHeritage = mode === 'heritage';
+  const dDonateur = vStr('date_acq_donateur');
+
+  const type = radio('type_bien');
+  const isBati = type === 'bati' || type === 'mixte';
+  const isBatiSeul = type === 'bati';
+
+  // Inheritance → toujours exempt
+  if (isHeritage) {
+    document.getElementById('display_duree').innerHTML =
+      `<span style="color:var(--success)">✅ Inheritance → toujours exempt (art. 90 WIB92)</span>`;
+    onInputChange(); return;
+  }
+
+  // Donation bâti → toujours exempt
+  if (isDonation && isBatiSeul) {
+    document.getElementById('display_duree').innerHTML =
+      `<span style="color:var(--success)">✅ Donation bâtiment → toujours exempt (art. 90, 10° WIB92)</span>`;
+    onInputChange(); return;
+  }
+
+  if (!dAcq || !dAli) {
+    document.getElementById('display_duree').innerHTML = '';
+    onInputChange(); return;
+  }
+
+  if (isDonation) {
+    // Terrain donation : double condition
+    const dureeDepuisDonation = anneeCompletes(dAcq, dAli);
+    const dureeDepuisAchatDonateur = dDonateur ? anneeCompletes(dDonateur, dAli) : null;
+    const cond1 = dureeDepuisDonation < 3;
+    const cond2 = dureeDepuisAchatDonateur !== null ? dureeDepuisAchatDonateur < 5 : null;
+    let msg = `Since the gift: <strong>${dureeDepuisDonation} an${dureeDepuisDonation>1?'s':''}</strong> (limite : 3 ans) → ${cond1 ? '<span style="color:var(--danger)">✗ condition 1 met</span>' : '<span style="color:var(--success)">✓ > 3 years → exempt</span>'}`;
+    if (dDonateur) {
+      msg += ` &nbsp;|&nbsp; Since donor's purchase: <strong>${dureeDepuisAchatDonateur} an${dureeDepuisAchatDonateur>1?'s':''}</strong> (limite : 5 ans) → ${cond2 ? '<span style="color:var(--danger)">✗ condition 2 met</span>' : '<span style="color:var(--success)">✓ > 5 years → exempt</span>'}`;
+      if (cond1 && cond2) msg += ` &nbsp;<span style="color:var(--danger)">→ <strong>Taxable</strong> (2 conditions réunies)</span>`;
+      else msg += ` &nbsp;<span style="color:var(--success)">→ <strong>Exonéré</strong></span>`;
+    }
+    document.getElementById('display_duree').innerHTML = msg;
+  } else {
+    // Acquisition onéreuse
+    const annees = anneeCompletes(dAcq, dAli);
+    const isMixte = type === 'mixte';
+    const dMiseService = vStr('date_mise_service');
+
+    if (isMixte && dMiseService) {
+      const dureeBatiOccup = anneeCompletes(dMiseService, dAli);
+      const dureeBatiDepuisAchat = anneeCompletes(dAcq, dMiseService);
+      const c1 = dureeBatiDepuisAchat <= 5;
+      const c2 = dureeBatiOccup < 5;
+      let msg = `Occupé depuis : <strong>${dureeBatiOccup} an${dureeBatiOccup>1?'s':''}</strong> `;
+      if (dureeBatiOccup >= 5) {
+        msg += `<span style="color:var(--success)">→ ✅ > 5 ans → Aucun impôt</span>`;
+      } else {
+        msg += `| Construction ${dureeBatiDepuisAchat <= 5 ? '<span style="color:var(--danger)">dans les 5 ans ✗</span>' : '<span style="color:var(--success)">après 5 ans ✓ → exempt</span>'} `;
+        if (c1) msg += `| Vente ${c2 ? '<span style="color:var(--danger)">dans les 5 ans après occupation ✗</span>' : '<span style="color:var(--success)">après 5 ans occupation ✓ → exempt</span>'}`;
+        if (c1 && c2) msg += ` → <span style="color:var(--danger)"><strong>Taxable à 16,5 %</strong></span>`;
+      }
+      document.getElementById('display_duree').innerHTML = msg;
+    } else {
+      const delaiLimite = isBati ? 5 : 8;
+      const imposable = annees < delaiLimite;
+      document.getElementById('display_duree').innerHTML =
+        `Duration: <strong>${annees} an${annees>1?'s':''}</strong> complet${annees>1?'s':''} (limite : ${delaiLimite} ans) ` +
+        (imposable ? `<span style="color:var(--danger)">→ Potentially taxable</span>` : `<span style="color:var(--success)">→ Outside the period, not taxable</span>`);
+    }
+  }
+  onInputChange();
+}
+
+function onInputChange() {
+  // live feedback only, no auto-calc
+}
+
+function resetForm() {
+  document.querySelectorAll('input[type=number], input[type=date]').forEach(el => el.value = '');
+  document.getElementById('taux_communaux').value = 8;
+  document.getElementById('mode_acquisition').value = 'onereux';
+  document.getElementById('chk_habitation_propre').checked = false;
+  document.querySelector('input[name="type_bien"][value="terrain"]').checked = true;
+  onTypeBienChange();
+  onModeAcquisitionChange();
+  document.getElementById('display_duree').innerHTML = '';
+  showSection('form-section');
+}
+
+// ===================== CALCUL PRINCIPAL =====================
+function calculer() {
+  const type = radio('type_bien');
+  const isBati = type === 'bati' || type === 'mixte';
+  const isMixte = type === 'mixte';
+  const isBatiSeul = type === 'bati';
+  const mode = document.getElementById('mode_acquisition').value;
+  const isDonation = mode === 'donation';
+  const isHeritage = mode === 'heritage';
+  const habitationPropre = document.getElementById('chk_habitation_propre').checked && isBati;
+
+  const dAcq = vStr('date_acquisition');       // date donation ou achat
+  const dAli = vStr('date_alienation');
+  const dDonateur = vStr('date_acq_donateur'); // achat for consideration par le donateur
+  const dMiseService = vStr('date_mise_service');
+
+  if (!dAcq || !dAli) {
+    afficherErreur('Veuillez saisir les dates d\'acquisition et d\'aliénation avant de calculer.');
+    return;
+  }
+
+  if (new Date(dAli) <= new Date(dAcq)) {
+    afficherErreur('La date d\'aliénation doit être postérieure à la date d\'acquisition.');
+    return;
+  }
+
+  // Validation prix
+  if (isMixte) {
+    const pvT = v('prix_vente_terrain'), pvB = v('prix_vente_bati');
+    const pxT = v('prix_achat_terrain'), pxB = v('prix_achat_bati');
+    if (!pvT && !pvB) { afficherErreur('Veuillez saisir le prix de vente du terrain et du bâtiment.'); return; }
+    if (!pvT) { afficherErreur('Veuillez saisir le prix de vente du terrain.'); return; }
+    if (!pvB) { afficherErreur('Veuillez saisir le prix de vente du bâtiment.'); return; }
+    if (!pxT) { afficherErreur('Veuillez saisir le prix d\'achat du terrain.'); return; }
+    if (!pxB) { afficherErreur('Veuillez saisir le prix d\'achat du bâtiment (coût de construction).'); return; }
+    if (!dMiseService) { afficherErreur('En mode Terrain + Building, la date de 1ère mise en service est requise pour calculer correctement le supplément 5%/an du bâtiment.'); return; }
+  } else if (!isBatiSeul) {
+    if (!v('prix_achat_terrain')) { afficherErreur('Veuillez saisir le prix d\'achat du terrain.'); return; }
+    if (!v('prix_vente')) { afficherErreur('Veuillez saisir le prix de vente.'); return; }
+  } else {
+    if (!v('prix_achat_bati')) { afficherErreur('Veuillez saisir le prix d\'achat du bien.'); return; }
+    if (!v('prix_vente')) { afficherErreur('Veuillez saisir le prix de vente.'); return; }
+  }
+
+  // Vérification prix vente < prix achat (perte possible, juste avertissement)
+  const prixVenteCheck = isMixte ? (v('prix_vente_terrain') + v('prix_vente_bati')) : v('prix_vente');
+  const prixAchatCheck = isMixte ? (v('prix_achat_terrain') + v('prix_achat_bati')) : (isBatiSeul ? v('prix_achat_bati') : v('prix_achat_terrain'));
+  if (prixVenteCheck > 0 && prixAchatCheck > 0 && prixVenteCheck < prixAchatCheck * 0.5) {
+    // Sale price très bas — le calcul continuera, résultat sera une perte (0 impôt)
+  }
+
+  const prixVente = isMixte ? (v('prix_vente_terrain') + v('prix_vente_bati')) : v('prix_vente');
+  const fraisAlienation = v('frais_alienation');
+  const prixVenteNet = prixVente - fraisAlienation;
+
+  // ── HÉRITAGE : toujours exempt (terrain ET bâti) ──
+  if (isHeritage) {
+    renderResult({ exempt: true, motif: 'heritage', prixVente, fraisAlienation, prixVenteNet });
+    showSection('results-section');
+    return;
+  }
+
+  // ── DONATION BÂTI : toujours exempt ──
+  if (isDonation && isBatiSeul) {
+    renderResult({ exempt: true, motif: 'donation_bati', prixVente, fraisAlienation, prixVenteNet });
+    showSection('results-section');
+    return;
+  }
+
+  // ── EXONÉRATION HABITATION PROPRE ──
+  if (habitationPropre) {
+    renderResult({ exempt: true, motif: 'habitation_propre', prixVente, fraisAlienation, prixVenteNet });
+    showSection('results-section');
+    return;
+  }
+
+  // ── DONATION TERRAIN : double condition ──
+  if (isDonation && !isMixte) {
+    const dureeDepuisDonation = anneeCompletes(dAcq, dAli);
+    const dureeDepuisAchatDonateur = dDonateur ? anneeCompletes(dDonateur, dAli) : 999;
+    const cond1 = dureeDepuisDonation < 3;
+    const cond2 = dureeDepuisAchatDonateur < 5;
+    if (!cond1 || !cond2) {
+      renderResult({
+        exempt: true, motif: 'donation_terrain_hors_delai',
+        dureeDepuisDonation, dureeDepuisAchatDonateur, cond1, cond2,
+        prixVente, fraisAlienation, prixVenteNet
+      });
+      showSection('results-section');
+      return;
+    }
+    // Taxable — base = valeur vénale à la donation + 5%/an depuis donation
+    const pxAchat = v('valeur_venale_donation') || v('prix_achat_terrain');
+    const fraisRaw = v('frais_achat_terrain');
+    const fraisAchat = fraisRaw > 0 ? fraisRaw : pxAchat * 0.25;
+    const dureeRef = anneeCompletes(dAcq, dAli); // 5%/an depuis la donation
+    const supplement5pct = (pxAchat + fraisAchat) * 0.05 * dureeRef;
+    const baseDeduction = pxAchat + fraisAchat + supplement5pct;
+    const indemnite = v('indemnite_reduction');
+    const pvBrute = prixVenteNet + indemnite - baseDeduction;
+    const pertes = v('pertes_anterieures');
+    const pvTaxable = Math.max(0, pvBrute - pertes);
+    const taux = 0.33;
+    const tauxCom = v('taux_communaux') / 100;
+    const impot = pvTaxable * taux * (1 + tauxCom);
+    renderResult({
+      exempt: false, type, isMixte: false, isBati: false,
+      isDonation, isHeritage: false, mode,
+      dureeDepuisAcq: dureeDepuisDonation, dureeDepuisRef: dureeDepuisDonation, delaiLimite: 3,
+      prixVente, fraisAlienation, prixVenteNet,
+      terrain: { pxAchat, fraisAchat, fraisForfit: fraisRaw === 0, supplement5pct, dureeRef, baseDeduction, indemnite, pvBrute, pertes, pvTaxable, taux, tauxCom, impot, prixVenteNet },
+      bati: null,
+      tauxCom: v('taux_communaux'),
+      noteDonation: `Terrain reçu en donation. Base = valeur vénale à la donation. Supplément 5%/an calculé depuis la donation (${dureeRef} an${dureeRef>1?'s':''}).`
+    });
+    showSection('results-section');
+    return;
+  }
+
+  // ── ACQUISITION ONÉREUSE ──
+  const dureeDepuisAcq = anneeCompletes(dAcq, dAli);
+  const dureeDepuisRef = dureeDepuisAcq;
+
+  // ── MODE MIXTE (terrain + construction) : logique synoptique p.213 ──
+  if (isMixte) {
+    const dureeBatiOccup = dMiseService ? anneeCompletes(dMiseService, dAli) : null;
+    const dureeBatiDepuisAchat = dMiseService ? anneeCompletes(dAcq, dMiseService) : null;
+
+    // Condition 1 : bâtiment occupé depuis > 5 ans → AUCUN IMPÔT
+    if (dureeBatiOccup !== null && dureeBatiOccup >= 5) {
+      renderResult({ exempt: true, motif: 'mixte_occupe_5ans', dureeBatiOccup, prixVente, fraisAlienation, prixVenteNet });
+      showSection('results-section'); return;
+    }
+
+    // Condition 2 : construction dans les 5 ans après achat terrain ET vendu dans les 5 ans après 1ère occupation
+    const constructionDans5ans = dureeBatiDepuisAchat !== null && dureeBatiDepuisAchat <= 5;
+    const venduDans5ansOccup = dureeBatiOccup !== null && dureeBatiOccup < 5;
+    const imposableMixte = constructionDans5ans && venduDans5ansOccup;
+
+    if (!imposableMixte && dMiseService) {
+      renderResult({ exempt: true, motif: 'mixte_hors_conditions', constructionDans5ans, venduDans5ansOccup, dureeBatiOccup, dureeBatiDepuisAchat, prixVente, fraisAlienation, prixVenteNet });
+      showSection('results-section'); return;
+    }
+
+    // Si pas de date de mise en service renseignée → on applique règle terrain seul (délai 8 ans)
+    if (!dMiseService) {
+      if (dureeDepuisRef >= 8) {
+        renderResult({ exempt: true, motif: 'hors_delai', duree: dureeDepuisRef, delai: 8, prixVente, fraisAlienation, prixVenteNet });
+        showSection('results-section'); return;
+      }
+    }
+  } else {
+    // Terrain seul ou bâti seul : logique classique
+    const delaiLimite = isBati ? 5 : 8;
+    if (dureeDepuisRef >= delaiLimite) {
+      renderResult({ exempt: true, motif: 'hors_delai', duree: dureeDepuisRef, delai: delaiLimite, prixVente, fraisAlienation, prixVenteNet });
+      showSection('results-section'); return;
+    }
+  }
+
+  const delaiLimite = isMixte ? 5 : (isBati ? 5 : 8);
+
+  // ---- TERRAIN (terrain seul ou mixte) ----
+  let resultatTerrain = null;
+  if (!isBatiSeul) {
+    const pxAchat = v('prix_achat_terrain');
+    const fraisRaw = v('frais_achat_terrain');
+    const fraisAchat = fraisRaw > 0 ? fraisRaw : pxAchat * 0.25;
+    const dureeRef = anneeCompletes(dAcq, dAli);
+    const supplement5pct = (pxAchat + fraisAchat) * 0.05 * dureeRef;
+    const baseDeduction = pxAchat + fraisAchat + supplement5pct;
+    const indemnite = v('indemnite_reduction');
+    const pvNetTerrain = isMixte ? v('prix_vente_terrain') : prixVenteNet;
+    const pvBrute = pvNetTerrain + indemnite - baseDeduction;
+    const pertes = v('pertes_anterieures');
+    const pvTaxable = Math.max(0, pvBrute - pertes);
+    // En mode mixte : taux toujours 16,5% (art. 90, 10° — même taux que bâti)
+    const taux = isMixte ? 0.165 : (dureeDepuisRef < 5 ? 0.33 : 0.165);
+    const tauxCom = v('taux_communaux') / 100;
+    const impot = pvTaxable * taux * (1 + tauxCom);
+    resultatTerrain = { pxAchat, fraisAchat, fraisForfit: fraisRaw === 0, supplement5pct, dureeRef, baseDeduction, indemnite, pvBrute, pertes, pvTaxable, taux, tauxCom, impot, prixVenteNet: pvNetTerrain, prixVenteBrut: isMixte ? v('prix_vente_terrain') : v('prix_vente') };
+  }
+
+  // ---- BÂTIMENT (bâti seul ou mixte) ----
+  let resultatBati = null;
+  if (isBati) {
+    const pxBati = v('prix_achat_bati');
+    const fraisBatiRaw = v('frais_achat_bati');
+    const fraisBati = fraisBatiRaw > 0 ? fraisBatiRaw : pxBati * 0.25;
+    const dRefBati = dMiseService ? dMiseService : dAcq;
+    const dureeBati = anneeCompletes(dRefBati, dAli);
+    const supplement5pctBati = (pxBati + fraisBati) * 0.05 * dureeBati;
+    const travaux = v('montant_travaux');
+    const baseDeductionBati = pxBati + fraisBati + supplement5pctBati + travaux;
+    const indemnite = v('indemnite_reduction');
+    const prixVenteNetBati = isMixte ? v('prix_vente_bati') : prixVenteNet;
+    const pvBruteBati = prixVenteNetBati + indemnite - baseDeductionBati;
+    const pertes = isMixte ? 0 : v('pertes_anterieures');
+    const pvTaxableBati = Math.max(0, pvBruteBati - pertes);
+    const taux = 0.165;
+    const tauxCom = v('taux_communaux') / 100;
+    const impot = pvTaxableBati * taux * (1 + tauxCom);
+    resultatBati = { pxBati, fraisBati, fraisBatiForfit: fraisBatiRaw === 0, dureeBati, dRefBati, supplement5pctBati, travaux, baseDeductionBati, indemnite, pvBrute: pvBruteBati, pertes, pvTaxable: pvTaxableBati, taux, tauxCom, impot, prixVenteNetBati, prixVenteBrutBati: isMixte ? v('prix_vente_bati') : v('prix_vente'), isBatiSeul };
+  }
+
+  renderResult({
+    exempt: false, type, isMixte, isBati,
+    isDonation, isHeritage: false, mode,
+    dureeDepuisAcq, dureeDepuisRef, delaiLimite,
+    prixVente, fraisAlienation, prixVenteNet,
+    terrain: resultatTerrain, bati: resultatBati,
+    tauxCom: v('taux_communaux'),
+  });
+  showSection('results-section');
+}
+
+// ===================== RENDU RÉSULTATS =====================
+function renderResult(r) {
+  const el = document.getElementById('results-container');
+
+if (r.exempt) {
+    let motifText = '';
+    if (r.motif === 'habitation_propre') {
+      motifText = `<strong>${i18n.motif_habitation_titre}</strong><br>${i18n.motif_habitation_text}`;
+    } else if (r.motif === 'heritage') {
+      motifText = `<strong>${i18n.motif_heritage_titre}</strong><br>${i18n.motif_heritage_text}`;
+    } else if (r.motif === 'donation_bati') {
+      motifText = `<strong>${i18n.motif_donation_bati_titre}</strong><br>${i18n.motif_donation_bati_text}`;
+    } else if (r.motif === 'donation_terrain_hors_delai') {
+      const c1txt = r.cond1 ? i18n.motif_donation_c1_ok + ` (${r.dureeDepuisDonation} ${r.dureeDepuisDonation>1 ? i18n.hero_ans : i18n.hero_an})` : i18n.motif_donation_c1_ko + ` (${r.dureeDepuisDonation} ${r.dureeDepuisDonation>1 ? i18n.hero_ans : i18n.hero_an})`;
+      const c2txt = r.dureeDepuisAchatDonateur < 900 ? (r.cond2 ? i18n.motif_donation_c2_ok + ` (${r.dureeDepuisAchatDonateur} ${r.dureeDepuisAchatDonateur>1 ? i18n.hero_ans : i18n.hero_an})` : i18n.motif_donation_c2_ko + ` (${r.dureeDepuisAchatDonateur} ${r.dureeDepuisAchatDonateur>1 ? i18n.hero_ans : i18n.hero_an})`) : i18n.motif_donation_c2_na;
+      motifText = `<strong>${i18n.motif_donation_terrain_titre}</strong><br>
+        ${i18n.motif_donation_terrain_intro}<br><br>
+        <div style="margin:6px 0 4px 0">${c1txt}</div>
+        <div>${c2txt}</div><br>
+        ${i18n.motif_donation_conclusion}`;
+    } else if (r.motif === 'mixte_occupe_5ans') {
+      motifText = `<strong>${i18n.motif_mixte_5ans_titre}</strong><br>
+        ${i18n.motif_mixte_5ans_text1} <strong>${r.dureeBatiOccup} ${r.dureeBatiOccup>1 ? i18n.hero_ans : i18n.hero_an}</strong> ${i18n.motif_mixte_5ans_text2}`;
+    } else if (r.motif === 'mixte_hors_conditions') {
+      const c1txt = r.constructionDans5ans ? i18n.motif_mixte_c1_ok : i18n.motif_mixte_c1_ko;
+      const c2txt = r.venduDans5ansOccup ? i18n.motif_mixte_c2_ok + ` (${r.dureeBatiOccup} ${r.dureeBatiOccup>1 ? i18n.hero_ans : i18n.hero_an})` : i18n.motif_mixte_c2_ko;
+      motifText = `<strong>${i18n.motif_mixte_hors_titre}</strong><br>
+        ${i18n.motif_mixte_hors_intro}<br><br>
+        <div style="margin:4px 0">${c1txt}</div>
+        <div style="margin:4px 0">${c2txt}</div><br>
+        ${i18n.motif_mixte_conclusion}`;
+    } else {
+      motifText = `<strong>${i18n.motif_hors_delai_titre}</strong><br>${i18n.motif_hors_delai_text1} ${r.delai} ${r.delai>1 ? i18n.hero_ans : i18n.hero_an} ${i18n.motif_hors_delai_text2} (${r.duree} ${i18n.motif_hors_delai_text3}`;
+    }
+    el.innerHTML = `
+      <div class="result-hero exempt">
+        <div>
+          <div class="result-hero-label">${i18n.exempt_pv_label}</div>
+          <div class="result-hero-amount">${i18n.exempt_pv_amount}</div>
+        </div>
+        <div class="result-hero-tax">
+          <div class="result-hero-tax-label">${i18n.exempt_tax_label}</div>
+          <div class="result-hero-tax-amount">0,00 €</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">${i18n.exempt_motif_title}</div>
+        <div class="info-box">${motifText}</div>
+        <div style="margin-top:12px;font-size:13px;color:var(--text-muted)">${i18n.exempt_prix_net} <strong>${fmt(r.prixVenteNet)}</strong></div>
+      </div>`;
+    return;
+  }
+
+  const tauxCom = (parseFloat(document.getElementById('taux_communaux')?.value) || 8) / 100;
+  const totalImpot = ((r.terrain ? r.terrain.pvTaxable * r.terrain.taux : 0) + (r.bati ? r.bati.pvTaxable * 0.165 : 0)) * (1 + tauxCom);
+  const totalPvTaxable = (r.terrain?.pvTaxable || 0) + (r.bati?.pvTaxable || 0);
+
+  let heroClass = totalPvTaxable <= 0 ? 'no-pv' : '';
+  let heroAmountText = totalPvTaxable <= 0 ? i18n.hero_no_pv : fmt(totalPvTaxable);
+  let heroTaxText = totalImpot <= 0 ? '0.00 €' : fmt(totalImpot);
+
+  let html = `
+    <div class="result-hero ${heroClass}">
+      <div>
+        <div class="result-hero-label">Total taxable capital gain</div>
+        <div class="result-hero-amount">${heroAmountText}</div>
+        <div style="margin-top:8px;font-size:12px;opacity:0.7">
+          ${i18n.hero_duree} ${r.dureeDepuisRef} ${r.dureeDepuisRef>1 ? i18n.hero_ans : i18n.hero_an}
+          ${r.isHeritage ? i18n.hero_depuis_defunt : r.isDonation ? i18n.hero_depuis_donation : ''}
+        </div>
+      </div>
+      <div class="result-hero-tax">
+        <div class="result-hero-tax-label">Estimated base tax (excl. additional centimes)</div>
+        <div class="result-hero-tax-amount">${heroTaxText}</div>
+      </div>
+    </div>`;
+
+// TERRAIN — Schéma officiel Frame XV B.6
+  if (r.terrain) {
+    const t = r.terrain;
+    const regimeClass = t.taux === 0.33 ? 'regime-33' : 'regime-165';
+    const regimeLabel = t.taux === 0.33 ? i18n.regime_33 : i18n.regime_165_terrain;
+    const A = r.isMixte ? t.prixVenteBrut : r.prixVente;
+    const B = r.isMixte ? 0 : r.fraisAlienation;
+    const C = A - B;
+    const D = t.pxAchat;
+    const E = t.fraisAchat;
+    const F = D + E;
+    const G = t.supplement5pct;
+    const H = F + G;
+    const I = t.indemnite;
+    const J = H - I;
+    const K = Math.max(0, C - J - t.pertes);
+    const impotBase = K * t.taux;
+    const codes = t.taux === 0.33 ? '1205-56 / 2205-26' : '1206-55 / 2206-25';
+
+    html += `
+    <div class="breakdown">
+      <div class="breakdown-title">${i18n.schema_terrain_title}</div>
+      <table>
+        <tr><td><span class="ipp-letter">A</span> ${i18n.schema_terrain_A}${r.isMixte ? ' <em style="font-size:11px;opacity:0.6">(${i18n.schema_terrain_A_mixte})</em>' : ''}</td><td>${fmt(A)}</td></tr>
+        ${B > 0 ? `<tr class="deduct"><td><span class="ipp-letter">B</span> ${i18n.schema_terrain_B}</td><td>– ${fmt(B)}</td></tr>
+        <tr class="subtotal"><td><span class="ipp-letter">C</span> ${i18n.schema_terrain_C}</td><td>${fmt(C)}</td></tr>` : `<tr class="subtotal"><td><span class="ipp-letter">C</span> ${i18n.schema_terrain_C_noB}</td><td>${fmt(C)}</td></tr>`}
+        <tr><td><span class="ipp-letter">D</span> ${i18n.schema_terrain_D}</td><td>${fmt(D)}</td></tr>
+        <tr class="add"><td><span class="ipp-letter">E</span> ${i18n.schema_terrain_E} <em style="font-size:11px;opacity:0.7">${t.fraisForfit ? i18n.schema_terrain_E_forfait : i18n.schema_terrain_E_reel}</em></td><td>+ ${fmt(E)}</td></tr>
+        <tr class="subtotal"><td><span class="ipp-letter">F</span> Total D + E</td><td>${fmt(F)}</td></tr>
+        <tr class="add"><td><span class="ipp-letter">G</span> ${i18n.schema_terrain_G} ${t.dureeRef} ${t.dureeRef>1 ? i18n.schema_terrain_G_ans : i18n.schema_terrain_G_an}</td><td>+ ${fmt(G)}</td></tr>
+        <tr class="subtotal"><td><span class="ipp-letter">H</span> Total F + G</td><td>${fmt(H)}</td></tr>
+        ${I > 0 ? `<tr class="deduct"><td><span class="ipp-letter">I</span> ${i18n.schema_terrain_I}</td><td>– ${fmt(I)}</td></tr>
+        <tr class="subtotal"><td><span class="ipp-letter">J</span> ${i18n.schema_terrain_J}</td><td>${fmt(J)}</td></tr>` : ''}
+        ${t.pertes > 0 ? `<tr class="deduct"><td>${i18n.schema_terrain_pertes}</td><td>– ${fmt(t.pertes)}</td></tr>` : ''}
+        <tr class="subtotal"><td><span class="ipp-letter">K</span> ${i18n.schema_terrain_K} ${I > 0 ? 'J' : 'H'})</td><td><strong>${K > 0 ? fmt(K) : '<span style="color:var(--danger)">'+(fmt(C - (I > 0 ? J : H)))+'</span>'}</strong></td></tr>
+        <tr><td>${i18n.schema_terrain_taux} <span class="regime-badge ${regimeClass}">${regimeLabel}</span></td><td>${(t.taux*100).toFixed(1)} %</td></tr>
+        <tr><td>${i18n.schema_terrain_impot_base}${(t.taux*100).toFixed(1)} % × ${fmt(K)})</td><td>${fmt(impotBase)}</td></tr>
+        <tr><td>${i18n.schema_terrain_centimes} <span style="font-size:11px;opacity:0.7">(${(tauxCom*100).toFixed(1)} %)</span></td><td>${fmt(impotBase * tauxCom)}</td></tr>
+        <tr class="total"><td>${i18n.schema_terrain_total} <span style="font-size:11px;font-weight:400;opacity:0.8">— surtax included</span></td><td>${fmt(impotBase * (1 + tauxCom))}</td></tr>
+        <tr><td colspan="2" class="ipp-code-row">${i18n.schema_terrain_codes} <strong>${codes}</strong></td></tr>
+      </table>
+    </div>`;
+  }
+
+  // BÂTIMENT — Schéma officiel Frame XV B.7
+  if (r.bati) {
+    const b = r.bati;
+    const pvVente = r.isMixte ? b.prixVenteNetBati : r.prixVenteNet;
+    const fraisAliBpart = r.isMixte ? 0 : r.fraisAlienation;
+    const A = r.isMixte ? b.prixVenteBrutBati : r.prixVente;
+    const B = r.isMixte ? 0 : r.fraisAlienation;
+    const C = A - B;
+    const D = b.pxBati;
+    const E = b.fraisBati;
+    const F = D + E;
+    const G = b.supplement5pctBati;
+    const H = F + G;
+    const travH = b.travaux || 0;
+    const indemniteJ = b.indemnite || 0;
+    const I = H + travH;
+    const J = indemniteJ;
+    const K = I - J;
+    const pvNette = Math.max(0, C - K - (b.pertes||0));
+    const impotBase = pvNette * 0.165;
+
+    html += `
+    <div class="breakdown" style="margin-top:16px">
+      <div class="breakdown-title">${i18n.schema_bati_title}</div>
+      <table>
+        <tr><td><span class="ipp-letter">A</span> ${i18n.schema_bati_A}${r.isMixte ? ' <em style="font-size:11px;opacity:0.6">(${i18n.schema_bati_A_mixte})</em>' : ''}</td><td>${fmt(A)}</td></tr>
+        ${B > 0 ? `<tr class="deduct"><td><span class="ipp-letter">B</span> ${i18n.schema_bati_B}</td><td>– ${fmt(B)}</td></tr>
+        <tr class="subtotal"><td><span class="ipp-letter">C</span> ${i18n.schema_bati_C}</td><td>${fmt(C)}</td></tr>` : `<tr class="subtotal"><td><span class="ipp-letter">C</span> ${i18n.schema_bati_C_noB}</td><td>${fmt(C)}</td></tr>`}
+        <tr><td><span class="ipp-letter">D</span> ${i18n.schema_bati_D}</td><td>${fmt(D)}</td></tr>
+        <tr class="add"><td><span class="ipp-letter">E</span> ${i18n.schema_bati_E} <em style="font-size:11px;opacity:0.7">${b.fraisBatiForfit ? i18n.schema_bati_E_forfait : i18n.schema_bati_E_reel}</em></td><td>+ ${fmt(E)}</td></tr>
+        <tr class="subtotal"><td><span class="ipp-letter">F</span> Total D + E</td><td>${fmt(F)}</td></tr>
+        <tr class="add"><td><span class="ipp-letter">G</span> ${i18n.schema_terrain_G} ${b.dureeBati} ${b.dureeBati>1 ? i18n.schema_terrain_G_ans : i18n.schema_terrain_G_an}</td><td>+ ${fmt(G)}</td></tr>
+        <tr class="subtotal"><td><span class="ipp-letter">H</span> Total F + G</td><td>${fmt(H)}</td></tr>
+        ${travH > 0 ? `<tr class="add"><td>${i18n.schema_bati_travaux}</td><td>+ ${fmt(travH)}</td></tr>` : ''}
+        <tr class="subtotal"><td><span class="ipp-letter">I</span> ${i18n.schema_bati_I} ${travH > 0 ? i18n.schema_bati_I_travaux : i18n.schema_bati_I_H}</td><td>${fmt(I)}</td></tr>
+        ${J > 0 ? `<tr class="deduct"><td><span class="ipp-letter">J</span> ${i18n.schema_bati_J}</td><td>– ${fmt(J)}</td></tr>
+        <tr class="subtotal"><td><span class="ipp-letter">K</span> ${i18n.schema_bati_K}</td><td>${fmt(K)}</td></tr>` : ''}
+        ${(b.pertes||0) > 0 ? `<tr class="deduct"><td>${i18n.schema_bati_pertes}</td><td>– ${fmt(b.pertes)}</td></tr>` : ''}
+        <tr class="subtotal"><td><span class="ipp-letter">L</span> ${i18n.schema_bati_L} ${J > 0 ? 'K' : 'I'})</td><td><strong>${pvNette > 0 ? fmt(pvNette) : '<span style="color:var(--danger)">'+(fmt(C - K))+'</span>'}</strong></td></tr>
+        <tr><td>${i18n.schema_bati_taux} <span class="regime-badge regime-165">${i18n.regime_165_bati}</span></td><td>16,5 %</td></tr>
+        <tr><td>${i18n.schema_bati_impot} ${fmt(pvNette)})</td><td>${fmt(impotBase)}</td></tr>
+        <tr><td>${i18n.schema_bati_centimes} <span style="font-size:11px;opacity:0.7">(${(tauxCom*100).toFixed(1)} %)</span></td><td>${fmt(impotBase * tauxCom)}</td></tr>
+        <tr class="total"><td>${i18n.schema_bati_total} <span style="font-size:11px;font-weight:400;opacity:0.8">— surtax included</span></td><td>${fmt(impotBase * (1 + tauxCom))}</td></tr>
+        <tr><td colspan="2" class="ipp-code-row">${i18n.schema_bati_codes} <strong>1171-90 / 2171-60</strong> (a) et <strong>1172-89 / 2172-59</strong> (b)</td></tr>
+      </table>
+    </div>`;
+  }
+
+  // Total mixte
+  if (r.isMixte && r.terrain && r.bati) {
+    const impotT = r.terrain.pvTaxable * r.terrain.taux;
+    const impotB = r.bati.pvTaxable * 0.165;
+    html += `
+    <div class="result-grid">
+      <div class="result-card">
+        <div class="result-card-label">${i18n.mixte_impot_terrain}</div>
+        <div class="result-card-value">${fmt(impotT)}</div>
+      </div>
+      <div class="result-card">
+        <div class="result-card-label">${i18n.mixte_impot_bati}</div>
+        <div class="result-card-value">${fmt(impotB)}</div>
+      </div>
+    </div>`;
+  }
+
+  // NOTE FISCALE
+  const terrainCode = r.terrain ? (r.terrain.taux === 0.33 ? '1205-56 / 2205-26' : '1206-55 / 2206-25') : null;
+  const batiCode = r.bati ? '1171-90 / 2171-60' : null;
+  html += `
+    <div class="fiscal-note">
+      <strong>${i18n.note_title}</strong><br>
+      ${r.noteDonation ? `• <strong>${i18n.note_donation}</strong> ${r.noteDonation}<br>` : ''}
+      ${terrainCode ? `• <strong>${i18n.note_terrain_B6}</strong> <strong>${terrainCode}</strong><br>` : ''}
+      ${batiCode ? `• <strong>${i18n.note_bati_B7}</strong> <strong>${batiCode}</strong><br>` : ''}
+      • ${i18n.note_annexe}<br><br>
+      <strong>${i18n.note_centimes_title}</strong><br>
+      ${i18n.note_centimes_text}<br>
+      <em>${i18n.note_centimes_ex}</em><br><br>
+      • ${i18n.note_voorheffing}<br>
+      • ${i18n.note_maries}
+    </div>`;
+
+    el.innerHTML = html;
+}
+
+// ===================== LIMITATION ANNÉES 4 CHIFFRES =====================
+function limitDateYear(input) {
+  if (!input.value) return;
+  const parts = input.value.split('-');
+  if (parts[0] && parts[0].length > 4) {
+    parts[0] = parts[0].slice(0, 4);
+    input.value = parts.join('-');
+  }
+  // Limite raisonnable : 1900–2100
+  const year = parseInt(parts[0]);
+  if (year > 2100) { parts[0] = '2100'; input.value = parts.join('-'); }
+  if (year < 1900 && parts[0].length === 4) { parts[0] = '1900'; input.value = parts.join('-'); }
+}
+
+function initDateLimits() {
+  document.querySelectorAll('input[type="date"]').forEach(input => {
+    input.setAttribute('min', '1900-01-01');
+    input.setAttribute('max', '2100-12-31');
+    input.addEventListener('change', () => limitDateYear(input));
+    input.addEventListener('blur', () => limitDateYear(input));
+    input.addEventListener('input', () => limitDateYear(input));
+  });
+}
+
+// ===================== INIT =====================
+onTypeBienChange();
+initDateLimits();
+
+function toggleDD(e){
+  e.stopPropagation();
+  document.getElementById('ddWrap').classList.toggle('dd-open');
+}
+document.addEventListener('click',()=>{
+  var w=document.getElementById('ddWrap');
+  if(w) w.classList.remove('dd-open');
+});
+</script>
+
+<footer>
+  <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
+  <div class="footer-links">
+    <a href="/en/mentions-legales/">Legal notice</a>
+    <a href="/en/mentions-legales/#rgpd">GDPR</a>
+    <a href="/en/mentions-legales/#cookies">Cookies</a>
+    <a href="#">Contact</a>
+  </div>
+</footer>
+
+<!-- Cookies -->
+<style>
+#cb{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0D1B2A;border-top:3px solid #1A7A8A;padding:14px 28px;}
+#cb .cbt{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+#cb p{font-size:.8rem;color:rgba(255,255,255,.7);line-height:1.6;flex:1;min-width:180px;margin:0;}
+#cb p a{color:#22A3B8;text-decoration:none;}
+#cb .cbc{display:flex;gap:18px;flex-wrap:wrap;margin:8px 0 10px;font-size:.78rem;color:rgba(255,255,255,.75);}
+#cb .cbc label{display:flex;align-items:center;gap:6px;cursor:pointer;}
+#cb .cbc input{width:15px;height:15px;accent-color:#1A7A8A;}
+#cb .cbb{display:flex;gap:9px;flex-shrink:0;}
+#cb button{padding:8px 16px;border-radius:7px;font-size:.8rem;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;border:none;}
+.cba{background:#1A7A8A;color:#fff;}
+.cbs{background:transparent;color:rgba(255,255,255,.65);border:1px solid rgba(255,255,255,.25)!important;}
+.cbr{background:transparent;color:rgba(255,255,255,.45);font-size:.73rem;text-decoration:underline;padding:3px 0!important;}
+</style>
+<div id="cb">
+  <div class="cbt">
+    <p>🍪 <strong style="color:#fff">Ce site utilise des cookies.</strong> Necessary cookies ensure the site functions properly. <a href="/en/mentions-legales/#cookies">Learn more</a></p>
+    <div class="cbb">
+      <button class="cba" onclick="ca()">Accept all</button>
+      <button class="cbs" onclick="cs()">Enregistrer</button>
+    </div>
+  </div>
+  <div class="cbc">
+    <label><input type="checkbox" checked disabled> Necessary</label>
+    <label><input type="checkbox" id="ca2"> Analytics</label>
+    <label><input type="checkbox" id="ca3"> Advertising</label>
+  </div>
+  <button class="cbr" onclick="cr()">Refuse all</button>
+</div>
+
+<!-- END COOKIE BANNER -->
+<!-- ── BANNIÈRE COOKIES APD-CONFORME ── -->
+<style>
+#cookieOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99998;backdrop-filter:blur(3px);}
+#cookieBanner{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:99999;
+  background:#fff;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.3);
+  width:min(580px,94vw);max-height:88vh;overflow-y:auto;font-family:'Inter',sans-serif;}
+/* Main view */
+#cbMain{padding:32px 36px;}
+#cbMain .cb-title{font-size:1.25rem;font-weight:700;color:#1A2535;text-align:center;margin:0 0 20px;}
+#cbMain .cb-text{font-size:0.82rem;color:#4A5568;line-height:1.7;margin:0 0 14px;}
+#cbMain .cb-text a{color:#1A7A8A;text-decoration:underline;}
+#cbMain .cb-text strong{color:#1A2535;}
+#cbMain .cb-btns{display:flex;flex-direction:column;gap:10px;margin-top:24px;}
+#cbMain .cb-btn-agree{padding:14px;border-radius:8px;background:#F5A623;color:#fff;font-size:0.95rem;font-weight:700;border:none;cursor:pointer;transition:background 0.2s;font-family:'Inter',sans-serif;width:100%;}
+#cbMain .cb-btn-agree:hover{background:#e8961a;}
+#cbMain .cb-btn-modify{padding:12px;border-radius:8px;background:#fff;color:#1A2535;font-size:0.88rem;font-weight:600;border:2px solid #DDE5EF;cursor:pointer;transition:all 0.2s;font-family:'Inter',sans-serif;width:100%;}
+#cbMain .cb-btn-modify:hover{border-color:#1A2535;}
+/* Detail view */
+#cbDetail{display:none;padding:28px 36px;}
+#cbDetail .cb-back{background:none;border:none;color:#1A7A8A;font-size:0.82rem;cursor:pointer;padding:0 0 16px;display:flex;align-items:center;gap:6px;font-family:'Inter',sans-serif;}
+#cbDetail .cb-back:hover{text-decoration:underline;}
+#cbDetail .cb-title{font-size:1.1rem;font-weight:700;color:#1A2535;margin:0 0 16px;}
+#cbDetail .cb-cat{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:16px;border-radius:10px;border:1px solid #EEF2F7;margin-bottom:10px;}
+#cbDetail .cb-cat-name{font-size:0.88rem;font-weight:700;color:#1A2535;margin-bottom:4px;}
+#cbDetail .cb-cat-desc{font-size:0.78rem;color:#718096;line-height:1.55;}
+#cbDetail .cb-toggle{position:relative;width:48px;height:26px;flex-shrink:0;margin-top:2px;}
+#cbDetail .cb-toggle input{opacity:0;width:0;height:0;position:absolute;}
+#cbDetail .cb-toggle-slider{position:absolute;inset:0;border-radius:26px;background:#DDE5EF;cursor:pointer;transition:background 0.2s;}
+#cbDetail .cb-toggle input:checked + .cb-toggle-slider{background:#F5A623;}
+#cbDetail .cb-toggle-slider:before{content:'';position:absolute;width:20px;height:20px;left:3px;top:3px;border-radius:50%;background:#fff;transition:transform 0.2s;box-shadow:0 1px 4px rgba(0,0,0,0.2);}
+#cbDetail .cb-toggle input:checked + .cb-toggle-slider:before{transform:translateX(22px);}
+#cbDetail .cb-toggle.required .cb-toggle-slider{background:#F5A623;cursor:not-allowed;opacity:0.7;}
+#cbDetail .cb-detail-btns{display:flex;flex-direction:column;gap:10px;margin-top:20px;}
+#cbDetail .cb-btn-saveall{padding:13px;border-radius:8px;background:#F5A623;color:#fff;font-size:0.92rem;font-weight:700;border:none;cursor:pointer;font-family:'Inter',sans-serif;width:100%;}
+#cbDetail .cb-btn-saveall:hover{background:#e8961a;}
+#cbDetail .cb-btn-saveprefs{padding:11px;border-radius:8px;background:#fff;color:#1A2535;font-size:0.85rem;font-weight:600;border:2px solid #DDE5EF;cursor:pointer;font-family:'Inter',sans-serif;width:100%;}
+#cbDetail .cb-btn-saveprefs:hover{border-color:#1A2535;}
+#cbDetail .cb-btn-refuseall{background:none;border:none;color:#A0AEC0;font-size:0.78rem;cursor:pointer;text-decoration:underline;padding:6px 0;font-family:'Inter',sans-serif;text-align:center;}
+#cbDetail .cb-btn-refuseall:hover{color:#4A5568;}
+@media(max-width:480px){
+  #cbMain,#cbDetail{padding:24px 20px;}
+}
+</style>
+<div id="cookieOverlay"></div>
+<div id="cookieBanner" role="dialog" aria-modal="true">
+  <!-- Vue principale -->
+  <div id="cbMain">
+    <h2 class="cb-title">Your privacy settings</h2>
+    <p class="cb-text">La Caverne de la Compta uses cookies to collect information about your device, browser and browsing behaviour.</p>
+    <p class="cb-text">If you give us your consent, we may use your data to <strong>personalise content</strong> and <strong>display relevant advertisements</strong> via Google AdSense. We also measure audience with <strong>Google Analytics</strong> to improve the site.</p>
+    <p class="cb-text">By clicking « Accept », you give your consent. If you do not wish to allow everything, click « Customise ». You can change your choices at any time via the <strong>Cookie management</strong> link at the bottom of the page. For more information, please consult our <a href="/en/mentions-legales/#cookies">cookie policy</a>.</p>
+    <div class="cb-btns">
+      <button class="cb-btn-agree" onclick="cookieAcceptAll()">Accept</button>
+      <button class="cb-btn-modify" onclick="cbShowDetail()">Customise</button>
+    </div>
+  </div>
+  <!-- Vue détaillée -->
+  <div id="cbDetail">
+    <button class="cb-back" onclick="cbShowMain()">← Back</button>
+    <h2 class="cb-title">Set your preferences</h2>
+    <div class="cb-cat">
+      <div>
+        <div class="cb-cat-name">🔒 Necessary <span style="font-size:0.7rem;color:#F5A623;">(always active)</span></div>
+        <div class="cb-cat-desc">Essential for the site to function: navigation, security, language preferences. Cannot be disabled.</div>
+      </div>
+      <label class="cb-toggle required"><input type="checkbox" checked disabled><span class="cb-toggle-slider"></span></label>
+    </div>
+    <div class="cb-cat">
+      <div>
+        <div class="cb-cat-name">📊 Analytics <span style="font-size:0.7rem;color:#8A9BB0;">(Google Analytics)</span></div>
+        <div class="cb-cat-desc">Help us understand how you use the site so we can continually improve it.</div>
+      </div>
+      <label class="cb-toggle"><input type="checkbox" id="cbAnalytics" checked><span class="cb-toggle-slider"></span></label>
+    </div>
+    <div class="cb-cat">
+      <div>
+        <div class="cb-cat-name">📢 Advertising <span style="font-size:0.7rem;color:#8A9BB0;">(Google AdSense)</span></div>
+        <div class="cb-cat-desc">Allow advertising to be displayed to fund the site free of charge for you.</div>
+      </div>
+      <label class="cb-toggle"><input type="checkbox" id="cbAds" checked><span class="cb-toggle-slider"></span></label>
+    </div>
+    <div class="cb-detail-btns">
+      <button class="cb-btn-saveall" onclick="cookieAcceptAll()">Accept all</button>
+      <button class="cb-btn-saveprefs" onclick="cookieSavePrefs()">Save my choices</button>
+      <button class="cb-btn-refuseall" onclick="cookieRefuseAll()">Refuse all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  function showBanner(){
+    document.getElementById('cookieBanner').style.display='block';
+    document.getElementById('cookieOverlay').style.display='block';
+    document.body.style.overflow='hidden';
+  }
+  function hideBanner(){
+    document.getElementById('cookieBanner').style.display='none';
+    document.getElementById('cookieOverlay').style.display='none';
+    document.body.style.overflow='';
+  }
+  window.cbShowDetail=function(){
+    document.getElementById('cbMain').style.display='none';
+    document.getElementById('cbDetail').style.display='block';
+  };
+  window.cbShowMain=function(){
+    document.getElementById('cbDetail').style.display='none';
+    document.getElementById('cbMain').style.display='block';
+  };
+  function updateConsentMode(analytics,ads){
+    if(typeof gtag==='function'){
+      gtag('consent','update',{
+        analytics_storage:analytics?'granted':'denied',
+        ad_storage:ads?'granted':'denied',
+        ad_user_data:ads?'granted':'denied',
+        ad_personalization:ads?'granted':'denied'
+      });
+    }
+    if(ads&&!window._adsenseLoaded){
+      window._adsenseLoaded=true;
+      var s=document.createElement('script');
+      s.async=true;s.crossOrigin='anonymous';
+      s.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749';
+      document.head.appendChild(s);
+    }
+  }
+  window.cookieAcceptAll=function(){
+    localStorage.setItem('cb_analytics','1');
+    localStorage.setItem('cb_ads','1');
+    updateConsentMode(true,true);
+    hideBanner();
+  };
+  window.cookieSavePrefs=function(){
+    var ca=document.getElementById('cbAnalytics').checked?'1':'0';
+    var cd=document.getElementById('cbAds').checked?'1':'0';
+    localStorage.setItem('cb_analytics',ca);
+    localStorage.setItem('cb_ads',cd);
+    updateConsentMode(ca==='1',cd==='1');
+    hideBanner();
+  };
+  window.cookieRefuseAll=function(){
+    localStorage.setItem('cb_analytics','0');
+    localStorage.setItem('cb_ads','0');
+    updateConsentMode(false,false);
+    hideBanner();
+  };
+  window.openCookieSettings=function(){
+    var ca=localStorage.getItem('cb_analytics');
+    var cd=localStorage.getItem('cb_ads');
+    if(ca!==null)document.getElementById('cbAnalytics').checked=(ca==='1');
+    if(cd!==null)document.getElementById('cbAds').checked=(cd==='1');
+    cbShowMain();
+    showBanner();
+  };
+  var ca=localStorage.getItem('cb_analytics');
+  if(ca===null){showBanner();}
+  else{updateConsentMode(ca==='1',localStorage.getItem('cb_ads')==='1');}
+})();
+</script>
+<!-- END COOKIE BANNER -->
+<script>
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  var ld = document.getElementById('langSwitcher');
+  if (ld) ld.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var ld = document.getElementById('langSwitcher');
+  if (ld && !ld.contains(e.target)) ld.classList.remove('open');
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      this.closest('.faq-item').classList.toggle('faq-open');
+    });
+  });
+});
+</script>
+
+<script>
+function toggleMobileMenu(e) {
+  e.stopPropagation();
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  if (nav) nav.classList.toggle('mobile-open');
+  if (btn) btn.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  if (nav && nav.classList.contains('mobile-open')) {
+    if (!nav.contains(e.target) && !btn.contains(e.target)) {
+      nav.classList.remove('mobile-open');
+      if (btn) btn.classList.remove('open');
+    }
+  }
+});
+</script>
+</body>
+</html>

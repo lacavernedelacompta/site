@@ -85,16 +85,16 @@ nav {
 .dd-new{margin-left:auto;background:var(--teal);color:#fff;font-size:.6rem;font-weight:700;padding:2px 7px;border-radius:20px;}
 
 /* ── Hero ── */
-.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);padding:38px 40px 32px;position:relative;overflow:hidden;}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);padding:38px 40px 32px;position:relative;overflow:hidden;text-align:center;}
 .hero::before{content:'';position:absolute;top:-60px;right:-60px;width:320px;height:320px;background:radial-gradient(circle,rgba(26,122,138,.18) 0%,transparent 70%);pointer-events:none;}
-.hero-inner{max-width:1200px;margin:0 auto;}
+.hero-inner{max-width:1200px;margin:0 auto;text-align:center;}
 .hero-bread{font-size:.73rem;color:rgba(255,255,255,.45);margin-bottom:10px;}
 .hero-bread a{color:rgba(255,255,255,.45);text-decoration:none;}
 .hero-bread a:hover{color:#fff;}
 .hero-badge{display:inline-block;background:rgba(26,122,138,.3);color:var(--teal-light);font-size:.7rem;font-weight:600;padding:4px 12px;border-radius:20px;letter-spacing:.08em;margin-bottom:12px;}
 .hero h1{font-family:'Lora',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;color:#fff;margin-bottom:8px;line-height:1.25;}
 .hero h1 span{color:var(--teal-light);}
-.hero p{font-size:.9rem;color:rgba(255,255,255,.65);max-width:520px;}
+.hero p{font-size:.9rem;color:rgba(255,255,255,.65);max-width:520px;margin:0 auto;}
 
 /* ── Update badge ── */
 .update-bar{text-align:right;font-size:.7rem;color:var(--text-light);padding:5px 40px 0;font-style:italic;}
@@ -656,6 +656,8 @@ gtag('config', 'G-WNHZDLVPEL');
         <a href="/de/quick-memento-fiscal/"><span class="dd-icon">📌</span>Steuer-Schnellmemo</a>
         <a href="/de/remboursement-frais/"><span class="dd-icon">🚗</span>Kilometerentschädigung</a>
         <a href="/de/questionnaire-frais-propres/"><span class="dd-icon">💼</span>Eigene Kosten</a>
+        <a href="/de/simulateur-plus-value-immobiliere/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">🏡</span>Kapitalgewinn Immobilien</a>
+        <a href="/de/provisionsnachweis-versicherungen/"><span class="dd-icon">📑</span>Provisionsnachweis</a>
       </div>
     </li>
   </ul>
@@ -663,10 +665,10 @@ gtag('config', 'G-WNHZDLVPEL');
   <div class="lang-dropdown" style="position:relative;display:inline-block;" id="langSwitcher">
     <button class="lang-current" onclick="toggleLangMenu(event)">🇫🇷 FR</button>
     <div class="lang-menu">
-<a href="https://lacavernedelacompta.be/de/simulateur-credit/" class="active">🇫🇷 Français</a>
+<a href="https://lacavernedelacompta.be/fr/simulateur-credit/" class="">🇫🇷 Français</a>
 <a href="https://lacavernedelacompta.be/nl/simulateur-credit/" class="">🇧🇪 Nederlands</a>
-<a href="https://lacavernedelacompta.be/en/simulateur-credit/" class="">🇬🇧 English</a>
 <a href="https://lacavernedelacompta.be/de/simulateur-credit/" class="active">🇩🇪 Deutsch</a>
+<a href="https://lacavernedelacompta.be/en/simulateur-credit/" class="">🇬🇧 English</a>
     </div>
   </div>
   <!-- ══════════════════════ -->

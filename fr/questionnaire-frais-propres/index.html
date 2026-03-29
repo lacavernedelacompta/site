@@ -181,6 +181,9 @@ nav.main-nav{background:var(--white);border-bottom:1px solid var(--border);paddi
 .notice a{color:var(--teal);font-weight:600;}
 .notice-warn{background:var(--orange-pale);border-color:#F5C87A;color:var(--orange);}
 .notice-dirigeant{background:#FBF5E6;border-color:#E8C96A;color:#7A5500;}
+.notice-info { background: #EBF3F5; border-color: #B0D4DC; color: #1A5F70; }
+.notice-info a { color: #1A5F70; }
+
 .notice-km{background:var(--teal-pale);border-color:#99D9E5;color:#0E4F5A;}
 .notice-success{background:var(--green-pale);border-color:#9ED4B2;color:var(--green);}
 
@@ -367,7 +370,57 @@ footer a:hover{color:var(--white);}
 .faq-answer{display:none;padding:4px 18px 15px;font-size:0.87rem;color:#4A6279;line-height:1.75;border-top:1px solid #F0F4F8;}
 .faq-item.faq-open .faq-answer{display:block;}
 
+
+/* ── Ruling toggle ── */
+.ruling-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.35);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.ruling-toggle input[type=checkbox] {
+  width: 17px; height: 17px;
+  accent-color: var(--gold, #C9A84C);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.ruling-toggle-label {
+  font-size: .78rem;
+  color: var(--text, #1A2535);
+  line-height: 1.45;
+}
+.ruling-toggle-label strong { color: #8A6A10; }
+.ruling-badge {
+  display: inline-block;
+  background: rgba(201,168,76,0.18);
+  border: 1px solid rgba(201,168,76,0.45);
+  color: #7A5500;
+  font-size: .68rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  letter-spacing: .05em;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
 </style>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{
+  analytics_storage:'denied',
+  ad_storage:'denied',
+  ad_user_data:'denied',
+  ad_personalization:'denied',
+  wait_for_update:500
+});
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNHZDLVPEL"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WNHZDLVPEL');</script>
 
@@ -429,6 +482,10 @@ footer a:hover{color:var(--white);}
   ]
 }
 </script>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Questionnaire Frais Propres Belgique 2026">
+<meta name="twitter:description" content="Questionnaire guidé : calculez vos frais propres ONSS 2026, distinguez ATN et frais remboursables.">
+<meta name="twitter:image" content="https://lacavernedelacompta.be/logo.svg">
 </head>
 <body>
 
@@ -477,8 +534,9 @@ footer a:hover{color:var(--white);}
         <a href="/fr/simulateur-retenue/"><span class="dd-icon">🧾</span>Retenue sur Facture</a>
         <a href="/fr/quick-memento-fiscal/"><span class="dd-icon">📌</span>Quick-Mémo Fiscal</a>
         <a href="/fr/remboursement-frais/"><span class="dd-icon">🚗</span>Indemnité Kilométrique</a>
-        <a href="/fr/questionnaire-frais-propres/"><span class="dd-icon">💼</span>Frais Propres</a>
         <a href="/fr/questionnaire-frais-propres/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">📝</span>Questionnaire Frais Propres</a>
+        <a href="/fr/simulateur-plus-value-immobiliere/"><span class="dd-icon">🏡</span>Plus-Value Immobilière</a>
+        <a href="/fr/commission-assurance/"><span class="dd-icon">📑</span>Bordereau Commission</a>
       </div>
     </li>
   </ul>
@@ -689,6 +747,13 @@ footer a:hover{color:var(--white);}
           </label>
         </div>
 
+
+      <!-- ═══ DISCLAIMER SIMULATEUR ═══ -->
+      <div class="notice" id="disclaimer-simulateur" style="background:#F4F7FA;border:1px solid #DDE5EF;color:#4A6279;font-size:.74rem;line-height:1.65;margin-bottom:16px;">
+        <span class="notice-icon" style="font-size:1rem;">⚖️</span>
+        <span><strong>Simulateur indicatif — La Caverne de la Compta</strong><br>
+        Les résultats de cet outil sont fournis à titre informatif uniquement. Ils ne constituent pas un conseil fiscal, juridique ou comptable, et n'engagent pas la responsabilité de La Caverne de la Compta. Les montants forfaitaires ONSS sont susceptibles d'évoluer. Pour une situation spécifique, consultez un comptable ou conseillez-vous auprès du <strong>SDA (Service des Décisions Anticipées)</strong>.</span>
+      </div>
         <div id="notice-dirigeant" class="notice notice-dirigeant" style="display:none;margin-bottom:16px;">
           <span class="notice-icon">⚠️</span>
           <div>
@@ -702,6 +767,7 @@ footer a:hover{color:var(--white);}
               <div class="yn-q-sub" style="margin-top:4px;font-style:italic;">Le fisc est plus attentif aux remboursements des dirigeants. Gardez toujours les justificatifs et, pour les forfaits bureau domicile et appareils personnels, demandez un accord écrit préalable au fisc.</div>
           </div>
         </div>
+
 
         <!-- Bloc : Mes informations personnelles -->
         <div class="info-block" id="bloc-personne">
@@ -821,9 +887,9 @@ footer a:hover{color:var(--white);}
           <div class="yn-result" id="yn-result-bureau" style="display:none;"></div>
         </div>
 
-        <div id="notice-bureau-dirigeant" style="display:none;" class="notice notice-warn">
-          <span class="notice-icon">⚠️</span>
-          <span><strong>Dirigeant :</strong> Ce forfait s'applique uniquement aux salariés. Pour un dirigeant, une demande d'accord préalable auprès du fisc est nécessaire avant de l'appliquer.</span>
+        <div id="notice-bureau-dirigeant" style="display:none;" class="notice notice-info">
+          <span class="notice-icon">💡</span>
+          <span><strong>Dirigeant — bureau domicile :</strong> Ce forfait est applicable mais nécessite un <strong>accord préalable du fisc (SDA)</strong> pour être pleinement sécurisé. Sans ruling, le fisc peut le remettre en question lors d'un contrôle. Simulateur indicatif — <a href="https://finances.belgium.be/fr/entreprises/soutien_aux_entreprises/ruling/introduire-prefiling" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">introduire un préfiling SDA →</a></span>
         </div>
 
         <!-- Internet -->
@@ -894,9 +960,9 @@ footer a:hover{color:var(--white);}
           <div class="yn-result" id="yn-result-smartphone" style="display:none;"></div>
         </div>
 
-        <div id="notice-pc-dirigeant" style="display:none;" class="notice notice-warn">
-          <span class="notice-icon">⚠️</span>
-          <span><strong>Dirigeant :</strong> Ces remboursements pour internet, PC et GSM personnels nécessitent une demande d'accord préalable auprès du fisc pour être sécurisés.</span>
+        <div id="notice-pc-dirigeant" style="display:none;" class="notice notice-info">
+          <span class="notice-icon">💡</span>
+          <span><strong>Dirigeant — internet, PC, GSM :</strong> Ces remboursements sont applicables. Un <strong>accord préalable du SDA</strong> les sécurise contre toute requalification en rémunération imposable. Simulateur indicatif — <a href="https://finances.belgium.be/fr/entreprises/soutien_aux_entreprises/ruling/introduire-prefiling" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">introduire un préfiling SDA →</a></span>
         </div>
 
         <div class="notice">
@@ -1091,9 +1157,9 @@ footer a:hover{color:var(--white);}
           </div>
         </div>
 
-        <div id="notice-itinerant-dirig" style="display:none;" class="notice notice-warn">
-          <span class="notice-icon">🔒</span>
-          <span>Les forfaits repas et commodités itinérants sont réservés aux <strong>salariés</strong>. Ils ne s'appliquent pas aux dirigeants.</span>
+        <div id="notice-itinerant-dirig" style="display:none;" class="notice notice-info">
+          <span class="notice-icon">💡</span>
+          <span><strong>Dirigeant — frais itinérants :</strong> Ces forfaits (repas, nuitée, commodités) sont habituellement liés à un contrat de travail, mais peuvent être accordés à un dirigeant sous certaines conditions. Il est fortement recommandé de passer par le <strong>SDA</strong> pour sécuriser ces postes. Simulateur indicatif — <a href="https://finances.belgium.be/fr/entreprises/soutien_aux_entreprises/ruling/introduire-prefiling" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">introduire un préfiling SDA →</a></span>
         </div>
 
         <div class="step-nav">
@@ -1108,9 +1174,9 @@ footer a:hover{color:var(--white);}
       <div class="step-screen" id="step-5">
         <div class="step-title"><span>👷</span> Vêtements & outils</div>
 
-        <div id="notice-vetements-dirig" style="display:none;" class="notice notice-warn">
-          <span class="notice-icon">🔒</span>
-          <span>Ces forfaits sont <strong>exclusivement réservés aux salariés</strong>. En tant que dirigeant, ils ne s'appliquent pas. Passez directement au récapitulatif.</span>
+        <div id="notice-vetements-dirig" style="display:none;" class="notice notice-info">
+          <span class="notice-icon">💡</span>
+          <span><strong>Dirigeant — vêtements & outils :</strong> Ces forfaits sont liés au contrat de travail et difficilement justifiables pour un dirigeant. Le <strong>SDA peut accorder un ruling</strong> si le contexte professionnel est démontrable. En l'absence d'accord, ce poste est à risque lors d'un contrôle. Simulateur indicatif.</span>
         </div>
 
         <div id="vetements-content">
@@ -1303,7 +1369,7 @@ footer a:hover{color:var(--white);}
               <div class="yn-q-sub" style="margin-top:4px;font-style:italic;">Votre comptable ou secrétariat social doit mentionner ces remboursements sur votre fiche annuelle. Et pour chaque poste, on choisit soit le forfait, soit les vrais justificatifs — pas les deux.</div>
       </div>
       <div id="note-dirigeant-ruling" style="display:none;margin-top:10px;padding:11px 14px;background:var(--orange-pale);border:1px solid #F5C87A;border-radius:8px;font-size:.78rem;color:var(--orange);line-height:1.55;">
-        ⚠️ <strong>Dirigeant :</strong> Assurez-vous d'avoir obtenu un accord préalable du fisc avant d'appliquer les forfaits bureau domicile et appareils personnels. Sans cet accord, l'administration peut considérer ces montants comme une rémunération imposable.
+💡 <strong>Dirigeant d'entreprise :</strong> Les forfaits repas, itinérant, vêtements et bureau domicile sont inclus dans ce calcul. Pour sécuriser leur application, il est recommandé d'obtenir un accord préalable du SDA (Service des Décisions Anticipées). <a href="https://finances.belgium.be/fr/entreprises/soutien_aux_entreprises/ruling/introduire-prefiling" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;font-weight:600;">Introduire un préfiling SDA →</a>
       </div>
       <div class="note-actions">
         <button class="btn btn-pdf" onclick="exportNotePdf()" id="btnNotePdf">📄 Télécharger PDF</button>
@@ -1630,34 +1696,18 @@ function setProfil(p) {
   document.getElementById('card-dirigeant').classList.toggle('selected', p==='dirigeant');
   document.getElementById('notice-dirigeant').style.display = p==='dirigeant' ? 'flex' : 'none';
 
-  const locked = p === 'dirigeant';
-
-  // Dirigeant notices for bureau & PC/internet
-  const nb = document.getElementById('notice-bureau-dirigeant');
+  // Show informational SDA notices for dirigeant (no locking — everything remains accessible)
+  const isDirig = p === 'dirigeant';
+  const nb  = document.getElementById('notice-bureau-dirigeant');
   const npc = document.getElementById('notice-pc-dirigeant');
-  if (nb) nb.style.display = locked ? 'flex' : 'none';
-  if (npc) npc.style.display = locked ? 'flex' : 'none';
+  const nit = document.getElementById('notice-itinerant-dirig');
+  const nv  = document.getElementById('notice-vetements-dirig');
+  if (nb)  nb.style.display  = isDirig ? 'flex' : 'none';
+  if (npc) npc.style.display = isDirig ? 'flex' : 'none';
+  if (nit) nit.style.display = isDirig ? 'flex' : 'none';
+  if (nv)  nv.style.display  = isDirig ? 'flex' : 'none';
 
-  // Itinérant rows
-  const rowRepas = document.getElementById('row-repas');
-  const rowCom = document.getElementById('row-commodites');
-  const noticeItinDirig = document.getElementById('notice-itinerant-dirig');
-  rowRepas.style.opacity = locked ? '.35' : '1';
-  rowRepas.style.pointerEvents = locked ? 'none' : 'auto';
-  rowCom.style.opacity = locked ? '.35' : '1';
-  rowCom.style.pointerEvents = locked ? 'none' : 'auto';
-  noticeItinDirig.style.display = locked ? 'flex' : 'none';
-
-  // Vêtements section
-  document.getElementById('vetements-content').style.opacity = locked ? '.35' : '1';
-  document.getElementById('vetements-content').style.pointerEvents = locked ? 'none' : 'auto';
-  document.getElementById('notice-vetements-dirig').style.display = locked ? 'flex' : 'none';
-
-  if (locked) {
-    ['vetements-achat','vetements-entretien','vetements-perso','outils'].forEach(k => setToggle(k,'aucun'));
-    document.getElementById('joursRepas').value = 0;
-    document.getElementById('joursCommodites').value = 0;
-  }
+  // All fields remain fully accessible regardless of profile
   recalc();
 }
 
@@ -1756,7 +1806,7 @@ function recalc() {
 
   Object.entries(FORFAITS).forEach(([key, f]) => {
     const v = toggles[key];
-    if (f.salarieOnly && profil === 'dirigeant') return;
+    // salarieOnly — no restriction, dirigeant can use all forfaits
     if (v === 'propres') {
       let mt;
       if (f.representationNote) {
@@ -1838,7 +1888,7 @@ function buildSummary() {
 
   Object.entries(FORFAITS).forEach(([key, f]) => {
     const v = toggles[key];
-    if (f.salarieOnly && profil === 'dirigeant') return;
+    // salarieOnly — no restriction, dirigeant can use all forfaits
     if (v === 'propres') {
       let mt;
       if (f.representationNote) {
@@ -1949,7 +1999,7 @@ function genererNote() {
 
   Object.entries(FORFAITS).forEach(([key, f]) => {
     const v = toggles[key];
-    if (f.salarieOnly && profil === 'dirigeant') return;
+    // salarieOnly — no restriction, dirigeant can use all forfaits
     if (v === 'propres') {
       let mt;
       if (f.representationNote) {
@@ -1999,7 +2049,8 @@ function genererNote() {
   const noteFicheNum = document.getElementById('note-fiche-num');
   if (noteFicheNum) noteFicheNum.textContent = profil === 'salarie' ? 'fiche 281.10' : 'fiche 281.20';
   const noteDirigRuling = document.getElementById('note-dirigeant-ruling');
-  if (noteDirigRuling) noteDirigRuling.style.display = profil === 'dirigeant' ? 'block' : 'none';
+  if (noteDirigRuling) { noteDirigRuling.style.display = profil === 'dirigeant' ? 'block' : 'none';
+ if (window._dirigeantHasRuling) { noteDirigRuling.style.background = 'var(--green-pale)'; noteDirigRuling.style.borderColor = '#A5D6A7'; noteDirigRuling.style.color = 'var(--green)'; } else { noteDirigRuling.style.background = ''; noteDirigRuling.style.borderColor = ''; noteDirigRuling.style.color = ''; } }
 
   document.getElementById('noteDefrais').style.display = 'block';
   document.getElementById('noteDefrais').scrollIntoView({ behavior:'smooth', block:'start' });
@@ -2121,7 +2172,7 @@ function doNotePdf(btn) {
 
     Object.entries(FORFAITS).forEach(([key,f])=>{
       const v=toggles[key];
-      if(f.salarieOnly&&profil==='dirigeant') return;
+      // salarieOnly — no restriction
       if(v==='propres'){
         let mt;
         if(f.representationNote){mt=parseFloat(document.getElementById('representationMontant').value)||f.montant;}
@@ -2146,7 +2197,7 @@ function doNotePdf(btn) {
     }
 
     // ATN section in PDF
-    const atnInPdf = Object.entries(FORFAITS).filter(([k,f])=>toggles[k]==='atn'&&!(f.salarieOnly&&profil==='dirigeant'));
+    const atnInPdf = Object.entries(FORFAITS).filter(([k,f])=>toggles[k]==='atn');
     if(atnInPdf.length>0){
       y+=4;
       doc.setFillColor(254,232,230);doc.rect(pl-2,y,pr-pl+4,atnInPdf.length*8+12,'F');
