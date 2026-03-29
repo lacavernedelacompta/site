@@ -722,6 +722,19 @@ html,body{max-width:100vw;overflow-x:hidden;}
       font-size: 13px;
     }
   }
+
+.carnet-help {
+  font-size: 10.5px;
+  color: rgba(255,255,255,0.50);
+  line-height: 1.55;
+  margin-top: 2px;
+  padding: 6px 8px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 5px;
+  border-left: 2px solid rgba(201,168,76,0.35);
+}
+.carnet-help strong { color: rgba(201,168,76,0.85); }
+
 </style>
 <style>
 /* ── Tool palette override ── */
@@ -944,19 +957,6 @@ body { background: #F4F7FA !important; }
     <!-- Émetteur -->
     <div class="form-section">
       <div class="section-label">📤 Émetteur (débiteur)</div>
-      <!-- Carnet émetteur -->
-      <div class="carnet-section">
-        <div class="carnet-label">📖 Carnet émetteurs <span>navigateur local</span></div>
-        <select class="carnet-select" id="carnet-emetteur-select">
-          <option value="">— Sélectionner un émetteur sauvegardé —</option>
-        </select>
-        <div class="carnet-btns">
-          <button class="carnet-btn carnet-btn-load" onclick="carnetLoad('emetteur')" title="Charger">↓ Charger</button>
-          <button class="carnet-btn carnet-btn-save" onclick="carnetSave('emetteur')" title="Sauvegarder l'émetteur actuel">＋ Sauvegarder</button>
-          <button class="carnet-btn carnet-btn-del" onclick="carnetDelete('emetteur')" title="Supprimer">✕</button>
-        </div>
-        <div class="carnet-toast" id="carnet-emetteur-toast"></div>
-      </div>
       <div class="bce-search-row">
         <label for="emetteur-bce-query">Recherche BCE (nom ou n°)</label>
         <input type="text" id="emetteur-bce-query" placeholder="BE ____.___.___"
@@ -988,24 +988,26 @@ body { background: #F4F7FA !important; }
             oninput="saveParties(); updatePreview()">
         </div>
       </div>
+      <!-- Carnet émetteur -->
+      <div class="carnet-section">
+        <div class="carnet-label">📖 Carnet émetteurs <span>navigateur local</span></div>
+        <div class="carnet-help">💡 <strong>First use:</strong> fill in your details below, then click <strong>＋ Save</strong>. Next time, select your name and click <strong>↓ Load</strong> to fill everything in 1 click. <strong>✕</strong> deletes the selected entry.</div>
+        <select class="carnet-select" id="carnet-emetteur-select">
+          <option value="">— Sélectionner un émetteur sauvegardé —</option>
+        </select>
+        <div class="carnet-btns">
+          <button class="carnet-btn carnet-btn-load" onclick="carnetLoad('emetteur')" title="Charger">↓ Charger</button>
+          <button class="carnet-btn carnet-btn-save" onclick="carnetSave('emetteur')" title="Sauvegarder l'émetteur actuel">＋ Sauvegarder</button>
+          <button class="carnet-btn carnet-btn-del" onclick="carnetDelete('emetteur')" title="Supprimer">✕</button>
+        </div>
+        <div class="carnet-toast" id="carnet-emetteur-toast"></div>
+      </div>
+
     </div>
 
     <!-- Bénéficiaire -->
     <div class="form-section">
       <div class="section-label">📥 Bénéficiaire (receveur)</div>
-      <!-- Carnet bénéficiaire -->
-      <div class="carnet-section">
-        <div class="carnet-label">📖 Carnet bénéficiaires <span>navigateur local</span></div>
-        <select class="carnet-select" id="carnet-benef-select">
-          <option value="">— Sélectionner un bénéficiaire sauvegardé —</option>
-        </select>
-        <div class="carnet-btns">
-          <button class="carnet-btn carnet-btn-load" onclick="carnetLoad('benef')" title="Charger">↓ Charger</button>
-          <button class="carnet-btn carnet-btn-save" onclick="carnetSave('benef')" title="Sauvegarder le bénéficiaire actuel">＋ Sauvegarder</button>
-          <button class="carnet-btn carnet-btn-del" onclick="carnetDelete('benef')" title="Supprimer">✕</button>
-        </div>
-        <div class="carnet-toast" id="carnet-benef-toast"></div>
-      </div>
       <div class="bce-search-row">
         <label for="benef-bce-query">Recherche BCE (nom ou n°)</label>
         <input type="text" id="benef-bce-query" placeholder="BE ____.___.___"
@@ -1042,6 +1044,21 @@ body { background: #F4F7FA !important; }
         <input type="text" id="benef-iban" placeholder="BE__ ____ ____ ____"
           maxlength="19" oninput="formatIBAN(this); saveParties(); updatePreview()">
       </div>
+      <!-- Carnet bénéficiaire -->
+      <div class="carnet-section">
+        <div class="carnet-label">📖 Carnet bénéficiaires <span>navigateur local</span></div>
+        <div class="carnet-help">💡 Save each recurring beneficiary (broker, agent…). Next time, select them and click <strong>↓ Load</strong> — all fields fill automatically.</div>
+        <select class="carnet-select" id="carnet-benef-select">
+          <option value="">— Sélectionner un bénéficiaire sauvegardé —</option>
+        </select>
+        <div class="carnet-btns">
+          <button class="carnet-btn carnet-btn-load" onclick="carnetLoad('benef')" title="Charger">↓ Charger</button>
+          <button class="carnet-btn carnet-btn-save" onclick="carnetSave('benef')" title="Sauvegarder le bénéficiaire actuel">＋ Sauvegarder</button>
+          <button class="carnet-btn carnet-btn-del" onclick="carnetDelete('benef')" title="Supprimer">✕</button>
+        </div>
+        <div class="carnet-toast" id="carnet-benef-toast"></div>
+      </div>
+
     </div>
 
     <!-- Infos bordereau -->
