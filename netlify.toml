@@ -46,10 +46,3 @@
   for = "/*.html"
   [headers.values]
     Cache-Control = "public, max-age=3600"
-
-# Serve .txt files (ads.txt, robots.txt, IndexNow key)
-[[headers]]
-  for = "/*.txt"
-  [headers.values]
-    Content-Type = "text/plain; charset=utf-8"
-    Cache-Control = "public, max-age=86400"
