@@ -765,7 +765,7 @@ gtag('config', 'G-WNHZDLVPEL');
       "name": "Wat is het officiële kilometertarief voor woon-werkverkeer in 2026 ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Voor 2026 bedraagt het RSZ-referentiekometartarief 0,4415 €/km. Dit tarief is vrijgesteld van RSZ-bijdragen en belastingen binnen de wettelijke grenzen en wordt regelmatig herzien en gepubliceerd in het Belgisch Staatsblad."
+        "text": "Voor 2026 bedraagt het RSZ-referentiekometartarief 0,4327 €/km. Dit tarief is vrijgesteld van RSZ-bijdragen en belastingen binnen de wettelijke grenzen en wordt regelmatig herzien en gepubliceerd in het Belgisch Staatsblad."
       }
     },
     {
@@ -999,6 +999,7 @@ gtag('config', 'G-WNHZDLVPEL');
           <label>Toepasselijk tarief</label>
           <select id="tripRate">
             <option value="" disabled selected>— kies de periode —</option>
+            <option value="0.4327" selected>01/04/2026 – 30/06/2026 → 0,4327 €/km</option>
             <option value="0.4326">01/01/2026 – 31/03/2026 → 0,4326 €/km</option>
             <option value="0.4312">01/10/2025 – 31/12/2025 → 0,4312 €/km</option>
             <option value="0.4309">01/07/2025 – 30/09/2025 → 0,4309 €/km</option>
@@ -1191,7 +1192,8 @@ gtag('config', 'G-WNHZDLVPEL');
 let mode = 'A', trips = [];
 
 const RATES = [
-  { label:"1 jan. 2026 – 31 mrt. 2026",   rate:0.4326, circ:"n°762", from:"2026-01-01", to:"2026-03-31" },
+  { label:"1 apr. 2026 – 30 jun. 2026",      rate:0.4327, circ:"n°764", from:"2026-04-01", to:"2026-06-30" },
+  { label:"1 jan. 2026 – 31 mrt. 2026",     rate:0.4326, circ:"n°762", from:"2026-01-01", to:"2026-03-31" },
   { label:"1 okt. 2025 – 31 dec. 2025",   rate:0.4312, circ:"n°757", from:"2025-10-01", to:"2025-12-31" },
   { label:"1 jul. 2025 – 30 sep. 2025", rate:0.4309, circ:"n°753", from:"2025-07-01", to:"2025-09-30" },
   { label:"1 apr. 2025 – 30 jun. 2025",   rate:0.4320, circ:"n°749", from:"2025-04-01", to:"2025-06-30" },
@@ -1881,21 +1883,12 @@ loadTrips();
 buildPeriodRows();
 updateBanner(null);
 </script>
-<div style="margin:32px auto;text-align:center;max-width:100%;">
-<h2 style="font-size:1rem;color:#1A3A5C;margin:24px 0 8px;">📋 RSZ-tarief en berekening kilometervergoeding in België</h2>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="9017409611"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
+
 <div style="margin:24px auto;text-align:center;max-width:100%;padding:0 16px;">
 
 <div class="faq-section">
   <h2>❓ Veelgestelde vragen over kilometervergoeding in België</h2>
-  <div class="faq-item"><div class="faq-question">Wat is het officiële kilometertarief voor woon-werkverkeer in 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Voor 2026 bedraagt het RSZ-referentiekometartarief 0,4415 €/km. Dit tarief is vrijgesteld van RSZ-bijdragen en belastingen binnen de wettelijke grenzen en wordt regelmatig herzien en gepubliceerd in het Belgisch Staatsblad.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Wat is het officiële kilometertarief voor woon-werkverkeer in 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Voor 2026 bedraagt het RSZ-referentiekometartarief 0,4327 €/km. Dit tarief is vrijgesteld van RSZ-bijdragen en belastingen binnen de wettelijke grenzen en wordt regelmatig herzien en gepubliceerd in het Belgisch Staatsblad.</p></div></div>
   <div class="faq-item"><div class="faq-question">Kan men de fietsvergoeding en de autovergoeding combineren ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Nee, in het algemeen is het niet mogelijk om beide te combineren voor hetzelfde traject. Als een deel per fiets en een ander deel per auto wordt afgelegd, is een combinatie denkbaar. De fietsvergoeding bedraagt 0,35 €/km in 2026.</p></div></div>
   <div class="faq-item"><div class="faq-question">Hoe berekent men de kilometervergoeding voor beroepsverplaatsingen ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Voor beroepsverplaatsingen is de vergoeding gebaseerd op het officiële RSZ-tarief. De formule is: afstand (km) × tarief (€/km) = vergoeding. Onze calculator integreert automatisch de officiële tarieven van 2026.</p></div></div>
 </div>
@@ -1925,6 +1918,7 @@ updateBanner(null);
     <a href="/nl/mentions-legales/#rgpd">GDPR</a>
     <a href="/nl/mentions-legales/#cookies">Cookies</a>
     <a href="#">Contact</a>
+    <a href="#" onclick="openCookieSettings();return false;" style="color:rgba(255,255,255,.5);">🍪 Cookies beheren</a>
   </div>
 </footer>
 <script>

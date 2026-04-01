@@ -765,7 +765,7 @@ gtag('config', 'G-WNHZDLVPEL');
       "name": "Was ist der offizielle Kilometersatz für den Weg zur Arbeit 2026 ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Für 2026 beträgt der ONSS-Referenzkilometersatz 0,4415 €/km. Dieser Satz ist im Rahmen der gesetzlichen Grenzen von ONSS-Beiträgen und Steuern befreit."
+        "text": "Für 2026 beträgt der ONSS-Referenzkilometersatz 0,4327 €/km. Dieser Satz ist im Rahmen der gesetzlichen Grenzen von ONSS-Beiträgen und Steuern befreit."
       }
     },
     {
@@ -991,6 +991,7 @@ gtag('config', 'G-WNHZDLVPEL');
           <label>Anwendbarer Satz</label>
           <select id="tripRate">
             <option value="" disabled selected>— Periode auswählen —</option>
+            <option value="0.4327" selected>01/04/2026 – 30/06/2026 → 0,4327 €/km</option>
             <option value="0.4326">01/01/2026 – 31/03/2026 → 0,4326 €/km</option>
             <option value="0.4312">01/10/2025 – 31/12/2025 → 0,4312 €/km</option>
             <option value="0.4309">01/07/2025 – 30/09/2025 → 0,4309 €/km</option>
@@ -1183,7 +1184,8 @@ gtag('config', 'G-WNHZDLVPEL');
 let mode = 'A', trips = [];
 
 const RATES = [
-  { label:"1. Jan. 2026 – 31. März 2026",   rate:0.4326, circ:"n°762", from:"2026-01-01", to:"2026-03-31" },
+  { label:"1. Apr. 2026 – 30. Jun. 2026",    rate:0.4327, circ:"n°764", from:"2026-04-01", to:"2026-06-30" },
+  { label:"1. Jan. 2026 – 31. Mrz. 2026",   rate:0.4326, circ:"n°762", from:"2026-01-01", to:"2026-03-31" },
   { label:"1. Okt. 2025 – 31. Dez. 2025",   rate:0.4312, circ:"n°757", from:"2025-10-01", to:"2025-12-31" },
   { label:"1. Jul. 2025 – 30. Sep. 2025", rate:0.4309, circ:"n°753", from:"2025-07-01", to:"2025-09-30" },
   { label:"1. Apr. 2025 – 30. Jun. 2025",   rate:0.4320, circ:"n°749", from:"2025-04-01", to:"2025-06-30" },
@@ -1873,21 +1875,12 @@ loadTrips();
 buildPeriodRows();
 updateBanner(null);
 </script>
-<div style="margin:32px auto;text-align:center;max-width:100%;">
-<h2 style="font-size:1rem;color:#1A3A5C;margin:24px 0 8px;">📋 BOSA-Satz und Kilometerpauschalenberechnung in Belgien</h2>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="9017409611"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
+
 <div style="margin:24px auto;text-align:center;max-width:100%;padding:0 16px;">
 
 <div class="faq-section">
   <h2>❓ Häufige Fragen zur Kilometerentschädigung in Belgien</h2>
-  <div class="faq-item"><div class="faq-question">Was ist der offizielle Kilometersatz für den Weg zur Arbeit 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Für 2026 beträgt der ONSS-Referenzkilometersatz 0,4415 €/km. Dieser Satz ist im Rahmen der gesetzlichen Grenzen von ONSS-Beiträgen und Steuern befreit.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Was ist der offizielle Kilometersatz für den Weg zur Arbeit 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Für 2026 beträgt der ONSS-Referenzkilometersatz 0,4327 €/km. Dieser Satz ist im Rahmen der gesetzlichen Grenzen von ONSS-Beiträgen und Steuern befreit.</p></div></div>
   <div class="faq-item"><div class="faq-question">Wie berechnet man die Kilometerentschädigung für Berufsfahrten ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Für Berufsfahrten basiert die Entschädigung auf dem offiziellen ONSS-Satz. Die Formel lautet: Entfernung (km) × Satz (€/km) = Entschädigung.</p></div></div>
 </div>
 

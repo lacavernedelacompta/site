@@ -660,6 +660,26 @@
 .faq-answer{display:none;padding:4px 18px 15px;font-size:0.87rem;color:#4A6279;line-height:1.75;border-top:1px solid #F0F4F8;}
 .faq-item.faq-open .faq-answer{display:block;}
 
+
+/* ── Bannières latérales AdSense ── */
+.page-with-laterals {
+  position: relative;
+  max-width: 100%;
+}
+.ad-lateral {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 160px;
+  z-index: 100;
+  display: none;
+}
+.ad-lateral-left  { left: 8px; }
+.ad-lateral-right { right: 8px; }
+@media (min-width: 1380px) {
+  .ad-lateral { display: block; }
+}
+
 </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
@@ -737,7 +757,7 @@ gtag('config', 'G-WNHZDLVPEL');
       "name": "What is the registration fee rate in Wallonia in 2026 ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In Wallonia, the standard registration fee rate is 12.5% for most properties. A reduced rate of 3% applies to a modest dwelling as the buyer's primary residence, subject to conditions on cadastral income and purchase price."
+        "text": "In Wallonia, the standard registration fee rate is 12.5% for most properties. A reduced rate of 3% applies for the only and own dwelling. Indexed thresholds from 01/01/2026: €215,283.21 in property pressure zones · €201,827.99 outside zones (art. 53ter W.Reg.). Undivided share, usufruct or bare ownership is not an obstacle (Circ. 2025/C/42)."
       }
     },
     {
@@ -852,6 +872,20 @@ gtag('config', 'G-WNHZDLVPEL');
   
   <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
+<div class="ad-lateral ad-lateral-left">
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:160px;height:600px"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="8050648588"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="ad-lateral ad-lateral-right">
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:160px;height:600px"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="9017409611"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 <div style="text-align:right;font-size:0.72rem;color:var(--text-light);padding:6px 40px 0;font-style:italic;">
     🕐 Updated: January 2026  — Find a certified expert at <a href="https://www.itaa.be/en/itaa-institute-for-tax-advisors-and-accountants-welcome/" target="_blank" rel="noopener" style="color:#1A7A8A;text-decoration:none;font-weight:600;">ITAA — Institute for Tax Advisors and Accountants</a> — <a href="/en/mentions-legales/" style="color:var(--text-light)">Official sources</a>
   </div>
@@ -863,19 +897,6 @@ gtag('config', 'G-WNHZDLVPEL');
   <h1>Property Purchase <span>Simulator</span></h1>
   <p class="subtitle">Notary fees · Registration duties · Mortgage loan</p>
 </section>
-<div style="margin:24px auto;text-align:center;max-width:100%;padding:0 16px;">
-<h2 style="font-size:1rem;color:#1A3A5C;margin:24px 0 8px;">📋 How to calculate registration duties in Belgium?</h2>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="8050648588"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-
-<!-- ADSENSE SLOT (décommenter après validation) -->
-
 
 <nav class="steps-nav">
   <button class="step-tab active" onclick="goStep(1)"><span class="step-num">1</span> Property</button>
@@ -1397,7 +1418,11 @@ function updateHabitationPropreInfo() {
       <strong>⚠️ Foreign properties:</strong> Properties located <strong>abroad</strong> are <u>indeed taken into account</u> when assessing the sole residence condition in Wallonia. If you fully own a residence abroad, you cannot benefit from the 3% rate.<br><br>
       <strong>💡 Couple purchase:</strong> If you buy together and <strong>one of you already owns a property</strong> but not the other, you are not entirely excluded from the reduced rate. In practice: the share bought by the one who owns nothing benefits from <strong>3%</strong>, and the share bought by the one who already owns is taxed at <strong>12.5%</strong>.<br>
       <em>Example: you buy 50/50. One already owns a house, the other does not → 50% of the price is taxed at 3%, 50% at 12.5%.</em><br><br>
-      <div style="border-top:1px solid rgba(26,122,138,0.2);margin-top:6px;padding-top:8px;font-size:0.78rem;color:var(--text-light)">
+      <strong>📊 Indexed price thresholds from 01/01/2026 (art. 53ter W.Reg.):</strong><br>
+      • Property pressure zone: <strong>€215,283.21</strong><br>
+      • Outside pressure zone: <strong>€201,827.99</strong><br>
+      <em style="font-size:0.78rem;color:var(--text-light)">If the purchase price exceeds this threshold, the reduced 3% rate does not apply.</em><br><br>
+            <div style="border-top:1px solid rgba(26,122,138,0.2);margin-top:6px;padding-top:8px;font-size:0.78rem;color:var(--text-light)">
         📎 Official sources :
         <a href="https://www.wallonie.be/fr/actualites/reduction-des-droits-denregistrement-de-succession-et-de-donation" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none">Wallonie.be</a> ·
         <a href="https://www.wallonie.be/sites/default/files/2024-12/R%C3%A9forme_droits_enregistrement-FAQ.pdf" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none">Official FAQ (PDF)</a> ·
@@ -1419,7 +1444,11 @@ function updateHabitationPropreInfo() {
         <strong>💡 Do you already own a property?</strong> You can still benefit from the allowance if you sell it within <strong>2 years</strong> of the purchase deed (through restitution).<br><br>
         <strong>💡 Couple purchase — strict rule:</strong> In Brussels, <strong>each buyer must individually meet all conditions</strong>. If one of them already owns a property in full, <u>only the other's share</u> benefits from the allowance.<br>
         <em>Example: you buy 50/50. One already owns a house, the other does not → the €200,000 allowance applies only to the 50% share, i.e. on €100,000 (saving of €12,500 instead of €25,000).</em><br><br>
-        <div style="border-top:1px solid rgba(26,122,138,0.2);margin-top:6px;padding-top:8px;font-size:0.78rem;color:var(--text-light)">
+          <strong>📊 Indexed price thresholds from 01/01/2026 (art. 53ter W.Reg.):</strong><br>
+      • Property pressure zone: <strong>€215,283.21</strong><br>
+      • Outside pressure zone: <strong>€201,827.99</strong><br>
+      <em style="font-size:0.78rem;color:var(--text-light)">If the purchase price exceeds this threshold, the reduced 3% rate does not apply.</em><br><br>
+              <div style="border-top:1px solid rgba(26,122,138,0.2);margin-top:6px;padding-top:8px;font-size:0.78rem;color:var(--text-light)">
           📎 Official sources :
           <a href="https://be.brussels/fr/impots-financement/impots-et-taxes/fiscalite-immobiliere/droits-denregistrement/abattement-sur-les-droits-de-vente" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none">Bruxelles Fiscalité — Abattement</a> ·
           <a href="https://be.brussels/fr/impots-financement/impots-et-taxes/fiscalite-immobiliere/droits-denregistrement/faq-abattement-general" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none">FAQ Abattement général</a> ·
@@ -2372,22 +2401,23 @@ calc();
   <a href="/en/simulateur-credit/" class="expert-internal-link">💳 Also calculate your monthly payments with our Loan Simulator →</a>
 </div>
 
-<div style="margin:32px auto;text-align:center;max-width:100%;">
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="9017409611"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 
 <div class="faq-section">
   <h2>❓ Frequently asked questions about Belgian registration fees</h2>
-  <div class="faq-item"><div class="faq-question">What is the registration fee rate in Wallonia in 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>In Wallonia, the standard registration fee rate is 12.5% for most properties. A reduced rate of 3% applies to a modest dwelling as the buyer's primary residence, subject to conditions on cadastral income and purchase price.</p></div></div>
+  <div class="faq-item"><div class="faq-question">What is the registration fee rate in Wallonia in 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>In Wallonia, the standard registration fee rate is 12.5% for most properties. A reduced rate of 3% applies for the only and own dwelling. Indexed thresholds from 01/01/2026: €215,283.21 in property pressure zones · €201,827.99 outside zones (art. 53ter W.Reg.). Undivided share, usufruct or bare ownership is not an obstacle (Circ. 2025/C/42).</p></div></div>
   <div class="faq-item"><div class="faq-question">How does the Brussels reduction on registration fees work ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>In Brussels, a €200,000 reduction on the taxable base is granted for the purchase of a sole and own home, if the buyer registers their domicile there within 2 years. For a property worth €350,000, fees are calculated only on €150,000, saving €25,000 at the 12.5% rate.</p></div></div>
   <div class="faq-item"><div class="faq-question">What is the rate in Flanders for a sole and own dwelling ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>In Flanders, the standard rate is 3% for a sole and own dwelling. This reduced rate replaces the standard 12.5% applicable to other properties. For non-residential buildings or second homes, the 12.5% rate still applies.</p></div></div>
   <div class="faq-item"><div class="faq-question">What do Belgian notary fees include ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Belgian notary fees include notary fees (legal degressive scale), registration fees (regional rate), deed costs (mortgage registration, administrative fees) and VAT on fees. For a €300,000 property, total costs range between €30,000 and €45,000 depending on the region.</p></div></div>
+</div>
+
+<div style="max-width:860px;margin:24px auto;padding:0 30px;">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8043980001637749"
+     data-ad-slot="8050648588"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
 <footer>
@@ -2397,6 +2427,7 @@ calc();
     <a href="/en/mentions-legales/#rgpd">GDPR</a>
     <a href="/en/mentions-legales/#cookies">Cookies</a>
     <a href="#">Contact</a>
+    <a href="#" onclick="openCookieSettings();return false;" style="color:rgba(255,255,255,.5);">🍪 Manage cookies</a>
   </div>
 </footer>
 

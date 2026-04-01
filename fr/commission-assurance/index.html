@@ -129,6 +129,26 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
   .topbar,.hero,footer{padding-left:16px;padding-right:16px;}
 }
 html,body{max-width:100vw;overflow-x:hidden;}
+
+/* ── Bannières latérales AdSense ── */
+.page-with-laterals {
+  position: relative;
+  max-width: 100%;
+}
+.ad-lateral {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 160px;
+  z-index: 100;
+  display: none;
+}
+.ad-lateral-left  { left: 8px; }
+.ad-lateral-right { right: 8px; }
+@media (min-width: 1380px) {
+  .ad-lateral { display: block; }
+}
+
 </style>
 <style>
   :root {
@@ -925,6 +945,13 @@ body { background: #F4F7FA !important; }
   
   <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
+<div class="ad-lateral ad-lateral-right">
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:160px;height:600px"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="8050648588"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
 <div class="hero">
   <div class="hero-inner">
@@ -933,15 +960,6 @@ body { background: #F4F7FA !important; }
     <h1>Simulateur de <span>Bordereau de Commission d'Assurance</span></h1>
     <p>Pour courtiers & intermédiaires belges · Export PDF · Exonération TVA art. 44 §3 4° CTVA · Données locales (RGPD)</p>
   </div>
-</div>
-<div style="margin:16px auto;text-align:center;max-width:100%;padding:0 16px;">
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="8050648588"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 <div class="app">
 
@@ -1090,6 +1108,7 @@ body { background: #F4F7FA !important; }
       ⬇ Télécharger en PDF
     </button>
 
+
     <p class="rgpd-notice">
       🔒 Vos données restent uniquement dans votre navigateur (localStorage). Elles ne sont ni transmises, ni stockées sur un serveur. Conformément au RGPD, vous en gardez le contrôle total.
     </p>
@@ -1182,15 +1201,6 @@ body { background: #F4F7FA !important; }
   </main>
 
 </div><!-- /.app -->
-<div style="margin:16px auto;text-align:center;max-width:100%;">
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="9017409611"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 <footer>
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
   <div class="footer-links">
@@ -1198,6 +1208,7 @@ body { background: #F4F7FA !important; }
     <a href="/fr/mentions-legales/#rgpd">RGPD</a>
     <a href="/fr/mentions-legales/#cookies">Cookies</a>
     <a href="#">Contact</a>
+    <a href="#" onclick="openCookieSettings();return false;" style="color:rgba(255,255,255,.5);">🍪 Gérer les cookies</a>
   </div>
 </footer>
 

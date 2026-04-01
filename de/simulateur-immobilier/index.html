@@ -660,6 +660,26 @@
 .faq-answer{display:none;padding:4px 18px 15px;font-size:0.87rem;color:#4A6279;line-height:1.75;border-top:1px solid #F0F4F8;}
 .faq-item.faq-open .faq-answer{display:block;}
 
+
+/* ── Bannières latérales AdSense ── */
+.page-with-laterals {
+  position: relative;
+  max-width: 100%;
+}
+.ad-lateral {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 160px;
+  z-index: 100;
+  display: none;
+}
+.ad-lateral-left  { left: 8px; }
+.ad-lateral-right { right: 8px; }
+@media (min-width: 1380px) {
+  .ad-lateral { display: block; }
+}
+
 </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
@@ -737,7 +757,7 @@ gtag('config', 'G-WNHZDLVPEL');
       "name": "Wie hoch sind die Registrierungsgebühren in der Wallonie 2026 ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In der Wallonie beträgt der Standardsatz 12,5% für die meisten Immobilien. Ein ermäßigter Satz von 3% gilt für eine bescheidene Wohnung als Hauptwohnsitz des Käufers, unter Bedingungen des Katastereinkommens und des Kaufpreises."
+        "text": "In der Wallonie beträgt der Standardsatz 12,5% für die meisten Immobilien. Ein ermäßigter Satz von 3% gilt für das einzige Eigenheim. Indexierte Schwellenwerte ab 01/01/2026: 215.283,21 € in Immobiliendruckzone · 201.827,99 € außerhalb (art. 53ter W.Reg.). Ungeteilter Anteil, Nießbrauch oder nacktes Eigentum ist kein Hindernis (Circ. 2025/C/42)."
       }
     },
     {
@@ -844,6 +864,20 @@ gtag('config', 'G-WNHZDLVPEL');
   
   <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
+<div class="ad-lateral ad-lateral-left">
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:160px;height:600px"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="8050648588"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="ad-lateral ad-lateral-right">
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:160px;height:600px"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="9017409611"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 <div style="text-align:right;font-size:0.72rem;color:var(--text-light);padding:6px 40px 0;font-style:italic;">
     🕐 Aktualisiert: Januar 2026  — Finden Sie einen zugelassenen Experten auf <a href="https://www.itaa.be/de/" target="_blank" rel="noopener" style="color:#1A7A8A;text-decoration:none;font-weight:600;">ITAA — Institut für Steuerberater und Buchhalter</a> — <a href="/de/mentions-legales/" style="color:var(--text-light)">Offizielle Quellen</a>
   </div>
@@ -855,19 +889,6 @@ gtag('config', 'G-WNHZDLVPEL');
   <h1>Immobilienkauf-<span>Rechner</span></h1>
   <p class="subtitle">Notarkosten · Grunderwerbsteuer · Hypothekenkredit</p>
 </section>
-<div style="margin:24px auto;text-align:center;max-width:100%;padding:0 16px;">
-<h2 style="font-size:1rem;color:#1A3A5C;margin:24px 0 8px;">📋 Wie berechnet man die Grunderwerbsteuer in Belgien?</h2>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="8050648588"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-
-<!-- ADSENSE SLOT (décommenter après validation) -->
-
 
 <nav class="steps-nav">
   <button class="step-tab active" onclick="goStep(1)"><span class="step-num">1</span> Immobilie</button>
@@ -2364,15 +2385,6 @@ calc();
   <a href="/de/simulateur-credit/" class="expert-internal-link">💳 Berechnen Sie auch Ihre monatlichen Raten mit unserem Kreditsimulator →</a>
 </div>
 
-<div style="margin:32px auto;text-align:center;max-width:100%;">
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="9017409611"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 <!-- ── DISCLAIMER ── -->
 <div style="background:#F4F7FA;border-top:1px solid #DDE5EF;padding:18px 40px;font-size:0.75rem;color:#8A9BB0;line-height:1.7;font-family:'Inter',sans-serif;">
   <div style="max-width:1150px;margin:0 auto;">
@@ -2384,9 +2396,19 @@ calc();
 
 <div class="faq-section">
   <h2>❓ Häufige Fragen zu Registrierungsgebühren in Belgien</h2>
-  <div class="faq-item"><div class="faq-question">Wie hoch sind die Registrierungsgebühren in der Wallonie 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>In der Wallonie beträgt der Standardsatz 12,5% für die meisten Immobilien. Ein ermäßigter Satz von 3% gilt für eine bescheidene Wohnung als Hauptwohnsitz des Käufers, unter Bedingungen des Katastereinkommens und des Kaufpreises.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Wie hoch sind die Registrierungsgebühren in der Wallonie 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>In der Wallonie beträgt der Standardsatz 12,5% für die meisten Immobilien. Ein ermäßigter Satz von 3% gilt für das einzige Eigenheim. Indexierte Schwellenwerte ab 01/01/2026: 215.283,21 € in Immobiliendruckzone · 201.827,99 € außerhalb (art. 53ter W.Reg.). Ungeteilter Anteil, Nießbrauch oder nacktes Eigentum ist kein Hindernis (Circ. 2025/C/42).</p></div></div>
   <div class="faq-item"><div class="faq-question">Wie funktioniert der Brüsseler Abzug bei den Registrierungsgebühren ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>In Brüssel wird ein Abzug von 200.000 € auf die Steuerbemessungsgrundlage für den Kauf einer eigenen und einzigen Wohnung gewährt, wenn der Käufer innerhalb von 2 Jahren seinen Wohnsitz dort anmeldet.</p></div></div>
   <div class="faq-item"><div class="faq-question">Was sind die Notarkosten in Belgien ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Die Notarkosten umfassen das Notarhonorar (gesetzlicher degressiver Tarif), die Registrierungsgebühren (regionaler Satz), die Urkundskosten und die Mehrwertsteuer auf Honorare.</p></div></div>
+</div>
+
+<div style="max-width:860px;margin:24px auto;padding:0 30px;">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8043980001637749"
+     data-ad-slot="8050648588"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
 <footer>

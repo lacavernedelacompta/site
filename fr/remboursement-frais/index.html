@@ -642,7 +642,7 @@ gtag('config', 'G-WNHZDLVPEL');
       "name": "Quel est le taux kilométrique officiel pour les déplacements domicile-travail en 2026 ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Pour 2026, le taux kilométrique de référence ONSS s'élève à 0,4415 €/km. Ce taux est exonéré de cotisations ONSS et d'impôt dans les limites légales. Il est régulièrement révisé et publié au Moniteur belge."
+        "text": "Pour 2026, le taux kilométrique de référence ONSS s'élève à 0,4327 €/km. Ce taux est exonéré de cotisations ONSS et d'impôt dans les limites légales. Il est régulièrement révisé et publié au Moniteur belge."
       }
     },
     {
@@ -884,6 +884,7 @@ gtag('config', 'G-WNHZDLVPEL');
           <label>Taux applicable</label>
           <select id="tripRate">
             <option value="" disabled selected>— choisir la période —</option>
+            <option value="0.4327" selected>01/04/2026 – 30/06/2026 → 0,4327 €/km</option>
             <option value="0.4326">01/01/2026 – 31/03/2026 → 0,4326 €/km</option>
             <option value="0.4312">01/10/2025 – 31/12/2025 → 0,4312 €/km</option>
             <option value="0.4309">01/07/2025 – 30/09/2025 → 0,4309 €/km</option>
@@ -1076,6 +1077,7 @@ gtag('config', 'G-WNHZDLVPEL');
 let mode = 'A', trips = [];
 
 const RATES = [
+  { label:"1er avr. 2026 – 30 juin 2026",   rate:0.4327, circ:"n°764", from:"2026-04-01", to:"2026-06-30" },
   { label:"1er jan. 2026 – 31 mars 2026",   rate:0.4326, circ:"n°762", from:"2026-01-01", to:"2026-03-31" },
   { label:"1er oct. 2025 – 31 déc. 2025",   rate:0.4312, circ:"n°757", from:"2025-10-01", to:"2025-12-31" },
   { label:"1er juil. 2025 – 30 sept. 2025", rate:0.4309, circ:"n°753", from:"2025-07-01", to:"2025-09-30" },
@@ -1766,21 +1768,12 @@ loadTrips();
 buildPeriodRows();
 updateBanner(null);
 </script>
-<div style="margin:32px auto;text-align:center;max-width:100%;">
-<h2 style="font-size:1rem;color:#1A3A5C;margin:24px 0 8px;">📋 Taux ONSS et calcul de l'indemnité kilométrique en Belgique</h2>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="9017409611"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
+
 <div style="margin:24px auto;text-align:center;max-width:100%;padding:0 16px;">
 
 <div class="faq-section">
   <h2>❓ Questions fréquentes sur le remboursement kilométrique en Belgique</h2>
-  <div class="faq-item"><div class="faq-question">Quel est le taux kilométrique officiel pour les déplacements domicile-travail en 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Pour 2026, le taux kilométrique de référence ONSS s'élève à 0,4415 €/km. Ce taux est exonéré de cotisations ONSS et d'impôt dans les limites légales. Il est régulièrement révisé et publié au Moniteur belge.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Quel est le taux kilométrique officiel pour les déplacements domicile-travail en 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Pour 2026, le taux kilométrique de référence ONSS s'élève à 0,4327 €/km. Ce taux est exonéré de cotisations ONSS et d'impôt dans les limites légales. Il est régulièrement révisé et publié au Moniteur belge.</p></div></div>
   <div class="faq-item"><div class="faq-question">Quelle est la différence entre l'indemnité kilométrique fiscale et l'indemnité ONSS ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>L'indemnité kilométrique fiscale (SPF Finances) est exonérée d'impôt dans la limite d'un plafond annuel. L'indemnité ONSS est exonérée de cotisations sociales dans la limite du taux officiel. Un remboursement supérieur au taux officiel est partiellement imposable.</p></div></div>
   <div class="faq-item"><div class="faq-question">Peut-on cumuler l'indemnité vélo et l'indemnité voiture ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Non, en général il n'est pas possible de cumuler les deux pour le même trajet. Si une partie est en vélo et l'autre en voiture (ex: vélo jusqu'à la gare puis train), un cumul est envisageable. L'indemnité vélo est de 0,35 €/km en 2026, exonérée d'impôt et de cotisations ONSS.</p></div></div>
   <div class="faq-item"><div class="faq-question">Comment calculer l'indemnité kilométrique pour les déplacements professionnels ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Pour les déplacements professionnels, le remboursement est basé sur le taux ONSS officiel ou la CCT applicable. La formule est : distance (km) × taux (€/km) = indemnité. Notre calculateur intègre automatiquement les taux officiels 2026.</p></div></div>
@@ -1809,6 +1802,7 @@ updateBanner(null);
     <a href="/fr/mentions-legales/#rgpd">RGPD</a>
     <a href="/fr/mentions-legales/#cookies">Cookies</a>
     <a href="#">Contact</a>
+    <a href="#" onclick="openCookieSettings();return false;" style="color:rgba(255,255,255,.5);">🍪 Gérer les cookies</a>
   </div>
 </footer>
 <script>

@@ -999,6 +999,7 @@ gtag('config', 'G-WNHZDLVPEL');
           <label>Applicable rate</label>
           <select id="tripRate">
             <option value="" disabled selected>— choose the period —</option>
+            <option value="0.4327" selected>01/04/2026 – 30/06/2026 → 0,4327 €/km</option>
             <option value="0.4326">01/01/2026 – 31/03/2026 → 0,4326 €/km</option>
             <option value="0.4312">01/10/2025 – 31/12/2025 → 0,4312 €/km</option>
             <option value="0.4309">01/07/2025 – 30/09/2025 → 0,4309 €/km</option>
@@ -1191,7 +1192,8 @@ gtag('config', 'G-WNHZDLVPEL');
 let mode = 'A', trips = [];
 
 const RATES = [
-  { label:"1 Jan. 2026 – 31 Mar. 2026",   rate:0.4326, circ:"n°762", from:"2026-01-01", to:"2026-03-31" },
+  { label:"Apr 1, 2026 – Jun 30, 2026",      rate:0.4327, circ:"n°764", from:"2026-04-01", to:"2026-06-30" },
+  { label:"Jan 1, 2026 – Mar 31, 2026",     rate:0.4326, circ:"n°762", from:"2026-01-01", to:"2026-03-31" },
   { label:"1 Oct. 2025 – 31 Dec. 2025",   rate:0.4312, circ:"n°757", from:"2025-10-01", to:"2025-12-31" },
   { label:"1 Jul. 2025 – 30 Sep. 2025", rate:0.4309, circ:"n°753", from:"2025-07-01", to:"2025-09-30" },
   { label:"1 Apr. 2025 – 30 Jun. 2025",   rate:0.4320, circ:"n°749", from:"2025-04-01", to:"2025-06-30" },
@@ -1881,16 +1883,7 @@ loadTrips();
 buildPeriodRows();
 updateBanner(null);
 </script>
-<div style="margin:32px auto;text-align:center;max-width:100%;">
-<h2 style="font-size:1rem;color:#1A3A5C;margin:24px 0 8px;">📋 ONSS rate and mileage allowance calculation in Belgium</h2>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="9017409611"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
+
 <div style="margin:24px auto;text-align:center;max-width:100%;padding:0 16px;">
 
 <div class="faq-section">
@@ -1923,6 +1916,7 @@ updateBanner(null);
     <a href="/en/mentions-legales/#rgpd">GDPR</a>
     <a href="/en/mentions-legales/#cookies">Cookies</a>
     <a href="#">Contact</a>
+    <a href="#" onclick="openCookieSettings();return false;" style="color:rgba(255,255,255,.5);">🍪 Manage cookies</a>
   </div>
 </footer>
 <script>

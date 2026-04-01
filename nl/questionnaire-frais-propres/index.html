@@ -367,6 +367,26 @@ footer a:hover{color:var(--white);}
 .faq-answer{display:none;padding:4px 18px 15px;font-size:0.87rem;color:#4A6279;line-height:1.75;border-top:1px solid #F0F4F8;}
 .faq-item.faq-open .faq-answer{display:block;}
 
+
+/* ── Bannières latérales AdSense ── */
+.page-with-laterals {
+  position: relative;
+  max-width: 100%;
+}
+.ad-lateral {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 160px;
+  z-index: 100;
+  display: none;
+}
+.ad-lateral-left  { left: 8px; }
+.ad-lateral-right { right: 8px; }
+@media (min-width: 1380px) {
+  .ad-lateral { display: block; }
+}
+
 </style>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -509,6 +529,20 @@ gtag('consent','default',{
   </div>
   <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
+<div class="ad-lateral ad-lateral-left">
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:160px;height:600px"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="8050648588"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="ad-lateral ad-lateral-right">
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:160px;height:600px"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="9017409611"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
 <div style="text-align:right;font-size:.72rem;color:var(--text-light);padding:6px 40px 0;font-style:italic;">
   🕐 Bijgewerkt: maart 2026 — Forfaits ONSS officiels — <a href="https://www.socialsecurity.be/employer/instructions/dmfa/fr/latest/instructions/salary/particularcases/expensesreimbursement.html" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;font-weight:600;">Bron: RSZ</a>
@@ -522,11 +556,6 @@ gtag('consent','default',{
   <p>Beantwoord de vragen en ontvang uw <strong>maandelijkse onkostennota</strong> op basis van officiële RSZ-forfaits. Let op: als een voordeel door de vennootschap wordt verstrekt, is het een <strong>VAA</strong> — geen eigen kosten.</p>
 </section>
 
-<!-- AdSense -->
-<div style="max-width:1100px;margin:20px auto 0;padding:0 24px;">
-  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8043980001637749" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 
 <!-- Main -->
 <div class="main">
@@ -1425,6 +1454,7 @@ gtag('consent','default',{
     <a href="/nl/mentions-legales/#rgpd">AVG</a>
     <a href="/nl/mentions-legales/#cookies">Cookies</a>
     <a href="#">Contact</a>
+    <a href="#" onclick="openCookieSettings();return false;" style="color:rgba(255,255,255,.5);">🍪 Cookies beheren</a>
   </div>
 </footer>
 

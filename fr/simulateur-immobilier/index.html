@@ -660,6 +660,26 @@
 .faq-answer{display:none;padding:4px 18px 15px;font-size:0.87rem;color:#4A6279;line-height:1.75;border-top:1px solid #F0F4F8;}
 .faq-item.faq-open .faq-answer{display:block;}
 
+
+/* ── Bannières latérales AdSense ── */
+.page-with-laterals {
+  position: relative;
+  max-width: 100%;
+}
+.ad-lateral {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 160px;
+  z-index: 100;
+  display: none;
+}
+.ad-lateral-left  { left: 8px; }
+.ad-lateral-right { right: 8px; }
+@media (min-width: 1380px) {
+  .ad-lateral { display: block; }
+}
+
 </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
@@ -737,7 +757,7 @@ gtag('config', 'G-WNHZDLVPEL');
       "name": "Quel est le taux des droits d'enregistrement en Wallonie en 2026 ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "En Wallonie, le taux standard des droits d'enregistrement est de 12,5% pour la plupart des biens. Un taux réduit de 3% s'applique pour une habitation modeste constituant la résidence principale de l'acquéreur, sous conditions de revenus cadastraux et de prix d'achat."
+        "text": "En Wallonie, le taux standard des droits d'enregistrement est de 12,5% pour la plupart des biens. Un taux réduit de 3% s'applique pour une habitation propre et unique. Seuils indexés au 01/01/2026 : 215.283,21 € en zone de pression immobilière · 201.827,99 € hors zone (art. 53ter W.Reg., indexation annuelle). La détention d'une quote-part indivise, d'un usufruit ou d'une nue-propriété ne fait pas obstacle au taux réduit (circ. 2025/C/42)."
       }
     },
     {
@@ -868,6 +888,20 @@ gtag('config', 'G-WNHZDLVPEL');
   
   <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
+<div class="ad-lateral ad-lateral-left">
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:160px;height:600px"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="8050648588"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="ad-lateral ad-lateral-right">
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:160px;height:600px"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="9017409611"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 <div style="text-align:right;font-size:0.72rem;color:var(--text-light);padding:6px 40px 0;font-style:italic;">
     🕐 Mis à jour : Janvier 2026  — Trouvez un expert agréé sur <a href="https://www.itaa.be/fr/accueil/" target="_blank" rel="noopener" style="color:#1A7A8A;text-decoration:none;font-weight:600;">ITAA — Institut des Conseillers Fiscaux et des Comptables</a> — <a href="/fr/mentions-legales/" style="color:var(--text-light)">Sources officielles</a>
   </div>
@@ -879,19 +913,6 @@ gtag('config', 'G-WNHZDLVPEL');
   <h1>Simulateur <span>Achat Immobilier</span></h1>
   <p class="subtitle">Frais de notaire · Droits d'enregistrement · Crédit hypothécaire</p>
 </section>
-<div style="margin:24px auto;text-align:center;max-width:100%;padding:0 16px;">
-<h2 style="font-size:1rem;color:#1A3A5C;margin:24px 0 8px;">📋 Comment calculer les droits d'enregistrement en Belgique ?</h2>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="8050648588"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-
-<!-- ADSENSE SLOT (décommenter après validation) -->
-
 
 <nav class="steps-nav">
   <button class="step-tab active" onclick="goStep(1)"><span class="step-num">1</span> Bien immobilier</button>
@@ -2388,24 +2409,25 @@ calc();
   <a href="/fr/simulateur-credit/" class="expert-internal-link">💳 Calculez aussi vos mensualités avec notre Simulateur de crédit →</a>
 </div>
 
-<div style="margin:32px auto;text-align:center;max-width:100%;">
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="9017409611"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 
 <div class="faq-section">
   <h2>❓ Questions fréquentes sur les droits d'enregistrement en Belgique</h2>
-  <div class="faq-item"><div class="faq-question">Quel est le taux des droits d'enregistrement en Wallonie en 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>En Wallonie, le taux standard des droits d'enregistrement est de 12,5% pour la plupart des biens. Un taux réduit de 3% s'applique pour une habitation modeste constituant la résidence principale de l'acquéreur, sous conditions de revenus cadastraux et de prix d'achat.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Quel est le taux des droits d'enregistrement en Wallonie en 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>En Wallonie, le taux standard des droits d'enregistrement est de 12,5% pour la plupart des biens. Un taux réduit de 3% s'applique pour une habitation propre et unique. Seuils indexés au 01/01/2026 : 215.283,21 € en zone de pression immobilière · 201.827,99 € hors zone (art. 53ter W.Reg., indexation annuelle). La détention d'une quote-part indivise, d'un usufruit ou d'une nue-propriété ne fait pas obstacle au taux réduit (circ. 2025/C/42).</p></div></div>
   <div class="faq-item"><div class="faq-question">Comment fonctionne l'abattement bruxellois sur les droits d'enregistrement ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>À Bruxelles, un abattement de 200 000 € sur la base imposable est accordé pour l'achat d'une habitation propre et unique, si l'acquéreur s'y domicilie dans les 2 ans. Pour un bien de 350 000 €, les droits ne sont calculés que sur 150 000 €, soit une économie de 25 000 € au taux de 12,5%.</p></div></div>
   <div class="faq-item"><div class="faq-question">Quel est le taux en Flandre pour une habitation propre et unique ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>En Flandre, le taux standard est de 3% pour une habitation propre et unique (habitation familiale). Ce taux réduit remplace le taux de 12,5% applicable aux autres biens. Pour les immeubles non résidentiels ou les résidences secondaires, le taux de 12,5% reste applicable.</p></div></div>
   <div class="faq-item"><div class="faq-question">Que comprennent les frais de notaire en Belgique ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Les frais de notaire comprennent les honoraires du notaire (barème légal dégressif), les droits d'enregistrement (taux régional), les frais d'acte (inscription hypothécaire, frais administratifs) et la TVA sur honoraires. Pour un bien de 300 000 €, les frais totaux varient entre 30 000 et 45 000 € selon la région.</p></div></div>
   <div class="faq-item"><div class="faq-question">Peut-on déduire les droits d'enregistrement des impôts ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>Les droits d'enregistrement ne sont généralement pas déductibles pour les particuliers achetant leur habitation propre. Pour un bien immobilier professionnel ou un investissement locatif, une partie des frais d'acquisition peut être déduite fiscalement.</p></div></div>
   <div class="faq-item"><div class="faq-question">Qu'est-ce que la valeur ABEX ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>L'indice ABEX (Association Belge des Experts) est utilisé pour calculer la valeur de reconstruction d'un bâtiment à des fins d'assurance incendie. Il est publié deux fois par an. Au 1er janvier 2026, l'indice ABEX s'établit à 1.062 (base 100 en 1980).</p></div></div>
+</div>
+
+<div style="max-width:860px;margin:24px auto;padding:0 30px;">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8043980001637749"
+     data-ad-slot="8050648588"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
 <footer>
@@ -2415,6 +2437,7 @@ calc();
     <a href="/fr/mentions-legales/#rgpd">RGPD</a>
     <a href="/fr/mentions-legales/#cookies">Cookies</a>
     <a href="#">Contact</a>
+    <a href="#" onclick="openCookieSettings();return false;" style="color:rgba(255,255,255,.5);">🍪 Gérer les cookies</a>
   </div>
 </footer>
 

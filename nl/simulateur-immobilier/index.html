@@ -660,6 +660,26 @@
 .faq-answer{display:none;padding:4px 18px 15px;font-size:0.87rem;color:#4A6279;line-height:1.75;border-top:1px solid #F0F4F8;}
 .faq-item.faq-open .faq-answer{display:block;}
 
+
+/* ── Bannières latérales AdSense ── */
+.page-with-laterals {
+  position: relative;
+  max-width: 100%;
+}
+.ad-lateral {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 160px;
+  z-index: 100;
+  display: none;
+}
+.ad-lateral-left  { left: 8px; }
+.ad-lateral-right { right: 8px; }
+@media (min-width: 1380px) {
+  .ad-lateral { display: block; }
+}
+
 </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
@@ -737,7 +757,7 @@ gtag('config', 'G-WNHZDLVPEL');
       "name": "Wat is het tarief van de registratierechten in Wallonië in 2026 ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In Wallonië bedraagt het standaardtarief 12,5% voor de meeste onroerende goederen. Een verlaagd tarief van 3% geldt voor een bescheiden woning als hoofdverblijfplaats van de koper, onder voorwaarden van kadastraal inkomen en aankoopprijs."
+        "text": "In Wallonië bedraagt het standaardtarief 12,5% voor de meeste onroerende goederen. Een verlaagd tarief van 3% geldt voor een eigen en enige woning. Geïndexeerde drempels per 01/01/2026: 215.283,21 € in woondrukzone · 201.827,99 € buiten zone (art. 53ter W.Reg.). Onverdeeld aandeel, vruchtgebruik of blote eigendom vormt geen beletsel (circ. 2025/C/42)."
       }
     },
     {
@@ -852,6 +872,20 @@ gtag('config', 'G-WNHZDLVPEL');
   
   <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
+<div class="ad-lateral ad-lateral-left">
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:160px;height:600px"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="8050648588"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="ad-lateral ad-lateral-right">
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:160px;height:600px"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="9017409611"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 <div style="text-align:right;font-size:0.72rem;color:var(--text-light);padding:6px 40px 0;font-style:italic;">
     🕐 Bijgewerkt: Januari 2026  — Vind een erkend expert op <a href="https://www.itaa.be/nl/home/" target="_blank" rel="noopener" style="color:#1A7A8A;text-decoration:none;font-weight:600;">ITAA — Instituut van de Belastingadviseurs en de Accountants</a> — <a href="/nl/mentions-legales/" style="color:var(--text-light)">Officiële bronnen</a>
   </div>
@@ -863,19 +897,6 @@ gtag('config', 'G-WNHZDLVPEL');
   <h1>Simulator <span>Vastgoedaankoop</span></h1>
   <p class="subtitle">Notariskosten · Registratierechten · Hypothecair krediet</p>
 </section>
-<div style="margin:24px auto;text-align:center;max-width:100%;padding:0 16px;">
-<h2 style="font-size:1rem;color:#1A3A5C;margin:24px 0 8px;">📋 Hoe registratierechten berekenen in België?</h2>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="8050648588"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-
-<!-- ADSENSE SLOT (décommenter après validation) -->
-
 
 <nav class="steps-nav">
   <button class="step-tab active" onclick="goStep(1)"><span class="step-num">1</span> Vastgoed</button>
@@ -2372,22 +2393,23 @@ calc();
   <a href="/nl/simulateur-credit/" class="expert-internal-link">💳 Bereken ook uw maandelijkse aflossingen met onze Kredietsimulator →</a>
 </div>
 
-<div style="margin:32px auto;text-align:center;max-width:100%;">
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="9017409611"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 
 <div class="faq-section">
   <h2>❓ Veelgestelde vragen over registratierechten in België</h2>
-  <div class="faq-item"><div class="faq-question">Wat is het tarief van de registratierechten in Wallonië in 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>In Wallonië bedraagt het standaardtarief 12,5% voor de meeste onroerende goederen. Een verlaagd tarief van 3% geldt voor een bescheiden woning als hoofdverblijfplaats van de koper, onder voorwaarden van kadastraal inkomen en aankoopprijs.</p></div></div>
+  <div class="faq-item"><div class="faq-question">Wat is het tarief van de registratierechten in Wallonië in 2026 ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>In Wallonië bedraagt het standaardtarief 12,5% voor de meeste onroerende goederen. Een verlaagd tarief van 3% geldt voor een eigen en enige woning. Geïndexeerde drempels per 01/01/2026: 215.283,21 € in woondrukzone · 201.827,99 € buiten zone (art. 53ter W.Reg.). Onverdeeld aandeel, vruchtgebruik of blote eigendom vormt geen beletsel (circ. 2025/C/42).</p></div></div>
   <div class="faq-item"><div class="faq-question">Hoe werkt de Brusselse vermindering op de registratierechten ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>In Brussel wordt een vermindering van 200.000 € op de belastbare grondslag toegekend voor de aankoop van een eigen en enige woning, als de koper er binnen 2 jaar zijn domicilie vestigt. Voor een woning van 350.000 € worden de rechten slechts op 150.000 € berekend.</p></div></div>
   <div class="faq-item"><div class="faq-question">Wat is het tarief in Vlaanderen voor een eigen en enige woning ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>In Vlaanderen bedraagt het standaardtarief 3% voor een eigen en enige gezinswoning. Dit verlaagd tarief vervangt het standaardtarief van 12,5% voor andere goederen. Voor niet-residentiële gebouwen of tweede verblijven blijft het tarief van 12,5% van toepassing.</p></div></div>
   <div class="faq-item"><div class="faq-question">Wat omvatten de notariskosten in België ?<span class="faq-chev">▼</span></div><div class="faq-answer"><p>De notariskosten omvatten het honorarium van de notaris (wettelijk degressief tarief), de registratierechten (regionaal tarief), de aktekosten (hypotheekinschrijving, administratieve kosten) en de btw op honoraria. Voor een woning van 300.000 € variëren de totale kosten tussen 30.000 en 45.000 €.</p></div></div>
+</div>
+
+<div style="max-width:860px;margin:24px auto;padding:0 30px;">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8043980001637749"
+     data-ad-slot="8050648588"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
 <footer>
@@ -2397,6 +2419,7 @@ calc();
     <a href="/nl/mentions-legales/#rgpd">AVG</a>
     <a href="/nl/mentions-legales/#cookies">Cookies</a>
     <a href="#">Contact</a>
+    <a href="#" onclick="openCookieSettings();return false;" style="color:rgba(255,255,255,.5);">🍪 Cookies beheren</a>
   </div>
 </footer>
 
