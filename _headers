@@ -7,3 +7,7 @@
 
 /*.html
   Cache-Control: public, max-age=3600
+
+/*.txt
+  Content-Type: text/plain
+  Cache-Control: public, max-age=86400

@@ -1,3 +1,9 @@
+# Force serve critical root files (ads.txt, robots.txt, sitemap, IndexNow key)
+/ads.txt  /ads.txt  200!
+/robots.txt  /robots.txt  200!
+/sitemap.xml  /sitemap.xml  200!
+/cbef03a6edb5413c8e8f0c68b8ac7bc4.txt  /cbef03a6edb5413c8e8f0c68b8ac7bc4.txt  200!
+
 # Redirect root to FR by default
 /  /fr/  301
 
