@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simulateur Bordereau Commission d'Assurance | La Caverne de la Compta</title>
-<meta name="description" content="Générez votre bordereau de commission d'assurance en ligne : courtiers et intermédiaires belges. Calcul automatique, export PDF, exonération TVA art. 44 §3 4° CTVA.">
+<title>Bordereau Commission Assurance Belgique — Courtiers & Intermédiaires</title>
+<meta name="description" content="Générez votre bordereau de commission assurance PDF : calcul automatique, TVA art. 44 §3 4° CTVA, BCE via API. Outil gratuit pour courtiers belges. Carnet...">
 <meta name="author" content="La Caverne de la Compta">
 <meta name="keywords" content="bordereau commission assurance belgique, courtier assurance belgique, intermédiaire assurance, commission assurance pdf, TVA art 44 §3 4° CTVA">
 <meta name="robots" content="index, follow">
@@ -14,8 +14,8 @@
 <link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/provisionsnachweis-versicherungen/">
 <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/commission-assurance/">
 <link rel="canonical" href="https://lacavernedelacompta.be/fr/commission-assurance/">
-<meta property="og:title" content="Bordereau Commission d'Assurance — Générateur PDF Gratuit">
-<meta property="og:description" content="Générez gratuitement votre bordereau de commission d'intermédiaire en assurances : saisie DÉBITEUR / BÉNÉFICIAIRE, calcul automatique, export PDF. Conforme TVA belge (art. 44 §3 4° CTVA).">
+<meta property="og:title" content="Bordereau Commission Assurance Belgique — Courtiers & Intermédiaires">
+<meta property="og:description" content="Générez votre bordereau de commission assurance PDF : calcul automatique, TVA art. 44 §3 4° CTVA, BCE via API. Outil gratuit pour courtiers belges. Carnet...">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lacavernedelacompta.be/fr/commission-assurance/">
 <meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
@@ -24,8 +24,8 @@
 <meta property="og:locale" content="fr_BE">
 <meta property="og:site_name" content="La Caverne de la Compta">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Bordereau de Commission Assurance — Générateur PDF Gratuit">
-<meta name="twitter:description" content="Générez gratuitement votre bordereau de commission d'intermédiaire en assurances : saisie DÉBITEUR / BÉNÉFICIAIRE, calcul automatique, export PDF. Conforme TVA belge (art. 44 §3 4° CTVA).">
+<meta name="twitter:title" content="Bordereau Commission Assurance Belgique — Courtiers & Intermédiaires">
+<meta name="twitter:description" content="Générez votre bordereau de commission assurance PDF : calcul automatique, TVA art. 44 §3 4° CTVA, BCE via API. Outil gratuit pour courtiers belges. Carnet...">
 <meta name="twitter:image" content="https://lacavernedelacompta.be/logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -149,6 +149,19 @@ html,body{max-width:100vw;overflow-x:hidden;}
   .ad-lateral { display: block; }
 }
 
+.faq-section{max-width:860px;margin:40px auto 0;padding:0 24px 48px;}.faq-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:22px;}.faq-section h2::before{content:'';}.faq-item{border:1px solid var(--border);border-radius:10px;margin-bottom:8px;overflow:hidden;}.faq-question{padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:.9rem;font-weight:600;color:var(--navy);background:#fff;transition:background .15s;}.faq-question:hover{background:var(--off);}.faq-chev{color:var(--teal);font-size:.75rem;transition:transform .2s;display:inline-flex;}.faq-open .faq-chev{transform:rotate(180deg);}.faq-answer{display:none;padding:14px 20px 18px;font-size:.85rem;color:var(--text-mid);line-height:1.7;background:var(--off);border-top:1px solid var(--border);}.faq-open .faq-answer{display:block;}
+
+/* ── SCROLL PROGRESS BAR ── */
+#scrollProgress{position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,#E53935,#FF6B6B);z-index:99999;transition:width .1s linear;border-radius:0 2px 2px 0;}
+/* ── SCROLL TO TOP BUTTON ── */
+#scrollTop{position:fixed;bottom:28px;right:24px;width:42px;height:42px;border-radius:50%;background:var(--navy,#0D1B2A);color:#fff;border:none;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(12px);transition:opacity .25s,transform .25s;z-index:9999;box-shadow:0 4px 16px rgba(13,27,42,.25);}
+#scrollTop.visible{opacity:1;transform:translateY(0);}
+#scrollTop:hover{background:var(--teal,#1A7A8A);}
+
+.faq-separator{display:flex;align-items:center;gap:16px;padding:32px 24px 0;max-width:860px;margin:0 auto;}
+.faq-separator-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--border,#DDE5EF),transparent);}
+.faq-separator-badge{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border,#DDE5EF);border-radius:20px;padding:6px 16px;font-size:.75rem;font-weight:600;color:var(--text-mid,#4A6279);white-space:nowrap;letter-spacing:.04em;box-shadow:0 2px 8px rgba(13,27,42,.05);}
+.faq-separator-dot{width:6px;height:6px;border-radius:50%;background:var(--teal,#1A7A8A);}
 </style>
 <style>
   :root {
@@ -268,6 +281,7 @@ html,body{max-width:100vw;overflow-x:hidden;}
     display: flex;
     flex-direction: column;
     gap: 24px;
+    border-right: 3px solid #E53935;
   }
 
   .sidebar-title {
@@ -864,8 +878,12 @@ body { background: #F4F7FA !important; }
 }
 
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Les commissions d'assurance sont-elles soumises à la TVA en Belgique ?","acceptedAnswer":{"@type":"Answer","text":"Non. Les commissions des intermédiaires d'assurance sont exonérées de TVA en vertu de l'article 44 §3 4° du Code TVA belge. Cette exonération s'applique aux courtiers, agents et sous-agents d'assurance agréés par la FSMA."}},{"@type":"Question","name":"Qu'est-ce qu'un bordereau de commission d'assurance ?","acceptedAnswer":{"@type":"Answer","text":"Un bordereau de commission est un document récapitulatif établi entre un intermédiaire (courtier) et la compagnie d'assurance ou un autre intermédiaire, reprenant les commissions dues pour les primes encaissées sur une période donnée."}},{"@type":"Question","name":"Qui doit établir un bordereau de commission d'assurance ?","acceptedAnswer":{"@type":"Answer","text":"Tout intermédiaire d'assurance (courtier, agent) agréé FSMA qui perçoit des commissions doit pouvoir justifier de ses revenus. Le bordereau constitue une pièce justificative comptable essentielle pour la déclaration fiscale."}},{"@type":"Question","name":"Comment calculer la commission sur une prime d'assurance ?","acceptedAnswer":{"@type":"Answer","text":"La commission = prime nette (HTVA) × taux de commission contractuel. Le taux varie selon la branche (vie, non-vie), le type de produit et les accords avec l'assureur. Notre simulateur permet de calculer automatiquement le montant de la commission."}},{"@type":"Question","name":"Faut-il mentionner le numéro BCE sur le bordereau ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Le bordereau doit mentionner le numéro BCE (Banque-Carrefour des Entreprises) de l'émetteur et du bénéficiaire. Notre outil intègre une recherche automatique via l'API BCE pour retrouver les coordonnées officielles."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Bordereau Commission Assurance Belgique","url":"https://lacavernedelacompta.be/fr/commission-assurance/","description":"Générez votre bordereau de commission assurance PDF pour courtiers belges.","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"La Caverne de la Compta","url":"https://lacavernedelacompta.be"}}</script>
 </head>
 <body>
+<div id="scrollProgress"></div>
+<button id="scrollTop" title="Retour en haut" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <div class="topbar">
   <span class="topbar-left">🇧🇪 Comptabilité & Fiscalité Belge</span>
   <div class="topbar-right">
@@ -927,6 +945,7 @@ body { background: #F4F7FA !important; }
         <a href="/fr/questionnaire-frais-propres/"><span class="dd-icon">💼</span>Frais Propres</a>
         <a href="/fr/simulateur-plus-value-immobiliere/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">🏡</span>Plus-Value Immobilière</a>
         <a href="/fr/commission-assurance/"><span class="dd-icon">📑</span>Bordereau Commission</a>
+      <a href="/fr/simulateur-frais-sejour-etranger/" style="color:var(--teal-light);font-weight:600;"><span class="dd-icon">✈️</span>Frais Séjour Étranger</a>
       </div>
     </li>
   </ul>
@@ -1201,6 +1220,19 @@ body { background: #F4F7FA !important; }
   </main>
 
 </div><!-- /.app -->
+<div class="faq-separator">
+  <div class="faq-separator-line"></div>
+  <div class="faq-separator-badge"><span class="faq-separator-dot"></span>Questions fréquentes<span class="faq-separator-dot"></span></div>
+  <div class="faq-separator-line"></div>
+</div>
+<div class="faq-section" style="padding-top:24px;">
+
+<div class="faq-item"><div class="faq-question">Les commissions d'assurance sont-elles soumises à la TVA en Belgique ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Non. Les commissions des intermédiaires d'assurance sont exonérées de TVA en vertu de l'article 44 §3 4° du Code TVA belge. Cette exonération s'applique aux courtiers, agents et sous-agents d'assurance agréés par la FSMA.</p></div></div>
+<div class="faq-item"><div class="faq-question">Qu'est-ce qu'un bordereau de commission d'assurance ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Un bordereau de commission est un document récapitulatif établi entre un intermédiaire (courtier) et la compagnie d'assurance ou un autre intermédiaire, reprenant les commissions dues pour les primes encaissées sur une période donnée.</p></div></div>
+<div class="faq-item"><div class="faq-question">Qui doit établir un bordereau de commission d'assurance ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Tout intermédiaire d'assurance (courtier, agent) agréé FSMA qui perçoit des commissions doit pouvoir justifier de ses revenus. Le bordereau constitue une pièce justificative comptable essentielle pour la déclaration fiscale.</p></div></div>
+<div class="faq-item"><div class="faq-question">Comment calculer la commission sur une prime d'assurance ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>La commission = prime nette (HTVA) × taux de commission contractuel. Le taux varie selon la branche (vie, non-vie), le type de produit et les accords avec l'assureur. Notre simulateur permet de calculer automatiquement le montant de la commission.</p></div></div>
+<div class="faq-item"><div class="faq-question">Faut-il mentionner le numéro BCE sur le bordereau ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Oui. Le bordereau doit mentionner le numéro BCE (Banque-Carrefour des Entreprises) de l'émetteur et du bénéficiaire. Notre outil intègre une recherche automatique via l'API BCE pour retrouver les coordonnées officielles.</p></div></div>
+</div>
 <footer>
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
   <div class="footer-links">
@@ -2050,6 +2082,18 @@ document.addEventListener('click', function(e) {
     }
   }
 });
+</script>
+<script>
+(function(){
+  var bar=document.getElementById('scrollProgress');
+  var btn=document.getElementById('scrollTop');
+  window.addEventListener('scroll',function(){
+    var s=document.documentElement;
+    var pct=(s.scrollTop/(s.scrollHeight-s.clientHeight))*100;
+    if(bar) bar.style.width=Math.min(pct,100)+'%';
+    if(btn){if(s.scrollTop>300)btn.classList.add('visible');else btn.classList.remove('visible');}
+  },{passive:true});
+})();
 </script>
 </body>
 </html>

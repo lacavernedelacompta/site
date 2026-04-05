@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Compound Interest Calculator Belgium 2026 — Savings & Tax</title>
-  <meta name="description" content="Calculate savings growth with compound interest. Income mode: capital for €X/month. 30% withholding tax, 4% rule, annual/monthly table. Free tool.">
+  <title>Compound Interest Calculator Belgium 2026 — Savings & Income Mode</title>
+  <meta name="description" content="Simulate savings growth with compound interest. Income mode (capital needed for €X/month), 30% withholding tax, 4% rule, annual/monthly breakdown. Free tool.">
   <meta name="keywords" content="compound interest calculator belgium, savings simulator belgium, passive income capital calculator, withholding tax interest belgium, 4% rule FIRE belgium, ETF return belgium, investment calculator 2026, retirement income belgium">
   <meta name="author" content="La Caverne de la Compta">
   <meta name="robots" content="index, follow">
@@ -15,14 +15,14 @@
   <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/">
   <link rel="canonical" href="https://lacavernedelacompta.be/en/simulateur-interets-composes/">
   <!-- Open Graph -->
-  <meta property="og:title" content="Compound Interest Calculator Belgium 2026 — Savings, Income & Withholding Tax">
+  <meta property="og:title" content="Compound Interest Calculator Belgium 2026 — Savings & Income Mode">
   <meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
 
-  <meta property="og:description" content="Calculate the growth of your savings with compound interest. Visualize the time effect on your investments. Free tool for Belgian savers and investors.">
+  <meta property="og:description" content="Simulate savings growth with compound interest. Income mode (capital needed for €X/month), 30% withholding tax, 4% rule, annual/monthly breakdown. Free tool.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lacavernedelacompta.be/simulateur-interets-composes.html">
   <meta property="og:site_name" content="La Caverne de la Compta">
-  <meta property="og:locale" content="en_BE">
+  <meta property="og:locale" content="en_GB">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -855,6 +855,16 @@
   .expert-section .expert-highlight strong { color:var(--teal); }
   .expert-internal-link { display:inline-flex; align-items:center; gap:8px; margin-top:24px; padding:12px 20px; background:var(--teal-pale); border:1px solid rgba(26,122,138,0.25); border-radius:10px; font-size:0.88rem; color:var(--teal); text-decoration:none; font-weight:600; transition:all 0.2s; }
   .expert-internal-link:hover { background:var(--teal); color:var(--white); }
+
+.faq-section{max-width:860px;margin:40px auto 0;padding:0 24px 48px;}
+.faq-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:22px;}
+.faq-item{border:1px solid var(--border);border-radius:10px;margin-bottom:8px;overflow:hidden;}
+.faq-question{padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:.9rem;font-weight:600;color:var(--navy);background:#fff;transition:background .15s;}
+.faq-question:hover{background:var(--off);}
+.faq-chev{color:var(--teal);font-size:.75rem;transition:transform .2s;display:inline-flex;}
+.faq-open .faq-chev{transform:rotate(180deg);}
+.faq-answer{display:none;padding:14px 20px 18px;font-size:.85rem;color:var(--text-mid);line-height:1.7;background:var(--off);border-top:1px solid var(--border);}
+.faq-open .faq-answer{display:block;}
 </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
@@ -878,8 +888,8 @@
 <meta property="og:image:height" content="512">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@lacavernecompta">
-  <meta name="twitter:title" content="Compound Interest Calculator Belgium 2026 — Savings, Income & Withholding Tax">
-  <meta name="twitter:description" content="Calculate the growth of your savings with compound interest. Visualize the time effect on your investments. Free tool for Belgian savers and investors.">
+  <meta name="twitter:title" content="Compound Interest Calculator Belgium 2026 — Savings & Income Mode">
+  <meta name="twitter:description" content="Simulate savings growth with compound interest. Income mode (capital needed for €X/month), 30% withholding tax, 4% rule, annual/monthly breakdown. Free tool.">
   <meta name="twitter:image" content="https://lacavernedelacompta.be/logo.svg">
 <!-- CACHE-BUST-v8-en/simulateur-interets-composes/index.html -->
 <!-- Google tag (gtag.js) -->
@@ -922,6 +932,16 @@ gtag('config', 'G-WNHZDLVPEL');
     "url": "https://lacavernedelacompta.be"
   }
 }
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the 4% rule in Belgium ?","acceptedAnswer":{"@type":"Answer","text":"The 4% rule (FIRE strategy) states that you can withdraw 4% of your capital annually without depleting it over the long term. In Belgium, you must account for the 30% withholding tax on financial income, which reduces the real withdrawal rate to around 2.8% net in some cases."}},
+{"@type":"Question","name":"What is the withholding tax on interest in Belgium in 2026 ?","acceptedAnswer":{"@type":"Answer","text":"The Belgian withholding tax is 30% on most financial income (interest, dividends). The first €1,020 of interest on regulated savings accounts is exempt. This simulator automatically accounts for this deduction in all calculations."}},
+{"@type":"Question","name":"What is the difference between simple and compound interest ?","acceptedAnswer":{"@type":"Answer","text":"Simple interest is calculated only on the initial capital. Compound interest is calculated on capital + accumulated interest, creating exponential growth. At 5% over 20 years, €10,000 gives €20,000 with simple interest versus €26,533 with compound interest."}},
+{"@type":"Question","name":"How do you calculate the capital needed to live off income in Belgium ?","acceptedAnswer":{"@type":"Answer","text":"Divide your desired monthly income by the annual net yield after withholding tax, then multiply by 12. Our simulator has an income mode that automatically calculates the capital needed to generate €X per month based on your rate and horizon."}},
+{"@type":"Question","name":"Are ETFs subject to withholding tax in Belgium ?","acceptedAnswer":{"@type":"Answer","text":"Accumulating ETFs (which reinvest dividends) do not trigger withholding tax on reinvested dividends. Capital gains on sale are generally tax-exempt for Belgian individuals. Distributing ETFs pay dividends subject to 30% withholding tax."}},{"@type":"Question","name":"What to invest in to benefit from compound interest in Belgium?","acceptedAnswer":{"@type":"Answer","text":"Main options: accumulating ETFs (automatic reinvestment, no withholding tax on reinvested dividends), branch 23 life insurance (withholding tax exemption after 8 years), regulated savings account (€1,020/year exempt). Accumulating ETFs are often preferred for maximum compounding effect without tax friction."}},{"@type":"Question","name":"Which bank or platform offers the best compound interest in Belgium in 2026?","acceptedAnswer":{"@type":"Answer","text":"Traditional Belgian banks offer low savings rates. For maximum compound interest, investors turn to brokers like Bolero, Keytrade, Trade Republic or DEGIRO to buy accumulating ETFs (e.g. IWDA, VWCE). Trade Republic and Revolut also offer interest on deposits, but without the long-term compounding effect of an ETF."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Calculateur Intérêts Composés Belgique 2026","url":"https://lacavernedelacompta.be/en/simulateur-interets-composes/","description":"Simulate savings growth with compound interest. Income mode, 30% withholding tax, 4% rule, FIRE strategy.","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"La Caverne de la Compta","url":"https://lacavernedelacompta.be"}}
 </script>
 </head>
 <body>
@@ -1317,6 +1337,16 @@ gtag('config', 'G-WNHZDLVPEL');
      data-ad-client="ca-pub-8043980001637749"
      data-ad-slot="9017409611"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="faq-section">
+<h2>❓ Frequently asked questions about compound interest in Belgium</h2>
+<div class="faq-item"><div class="faq-question">What is the 4% rule in Belgium ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>The 4% rule (FIRE strategy) states that you can withdraw 4% of your capital annually without depleting it long-term. In Belgium, you must account for the 30% withholding tax on financial income, which reduces the real net withdrawal rate.</p></div></div>
+<div class="faq-item"><div class="faq-question">What is the withholding tax on interest in Belgium in 2026 ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>The Belgian withholding tax is 30% on most financial income. The first 1,020€ of interest on regulated savings accounts is exempt. This simulator automatically accounts for this deduction in all calculations.</p></div></div>
+<div class="faq-item"><div class="faq-question">What is the difference between simple and compound interest ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Simple interest is calculated only on the initial capital. Compound interest is calculated on capital plus accumulated interest, creating exponential growth. At 5% over 20 years, 10,000€ gives 20,000€ with simple interest versus 26,533€ with compound interest.</p></div></div>
+<div class="faq-item"><div class="faq-question">How do you calculate the capital needed to live off income in Belgium ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Divide your desired monthly income by the annual net yield after withholding tax, then multiply by 12. Our simulator has an income mode that automatically calculates the capital needed to generate X€ per month.</p></div></div>
+<div class="faq-item"><div class="faq-question">Are ETFs subject to withholding tax in Belgium ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Accumulating ETFs do not trigger withholding tax on reinvested dividends. Capital gains on sale are generally tax-exempt for Belgian individuals. Distributing ETFs pay dividends subject to 30% withholding tax.</p></div></div>
+<div class="faq-item"><div class="faq-question">What to invest in to benefit from compound interest in Belgium?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Main options: accumulating ETFs (automatic reinvestment, no withholding tax on reinvested dividends), branch 23 life insurance (withholding tax exemption after 8 years), regulated savings account (€1,020/year exempt). Accumulating ETFs are often preferred for maximum compounding effect without tax friction.</p></div></div>
+<div class="faq-item"><div class="faq-question">Which bank or platform offers the best compound interest in Belgium in 2026?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Traditional Belgian banks offer low savings rates. For maximum compound interest, investors turn to brokers like Bolero, Keytrade, Trade Republic or DEGIRO to buy accumulating ETFs (e.g. IWDA, VWCE). Trade Republic and Revolut also offer interest on deposits, but without the long-term compounding effect of an ETF.</p></div></div>
 </div>
 <footer>
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
@@ -1902,6 +1932,13 @@ function toggleLangMenu(e) {
 document.addEventListener('click', function(e) {
   var ld = document.getElementById('langSwitcher');
   if (ld && !ld.contains(e.target)) ld.classList.remove('open');
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.faq-question').forEach(function(btn){
+    btn.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('faq-open');});
+  });
 });
 </script>
 </body>

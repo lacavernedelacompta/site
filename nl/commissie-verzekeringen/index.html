@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simulateur Commissieborderel Assurance | La Caverne de la Compta</title>
-<meta name="description" content="Genereer uw commissieborderel voor verzekeringen: voor Belgische makelaars. Automatische berekening, PDF-export, BTW-vrijstelling art. 44 §3 4° WBTW.">
+<title>Commissieborderel Verzekeringen België — Makelaars & Tussenpersonen</title>
+<meta name="description" content="Genereer uw commissieborderel verzekeringen PDF: automatische berekening, BTW art. 44 §3 4° WBTW, BCE-API. Gratis tool voor Belgische makelaars. Adresboek...">
 <meta name="author" content="La Caverne de la Compta">
 <meta name="keywords" content="commissieborderel verzekeringen, verzekeringsmakelaar België, commissie verzekering pdf, BTW vrijstelling art 44">
 <meta name="robots" content="index, follow">
@@ -14,8 +14,8 @@
 <link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/provisionsnachweis-versicherungen/">
 <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/commission-assurance/">
 <link rel="canonical" href="https://lacavernedelacompta.be/nl/commissie-verzekeringen/">
-<meta property="og:title" content="Commissieborderel Verzekeringen — Gratis PDF-Generator">
-<meta property="og:description" content="Genereer gratis uw commissieborderel als verzekeringstussenpersoon: DEBITEUR / BEGUNSTIGDE invoer, automatische berekening, PDF-export. Conform Belgische BTW (art. 44 §3 4° WBTW).">
+<meta property="og:title" content="Commissieborderel Verzekeringen België — Makelaars & Tussenpersonen">
+<meta property="og:description" content="Genereer uw commissieborderel verzekeringen PDF: automatische berekening, BTW art. 44 §3 4° WBTW, BCE-API. Gratis tool voor Belgische makelaars. Adresboek...">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lacavernedelacompta.be/nl/commissie-verzekeringen/">
 <meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
@@ -24,8 +24,8 @@
 <meta property="og:locale" content="nl_BE">
 <meta property="og:site_name" content="La Caverne de la Compta">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Commissieborderel Verzekeringen — Gratis PDF-Generator">
-<meta name="twitter:description" content="Genereer gratis uw commissieborderel als verzekeringstussenpersoon: DEBITEUR / BEGUNSTIGDE invoer, automatische berekening, PDF-export. Conform Belgische BTW (art. 44 §3 4° WBTW).">
+<meta name="twitter:title" content="Commissieborderel Verzekeringen België — Makelaars & Tussenpersonen">
+<meta name="twitter:description" content="Genereer uw commissieborderel verzekeringen PDF: automatische berekening, BTW art. 44 §3 4° WBTW, BCE-API. Gratis tool voor Belgische makelaars. Adresboek...">
 <meta name="twitter:image" content="https://lacavernedelacompta.be/logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -149,6 +149,19 @@ html,body{max-width:100vw;overflow-x:hidden;}
   .ad-lateral { display: block; }
 }
 
+.faq-section{max-width:860px;margin:40px auto 0;padding:0 24px 48px;}.faq-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:22px;}.faq-section h2::before{content:'';}.faq-item{border:1px solid var(--border);border-radius:10px;margin-bottom:8px;overflow:hidden;}.faq-question{padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:.9rem;font-weight:600;color:var(--navy);background:#fff;transition:background .15s;}.faq-question:hover{background:var(--off);}.faq-chev{color:var(--teal);font-size:.75rem;transition:transform .2s;display:inline-flex;}.faq-open .faq-chev{transform:rotate(180deg);}.faq-answer{display:none;padding:14px 20px 18px;font-size:.85rem;color:var(--text-mid);line-height:1.7;background:var(--off);border-top:1px solid var(--border);}.faq-open .faq-answer{display:block;}
+
+/* ── SCROLL PROGRESS BAR ── */
+#scrollProgress{position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,#E53935,#FF6B6B);z-index:99999;transition:width .1s linear;border-radius:0 2px 2px 0;}
+/* ── SCROLL TO TOP BUTTON ── */
+#scrollTop{position:fixed;bottom:28px;right:24px;width:42px;height:42px;border-radius:50%;background:var(--navy,#0D1B2A);color:#fff;border:none;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(12px);transition:opacity .25s,transform .25s;z-index:9999;box-shadow:0 4px 16px rgba(13,27,42,.25);}
+#scrollTop.visible{opacity:1;transform:translateY(0);}
+#scrollTop:hover{background:var(--teal,#1A7A8A);}
+
+.faq-separator{display:flex;align-items:center;gap:16px;padding:32px 24px 0;max-width:860px;margin:0 auto;}
+.faq-separator-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--border,#DDE5EF),transparent);}
+.faq-separator-badge{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border,#DDE5EF);border-radius:20px;padding:6px 16px;font-size:.75rem;font-weight:600;color:var(--text-mid,#4A6279);white-space:nowrap;letter-spacing:.04em;box-shadow:0 2px 8px rgba(13,27,42,.05);}
+.faq-separator-dot{width:6px;height:6px;border-radius:50%;background:var(--teal,#1A7A8A);}
 </style>
 <style>
   :root {
@@ -268,6 +281,7 @@ html,body{max-width:100vw;overflow-x:hidden;}
     display: flex;
     flex-direction: column;
     gap: 24px;
+    border-right: 3px solid #E53935;
   }
 
   .sidebar-title {
@@ -864,8 +878,12 @@ body { background: #F4F7FA !important; }
 }
 
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Zijn verzekeringscommissies onderworpen aan btw in België ?","acceptedAnswer":{"@type":"Answer","text":"Nee. Commissies van verzekeringstussenpersonen zijn vrijgesteld van btw op grond van artikel 44 §3 4° van het Belgische Btw-Wetboek. Deze vrijstelling geldt voor makelaars, agenten en subagenten die erkend zijn door de FSMA."}},{"@type":"Question","name":"Wat is een commissieborderel voor verzekeringen ?","acceptedAnswer":{"@type":"Answer","text":"Een commissieborderel is een samenvattend document opgesteld tussen een tussenpersoon (makelaar) en de verzekeringsmaatschappij of een andere tussenpersoon, met de verschuldigde commissies voor de in een bepaalde periode geïnde premies."}},{"@type":"Question","name":"Wie moet een commissieborderel opstellen ?","acceptedAnswer":{"@type":"Answer","text":"Elke door de FSMA erkende verzekeringtussenpersoon die commissies ontvangt, moet zijn inkomsten kunnen rechtvaardigen. Het borderel is een essentieel boekhoudkundig bewijsstuk voor de belastingaangifte."}},{"@type":"Question","name":"Hoe berekent men de commissie op een verzekeringspremie ?","acceptedAnswer":{"@type":"Answer","text":"Commissie = nettopremie (excl. btw) × contractueel commissiepercentage. Het percentage varieert per branche (leven, niet-leven), producttype en afspraken met de verzekeraar."}},{"@type":"Question","name":"Moet het BCE-nummer op het borderel staan ?","acceptedAnswer":{"@type":"Answer","text":"Ja. Het borderel moet het BCE-nummer (Kruispuntbank van Ondernemingen) vermelden van zowel de uitgevende als de begunstigde partij. Onze tool bevat een automatische zoekopdracht via de BCE-API."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Commissieborderel Verzekeringen België","url":"https://lacavernedelacompta.be/nl/commissie-verzekeringen/","description":"Genereer uw commissieborderel verzekeringen PDF voor Belgische makelaars.","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"La Caverne de la Compta","url":"https://lacavernedelacompta.be"}}</script>
 </head>
 <body>
+<div id="scrollProgress"></div>
+<button id="scrollTop" title="Retour en haut" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <div class="topbar">
   <span class="topbar-left">🇧🇪 La Caverne de la Compta</span>
   <div class="topbar-right">
@@ -969,14 +987,14 @@ body { background: #F4F7FA !important; }
     <div class="sidebar-title">
       <span class="lbl">Générateur</span>
       Commissie Verzekeringen
-      <span class="saved-badge" id="saved-badge" aria-live="polite">✓ Sauvegardé</span>
+      <span class="saved-badge" id="saved-badge" aria-live="polite">✓ Opgeslagen</span>
     </div>
 
     <!-- Émetteur -->
     <div class="form-section">
-      <div class="section-label">📤 Émetteur (débiteur)</div>
+      <div class="section-label">📤 Uitgever (schuldenaar)</div>
       <div class="bce-search-row">
-        <label for="emetteur-bce-query">Recherche BCE (nom ou n°)</label>
+        <label for="emetteur-bce-query">Zoek KBO (naam of nr.)</label>
         <input type="text" id="emetteur-bce-query" placeholder="BE ____.___.___"
           maxlength="16" autocomplete="off"
           oninput="formatBCE(this); bceSuggest('emetteur')"
@@ -985,38 +1003,38 @@ body { background: #F4F7FA !important; }
       </div>
       <input type="hidden" id="emetteur-siret">
       <div>
-        <label for="emetteur-nom">Nom / Raison sociale</label>
+        <label for="emetteur-nom">Naam / Vennootschap</label>
         <input type="text" id="emetteur-nom" placeholder="Ex : AG Insurance, Ethias…"
           oninput="saveParties(); updatePreview()">
       </div>
       <div>
-        <label for="emetteur-adresse">Adresse</label>
+        <label for="emetteur-adresse">Adres</label>
         <input type="text" id="emetteur-adresse" placeholder="Ex : Rue de la Loi 12"
           oninput="saveParties(); updatePreview()">
       </div>
       <div class="two-col">
         <div>
-          <label for="emetteur-cp">Code postal</label>
+          <label for="emetteur-cp">Postcode</label>
           <input type="text" id="emetteur-cp" placeholder="1000" maxlength="4"
             oninput="saveParties(); updatePreview()">
         </div>
         <div>
-          <label for="emetteur-ville">Localité</label>
+          <label for="emetteur-ville">Gemeente</label>
           <input type="text" id="emetteur-ville" placeholder="Bruxelles"
             oninput="saveParties(); updatePreview()">
         </div>
       </div>
       <!-- Carnet émetteur -->
       <div class="carnet-section">
-        <div class="carnet-label">📖 Carnet émetteurs <span>navigateur local</span></div>
+        <div class="carnet-label">📖 Adresboek uitgevers <span>lokale browser</span></div>
         <div class="carnet-help">💡 <strong>Eerste gebruik:</strong> vul uw gegevens hieronder in en klik <strong>＋ Opslaan</strong>. De volgende keer selecteert u uw naam en klikt u op <strong>↓ Laden</strong> om alles in 1 klik in te vullen. De <strong>✕</strong> verwijdert de geselecteerde invoer.</div>
         <select class="carnet-select" id="carnet-emetteur-select">
-          <option value="">— Sélectionner un émetteur sauvegardé —</option>
+          <option value="">— Selecteer opgeslagen uitgever —</option>
         </select>
         <div class="carnet-btns">
-          <button class="carnet-btn carnet-btn-load" onclick="carnetLoad('emetteur')" title="Charger">↓ Charger</button>
-          <button class="carnet-btn carnet-btn-save" onclick="carnetSave('emetteur')" title="Sauvegarder l'émetteur actuel">＋ Sauvegarder</button>
-          <button class="carnet-btn carnet-btn-del" onclick="carnetDelete('emetteur')" title="Supprimer">✕</button>
+          <button class="carnet-btn carnet-btn-load" onclick="carnetLoad('emetteur')" title="Charger">↓ Laden</button>
+          <button class="carnet-btn carnet-btn-save" onclick="carnetSave('emetteur')" title="Huidige uitgever opslaan">＋ Opslaan</button>
+          <button class="carnet-btn carnet-btn-del" onclick="carnetDelete('emetteur')" title="Verwijderen">✕</button>
         </div>
         <div class="carnet-toast" id="carnet-emetteur-toast"></div>
       </div>
@@ -1025,54 +1043,54 @@ body { background: #F4F7FA !important; }
 
     <!-- Bénéficiaire -->
     <div class="form-section">
-      <div class="section-label">📥 Bénéficiaire (receveur)</div>
+      <div class="section-label">📥 Begunstigde (ontvanger)</div>
       <div class="bce-search-row">
-        <label for="benef-bce-query">Recherche BCE (nom ou n°)</label>
+        <label for="benef-bce-query">Zoek KBO (naam of nr.)</label>
         <input type="text" id="benef-bce-query" placeholder="BE ____.___.___"
           maxlength="16" autocomplete="off"
           oninput="formatBCE(this); bceSuggest('benef')"
-          aria-label="Recherche BCE bénéficiaire">
+          aria-label="KBO-zoekopdracht begunstigde">
         <div class="bce-results" id="benef-bce-results" role="listbox"></div>
       </div>
       <input type="hidden" id="benef-siret">
       <div>
-        <label for="benef-nom">Nom / Raison sociale</label>
+        <label for="benef-nom">Naam / Vennootschap</label>
         <input type="text" id="benef-nom" placeholder="Ex : Cabinet Dupont &amp; Associés"
           oninput="saveParties(); updatePreview()">
       </div>
       <div>
-        <label for="benef-adresse">Adresse</label>
+        <label for="benef-adresse">Adres</label>
         <input type="text" id="benef-adresse" placeholder="Ex : Avenue Louise 149"
           oninput="saveParties(); updatePreview()">
       </div>
       <div class="two-col">
         <div>
-          <label for="benef-cp">Code postal</label>
+          <label for="benef-cp">Postcode</label>
           <input type="text" id="benef-cp" placeholder="1050" maxlength="4"
             oninput="saveParties(); updatePreview()">
         </div>
         <div>
-          <label for="benef-ville">Localité</label>
+          <label for="benef-ville">Gemeente</label>
           <input type="text" id="benef-ville" placeholder="Ixelles"
             oninput="saveParties(); updatePreview()">
         </div>
       </div>
       <div>
-        <label for="benef-iban">IBAN bénéficiaire</label>
+        <label for="benef-iban">IBAN begunstigde</label>
         <input type="text" id="benef-iban" placeholder="BE__ ____ ____ ____"
           maxlength="19" oninput="formatIBAN(this); saveParties(); updatePreview()">
       </div>
       <!-- Carnet bénéficiaire -->
       <div class="carnet-section">
-        <div class="carnet-label">📖 Carnet bénéficiaires <span>navigateur local</span></div>
+        <div class="carnet-label">📖 Adresboek begunstigden <span>lokale browser</span></div>
         <div class="carnet-help">💡 Sla elke terugkerende begunstigde op (makelaar, agent…). De volgende keer selecteert u hem en klikt u op <strong>↓ Laden</strong> — alle velden worden automatisch ingevuld.</div>
         <select class="carnet-select" id="carnet-benef-select">
-          <option value="">— Sélectionner un bénéficiaire sauvegardé —</option>
+          <option value="">— Selecteer opgeslagen begunstigde —</option>
         </select>
         <div class="carnet-btns">
-          <button class="carnet-btn carnet-btn-load" onclick="carnetLoad('benef')" title="Charger">↓ Charger</button>
-          <button class="carnet-btn carnet-btn-save" onclick="carnetSave('benef')" title="Sauvegarder le bénéficiaire actuel">＋ Sauvegarder</button>
-          <button class="carnet-btn carnet-btn-del" onclick="carnetDelete('benef')" title="Supprimer">✕</button>
+          <button class="carnet-btn carnet-btn-load" onclick="carnetLoad('benef')" title="Charger">↓ Laden</button>
+          <button class="carnet-btn carnet-btn-save" onclick="carnetSave('benef')" title="Huidige begunstigde opslaan">＋ Opslaan</button>
+          <button class="carnet-btn carnet-btn-del" onclick="carnetDelete('benef')" title="Verwijderen">✕</button>
         </div>
         <div class="carnet-toast" id="carnet-benef-toast"></div>
       </div>
@@ -1081,14 +1099,14 @@ body { background: #F4F7FA !important; }
 
     <!-- Infos bordereau -->
     <div class="form-section">
-      <div class="section-label">📄 Informations bordereau</div>
+      <div class="section-label">📄 Borderel informatie</div>
       <div class="two-col">
         <div>
           <label for="date-emission">Date</label>
           <input type="date" id="date-emission" oninput="updatePreview()">
         </div>
         <div>
-          <label for="num-bordereau">N° bordereau</label>
+          <label for="num-bordereau">Nr. borderel</label>
           <input type="text" id="num-bordereau" placeholder="BDX-2026-001"
             oninput="updatePreview()">
         </div>
@@ -1097,29 +1115,29 @@ body { background: #F4F7FA !important; }
 
     <!-- Lignes -->
     <div class="form-section">
-      <div class="section-label">📋 Lignes de commission</div>
+      <div class="section-label">📋 Commissielijnen</div>
       <div class="lines-list" id="lines-list" role="list"></div>
-      <button class="btn-add" onclick="addLine()" aria-label="Ajouter une ligne de commission">
-        ＋ Ajouter une ligne
+      <button class="btn-add" onclick="addLine()" aria-label="Commissielijn toevoegen">
+        ＋ Lijn toevoegen
       </button>
     </div>
 
-    <button class="btn-pdf" onclick="generatePDF()" aria-label="Télécharger le bordereau en PDF">
-      ⬇ Télécharger en PDF
+    <button class="btn-pdf" onclick="generatePDF()" aria-label="Borderel downloaden als PDF">
+      ⬇ Downloaden als PDF
     </button>
 
 
     <p class="rgpd-notice">
-      🔒 Vos données restent uniquement dans votre navigateur (localStorage). Elles ne sont ni transmises, ni stockées sur un serveur. Conformément au RGPD, vous en gardez le contrôle total.
+      🔒 Uw gegevens blijven uitsluitend in uw browser (localStorage). Ze worden niet verzonden of opgeslagen op een server. Conform de AVG behoudt u de volledige controle.
     </p>
 
   </aside>
 
   <!-- ══════ PREVIEW ══════ -->
-  <main class="preview-area" aria-label="Aperçu du bordereau">
-    <div class="preview-heading" aria-hidden="true">Aperçu du bordereau</div>
+  <main class="preview-area" aria-label="Voorvertoning borderel">
+    <div class="preview-heading" aria-hidden="true">Voorvertoning borderel</div>
 
-    <article class="bordereau" id="bordereau" aria-label="Bordereau de commission">
+    <article class="bordereau" id="bordereau" aria-label="Commissieborderel">
       <div class="border-top-bar"></div>
       <div class="bordereau-inner">
 
@@ -1141,14 +1159,14 @@ body { background: #F4F7FA !important; }
         <!-- Parties -->
         <div class="parties-grid">
           <div class="party-box">
-            <div class="party-role">Débiteur</div>
+            <div class="party-role">Schuldenaar</div>
             <div class="party-name" id="prev-débiteur">—</div>
             <div class="party-detail" id="prev-débiteur-siret"></div>
             <div class="party-detail" id="prev-débiteur-adresse"></div>
             <div class="party-detail" id="prev-débiteur-ville"></div>
           </div>
           <div class="party-box">
-            <div class="party-role">Bénéficiaire</div>
+            <div class="party-role">Begunstigde</div>
             <div class="party-name" id="prev-benef">—</div>
             <div class="party-detail" id="prev-benef-siret"></div>
             <div class="party-detail" id="prev-benef-adresse"></div>
@@ -1160,16 +1178,16 @@ body { background: #F4F7FA !important; }
         <table class="brd-table" id="brd-table">
           <thead>
             <tr>
-              <th style="width:30%">Compagnie d'assurance</th>
-              <th style="width:20%">Type d'assurance</th>
-              <th style="width:15%">Prime (€)</th>
+              <th style="width:30%">Verzekeringsmaatschappij</th>
+              <th style="width:20%">Type verzekering</th>
+              <th style="width:15%">Premie (€)</th>
               <th style="width:12%">Coeff. (%)</th>
-              <th style="width:15%">Commission (€)</th>
+              <th style="width:15%">Commissie (€)</th>
             </tr>
           </thead>
           <tbody id="table-body">
             <tr class="empty-row">
-              <td colspan="5">Aucune ligne — ajoutez des compagnies dans le formulaire</td>
+              <td colspan="5">Geen lijnen — voeg maatschappijen toe in het formulier</td>
             </tr>
           </tbody>
         </table>
@@ -1178,7 +1196,7 @@ body { background: #F4F7FA !important; }
         <div class="totals-block">
           <div class="totals-table">
             <div class="t-row total-ttc">
-              <span class="t-label">Total commissions</span>
+              <span class="t-label">Totaal commissies</span>
               <span class="t-val" id="total-ht">0,00 €</span>
             </div>
           </div>
@@ -1187,10 +1205,10 @@ body { background: #F4F7FA !important; }
         <!-- Footer -->
         <div class="brd-footer">
           <div class="mention-tva" id="mention-tva-text">
-            <strong>Exonération TVA :</strong> Les commissions d'intermédiaire en assurances sont exonérées de TVA en vertu de l'article 44, §3, 4° du Code de la TVA belge. Tout retard de règlement entraîne l'application de pénalités conformément au droit belge.
+            <strong>BTW-vrijstelling :</strong> Commissies van verzekeringstussenpersonen zijn vrijgesteld van btw op grond van artikel 44, §3, 4° van het Belgische Btw-Wetboek. Elke betalingsachterstand leidt tot de toepassing van boetes conform het Belgisch recht.
           </div>
           <div class="iban-zone">
-            <div class="iban-label">Virement à effectuer sur</div>
+            <div class="iban-label">Te storten op</div>
             <div class="iban-val" id="prev-iban">—</div>
             <div class="iban-comm" id="prev-communication"></div>
           </div>
@@ -1201,6 +1219,19 @@ body { background: #F4F7FA !important; }
   </main>
 
 </div><!-- /.app -->
+<div class="faq-separator">
+  <div class="faq-separator-line"></div>
+  <div class="faq-separator-badge"><span class="faq-separator-dot"></span>Veelgestelde vragen<span class="faq-separator-dot"></span></div>
+  <div class="faq-separator-line"></div>
+</div>
+<div class="faq-section" style="padding-top:24px;">
+
+<div class="faq-item"><div class="faq-question">Zijn verzekeringscommissies onderworpen aan btw in België ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Nee. Commissies van verzekeringstussenpersonen zijn vrijgesteld van btw op grond van artikel 44 §3 4° van het Belgische Btw-Wetboek. Deze vrijstelling geldt voor makelaars, agenten en subagenten die erkend zijn door de FSMA.</p></div></div>
+<div class="faq-item"><div class="faq-question">Wat is een commissieborderel voor verzekeringen ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Een commissieborderel is een samenvattend document opgesteld tussen een tussenpersoon (makelaar) en de verzekeringsmaatschappij of een andere tussenpersoon, met de verschuldigde commissies voor de in een bepaalde periode geïnde premies.</p></div></div>
+<div class="faq-item"><div class="faq-question">Wie moet een commissieborderel opstellen ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Elke door de FSMA erkende verzekeringtussenpersoon die commissies ontvangt, moet zijn inkomsten kunnen rechtvaardigen. Het borderel is een essentieel boekhoudkundig bewijsstuk voor de belastingaangifte.</p></div></div>
+<div class="faq-item"><div class="faq-question">Hoe berekent men de commissie op een verzekeringspremie ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Commissie = nettopremie (excl. btw) × contractueel commissiepercentage. Het percentage varieert per branche (leven, niet-leven), producttype en afspraken met de verzekeraar.</p></div></div>
+<div class="faq-item"><div class="faq-question">Moet het BCE-nummer op het borderel staan ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Ja. Het borderel moet het BCE-nummer (Kruispuntbank van Ondernemingen) vermelden van zowel de uitgevende als de begunstigde partij. Onze tool bevat een automatische zoekopdracht via de BCE-API.</p></div></div>
+</div>
 <footer>
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
   <div class="footer-links">
@@ -1437,17 +1468,26 @@ document.addEventListener('DOMContentLoaded', function() {
       noResult:    'Aucun résultat trouvé.',
       apiError:    'API BCE indisponible — encodez manuellement.',
       mentionTVA:  'Les commissions d\'intermédiaire en assurances sont exonérées de TVA en vertu de l\'article 44, §3, 4° du Code de la TVA belge.',
-      labelDébiteur:'DÉBITEUR',
-      labelBenef:  'BÉNÉFICIAIRE',
-      labelVirement:'VIREMENT À EFFECTUER SUR',
-      totalLabel:  'Total commissions',
-      pdfFilename: (num) => `commissie-verzekeringen-${num}.pdf`
+      labelDébiteur:'SCHULDENAAR',
+      labelBenef:  'BEGUNSTIGDE',
+      labelVirement:'TE STORTEN OP',
+      totalLabel:  'Totaal commissies',
+      pdfFilename: (num) => `commission-assurance-${num}.pdf`
+    },
+    nl: {
+      emptyRow:    'Geen lijnen — voeg maatschappijen toe in het formulier',
+      searching:   'Zoeken…',
+      noResult:    'Geen resultaat gevonden.',
+      apiError:    'BCE API niet beschikbaar — vul handmatig in.',
+      mentionTVA:  'Commissies van verzekeringstussenpersonen zijn vrijgesteld van btw op grond van artikel 44, §3, 4° van het Belgische Btw-Wetboek.',
+      labelDébiteur:'SCHULDENAAR',
+      labelBenef:  'BEGUNSTIGDE',
+      labelVirement:'TE STORTEN OP',
+      totalLabel:  'Totaal commissies',
+      pdfFilename: (num) => `commissie-borderel-${num}.pdf`
     }
-    // nl: { ... },
-    // de: { ... },
-    // en: { ... }
   };
-  const lang = document.documentElement.lang || 'fr';
+  const lang = document.documentElement.lang || 'nl';
   const t = I18N[lang] || I18N.fr;
 
   // ── Data ──
@@ -1455,7 +1495,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let lineCounter = 0;
 
   const COMPANIES = [
-    "— Sélectionner —",
+    "— Selecteer —",
     "Aedes","AG Insurance","Allianz Benelux","AMMA Assurances","Arces",
     "Argenta Assurances","Athora (ex-Generali)","AXA Belgium","Baloise Insurance",
     "Belfius Direct Assurances (ex-Corona Direct)","Belfius Insurance",
@@ -1644,14 +1684,14 @@ document.addEventListener('DOMContentLoaded', function() {
       div.setAttribute('role','listitem');
       div.innerHTML = `
         <button class="remove-btn" onclick="removeLine(${l.id})" aria-label="Supprimer cette ligne">✕</button>
-        <select onchange="updateLine(${l.id},'contrat',this.value)" aria-label="Compagnie d'assurance">
+        <select onchange="updateLine(${l.id},'contrat',this.value)" aria-label="Verzekeringsmaatschappij">
           ${COMPANIES.map(c=>`<option value="${c}" ${c===l.contrat?'selected':''}>${c}</option>`).join('')}
         </select>
-        <select onchange="updateLine(${l.id},'type',this.value)" aria-label="Type d'assurance">
+        <select onchange="updateLine(${l.id},'type',this.value)" aria-label="Type verzekering">
           ${TYPES.map(t=>`<option value="${t}" ${t===l.type?'selected':''}>${t}</option>`).join('')}
         </select>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-          <input type="number" placeholder="Prime (€)" value="${l.prime}" min="0" step="0.01"
+          <input type="number" placeholder="Premie (€)" value="${l.prime}" min="0" step="0.01"
             oninput="updateLine(${l.id},'prime',this.value)" aria-label="Prime en euros">
           <input type="number" placeholder="Coeff. (%)" value="${l.coeff}" min="0" max="100" step="0.01"
             oninput="updateLine(${l.id},'coeff',this.value)" aria-label="Coefficient en pourcentage">
@@ -1666,12 +1706,12 @@ document.addEventListener('DOMContentLoaded', function() {
   function updatePreview() {
     const emNom     = getField('emetteur-nom')     || '—';
     const emSiret   = getField('emetteur-siret');
-    const emAdresse = getField('emetteur-adresse');
+    const emAdres = getField('emetteur-adresse');
     const emCp      = getField('emetteur-cp');
     const emVille   = getField('emetteur-ville');
     const bnNom     = getField('benef-nom')         || '—';
     const bnSiret   = getField('benef-siret');
-    const bnAdresse = getField('benef-adresse');
+    const bnAdres = getField('benef-adresse');
     const bnCp      = getField('benef-cp');
     const bnVille   = getField('benef-ville');
     const emCpVille = [emCp, emVille].filter(Boolean).join(' ');
@@ -1681,15 +1721,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     set('prev-emetteur',       emNom);
     set('prev-emetteur-siret', emSiret  ? 'N° BCE : '+emSiret  : '');
-    set('prev-emetteur-adresse', emAdresse || '');
+    set('prev-emetteur-adresse', emAdres || '');
     set('prev-emetteur-ville', emCpVille || '');
     set('prev-débiteur',        emNom);
     set('prev-débiteur-siret',  emSiret  ? 'N° BCE : '+emSiret  : '');
-    set('prev-débiteur-adresse', emAdresse || '');
+    set('prev-débiteur-adresse', emAdres || '');
     set('prev-débiteur-ville',  emCpVille || '');
     set('prev-benef',          bnNom);
     set('prev-benef-siret',    bnSiret  ? 'N° FSMA / BCE : '+bnSiret : '');
-    set('prev-benef-adresse',  bnAdresse || '');
+    set('prev-benef-adresse',  bnAdres || '');
     set('prev-benef-ville',    bnCpVille || '');
 
     const num     = getField('num-bordereau') || '—';
@@ -1737,12 +1777,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const emNom     = getField('emetteur-nom')     || '—';
     const emSiret   = getField('emetteur-siret');
-    const emAdresse = getField('emetteur-adresse');
+    const emAdres = getField('emetteur-adresse');
     const emCp      = getField('emetteur-cp');
     const emVille   = getField('emetteur-ville');
     const bnNom     = getField('benef-nom')         || '—';
     const bnSiret   = getField('benef-siret');
-    const bnAdresse = getField('benef-adresse');
+    const bnAdres = getField('benef-adresse');
     const bnCp      = getField('benef-cp');
     const bnVille   = getField('benef-ville');
     const bnIban    = getField('benef-iban');
@@ -1773,7 +1813,7 @@ document.addEventListener('DOMContentLoaded', function() {
     doc.setFont('helvetica','normal'); doc.setFontSize(8);
     doc.setTextColor(120,110,95);
     if (emSiret)   doc.text('N° BCE : '+emSiret,   margin, y+5);
-    if (emAdresse) doc.text(emAdresse,              margin, y+10);
+    if (emAdres) doc.text(emAdres,              margin, y+10);
     if (emCpVille) doc.text(emCpVille,              margin, y+14);
 
     // Title (right)
@@ -1804,7 +1844,7 @@ document.addEventListener('DOMContentLoaded', function() {
     doc.setTextColor(120,110,95);
     let vy = y+18.5;
     if (emSiret)   { doc.text('N° BCE : '+emSiret, margin+6, vy); vy+=4.5; }
-    if (emAdresse) { doc.text(emAdresse,            margin+6, vy); vy+=4.5; }
+    if (emAdres) { doc.text(emAdres,            margin+6, vy); vy+=4.5; }
     if (emCpVille) { doc.text(emCpVille,            margin+6, vy); }
 
     // Bénéficiaire
@@ -1821,7 +1861,7 @@ document.addEventListener('DOMContentLoaded', function() {
     doc.setTextColor(120,110,95);
     let by = y+18.5;
     if (bnSiret)   { doc.text('N° FSMA / BCE : '+bnSiret, box2X+6, by); by+=4.5; }
-    if (bnAdresse) { doc.text(bnAdresse,                   box2X+6, by); by+=4.5; }
+    if (bnAdres) { doc.text(bnAdres,                   box2X+6, by); by+=4.5; }
     if (bnCpVille) { doc.text(bnCpVille,                   box2X+6, by); }
     y += boxH + 8;
 
@@ -1843,7 +1883,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     doc.autoTable({
       startY: y,
-      head: [["Compagnie d'assurance","Type d'assurance","Prime (€)","Coeff. (%)","Commission (€)"]],
+      head: [["Verzekeringsmaatschappij","Type verzekering","Premie (€)","Coeff. (%)","Commissie (€)"]],
       body: tableRows.length > 0 ? tableRows : [['—','—','—','—','—']],
       margin: { left: margin, right: margin },
       styles: { font:'helvetica', fontSize:9, cellPadding:3, textColor:[26,26,46] },
@@ -1877,7 +1917,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // TVA mention
     doc.setFont('helvetica','bold');   doc.setFontSize(7.5); doc.setTextColor(26,26,46);
-    doc.text('Exonération TVA :', margin, y+4);
+    doc.text('BTW-vrijstelling :', margin, y+4);
     doc.setFont('helvetica','normal'); doc.setTextColor(120,110,95);
     doc.text(t.mentionTVA, margin+24, y+4, { maxWidth:96 });
 
@@ -1933,7 +1973,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!sel) return;
     const arr = carnetRead(prefix);
     const cur = sel.value;
-    sel.innerHTML = '<option value="">— Sélectionner —</option>' +
+    sel.innerHTML = '<option value="">— Selecteer —</option>' +
       arr.map((e, i) => `<option value="${i}"${cur==i?' selected':''}>${e.label}</option>`).join('');
   }
 
@@ -1954,7 +1994,7 @@ document.addEventListener('DOMContentLoaded', function() {
       carnetToast(prefix, '✓ Mis à jour : ' + nom, true);
     } else {
       arr.push(entry);
-      carnetToast(prefix, '✓ Sauvegardé : ' + nom, true);
+      carnetToast(prefix, '✓ Opgeslagen : ' + nom, true);
     }
     carnetWrite(prefix, arr);
     carnetRefreshSelect(prefix);
@@ -2050,6 +2090,18 @@ document.addEventListener('click', function(e) {
     }
   }
 });
+</script>
+<script>
+(function(){
+  var bar=document.getElementById('scrollProgress');
+  var btn=document.getElementById('scrollTop');
+  window.addEventListener('scroll',function(){
+    var s=document.documentElement;
+    var pct=(s.scrollTop/(s.scrollHeight-s.clientHeight))*100;
+    if(bar) bar.style.width=Math.min(pct,100)+'%';
+    if(btn){if(s.scrollTop>300)btn.classList.add('visible');else btn.classList.remove('visible');}
+  },{passive:true});
+})();
 </script>
 </body>
 </html>

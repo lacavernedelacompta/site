@@ -3,514 +3,518 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lacavernedelacompta.be/fr/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/fr/simulateur-immobilier/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-immobilier/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-immobilier/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-immobilier/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-immobilier/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-immobilier/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-immobilier/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/fr/simulateur-credit/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-credit/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-credit/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-credit/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-credit/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-credit/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-credit/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/fr/simulateur-requalification-loyer/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-requalification-loyer/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-requalification-loyer/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-requalification-loyer/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-requalification-loyer/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-requalification-loyer/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-requalification-loyer/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/fr/simulateur-interets-composes/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-interets-composes/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-interets-composes/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-interets-composes/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-interets-composes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/fr/simulateur-retenue/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-retenue/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-retenue/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-retenue/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-retenue/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-retenue/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-retenue/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/pcmn-complet-societe-et-asbl/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/pcmn-complet-societe-et-asbl/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/pcmn-complet-societe-et-asbl/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/pcmn-complet-societe-et-asbl/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/fr/quick-memento-fiscal/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/quick-memento-fiscal/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/quick-memento-fiscal/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/quick-memento-fiscal/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/quick-memento-fiscal/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/quick-memento-fiscal/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/quick-memento-fiscal/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/fr/mentions-legales/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/mentions-legales/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/mentions-legales/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/mentions-legales/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/mentions-legales/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/mentions-legales/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/nl/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/nl/simulateur-immobilier/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-immobilier/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-immobilier/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-immobilier/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-immobilier/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-immobilier/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-immobilier/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/nl/simulateur-credit/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-credit/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-credit/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-credit/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-credit/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-credit/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-credit/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/nl/simulateur-requalification-loyer/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-requalification-loyer/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-requalification-loyer/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-requalification-loyer/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-requalification-loyer/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-requalification-loyer/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-requalification-loyer/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/nl/simulateur-interets-composes/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-interets-composes/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-interets-composes/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-interets-composes/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-interets-composes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/nl/simulateur-retenue/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-retenue/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-retenue/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-retenue/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-retenue/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-retenue/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-retenue/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/nl/pcmn-complet-societe-et-asbl/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/pcmn-complet-societe-et-asbl/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/pcmn-complet-societe-et-asbl/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/pcmn-complet-societe-et-asbl/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/pcmn-complet-societe-et-asbl/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/nl/quick-memento-fiscal/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/quick-memento-fiscal/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/quick-memento-fiscal/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/quick-memento-fiscal/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/quick-memento-fiscal/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/quick-memento-fiscal/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/quick-memento-fiscal/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/nl/mentions-legales/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/mentions-legales/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/mentions-legales/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/mentions-legales/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/mentions-legales/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/mentions-legales/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/en/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/en/simulateur-immobilier/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-immobilier/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-immobilier/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-immobilier/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-immobilier/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-immobilier/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-immobilier/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/en/simulateur-credit/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-credit/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-credit/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-credit/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-credit/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-credit/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-credit/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/en/simulateur-requalification-loyer/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-requalification-loyer/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-requalification-loyer/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-requalification-loyer/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-requalification-loyer/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-requalification-loyer/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-requalification-loyer/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/en/simulateur-interets-composes/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-interets-composes/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-interets-composes/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-interets-composes/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-interets-composes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/en/simulateur-retenue/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-retenue/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-retenue/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-retenue/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-retenue/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-retenue/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-retenue/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/en/pcmn-complet-societe-et-asbl/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/pcmn-complet-societe-et-asbl/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/pcmn-complet-societe-et-asbl/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/pcmn-complet-societe-et-asbl/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/pcmn-complet-societe-et-asbl/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/en/quick-memento-fiscal/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/quick-memento-fiscal/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/quick-memento-fiscal/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/quick-memento-fiscal/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/quick-memento-fiscal/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/quick-memento-fiscal/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/quick-memento-fiscal/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/en/mentions-legales/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/mentions-legales/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/mentions-legales/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/mentions-legales/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/mentions-legales/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/mentions-legales/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/de/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/de/simulateur-immobilier/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-immobilier/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-immobilier/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-immobilier/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-immobilier/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-immobilier/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-immobilier/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/de/simulateur-credit/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-credit/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-credit/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-credit/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-credit/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-credit/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-credit/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/de/simulateur-requalification-loyer/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-requalification-loyer/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-requalification-loyer/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-requalification-loyer/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-requalification-loyer/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-requalification-loyer/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-requalification-loyer/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/de/simulateur-interets-composes/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-interets-composes/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-interets-composes/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-interets-composes/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-interets-composes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/de/simulateur-retenue/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-retenue/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/simulateur-retenue/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/simulateur-retenue/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/simulateur-retenue/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/simulateur-retenue/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-retenue/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/de/pcmn-complet-societe-et-asbl/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/pcmn-complet-societe-et-asbl/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/pcmn-complet-societe-et-asbl/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/pcmn-complet-societe-et-asbl/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/pcmn-complet-societe-et-asbl/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/de/quick-memento-fiscal/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/quick-memento-fiscal/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/quick-memento-fiscal/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/quick-memento-fiscal/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/quick-memento-fiscal/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/quick-memento-fiscal/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/quick-memento-fiscal/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/de/mentions-legales/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/mentions-legales/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/mentions-legales/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/mentions-legales/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/mentions-legales/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/mentions-legales/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/fr/remboursement-frais/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/remboursement-frais/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/remboursement-frais/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/remboursement-frais/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/remboursement-frais/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/remboursement-frais/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/remboursement-frais/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/nl/remboursement-frais/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/remboursement-frais/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/remboursement-frais/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/remboursement-frais/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/remboursement-frais/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/remboursement-frais/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/remboursement-frais/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/en/remboursement-frais/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/remboursement-frais/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/remboursement-frais/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/remboursement-frais/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/remboursement-frais/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/remboursement-frais/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/remboursement-frais/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/de/remboursement-frais/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/remboursement-frais/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://lacavernedelacompta.be/nl/remboursement-frais/"/>
-    <xhtml:link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/remboursement-frais/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lacavernedelacompta.be/en/remboursement-frais/"/>
     <xhtml:link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/remboursement-frais/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/remboursement-frais/"/>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/fr/questionnaire-frais-propres/</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/nl/questionnaire-frais-propres/</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/de/questionnaire-frais-propres/</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/en/questionnaire-frais-propres/</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/fr/simulateur-plus-value-immobiliere/</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/nl/simulateur-plus-value-immobiliere/</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/de/simulateur-plus-value-immobiliere/</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/en/simulateur-plus-value-immobiliere/</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/fr/commission-assurance/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/nl/commissie-verzekeringen/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/de/provisionsnachweis-versicherungen/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lacavernedelacompta.be/en/insurance-commission/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url><loc>https://lacavernedelacompta.be/fr/simulateur-frais-sejour-etranger/</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lacavernedelacompta.be/nl/dagvergoeding-buitenland/</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lacavernedelacompta.be/de/auslandsreisekostenrechner/</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lacavernedelacompta.be/en/foreign-travel-allowance/</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

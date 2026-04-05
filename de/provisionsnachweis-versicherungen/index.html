@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simulator Provisionsnachweis Versicherungen | La Caverne de la Compta</title>
-<meta name="description" content="Erstellen Sie Ihren Provisionsnachweis für Versicherungen: für belgische Makler. Automatische Berechnung, PDF-Export, MwSt.-Befreiung Art. 44 §3 4° MWSTG.">
+<title>Provisionsnachweis Versicherungen Belgien — Makler & Vermittler</title>
+<meta name="description" content="Erstellen Sie Ihren Provisionsnachweis PDF: automatische Berechnung, MwSt. Art. 44 §3 MWSTG, BCE-API. Kostenloses Tool für belgische Versicherungsmakler.">
 <meta name="author" content="La Caverne de la Compta">
 <meta name="keywords" content="Provisionsnachweis Versicherungen Belgien, Versicherungsmakler, Provision Versicherung PDF">
 <meta name="robots" content="index, follow">
@@ -14,8 +14,8 @@
 <link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/provisionsnachweis-versicherungen/">
 <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/commission-assurance/">
 <link rel="canonical" href="https://lacavernedelacompta.be/de/provisionsnachweis-versicherungen/">
-<meta property="og:title" content="Provisionsnachweis Versicherungen — Kostenloser PDF-Generator">
-<meta property="og:description" content="Erstellen Sie kostenlos Ihren Provisionsnachweis als Versicherungsvermittler: SCHULDNER / EMPFÄNGER Eingabe, automatische Berechnung, PDF-Export. Konform mit belgischer MwSt. (Art. 44 §3 4° MWSTG).">
+<meta property="og:title" content="Provisionsnachweis Versicherungen Belgien — Makler & Vermittler">
+<meta property="og:description" content="Erstellen Sie Ihren Provisionsnachweis PDF: automatische Berechnung, MwSt. Art. 44 §3 MWSTG, BCE-API. Kostenloses Tool für belgische Versicherungsmakler.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lacavernedelacompta.be/de/provisionsnachweis-versicherungen/">
 <meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
@@ -24,8 +24,8 @@
 <meta property="og:locale" content="de_BE">
 <meta property="og:site_name" content="La Caverne de la Compta">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Provisionsnachweis Versicherungen — Kostenloser PDF-Generator">
-<meta name="twitter:description" content="Erstellen Sie kostenlos Ihren Provisionsnachweis als Versicherungsvermittler: SCHULDNER / EMPFÄNGER Eingabe, automatische Berechnung, PDF-Export. Konform mit belgischer MwSt. (Art. 44 §3 4° MWSTG).">
+<meta name="twitter:title" content="Provisionsnachweis Versicherungen Belgien — Makler & Vermittler">
+<meta name="twitter:description" content="Erstellen Sie Ihren Provisionsnachweis PDF: automatische Berechnung, MwSt. Art. 44 §3 MWSTG, BCE-API. Kostenloses Tool für belgische Versicherungsmakler.">
 <meta name="twitter:image" content="https://lacavernedelacompta.be/logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -149,6 +149,19 @@ html,body{max-width:100vw;overflow-x:hidden;}
   .ad-lateral { display: block; }
 }
 
+.faq-section{max-width:860px;margin:40px auto 0;padding:0 24px 48px;}.faq-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:22px;}.faq-section h2::before{content:'';}.faq-item{border:1px solid var(--border);border-radius:10px;margin-bottom:8px;overflow:hidden;}.faq-question{padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:.9rem;font-weight:600;color:var(--navy);background:#fff;transition:background .15s;}.faq-question:hover{background:var(--off);}.faq-chev{color:var(--teal);font-size:.75rem;transition:transform .2s;display:inline-flex;}.faq-open .faq-chev{transform:rotate(180deg);}.faq-answer{display:none;padding:14px 20px 18px;font-size:.85rem;color:var(--text-mid);line-height:1.7;background:var(--off);border-top:1px solid var(--border);}.faq-open .faq-answer{display:block;}
+
+/* ── SCROLL PROGRESS BAR ── */
+#scrollProgress{position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,#E53935,#FF6B6B);z-index:99999;transition:width .1s linear;border-radius:0 2px 2px 0;}
+/* ── SCROLL TO TOP BUTTON ── */
+#scrollTop{position:fixed;bottom:28px;right:24px;width:42px;height:42px;border-radius:50%;background:var(--navy,#0D1B2A);color:#fff;border:none;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(12px);transition:opacity .25s,transform .25s;z-index:9999;box-shadow:0 4px 16px rgba(13,27,42,.25);}
+#scrollTop.visible{opacity:1;transform:translateY(0);}
+#scrollTop:hover{background:var(--teal,#1A7A8A);}
+
+.faq-separator{display:flex;align-items:center;gap:16px;padding:32px 24px 0;max-width:860px;margin:0 auto;}
+.faq-separator-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--border,#DDE5EF),transparent);}
+.faq-separator-badge{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border,#DDE5EF);border-radius:20px;padding:6px 16px;font-size:.75rem;font-weight:600;color:var(--text-mid,#4A6279);white-space:nowrap;letter-spacing:.04em;box-shadow:0 2px 8px rgba(13,27,42,.05);}
+.faq-separator-dot{width:6px;height:6px;border-radius:50%;background:var(--teal,#1A7A8A);}
 </style>
 <style>
   :root {
@@ -268,6 +281,7 @@ html,body{max-width:100vw;overflow-x:hidden;}
     display: flex;
     flex-direction: column;
     gap: 24px;
+    border-right: 3px solid #E53935;
   }
 
   .sidebar-title {
@@ -864,8 +878,12 @@ body { background: #F4F7FA !important; }
 }
 
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Unterliegen Versicherungsprovisionen der Mehrwertsteuer in Belgien ?","acceptedAnswer":{"@type":"Answer","text":"Nein. Provisionen von Versicherungsvermittlern sind gemäß Artikel 44 §3 4° des belgischen Mehrwertsteuergesetzbuches von der MwSt. befreit. Diese Befreiung gilt für FSMA-zugelassene Makler, Agenten und Unteragenten."}},{"@type":"Question","name":"Was ist ein Versicherungsprovisionsnachweis ?","acceptedAnswer":{"@type":"Answer","text":"Ein Provisionsnachweis ist ein zusammenfassendes Dokument zwischen einem Vermittler (Makler) und der Versicherungsgesellschaft, in dem die für einen bestimmten Zeitraum fälligen Provisionen auf eingezogene Prämien aufgeführt sind."}},{"@type":"Question","name":"Wer muss einen Provisionsnachweis erstellen ?","acceptedAnswer":{"@type":"Answer","text":"Jeder FSMA-zugelassene Versicherungsvermittler, der Provisionen erhält, muss seine Einkünfte belegen können. Der Provisionsnachweis ist ein wesentlicher Buchungsbeleg für die Steuererklärung."}},{"@type":"Question","name":"Wie berechnet man die Provision auf eine Versicherungsprämie ?","acceptedAnswer":{"@type":"Answer","text":"Provision = Nettoprämie (ohne MwSt.) × vertraglicher Provisionssatz. Der Satz variiert je nach Sparte (Leben, Nicht-Leben), Produkttyp und Vereinbarungen mit dem Versicherer."}},{"@type":"Question","name":"Muss die BCE-Nummer auf dem Nachweis stehen ?","acceptedAnswer":{"@type":"Answer","text":"Ja. Der Nachweis muss die BCE-Nummer (Unternehmensregister) des Ausstellers und des Empfängers enthalten. Unser Tool enthält eine automatische Suche über die BCE-API."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Provisionsnachweis Versicherungen Belgien","url":"https://lacavernedelacompta.be/de/provisionsnachweis-versicherungen/","description":"Erstellen Sie Ihren Provisionsnachweis PDF für belgische Versicherungsmakler.","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"La Caverne de la Compta","url":"https://lacavernedelacompta.be"}}</script>
 </head>
 <body>
+<div id="scrollProgress"></div>
+<button id="scrollTop" title="Retour en haut" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <div class="topbar">
   <span class="topbar-left">🇧🇪 Buchhaltungs- und Steuertools für Belgien</span>
   <div class="topbar-right">
@@ -969,14 +987,14 @@ body { background: #F4F7FA !important; }
     <div class="sidebar-title">
       <span class="lbl">Générateur</span>
       Versicherungsprovision
-      <span class="saved-badge" id="saved-badge" aria-live="polite">✓ Sauvegardé</span>
+      <span class="saved-badge" id="saved-badge" aria-live="polite">✓ Gespeichert</span>
     </div>
 
     <!-- Émetteur -->
     <div class="form-section">
-      <div class="section-label">📤 Émetteur (débiteur)</div>
+      <div class="section-label">📤 Aussteller (Schuldner)</div>
       <div class="bce-search-row">
-        <label for="emetteur-bce-query">Recherche BCE (nom ou n°)</label>
+        <label for="emetteur-bce-query">KBO-Suche (Name oder Nr.)</label>
         <input type="text" id="emetteur-bce-query" placeholder="BE ____.___.___"
           maxlength="16" autocomplete="off"
           oninput="formatBCE(this); bceSuggest('emetteur')"
@@ -985,7 +1003,7 @@ body { background: #F4F7FA !important; }
       </div>
       <input type="hidden" id="emetteur-siret">
       <div>
-        <label for="emetteur-nom">Nom / Raison sociale</label>
+        <label for="emetteur-nom">Name / Firma</label>
         <input type="text" id="emetteur-nom" placeholder="Ex : AG Insurance, Ethias…"
           oninput="saveParties(); updatePreview()">
       </div>
@@ -996,27 +1014,27 @@ body { background: #F4F7FA !important; }
       </div>
       <div class="two-col">
         <div>
-          <label for="emetteur-cp">Code postal</label>
+          <label for="emetteur-cp">PLZ</label>
           <input type="text" id="emetteur-cp" placeholder="1000" maxlength="4"
             oninput="saveParties(); updatePreview()">
         </div>
         <div>
-          <label for="emetteur-ville">Localité</label>
+          <label for="emetteur-ville">Ort</label>
           <input type="text" id="emetteur-ville" placeholder="Bruxelles"
             oninput="saveParties(); updatePreview()">
         </div>
       </div>
       <!-- Carnet émetteur -->
       <div class="carnet-section">
-        <div class="carnet-label">📖 Carnet émetteurs <span>navigateur local</span></div>
+        <div class="carnet-label">📖 Adressbuch Aussteller <span>Lokaler Browser</span></div>
         <div class="carnet-help">💡 <strong>Erste Verwendung:</strong> Füllen Sie Ihre Daten unten aus und klicken Sie <strong>＋ Speichern</strong>. Beim nächsten Mal wählen Sie Ihren Namen aus und klicken Sie <strong>↓ Laden</strong> — alles in 1 Klick ausgefüllt. <strong>✕</strong> löscht den ausgewählten Eintrag.</div>
         <select class="carnet-select" id="carnet-emetteur-select">
-          <option value="">— Sélectionner un émetteur sauvegardé —</option>
+          <option value="">— Gespeicherten Aussteller auswählen —</option>
         </select>
         <div class="carnet-btns">
-          <button class="carnet-btn carnet-btn-load" onclick="carnetLoad('emetteur')" title="Charger">↓ Charger</button>
-          <button class="carnet-btn carnet-btn-save" onclick="carnetSave('emetteur')" title="Sauvegarder l'émetteur actuel">＋ Sauvegarder</button>
-          <button class="carnet-btn carnet-btn-del" onclick="carnetDelete('emetteur')" title="Supprimer">✕</button>
+          <button class="carnet-btn carnet-btn-load" onclick="carnetLoad('emetteur')" title="Charger">↓ Laden</button>
+          <button class="carnet-btn carnet-btn-save" onclick="carnetSave('emetteur')" title="Aktuellen Aussteller speichern">＋ Speichern</button>
+          <button class="carnet-btn carnet-btn-del" onclick="carnetDelete('emetteur')" title="Löschen">✕</button>
         </div>
         <div class="carnet-toast" id="carnet-emetteur-toast"></div>
       </div>
@@ -1025,18 +1043,18 @@ body { background: #F4F7FA !important; }
 
     <!-- Bénéficiaire -->
     <div class="form-section">
-      <div class="section-label">📥 Bénéficiaire (receveur)</div>
+      <div class="section-label">📥 Begünstigter (Empfänger)</div>
       <div class="bce-search-row">
-        <label for="benef-bce-query">Recherche BCE (nom ou n°)</label>
+        <label for="benef-bce-query">KBO-Suche (Name oder Nr.)</label>
         <input type="text" id="benef-bce-query" placeholder="BE ____.___.___"
           maxlength="16" autocomplete="off"
           oninput="formatBCE(this); bceSuggest('benef')"
-          aria-label="Recherche BCE bénéficiaire">
+          aria-label="KBO-Suche Empfänger">
         <div class="bce-results" id="benef-bce-results" role="listbox"></div>
       </div>
       <input type="hidden" id="benef-siret">
       <div>
-        <label for="benef-nom">Nom / Raison sociale</label>
+        <label for="benef-nom">Name / Firma</label>
         <input type="text" id="benef-nom" placeholder="Ex : Cabinet Dupont &amp; Associés"
           oninput="saveParties(); updatePreview()">
       </div>
@@ -1047,32 +1065,32 @@ body { background: #F4F7FA !important; }
       </div>
       <div class="two-col">
         <div>
-          <label for="benef-cp">Code postal</label>
+          <label for="benef-cp">PLZ</label>
           <input type="text" id="benef-cp" placeholder="1050" maxlength="4"
             oninput="saveParties(); updatePreview()">
         </div>
         <div>
-          <label for="benef-ville">Localité</label>
+          <label for="benef-ville">Ort</label>
           <input type="text" id="benef-ville" placeholder="Ixelles"
             oninput="saveParties(); updatePreview()">
         </div>
       </div>
       <div>
-        <label for="benef-iban">IBAN bénéficiaire</label>
+        <label for="benef-iban">IBAN Begünstigter</label>
         <input type="text" id="benef-iban" placeholder="BE__ ____ ____ ____"
           maxlength="19" oninput="formatIBAN(this); saveParties(); updatePreview()">
       </div>
       <!-- Carnet bénéficiaire -->
       <div class="carnet-section">
-        <div class="carnet-label">📖 Carnet bénéficiaires <span>navigateur local</span></div>
+        <div class="carnet-label">📖 Adressbuch Empfänger <span>Lokaler Browser</span></div>
         <div class="carnet-help">💡 Speichern Sie jeden wiederkehrenden Empfänger (Makler, Agent…). Beim nächsten Mal wählen Sie ihn aus und klicken <strong>↓ Laden</strong> — alle Felder werden automatisch ausgefüllt.</div>
         <select class="carnet-select" id="carnet-benef-select">
-          <option value="">— Sélectionner un bénéficiaire sauvegardé —</option>
+          <option value="">— Gespeicherten Empfänger auswählen —</option>
         </select>
         <div class="carnet-btns">
-          <button class="carnet-btn carnet-btn-load" onclick="carnetLoad('benef')" title="Charger">↓ Charger</button>
-          <button class="carnet-btn carnet-btn-save" onclick="carnetSave('benef')" title="Sauvegarder le bénéficiaire actuel">＋ Sauvegarder</button>
-          <button class="carnet-btn carnet-btn-del" onclick="carnetDelete('benef')" title="Supprimer">✕</button>
+          <button class="carnet-btn carnet-btn-load" onclick="carnetLoad('benef')" title="Charger">↓ Laden</button>
+          <button class="carnet-btn carnet-btn-save" onclick="carnetSave('benef')" title="Aktuellen Empfänger speichern">＋ Speichern</button>
+          <button class="carnet-btn carnet-btn-del" onclick="carnetDelete('benef')" title="Löschen">✕</button>
         </div>
         <div class="carnet-toast" id="carnet-benef-toast"></div>
       </div>
@@ -1081,14 +1099,14 @@ body { background: #F4F7FA !important; }
 
     <!-- Infos bordereau -->
     <div class="form-section">
-      <div class="section-label">📄 Informations bordereau</div>
+      <div class="section-label">📄 Nachweis-Informationen</div>
       <div class="two-col">
         <div>
           <label for="date-emission">Date</label>
           <input type="date" id="date-emission" oninput="updatePreview()">
         </div>
         <div>
-          <label for="num-bordereau">N° bordereau</label>
+          <label for="num-bordereau">Nr. Nachweis</label>
           <input type="text" id="num-bordereau" placeholder="BDX-2026-001"
             oninput="updatePreview()">
         </div>
@@ -1097,29 +1115,29 @@ body { background: #F4F7FA !important; }
 
     <!-- Lignes -->
     <div class="form-section">
-      <div class="section-label">📋 Lignes de commission</div>
+      <div class="section-label">📋 Provisionszeilen</div>
       <div class="lines-list" id="lines-list" role="list"></div>
-      <button class="btn-add" onclick="addLine()" aria-label="Ajouter une ligne de commission">
-        ＋ Ajouter une ligne
+      <button class="btn-add" onclick="addLine()" aria-label="Provisionszeile hinzufügen">
+        ＋ Zeile hinzufügen
       </button>
     </div>
 
-    <button class="btn-pdf" onclick="generatePDF()" aria-label="Télécharger le bordereau en PDF">
-      ⬇ Télécharger en PDF
+    <button class="btn-pdf" onclick="generatePDF()" aria-label="Provisionsnachweis als PDF herunterladen">
+      ⬇ Als PDF herunterladen
     </button>
 
 
     <p class="rgpd-notice">
-      🔒 Vos données restent uniquement dans votre navigateur (localStorage). Elles ne sont ni transmises, ni stockées sur un serveur. Conformément au RGPD, vous en gardez le contrôle total.
+      🔒 Ihre Daten verbleiben ausschließlich in Ihrem Browser (localStorage). Sie werden weder übertragen noch auf einem Server gespeichert. Gemäß DSGVO behalten Sie die vollständige Kontrolle.
     </p>
 
   </aside>
 
   <!-- ══════ PREVIEW ══════ -->
-  <main class="preview-area" aria-label="Aperçu du bordereau">
-    <div class="preview-heading" aria-hidden="true">Aperçu du bordereau</div>
+  <main class="preview-area" aria-label="Vorschau Provisionsnachweis">
+    <div class="preview-heading" aria-hidden="true">Vorschau Provisionsnachweis</div>
 
-    <article class="bordereau" id="bordereau" aria-label="Bordereau de commission">
+    <article class="bordereau" id="bordereau" aria-label="Provisionsnachweis">
       <div class="border-top-bar"></div>
       <div class="bordereau-inner">
 
@@ -1141,14 +1159,14 @@ body { background: #F4F7FA !important; }
         <!-- Parties -->
         <div class="parties-grid">
           <div class="party-box">
-            <div class="party-role">Débiteur</div>
+            <div class="party-role">Schuldner</div>
             <div class="party-name" id="prev-débiteur">—</div>
             <div class="party-detail" id="prev-débiteur-siret"></div>
             <div class="party-detail" id="prev-débiteur-adresse"></div>
             <div class="party-detail" id="prev-débiteur-ville"></div>
           </div>
           <div class="party-box">
-            <div class="party-role">Bénéficiaire</div>
+            <div class="party-role">Begünstigter</div>
             <div class="party-name" id="prev-benef">—</div>
             <div class="party-detail" id="prev-benef-siret"></div>
             <div class="party-detail" id="prev-benef-adresse"></div>
@@ -1160,16 +1178,16 @@ body { background: #F4F7FA !important; }
         <table class="brd-table" id="brd-table">
           <thead>
             <tr>
-              <th style="width:30%">Compagnie d'assurance</th>
-              <th style="width:20%">Type d'assurance</th>
-              <th style="width:15%">Prime (€)</th>
+              <th style="width:30%">Versicherungsgesellschaft</th>
+              <th style="width:20%">Versicherungsart</th>
+              <th style="width:15%">Prämie (€)</th>
               <th style="width:12%">Coeff. (%)</th>
-              <th style="width:15%">Commission (€)</th>
+              <th style="width:15%">Provision (€)</th>
             </tr>
           </thead>
           <tbody id="table-body">
             <tr class="empty-row">
-              <td colspan="5">Aucune ligne — ajoutez des compagnies dans le formulaire</td>
+              <td colspan="5">Keine Zeilen — fügen Sie Gesellschaften im Formular hinzu</td>
             </tr>
           </tbody>
         </table>
@@ -1178,7 +1196,7 @@ body { background: #F4F7FA !important; }
         <div class="totals-block">
           <div class="totals-table">
             <div class="t-row total-ttc">
-              <span class="t-label">Total commissions</span>
+              <span class="t-label">Provisionen gesamt</span>
               <span class="t-val" id="total-ht">0,00 €</span>
             </div>
           </div>
@@ -1187,10 +1205,10 @@ body { background: #F4F7FA !important; }
         <!-- Footer -->
         <div class="brd-footer">
           <div class="mention-tva" id="mention-tva-text">
-            <strong>Exonération TVA :</strong> Les commissions d'intermédiaire en assurances sont exonérées de TVA en vertu de l'article 44, §3, 4° du Code de la TVA belge. Tout retard de règlement entraîne l'application de pénalités conformément au droit belge.
+            <strong>MwSt.-Befreiung :</strong> Provisionen von Versicherungsvermittlern sind gemäß Artikel 44, §3, 4° des belgischen MwSt-Gesetzes befreit. Jeder Zahlungsverzug führt zur Anwendung von Strafen gemäß belgischem Recht.
           </div>
           <div class="iban-zone">
-            <div class="iban-label">Virement à effectuer sur</div>
+            <div class="iban-label">Überweisung an</div>
             <div class="iban-val" id="prev-iban">—</div>
             <div class="iban-comm" id="prev-communication"></div>
           </div>
@@ -1201,6 +1219,19 @@ body { background: #F4F7FA !important; }
   </main>
 
 </div><!-- /.app -->
+<div class="faq-separator">
+  <div class="faq-separator-line"></div>
+  <div class="faq-separator-badge"><span class="faq-separator-dot"></span>Häufige Fragen<span class="faq-separator-dot"></span></div>
+  <div class="faq-separator-line"></div>
+</div>
+<div class="faq-section" style="padding-top:24px;">
+
+<div class="faq-item"><div class="faq-question">Unterliegen Versicherungsprovisionen der Mehrwertsteuer in Belgien ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Nein. Provisionen von Versicherungsvermittlern sind gemäß Artikel 44 §3 4° des belgischen Mehrwertsteuergesetzbuches von der MwSt. befreit. Diese Befreiung gilt für FSMA-zugelassene Makler, Agenten und Unteragenten.</p></div></div>
+<div class="faq-item"><div class="faq-question">Was ist ein Versicherungsprovisionsnachweis ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Ein Provisionsnachweis ist ein zusammenfassendes Dokument zwischen einem Vermittler (Makler) und der Versicherungsgesellschaft, in dem die für einen bestimmten Zeitraum fälligen Provisionen auf eingezogene Prämien aufgeführt sind.</p></div></div>
+<div class="faq-item"><div class="faq-question">Wer muss einen Provisionsnachweis erstellen ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Jeder FSMA-zugelassene Versicherungsvermittler, der Provisionen erhält, muss seine Einkünfte belegen können. Der Provisionsnachweis ist ein wesentlicher Buchungsbeleg für die Steuererklärung.</p></div></div>
+<div class="faq-item"><div class="faq-question">Wie berechnet man die Provision auf eine Versicherungsprämie ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Provision = Nettoprämie (ohne MwSt.) × vertraglicher Provisionssatz. Der Satz variiert je nach Sparte (Leben, Nicht-Leben), Produkttyp und Vereinbarungen mit dem Versicherer.</p></div></div>
+<div class="faq-item"><div class="faq-question">Muss die BCE-Nummer auf dem Nachweis stehen ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Ja. Der Nachweis muss die BCE-Nummer (Unternehmensregister) des Ausstellers und des Empfängers enthalten. Unser Tool enthält eine automatische Suche über die BCE-API.</p></div></div>
+</div>
 <footer>
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
   <div class="footer-links">
@@ -1436,17 +1467,26 @@ document.addEventListener('DOMContentLoaded', function() {
       noResult:    'Aucun résultat trouvé.',
       apiError:    'API BCE indisponible — encodez manuellement.',
       mentionTVA:  'Les commissions d\'intermédiaire en assurances sont exonérées de TVA en vertu de l\'article 44, §3, 4° du Code de la TVA belge.',
-      labelDébiteur:'DÉBITEUR',
-      labelBenef:  'BÉNÉFICIAIRE',
-      labelVirement:'VIREMENT À EFFECTUER SUR',
-      totalLabel:  'Total commissions',
-      pdfFilename: (num) => `provisionsnachweis-versicherungen-${num}.pdf`
+      labelDébiteur:'SCHULDNER',
+      labelBenef:  'BEGÜNSTIGTER',
+      labelVirement:'ÜBERWEISUNG AN',
+      totalLabel:  'Provisionen gesamt',
+      pdfFilename: (num) => `commission-assurance-${num}.pdf`
+    },
+    de: {
+      emptyRow:    'Keine Zeilen — fügen Sie Gesellschaften im Formular hinzu',
+      searching:   'Suche läuft…',
+      noResult:    'Kein Ergebnis gefunden.',
+      apiError:    'BCE API nicht verfügbar — bitte manuell eingeben.',
+      mentionTVA:  'Provisionen von Versicherungsvermittlern sind gemäß Artikel 44, §3, 4° des belgischen MwSt-Gesetzes befreit.',
+      labelDébiteur:'SCHULDNER',
+      labelBenef:  'BEGÜNSTIGTER',
+      labelVirement:'ÜBERWEISUNG AN',
+      totalLabel:  'Provisionen gesamt',
+      pdfFilename: (num) => `provisionsnachweis-${num}.pdf`
     }
-    // nl: { ... },
-    // de: { ... },
-    // en: { ... }
   };
-  const lang = document.documentElement.lang || 'fr';
+  const lang = document.documentElement.lang || 'de';
   const t = I18N[lang] || I18N.fr;
 
   // ── Data ──
@@ -1454,7 +1494,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let lineCounter = 0;
 
   const COMPANIES = [
-    "— Sélectionner —",
+    "— Auswählen —",
     "Aedes","AG Insurance","Allianz Benelux","AMMA Assurances","Arces",
     "Argenta Assurances","Athora (ex-Generali)","AXA Belgium","Baloise Insurance",
     "Belfius Direct Assurances (ex-Corona Direct)","Belfius Insurance",
@@ -1643,14 +1683,14 @@ document.addEventListener('DOMContentLoaded', function() {
       div.setAttribute('role','listitem');
       div.innerHTML = `
         <button class="remove-btn" onclick="removeLine(${l.id})" aria-label="Supprimer cette ligne">✕</button>
-        <select onchange="updateLine(${l.id},'contrat',this.value)" aria-label="Compagnie d'assurance">
+        <select onchange="updateLine(${l.id},'contrat',this.value)" aria-label="Versicherungsgesellschaft">
           ${COMPANIES.map(c=>`<option value="${c}" ${c===l.contrat?'selected':''}>${c}</option>`).join('')}
         </select>
-        <select onchange="updateLine(${l.id},'type',this.value)" aria-label="Type d'assurance">
+        <select onchange="updateLine(${l.id},'type',this.value)" aria-label="Versicherungsart">
           ${TYPES.map(t=>`<option value="${t}" ${t===l.type?'selected':''}>${t}</option>`).join('')}
         </select>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-          <input type="number" placeholder="Prime (€)" value="${l.prime}" min="0" step="0.01"
+          <input type="number" placeholder="Prämie (€)" value="${l.prime}" min="0" step="0.01"
             oninput="updateLine(${l.id},'prime',this.value)" aria-label="Prime en euros">
           <input type="number" placeholder="Coeff. (%)" value="${l.coeff}" min="0" max="100" step="0.01"
             oninput="updateLine(${l.id},'coeff',this.value)" aria-label="Coefficient en pourcentage">
@@ -1842,7 +1882,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     doc.autoTable({
       startY: y,
-      head: [["Compagnie d'assurance","Type d'assurance","Prime (€)","Coeff. (%)","Commission (€)"]],
+      head: [["Versicherungsgesellschaft","Versicherungsart","Prämie (€)","Coeff. (%)","Provision (€)"]],
       body: tableRows.length > 0 ? tableRows : [['—','—','—','—','—']],
       margin: { left: margin, right: margin },
       styles: { font:'helvetica', fontSize:9, cellPadding:3, textColor:[26,26,46] },
@@ -1876,7 +1916,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // TVA mention
     doc.setFont('helvetica','bold');   doc.setFontSize(7.5); doc.setTextColor(26,26,46);
-    doc.text('Exonération TVA :', margin, y+4);
+    doc.text('MwSt.-Befreiung :', margin, y+4);
     doc.setFont('helvetica','normal'); doc.setTextColor(120,110,95);
     doc.text(t.mentionTVA, margin+24, y+4, { maxWidth:96 });
 
@@ -1932,7 +1972,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!sel) return;
     const arr = carnetRead(prefix);
     const cur = sel.value;
-    sel.innerHTML = '<option value="">— Sélectionner —</option>' +
+    sel.innerHTML = '<option value="">— Auswählen —</option>' +
       arr.map((e, i) => `<option value="${i}"${cur==i?' selected':''}>${e.label}</option>`).join('');
   }
 
@@ -1953,7 +1993,7 @@ document.addEventListener('DOMContentLoaded', function() {
       carnetToast(prefix, '✓ Mis à jour : ' + nom, true);
     } else {
       arr.push(entry);
-      carnetToast(prefix, '✓ Sauvegardé : ' + nom, true);
+      carnetToast(prefix, '✓ Gespeichert : ' + nom, true);
     }
     carnetWrite(prefix, arr);
     carnetRefreshSelect(prefix);
@@ -2049,6 +2089,18 @@ document.addEventListener('click', function(e) {
     }
   }
 });
+</script>
+<script>
+(function(){
+  var bar=document.getElementById('scrollProgress');
+  var btn=document.getElementById('scrollTop');
+  window.addEventListener('scroll',function(){
+    var s=document.documentElement;
+    var pct=(s.scrollTop/(s.scrollHeight-s.clientHeight))*100;
+    if(bar) bar.style.width=Math.min(pct,100)+'%';
+    if(btn){if(s.scrollTop>300)btn.classList.add('visible');else btn.classList.remove('visible');}
+  },{passive:true});
+})();
 </script>
 </body>
 </html>

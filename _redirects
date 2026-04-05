@@ -1,3 +1,7 @@
+/fr/simulateur-frais-sejour-etranger  /fr/simulateur-frais-sejour-etranger/  301
+/nl/dagvergoeding-buitenland  /nl/dagvergoeding-buitenland/  301
+/de/auslandsreisekostenrechner  /de/auslandsreisekostenrechner/  301
+/en/foreign-travel-allowance  /en/foreign-travel-allowance/  301
 # Force serve critical root files (ads.txt, robots.txt, sitemap, IndexNow key)
 /ads.txt  /ads.txt  200!
 /robots.txt  /robots.txt  200!
@@ -80,3 +84,7 @@ https://www.lacavernedelacompta.be/*  https://lacavernedelacompta.be/:splat  301
 /nl/bordereau-commission/  /nl/commissie-verzekeringen/  301!
 /de/bordereau-commission/  /de/provisionsnachweis-versicherungen/  301!
 /en/bordereau-commission/  /en/insurance-commission/  301!
+
+# Anciennes URLs /site_vXXX/ → homepage (trafic résiduel)
+/site_v*/* /  301
+/site_v*   /  301
