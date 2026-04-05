@@ -6,25 +6,38 @@ const BASE_URL = 'https://lacavernedelacompta.be';
 
 // All pages to notify (matches sitemap.xml)
 const URLS = [
+  // FR
   '/fr/', '/fr/simulateur-immobilier/', '/fr/simulateur-credit/',
   '/fr/simulateur-requalification-loyer/', '/fr/simulateur-interets-composes/',
-  '/fr/simulateur-retenue/', '/fr/pcmn-complet-societe-et-asbl/',
-  '/fr/quick-memento-fiscal/', '/fr/remboursement-frais/', '/fr/mentions-legales/',
+  '/fr/simulateur-retenue/', '/fr/simulateur-plus-value-immobiliere/',
+  '/fr/pcmn-complet-societe-et-asbl/', '/fr/quick-memento-fiscal/',
+  '/fr/remboursement-frais/', '/fr/questionnaire-frais-propres/',
+  '/fr/commission-assurance/', '/fr/simulateur-frais-sejour-etranger/',
+  '/fr/mentions-legales/',
+  // NL
   '/nl/', '/nl/simulateur-immobilier/', '/nl/simulateur-credit/',
   '/nl/simulateur-requalification-loyer/', '/nl/simulateur-interets-composes/',
-  '/nl/simulateur-retenue/', '/nl/pcmn-complet-societe-et-asbl/',
-  '/nl/quick-memento-fiscal/', '/nl/remboursement-frais/', '/nl/mentions-legales/',
+  '/nl/simulateur-retenue/', '/nl/simulateur-plus-value-immobiliere/',
+  '/nl/pcmn-complet-societe-et-asbl/', '/nl/quick-memento-fiscal/',
+  '/nl/remboursement-frais/', '/nl/questionnaire-frais-propres/',
+  '/nl/commissie-verzekeringen/', '/nl/dagvergoeding-buitenland/',
+  '/nl/mentions-legales/',
+  // DE
   '/de/', '/de/simulateur-immobilier/', '/de/simulateur-credit/',
   '/de/simulateur-requalification-loyer/', '/de/simulateur-interets-composes/',
-  '/de/simulateur-retenue/', '/de/pcmn-complet-societe-et-asbl/',
-  '/de/quick-memento-fiscal/', '/de/remboursement-frais/', '/de/mentions-legales/',
+  '/de/simulateur-retenue/', '/de/simulateur-plus-value-immobiliere/',
+  '/de/pcmn-complet-societe-et-asbl/', '/de/quick-memento-fiscal/',
+  '/de/remboursement-frais/', '/de/questionnaire-frais-propres/',
+  '/de/provisionsnachweis-versicherungen/', '/de/auslandsreisekostenrechner/',
+  '/de/mentions-legales/',
+  // EN
   '/en/', '/en/simulateur-immobilier/', '/en/simulateur-credit/',
   '/en/simulateur-requalification-loyer/', '/en/simulateur-interets-composes/',
-  '/en/simulateur-retenue/', '/en/pcmn-complet-societe-et-asbl/',
-  '/en/quick-memento-fiscal/', '/en/remboursement-frais/', '/en/mentions-legales/',
-  '/fr/simulateur-frais-propres/',
-  '/fr/questionnaire-frais-propres/',
-  '/nl/questionnaire-frais-propres/',
+  '/en/simulateur-retenue/', '/en/simulateur-plus-value-immobiliere/',
+  '/en/pcmn-complet-societe-et-asbl/', '/en/quick-memento-fiscal/',
+  '/en/remboursement-frais/', '/en/questionnaire-frais-propres/',
+  '/en/insurance-commission/', '/en/foreign-travel-allowance/',
+  '/en/mentions-legales/',
 ].map(path => BASE_URL + path);
 
 function httpPost(hostname, path, body) {
