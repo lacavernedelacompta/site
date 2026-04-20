@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>La Caverne de la Compta — Simulateurs Fiscaux & PCMN Belgique 2026</title>
-  <meta name="description" content="Outils fiscaux et comptables gratuits pour la Belgique : PCMN, indemnité kilométrique, droits d'enregistrement, requalification loyer, intérêts composés. Mis à...">
+  <title>La Caverne de la Compta — Simulateurs Fiscaux & PCMN Belgique ...</title>
+  <meta name="description" content="Outils fiscaux et comptables gratuits pour la Belgique : PCMN, indemnité kilométrique, droits d'enregistrement, requalification loyer, intérêts composés....">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://lacavernedelacompta.be/fr/">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -151,18 +151,10 @@
 
   </style>
 <!-- CACHE-BUST-v8-index.html -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
+<script>
+// ── HAMBURGER MENU ──
   
-
-
-  // ── HAMBURGER MENU ──
-  function toggleMobileMenu(e) {
-    e.stopPropagation();
-    var nav = document.querySelector('.nav-links');
-    var btn = document.querySelector('.hamburger');
-    if (nav) nav.classList.toggle('mobile-open');
-    if (btn) btn.classList.toggle('open');
-  }
   document.addEventListener('click', function(e) {
     var nav = document.querySelector('.nav-links');
     var btn = document.querySelector('.hamburger');
@@ -183,8 +175,8 @@
     var ld = document.querySelector('.lang-dropdown');
     if (ld && !ld.contains(e.target)) ld.classList.remove('open');
   });
-
 </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"La Caverne de la Compta","item":"https://lacavernedelacompta.be/"}]}</script>
 </head>
 <body>
   <h1 style="font-size:1.1rem; font-weight:400;">
@@ -198,5 +190,37 @@
       <a href="/de/">Deutsch</a>
     </p>
   </noscript>
+<script>
+function toggleDD(e) {
+  e.stopPropagation();
+  var wrap = document.getElementById('ddWrap');
+  if (wrap) wrap.classList.toggle('dd-open');
+}
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  var ls = document.getElementById('langSwitcher');
+  if (ls) ls.classList.toggle('open');
+}
+function toggleMobileMenu(e) {
+  e.stopPropagation();
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  if (nav) nav.classList.toggle('mobile-open');
+  if (btn) btn.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var ddWrap = document.getElementById('ddWrap');
+  var ls = document.getElementById('langSwitcher');
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  var mainNav = document.querySelector('nav');
+  if (ddWrap && !ddWrap.contains(e.target)) ddWrap.classList.remove('dd-open');
+  if (ls && !ls.contains(e.target)) ls.classList.remove('open');
+  if (mainNav && !mainNav.contains(e.target)) {
+    if (nav) nav.classList.remove('mobile-open');
+    if (btn) btn.classList.remove('open');
+  }
+});
+</script>
 </body>
 </html>

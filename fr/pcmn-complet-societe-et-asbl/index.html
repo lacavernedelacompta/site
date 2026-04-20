@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plan Comptable PCMN Belgique 2026 — ITAA, CNC, Sociétés & ASBL</title>
-<meta name="description" content="Plan comptable minimum normalisé (PCMN) Belgique 2026 : 782 comptes sociétés + 373 ASBL. Approuvé ITAA & CNC. Recherche instantanée, descriptions détaillées,...">
+<title>PCMN Belgique 2026 — Plan Comptable Sociétés & ASBL</title>
+<meta name="description" content="Plan comptable PCMN Belgique 2026 complet et gratuit : 782 comptes sociétés + 373 ASBL, conforme ITAA et CNC. Recherche instantanée, téléchargement PDF....">
 <meta name="keywords" content="PCMN belgique, plan comptable belge, plan comptable Odoo, Odoo comptabilité belgique, plan comptable ASBL, plan comptable société belgique, comptes comptables belgique, PCN belgique, comptabilité Odoo belgique">
 <meta name="author" content="La Caverne de la Compta">
 <meta name="robots" content="index, follow">
@@ -14,10 +14,10 @@
   <link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/pcmn-complet-societe-et-asbl/">
   <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/">
 <link rel="canonical" href="https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/">
-<meta property="og:title" content="Plan Comptable PCMN Belgique 2026 — ITAA, CNC, Sociétés & ASBL">
+<meta property="og:title" content="PCMN Belgique 2026 — Plan Comptable Sociétés & ASBL | ITAA CNC Gratuit">
   <meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
 
-<meta property="og:description" content="Plan comptable minimum normalisé (PCMN) Belgique 2026 : 782 comptes sociétés + 373 ASBL. Approuvé ITAA & CNC. Recherche instantanée, descriptions détaillées, export PDF. Gratuit.">
+<meta property="og:description" content="Plan comptable PCMN Belgique 2026 complet et gratuit : 782 comptes sociétés + 373 ASBL, conforme ITAA et CNC. Recherche instantanée, téléchargement PDF....">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lacavernedelacompta.be/pcmn-complet-societe-et-asbl.html">
 <meta property="og:site_name" content="La Caverne de la Compta">
@@ -418,6 +418,12 @@ gtag('config', 'G-WNHZDLVPEL');
   ]
 }
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Accueil","item":"https://lacavernedelacompta.be/fr/"},
+  {"@type":"ListItem","position":2,"name":"Outils","item":"https://lacavernedelacompta.be/fr/"},
+  {"@type":"ListItem","position":3,"name":"Plan Comptable PCMN","item":"https://lacavernedelacompta.be/fr/pcmn-complet-societe-et-asbl/"}
+]}</script>
 </head>
 <body>
 
@@ -486,6 +492,8 @@ gtag('config', 'G-WNHZDLVPEL');
         <a href="/fr/simulateur-plus-value-immobiliere/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">🏡</span>Plus-Value Immobilière</a>
         <a href="/fr/commission-assurance/"><span class="dd-icon">📑</span>Bordereau Commission</a>
       <a href="/fr/simulateur-frais-sejour-etranger/" style="color:var(--teal-light);font-weight:600;"><span class="dd-icon">✈️</span>Frais Séjour Étranger</a>
+      
+      <a href="/fr/simulateur-tva-construction/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">🏗️</span>TVA Construction</a>
       </div>
     </li>
   </ul>
@@ -568,12 +576,15 @@ gtag('config', 'G-WNHZDLVPEL');
   <div style="margin:24px auto;text-align:center;max-width:100%;grid-column:1/-1;">
 
     
-    <ins class="adsbygoogle"
-     style="display:block"
+    <div style="text-align:center;padding:8px 0 4px;border-top:1px solid #DDE5EF;">
+<span style="font-size:.65rem;color:#94a3b8;display:block;margin-bottom:4px;letter-spacing:.05em;">PUBLICITE</span>
+<ins class="adsbygoogle"
+     style="display:inline-block;max-width:728px;width:100%;max-height:90px;"
      data-ad-client="ca-pub-8043980001637749"
      data-ad-slot="8050648588"
-     data-ad-format="auto"
+     data-ad-format="horizontal"
      data-full-width-responsive="true"></ins>
+</div>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
@@ -597,13 +608,6 @@ gtag('config', 'G-WNHZDLVPEL');
 </div>
 
 <div style="margin:32px auto;text-align:center;max-width:100%;">
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="9017409611"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
 <div class="faq-section">
@@ -653,14 +657,7 @@ let currentEntity = 'societe';
 let currentSearch = '';
 
 // ── Navigation dropdown ──────────────────────
-function toggleDD(e){
-  e.stopPropagation();
-  document.getElementById('ddWrap').classList.toggle('dd-open');
-}
-document.addEventListener('click',function(e){
-  var w=document.getElementById('ddWrap');
-  if(w && !w.contains(e.target)) w.classList.remove('dd-open');
-});
+
 
 // ── Entity switch ────────────────────────────
 function switchEntity(e){
@@ -877,13 +874,7 @@ renderToc(PCMN_SOC);
 
 
   // ── HAMBURGER MENU ──
-  function toggleMobileMenu(e) {
-    e.stopPropagation();
-    var nav = document.querySelector('.nav-links');
-    var btn = document.querySelector('.hamburger');
-    if (nav) nav.classList.toggle('mobile-open');
-    if (btn) btn.classList.toggle('open');
-  }
+  
   document.addEventListener('click', function(e) {
     var nav = document.querySelector('.nav-links');
     var btn = document.querySelector('.hamburger');
@@ -895,15 +886,7 @@ renderToc(PCMN_SOC);
   });
 
 
-function toggleLangMenu(e) {
-  e.stopPropagation();
-  var ld = document.getElementById('langSwitcher');
-  if (ld) ld.classList.toggle('open');
-}
-document.addEventListener('click', function(e) {
-  var ld = document.getElementById('langSwitcher');
-  if (ld && !ld.contains(e.target)) ld.classList.remove('open');
-});
+
 </script>
 
 
@@ -1020,6 +1003,38 @@ document.addEventListener('DOMContentLoaded', function() {
       this.closest('.faq-item').classList.toggle('faq-open');
     });
   });
+});
+</script>
+<script>
+function toggleDD(e) {
+  e.stopPropagation();
+  var wrap = document.getElementById('ddWrap');
+  if (wrap) wrap.classList.toggle('dd-open');
+}
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  var ls = document.getElementById('langSwitcher');
+  if (ls) ls.classList.toggle('open');
+}
+function toggleMobileMenu(e) {
+  e.stopPropagation();
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  if (nav) nav.classList.toggle('mobile-open');
+  if (btn) btn.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var ddWrap = document.getElementById('ddWrap');
+  var ls = document.getElementById('langSwitcher');
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  var mainNav = document.querySelector('nav');
+  if (ddWrap && !ddWrap.contains(e.target)) ddWrap.classList.remove('dd-open');
+  if (ls && !ls.contains(e.target)) ls.classList.remove('open');
+  if (mainNav && !mainNav.contains(e.target)) {
+    if (nav) nav.classList.remove('mobile-open');
+    if (btn) btn.classList.remove('open');
+  }
 });
 </script>
 </body>

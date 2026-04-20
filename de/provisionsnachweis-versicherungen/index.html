@@ -140,19 +140,7 @@ html,body{max-width:100vw;overflow-x:hidden;}
   position: relative;
   max-width: 100%;
 }
-.ad-lateral {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 160px;
-  z-index: 100;
-  display: none;
-}
-.ad-lateral-left  { left: 8px; }
-.ad-lateral-right { right: 8px; }
-@media (min-width: 1380px) {
-  .ad-lateral { display: block; }
-}
+
 
 .faq-section{max-width:860px;margin:40px auto 0;padding:0 24px 48px;}.faq-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:22px;}.faq-section h2::before{content:'';}.faq-item{border:1px solid var(--border);border-radius:10px;margin-bottom:8px;overflow:hidden;}.faq-question{padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:.9rem;font-weight:600;color:var(--navy);background:#fff;transition:background .15s;}.faq-question:hover{background:var(--off);}.faq-chev{color:var(--teal);font-size:.75rem;transition:transform .2s;display:inline-flex;}.faq-open .faq-chev{transform:rotate(180deg);}.faq-answer{display:none;padding:14px 20px 18px;font-size:.85rem;color:var(--text-mid);line-height:1.7;background:var(--off);border-top:1px solid var(--border);}.faq-open .faq-answer{display:block;}
 
@@ -167,6 +155,12 @@ html,body{max-width:100vw;overflow-x:hidden;}
 .faq-separator-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--border,#DDE5EF),transparent);}
 .faq-separator-badge{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border,#DDE5EF);border-radius:20px;padding:6px 16px;font-size:.75rem;font-weight:600;color:var(--text-mid,#4A6279);white-space:nowrap;letter-spacing:.04em;box-shadow:0 2px 8px rgba(13,27,42,.05);}
 .faq-separator-dot{width:6px;height:6px;border-radius:50%;background:var(--teal,#1A7A8A);}
+
+.ad-lateral{position:fixed;top:50%;transform:translateY(-50%);width:160px;z-index:100;display:none;}
+.ad-lateral-left{left:8px;}
+.ad-lateral-right{right:8px;}
+/* Only show on screens wide enough that content is NOT covered */
+@media(min-width:1500px){.ad-lateral{display:block;}}
 </style>
 <style>
   :root {
@@ -885,6 +879,12 @@ body { background: #F4F7FA !important; }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Unterliegen Versicherungsprovisionen der Mehrwertsteuer in Belgien ?","acceptedAnswer":{"@type":"Answer","text":"Nein. Provisionen von Versicherungsvermittlern sind gemäß Artikel 44 §3 4° des belgischen Mehrwertsteuergesetzbuches von der MwSt. befreit. Diese Befreiung gilt für FSMA-zugelassene Makler, Agenten und Unteragenten."}},{"@type":"Question","name":"Was ist ein Versicherungsprovisionsnachweis ?","acceptedAnswer":{"@type":"Answer","text":"Ein Provisionsnachweis ist ein zusammenfassendes Dokument zwischen einem Vermittler (Makler) und der Versicherungsgesellschaft, in dem die für einen bestimmten Zeitraum fälligen Provisionen auf eingezogene Prämien aufgeführt sind."}},{"@type":"Question","name":"Wer muss einen Provisionsnachweis erstellen ?","acceptedAnswer":{"@type":"Answer","text":"Jeder FSMA-zugelassene Versicherungsvermittler, der Provisionen erhält, muss seine Einkünfte belegen können. Der Provisionsnachweis ist ein wesentlicher Buchungsbeleg für die Steuererklärung."}},{"@type":"Question","name":"Wie berechnet man die Provision auf eine Versicherungsprämie ?","acceptedAnswer":{"@type":"Answer","text":"Provision = Nettoprämie (ohne MwSt.) × vertraglicher Provisionssatz. Der Satz variiert je nach Sparte (Leben, Nicht-Leben), Produkttyp und Vereinbarungen mit dem Versicherer."}},{"@type":"Question","name":"Muss die BCE-Nummer auf dem Nachweis stehen ?","acceptedAnswer":{"@type":"Answer","text":"Ja. Der Nachweis muss die BCE-Nummer (Unternehmensregister) des Ausstellers und des Empfängers enthalten. Unser Tool enthält eine automatische Suche über die BCE-API."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Provisionsnachweis Versicherungen Belgien","url":"https://lacavernedelacompta.be/de/provisionsnachweis-versicherungen/","description":"Erstellen Sie Ihren Provisionsnachweis PDF für belgische Versicherungsmakler.","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"La Caverne de la Compta","url":"https://lacavernedelacompta.be"}}</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Startseite","item":"https://lacavernedelacompta.be/de/"},
+  {"@type":"ListItem","position":2,"name":"Tools","item":"https://lacavernedelacompta.be/de/"},
+  {"@type":"ListItem","position":3,"name":"Provisionsnachweis","item":"https://lacavernedelacompta.be/de/provisionsnachweis-versicherungen/"}
+]}</script>
 </head>
 <body>
 <div id="scrollProgress"></div>
@@ -941,15 +941,17 @@ body { background: #F4F7FA !important; }
       <div class="dd-menu" id="ddMenu">
         <a href="/de/simulateur-immobilier/"><span class="dd-icon">🏠</span>Immobilien-Simulator</a>
         <a href="/de/simulateur-credit/"><span class="dd-icon">💳</span>Kredit-Simulator</a>
-        <a href="/de/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Mietumqualifizierung</a>
+        <a href="/de/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Miet-Umqualifizierung</a>
         <a href="/de/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Kontenplan PCMN</a>
         <a href="/de/simulateur-interets-composes/"><span class="dd-icon">📈</span>Zinseszins</a>
-        <a href="/de/simulateur-retenue/"><span class="dd-icon">🧾</span>Steuerabzug Rechnung</a>
-        <a href="/de/quick-memento-fiscal/"><span class="dd-icon">📌</span>Steuer-Schnellmemo</a>
-        <a href="/de/remboursement-frais/"><span class="dd-icon">🚗</span>Kilometerentschädigung</a>
+        <a href="/de/simulateur-retenue/"><span class="dd-icon">🧾</span>Einbehalt auf Rechnung</a>
+        <a href="/de/quick-memento-fiscal/"><span class="dd-icon">📌</span>Steuer-Memo</a>
+        <a href="/de/remboursement-frais/"><span class="dd-icon">🚗</span>Kilometererstattung</a>
         <a href="/de/questionnaire-frais-propres/"><span class="dd-icon">💼</span>Eigene Kosten</a>
-        <a href="/de/simulateur-plus-value-immobiliere/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">🏡</span>Kapitalgewinn Immobilien</a>
+        <a href="/de/simulateur-plus-value-immobiliere/"><span class="dd-icon">🏡</span>Immobiliengewinn</a>
         <a href="/de/provisionsnachweis-versicherungen/"><span class="dd-icon">📑</span>Provisionsnachweis</a>
+        <a href="/de/auslandsreisekostenrechner/"><span class="dd-icon">✈️</span>Auslandsreisekosten</a>
+        <a href="/de/simulateur-tva-construction/"><span class="dd-icon">🏗️</span>MwSt Bau</a>
       </div>
     </li>
   </ul>
@@ -968,13 +970,6 @@ body { background: #F4F7FA !important; }
   
   <button class="hamburger" onclick="toggleMobileMenu(event)" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
-<div class="ad-lateral ad-lateral-right">
-  <ins class="adsbygoogle"
-       style="display:inline-block;width:160px;height:600px"
-       data-ad-client="ca-pub-8043980001637749"
-       data-ad-slot="8050648588"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 
 <div class="hero">
   <div class="hero-inner">
@@ -1238,8 +1233,6 @@ body { background: #F4F7FA !important; }
 <div class="faq-item"><div class="faq-question">Muss die BCE-Nummer auf dem Nachweis stehen ?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>Ja. Der Nachweis muss die BCE-Nummer (Unternehmensregister) des Ausstellers und des Empfängers enthalten. Unser Tool enthält eine automatische Suche über die BCE-API.</p></div></div>
 </div>
 <div style="max-width:860px;margin:0 auto 24px;padding:0 20px;">
-  <ins class="adsbygoogle" style="display:block;text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8043980001637749" data-ad-slot="9017409611"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
 <footer>
@@ -1284,17 +1277,7 @@ body { background: #F4F7FA !important; }
 </div>
 
 <!-- END COOKIE BANNER -->
-<script>
-function toggleLangMenu(e) {
-  e.stopPropagation();
-  var ld = document.getElementById('langSwitcher');
-  if (ld) ld.classList.toggle('open');
-}
-document.addEventListener('click', function(e) {
-  var ld = document.getElementById('langSwitcher');
-  if (ld && !ld.contains(e.target)) ld.classList.remove('open');
-});
-</script>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.faq-question').forEach(function(btn) {
@@ -1908,26 +1891,11 @@ document.addEventListener('DOMContentLoaded', function() {
 }); // end DOMContentLoaded
 </script>
 <script>
-function toggleDD(e){
-  e.stopPropagation();
-  document.getElementById('ddWrap').classList.toggle('dd-open');
-}
 document.addEventListener('click',()=>{
   var w=document.getElementById('ddWrap');
   if(w) w.classList.remove('dd-open');
 });
-function toggleMobileMenu(e) {
-  e.stopPropagation();
-  var nav = document.querySelector('.nav-links');
-  var btn = document.querySelector('.hamburger');
-  if (nav) nav.classList.toggle('mobile-open');
-  if (btn) btn.classList.toggle('open');
-}
-function toggleLangMenu(e) {
-  e.stopPropagation();
-  var ld = document.getElementById('langSwitcher');
-  if (ld) ld.classList.toggle('open');
-}
+
 document.addEventListener('click', function(e) {
   var ld = document.getElementById('langSwitcher');
   if (ld && !ld.contains(e.target)) ld.classList.remove('open');
@@ -1953,5 +1921,55 @@ document.addEventListener('click', function(e) {
   },{passive:true});
 })();
 </script>
+<script>
+function toggleDD(e) {
+  e.stopPropagation();
+  var wrap = document.getElementById('ddWrap');
+  if (wrap) wrap.classList.toggle('dd-open');
+}
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  var ls = document.getElementById('langSwitcher');
+  if (ls) ls.classList.toggle('open');
+}
+function toggleMobileMenu(e) {
+  e.stopPropagation();
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  if (nav) nav.classList.toggle('mobile-open');
+  if (btn) btn.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var ddWrap = document.getElementById('ddWrap');
+  var ls = document.getElementById('langSwitcher');
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  var mainNav = document.querySelector('nav');
+  if (ddWrap && !ddWrap.contains(e.target)) ddWrap.classList.remove('dd-open');
+  if (ls && !ls.contains(e.target)) ls.classList.remove('open');
+  if (mainNav && !mainNav.contains(e.target)) {
+    if (nav) nav.classList.remove('mobile-open');
+    if (btn) btn.classList.remove('open');
+  }
+});
+</script>
+
+<div class="ad-lateral ad-lateral-left">
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:160px;height:600px"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="8050648588"
+       data-ad-format="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="ad-lateral ad-lateral-right">
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:160px;height:600px"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="8050648588"
+       data-ad-format="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 </body>
 </html>

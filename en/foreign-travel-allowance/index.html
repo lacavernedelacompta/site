@@ -255,6 +255,12 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
 {"@type":"Question","name":"Are these allowances subject to social security and tax?","acceptedAnswer":{"@type":"Answer","text":"No, within the set limits they constitute a non-taxable reimbursement of employer expenses."}}]}
 </script>
 <link rel="alternate" hreflang="fr-BE" href="https://lacavernedelacompta.be/fr/simulateur-frais-sejour-etranger/"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://lacavernedelacompta.be/en/"},
+  {"@type":"ListItem","position":2,"name":"Tools","item":"https://lacavernedelacompta.be/en/"},
+  {"@type":"ListItem","position":3,"name":"Foreign Travel Allowance","item":"https://lacavernedelacompta.be/en/foreign-travel-allowance/"}
+]}</script>
 </head>
 <body>
 
@@ -300,18 +306,19 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
     <li class="dd-wrap" id="ddWrap">
       <button class="dd-btn" onclick="toggleDD(event)">🧰 Our tools <span class="dd-chevron">▼</span></button>
       <div class="dd-menu" id="ddMenu">
-        <a href="/en/simulateur-immobilier/"><span class="dd-icon">🏠</span>Simulateur Immobilier</a>
-        <a href="/en/simulateur-credit/"><span class="dd-icon">💳</span>Simulateur de Crédit</a>
-        <a href="/en/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Requalification Loyer</a>
-        <a href="/en/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Plan Comptable PCMN</a>
-        <a href="/en/simulateur-interets-composes/"><span class="dd-icon">📈</span>Intérêts Composés</a>
-        <a href="/en/simulateur-retenue/"><span class="dd-icon">🧾</span>Retenue sur Facture</a>
-        <a href="/en/quick-memento-fiscal/"><span class="dd-icon">📌</span>Quick-Mémo Fiscal</a>
-        <a href="/en/remboursement-frais/"><span class="dd-icon">🚗</span>Indemnité Kilométrique</a>
-        <a href="/en/questionnaire-frais-propres/"><span class="dd-icon">💼</span>Frais Propres</a>
-        <a href="/en/simulateur-plus-value-immobiliere/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">🏡</span>Plus-Value Immobilière</a>
-        <a href="/en/commission-assurance/"><span class="dd-icon">📑</span>Bordereau Commission</a>
-        <a href="/en/foreign-travel-allowance/" style="color:var(--teal-light);font-weight:600;"><span class="dd-icon">✈️</span>Frais Séjour Étranger</a>
+        <a href="/en/simulateur-immobilier/"><span class="dd-icon">🏠</span>Property Simulator</a>
+        <a href="/en/simulateur-credit/"><span class="dd-icon">💳</span>Credit Simulator</a>
+        <a href="/en/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Rent Reclassification</a>
+        <a href="/en/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Chart of Accounts</a>
+        <a href="/en/simulateur-interets-composes/"><span class="dd-icon">📈</span>Compound Interest</a>
+        <a href="/en/simulateur-retenue/"><span class="dd-icon">🧾</span>Invoice Retention</a>
+        <a href="/en/quick-memento-fiscal/"><span class="dd-icon">📌</span>Tax Quick-Memo</a>
+        <a href="/en/remboursement-frais/"><span class="dd-icon">🚗</span>Mileage Reimbursement</a>
+        <a href="/en/questionnaire-frais-propres/"><span class="dd-icon">💼</span>Own Costs</a>
+        <a href="/en/simulateur-plus-value-immobiliere/"><span class="dd-icon">🏡</span>Capital Gains</a>
+        <a href="/en/insurance-commission/"><span class="dd-icon">📑</span>Insurance Commission</a>
+        <a href="/en/foreign-travel-allowance/"><span class="dd-icon">✈️</span>Foreign Travel Allowance</a>
+        <a href="/en/simulateur-tva-construction/"><span class="dd-icon">🏗️</span>VAT Construction</a>
       </div>
     </li>
   </ul>
@@ -323,7 +330,9 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
 <a href="https://lacavernedelacompta.be/nl/dagvergoeding-buitenland/" class="">🇧🇪 Nederlands</a>
 <a href="https://lacavernedelacompta.be/en/foreign-travel-allowance/" class="">🇬🇧 English</a>
 <a href="https://lacavernedelacompta.be/de/auslandsreisekostenrechner/" class="">🇩🇪 Deutsch</a>
-    </div>
+    
+      <a href="/en/simulateur-tva-construction/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">🏗️</span>VAT Construction</a>
+      </div>
   </div>
   <!-- ══════════════════════ -->
 
@@ -501,8 +510,6 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
 </div>
 
 <div style="max-width:860px;margin:0 auto 24px;padding:0 20px;">
-  <ins class="adsbygoogle" style="display:block;text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8043980001637749" data-ad-slot="9017409611"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
 <footer>
@@ -516,11 +523,9 @@ footer{background:var(--navy);color:rgba(255,255,255,.45);padding:18px 40px;disp
 </footer>
 
 <script>
-function toggleDD(e){e.stopPropagation();var w=document.getElementById('ddWrap');if(w)w.classList.toggle('dd-open');}
-document.addEventListener('click',function(e){var w=document.getElementById('ddWrap');if(w&&!w.contains(e.target))w.classList.remove('dd-open');});
-function toggleLangMenu(e){e.stopPropagation();var ld=document.getElementById('langSwitcher');if(ld)ld.classList.toggle('open');}
-document.addEventListener('click',function(e){var ld=document.getElementById('langSwitcher');if(ld&&!ld.contains(e.target))ld.classList.remove('open');});
-function toggleMobileMenu(e){e.stopPropagation();var nav=document.querySelector('.nav-links');var btn=document.querySelector('.hamburger');if(nav)nav.classList.toggle('mobile-open');if(btn)btn.classList.toggle('open');}
+
+
+
 document.addEventListener('click',function(e){var nav=document.querySelector('.nav-links');var btn=document.querySelector('.hamburger');var wrap=document.querySelector('.main-nav');if(wrap&&!wrap.contains(e.target)){if(nav)nav.classList.remove('mobile-open');if(btn)btn.classList.remove('open');}});
 </script>
 
@@ -624,7 +629,7 @@ function renderCal(){
 
   const hint=document.getElementById('calHint');
   if(!selStart) hint.textContent='Click the first day, then the last day to select a period.';
-  else if(selStart&&!selEnd) hint.textContent='📍 '+formatDate(parseKey(selStart))+' — Cliquez sur la date de retour';
+  else if(selStart&&!selEnd) hint.textContent='📍 '+formatDate(parseKey(selStart))+' — Click on la date de retour';
   else hint.textContent='📍 '+formatDate(parseKey(selStart))+' → '+formatDate(parseKey(selEnd))+' ('+Object.keys(dayData).length+' '+DAYS_LABEL+')';
 }
 
@@ -874,6 +879,38 @@ document.addEventListener('DOMContentLoaded',function(){
   document.querySelectorAll('.faq-question').forEach(function(btn){
     btn.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('faq-open');});
   });
+});
+</script>
+<script>
+function toggleDD(e) {
+  e.stopPropagation();
+  var wrap = document.getElementById('ddWrap');
+  if (wrap) wrap.classList.toggle('dd-open');
+}
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  var ls = document.getElementById('langSwitcher');
+  if (ls) ls.classList.toggle('open');
+}
+function toggleMobileMenu(e) {
+  e.stopPropagation();
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  if (nav) nav.classList.toggle('mobile-open');
+  if (btn) btn.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var ddWrap = document.getElementById('ddWrap');
+  var ls = document.getElementById('langSwitcher');
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  var mainNav = document.querySelector('nav');
+  if (ddWrap && !ddWrap.contains(e.target)) ddWrap.classList.remove('dd-open');
+  if (ls && !ls.contains(e.target)) ls.classList.remove('open');
+  if (mainNav && !mainNav.contains(e.target)) {
+    if (nav) nav.classList.remove('mobile-open');
+    if (btn) btn.classList.remove('open');
+  }
 });
 </script>
 </body>

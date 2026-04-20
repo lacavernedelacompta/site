@@ -8,18 +8,10 @@
 <title>Redirection...</title>
 <script>window.location.replace("https://lacavernedelacompta.be/nl/");</script>
 <!-- CACHE-BUST-v8-nl/la-caverne-de-la-compta/index.html -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
+<script>
+// ── HAMBURGER MENU ──
   
-
-
-  // ── HAMBURGER MENU ──
-  function toggleMobileMenu(e) {
-    e.stopPropagation();
-    var nav = document.querySelector('.nav-links');
-    var btn = document.querySelector('.hamburger');
-    if (nav) nav.classList.toggle('mobile-open');
-    if (btn) btn.classList.toggle('open');
-  }
   document.addEventListener('click', function(e) {
     var nav = document.querySelector('.nav-links');
     var btn = document.querySelector('.hamburger');
@@ -40,8 +32,39 @@
     var ld = document.querySelector('.lang-dropdown');
     if (ld && !ld.contains(e.target)) ld.classList.remove('open');
   });
-
 </script>
 </head>
-<body></body>
+<body><script>
+function toggleDD(e) {
+  e.stopPropagation();
+  var wrap = document.getElementById('ddWrap');
+  if (wrap) wrap.classList.toggle('dd-open');
+}
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  var ls = document.getElementById('langSwitcher');
+  if (ls) ls.classList.toggle('open');
+}
+function toggleMobileMenu(e) {
+  e.stopPropagation();
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  if (nav) nav.classList.toggle('mobile-open');
+  if (btn) btn.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var ddWrap = document.getElementById('ddWrap');
+  var ls = document.getElementById('langSwitcher');
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  var mainNav = document.querySelector('nav');
+  if (ddWrap && !ddWrap.contains(e.target)) ddWrap.classList.remove('dd-open');
+  if (ls && !ls.contains(e.target)) ls.classList.remove('open');
+  if (mainNav && !mainNav.contains(e.target)) {
+    if (nav) nav.classList.remove('mobile-open');
+    if (btn) btn.classList.remove('open');
+  }
+});
+</script>
+</body>
 </html>

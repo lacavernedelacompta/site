@@ -1054,6 +1054,12 @@ input[type=checkbox]:checked + .toggle { background: #1A7A8A !important; }
 <meta name="twitter:image" content="https://lacavernedelacompta.be/logo.svg">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When is capital gains tax due on real estate in Belgium ?","acceptedAnswer":{"@type":"Answer","text":"Capital gains on land are taxable if sold within 8 years of acquisition (33%) or between 8 and 15 years (16.5%). For built properties, the rate is 16.5% if sold within 5 years of acquisition. The main residence is exempt under certain conditions."}},{"@type":"Question","name":"What is the capital gains tax rate on property in Belgium in 2026 ?","acceptedAnswer":{"@type":"Answer","text":"Land sold within 5 years: 33%. Between 5 and 8 years: 16.5%. Built property sold within 5 years: 16.5%. These rates apply to the net gain after deducting acquisition costs and proven renovation works."}},{"@type":"Question","name":"Is the main residence exempt from capital gains tax ?","acceptedAnswer":{"@type":"Answer","text":"Yes. Capital gains on the sale of the main residence are fully exempt in Belgium, provided the property was your main residence continuously throughout the entire holding period."}},{"@type":"Question","name":"How is the taxable capital gain calculated on a building ?","acceptedAnswer":{"@type":"Answer","text":"Capital gain = sale price - (purchase price + acquisition costs + works × 1.25). Acquisition costs are fixed at 25% or proven at actual cost. Our simulator applies these deductions automatically."}},{"@type":"Question","name":"Is capital gains tax due on inherited or gifted property ?","acceptedAnswer":{"@type":"Answer","text":"Yes, under certain conditions. For gifted property, the donation date serves as the reference point. For inherited property, capital gains are generally exempt unless the property is quickly resold for speculative purposes."}},{"@type":"Question","name":"Is capital gains tax due on an inherited property in Belgium?","acceptedAnswer":{"@type":"Answer","text":"No. Capital gains realised through inheritance are not subject to capital gains tax (art. 90 CIR92). Heirs take over the property at its succession value. For quick resale after inheritance: if more than 5 years have passed since the deceased's original acquisition, the gain is generally exempt."}},{"@type":"Question","name":"Is a Belgian company taxed on property capital gains?","acceptedAnswer":{"@type":"Answer","text":"Yes. Unlike individuals, companies pay corporate tax (25% in 2026) on all property capital gains without any exemption period. A spread taxation regime (art. 47 CIR92) allows deferring the tax if proceeds are reinvested in a depreciable asset within 3 years."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Capital Gains Tax Simulator Belgium 2026","url":"https://lacavernedelacompta.be/en/simulateur-plus-value-immobiliere/","description":"Calculate capital gains tax on Belgian real estate. Art. 90 CIR92.","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"La Caverne de la Compta","url":"https://lacavernedelacompta.be"}}</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://lacavernedelacompta.be/en/"},
+  {"@type":"ListItem","position":2,"name":"Tools","item":"https://lacavernedelacompta.be/en/"},
+  {"@type":"ListItem","position":3,"name":"Capital Gains","item":"https://lacavernedelacompta.be/en/simulateur-plus-value-immobiliere/"}
+]}</script>
 </head>
 <body>
 <div class="topbar">
@@ -1108,15 +1114,17 @@ input[type=checkbox]:checked + .toggle { background: #1A7A8A !important; }
       <div class="dd-menu" id="ddMenu">
         <a href="/en/simulateur-immobilier/"><span class="dd-icon">🏠</span>Property Simulator</a>
         <a href="/en/simulateur-credit/"><span class="dd-icon">💳</span>Credit Simulator</a>
-        <a href="/en/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Rent Requalification</a>
+        <a href="/en/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Rent Reclassification</a>
         <a href="/en/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Chart of Accounts</a>
         <a href="/en/simulateur-interets-composes/"><span class="dd-icon">📈</span>Compound Interest</a>
-        <a href="/en/simulateur-retenue/"><span class="dd-icon">🧾</span>Invoice Withholding</a>
-        <a href="/en/quick-memento-fiscal/"><span class="dd-icon">📌</span>Tax Quick Reference</a>
-        <a href="/en/remboursement-frais/"><span class="dd-icon">🚗</span>Mileage Allowance</a>
-        <a href="/en/questionnaire-frais-propres/"><span class="dd-icon">💼</span>Own Expenses</a>
-        <a href="/en/simulateur-plus-value-immobiliere/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">🏡</span>Real Estate Capital Gains</a>
-        <a href="/en/insurance-commission/"><span class="dd-icon">📑</span>Commission Statement</a>
+        <a href="/en/simulateur-retenue/"><span class="dd-icon">🧾</span>Invoice Retention</a>
+        <a href="/en/quick-memento-fiscal/"><span class="dd-icon">📌</span>Tax Quick-Memo</a>
+        <a href="/en/remboursement-frais/"><span class="dd-icon">🚗</span>Mileage Reimbursement</a>
+        <a href="/en/questionnaire-frais-propres/"><span class="dd-icon">💼</span>Own Costs</a>
+        <a href="/en/simulateur-plus-value-immobiliere/"><span class="dd-icon">🏡</span>Capital Gains</a>
+        <a href="/en/insurance-commission/"><span class="dd-icon">📑</span>Insurance Commission</a>
+        <a href="/en/foreign-travel-allowance/"><span class="dd-icon">✈️</span>Foreign Travel Allowance</a>
+        <a href="/en/simulateur-tva-construction/"><span class="dd-icon">🏗️</span>VAT Construction</a>
       </div>
     </li>
   </ul>
@@ -1864,13 +1872,6 @@ input[type=checkbox]:checked + .toggle { background: #1A7A8A !important; }
   </div><!-- /results-section -->
 
 <div style="margin:32px auto;text-align:center;max-width:100%;">
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="9017409611"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 </div><!-- /container -->
 
@@ -2797,10 +2798,6 @@ function initDateLimits() {
 onTypeBienChange();
 initDateLimits();
 
-function toggleDD(e){
-  e.stopPropagation();
-  document.getElementById('ddWrap').classList.toggle('dd-open');
-}
 document.addEventListener('click',()=>{
   var w=document.getElementById('ddWrap');
   if(w) w.classList.remove('dd-open');
@@ -2859,17 +2856,7 @@ document.addEventListener('click',()=>{
 </div>
 
 <!-- END COOKIE BANNER -->
-<script>
-function toggleLangMenu(e) {
-  e.stopPropagation();
-  var ld = document.getElementById('langSwitcher');
-  if (ld) ld.classList.toggle('open');
-}
-document.addEventListener('click', function(e) {
-  var ld = document.getElementById('langSwitcher');
-  if (ld && !ld.contains(e.target)) ld.classList.remove('open');
-});
-</script>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.faq-question').forEach(function(btn) {
@@ -2881,13 +2868,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <script>
-function toggleMobileMenu(e) {
-  e.stopPropagation();
-  var nav = document.querySelector('.nav-links');
-  var btn = document.querySelector('.hamburger');
-  if (nav) nav.classList.toggle('mobile-open');
-  if (btn) btn.classList.toggle('open');
-}
+
 document.addEventListener('click', function(e) {
   var nav = document.querySelector('.nav-links');
   var btn = document.querySelector('.hamburger');
@@ -2896,6 +2877,38 @@ document.addEventListener('click', function(e) {
       nav.classList.remove('mobile-open');
       if (btn) btn.classList.remove('open');
     }
+  }
+});
+</script>
+<script>
+function toggleDD(e) {
+  e.stopPropagation();
+  var wrap = document.getElementById('ddWrap');
+  if (wrap) wrap.classList.toggle('dd-open');
+}
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  var ls = document.getElementById('langSwitcher');
+  if (ls) ls.classList.toggle('open');
+}
+function toggleMobileMenu(e) {
+  e.stopPropagation();
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  if (nav) nav.classList.toggle('mobile-open');
+  if (btn) btn.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var ddWrap = document.getElementById('ddWrap');
+  var ls = document.getElementById('langSwitcher');
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  var mainNav = document.querySelector('nav');
+  if (ddWrap && !ddWrap.contains(e.target)) ddWrap.classList.remove('dd-open');
+  if (ls && !ls.contains(e.target)) ls.classList.remove('open');
+  if (mainNav && !mainNav.contains(e.target)) {
+    if (nav) nav.classList.remove('mobile-open');
+    if (btn) btn.classList.remove('open');
   }
 });
 </script>

@@ -517,4 +517,29 @@
   <url><loc>https://lacavernedelacompta.be/nl/dagvergoeding-buitenland/</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://lacavernedelacompta.be/de/auslandsreisekostenrechner/</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://lacavernedelacompta.be/en/foreign-travel-allowance/</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url>
+    <loc>https://lacavernedelacompta.be/fr/simulateur-tva-construction/</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lacavernedelacompta.be/nl/simulateur-tva-construction/</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lacavernedelacompta.be/de/simulateur-tva-construction/</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lacavernedelacompta.be/en/simulateur-tva-construction/</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

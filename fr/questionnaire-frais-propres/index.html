@@ -488,6 +488,12 @@ gtag('consent','default',{
 <meta name="twitter:title" content="Frais Propres Belgique 2026 — Forfaits ONSS & Note de Frais PDF">
 <meta name="twitter:description" content="Calculez vos frais propres ONSS 2026 : bureau domicile 160,99€, internet 20€, PC 20€, GSM, voiture, parking. Distinctions ATN vs remboursable. Note de frais PDF....">
 <meta name="twitter:image" content="https://lacavernedelacompta.be/logo.svg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Accueil","item":"https://lacavernedelacompta.be/fr/"},
+  {"@type":"ListItem","position":2,"name":"Outils","item":"https://lacavernedelacompta.be/fr/"},
+  {"@type":"ListItem","position":3,"name":"Frais Propres","item":"https://lacavernedelacompta.be/fr/questionnaire-frais-propres/"}
+]}</script>
 </head>
 <body>
 
@@ -540,6 +546,8 @@ gtag('consent','default',{
         <a href="/fr/simulateur-plus-value-immobiliere/"><span class="dd-icon">🏡</span>Plus-Value Immobilière</a>
         <a href="/fr/commission-assurance/"><span class="dd-icon">📑</span>Bordereau Commission</a>
       <a href="/fr/simulateur-frais-sejour-etranger/" style="color:var(--teal-light);font-weight:600;"><span class="dd-icon">✈️</span>Frais Séjour Étranger</a>
+      
+      <a href="/fr/simulateur-tva-construction/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">🏗️</span>TVA Construction</a>
       </div>
     </li>
   </ul>
@@ -2641,13 +2649,7 @@ function resetAll() {
 }
 
 // ─── NAV ───────────────────────────────────────────────────────────
-function toggleDD(e) { e.stopPropagation(); document.getElementById('ddWrap').classList.toggle('dd-open'); }
-function toggleLangMenu(e) { e.stopPropagation(); document.getElementById('langSwitcher').classList.toggle('open'); }
-function toggleMobileMenu(e) { e.stopPropagation(); document.querySelector('.nav-links').classList.toggle('mobile-open'); }
-document.addEventListener('click', function(e) {
-  var w=document.getElementById('ddWrap'); if(w&&!w.contains(e.target)) w.classList.remove('dd-open');
-  var l=document.getElementById('langSwitcher'); if(l&&!l.contains(e.target)) l.classList.remove('open');
-});
+
 </script>
 
 
@@ -2658,6 +2660,38 @@ document.addEventListener('DOMContentLoaded', function() {
       this.closest('.faq-item').classList.toggle('faq-open');
     });
   });
+});
+</script>
+<script>
+function toggleDD(e) {
+  e.stopPropagation();
+  var wrap = document.getElementById('ddWrap');
+  if (wrap) wrap.classList.toggle('dd-open');
+}
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  var ls = document.getElementById('langSwitcher');
+  if (ls) ls.classList.toggle('open');
+}
+function toggleMobileMenu(e) {
+  e.stopPropagation();
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  if (nav) nav.classList.toggle('mobile-open');
+  if (btn) btn.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var ddWrap = document.getElementById('ddWrap');
+  var ls = document.getElementById('langSwitcher');
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  var mainNav = document.querySelector('nav');
+  if (ddWrap && !ddWrap.contains(e.target)) ddWrap.classList.remove('dd-open');
+  if (ls && !ls.contains(e.target)) ls.classList.remove('open');
+  if (mainNav && !mainNav.contains(e.target)) {
+    if (nav) nav.classList.remove('mobile-open');
+    if (btn) btn.classList.remove('open');
+  }
 });
 </script>
 </body>

@@ -761,6 +761,12 @@ gtag('config', 'G-WNHZDLVPEL');
   ]
 }
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Startseite","item":"https://lacavernedelacompta.be/de/"},
+  {"@type":"ListItem","position":2,"name":"Tools","item":"https://lacavernedelacompta.be/de/"},
+  {"@type":"ListItem","position":3,"name":"Immobilien-Simulator","item":"https://lacavernedelacompta.be/de/simulateur-immobilier/"}
+]}</script>
 </head>
 <body>
 
@@ -817,17 +823,19 @@ gtag('config', 'G-WNHZDLVPEL');
     <li class="dd-wrap" id="ddWrap">
       <button class="dd-btn" onclick="toggleDD(event)">🧰 Unsere Tools <span class="dd-chevron">▼</span></button>
       <div class="dd-menu" id="ddMenu">
-        <a href="/de/simulateur-immobilier/"><span class="dd-icon">🏠</span>Immobiliensimulator</a>
+        <a href="/de/simulateur-immobilier/"><span class="dd-icon">🏠</span>Immobilien-Simulator</a>
         <a href="/de/simulateur-credit/"><span class="dd-icon">💳</span>Kredit-Simulator</a>
-        <a href="/de/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Mietumqualifizierung</a>
+        <a href="/de/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Miet-Umqualifizierung</a>
         <a href="/de/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Kontenplan PCMN</a>
         <a href="/de/simulateur-interets-composes/"><span class="dd-icon">📈</span>Zinseszins</a>
-        <a href="/de/simulateur-retenue/"><span class="dd-icon">🧾</span>Rechnungseinbehalt</a>
-        <a href="/de/quick-memento-fiscal/"><span class="dd-icon">📌</span>Steuer-Quick-Memo</a>
-        <a href="/de/remboursement-frais/"><span class="dd-icon">🚗</span>Kilometerentschädigung</a>
+        <a href="/de/simulateur-retenue/"><span class="dd-icon">🧾</span>Einbehalt auf Rechnung</a>
+        <a href="/de/quick-memento-fiscal/"><span class="dd-icon">📌</span>Steuer-Memo</a>
+        <a href="/de/remboursement-frais/"><span class="dd-icon">🚗</span>Kilometererstattung</a>
         <a href="/de/questionnaire-frais-propres/"><span class="dd-icon">💼</span>Eigene Kosten</a>
-        <a href="/de/simulateur-plus-value-immobiliere/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">🏡</span>Kapitalgewinn Immobilien</a>
+        <a href="/de/simulateur-plus-value-immobiliere/"><span class="dd-icon">🏡</span>Immobiliengewinn</a>
         <a href="/de/provisionsnachweis-versicherungen/"><span class="dd-icon">📑</span>Provisionsnachweis</a>
+        <a href="/de/auslandsreisekostenrechner/"><span class="dd-icon">✈️</span>Auslandsreisekosten</a>
+        <a href="/de/simulateur-tva-construction/"><span class="dd-icon">🏗️</span>MwSt Bau</a>
       </div>
     </li>
   </ul>
@@ -2382,12 +2390,15 @@ calc();
 </div>
 
 <div style="max-width:860px;margin:24px auto;padding:0 30px;">
+<div style="text-align:center;padding:8px 0 4px;border-top:1px solid #DDE5EF;">
+<span style="font-size:.65rem;color:#94a3b8;display:block;margin-bottom:4px;letter-spacing:.05em;">PUBLICITE</span>
 <ins class="adsbygoogle"
-     style="display:block"
+     style="display:inline-block;max-width:728px;width:100%;max-height:90px;"
      data-ad-client="ca-pub-8043980001637749"
      data-ad-slot="8050648588"
-     data-ad-format="auto"
+     data-ad-format="horizontal"
      data-full-width-responsive="true"></ins>
+</div>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
@@ -2401,25 +2412,7 @@ calc();
   </div>
 </footer>
 
-<script>
-function toggleLangMenu(e) {
-  e.stopPropagation();
-  var ld = document.getElementById('langSwitcher');
-  if (ld) ld.classList.toggle('open');
-}
-document.addEventListener('click', function(e) {
-  var ld = document.getElementById('langSwitcher');
-  if (ld && !ld.contains(e.target)) ld.classList.remove('open');
-});
-function toggleDD(e) {
-  e.stopPropagation();
-  document.getElementById('ddWrap').classList.toggle('dd-open');
-}
-document.addEventListener('click', function(e) {
-  var dd = document.getElementById('ddWrap');
-  if (dd && !dd.contains(e.target)) dd.classList.remove('dd-open');
-});
-</script>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.faq-question').forEach(function(btn) {
@@ -2427,6 +2420,38 @@ document.addEventListener('DOMContentLoaded', function() {
       this.closest('.faq-item').classList.toggle('faq-open');
     });
   });
+});
+</script>
+<script>
+function toggleDD(e) {
+  e.stopPropagation();
+  var wrap = document.getElementById('ddWrap');
+  if (wrap) wrap.classList.toggle('dd-open');
+}
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  var ls = document.getElementById('langSwitcher');
+  if (ls) ls.classList.toggle('open');
+}
+function toggleMobileMenu(e) {
+  e.stopPropagation();
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  if (nav) nav.classList.toggle('mobile-open');
+  if (btn) btn.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var ddWrap = document.getElementById('ddWrap');
+  var ls = document.getElementById('langSwitcher');
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  var mainNav = document.querySelector('nav');
+  if (ddWrap && !ddWrap.contains(e.target)) ddWrap.classList.remove('dd-open');
+  if (ls && !ls.contains(e.target)) ls.classList.remove('open');
+  if (mainNav && !mainNav.contains(e.target)) {
+    if (nav) nav.classList.remove('mobile-open');
+    if (btn) btn.classList.remove('open');
+  }
 });
 </script>
 </body>

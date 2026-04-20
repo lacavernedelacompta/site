@@ -330,6 +330,12 @@ gtag('js', new Date());
 gtag('config', 'G-WNHZDLVPEL');
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://lacavernedelacompta.be/en/"},
+  {"@type":"ListItem","position":2,"name":"Tools","item":"https://lacavernedelacompta.be/en/"},
+  {"@type":"ListItem","position":3,"name":"Legal Notice","item":"https://lacavernedelacompta.be/en/mentions-legales/"}
+]}</script>
 </head>
 <body>
 
@@ -385,16 +391,18 @@ gtag('config', 'G-WNHZDLVPEL');
       <button class="dd-btn" onclick="toggleDD(event)">🧰 Our tools <span class="dd-chevron">▼</span></button>
       <div class="dd-menu" id="ddMenu">
         <a href="/en/simulateur-immobilier/"><span class="dd-icon">🏠</span>Property Simulator</a>
-        <a href="/en/simulateur-credit/"><span class="dd-icon">💳</span>Loan Simulator</a>
+        <a href="/en/simulateur-credit/"><span class="dd-icon">💳</span>Credit Simulator</a>
         <a href="/en/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Rent Reclassification</a>
-        <a href="/en/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Chart of Accounts PCMN</a>
+        <a href="/en/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Chart of Accounts</a>
         <a href="/en/simulateur-interets-composes/"><span class="dd-icon">📈</span>Compound Interest</a>
-        <a href="/en/simulateur-retenue/"><span class="dd-icon">🧾</span>Invoice Withholding</a>
-        <a href="/en/quick-memento-fiscal/"><span class="dd-icon">📌</span>Quick Tax Memo</a>
-        <a href="/en/remboursement-frais/"><span class="dd-icon">🚗</span>Mileage Allowance</a>
-        <a href="/en/questionnaire-frais-propres/"><span class="dd-icon">💼</span>Own Expenses</a>
-        <a href="/en/simulateur-plus-value-immobiliere/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">🏡</span>Real Estate Capital Gains</a>
-        <a href="/en/insurance-commission/"><span class="dd-icon">📑</span>Commission Statement</a>
+        <a href="/en/simulateur-retenue/"><span class="dd-icon">🧾</span>Invoice Retention</a>
+        <a href="/en/quick-memento-fiscal/"><span class="dd-icon">📌</span>Tax Quick-Memo</a>
+        <a href="/en/remboursement-frais/"><span class="dd-icon">🚗</span>Mileage Reimbursement</a>
+        <a href="/en/questionnaire-frais-propres/"><span class="dd-icon">💼</span>Own Costs</a>
+        <a href="/en/simulateur-plus-value-immobiliere/"><span class="dd-icon">🏡</span>Capital Gains</a>
+        <a href="/en/insurance-commission/"><span class="dd-icon">📑</span>Insurance Commission</a>
+        <a href="/en/foreign-travel-allowance/"><span class="dd-icon">✈️</span>Foreign Travel Allowance</a>
+        <a href="/en/simulateur-tva-construction/"><span class="dd-icon">🏗️</span>VAT Construction</a>
       </div>
     </li>
   </ul>
@@ -424,12 +432,15 @@ gtag('config', 'G-WNHZDLVPEL');
 </section>
 
 <div style="margin:24px auto;text-align:center;max-width:100%;">
+<div style="text-align:center;padding:8px 0 4px;border-top:1px solid #DDE5EF;">
+<span style="font-size:.65rem;color:#94a3b8;display:block;margin-bottom:4px;letter-spacing:.05em;">PUBLICITE</span>
 <ins class="adsbygoogle"
-     style="display:block"
+     style="display:inline-block;max-width:728px;width:100%;max-height:90px;"
      data-ad-client="ca-pub-8043980001637749"
      data-ad-slot="8050648588"
-     data-ad-format="auto"
+     data-ad-format="horizontal"
      data-full-width-responsive="true"></ins>
+</div>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 <main class="main">
@@ -670,13 +681,6 @@ gtag('config', 'G-WNHZDLVPEL');
 </main>
 
 <div style="margin:32px auto;text-align:center;max-width:100%;">
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="9017409611"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 <footer>
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
@@ -688,21 +692,37 @@ gtag('config', 'G-WNHZDLVPEL');
   </div>
 </footer>
 
+
 <script>
-function toggleLangMenu(e) {
-  e.stopPropagation();
-  var ld = document.getElementById('langSwitcher');
-  if (ld) ld.classList.toggle('open');
-}
 function toggleDD(e) {
   e.stopPropagation();
-  document.getElementById('ddWrap').classList.toggle('dd-open');
+  var wrap = document.getElementById('ddWrap');
+  if (wrap) wrap.classList.toggle('dd-open');
+}
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  var ls = document.getElementById('langSwitcher');
+  if (ls) ls.classList.toggle('open');
+}
+function toggleMobileMenu(e) {
+  e.stopPropagation();
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  if (nav) nav.classList.toggle('mobile-open');
+  if (btn) btn.classList.toggle('open');
 }
 document.addEventListener('click', function(e) {
-  var ld = document.getElementById('langSwitcher');
-  if (ld && !ld.contains(e.target)) ld.classList.remove('open');
-  var dd = document.getElementById('ddWrap');
-  if (dd && !dd.contains(e.target)) dd.classList.remove('dd-open');
+  var ddWrap = document.getElementById('ddWrap');
+  var ls = document.getElementById('langSwitcher');
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  var mainNav = document.querySelector('nav');
+  if (ddWrap && !ddWrap.contains(e.target)) ddWrap.classList.remove('dd-open');
+  if (ls && !ls.contains(e.target)) ls.classList.remove('open');
+  if (mainNav && !mainNav.contains(e.target)) {
+    if (nav) nav.classList.remove('mobile-open');
+    if (btn) btn.classList.remove('open');
+  }
 });
 </script>
 </body>

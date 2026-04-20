@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Belgian Tax Cheat Sheet 2026 — Rates, BIK, ATP & DNA | Free</title>
-<meta name="description" content="Belgian tax quick reference 2026: legal interest rates, benefits in kind (BIK), advance tax payments (ATP), investment deduction (IDA), DNA vehicles. All rates...">
+<meta name="description" content="Belgian tax quick reference 2026: legal interest rates, benefits in kind (BIK), advance tax payments (ATP), investment deduction (IDA), DNA vehicles. All...">
 <meta name="keywords" content="tax quick reference Belgium 2026, benefits in kind Belgium, advance tax payments Belgium, investment deduction Belgium, non-deductible expenses">
 <meta name="author" content="La Caverne de la Compta">
 <meta name="robots" content="index, follow">
@@ -341,6 +341,12 @@ gtag('config', 'G-WNHZDLVPEL');
   ]
 }
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://lacavernedelacompta.be/en/"},
+  {"@type":"ListItem","position":2,"name":"Tools","item":"https://lacavernedelacompta.be/en/"},
+  {"@type":"ListItem","position":3,"name":"Tax Quick-Memo","item":"https://lacavernedelacompta.be/en/quick-memento-fiscal/"}
+]}</script>
 </head>
 <body>
 
@@ -396,15 +402,17 @@ gtag('config', 'G-WNHZDLVPEL');
       <div class="dd-menu" id="ddMenu">
         <a href="/en/simulateur-immobilier/"><span class="dd-icon">🏠</span>Property Simulator</a>
         <a href="/en/simulateur-credit/"><span class="dd-icon">💳</span>Credit Simulator</a>
-        <a href="/en/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Rent Requalification</a>
+        <a href="/en/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Rent Reclassification</a>
         <a href="/en/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Chart of Accounts</a>
         <a href="/en/simulateur-interets-composes/"><span class="dd-icon">📈</span>Compound Interest</a>
-        <a href="/en/simulateur-retenue/"><span class="dd-icon">🧾</span>Invoice Withholding</a>
-        <a href="/en/quick-memento-fiscal/"><span class="dd-icon">📌</span>Tax Quick Reference</a>
-        <a href="/en/remboursement-frais/"><span class="dd-icon">🚗</span>Mileage Allowance</a>
-        <a href="/en/questionnaire-frais-propres/"><span class="dd-icon">💼</span>Own Expenses</a>
-        <a href="/en/simulateur-plus-value-immobiliere/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">🏡</span>Real Estate Capital Gains</a>
-        <a href="/en/insurance-commission/"><span class="dd-icon">📑</span>Commission Statement</a>
+        <a href="/en/simulateur-retenue/"><span class="dd-icon">🧾</span>Invoice Retention</a>
+        <a href="/en/quick-memento-fiscal/"><span class="dd-icon">📌</span>Tax Quick-Memo</a>
+        <a href="/en/remboursement-frais/"><span class="dd-icon">🚗</span>Mileage Reimbursement</a>
+        <a href="/en/questionnaire-frais-propres/"><span class="dd-icon">💼</span>Own Costs</a>
+        <a href="/en/simulateur-plus-value-immobiliere/"><span class="dd-icon">🏡</span>Capital Gains</a>
+        <a href="/en/insurance-commission/"><span class="dd-icon">📑</span>Insurance Commission</a>
+        <a href="/en/foreign-travel-allowance/"><span class="dd-icon">✈️</span>Foreign Travel Allowance</a>
+        <a href="/en/simulateur-tva-construction/"><span class="dd-icon">🏗️</span>VAT Construction</a>
       </div>
     </li>
   </ul>
@@ -648,13 +656,6 @@ gtag('config', 'G-WNHZDLVPEL');
 </div>
 
 <div style="margin:32px auto;text-align:center;max-width:100%;">
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="9017409611"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
 <div style="margin:24px auto;text-align:center;max-width:336px;">
@@ -819,27 +820,13 @@ function setTag(el){
 }
 
 // ── DD NAV ─────────────────────────────────────────────────────────────────
-function toggleDD(e){
-  e.stopPropagation();
-  document.getElementById('ddWrap').classList.toggle('dd-open');
-}
 document.addEventListener('click',()=>document.getElementById('ddWrap').classList.remove('dd-open'));
 
 buildHead();
 render();
 </script>
 
-<script>
-function toggleLangMenu(e) {
-  e.stopPropagation();
-  var ld = document.getElementById('langSwitcher');
-  if (ld) ld.classList.toggle('open');
-}
-document.addEventListener('click', function(e) {
-  var ld = document.getElementById('langSwitcher');
-  if (ld && !ld.contains(e.target)) ld.classList.remove('open');
-});
-</script>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.faq-question').forEach(function(btn) {
@@ -847,6 +834,38 @@ document.addEventListener('DOMContentLoaded', function() {
       this.closest('.faq-item').classList.toggle('faq-open');
     });
   });
+});
+</script>
+<script>
+function toggleDD(e) {
+  e.stopPropagation();
+  var wrap = document.getElementById('ddWrap');
+  if (wrap) wrap.classList.toggle('dd-open');
+}
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  var ls = document.getElementById('langSwitcher');
+  if (ls) ls.classList.toggle('open');
+}
+function toggleMobileMenu(e) {
+  e.stopPropagation();
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  if (nav) nav.classList.toggle('mobile-open');
+  if (btn) btn.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var ddWrap = document.getElementById('ddWrap');
+  var ls = document.getElementById('langSwitcher');
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  var mainNav = document.querySelector('nav');
+  if (ddWrap && !ddWrap.contains(e.target)) ddWrap.classList.remove('dd-open');
+  if (ls && !ls.contains(e.target)) ls.classList.remove('open');
+  if (mainNav && !mainNav.contains(e.target)) {
+    if (nav) nav.classList.remove('mobile-open');
+    if (btn) btn.classList.remove('open');
+  }
 });
 </script>
 </body>

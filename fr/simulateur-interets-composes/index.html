@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculateur Intérêts Composés Belgique 2026 — Épargne & Rente</title>
-  <meta name="description" content="Simulez la croissance de votre épargne avec les intérêts composés. Mode rente (capital nécessaire pour X €/mois), précompte mobilier 30%, règle des 4%, tableau...">
+  <title>Simulateur Intérêts Composés Belgique 2026 — Calcul Épargne & ...</title>
+  <meta name="description" content="Calculez la croissance de votre épargne ou investissement avec les intérêts composés : capital final, intérêts générés, graphique d'évolution. Gratuit et...">
   <meta name="keywords" content="intérêts composés belgique, simulateur épargne belgique, capital rente mensuelle belgique, précompte mobilier intérêts, règle 4% FIRE belgique, ETF rendement belgique, calculateur placement belgique, simulateur rente passive 2026">
   <meta name="author" content="La Caverne de la Compta">
   <meta name="robots" content="index, follow">
@@ -15,10 +15,10 @@
   <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/">
   <link rel="canonical" href="https://lacavernedelacompta.be/fr/simulateur-interets-composes/">
   <!-- Open Graph -->
-  <meta property="og:title" content="Calculateur Intérêts Composés Belgique 2026 — Épargne & Rente">
+  <meta property="og:title" content="Simulateur Intérêts Composés Belgique 2026 — Calcul Épargne & Investissement">
   <meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
 
-  <meta property="og:description" content="Simulez la croissance de votre épargne avec les intérêts composés. Mode rente (capital nécessaire pour X €/mois), précompte mobilier 30%, règle des 4%, tableau annuel. Gratuit.">
+  <meta property="og:description" content="Calculez la croissance de votre épargne ou investissement avec les intérêts composés : capital final, intérêts générés, graphique d'évolution. Gratuit et...">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lacavernedelacompta.be/simulateur-interets-composes.html">
   <meta property="og:site_name" content="La Caverne de la Compta">
@@ -941,6 +941,12 @@ gtag('config', 'G-WNHZDLVPEL');
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"Calculateur Intérêts Composés Belgique 2026","url":"https://lacavernedelacompta.be/fr/simulateur-interets-composes/","description":"Simulez la croissance de votre épargne avec les intérêts composés. Mode rente, précompte mobilier 30%, règle des 4%, stratégie FIRE.","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"La Caverne de la Compta","url":"https://lacavernedelacompta.be"}}
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Accueil","item":"https://lacavernedelacompta.be/fr/"},
+  {"@type":"ListItem","position":2,"name":"Outils","item":"https://lacavernedelacompta.be/fr/"},
+  {"@type":"ListItem","position":3,"name":"Intérêts Composés","item":"https://lacavernedelacompta.be/fr/simulateur-interets-composes/"}
+]}</script>
 </head>
 <body>
 
@@ -1009,6 +1015,8 @@ gtag('config', 'G-WNHZDLVPEL');
         <a href="/fr/simulateur-plus-value-immobiliere/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">🏡</span>Plus-Value Immobilière</a>
         <a href="/fr/commission-assurance/"><span class="dd-icon">📑</span>Bordereau Commission</a>
       <a href="/fr/simulateur-frais-sejour-etranger/" style="color:var(--teal-light);font-weight:600;"><span class="dd-icon">✈️</span>Frais Séjour Étranger</a>
+      
+      <a href="/fr/simulateur-tva-construction/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">🏗️</span>TVA Construction</a>
       </div>
     </li>
   </ul>
@@ -1329,13 +1337,6 @@ gtag('config', 'G-WNHZDLVPEL');
 </div>
 
 <div style="margin:32px auto;text-align:center;max-width:100%;">
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="9017409611"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 <div class="faq-section">
 <h2>❓ Questions fréquentes sur les intérêts composés en Belgique</h2>
@@ -1732,26 +1733,13 @@ gtag('config', 'G-WNHZDLVPEL');
 
 
 <script>
-function toggleDD(e){
-  e.stopPropagation();
-  document.getElementById('ddWrap').classList.toggle('dd-open');
-}
-document.addEventListener('click',function(e){
-  var w=document.getElementById('ddWrap');
-  if(w && !w.contains(e.target)) w.classList.remove('dd-open');
-});
+
 
   
 
 
   // ── HAMBURGER MENU ──
-  function toggleMobileMenu(e) {
-    e.stopPropagation();
-    var nav = document.querySelector('.nav-links');
-    var btn = document.querySelector('.hamburger');
-    if (nav) nav.classList.toggle('mobile-open');
-    if (btn) btn.classList.toggle('open');
-  }
+  
   document.addEventListener('click', function(e) {
     var nav = document.querySelector('.nav-links');
     var btn = document.querySelector('.hamburger');
@@ -1763,15 +1751,7 @@ document.addEventListener('click',function(e){
   });
 
 
-function toggleLangMenu(e) {
-  e.stopPropagation();
-  var ld = document.getElementById('langSwitcher');
-  if (ld) ld.classList.toggle('open');
-}
-document.addEventListener('click', function(e) {
-  var ld = document.getElementById('langSwitcher');
-  if (ld && !ld.contains(e.target)) ld.classList.remove('open');
-});
+
 
 function toggleReinvest() {
   const cb = document.getElementById('reinvest');
@@ -1786,6 +1766,38 @@ document.addEventListener('DOMContentLoaded',function(){
   document.querySelectorAll('.faq-question').forEach(function(btn){
     btn.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('faq-open');});
   });
+});
+</script>
+<script>
+function toggleDD(e) {
+  e.stopPropagation();
+  var wrap = document.getElementById('ddWrap');
+  if (wrap) wrap.classList.toggle('dd-open');
+}
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  var ls = document.getElementById('langSwitcher');
+  if (ls) ls.classList.toggle('open');
+}
+function toggleMobileMenu(e) {
+  e.stopPropagation();
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  if (nav) nav.classList.toggle('mobile-open');
+  if (btn) btn.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  var ddWrap = document.getElementById('ddWrap');
+  var ls = document.getElementById('langSwitcher');
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  var mainNav = document.querySelector('nav');
+  if (ddWrap && !ddWrap.contains(e.target)) ddWrap.classList.remove('dd-open');
+  if (ls && !ls.contains(e.target)) ls.classList.remove('open');
+  if (mainNav && !mainNav.contains(e.target)) {
+    if (nav) nav.classList.remove('mobile-open');
+    if (btn) btn.classList.remove('open');
+  }
 });
 </script>
 </body>

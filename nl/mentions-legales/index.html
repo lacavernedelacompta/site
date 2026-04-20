@@ -330,6 +330,12 @@ gtag('js', new Date());
 gtag('config', 'G-WNHZDLVPEL');
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8043980001637749" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Startpagina","item":"https://lacavernedelacompta.be/nl/"},
+  {"@type":"ListItem","position":2,"name":"Tools","item":"https://lacavernedelacompta.be/nl/"},
+  {"@type":"ListItem","position":3,"name":"Wettelijke vermeldingen","item":"https://lacavernedelacompta.be/nl/mentions-legales/"}
+]}</script>
 </head>
 <body>
 
@@ -384,17 +390,19 @@ gtag('config', 'G-WNHZDLVPEL');
     <li class="dd-wrap" id="ddWrap">
       <button class="dd-btn" onclick="toggleDD(event)">🧰 Onze tools <span class="dd-chevron">▼</span></button>
       <div class="dd-menu" id="ddMenu">
-        <a href="/nl/simulateur-immobilier/"><span class="dd-icon">🏠</span>Vastgoedsimulator</a>
-        <a href="/nl/simulateur-credit/"><span class="dd-icon">💳</span>Kredietsimulator</a>
-        <a href="/nl/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Herkwalificatie Huur</a>
+        <a href="/nl/simulateur-immobilier/"><span class="dd-icon">🏠</span>Onroerend Goed Simulator</a>
+        <a href="/nl/simulateur-credit/"><span class="dd-icon">💳</span>Krediet Simulator</a>
+        <a href="/nl/simulateur-requalification-loyer/"><span class="dd-icon">🏢</span>Huur Herkwalificatie</a>
         <a href="/nl/pcmn-complet-societe-et-asbl/"><span class="dd-icon">📋</span>Boekhoudplan PCMN</a>
         <a href="/nl/simulateur-interets-composes/"><span class="dd-icon">📈</span>Samengestelde Interest</a>
-        <a href="/nl/simulateur-retenue/"><span class="dd-icon">🧾</span>Inhouding Factuur</a>
-        <a href="/nl/quick-memento-fiscal/"><span class="dd-icon">📌</span>Fiscale Quick-Memo</a>
+        <a href="/nl/simulateur-retenue/"><span class="dd-icon">🧾</span>Inhouding op Factuur</a>
+        <a href="/nl/quick-memento-fiscal/"><span class="dd-icon">📌</span>Fiscaal Geheugensteun</a>
         <a href="/nl/remboursement-frais/"><span class="dd-icon">🚗</span>Kilometervergoeding</a>
         <a href="/nl/questionnaire-frais-propres/"><span class="dd-icon">💼</span>Eigen Kosten</a>
-        <a href="/nl/simulateur-plus-value-immobiliere/" style="color:var(--teal);font-weight:600;"><span class="dd-icon">🏡</span>Meerwaarde Vastgoed</a>
-        <a href="/nl/commissie-verzekeringen/"><span class="dd-icon">📑</span>Commissieborderel</a>
+        <a href="/nl/simulateur-plus-value-immobiliere/"><span class="dd-icon">🏡</span>Meerwaardebelasting</a>
+        <a href="/nl/commissie-verzekeringen/"><span class="dd-icon">📑</span>Commissie Verzekeringen</a>
+        <a href="/nl/dagvergoeding-buitenland/"><span class="dd-icon">✈️</span>Dagvergoeding Buitenland</a>
+        <a href="/nl/simulateur-tva-construction/"><span class="dd-icon">🏗️</span>BTW Bouw</a>
       </div>
     </li>
   </ul>
@@ -424,12 +432,15 @@ gtag('config', 'G-WNHZDLVPEL');
 </section>
 
 <div style="margin:24px auto;text-align:center;max-width:100%;">
+<div style="text-align:center;padding:8px 0 4px;border-top:1px solid #DDE5EF;">
+<span style="font-size:.65rem;color:#94a3b8;display:block;margin-bottom:4px;letter-spacing:.05em;">PUBLICITE</span>
 <ins class="adsbygoogle"
-     style="display:block"
+     style="display:inline-block;max-width:728px;width:100%;max-height:90px;"
      data-ad-client="ca-pub-8043980001637749"
      data-ad-slot="8050648588"
-     data-ad-format="auto"
+     data-ad-format="horizontal"
      data-full-width-responsive="true"></ins>
+</div>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 <main class="main">
@@ -670,13 +681,6 @@ gtag('config', 'G-WNHZDLVPEL');
 </main>
 
 <div style="margin:32px auto;text-align:center;max-width:100%;">
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8043980001637749"
-     data-ad-slot="9017409611"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 <footer>
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
@@ -688,21 +692,37 @@ gtag('config', 'G-WNHZDLVPEL');
   </div>
 </footer>
 
+
 <script>
-function toggleLangMenu(e) {
-  e.stopPropagation();
-  var ld = document.getElementById('langSwitcher');
-  if (ld) ld.classList.toggle('open');
-}
 function toggleDD(e) {
   e.stopPropagation();
-  document.getElementById('ddWrap').classList.toggle('dd-open');
+  var wrap = document.getElementById('ddWrap');
+  if (wrap) wrap.classList.toggle('dd-open');
+}
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  var ls = document.getElementById('langSwitcher');
+  if (ls) ls.classList.toggle('open');
+}
+function toggleMobileMenu(e) {
+  e.stopPropagation();
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  if (nav) nav.classList.toggle('mobile-open');
+  if (btn) btn.classList.toggle('open');
 }
 document.addEventListener('click', function(e) {
-  var ld = document.getElementById('langSwitcher');
-  if (ld && !ld.contains(e.target)) ld.classList.remove('open');
-  var dd = document.getElementById('ddWrap');
-  if (dd && !dd.contains(e.target)) dd.classList.remove('dd-open');
+  var ddWrap = document.getElementById('ddWrap');
+  var ls = document.getElementById('langSwitcher');
+  var nav = document.querySelector('.nav-links');
+  var btn = document.querySelector('.hamburger');
+  var mainNav = document.querySelector('nav');
+  if (ddWrap && !ddWrap.contains(e.target)) ddWrap.classList.remove('dd-open');
+  if (ls && !ls.contains(e.target)) ls.classList.remove('open');
+  if (mainNav && !mainNav.contains(e.target)) {
+    if (nav) nav.classList.remove('mobile-open');
+    if (btn) btn.classList.remove('open');
+  }
 });
 </script>
 </body>

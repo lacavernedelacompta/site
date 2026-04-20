@@ -93,3 +93,5 @@ https://www.lacavernedelacompta.be/*  https://lacavernedelacompta.be/:splat  301
 /nl/commission-assurance/  /nl/commissie-verzekeringen/  301!
 /de/commission-assurance/  /de/provisionsnachweis-versicherungen/  301!
 /en/commission-assurance/  /en/insurance-commission/  301!
+
+# TVA Construction stubs → FR version until translated
