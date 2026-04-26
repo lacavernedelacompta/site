@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Belgischer Kontenplan PCMN 2026 — ITAA, Gesellschaften & VoG</title>
-<meta name="description" content="Vollständiger belgischer Mindest-Kontenplan (PCMN) 2026 : 782 Gesellschaftskonten + 373 VoG-Konten. ITAA-konform. Sofortsuche, Beschreibungen, PDF-Export....">
+<title>Kontenplan PCMN ITAA Belgien 2026 — Gesellschaften & VoG | CBN</title>
+<meta name="description" content="PCMN ITAA Kontenplan Belgien 2026 — offizielle CBN-Referenz: 782 Unternehmens- + 373 VoG-Konten. Sofortsuche, PDF-Export. KE 29/04/2019.">
 <meta name="keywords" content="PCMN Belgien, Kontenplan Odoo, Odoo Buchhaltung Belgien, belgischer Kontenplan, VoG Kontenplan belgien, PCN Belgien, Odoo Accounting Belgien 2026">
 <meta name="author" content="La Caverne de la Compta">
 <meta name="robots" content="index, follow">
@@ -14,7 +14,7 @@
   <link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/pcmn-complet-societe-et-asbl/">
   <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/de/pcmn-complet-societe-et-asbl/">
 <link rel="canonical" href="https://lacavernedelacompta.be/de/pcmn-complet-societe-et-asbl/">
-<meta property="og:title" content="Belgischer Kontenplan PCMN 2026 — ITAA, Gesellschaften & VoG">
+<meta property="og:title" content="Kontenplan PCMN ITAA Belgien 2026 — Gesellschaften & VoG | CBN">
   <meta property="og:image" content="https://lacavernedelacompta.be/logo.svg">
 
 <meta property="og:description" content="Vollständiger belgischer Mindest-Kontenplan (PCMN) 2026 : 782 Gesellschaftskonten + 373 VoG-Konten. ITAA-konform. Sofortsuche, Beschreibungen, PDF-Export....">
@@ -288,6 +288,41 @@ footer a:hover{color:white;}
 .faq-answer{display:none;padding:4px 18px 15px;font-size:0.87rem;color:#4A6279;line-height:1.75;border-top:1px solid #F0F4F8;}
 .faq-item.faq-open .faq-answer{display:block;}
 
+
+/* ── Bannière sticky mobile ── */
+#mob-sticky-banner{
+  display:none;
+  position:fixed;
+  bottom:0;left:0;right:0;
+  background:#fff;
+  border-top:1px solid #e2e8f0;
+  padding:4px 8px 6px;
+  text-align:center;
+  z-index:999;
+  box-shadow:0 -2px 8px rgba(0,0,0,.10);
+}
+#mob-sticky-banner .mob-close{
+  position:absolute;top:3px;right:6px;
+  background:none;border:none;
+  font-size:13px;color:#94a3b8;
+  cursor:pointer;line-height:1;padding:2px 4px;
+}
+#mob-sticky-banner .mob-label{
+  display:block;font-size:.55rem;
+  color:#94a3b8;letter-spacing:.06em;
+  margin-bottom:2px;
+}
+@media(max-width:768px){
+  #mob-sticky-banner{display:block;}
+  /* Push footer up so banner doesn't cover content */
+  body{padding-bottom:66px;}
+}
+
+/* ── Latérales PCMN ── */
+.ad-lateral{position:fixed;top:50%;transform:translateY(-50%);width:160px;z-index:100;display:none;}
+.ad-lateral-left{left:calc(50% - 700px - 170px);}
+.ad-lateral-right{right:calc(50% - 700px - 170px);}
+@media(min-width:1800px){.ad-lateral{display:block;}}
 </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
@@ -841,7 +876,7 @@ function scrollToClass(id){
       body.classList.remove('collapsed');
       if(chev) chev.style.transform = 'rotate(180deg)';
     }
-    el.scrollIntoView({behavior:'smooth', block:'start'});
+    if (!document.activeElement || !/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) el.scrollIntoView({behavior:'smooth', block:'start'});
   }
   return false;
 }
@@ -1028,5 +1063,37 @@ document.addEventListener('click', function(e) {
   }
 });
 </script>
+
+<!-- Bannière sticky mobile -->
+<div id="mob-sticky-banner">
+  <button class="mob-close" onclick="document.getElementById('mob-sticky-banner').style.display='none';document.body.style.paddingBottom='0'" aria-label="Fermer">✕</button>
+  <span class="mob-label">PUBLICITÉ</span>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px;max-width:100%"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="8050648588"
+       data-ad-format="auto"
+       data-full-width-responsive="false"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+
+<div class="ad-lateral ad-lateral-left">
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:160px;height:600px"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="8050648588"
+       data-ad-format="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="ad-lateral ad-lateral-right">
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:160px;height:600px"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="8050648588"
+       data-ad-format="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
 </body>
 </html>

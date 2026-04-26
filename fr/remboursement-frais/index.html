@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Indemnité Kilométrique Belgique 2026 — Taux BOSA Q2 0,4327 €/km</title>
+<title>Indemnité Kilométrique 2026 — Taux BOSA Q2 0,4327 €/km | PDF</title>
   <meta name="keywords" content="indemnité kilométrique belgique 2026, frais kilométriques belgique, taux ONSS kilométrique 2026, note de frais voiture belgique, remboursement km employé belgique">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://lacavernedelacompta.be/fr/remboursement-frais/">
@@ -12,8 +12,8 @@
   <link rel="alternate" hreflang="en-BE" href="https://lacavernedelacompta.be/en/remboursement-frais/">
   <link rel="alternate" hreflang="de-BE" href="https://lacavernedelacompta.be/de/remboursement-frais/">
   <link rel="alternate" hreflang="x-default" href="https://lacavernedelacompta.be/fr/remboursement-frais/">
-  <meta name="description" content="Calculez votre indemnité kilométrique belge 2026 : taux ONSS officiel Q2 2026 (0,4327 €/km), calcul par trajet, génération PDF. Profils sauvegardés. Outil...">
-    <meta property="og:title" content="Indemnité Kilométrique Belgique 2026 — Taux BOSA Q2 0,4327 €/km | Note PDF">
+  <meta name="description" content="Simulation indemnité kilométrique 2026 : taux BOSA Q2 = 0,4327 €/km. Note de frais PDF, remboursement fiscal et ONSS. Domicile-travail et déplacements pro.">
+    <meta property="og:title" content="Indemnité Kilométrique 2026 — Taux BOSA Q2 0,4327 €/km | PDF">
   <meta property="og:description" content="Calculez votre indemnité kilométrique belge 2026 : taux officiel BOSA Q2 2026 = 0,4327 €/km. Note de frais PDF, remboursement fiscal et ONSS, déplacements domicile-travail.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="La Caverne de la Compta">
@@ -565,6 +565,66 @@ nav {
 .ad-lateral-left{left:8px;}
 .ad-lateral-right{right:8px;}
 @media(min-width:1500px){.ad-lateral{display:block;}}
+
+/* ── Bannière sticky mobile ── */
+#mob-sticky-banner{
+  display:none;
+  position:fixed;
+  bottom:0;left:0;right:0;
+  background:#fff;
+  border-top:1px solid #e2e8f0;
+  padding:4px 8px 6px;
+  text-align:center;
+  z-index:999;
+  box-shadow:0 -2px 8px rgba(0,0,0,.10);
+}
+#mob-sticky-banner .mob-close{
+  position:absolute;top:3px;right:6px;
+  background:none;border:none;
+  font-size:13px;color:#94a3b8;
+  cursor:pointer;line-height:1;padding:2px 4px;
+}
+#mob-sticky-banner .mob-label{
+  display:block;font-size:.55rem;
+  color:#94a3b8;letter-spacing:.06em;
+  margin-bottom:2px;
+}
+@media(max-width:768px){
+  #mob-sticky-banner{display:block;}
+  /* Push footer up so banner doesn't cover content */
+  body{padding-bottom:66px;}
+}
+
+/* ── Sticky desktop bottom bar ── */
+#desk-sticky-bar{
+  display:none;
+  position:fixed;
+  bottom:0;left:0;right:0;
+  background:#fff;
+  border-top:1px solid #e2e8f0;
+  padding:5px 16px 7px;
+  text-align:center;
+  z-index:998;
+  box-shadow:0 -2px 8px rgba(0,0,0,.08);
+}
+#desk-sticky-bar .dsk-close{
+  position:absolute;top:4px;right:12px;
+  background:none;border:none;
+  font-size:14px;color:#94a3b8;
+  cursor:pointer;padding:2px 6px;
+}
+#desk-sticky-bar .dsk-label{
+  display:block;font-size:.55rem;
+  color:#94a3b8;letter-spacing:.06em;
+  margin-bottom:2px;
+}
+@media(min-width:769px){
+  #desk-sticky-bar{display:block;}
+  body{padding-bottom:72px;}
+}
+@media(max-width:768px){
+  #desk-sticky-bar{display:none !important;}
+}
 </style>
 <script>document.addEventListener("click",function(){var d=document.getElementById("ddWrap");if(d)d.classList.remove("dd-open");});</script>
 
@@ -1512,7 +1572,7 @@ function generateInvoice() {
 
   const wrap = document.getElementById('invoiceWrap');
   wrap.style.display = 'block';
-  wrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (!document.activeElement || !/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) wrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function resetAll() {
@@ -1807,16 +1867,6 @@ updateBanner(null);
 </div>
 
 
-<div style="text-align:center;padding:16px 24px 8px;border-top:1px solid var(--border);">
-  <span style="display:block;font-size:.62rem;color:#94a3b8;letter-spacing:.06em;margin-bottom:4px;">PUBLICITÉ</span>
-  <ins class="adsbygoogle"
-       style="display:inline-block;max-width:728px;width:100%;max-height:90px;"
-       data-ad-client="ca-pub-8043980001637749"
-       data-ad-slot="8050648588"
-       data-ad-format="horizontal"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 <footer>
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
   <div class="footer-links">
@@ -1909,5 +1959,33 @@ document.addEventListener('click', function(e) {
        data-ad-format="auto"></ins>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
+
+<!-- Bannière sticky mobile -->
+<div id="mob-sticky-banner">
+  <button class="mob-close" onclick="document.getElementById('mob-sticky-banner').style.display='none';document.body.style.paddingBottom='0'" aria-label="Fermer">✕</button>
+  <span class="mob-label">PUBLICITÉ</span>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px;max-width:100%"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="8050648588"
+       data-ad-format="auto"
+       data-full-width-responsive="false"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+
+<!-- Sticky desktop bottom bar -->
+<div id="desk-sticky-bar">
+  <button class="dsk-close" onclick="document.getElementById('desk-sticky-bar').style.display='none';document.body.style.paddingBottom='0'" aria-label="Fermer">✕</button>
+  <span class="dsk-label">PUBLICITÉ</span>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;max-width:100%;height:50px;"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="8050648588"
+       data-ad-format="auto"
+       data-full-width-responsive="false"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
 </body>
 </html>

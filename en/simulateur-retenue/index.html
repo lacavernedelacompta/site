@@ -678,6 +678,66 @@
 .ad-lateral-left{left:8px;}
 .ad-lateral-right{right:8px;}
 @media(min-width:1500px){.ad-lateral{display:block;}}
+
+/* ── Bannière sticky mobile ── */
+#mob-sticky-banner{
+  display:none;
+  position:fixed;
+  bottom:0;left:0;right:0;
+  background:#fff;
+  border-top:1px solid #e2e8f0;
+  padding:4px 8px 6px;
+  text-align:center;
+  z-index:999;
+  box-shadow:0 -2px 8px rgba(0,0,0,.10);
+}
+#mob-sticky-banner .mob-close{
+  position:absolute;top:3px;right:6px;
+  background:none;border:none;
+  font-size:13px;color:#94a3b8;
+  cursor:pointer;line-height:1;padding:2px 4px;
+}
+#mob-sticky-banner .mob-label{
+  display:block;font-size:.55rem;
+  color:#94a3b8;letter-spacing:.06em;
+  margin-bottom:2px;
+}
+@media(max-width:768px){
+  #mob-sticky-banner{display:block;}
+  /* Push footer up so banner doesn't cover content */
+  body{padding-bottom:66px;}
+}
+
+/* ── Sticky desktop bottom bar ── */
+#desk-sticky-bar{
+  display:none;
+  position:fixed;
+  bottom:0;left:0;right:0;
+  background:#fff;
+  border-top:1px solid #e2e8f0;
+  padding:5px 16px 7px;
+  text-align:center;
+  z-index:998;
+  box-shadow:0 -2px 8px rgba(0,0,0,.08);
+}
+#desk-sticky-bar .dsk-close{
+  position:absolute;top:4px;right:12px;
+  background:none;border:none;
+  font-size:14px;color:#94a3b8;
+  cursor:pointer;padding:2px 6px;
+}
+#desk-sticky-bar .dsk-label{
+  display:block;font-size:.55rem;
+  color:#94a3b8;letter-spacing:.06em;
+  margin-bottom:2px;
+}
+@media(min-width:769px){
+  #desk-sticky-bar{display:block;}
+  body{padding-bottom:72px;}
+}
+@media(max-width:768px){
+  #desk-sticky-bar{display:none !important;}
+}
 </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.svg">
@@ -1250,16 +1310,6 @@ gtag('config', 'G-WNHZDLVPEL');
 <div class="faq-item"><div class="faq-question">How do you contest an unjustified co-contractor withholding in Belgium?<span class="faq-chev">&#9660;</span></div><div class="faq-answer"><p>If your client withheld while you had no tax or social debts, obtain a current tax clearance certificate from MyMinfin.be. If the withholding was unjustified, your client may be required to repay the withheld amount plus statutory interest. Report the abuse to FPS Finance via the official contestation form.</p></div></div>
 </div>
 
-<div style="text-align:center;padding:16px 24px 8px;border-top:1px solid var(--border);">
-  <span style="display:block;font-size:.62rem;color:#94a3b8;letter-spacing:.06em;margin-bottom:4px;">PUBLICITÉ</span>
-  <ins class="adsbygoogle"
-       style="display:inline-block;max-width:728px;width:100%;max-height:90px;"
-       data-ad-client="ca-pub-8043980001637749"
-       data-ad-slot="8050648588"
-       data-ad-format="horizontal"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 <footer>
   <span>© 2026 La Caverne de la Compta — BCE 0701.812.717</span>
   <div class="footer-links">
@@ -1304,7 +1354,7 @@ gtag('config', 'G-WNHZDLVPEL');
     }
 
     goStep(from + 1);
-    window.scrollTo({ top: document.querySelector('.sim-card').offsetTop - 90, behavior: 'smooth' });
+    if (!document.activeElement || !/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) { window.scrollTo({ top: document.querySelector('.sim-card').offsetTop - 90, behavior: 'smooth' }); }
   }
 
   function validateStep(n) {
@@ -1582,7 +1632,7 @@ gtag('config', 'G-WNHZDLVPEL');
         </div>
       </div>`;
 
-    rc.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (!document.activeElement || !/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) { rc.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   }
 
   function fmt(n) {
@@ -1616,7 +1666,7 @@ gtag('config', 'G-WNHZDLVPEL');
       document.getElementById('tab' + i).classList.remove('done');
     }
     goStep(1);
-    window.scrollTo({ top: document.querySelector('.sim-card').offsetTop - 90, behavior: 'smooth' });
+    if (!document.activeElement || !/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) { window.scrollTo({ top: document.querySelector('.sim-card').offsetTop - 90, behavior: 'smooth' }); }
   }
 
   // Shake animation
@@ -1708,5 +1758,33 @@ document.addEventListener('click', function(e) {
        data-ad-format="auto"></ins>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
+
+<!-- Bannière sticky mobile -->
+<div id="mob-sticky-banner">
+  <button class="mob-close" onclick="document.getElementById('mob-sticky-banner').style.display='none';document.body.style.paddingBottom='0'" aria-label="Fermer">✕</button>
+  <span class="mob-label">PUBLICITÉ</span>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px;max-width:100%"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="8050648588"
+       data-ad-format="auto"
+       data-full-width-responsive="false"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+
+<!-- Sticky desktop bottom bar -->
+<div id="desk-sticky-bar">
+  <button class="dsk-close" onclick="document.getElementById('desk-sticky-bar').style.display='none';document.body.style.paddingBottom='0'" aria-label="Fermer">✕</button>
+  <span class="dsk-label">PUBLICITÉ</span>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;max-width:100%;height:50px;"
+       data-ad-client="ca-pub-8043980001637749"
+       data-ad-slot="8050648588"
+       data-ad-format="auto"
+       data-full-width-responsive="false"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
 </body>
 </html>
