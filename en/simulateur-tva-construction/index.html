@@ -1350,6 +1350,20 @@ function filterLookup(q) {
 // ── Init ──
 renderStep('1');
 
+// ── Event delegation ──
+document.addEventListener('click', function(e) {
+  var btn = e.target.closest('.sim-opt');
+  if (btn) {
+    var step = btn.getAttribute('data-step');
+    var idx  = parseInt(btn.getAttribute('data-idx'), 10);
+    handleOption(step, idx);
+    return;
+  }
+  if (e.target.closest('[data-action="back"]')) {
+    goBack();
+    return;
+  }
+});
 
 </script>
 <script>
